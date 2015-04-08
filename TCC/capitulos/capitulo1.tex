@@ -1,0 +1,20 @@
+\chapter{Introdução}
+Com o passar do tempo as linguagens de programação evoluem entretanto não sabemos ao certo como os softwares projetados há alguns anos acompanharam tais atualizações. Conforme explicado por \cite{Jeffrey_Ralph}, tal evolução faz com que características obsoletas sejam mantidas e raramente são removidas de uma linguagem o que acarreta no aumento da complexidade, da aprendizagem e da manutenção do software. Isso naturalmente aumenta a dificuldade de desenvolvimento o que resulta em um aumento de difuculdade de aprendizagem de determinada vesão  já ultrapassada de uma linguagem e faz com que a equipe alterne entre propriedades atuais e antigas as quais passam a ser quase um dialeto da linguagem implicando no aumento de tempo para conceber um projeto e consequentemente gerendo aumento no custo final projeto.\\
+
+
+Uma decisão não tão simples é manter uma porção do código congelado, sem evolução, ao longo projeto devido alguma restrição técnica. O que infelizmente acarreta em uma estagnação de todo um sistema pois não é somente o projeto afetedado, é toda uma infraestrutura como compiladores, banco de dados e sistema operacional e que se de alguma forma vierem a ser atualizados com esta porção  código estagnado pode ocasionar sérios problemas como uma queda significativa de desempenho ou até mesmo o sistema parar de funcionar.\\
+
+
+
+A base para tal trabalho será um parse de todos os arquivos .java contidos em um projeto para posterior análise. Este parse implica em listar todos os arquivos java e gerar uma Árvore Sintática Abstrata AST e depois percorrer os statements e comparar como estes com a versão atual.\\
+
+Árvores de sintaxe abstratas (AST) são a base de um poderoso framework o Eclipse IDE,e ainda de refectoring. A idéia de mapear inicialmente código fonte java em uma árvore sintática  é muito conveniente para inspecionar o código fonte de um arquivo ou de um projeto. Com isso é possível realizar ou sugerir modificações nesta árvore e isto seria referenciado automaticamente no código fonte.\\
+
+
+
+
+Nossa proposta é criar uma analisador estático para apurar projetos opensources e checar se existe alguma defazagem entre versão da linguagem que este fora concebido para a versão atual na qual a linguagem se encontra. Trabalharemos com a versão mais atual da linguagem Java que neste momento é 8 para checar os softwares desenvolvidos com esta e como acompanharam tal evolução.\\
+
+
+
+
