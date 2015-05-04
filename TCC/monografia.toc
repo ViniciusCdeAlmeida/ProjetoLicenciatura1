@@ -2,5 +2,6 @@
 \select@language {american}
 \select@language {brazil}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Historia da linguagem Java}{3}{chapter.2}
-\contentsline {chapter}{Refer\^encias}{7}{section*.8}
+\contentsline {chapter}{\numberline {2}Java}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Historia da linguagem}{3}{section.2.1}
+\contentsline {chapter}{Refer\^encias}{8}{section*.8}
