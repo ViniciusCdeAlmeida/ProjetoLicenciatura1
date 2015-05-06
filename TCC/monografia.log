@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  6 MAY 2015 12:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.4)  6 MAY 2015 18:04
 entering extended mode
-**C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/monografia.tex
-(C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/monografia.tex
+**C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/monografia.tex
+(C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/monografia.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\unb-cic.cls
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\unb-cic.cls
 Document Class: unb-cic 2008/06/05 v0.93 Classe para trabalhos CIC UnB
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
@@ -139,7 +139,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ))
 \c@Hy@tempcnt=\count92
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -191,7 +191,7 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gin@req@height=\dimen107
 \Gin@req@width=\dimen108
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\boites\boites.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\boites\boites.sty
 File: boites.sty 
 Package: boites 2013/11/21 v1.1 Colored, framed and breakable across pages boxe
 s
@@ -215,13 +215,12 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@dimlist=\toks16
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 \c@TotPaginas=\count104
 \c@definition=\count105
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
@@ -257,14 +256,14 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip44
 \bibsep=\skip45
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count107
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -500,11 +499,11 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\cores.tex)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\cores.tex)
 Package hyperref Info: Option `colorlinks' set `true' on input line 42.
 
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.aux
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\referencias/citacoes.aux))
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.aux
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\referencias/citacoes.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
@@ -522,7 +521,6 @@ LaTeX Font Info:    ... okay on input line 73.
 \AtBeginShipoutBox=\box28
 Package backref Info: ** backref set up for natbib ** on input line 73.
 Package hyperref Info: Link coloring ON on input line 73.
-
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -535,11 +533,11 @@ LaTeX Info: Redefining \ref on input line 73.
 LaTeX Info: Redefining \pageref on input line 73.
 LaTeX Info: Redefining \nameref on input line 73.
 
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
 \@outlinefile=\write3
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen118
@@ -591,9 +589,13 @@ LaTeX Info: Redefining \nameref on input line 73.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 73.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\misc\hypernat.sty"
-Package: hypernat 2001/07/09 v1.0b hyperref and natbib compatibility (jb)
-)
+
+! LaTeX Error: File `hypernat.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\hypcap.sty"
 Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 )
@@ -602,7 +604,7 @@ Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 \len@uacaph=\skip48
 LaTeX Font Info:    Try loading font information for T1+ua1 on input line 74.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\arial\t1ua1.fd"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\arial\t1ua1.fd
 File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
 )
 LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <20> not available
@@ -622,8 +624,8 @@ LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <10> not available
 
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Vinicius/Desktop
-/ProjetoLicenciatura1/TCC/positivo_cor.pdf>]
+{C:/Users/ViniciusC/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/User
+s/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/positivo_cor.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 74.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -638,19 +640,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \len@uadesch=\skip52
 \len@uacaph=\skip53
 File: positivo_cor.pdf Graphic file (type pdf)
- <use positivo_cor.pdf>
+
+<use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 74.
 (pdftex.def)             Requested size: 70.28004pt x 35.43501pt.
 \len@lskipoffset=\skip54
 \len@lskipoffset=\skip55
-
-[3
+ [3
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\referencias/citacoes.tex)
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/dedicatoria.tex)p
-dfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
-een already used, duplicate ignored
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\referencias/citacoes.tex)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/dedicatoria.tex)
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.83   \begin{agradecimentos}
@@ -661,9 +663,9 @@ l.83   \begin{agradecimentos}
 
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/agradecimentos.te
-x)pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) h
-as been already used, duplicate ignored
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/agradecimentos.t
+ex)pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) 
+has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.87   \begin{resumo}
@@ -671,9 +673,9 @@ l.87   \begin{resumo}
 
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/resumo.tex)pdfTeX
- warning (ext4): destination with the same identifier (name{page.iii}) has been
- already used, duplicate ignored
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/resumo.tex)pdfTe
+X warning (ext4): destination with the same identifier (name{page.iii}) has bee
+n already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.93   \begin{abstract}
@@ -681,26 +683,27 @@ l.93   \begin{abstract}
 
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/abstract.tex)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/abstract.tex)
 [4
 
 
-] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.toc)
+] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.toc)
 \tf@toc=\write4
 
 [5
 
-] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.lof)
+] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.lof)
 \tf@lof=\write5
 
 [6
 
-] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.lot)
+] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.lot)
 \tf@lot=\write6
 
 [7
 
-] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1.tex
+]
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1.tex
 Cap\'{\i }tulo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
@@ -735,7 +738,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-) (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo2.tex
+) (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--1
 
  []
@@ -791,7 +794,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
@@ -803,13 +806,66 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 
-     
+l.74 \section
+              {Aspectos evolutivos da liguagem Java}
 ? 
+[7]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 83.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [7] [8]
+) [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+
+ []
+
+[11]
+Overfull \hbox (117.39792pt too wide) in paragraph at lines 268--268
+ []\T1/cmtt/m/n/12 public static void writeToFileZipFileContents(String zipFile
+Name, String outputFileName)[] 
+ []
+
+
+Overfull \hbox (80.35696pt too wide) in paragraph at lines 268--268
+ []    \T1/cmtt/m/n/12 java.nio.charset.Charset charset = java.nio.charset.Stan
+dardCharsets.US_ASCII;[] 
+ []
+
+
+Overfull \hbox (68.00998pt too wide) in paragraph at lines 268--268
+ []    \T1/cmtt/m/n/12 java.nio.file.Path outputFilePath = java.nio.file.Paths.
+get(outputFileName);[] 
+ []
+
+
+Overfull \hbox (18.62204pt too wide) in paragraph at lines 268--268
+ []      \T1/cmtt/m/n/12 java.util.zip.ZipFile zf = new java.util.zip.ZipFile(z
+ipFileName);[] 
+ []
+
+
+Overfull \hbox (191.47983pt too wide) in paragraph at lines 268--268
+ []      \T1/cmtt/m/n/12 java.io.BufferedWriter writer = java.nio.file.Files.ne
+wBufferedWriter(outputFilePath, charset)[] 
+ []
+
+
+Overfull \hbox (92.70395pt too wide) in paragraph at lines 268--268
+ []    \T1/cmtt/m/n/12 for (java.util.Enumeration entries = zf.entries(); entri
+es.hasMoreElements();) {[] 
+ []
+
+
+Overfull \hbox (166.78586pt too wide) in paragraph at lines 268--268
+ []      \T1/cmtt/m/n/12 String zipEntryName = ((java.util.zip.ZipEntry)entries
+.nextElement()).getName() + newLine;[] 
+ []
+
+[12]
+Overfull \hbox (6.27505pt too wide) in paragraph at lines 289--289
+ []\T1/cmtt/m/n/12 Map<String, List<String>> myMap = new HashMap<String, List<S
+tring>>();[] 
+ []
+
 
 ! LaTeX Error: There's no line here to end.
 
@@ -817,55 +873,74 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.173 
+l.291 \subsection
+                  {Java 8}
+? 
+[13]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.328 
       
 ? 
-) [9] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.brf)
+) [14] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.brf)
 \tf@brf=\write7
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
- [10
+ [15
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
 
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.aux
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\referencias/citacoes.aux))
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.aux
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\referencias/citacoes.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
 (rerunfilecheck)             Checksum: 019FB2979D8715479094CB9487748984;921.
-Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 8F013FFA1FA69977514CF8328EBFE2D5;92.
+
+Package rerunfilecheck Warning: File `monografia.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `monografia.brf':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  8F013FFA1FA69977514CF8328EBFE2D5;92.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7904 strings out of 493921
- 113340 string characters out of 3147273
- 214084 words of memory out of 3000000
- 11000 multiletter control sequences out of 15000+200000
+ 7908 strings out of 493921
+ 113677 string characters out of 3147271
+ 213920 words of memory out of 3000000
+ 11002 multiletter control sequences out of 15000+200000
  25731 words of font info for 37 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,7n,69p,1214b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Vinicius\App
-Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users
-\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.
-pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
-600\ecti1200.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecbx2488.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Vinicius\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Vinicius\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\
-Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.p
-k>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/urw/arial/ua1b8a.pfb>
-Output written on monografia.pdf (20 pages, 179519 bytes).
+ 43i,7n,69p,1215b,521s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\ViniciusC\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\User
+s\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx144
+0.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecti1200.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\ViniciusC\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Viniciu
+sC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:
+\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
+bx1728.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Vinici
+usC/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/arial/ua1b8a.pfb>
+Output written on monografia.pdf (25 pages, 197566 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 597 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
  134 words of extra memory for PDF output out of 10000 (max. 10000000)
 

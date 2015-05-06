@@ -61,16 +61,16 @@ Com essa versão novas funcionalidades foram adicionadas:
   \item Uma nova API* {\it multicore-ready} que permite aos desenvolvedores para se decompor mais facilmente problemas em tarefas que podem ser executadas em paralelo em números arbitrários de núcleos de processador.
   \item Uma interface de I/O* abrangente para trabalhar com sistemas de arquivos que podem acessar uma ampla gama de atributos de arquivos e oferecem mais informações quando ocorrem erros.
   \item Novos recursos de rede e de segurança. Suporte expandido para a internacionalização, incluindo suporte a Unicode 6.0. Versões atualizadas das bibliotecas padrão.\\
-  \item
-  \item
-  \item
-  \item
 \end{itemize}
 
-
-
-\\
-
+Com o lançamento do Java SE 8 em 18 de Março de 2014, permitiu uma maior produtividade e desenvolvimento de aplicativos significativos aumentos de desempenho através da redução de linhas de código, {\it collectons} melhoradas, modelos mais simples de programação paralela e uso mais eficiente de processadores multi-core modernos.As principais características do JDK 8 são o Projeto Lambda, Nashorn JavaScript Engine, um conjunto de perfis compactas e a remoção da "geração permanente" do HotSpot Java Virtual Machine (JVM).A JDK 8 alcançou desempenho recorde mundial para 4 sistemas de soquete em servidores baseados em Intel e NEC por 2 sistemas de soquete em servidores SPARC da Oracle T5, com uma melhoria de desempenho de 12\% para 41\% em comparação com o JDK 7 na mesma configuração de Oracle.
+O JDK 8 adicionou novas funcionalidades como:
+  \begin{itemize}
+  \item As expressões lambda são suportados pelas seguintes características: As referências a metodos são compactos, maior legibilidade expressões lambda para métodos que já têm um nome. Métodos padrão que permitem adicionar novas funcionalidades para as interfaces de suas bibliotecas e assegurar a compatibilidade binária com o código escrito para versões mais antigas dessas interfaces. Eles são os métodos de interface que têm uma aplicação e a palavra-chave padrão no início da assinatura do método. Além disso, pode-se definir métodos estáticos em interfaces. Novos e aprimorados APIs que se aproveitam de expressões lambda e dos {\it streams} em Java 8 descrevem as classes novos e aprimorados que se aproveitam de expressões lambda e {\it streams}.
+  \item O compilador Java aproveita digitação alvo para inferir os parâmetros de tipo de um método de invocação genérica. O tipo de destino de uma expressão é o tipo de dados que o compilador Java espera, dependendo de onde a expressão aparece. Por exemplo, você pode usar o tipo de destino de uma instrução de atribuição para o tipo de inferência em Java 7. No entanto, em Java 8, você pode usar o tipo de destino para a inferência de tipos em mais contextos.
+  \item Anotações sobre Tipos Java. Agora é possível aplicar uma anotação em qualquer lugar onde um tipo é usado. Utilizado em um conjunto com um sistema de tipo de conector, isso permite a verificação de tipo mais forte de seu código.
+  \item  Repetindo Anotações. Agora é possível aplicar o mesmo tipo de anotação mais de uma vez para a mesma declaração ou o tipo de utilização.
+  \end{itemize}\\
 \section {Aspectos evolutivos da liguagem Java}
 
 \subsection {Java 2}
@@ -165,11 +165,166 @@ public class HelloImpl
 \end{itemize}
 \subsection {Java 3}
 \subsection {Java 4}
+  \begin{itemize}
+  \item {\it Assertion Facility}. As {\it assertions} são expressões booleanas que o programador acredita ser verdade sobre o estado de um programa de computador. Por exemplo, depois de ordenar uma lista o programador pode afirmar que a lista está em ordem crescente. Avaliando as afirmações em tempo de execução para confirmar a sua validade é uma das ferramentas mais poderosas para melhorar a qualidade do código, uma vez que rapidamente se descobre equívocos do programador sobre o comportamento de um programa.
+  \end{itemize}
 \subsection {Java 5}
+  \begin{itemize}
+  \item {\it Generics}. Este novo recurso para o sistema de tipo permite que um tipo ou método operare em objetos de vários tipos, proporcionando em tempo de compilação tipo de segurança. Acrescenta em tempo de compilação um tipo de segurança para as {\it collections} e elimina o trabalho penoso de {\it casting}. Um exemplo do uso de {\it colletions} e {\it generics} respectivamente:
+  \begin{verbatim}
+
+static void expurgate(Collection c) {
+    for (Iterator i = c.iterator(); i.hasNext(); )
+      if (((String) i.next()).length() == 4)
+        i.remove();
+}
+
+static void expurgate(Collection<String> c) {
+    for (Iterator<String> i = c.iterator(); i.hasNext(); )
+      if (i.next().length() == 4)
+        i.remove();
+}
+  \end{verbatim}
+  \item {\it For-Each Loop}. Esta nova estrutura de linguagem elimina o trabalho e erro de propensão de iteradores e variáveis de índice quando a iteração ocorre sobre coleções e arrays. Como a construção evoluiu com o advento dessa nova estrutura:
+  \begin{verbatim}
+
+void cancelAll(Collection<TimerTask> c) {
+    for (Iterator<TimerTask> i = c.iterator(); i.hasNext(); )
+        i.next().cancel();
+}
+
+void cancelAll(Collection<TimerTask> c) {
+    for (TimerTask t : c)
+        t.cancel();
+}
+
+  \end{verbatim}
+  \item {\it Varargs}. Esta nova estrutura tende a eliminar a necessidade de passagem manual de listas de argumentos em um array ao invocar métodos que aceitam de um comprimento variável de uma lista de argumentos. Nas versões anteriores, um método levava um número arbitrário de valores necessários a  criar uma matriz e colocar os valores para a matriz antes de chamar o método.
+  \begin{verbatim}
+
+public class Test {
+    public static void main(String[] args) {
+        int passed = 0;
+        int failed = 0;
+        for (String className : args) {
+            try {
+                Class c = Class.forName(className);
+                c.getMethod("test").invoke(c.newInstance());
+                passed++;
+            } catch (Exception ex) {
+                System.out.printf("%s failed: %s%n", className, ex);
+                failed++;
+            }
+        }
+        System.out.printf("passed=%d; failed=%d%n", passed, failed);
+    }
+}
+  \end{verbatim}
+  \item {\it Autoboxing/Unboxing}. Esta nova estrutura elimina o trabalho de conversão manual entre tipos primitivos (como {\it int}) e os tipos de classes {\it wrapper}
+  \end{itemize}
 \subsection {Java 6}
+Não ocorreu mudanças ou introdução de novas estruturas na linguagem Java\\
 \subsection {Java 7}
+  \begin{itemize}
+  \item {\it Multi Catch} e lançamento de exceções com melhora na verificação de tipos. Um único bloco {\it catch} poderá lidar com mais de um tipo de exceção. Além disso, o compilador executa a análise mais precisa das excepções. Isso permite que o programador especifique tipos de exceção mais específicos na cláusula de uma declaração método. Um exemplo de como era as estruturas que usavam {\it cacths} e com a introdução de {\it multi cacth} com o Java 7, respectivamente.
+  \begin{verbatim}
+
+  catch (IOException ex) {
+     logger.log(ex);
+     throw ex;
+} catch (SQLException ex) {
+     logger.log(ex);
+     throw ex;
+}
+
+  catch (IOException|SQLException ex) {
+    logger.log(ex);
+    throw ex;
+}
+  \end{verbatim}
+  \item O {\it try-with-resouces}. A declaração {\it try-with-resouces} é uma instrução {\it try} que declara um ou mais recursos. Um recurso é um objeto que deve ser fechada após o programa terminar com ele. Essa declaração garante que cada recurso é fechada no final da declaração.
+  \begin{verbatim}
+
+public static void writeToFileZipFileContents(String zipFileName, String outputFileName)
+    throws java.io.IOException {
+
+    java.nio.charset.Charset charset = java.nio.charset.StandardCharsets.US_ASCII;
+    java.nio.file.Path outputFilePath = java.nio.file.Paths.get(outputFileName);
+
+    try (
+      java.util.zip.ZipFile zf = new java.util.zip.ZipFile(zipFileName);
+      java.io.BufferedWriter writer = java.nio.file.Files.newBufferedWriter(outputFilePath, charset)
+    ) {
+
+    for (java.util.Enumeration entries = zf.entries(); entries.hasMoreElements();) {
+
+      String newLine = System.getProperty("line.separator");
+      String zipEntryName = ((java.util.zip.ZipEntry)entries.nextElement()).getName() + newLine;
+      writer.write(zipEntryName, 0, zipEntryName.length());
+      }
+    }
+  }
+
+  \end{verbatim}
+  \item Inferência de tipos para criação de instâncias em {\it generics}. Com o Java 7 pode-se substituir os argumentos de tipo necessários para invocar o construtor de uma classe genérica com um conjunto vazio de parâmetros de tipo (<>), desde que o compilador infira os argumentos de tipo a partir do contexto. Este par de colchetes angulares é informalmente chamado de diamante.
+  \begin{verbatim}
+
+Map<String, List<String>> myMap = new HashMap<String, List<String>>();
+
+Map<String, List<String>> myMap = new HashMap<>();
+
+List<String> list = new ArrayList<>();
+list.add("A");
+
+  // The following statement should fail since addAll expects
+  // Collection<? extends String>
+
+list.addAll(new ArrayList<>());
+
+class MyClass<X> {
+  <T> MyClass(T t) {
+    // ...
+  }
+}
+  \end{verbatim}
+  \end{itemize}\\
 \subsection {Java 8}
- \\
+  \begin{itemize}
+  \item Melhoria na inferência de tipos. O compilador Java aproveita digitação para inferir os parâmetros de tipo de uma invocação de método genérica. O tipo de destino de uma expressão é o tipo de dados que o compilador Java espera, dependendo de onde a expressão aparece. Por exemplo, pode-se usar o tipo de destino de uma instrução de atribuição para o tipo de inferência em Java 7. No entanto, em Java 8, pode-se usar o tipo de destino para a inferência de tipos em mais contextos. O exemplo mais proeminente está usando tipos de destino de um método de invocação para inferir os tipos de dados dos seus argumentos.
+  \begin{verbatim}
+
+List<String> stringList = new ArrayList<>();
+stringList.add("A");
+stringList.addAll(Arrays.asList());
+
+  \end{verbatim}
+  \item Expressões lambda. Permitem encapsular uma única unidade de comportamento e passá-lo para outro código. Pode-se usar uma expressãos lambda, se quiser uma determinada ação executada em cada elemento de uma {\it collection}, quando o processo for concluído, ou quando um processo encontra um erro. 
+  \end{itemize}
+  \begin{verbatim}
+
+public class Calculator {
+  
+    interface IntegerMath {
+        int operation(int a, int b);   
+    }
+  
+    public int operateBinary(int a, int b, IntegerMath op) {
+        return op.operation(a, b);
+    }
+ 
+    public static void main(String... args) {
+    
+        Calculator myApp = new Calculator();
+        IntegerMath addition = (a, b) -> a + b;
+        IntegerMath subtraction = (a, b) -> a - b;
+        System.out.println("40 + 2 = " +
+            myApp.operateBinary(40, 2, addition));
+        System.out.println("20 - 10 = " +
+            myApp.operateBinary(20, 10, subtraction));    
+    }
+}
+
+  \end{verbatim}\\
 
 
 
