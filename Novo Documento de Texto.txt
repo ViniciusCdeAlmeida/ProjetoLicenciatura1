@@ -37,7 +37,6 @@ http://www.cis.upenn.edu/~bcpierce/courses/629/jdkdocs/
 http://www.pawlan.com/monica/articles/jdk1.2features/
 http://www.public.iastate.edu/~java/docs/relnotes/features.html
 https://www.its.hku.hk/news/ccnews69/java.htm
-http://www.public.iastate.edu/~java/docs/relnotes/features.html
 http://www.cis.upenn.edu/~bcpierce/courses/629/jdkdocs/relnotes/intro.html
 http://docs.oracle.com/javase/tutorial/extra/generics/intro.html
 http://www.ad.ntust.edu.tw/course/ad5601701/jmdl/docs/java/

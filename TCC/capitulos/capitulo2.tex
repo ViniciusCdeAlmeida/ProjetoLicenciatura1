@@ -72,15 +72,104 @@ Com essa versão novas funcionalidades foram adicionadas:
 \\
 
 \section {Aspectos evolutivos da liguagem Java}
-\subsection {Java 1}
+
 \subsection {Java 2}
+A primeira versão do Java Security, disponível no JDK 1.1, contém um subconjunto dessa funcionalidade, incluindo APIs para:
+  \begin{itemize}
+  \item Assinaturas Digitais: Algoritmos de assinatura digital, como DSA ou MD5 com RSA. A funcionalidade inclui a geração de chaves público/privado , bem como assinatura e verificação de dados digitais.
+  \item Gerenciamento de Chaves: Um conjunto de abstrações para o gerenciamento de ''diretores'' (entidades como usuários individuais ou grupos), suas chaves, e os seus certificados. Ele permite que aplicativos para projetar seu próprio sistema de gerenciamento de chaves, e para interoperar com outros sistemas em alto nível.
+  \item Lista de controle de acesso: Um conjunto de abstrações para o gerenciamento de ''diretores'' e suas permissões de acesso.
+  \item A obtenção de um objeto de assinatura: 
+  \begin{verbatim}
+	import java.security.Signature;
+import java.security.NoSuchAlgorithmException;
+
+public class SignFile {
+    Signature signature;
+
+    private void init(String algorithm) 
+    throws NoSuchAlgorithmException{
+        signature = Signature.getSignature(algorithm);
+    }
+}
+  \end{verbatim}
+  \item Em versões anteriores, Java suportava apenas {\it top-level} classes, que devem ser membros de pacotes. Na versão 1.1, o programador Java pode agora definir classes internas como membros de outras classes, localmente dentro de um bloco de instruções, ou (anonimamente) dentro de uma expressão.
+  \begin{verbatim}
+  public class FixedStack {
+    ...
+    public java.util.Enumeration elements() {
+        return new FixedStack$Enumerator(this);
+    }
+}
+
+class FixedStack$Enumerator implements java.util.Enumeration {
+    private FixedStack this$0;
+    FixedStack$Enumerator(FixedStack this$0) {
+        this.this$0 = this$0;
+        this.count = this$0.top;
+    }
+
+    int count;
+    public boolean hasMoreElements() {
+        return count > 0;
+    }
+    public Object nextElement() {
+        if (count == 0)
+            throw new NoSuchElementException("FixedStack");
+        return this$0.array[--count];
+    }
+}\end{verbatim}
+  \item Para escrever um objeto remoto (RMI), você escrever uma classe que implementa uma ou mais interfaces remotas. 
+  \begin{verbatim}
+package examples.hello;
+public interface Hello extends java.rmi.Remote {
+	String sayHello() throws java.rmi.RemoteException;
+}
+  \end{verbatim}
+  \item HelloImpl.java
+  \begin{verbatim}
+package examples.hello;
+
+import java.rmi.*;
+import java.rmi.server.UnicastRemoteObject;
+
+public class HelloImpl
+	extends UnicastRemoteObject
+	implements Hello
+{
+	private String name;
+
+	public HelloImpl(String s) throws RemoteException {
+		super();
+		name = s;
+	}
+
+	public String sayHello() throws RemoteException {
+		return  "Hello World!";
+	}
+	public static void main(String args[])
+	{
+		System.setSecurityManager(new RMISecurityManager());
+
+		try {
+			HelloImpl obj = new HelloImpl("HelloServer");
+			Naming.rebind("//myhost/HelloServer", obj);
+			System.out.println("HelloServer bound in registry");
+		} catch (Exception e) {
+			System.out.println("HelloImpl err: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+}
+  \end{verbatim}
+\end{itemize}
 \subsection {Java 3}
 \subsection {Java 4}
 \subsection {Java 5}
 \subsection {Java 6}
 \subsection {Java 7}
 \subsection {Java 8}
- 
+ \\
 
 
 
