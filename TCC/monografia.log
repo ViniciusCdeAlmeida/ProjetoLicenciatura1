@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.4)  4 MAY 2015 20:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.4)  5 MAY 2015 20:36
 entering extended mode
 **C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/monografia.tex
 (C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/monografia.tex
@@ -610,7 +610,7 @@ File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
 LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              Font shape `T1/ua1/b/n' tried instead on input line 74.
 
-<positivo_cor.pdf, id=35, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=47, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 74.
@@ -798,7 +798,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
-[6]) [7] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
+[6]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 
+     
+? 
+) [7] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
 (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.brf)
 \tf@brf=\write7
 )
@@ -813,35 +824,42 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
 (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\referencias/citacoes.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
-Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 50A02145EF1625D13E960B68D42E11D6;411.
+
+Package rerunfilecheck Warning: File `monografia.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `monografia.out':
+(rerunfilecheck)             Before: B4A2B349D5FAE40FE2632B5CA66DD81F;616
+(rerunfilecheck)             After:  6CF02C0FC4EB674493F4C228BED6086A;982.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
 (rerunfilecheck)             Checksum: 8F013FFA1FA69977514CF8328EBFE2D5;92.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 7862 strings out of 493921
- 112714 string characters out of 3147271
- 213915 words of memory out of 3000000
- 10976 multiletter control sequences out of 15000+200000
- 24643 words of font info for 35 fonts, out of 3000000 for 9000
+ 7876 strings out of 493921
+ 112926 string characters out of 3147271
+ 213918 words of memory out of 3000000
+ 10980 multiletter control sequences out of 15000+200000
+ 25418 words of font info for 36 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,7n,69p,1215b,399s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\ViniciusC\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\User
-s\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx248
-8.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecbx1200.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\ViniciusC\AppData\Loc
-al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk>{C:/Program Files/
-MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ViniciusC/AppData/Roaming/MiKTeX/2
-.9/fonts/type1/urw/arial/ua1b8a.pfb>
-Output written on monografia.pdf (18 pages, 145809 bytes).
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\User
+s\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti120
+0.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecbx2488.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\ViniciusC\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Viniciu
+sC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk>{C:/
+Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ViniciusC/AppData/Ro
+aming/MiKTeX/2.9/fonts/type1/urw/arial/ua1b8a.pfb>
+Output written on monografia.pdf (18 pages, 155817 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 465 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 
