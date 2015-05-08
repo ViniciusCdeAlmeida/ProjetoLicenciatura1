@@ -1,0 +1,14 @@
+Java 5 & 6 Fundamentos, Prática & Certificação
+Java 6: Uma Abordagem Ativa de Aprendizado
+Java 7: Programação de Computadores: Guia Prático de Introdução, Orientação e Desenvolvimento
+Java 8: Programação de Computadores - Guia Prático de Introdução, Orientação e Desenvolvimento
+http://docs.oracle.com/javase/tutorial/extra/generics/index.html
+http://www.public.iastate.edu/~java/docs/relnotes/features.html
+http://www.pawlan.com/monica/articles/jdk1.2features/
+http://www.oracle.com/technetwork/java/javase/jdk7-relnotes-418459.html
+http://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html
+http://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html
+http://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html
+http://homepages.inf.ed.ac.uk/wadler/gj/Documents/gj-oopsla.pdf
+http://homepages.inf.ed.ac.uk/wadler/gj/Documents/gj-tutorial.pdf
+http://www.bracha.org/wildcards.pdf

@@ -69,9 +69,9 @@ O JDK* 8 adicionou novas funcionalidades como:
   \item As expressões lambda são suportados pelas seguintes características: As referências a metodos são compactos, maior legibilidade expressões lambda para métodos que já têm um nome. Métodos padrão que permitem adicionar novas funcionalidades para as interfaces de suas bibliotecas e assegurar a compatibilidade binária com o código escrito para versões mais antigas dessas interfaces. Eles são os métodos de interface que têm uma aplicação e a palavra-chave padrão no início da assinatura do método. Além disso, pode-se definir métodos estáticos em interfaces. Novos e aprimorados APIs que se aproveitam de expressões lambda e dos {\it streams} em Java 8 descrevem as classes novos e aprimorados que se aproveitam de expressões lambda e {\it streams}.
   \item O compilador Java aproveita digitação alvo para inferir os parâmetros de tipo de um método de invocação genérica. O tipo de destino de uma expressão é o tipo de dados que o compilador Java espera, dependendo de onde a expressão aparece. Por exemplo, você pode usar o tipo de destino de uma instrução de atribuição para o tipo de inferência em Java 7. No entanto, em Java 8, você pode usar o tipo de destino para a inferência de tipos em mais contextos.
   \item Anotações sobre tipos Java. Agora é possível aplicar uma anotação em qualquer lugar onde um tipo é usado. Utilizado em um conjunto com um sistema de tipo de conector, isso permite a verificação de tipo mais forte de seu código.
-  \item  Repetindo Anotações. Agora é possível aplicar o mesmo tipo de anotação mais de uma vez para a mesma declaração ou o tipo de utilização.
-  \end{itemize}\\
-\section {Aspectos evolutivos da liguagem Java}\\
+  \item  Repetindo Anotações. Agora é possível aplicar o mesmo tipo de anotação mais de uma vez para a mesma declaração ou o tipo de utilização.\\
+  \end{itemize}
+\section {Aspectos evolutivos da liguagem Java}
 
 \subsection {Java 2}
 A primeira versão do Java Security, disponível no JDK* 1.1, contém um subconjunto dessa funcionalidade, incluindo APIs para:
@@ -123,7 +123,7 @@ class FixedStack$Enumerator implements java.util.Enumeration {
   \begin{verbatim}
 package examples.hello;
 public interface Hello extends java.rmi.Remote {
-	String sayHello() throws java.rmi.RemoteException;
+    String sayHello() throws java.rmi.RemoteException;
 }
   \end{verbatim}
   \item HelloImpl.java
@@ -133,36 +133,33 @@ package examples.hello;
 import java.rmi.*;
 import java.rmi.server.UnicastRemoteObject;
 
-public class HelloImpl
-	extends UnicastRemoteObject
-	implements Hello
-{
-	private String name;
+public class HelloImpl extends UnicastRemoteObject implements Hello{
+    private String name;
 
-	public HelloImpl(String s) throws RemoteException {
-		super();
-		name = s;
+    public HelloImpl(String s) throws RemoteException {
+            super();
+            name = s;
 	}
 
-	public String sayHello() throws RemoteException {
-		return  "Hello World!";
+    public String sayHello() throws RemoteException {
+           return  "Hello World!";
 	}
-	public static void main(String args[])
-	{
-		System.setSecurityManager(new RMISecurityManager());
-
-		try {
-			HelloImpl obj = new HelloImpl("HelloServer");
-			Naming.rebind("//myhost/HelloServer", obj);
-			System.out.println("HelloServer bound in registry");
-		} catch (Exception e) {
-			System.out.println("HelloImpl err: " + e.getMessage());
-			e.printStackTrace();
-		}
-	}
+	
+    public static void main(String args[]){
+           System.setSecurityManager(new RMISecurityManager());
+           try {
+                     HelloImpl obj = new HelloImpl("HelloServer");
+                     Naming.rebind("//myhost/HelloServer", obj);
+                     System.out.println("HelloServer bound in registry");
+           }catch (Exception e) {
+                     System.out.println("HelloImpl err: " + e.getMessage());
+                     e.printStackTrace();
+                     }
+           }
 }
+
   \end{verbatim}
-\end{itemize}
+  \end{itemize}
 \subsection {Java 4}
   \begin{itemize}
   \item {\it Assertion Facility}. As {\it assertions} são expressões booleanas que o programador acredita ser verdade sobre o estado de um programa de computador. Por exemplo, depois de ordenar uma lista o programador pode afirmar que a lista está em ordem crescente. Avaliando as afirmações em tempo de execução para confirmar a sua validade é uma das ferramentas mais poderosas para melhorar a qualidade do código, uma vez que rapidamente se descobre equívocos do programador sobre o comportamento de um programa.
@@ -243,29 +240,33 @@ Não ocorreu mudanças ou introdução de novas estruturas na linguagem Java\\
   \end{verbatim}
   \item O {\it try-with-resouces}. A declaração {\it try-with-resouces} é uma instrução {\it try} que declara um ou mais recursos. Um recurso é um objeto que deve ser fechada após o programa terminar com ele. Essa declaração garante que cada recurso é fechada no final da declaração.
   \begin{verbatim}
-
-public static void writeToFileZipFileContents(String zipFileName, String outputFileName)
+public static void writeToFileZipFileContents(String zipFileName, 
+String outputFileName)
     throws java.io.IOException {
 
-    java.nio.charset.Charset charset = java.nio.charset.StandardCharsets.US_ASCII;
+    java.nio.charset.Charset charset =
+    java.nio.charset.StandardCharsets.US_ASCII;
     java.nio.file.Path outputFilePath = java.nio.file.Paths.get(outputFileName);
 
     try (
       java.util.zip.ZipFile zf = new java.util.zip.ZipFile(zipFileName);
-      java.io.BufferedWriter writer = java.nio.file.Files.newBufferedWriter(outputFilePath, charset)
+      java.io.BufferedWriter writer = 
+      java.nio.file.Files.newBufferedWriter(outputFilePath, charset);
     ) {
 
-    for (java.util.Enumeration entries = zf.entries(); entries.hasMoreElements();) {
+    for (java.util.Enumeration entries = zf.entries(); 
+    entries.hasMoreElements();) {
 
       String newLine = System.getProperty("line.separator");
-      String zipEntryName = ((java.util.zip.ZipEntry)entries.nextElement()).getName() + newLine;
+      String zipEntryName = ((java.util.zip.ZipEntry)
+      entries.nextElement()).getName() + newLine;
       writer.write(zipEntryName, 0, zipEntryName.length());
       }
     }
   }
 
   \end{verbatim}
-  \item Inferência de tipos para criação de instâncias em {\it generics}. Com o Java 7 pode-se substituir os argumentos de tipo necessários para invocar o construtor de uma classe genérica com um conjunto vazio de parâmetros de tipo (<>), desde que o compilador infira os argumentos de tipo a partir do contexto. Este par de colchetes angulares é informalmente chamado de diamante.
+  \item Inferência de tipos para criação de instâncias em {\it generics}. Com o Java 7 pode-se substituir os argumentos de tipo necessários para invocar o construtor de uma classe genérica com um conjunto vazio de parâmetros de tipo (<>), desde que o compilador infira os argumentos de tipo a partir do contexto. Este par de colchetes angulares é informalmente chamado de diamante.\\
   \begin{verbatim}
 
 Map<String, List<String>> myMap = new HashMap<String, List<String>>();
@@ -286,7 +287,7 @@ class MyClass<X> {
   }
 }
   \end{verbatim}
-  \end{itemize}\\
+  \end{itemize}
 \subsection{Java 8}
   \begin{itemize}
   \item Melhoria na inferência de tipos. O compilador Java aproveita digitação para inferir os parâmetros de tipo de uma invocação de método genérica. O tipo de destino de uma expressão é o tipo de dados que o compilador Java espera, dependendo de onde a expressão aparece. Por exemplo, pode-se usar o tipo de destino de uma instrução de atribuição para o tipo de inferência em Java 7. No entanto, em Java 8, pode-se usar o tipo de destino para a inferência de tipos em mais contextos. O exemplo mais proeminente está usando tipos de destino de um método de invocação para inferir os tipos de dados dos seus argumentos.
@@ -297,7 +298,7 @@ stringList.add("A");
 stringList.addAll(Arrays.asList());
 
   \end{verbatim}
-  \item Expressões lambda. Permitem encapsular uma única unidade de comportamento e passá-lo para outro código. Pode-se usar uma expressãos lambda, se quiser uma determinada ação executada em cada elemento de uma {\it collection}, quando o processo for concluído, ou quando um processo encontra um erro. \\
+  \item Expressões lambda. Permitem encapsular uma única unidade de comportamento e passá-lo para outro código. Pode-se usar uma expressãos lambda, se quiser uma determinada ação executada em cada elemento de uma {\it collection}, quando o processo for concluído, ou quando um processo encontra um erro.\\
   \end{itemize}
   \begin{verbatim}
 
