@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classe do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Nós usamos a classe "unb-cic".  Deixe apenas uma das linhas
+% abaixo não-comentada, dependendo se você for do bacharelado ou
+% da licenciatura.
+
+%\documentclass[bacharelado]{unb-cic}
+\documentclass[licenciatura]{unb-cic}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pacotes importados
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[brazil,american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{natbib}
+\usepackage{xcolor,graphicx,url}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{color}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cores dos links
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Veja o arquivos cores.tex se quiser ver que outras cores estão
+% pré-definidas.  Utilizando o comando \hypersetup abaixo nós
+% evitamos aquelas caixas vermelhas feias em volta dos links.
+
+\input{cores}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=DarkScarletRed,
+  citecolor=DarkScarletRed,
+  filecolor=DarkScarletRed,
+  urlcolor= DarkScarletRed
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Informações sobre a monografia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Static Analysis to check evolution java software with language evolution}
+
+\orientador{\prof \dr Rodrigo Bonifácio de Almeida}{CIC/UnB}
+%\coorientador[a]{\prof[a] \dr[a] Coorientadora}{MAT/UnB}
+\coordenador{\prof \dr Wilson Henrique Veneziano}{CIC/UnB}
+\diamesano{31}{março}{2015}
+
+\membrobanca{\prof \dr Professor I}{CIC/UnB}
+\membrobanca{\prof \dr Professor II}{CIC/UnB}
+
+\autor{Thiago Gomes}{Cavalcanti}
+\coautor{Vinícius Correa}{de Almeida}
+
+\CDU{004.4}
+
+\palavraschave{language design, language evolution, refactoring, microrefactoring, java}
+\keywords{language design, language evolution, refactoring, microrefactoring, java}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Texto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+  \maketitle
+  \pretextual
+
+  \begin{dedicatoria}
+	  \input{capitulos/dedicatoria}
+  \end{dedicatoria}
+
+  \begin{agradecimentos}
+	\input{capitulos/agradecimentos}
+  \end{agradecimentos}
+
+  \selectlanguage{brazil}
+  \begin{resumo}
+	\input{capitulos/resumo}
+  \end{resumo}
+
+
+  \selectlanguage{american}
+  \begin{abstract}
+  	\input{capitulos/abstract}
+  \end{abstract}
+  
+  
+  \selectlanguage{brazil}
+
+  \tableofcontents
+  \listoffigures
+  \listoftables
+  
+  
+%  \newpage
+%  \addcontentsline{toc}{chapter}{Lista de Abreviaturas}
+%  \chapter*{Lista de abreviaturas}
+%  \include{abreviaturas}
+  
+%  \newpage
+ % \addcontentsline{toc}{chapter}{List of Abbreviations}
+ % \chapter*{List of Abbreviations}
+  
+
+  \textual
+  \input{capitulos/capitulo1}
+  \input{capitulos/capitulo1.1}
+
+  \postextual
+  \bibliographystyle{plain}
+  \bibliography{referencias/referencias}
+
+\end{document}

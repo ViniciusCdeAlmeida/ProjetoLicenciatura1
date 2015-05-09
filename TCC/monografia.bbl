@@ -1,9 +1,29 @@
 \begin{thebibliography}{1}
 
-\bibitem{Jeffrey_Ralph}
+\bibitem{chomsky1956three}
+Noam Chomsky.
+\newblock Three models for the description of language.
+\newblock {\em Information Theory, IRE Transactions on}, 2(3):113--124, 1956.
+
+\bibitem{dyer2013large}
+Robert Dyer, Hridesh Rajan, Hoan~Anh Nguyen, and Tien~N Nguyen.
+\newblock A large-scale empirical study of java language feature usage.
+\newblock 2013.
+
+\bibitem{Gamma:1995:DPE:186897}
+Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+\newblock {\em Design Patterns: Elements of Reusable Object-oriented Software}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1995.
+
+\bibitem{Overbey:2009:RLR:1639949.1640127}
 Jeffrey~L. Overbey and Ralph~E. Johnson.
-\newblock Regrowing a language: refactoring tools allow programming languages
+\newblock Regrowing a language: Refactoring tools allow programming languages
   to evolve.
-\newblock (10):493--502, October 2009.
+\newblock {\em SIGPLAN Not.}, 44(10):493--502, October 2009.
+
+\bibitem{Schaefer:2010:SIR:1932682.1869485}
+Max Schaefer and Oege de~Moor.
+\newblock Specifying and implementing refactorings.
+\newblock {\em SIGPLAN Not.}, 45(10):286--301, October 2010.
 
 \end{thebibliography}
