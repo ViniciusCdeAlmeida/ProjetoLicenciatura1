@@ -1,6 +1,6 @@
-\section{Historia da linguagem}
+\section{História da linguagem}
 
-	No começo da década de 90 um pequeno grupo de engenheros da Oracle chamados de ''Green Team'' acreditava que a próxima onde de na área da computação seria a união de equipamentos eletroeletrônicos com os computadores. O ''Green Team'' liderado por James Gosling, demonstraram que a linguagem de programaçao Java, que foi desenvolvida pela equipe e originalmente era chamado de Oak, foi desenvolvida para dispositivos de entretenimento como aparelhos de tv a cabo, porém não foi bem aceita no meio. Em 1995 com a massificação da Internet foi quando a linguagem Java teve sua primeira grande aplicação o navegador Netscape.\\
+	No começo da década de 90 um pequeno grupo de engenheiros da Oracle chamados de ''Green Team'' acreditava que a próxima onde de na área da computação seria a união de equipamentos eletroeletrônicos com os computadores. O ''Green Team'' liderado por James Gosling, demonstraram que a linguagem de programaçao Java, que foi desenvolvida pela equipe e originalmente era chamado de Oak, foi desenvolvida para dispositivos de entretenimento como aparelhos de tv a cabo, porém não foi bem aceita no meio. Em 1995 com a massificação da Internet foi quando a linguagem Java teve sua primeira grande aplicação o navegador Netscape.\\
 	
 	Java é uma linguagem de programação de propósito geral orientada a objetos, concebida especificadademente para ter poucas dependências de implementação isso acarreta que uma vez que a aplicação fora desenvolvida ela poderá ser executada em qualquer lugar.\\
 	
@@ -125,6 +125,7 @@ class FixedStack$Enumerator implements java.util.Enumeration {
 }
 \end{lstlisting}
 			
+			\clearpage
 			\item Para escrever um objeto remoto (RMI), você escrever uma classe que implementa uma ou mais interfaces remotas. 
 			
 \begin{lstlisting}
@@ -244,23 +245,26 @@ public class Test {
 		\begin{itemize}
 		  \item {\it Multi Catch} e lançamento de exceções com melhora na verificação de tipos. Um único bloco {\it catch} poderá lidar com mais de um tipo de exceção. Além disso, o compilador executa a análise mais precisa das exceções. Isso permite que o programador especifique tipos de exceção mais específicos na cláusula de uma declaração método. Um exemplo de como era as estruturas que usavam {\it cacths} e com a introdução de {\it multi cacth} com o Java 7\cite{JSE7}, respectivamente.
   
- \clearpage
+
 \begin{lstlisting}
 catch (IOException ex) {
 	logger.log(ex);
 	throw ex;
-} catch (SQLException ex) {
+}catch (SQLException ex) {
 	logger.log(ex);
 	throw ex;
 }
-
+\end{lstlisting}
+\clearpage
+\begin{lstlisting}
 catch (IOException|SQLException ex) {
 	logger.log(ex);
 	throw ex;
 }
 \end{lstlisting}
-  
-		  \item O {\it try-with-resouces}. A declaração {\it try-with-resouces} é uma instrução {\it try} que declara um ou mais recursos. Um recurso é um objeto que deve ser fechada após o programa terminar com ele. Essa declaração garante que cada recurso é fechada no final da declaração.
+
+
+ \item O {\it try-with-resouces}. A declaração {\it try-with-resouces} é uma instrução {\it try} que declara um ou mais recursos. Um recurso é um objeto que deve ser fechada após o programa terminar com ele. Essa declaração garante que cada recurso é fechada no final da declaração.
 	 
 \begin{lstlisting}
 
