@@ -1,4 +1,14 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{bracha1998gj}
+Gilad Bracha, Martin Odersky, and David Stoutamire.
+\newblock Gj: Extending the javatm programming language with type parameters.
+
+\bibitem{Bracha:1998:MFS:286942.286957}
+Gilad Bracha, Martin Odersky, David Stoutamire, and Philip Wadler.
+\newblock Making the future safe for the past: Adding genericity to the java
+  programming language.
+\newblock {\em SIGPLAN Not.}, 33(10):183--200, October 1998.
 
 \bibitem{chomsky1956three}
 Noam Chomsky.
@@ -10,16 +20,50 @@ Robert Dyer, Hridesh Rajan, Hoan~Anh Nguyen, and Tien~N Nguyen.
 \newblock A large-scale empirical study of java language feature usage.
 \newblock 2013.
 
+\bibitem{Dyer:2014:MBA:2568225.2568295}
+Robert Dyer, Hridesh Rajan, Hoan~Anh Nguyen, and Tien~N. Nguyen.
+\newblock Mining billions of ast nodes to study actual and potential usage of
+  java language features.
+\newblock In {\em Proceedings of the 36th International Conference on Software
+  Engineering}, ICSE 2014, pages 779--790, New York, NY, USA, 2014. ACM.
+
 \bibitem{Gamma:1995:DPE:186897}
 Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
 \newblock {\em Design Patterns: Elements of Reusable Object-oriented Software}.
 \newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1995.
+
+\bibitem{JDK1.1}
+Sun Microsystems.
+\newblock Jdk 1.1 new feature summary {@ONLINE}, May 2015.
+
+\bibitem{JSE8_Enhancements}
+Oracle.
+\newblock Enhancements in java se 8 {@ONLINE}, May 2015.
+
+\bibitem{JSE7_ReleaseNotes}
+Oracle.
+\newblock Java se 7 advanced and java se 7 support {@ONLINE}, May 2015.
+
+\bibitem{JSE7}
+Oracle.
+\newblock Java se 7 features and enhancements {@ONLINE}, May 2015.
+
+\bibitem{OracleGenerics}
+Oracle.
+\newblock The java tutorials {@ONLINE}, May 2015.
 
 \bibitem{Overbey:2009:RLR:1639949.1640127}
 Jeffrey~L. Overbey and Ralph~E. Johnson.
 \newblock Regrowing a language: Refactoring tools allow programming languages
   to evolve.
 \newblock {\em SIGPLAN Not.}, 44(10):493--502, October 2009.
+
+\bibitem{Parnin:2011:JGA:1985441.1985446}
+Chris Parnin, Christian Bird, and Emerson Murphy-Hill.
+\newblock Java generics adoption: How new features are introduced, championed,
+  or ignored.
+\newblock In {\em Proceedings of the 8th Working Conference on Mining Software
+  Repositories}, MSR '11, pages 3--12, New York, NY, USA, 2011. ACM.
 
 \bibitem{Schaefer:2010:SIR:1932682.1869485}
 Max Schaefer and Oege de~Moor.
