@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.3)  8 MAY 2015 22:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.3)  10 MAY 2015 22:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -769,63 +769,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 ) (./capitulos/capitulo1.1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 17--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 14.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
@@ -834,13 +819,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
 [6] [7]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 83.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 102.
+
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ) [8] [9]
@@ -851,7 +847,7 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ] [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
@@ -868,16 +864,21 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
  [15
 
 
-]
+] [16]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (./monografia.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
 (rerunfilecheck)             Checksum: 19DF8A5EB15E00B2FFA8C2C6E0225D03;866.
-Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 1EE404CFCC8C0500886AB3F7DBC0097A;412.
 
+
+Package rerunfilecheck Warning: File `monografia.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `monografia.brf':
+(rerunfilecheck)             Before: E6ECB87DA16AC593D06EAA195D9723CE;1187
+(rerunfilecheck)             After:  B52216F355DA0D985EF99A6DDC784BB7;1239.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -889,10 +890,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10119 strings out of 493304
- 141676 string characters out of 6139872
+ 10183 strings out of 493304
+ 143144 string characters out of 6139872
  285665 words of memory out of 5000000
- 13168 multiletter control sequences out of 15000+600000
+ 13222 multiletter control sequences out of 15000+600000
  15852 words of font info for 36 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  43i,7n,72p,1166b,1191s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -906,10 +907,10 @@ public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 /texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/p
 ublic/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1
 200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on monografia.pdf (25 pages, 252912 bytes).
+Output written on monografia.pdf (26 pages, 257769 bytes).
 PDF statistics:
- 504 PDF objects out of 1000 (max. 8388607)
- 460 compressed objects within 5 object streams
- 242 named destinations out of 1000 (max. 500000)
+ 543 PDF objects out of 1000 (max. 8388607)
+ 498 compressed objects within 5 object streams
+ 252 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

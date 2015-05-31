@@ -1,0 +1,8 @@
+\frametitle{Código}
+\centering
+\begin{verbatim}
+ApplicationContext ctx =
+      new ClassPathXmlApplicationContext("Beans.xml");
+\end{verbatim}
+Convém que seja tranformado em um sigleton.
+

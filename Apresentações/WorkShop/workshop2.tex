@@ -1,0 +1,138 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc} % codificacao de caracteres
+\usepackage[T1]{fontenc}    % codificacao de fontes
+\usepackage[brazil]{babel}  % idioma
+\usetheme{Antibes}         % tema
+\usecolortheme{beaver}      % cores
+\usepackage{listings}
+\usepackage{color}
+\usefonttheme[onlymath]{serif} % fonte modo matematic
+
+
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	showstringspaces=false,
+	commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+	morestring=[b]",
+	morestring=[s]{>}{<},
+	morecomment=[s]{<?}{?>},
+	stringstyle=\color{black},
+	identifierstyle=\color{darkblue},
+	keywordstyle=\color{cyan},
+	morekeywords={xmlns,version,type}% list your attributes here
+}
+
+
+%Titulo
+\title[\sc{Static Analisys}]{Static analysis to detect evolution language in java projects}
+\institute{
+	\includegraphics[scale=0.7]{as_comp_cor.eps}\\
+	\large
+	\textbf{
+	Universidade de Brasília\\
+	Instituto de Ciências Exatas\\
+	Departamento de Ciência da Computação}
+	}
+\date{\today}
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}\frametitle{Roteiro}
+		\begin{itemize}
+			\item Spring
+			\item Configurações
+			\item Annotationss
+			\item Beans
+			\item XML
+			\item Código
+		\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}\frametitle{Spring}
+		\begin{itemize}
+			\item Framework criado por Rod Johnson, em meados de 2002, com intuito de simplificar aplicações que antes só era possível com EJB's.\\
+			\item Atualmente tem diversos módulos atenção especial para CDI.
+		\end{itemize}
+	\end{frame}
+	
+
+
+	\begin{frame}\frametitle{Configurações}
+		\begin{itemize}
+			\item spring-aop-4.1.6.RELEASE.jar
+			\item spring-beans-4.1.6.RELEASE.jar
+			\item spring-context-4.1.6.RELEASE.jar
+			\item spring-core-4.1.6.RELEASE.jar
+			\item spring-expression-4.1.6.RELEASE.jar
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	\begin{frame}\frametitle{Annotations}
+		\textbf{@Autowired} para injetar dependêcia. A classe X tem um dependência da classe Y.\\
+		E com interface com mais de uma classe implementando?\\
+        \textbf{@Autowired}\\
+		\textbf{@Qualifier("caixa1")}\\
+		public class....
+	\end{frame}
+	
+
+	\begin{frame}[fragile]\frametitle{Beans}
+		\centering
+		São as classes que serão injetadas.\\
+		Em nosso caso os beans são os visitors.\\
+		\lstset{language=XML}
+		\begin{lstlisting}
+		<bean id="tsVisitor" 
+		     class="br.unb.cic.sa.visitors.TryStatementVisitor"/>
+		\end{lstlisting}
+	\end{frame}	
+	
+	
+	\begin{frame}[fragile]\frametitle{XML}
+		É quem possui os beans e onde serão injetados cada um desses beans.\\
+		\lstset{language=XML}
+		\begin{lstlisting}
+		 <bean id="pa" class="br.unb.cic.sa.ProjectAnalyser">
+			     atributo listVisitors
+		     <property name="listVisitors">
+		         pode ser uma listas ou outro obj qualquer, um Bean
+		     </property>
+		 </bean>
+		\end{lstlisting}
+	\end{frame}	
+	
+	
+	\begin{frame}[fragile]\frametitle{Código}
+		\centering
+		\begin{verbatim}
+			ApplicationContext ctx = 
+			     	new ClassPathXmlApplicationContext("Beans.xml");
+		\end{verbatim}
+		Convém que seja tranformado em um sigleton.
+		
+	\end{frame}
+
+	\begin{frame}\frametitle{Referências}
+		\centering
+		\begin{itemize}
+			\item http://spring.io/docs
+			\item http://stackoverflow.com/
+		\end{itemize}
+	\end{frame}
+\end{document}

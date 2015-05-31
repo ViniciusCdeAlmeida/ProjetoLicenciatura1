@@ -1,25 +1,23 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2015.5.6)  11 MAY 2015 15:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.3)  30 MAY 2015 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **monografia.tex
 (./monografia.tex
-LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 79 languages loaded.
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (./unb-cic.cls
 Document Class: unb-cic 2008/06/05 v0.93 Classe para trabalhos CIC UnB
 (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks14
 \XKV@tempa@toks=\toks15
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))
 \XKV@depth=\count79
-File: xkeyval.tex 2014/05/25 v2.7 key=value parser (HA)
-))
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -39,8 +37,8 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
-Package: fixltx2e 2014/06/10 v1.1r fixes to LaTeX
-LaTeX Info: Redefining \em on input line 430.
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
@@ -166,7 +164,7 @@ File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Hy@SectionHShift=\skip43
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -216,13 +214,13 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 \c@definition=\count105
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2014/03/24 3.9k The Babel package
+Package: babel 2013/12/03 3.9h The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2014/03/24 3.9k Babel common definitions
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count106
 \U@D=\dimen117
 )
@@ -252,7 +250,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count107
 )
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
@@ -270,7 +268,7 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2014/04/30 v1.2b Input encoding file
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 
@@ -503,22 +501,23 @@ Now handling font encoding PD1 ...
 \lst@maxwidth=\dimen121
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 \c@lstnumber=\count114
 \lst@skipnumbers=\count115
 \lst@framebox=\box29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2014/03/04 1.5c listings configuration
+File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
-Package: listings 2014/03/04 1.5c (Carsten Heinz)
+Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/03/04 1.5c listings language file
+File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) (./cores.tex)
 Package hyperref Info: Option `colorlinks' set `true' on input line 65.
 
 (./monografia.aux (./capitulos/capitulo1_section_1.aux)
+(./capitulos/capitulo1_problemaASerAtacado.aux)
 (./capitulos/capitulo1_section_1.1.aux) (./capitulos/capitulo1_section_1.2.aux)
 )
 \openout1 = `monografia.aux'.
@@ -648,7 +647,7 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
 LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              size <20.74> substituted on input line 100.
 
-<positivo_cor.pdf, id=64, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=72, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 100.
@@ -782,6 +781,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--1
  []
 
 [2]
+\openout2 = `capitulos/capitulo1_problemaASerAtacado.aux'.
+
+ (./capitulos/capitulo1_problemaASerAtacado.tex
+Cap\'{\i }tulo 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+[3
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+) [4]
 \openout2 = `capitulos/capitulo1_section_1.1.aux'.
 
  (./capitulos/capitulo1_section_1.1.tex
@@ -810,7 +848,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
- [3
+ [5
 
 
 ]
@@ -828,7 +866,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[4]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
@@ -838,7 +876,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-[5]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
@@ -853,27 +891,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-[6] [7]
+[8] [9]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 83.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [8] [9
+) [10] [11
 
 ]
-[10
+[12
 
-] [11
+] [13
 
-] [12
+] [14
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
  []
 
-[13
+[15
 
-]) [14
+]) [16
 
 ]
 \openout2 = `capitulos/capitulo1_section_1.2.aux'.
@@ -885,23 +923,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
- [15
+ [17
 
 
 
 
 
-] [16]
+] [18]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
  (./monografia.aux
-(./capitulos/capitulo1_section_1.aux) (./capitulos/capitulo1_section_1.1.aux)
-(./capitulos/capitulo1_section_1.2.aux))
+(./capitulos/capitulo1_section_1.aux)
+(./capitulos/capitulo1_problemaASerAtacado.aux)
+(./capitulos/capitulo1_section_1.1.aux) (./capitulos/capitulo1_section_1.2.aux)
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: BFDAB5C335577F8192032254F503DEA2;869.
+(rerunfilecheck)             Checksum: DA229CD95AD340891E4AF126CF5C0282;995.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: B6D60506F34209C4EFDBC8FA469E8B03;1460.
+(rerunfilecheck)             Checksum: 89F9718D282715DAEAF28B0A910DBC49;1598.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -914,12 +954,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 149.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10221 strings out of 493104
- 144290 string characters out of 6136933
- 287228 words of memory out of 5000000
- 13248 multiletter control sequences out of 15000+600000
+ 10214 strings out of 493304
+ 144260 string characters out of 6139872
+ 285665 words of memory out of 5000000
+ 13228 multiletter control sequences out of 15000+600000
  15852 words of font info for 36 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 957 hyphenation exceptions out of 8191
  43i,7n,72p,1198b,1191s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts
 /enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/
@@ -931,10 +971,10 @@ public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 /texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/p
 ublic/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1
 200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on monografia.pdf (26 pages, 257633 bytes).
+Output written on monografia.pdf (28 pages, 263626 bytes).
 PDF statistics:
- 550 PDF objects out of 1000 (max. 8388607)
- 504 compressed objects within 6 object streams
- 249 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 574 PDF objects out of 1000 (max. 8388607)
+ 526 compressed objects within 6 object streams
+ 253 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
