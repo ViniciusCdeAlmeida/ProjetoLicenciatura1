@@ -4,4 +4,7 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Arquitetura geral do software.}}{19}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Organiza\IeC {\c c}\IeC {\~a}o dos Visitors.}}{20}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Project analyser.}}{21}{figure.2.3}
 \addvspace {10\p@ }
