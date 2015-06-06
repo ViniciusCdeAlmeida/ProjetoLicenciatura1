@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  6 JUN 2015 10:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  6 JUN 2015 11:35
 entering extended mode
 **monografia.tex
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.tex
@@ -545,11 +545,19 @@ tura.aux
 
 LaTeX Warning: Label `arquiteturaVisitor' multiply defined.
 
+
+LaTeX Warning: Label `ProjectAnalyser' multiply defined.
+
+
+LaTeX Warning: Label `ProjectAnalyser' multiply defined.
+
 )
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_analise
 _estatica.aux)
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_section
-_2.aux))
+_2.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo5_resulta
+dos.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
 LaTeX Font Info:    ... okay on input line 101.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
@@ -653,7 +661,7 @@ File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
 LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              Font shape `T1/ua1/b/n' tried instead on input line 102.
 
-<positivo_cor.pdf, id=107, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=111, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 102.
@@ -952,7 +960,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<Imagens/Arquitetura.png, id=501, 1350.54562pt x 587.94656pt>
+<Imagens/Arquitetura.png, id=511, 1350.54562pt x 587.94656pt>
 File: Imagens/Arquitetura.png Graphic file (type png)
 
 <use Imagens/Arquitetura.png>
@@ -960,7 +968,7 @@ Package pdftex.def Info: Imagens/Arquitetura.png used on input line 26.
 (pdftex.def)             Requested size: 455.24411pt x 198.18565pt.
  [19 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Arquitetura.pn
 g>]
-<Imagens/Visitors.png, id=508, 865.73438pt x 600.74437pt>
+<Imagens/Visitors.png, id=518, 865.73438pt x 600.74437pt>
 File: Imagens/Visitors.png Graphic file (type png)
 
 <use Imagens/Visitors.png>
@@ -974,7 +982,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 [20
 
  <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Visitors.png>]
-<Imagens/ProjectAnalyser.png, id=514, 856.70062pt x 383.18156pt>
+<Imagens/ProjectAnalyser.png, id=524, 856.70062pt x 383.18156pt>
 File: Imagens/ProjectAnalyser.png Graphic file (type png)
 
 <use Imagens/ProjectAnalyser.png>
@@ -1003,9 +1011,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-) [22
+<Imagens/Beans.png, id=532, 330.23375pt x 463.7325pt>
+File: Imagens/Beans.png Graphic file (type png)
+ <use Imagens/Beans.png>
+Package pdftex.def Info: Imagens/Beans.png used on input line 65.
+(pdftex.def)             Requested size: 182.09486pt x 255.71172pt.
 
-])
+[22
+
+ <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Beans.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+[23
+
+]
+Overfull \hbox (20.07481pt too wide) in paragraph at lines 100--101
+\T1/cmr/m/n/12 IVi-si-tor. E desta forma in-di-ca-mos no \T1/cmr/m/it/12 XML \T
+1/cmr/m/n/12 atra-vés da tag \T1/cmr/bx/n/12 <pro-perty name="listVisitors
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+[24
+
+] [25
+
+] <Imagens/libsSpring.png, id=619, 476.78125pt x 502.87875pt>
+File: Imagens/libsSpring.png Graphic file (type png)
+
+<use Imagens/libsSpring.png>
+Package pdftex.def Info: Imagens/libsSpring.png used on input line 171.
+(pdftex.def)             Requested size: 182.09486pt x 192.06274pt.
+) [26
+
+ <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/libsSpring.png>])
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3.tex
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_analise
 _estatica.tex
@@ -1030,7 +1089,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--1
 
  []
 
-[23
+[27
 
 
 
@@ -1051,7 +1110,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-[24
+[28
 
 
 ]
@@ -1064,20 +1123,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-) [25] [26])
+) [29] [30])
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo4.tex)
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo5.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo5_resulta
+dos.tex
+Cap\'{\i }tulo 4.
+) [31
+
+
+
+]) (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.brf)
 \tf@brf=\write7
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
- [27
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+[]\T1/cmr/m/n/12 Java se 7 ad-van-ced and java se 7 sup-port @ON-LINE.  [][]$\T
+1/cmtt/m/n/12 http : / /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+$\T1/cmtt/m/n/12 www . oracle . com / technetwork / java / javaseproducts / doc
+umentation /$
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 20--20
+[]\T1/cmr/m/n/12 Java se 7 fe-a-tu-res and enhan-ce-ments @ON-LINE.  [][]$\T1/c
+mtt/m/n/12 http : / / www . oracle . com /$
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 26--26
+[]\T1/cmr/m/n/12 The java tu-to-ri-als @ON-LINE.  [][]$\T1/cmtt/m/n/12 http : /
+ / docs . oracle . com / javase / tutorial /$
+ []
+
+[32
 
 
 
-]
-[28]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
+ [33]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
  (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.aux
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_Introdu
 cao.aux)
@@ -1092,44 +1182,48 @@ tura.aux)
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_analise
 _estatica.aux)
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_section
-_2.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+_2.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo5_resulta
+dos.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 06057163F1930B8FF73EC303895CE710;1655.
+(rerunfilecheck)             Checksum: 2F320B25077137B013ECB5D63A9B7DC7;1702.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 9D021661786D572EC0C0AC635448694A;1805.
+(rerunfilecheck)             Checksum: F699F47F8720D30B25038AB1D08B5814;2016.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10140 strings out of 493921
- 147388 string characters out of 3147273
+ 10251 strings out of 493921
+ 149594 string characters out of 3147273
  278947 words of memory out of 3000000
- 12923 multiletter control sequences out of 15000+200000
- 26501 words of font info for 38 fonts, out of 3000000 for 9000
+ 12957 multiletter control sequences out of 15000+200000
+ 27513 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,7n,72p,1790b,1893s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Vinicius\App
-Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users
-\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.
+Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users
+\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.
 pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
-600\ecti1200.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecbx2488.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Vinicius\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Vinicius\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\
-Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.p
-k>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/urw/arial/ua1b8a.pfb>
-Output written on monografia.pdf (38 pages, 368466 bytes).
+600\ectt1095.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecbx1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Vinicius\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Vinicius\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\
+Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.p
+k> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecrm1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecbx1728.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontna
+me/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/arial/ua1b8a.pfb>
+Output written on monografia.pdf (43 pages, 490670 bytes).
 PDF statistics:
- 1109 PDF objects out of 1200 (max. 8388607)
- 289 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1295 PDF objects out of 1440 (max. 8388607)
+ 352 named destinations out of 1000 (max. 500000)
+ 247 words of extra memory for PDF output out of 10000 (max. 10000000)
 
