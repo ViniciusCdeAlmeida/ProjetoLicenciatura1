@@ -58,8 +58,17 @@ Um ponto interessante é que o \textit{ProjectAnalyser.java} não tem a responsa
 \subsection{Inversão de Controle e Injeção de Dependência}
 O padrão de projeto inversão de controle \textbf{(IoC)} e injeção de dependência \textbf{(DI)} é utilizado quando deseja-se obter um baixo nível de acoplamento entre módulos que compõem um sistema tornando mais suave ou até mesmo removendo o acoplamento entres módulos para que seja mais fácil evoluir e manter o software. Desta forma a injeção faz-se de maneira configurável através de um arquivo \textit{XML} ou até mesmo uma classe \textit{Java}. Para tal função usaremos o framework Spring devido sua consolidação e popularidade no assunto.\\
 
-Para começar tal tarefa no Spring é necessário definir  o contexto da aplicação por isso é necessário criar antes a IoC e CDI, dentre as possíveis formas de criar uma ApplicationContext o projeto segue com a criação por  \textit{XML}, para isso é necessário criar um arquivo chamado \textit{'Beans.xml'}.\\
+Para preparar o ambiente de acordo com as especificações do Spring é necessário definir o contexto da aplicação e para isso é faz-se necessário criar antes de injetar as dependências as configurações iniciais. Dentre as possíveis formas disponibilizadas pelo framework de conceder tal configuração para criação um contexto para aplicação \textit{ApplicationContext} o projeto segue com a criação de um arquivo   \textit{XML} o que concentra as referências necessárias de quais objetos e onde estes serão injetados. O arquivo \textit{XML} criado para tal finalidade é o \textit{'Beans.xml'}. Atualmente na versão 4.1.6 do framework spring é possível utilizar uma classe para fazer o mesmo trabalho do arquivo \textit{XML}. \\
 
+\begin{figure}[h]
+	\center
+	\includegraphics[width=0.4\textwidth]{Imagens/Beans}
+	\label{ProjectAnalyser}
+	\caption{Localização Beans.xml.}
+\end{figure}
+\clearpage
+
+Configuração necessária para o funcionamento da injeção de dependências com Spring conforme explicado na documentação do framework conforme\cite{SPRING_REF}.\\
 \begin{lstlisting}
 <?xml version="1.0" encoding="UTF-8"?>
 	<beans xmlns="http://www.springframework.org/schema/beans"
@@ -70,9 +79,97 @@ Para começar tal tarefa no Spring é necessário definir  o contexto da aplica�
 		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	</beans>
-
 \end{lstlisting}
 
 
+O framework trabalha com \textit{beans} onde cada \textit{bean} representa uma classe Java a ser injetada vale ressaltar que essas por simplicidade devem ter o construtor sem parâmetros para que o trabalho possa ocorrer da maneira mais simples, caso seja necessário parâmetros estes sejam passados vias os métodos Sets.\\
 
+Identificação de cada bean no arquivo de configuração \textit{XML}, é atributo \textbf{id} contido na tag \textbf{bean} onde cada deve ser único para que a gerência das dependências ocorra da forma preconizada pelo framework.\\
+\begin{lstlisting}
+	<bean id="tsVisitor" class="br.unb.cic.sa.visitors.TryStatementVisitor"/>
+	<bean id="mdVisitor" class="br.unb.cic.sa.visitors.MethodDeclarationVisitor"/>
+	<bean id="typeVisitor" class="br.unb.cic.sa.visitors.TypeDeclarationVisitor"/>
+	<bean id="swVisitor" class="br.unb.cic.sa.visitors.SwitchStatementVisitor"/>
+	<bean id="enVisitor" class="br.unb.cic.sa.visitors.EnumDeclarationVisitor"/>
+	<bean id="ifVisitor" class="br.unb.cic.sa.visitors.IfVisitor"/>
+	<bean id="forVisitor" class="br.unb.cic.sa.visitors.ForVisitor"/>
+	<bean id="collection" class="br.unb.cic.sa.model.CollectedData"/>
+\end{lstlisting}
+\clearpage
+
+Todos os beans são injetados na classe \textit{ProjectAnalyser.java} através de uma lista de IVisitor. E desta forma indicamos no \textit{XML} através da tag \textbf{<property name="listVisitors">} onde o atributo \textbf{name} deve conter o mesmo nome que o atributo na classe Java,  neste caso o algo é \textbf{listVisitors} que existe uma lista de IVisitor com este mesmo nome dentro da classe \textit{ProjectAnalyser.java}.\\
+\begin{lstlisting}
+	<bean id="pa" class="br.unb.cic.sa.ProjectAnalyser">
+		<property name="listVisitors">
+			<list>
+				<ref bean="forVisitor"/>
+				<ref bean="ifVisitor"/>
+				<ref bean="tsVisitor"/>
+				<ref bean="mdVisitor"/>
+				<ref bean="typeVisitor"/>
+				<ref bean="swVisitor"/>
+				<ref bean="enVisitor"/>
+			</list>
+		</property>
+	
+	</bean>
+\end{lstlisting}
+
+
+Para concluir com sucesso a injeção faz-se necessário somente indicar em qual classe e em qual local será injetada tal dependêcia, nesse caso a classe é a \textit{ProjectAnalyser.java} e o local é definido pela anotação \textbf{\textit{@Autowired}} logo acima do atributo o qual será injetado.\\
+
+\begin{lstlisting}
+	public class ProjectAnalyser... {
+
+		@Autowired
+		private List<IVisitor> listVisitors;
+		.
+		.
+		.
+	}
+\end{lstlisting}
+\clearpage
+
+Para finalizar todo ambiente de configuração de injeção de dependência é necessário somente criar uma classe que seja um Singleton\cite{Gamma:1995:DPE:186897} conforme cita Gamma e amigos e faz-se necessária conforme indica a documentação\cite{SPRING_REF}, para ter o controle de que exista somente um único ambiente de injeção.\\
+Tal padrão que controla a quantidade de instâncias dos objetos se faz presente através da classe \textit{CDI.java} qual
+\begin{lstlisting}
+	public class CDI {
+	
+		private static CDI instance;
+		private ApplicationContext ctx;
+		
+		private CDI(){ 
+			ctx = new ClassPathXmlApplicationContext("Beans.xml");
+		}
+		
+		public static CDI Instance(){
+			if(instance == null)
+				instance = new CDI();
+		
+			return instance;
+		}
+		
+		public ApplicationContext getContextCdi(){
+			return ctx;
+		}
+	}
+\end{lstlisting}
+
+As bibliotecas necessárias para que o ambiente de injeção de dependência ocorra na linguagem \textit{Java} são:
+\begin{itemize}
+	\item spring-aop-4.1.6.RELEASE.jar
+	\item spring-beans-4.1.6.RELEASE.jar
+	\item spring-context-4.1.6.RELEASE.jar
+	\item spring-core-4.1.6.RELEASE.jar
+	\item spring-expression-4.1.6.RELEASE.jar
+\end{itemize}
+\clearpage
+
+As quais devem ser adicionadas ao diretório \textbf{lib} do projeto tendo suas referências atualizadas, conforme ilustrada da figura abaixo.\\
+\begin{figure}[h]
+	\center
+	\includegraphics[width=0.4\textwidth]{Imagens/libsSpring}
+	\label{ProjectAnalyser}
+	\caption{Libs Spring necessárias para CDI.}
+\end{figure}
 

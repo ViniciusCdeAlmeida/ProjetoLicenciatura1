@@ -1,5 +1,41 @@
 \begin{thebibliography}{10}
 
+\bibitem{JSE8_Enhancements}
+Enhancements in java se 8 {@ONLINE}.
+\newblock
+  \url{http://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html}.
+\newblock accessed: 2015-05-27.
+
+\bibitem{JSE7_Advanced}
+Java se 7 advanced and java se 7 support {@ONLINE}.
+\newblock
+  \url{http://www.oracle.com/technetwork/java/javaseproducts/documentation/javase7supportreleasenotes-1601161.html}.
+\newblock Acessed: 2015-05-20.
+
+\bibitem{JSE7}
+Java se 7 features and enhancements {@ONLINE}.
+\newblock
+  \url{http://www.oracle.com/technetwork/java/javase/jdk7-relnotes-418459.html}.
+\newblock Acessed: 2015-05-20.
+
+\bibitem{OracleGenerics}
+The java tutorials {@ONLINE}.
+\newblock
+  \url{http://docs.oracle.com/javase/tutorial/extra/generics/index.html}.
+\newblock Acessed: 2015-05-20.
+
+\bibitem{JDK1.1}
+Jdk 1.1 new feature summary {@ONLINE}.
+\newblock
+  \url{http://www.public.iastate.edu/~java/docs/relnotes/features.html}.
+\newblock Acessed: 2015-05-20.
+
+\bibitem{SPRING_REF}
+Spring framework reference documentation {@ONLINE}.
+\newblock
+  \url{http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/}.
+\newblock Accessed: 2015-06-06.
+
 \bibitem{bracha1998gj}
 Gilad Bracha, Martin Odersky, and David Stoutamire.
 \newblock Gj: Extending the javatm programming language with type parameters.
@@ -31,26 +67,6 @@ Robert Dyer, Hridesh Rajan, Hoan~Anh Nguyen, and Tien~N. Nguyen.
 Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
 \newblock {\em Design Patterns: Elements of Reusable Object-oriented Software}.
 \newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1995.
-
-\bibitem{JDK1.1}
-Sun Microsystems.
-\newblock Jdk 1.1 new feature summary {@ONLINE}, May 2015.
-
-\bibitem{JSE8_Enhancements}
-Oracle.
-\newblock Enhancements in java se 8 {@ONLINE}, May 2015.
-
-\bibitem{JSE7_ReleaseNotes}
-Oracle.
-\newblock Java se 7 advanced and java se 7 support {@ONLINE}, May 2015.
-
-\bibitem{JSE7}
-Oracle.
-\newblock Java se 7 features and enhancements {@ONLINE}, May 2015.
-
-\bibitem{OracleGenerics}
-Oracle.
-\newblock The java tutorials {@ONLINE}, May 2015.
 
 \bibitem{Overbey:2009:RLR:1639949.1640127}
 Jeffrey~L. Overbey and Ralph~E. Johnson.
