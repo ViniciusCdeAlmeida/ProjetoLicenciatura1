@@ -1,6 +1,6 @@
 \section {Aspectos evolutivos da liguagem Java}
 		\subsection {Java 2}
-			A primeira versão do Java Security, disponível no JDK 1.1\cite{JDK1.1}, contém um subconjunto dessa funcionalidade, incluindo APIs para:
+			A primeira versão do Java Security, disponível no JDK 1.1 \cite{JDK1.1}, contém um subconjunto dessa funcionalidade, incluindo APIs para:
 		  \begin{itemize}
 			  \item Assinaturas Digitais: Algoritmos de assinatura digital, como DSA ou MD5 com RSA. A funcionalidade inclui a geração de chaves público/privado , bem como assinatura e verificação de dados digitais.
 			  \item Gerenciamento de Chaves: Um conjunto de abstrações para o gerenciamento de ''diretores'' (entidades como usuários individuais ou grupos), suas chaves, e os seus certificados. Ele permite que aplicativos para projetar seu próprio sistema de gerenciamento de chaves, e para interoperar com outros sistemas em alto nível.
@@ -20,7 +20,7 @@ public class SignFile {
 }
 \end{lstlisting}
 			  
-			  \item Em versões anteriores, Java suportava apenas {\it top-level} classes, que devem ser membros de pacotes. Na versão 1.1, o programador Java pode agora definir classes internas como membros de outras classes\cite{bracha1998gj}, localmente dentro de um bloco de instruções, ou (anonimamente) dentro de uma expressão.
+			  \item Em versões anteriores, Java suportava apenas {\it top-level} classes, que devem ser membros de pacotes. Na versão 1.1, o programador Java pode agora definir classes internas como membros de outras classes \cite{bracha1998gj}, localmente dentro de um bloco de instruções, ou (anonimamente) dentro de uma expressão.
 		  
 \begin{lstlisting}
 public class FixedStack {
@@ -107,7 +107,7 @@ public class HelloImpl extends UnicastRemoteObject implements Hello{
 	
 	\subsection {Java 5}
 	  \begin{itemize}
-		  \item {\it Generics}\cite{JSE8_Enhancements}\cite{OracleGenerics}\cite{Parnin:2011:JGA:1985441.1985446}. Este novo recurso para o sistema de tipo permite que um tipo ou método operar em objetos de vários tipos, proporcionando em tempo de compilação tipo de segurança. Acrescenta em tempo de compilação um tipo de segurança para as {\it collections} e elimina o trabalho penoso de {\it casting}. Um exemplo do uso de {\it colletions} e {\it generics} respectivamente:
+		  \item {\it Generics}\cite{JSE8_Enhancements, OracleGenerics,Parnin:2011:JGA:1985441.1985446}. Este novo recurso para o sistema de tipo permite que um tipo ou método operar em objetos de vários tipos, proporcionando em tempo de compilação tipo de segurança. Acrescenta em tempo de compilação um tipo de segurança para as {\it collections} e elimina o trabalho penoso de {\it casting}. Um exemplo do uso de {\it colletions} e {\it generics} respectivamente:
 \begin{lstlisting}
 static void expurgate(Collection c) {
 	for (Iterator i = c.iterator(); i.hasNext(); )
@@ -166,11 +166,11 @@ public class Test {
   
   
 	\subsection {Java 6}
-		Não ocorreu mudanças ou introdução de novas estruturas na linguagem Java\cite{JSE8_Enhancements}.
+		Não ocorram mudanças ou introdução de novas estruturas na linguagem Java \cite{JSE8_Enhancements}.
 	
 	\subsection {Java 7}
 		\begin{itemize}
-		  \item {\it Multi Catch} e lançamento de exceções com melhora na verificação de tipos. Um único bloco {\it catch} poderá lidar com mais de um tipo de exceção. Além disso, o compilador executa a análise mais precisa das exceções. Isso permite que o programador especifique tipos de exceção mais específicos na cláusula de uma declaração método. Um exemplo de como era as estruturas que usavam {\it cacths} e com a introdução de {\it multi cacth} com o Java 7\cite{JSE7}, respectivamente.
+		  \item {\it Multi Catch} e lançamento de exceções com melhora na verificação de tipos. Um único bloco {\it catch} poderá lidar com mais de um tipo de exceção. Além disso, o compilador executa a análise mais precisa das exceções. Isso permite que o programador especifique tipos de exceção mais específicos na cláusula de uma declaração método. Um exemplo de como era as estruturas que usavam {\it cacths} e com a introdução de {\it multi catch} com o Java 7 \cite{JSE7}, respectivamente.
   
 
 \begin{lstlisting}
