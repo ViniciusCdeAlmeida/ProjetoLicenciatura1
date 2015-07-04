@@ -107,7 +107,7 @@ public class HelloImpl extends UnicastRemoteObject implements Hello{
 	
 	\subsection {Java 5}
 	  \begin{itemize}
-		  \item {\it Generics}\cite{JSE8_Enhancements, OracleGenerics,Parnin:2011:JGA:1985441.1985446}. Este novo recurso para o sistema de tipo permite que um tipo ou método operar em objetos de vários tipos, proporcionando em tempo de compilação tipo de segurança. Acrescenta em tempo de compilação um tipo de segurança para as {\it collections} e elimina o trabalho penoso de {\it casting}. Um exemplo do uso de {\it collections} e {\it generics} respectivamente:
+		  \item {\it Generics} \cite{JSE8_Enhancements, OracleGenerics,Parnin:2011:JGA:1985441.1985446}. Este novo recurso para o sistema de tipo permite que um tipo ou método operar em objetos de vários tipos, proporcionando em tempo de compilação tipo de segurança. Acrescenta em tempo de compilação um tipo de segurança para as {\it collections} e elimina o trabalho penoso de {\it casting}. Um exemplo do uso de {\it collections} e {\it generics} respectivamente:
 \begin{lstlisting}
 static void expurgate(Collection c) {
 	for (Iterator i = c.iterator(); i.hasNext(); )
@@ -217,7 +217,7 @@ public static void writeToFileZipFileContents(
 \end{lstlisting}
 		  
 		  \clearpage
-		  \item Inferência de tipos para criação de instâncias em {\it generics}\cite{OracleGenerics,Bracha:1998:MFS:286942.286957,Parnin:2011:JGA:1985441.1985446}. Com o Java 7 pode-se substituir os argumentos de tipo necessários para invocar o construtor de uma classe genérica com um conjunto vazio de parâmetros de tipo (<>), desde que o compilador infira os argumentos de tipo a partir do contexto. Este par de colchetes angulares é informalmente chamado de diamante.
+		  \item Inferência de tipos para criação de instâncias em {\it generics} \cite{OracleGenerics,Bracha:1998:MFS:286942.286957,Parnin:2011:JGA:1985441.1985446}. Com o Java 7 pode-se substituir os argumentos de tipo necessários para invocar o construtor de uma classe genérica com um conjunto vazio de parâmetros de tipo (<>), desde que o compilador infira os argumentos de tipo a partir do contexto. Este par de colchetes angulares é informalmente chamado de diamante.
   
   
 

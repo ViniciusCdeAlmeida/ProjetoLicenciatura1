@@ -18,7 +18,7 @@ São cinco os componentes que compõem o JDT, e cada componente pode operar com 
 	
 \section {Arquitetura}
 
-A arquitetura do analisador exibido na Figura:\ref{fig:arqGeral} foi  implementado utilizando como base os componentes \textit{JDT} porém de maneira independente da IDE eclipse o qual não é um {\it plugin} da IDE mas sim uma ferramente que pode ser utilizada como apoio em qualquer processo de desenvolvimento ou para levantamento de dados sobre a história evolutiva de um software.\\
+A arquitetura do analisador exibido na Figura: \ref{fig:arqGeral} foi  implementado utilizando como base os componentes \textit{JDT} porém de maneira independente da IDE eclipse o qual não é um {\it plugin} da IDE mas sim uma ferramente que pode ser utilizada como apoio em qualquer processo de desenvolvimento ou para levantamento de dados sobre a história evolutiva de um software.\\
 
 \begin{figure}[h]
 	\center
@@ -27,7 +27,7 @@ A arquitetura do analisador exibido na Figura:\ref{fig:arqGeral} foi  implementa
 	\caption{Arquitetura geral do software.}
 \end{figure}
 
-Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995:DPE:186897} exemplificado na Figura:\ref{fig:arqVisitor} os quais possuem inteligência para verificar a adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e até mesmo efetuar a pesquisa de código ultrapassados através de padrões pré-definidos para que possam vir a ser melhorados caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.\\
+Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995:DPE:186897} exemplificado na Figura: \ref{fig:arqVisitor} os quais possuem inteligência para verificar a adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e até mesmo efetuar a pesquisa de código ultrapassados através de padrões pré-definidos para que possam vir a ser melhorados caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.\\
 
 Tais analisador tem como entradas válidas um único arquivo arquivo separado por vírgula (CSV) que possui em seus campos o nome dos projeto, versões e caminho para que cada um seja analisado. Após o {\it input} é realizado uma pesquisa em seu diretório \textit{src} o qual contém os códigos Java que compõem o projeto, após todos os arquivos listas é realizado um parse para a construção de árvores de sintáxe abstratas (AST) uma por arquivo e dai é lançando os {\it visitors}  \cite{Gamma:1995:DPE:186897} com suas respectivas inteligências para pesquisar os padrões previamente definidos os quais são armazenados em uma única coleção de dados que gera um CSV para cada padrão designado e dentro informando onde e em qual versão do projeto fora encontrado.\\
 	
@@ -40,7 +40,7 @@ Tais analisador tem como entradas válidas um único arquivo arquivo separado po
 \caption{Organização dos Visitors.}
 \end{figure}
 
-Todos os visitors criados para o projeto extendem da classe \textit{Visitor.java} a qual implementa a interface \textit{IVisitor.java} conforme a Figura:\ref{fig:ProjectAnalyser}, vale resaltar que a classe \textit{Visitor.java} extende por sua vez de ASTVisitor a qual é fornecida pelo Core do JDT eclipse tendo como método principal utilizado neste projeto o \textbf{{\it boolean visit(Statement node)}} o qual recebe como parâmento qualquer {\it Statement} descrito na lib JDT, este método é sobrescrito com todo conteúdo necessário para recolher as métricas de acordo com os padrões previamente estabelecidos.\\
+Todos os visitors criados para o projeto extendem da classe \textit{Visitor.java} a qual implementa a interface \textit{IVisitor.java} conforme a Figura: \ref{fig:ProjectAnalyser}, vale resaltar que a classe \textit{Visitor.java} extende por sua vez de ASTVisitor a qual é fornecida pelo Core do JDT eclipse tendo como método principal utilizado neste projeto o \textbf{{\it boolean visit(Statement node)}} o qual recebe como parâmento qualquer {\it Statement} descrito na lib JDT, este método é sobrescrito com todo conteúdo necessário para recolher as métricas de acordo com os padrões previamente estabelecidos.\\
 \clearpage
 \begin{figure}[h]
 	\center
@@ -179,7 +179,7 @@ Abaixo segue bibliotecas necessárias para que o ambiente de injeção de depend
 \subsection{Apache Maven}
 Afim de gerenciar \textit{builds} deste analisador estático, o Maven foi introduzido para tornar as configurações uniformes no ambiente de desenvolvimento deste seguindo as boas práticas, compilação, gerência de dependências e distribuição da aplicação.\\
 
-O arquivo pom.xml \textit{project object model} é a essência de um projeto Maven conforme Figura:\ref{fig:pomMaven}, com poucas configurações é possível gerências as dependências, centralizando documentação do projeto e a compilação de \textit{builds} para a distribuição da aplicação (por exemplo, \textit{.jar, .war ou .ear}).\\
+O arquivo pom.xml \textit{project object model} é a essência de um projeto Maven conforme Figura:  \ref{fig:pomMaven}, com poucas configurações é possível gerências as dependências, centralizando documentação do projeto e a compilação de \textit{builds} para a distribuição da aplicação (por exemplo, \textit{.jar, .war ou .ear}).\\
 
 
 \begin{figure}[h]

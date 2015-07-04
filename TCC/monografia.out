@@ -22,11 +22,16 @@
 \BOOKMARK [2][-]{subsection.2.1.2}{Invers\343o de Controle e Inje\347\343o de Depend\352ncia}{section.2.1}% 22
 \BOOKMARK [2][-]{subsection.2.1.3}{Apache Maven}{section.2.1}% 23
 \BOOKMARK [0][-]{chapter.3}{An\341lise est\341tica}{}% 24
-\BOOKMARK [1][-]{section.3.1}{Checagem de tipo}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.2}{Checagem de estilo}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.3}{Entendimento do c\363digo}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.4}{Verifica\347\343o de programa}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.5}{Verifica\347\343o de propriedade}{chapter.3}% 29
-\BOOKMARK [0][-]{chapter.4}{Resultados}{}% 30
-\BOOKMARK [1][-]{section.4.1}{ANT}{chapter.4}% 31
-\BOOKMARK [0][-]{section*.8}{Refer\352ncias}{}% 32
+\BOOKMARK [1][-]{section.3.1}{An\341lise l\351xica}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.2}{Parser}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.2.1}{Paser JDT Eclipse}{section.3.2}% 27
+\BOOKMARK [1][-]{section.3.3}{Sintaxe abstrata}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.4}{An\341lise sem\342ntica}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.5}{Checagem de tipo}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.6}{Checagem de estilo}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.7}{Entendimento do c\363digo}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.8}{Verifica\347\343o de programa}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.9}{Verifica\347\343o de propriedade}{chapter.3}% 34
+\BOOKMARK [0][-]{chapter.4}{Resultados}{}% 35
+\BOOKMARK [1][-]{section.4.1}{ANT}{chapter.4}% 36
+\BOOKMARK [0][-]{section*.8}{Refer\352ncias}{}% 37
