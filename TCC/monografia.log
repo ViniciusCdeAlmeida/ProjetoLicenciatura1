@@ -1,26 +1,33 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.3)  4 JUL 2015 10:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  4 JUL 2015 12:32
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
 **monografia.tex
-(./monografia.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
-(./unb-cic.cls
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\unb-cic.cls
 Document Class: unb-cic 2008/06/05 v0.93 Classe para trabalhos CIC UnB
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 \XKV@toks=\toks14
 \XKV@tempa@toks=\toks15
 \XKV@depth=\count79
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\keyval.tex")))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -36,23 +43,23 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
 Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
 LaTeX Info: Redefining \em on input line 420.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
-Package: relsize 2013/03/29 ver 4.1
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
 )
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -83,7 +90,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -91,25 +98,25 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen103
 \Hy@linkcounter=\count89
 \Hy@pagecounter=\count90
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count91
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 431
@@ -122,17 +129,17 @@ Package hyperref Info: Backreferencing ON on input line 4461.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty"
 Package: backref 2012/07/25 v1.38 Bibliographical back referencing
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
 \c@Hy@tempcnt=\count92
 
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -157,34 +164,34 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver: hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count97
 \c@bookmark@seq@number=\count98
 \Hy@SectionHShift=\skip43
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gread@gobject=\count99
 ))
 \Gin@req@height=\dimen107
 \Gin@req@width=\dimen108
 )
-(/usr/share/texlive/texmf-dist/tex/latex/boites/boites.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\boites\boites.sty"
 File: boites.sty 
 Package: boites 2013/11/21 v1.1 Colored, framed and breakable across pages boxe
 s
@@ -192,7 +199,7 @@ s
 \bk@bxa=\box27
 \bk@lcnt=\count100
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count101
 \Gm@cntv=\count102
@@ -206,54 +213,61 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layouthoffset=\dimen115
 \Gm@layoutvoffset=\dimen116
 \Gm@dimlist=\toks16
-)
-(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 \c@TotPaginas=\count104
 \c@definition=\count105
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2013/12/03 3.9h The Babel package
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2013/12/03 3.9h Babel common definitions
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count106
 \U@D=\dimen117
 )
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip44
 \bibsep=\skip45
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count107
 )
-(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -267,19 +281,19 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -429,7 +443,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -460,7 +474,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -486,7 +500,7 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count108
 \lst@gtempboxa=\box28
 \lst@token=\toks19
@@ -500,34 +514,40 @@ Now handling font encoding PD1 ...
 \lst@lineno=\count113
 \lst@maxwidth=\dimen121
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count114
 \lst@skipnumbers=\count115
 \lst@framebox=\box29
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2013/08/26 1.5b listings configuration
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
-Package: listings 2013/08/26 1.5b (Carsten Heinz)
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-) (./cores.tex)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\cores.tex)
 Package hyperref Info: Option `colorlinks' set `true' on input line 67.
 
-(./monografia.aux (./capitulos/capitulo1_Introducao.aux)
-(./capitulos/capitulo1_historia_da_linguagem.aux)
-(./capitulos/capitulo1_aspectos_evolutivos.aux)
-(./capitulos/capitulo1_problemaASerAtacado.aux)
-(./capitulos/capitulo2_arquitetura.aux
-
-LaTeX Warning: Label `arquiteturaVisitor' multiply defined.
-
-) (./capitulos/capitulo3_analise_estatica.aux)
-(./capitulos/capitulo3_section_2.aux) (./capitulos/capitulo5_resultados.aux))
-\openout1 = `monografia.aux'.
-
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.aux
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_Introdu
+cao.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_histori
+a_da_linguagem.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_aspecto
+s_evolutivos.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_problem
+aASerAtacado.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo2_arquite
+tura.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_analise
+_estatica.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_section
+_2.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo5_resulta
+dos.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
 LaTeX Font Info:    ... okay on input line 101.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
@@ -545,11 +565,10 @@ LaTeX Font Info:    ... okay on input line 101.
 \AtBeginShipoutBox=\box30
 Package backref Info: ** backref set up for natbib ** on input line 101.
 Package hyperref Info: Link coloring ON on input line 101.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count116
@@ -558,12 +577,11 @@ LaTeX Info: Redefining \ref on input line 101.
 LaTeX Info: Redefining \pageref on input line 101.
 LaTeX Info: Redefining \nameref on input line 101.
 
-(./monografia.out) (./monografia.out)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
 \@outlinefile=\write3
-\openout3 = `monografia.out'.
 
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
 \scratchdimen=\dimen122
@@ -576,21 +594,7 @@ LaTeX Info: Redefining \nameref on input line 101.
 \MPnumerator=\count121
 \makeMPintoPDFobject=\count122
 \everyMPtoPDFconversion=\toks21
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -629,10 +633,10 @@ e
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 101.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hypernat/hypernat.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\misc\hypernat.sty"
 Package: hypernat 2001/07/09 v1.0b hyperref and natbib compatibility (jb)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/hypcap.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\hypcap.sty"
 Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 )
 \c@lstlisting=\count123
@@ -640,33 +644,29 @@ Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 \len@uadesch=\skip47
 \len@uacaph=\skip48
 LaTeX Font Info:    Try loading font information for T1+ua1 on input line 102.
-LaTeX Font Info:    No file T1ua1.fd. on input line 102.
 
+("C:\Program Files\MiKTeX 2.9\tex\latex\arial\t1ua1.fd"
+File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
+)
+LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <20> not available
+(Font)              Font shape `T1/ua1/b/n' tried instead on input line 102.
 
-LaTeX Font Warning: Font shape `T1/ua1/bx/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 102.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 102.
-
-
-LaTeX Font Warning: Font shape `T1/ua1/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 102.
-
-<positivo_cor.pdf, id=132, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=147, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 102.
-(pdftex.def)             Requested size: 61.76747pt x 31.14256pt.
+(pdftex.def)             Requested size: 70.28004pt x 35.43501pt.
 \len@lskipoffset=\skip49
+LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <10> not available
+(Font)              Font shape `T1/ua1/b/n' tried instead on input line 102.
 \len@lskipoffset=\skip50
 
 [1
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./positivo_cor.pdf>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Vinicius/Desktop
+/ProjetoLicenciatura1/TCC/positivo_cor.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 102.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -674,8 +674,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 102.
 \@tempa=\count124
-
-[2
+ [2
 
 ]
 \len@brasiliaw=\skip51
@@ -684,13 +683,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 102.
-(pdftex.def)             Requested size: 61.76747pt x 31.14256pt.
+(pdftex.def)             Requested size: 70.28004pt x 35.43501pt.
 \len@lskipoffset=\skip54
 \len@lskipoffset=\skip55
- [3
 
-] (./capitulos/dedicatoria.tex)pdfTeX warning (ext4): destination with the same
- identifier (name{page.i}) has been already used, duplicate ignored
+[3
+
+]
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/dedicatoria.tex)p
+dfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.109   \begin{agradecimentos}
@@ -698,16 +700,20 @@ l.109   \begin{agradecimentos}
 
 
 
-] (./capitulos/agradecimentos.tex)pdfTeX warning (ext4): destination with the s
-ame identifier (name{page.ii}) has been already used, duplicate ignored
+]
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/agradecimentos.te
+x)pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) h
+as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.114   \begin{resumo}
                        [2
 
 
-] (./capitulos/resumo.tex)pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.iii}) has been already used, duplicate ignored
+]
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/resumo.tex)pdfTeX
+ warning (ext4): destination with the same identifier (name{page.iii}) has been
+ already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.120   \begin{abstract}
@@ -715,38 +721,28 @@ l.120   \begin{abstract}
 
 
 ]
-
-Package babel Warning: You haven't loaded the language english yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 120.
-
-(./capitulos/abstract.tex) [4
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/abstract.tex)
+[4
 
 
-] (./monografia.toc)
+] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.toc)
 \tf@toc=\write4
-\openout4 = `monografia.toc'.
 
- [5
+[5
 
-] (./monografia.lof)
+] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.lof)
 \tf@lof=\write5
-\openout5 = `monografia.lof'.
-
 
 [6
 
-] (./monografia.lot)
+] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.lot)
 \tf@lot=\write6
-\openout6 = `monografia.lot'.
 
- [7
+[7
 
-] (./capitulos/capitulo1.tex
-\openout2 = `capitulos/capitulo1_Introducao.aux'.
-
-
-(./capitulos/capitulo1_Introducao.tex
+] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_Introdu
+cao.tex
 Cap\'{\i }tulo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
@@ -813,9 +809,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--1
  []
 
 [3]
-\openout2 = `capitulos/capitulo1_historia_da_linguagem.aux'.
-
- (./capitulos/capitulo1_historia_da_linguagem.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_histori
+a_da_linguagem.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -836,7 +831,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -875,22 +870,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
  []
 
 ) [8]
-\openout2 = `capitulos/capitulo1_aspectos_evolutivos.aux'.
-
- (./capitulos/capitulo1_aspectos_evolutivos.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_aspecto
+s_evolutivos.tex
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [9
+)
+[9
 
 
 ] [10] [11
 
 ] [12
 
-]
-[13
+] [13
 
 ] [14
 
@@ -904,9 +897,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--255
 ]) [16
 
 ]
-\openout2 = `capitulos/capitulo1_problemaASerAtacado.aux'.
-
- (./capitulos/capitulo1_problemaASerAtacado.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_problem
+aASerAtacado.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -949,10 +941,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-) [18]) (./capitulos/capitulo2.tex
-\openout2 = `capitulos/capitulo2_arquitetura.aux'.
-
- (./capitulos/capitulo2_arquitetura.tex
+) [18])
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo2.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo2_arquite
+tura.tex
 Cap\'{\i }tulo 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -969,28 +961,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
 [19
 
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<Imagens/Arquitetura.png, id=554, 1350.54562pt x 587.94656pt>
+<Imagens/Arquitetura.png, id=572, 1350.54562pt x 587.94656pt>
 File: Imagens/Arquitetura.png Graphic file (type png)
 
 <use Imagens/Arquitetura.png>
 Package pdftex.def Info: Imagens/Arquitetura.png used on input line 26.
 (pdftex.def)             Requested size: 455.24411pt x 198.18565pt.
- [20 <./Imagens/Arquitetura.png>]
-<Imagens/Visitors.png, id=561, 865.73438pt x 600.74437pt>
+ [20 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Arquitetura.pn
+g>]
+<Imagens/Visitors.png, id=579, 865.73438pt x 600.74437pt>
 File: Imagens/Visitors.png Graphic file (type png)
 
 <use Imagens/Visitors.png>
@@ -1003,8 +996,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
 [21
 
- <./Imagens/Visitors.png>]
-<Imagens/ProjectAnalyser.png, id=568, 856.70062pt x 383.18156pt>
+ <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Visitors.png>]
+<Imagens/ProjectAnalyser.png, id=586, 856.70062pt x 383.18156pt>
 File: Imagens/ProjectAnalyser.png Graphic file (type png)
 
 <use Imagens/ProjectAnalyser.png>
@@ -1022,7 +1015,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
 [22
 
- <./Imagens/ProjectAnalyser.png>]
+ <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/ProjectAnalyser.pn
+g>]
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
@@ -1032,7 +1026,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-<Imagens/Beans.png, id=576, 330.23375pt x 463.7325pt>
+<Imagens/Beans.png, id=594, 330.23375pt x 463.7325pt>
 File: Imagens/Beans.png Graphic file (type png)
  <use Imagens/Beans.png>
 Package pdftex.def Info: Imagens/Beans.png used on input line 65.
@@ -1040,7 +1034,7 @@ Package pdftex.def Info: Imagens/Beans.png used on input line 65.
 
 [23
 
- <./Imagens/Beans.png>]
+ <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Beans.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
@@ -1060,7 +1054,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
 ]
 Overfull \hbox (20.07481pt too wide) in paragraph at lines 100--101
 \T1/cmr/m/n/12 IVi-si-tor. E desta forma in-di-ca-mos no \T1/cmr/m/it/12 XML \T
-1/cmr/m/n/12 atra-vés da tag \T1/cmr/bx/n/12 <pro-perty name="listVisitors^^T
+1/cmr/m/n/12 atra-vés da tag \T1/cmr/bx/n/12 <pro-perty name="listVisitors
  []
 
 
@@ -1081,7 +1075,7 @@ LaTeX Warning: Reference `libsCDI' on page 26 undefined on input line 158.
 
 [26
 
-] <Imagens/libsSpring.png, id=664, 476.78125pt x 502.87875pt>
+] <Imagens/libsSpring.png, id=681, 476.78125pt x 502.87875pt>
 File: Imagens/libsSpring.png Graphic file (type png)
 
 <use Imagens/libsSpring.png>
@@ -1089,13 +1083,13 @@ Package pdftex.def Info: Imagens/libsSpring.png used on input line 170.
 (pdftex.def)             Requested size: 182.09486pt x 192.06274pt.
  [27
 
- <./Imagens/libsSpring.png>]) [28
+ <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/libsSpring.png>]) 
+[28
 
 ])
-(./capitulos/capitulo3.tex
-\openout2 = `capitulos/capitulo3_analise_estatica.aux'.
-
- (./capitulos/capitulo3_analise_estatica.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_analise
+_estatica.tex
 Cap\'{\i }tulo 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1122,41 +1116,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--1
 
 
 ]
-\openout2 = `capitulos/capitulo3_section_2.aux'.
-
- (./capitulos/capitulo3_section_2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_section
+_2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
 [30
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
+] <Imagens/Arvore.png, id=709, 533.74406pt x 577.40718pt>
+File: Imagens/Arvore.png Graphic file (type png)
+
+<use Imagens/Arvore.png>
+Package pdftex.def Info: Imagens/Arvore.png used on input line 25.
+(pdftex.def)             Requested size: 364.19667pt x 394.00613pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+[31
+
+ <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Arvore.png>]
+<Imagens/ArvoreAST.png, id=714, 1282.7925pt x 495.35063pt>
+File: Imagens/ArvoreAST.png Graphic file (type png)
+
+<use Imagens/ArvoreAST.png>
+Package pdftex.def Info: Imagens/ArvoreAST.png used on input line 36.
+(pdftex.def)             Requested size: 455.24411pt x 175.78645pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+[32 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/ArvoreAST.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-) [31] [32]) (./capitulos/capitulo4.tex) (./capitulos/capitulo5.tex
-\openout2 = `capitulos/capitulo5_resultados.aux'.
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
 
 
-(./capitulos/capitulo5_resultados.tex
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+[34]) [35])
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo4.tex)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo5.tex
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo5_resulta
+dos.tex
 Cap\'{\i }tulo 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
@@ -1168,100 +1197,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-) [33
+) [36
 
 
 
-]) (./monografia.bbl (./monografia.brf)
+]) (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.brf)
 \tf@brf=\write7
-\openout7 = `monografia.brf'.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []\T1/cmr/m/n/12 Java se 7 ad-van-ced and java se 7 sup-port @ON-LINE.  [][]$\T
-1/cmtt/m/n/12 http : / /
+1/cmtt/m/n/12 http : / /$
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--14
-\T1/cmtt/m/n/12 www . oracle . com / technetwork / java / javaseproducts / docu
-mentation /
+$\T1/cmtt/m/n/12 www . oracle . com / technetwork / java / javaseproducts / doc
+umentation /$
  []
 
 
 Underfull \hbox (badness 1043) in paragraph at lines 20--20
 []\T1/cmr/m/n/12 Java se 7 fe-a-tu-res and enhan-ce-ments @ON-LINE.  [][]$\T1/c
-mtt/m/n/12 http : / / www . oracle . com /
+mtt/m/n/12 http : / / www . oracle . com /$
  []
 
 
 Underfull \hbox (badness 1803) in paragraph at lines 26--26
 []\T1/cmr/m/n/12 The java tu-to-ri-als @ON-LINE.  [][]$\T1/cmtt/m/n/12 http : /
- / docs . oracle . com / javase / tutorial /
+ / docs . oracle . com / javase / tutorial /$
  []
 
-[34
+[37
 
 
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
- [35]
+ [38]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
- (./monografia.aux (./capitulos/capitulo1_Introducao.aux)
-(./capitulos/capitulo1_historia_da_linguagem.aux)
-(./capitulos/capitulo1_aspectos_evolutivos.aux)
-(./capitulos/capitulo1_problemaASerAtacado.aux)
-(./capitulos/capitulo2_arquitetura.aux)
-(./capitulos/capitulo3_analise_estatica.aux)
-(./capitulos/capitulo3_section_2.aux) (./capitulos/capitulo5_resultados.aux))
+ (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.aux
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_Introdu
+cao.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_histori
+a_da_linguagem.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_aspecto
+s_evolutivos.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_problem
+aASerAtacado.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo2_arquite
+tura.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_analise
+_estatica.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3_section
+_2.aux)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo5_resulta
+dos.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: D2A305FA7A3CD0DBC190883B5A7C70EA;1983.
+(rerunfilecheck)             Checksum: DAB0C7D6E803E9461428CA2220C3083B;2272.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: EE2F35277DB3704021D7D56EFD8E7637;2248.
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.74pt have occurred.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+(rerunfilecheck)             Checksum: 6D639E640F098CEAA93F61EC4A029D89;2287.
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10451 strings out of 493304
- 148580 string characters out of 6139872
- 285665 words of memory out of 5000000
- 13310 multiletter control sequences out of 15000+600000
- 16864 words of font info for 38 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 43i,8n,72p,1790b,1893s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts
-/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
-i1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx
-2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2
-074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sftt1200.pfb>
-Output written on monografia.pdf (45 pages, 508489 bytes).
+ 10317 strings out of 493921
+ 150496 string characters out of 3147273
+ 278947 words of memory out of 3000000
+ 12996 multiletter control sequences out of 15000+200000
+ 27513 words of font info for 40 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 43i,8n,72p,3179b,1893s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Vinicius\App
+Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users
+\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.
+pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
+600\ectt1095.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecbx1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Vinicius\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Vinicius\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\
+Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.p
+k> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecrm1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecbx1728.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontna
+me/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/arial/ua1b8a.pfb>
+Output written on monografia.pdf (48 pages, 584039 bytes).
 PDF statistics:
- 881 PDF objects out of 1000 (max. 8388607)
- 801 compressed objects within 9 object streams
- 360 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1407 PDF objects out of 1440 (max. 8388607)
+ 377 named destinations out of 1000 (max. 500000)
+ 329 words of extra memory for PDF output out of 10000 (max. 10000000)
 
