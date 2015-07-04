@@ -28,5 +28,5 @@
 \contentsline {section}{\numberline {3.4}Verifica\IeC {\c c}\IeC {\~a}o de programa}{32}{section.3.4}
 \contentsline {section}{\numberline {3.5}Verifica\IeC {\c c}\IeC {\~a}o de propriedade}{32}{section.3.5}
 \contentsline {chapter}{\numberline {4}Resultados}{34}{chapter.4}
-\contentsline {section}{\numberline {4.1}Estudo de Caso - ANT}{34}{section.4.1}
+\contentsline {section}{\numberline {4.1}ANT}{34}{section.4.1}
 \contentsline {chapter}{Refer\^encias}{35}{section*.8}
