@@ -4,24 +4,29 @@
 \select@language {brazil}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Hist\IeC {\'o}ria da linguagem}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Aspectos evolutivos da liguagem Java}{8}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Java 2}{8}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Java 4}{11}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Java 5}{11}{subsection.1.3.3}
-\contentsline {subsection}{\numberline {1.3.4}Java 6}{12}{subsection.1.3.4}
-\contentsline {subsection}{\numberline {1.3.5}Java 7}{12}{subsection.1.3.5}
-\contentsline {subsection}{\numberline {1.3.6}Java 8}{14}{subsection.1.3.6}
-\contentsline {section}{\numberline {1.4}Problema a ser Atacado}{16}{section.1.4}
-\contentsline {chapter}{\numberline {2}Arquitetura}{18}{chapter.2}
-\contentsline {section}{\numberline {2.1}Arquitetura}{18}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Visitors}{20}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Invers\IeC {\~a}o de Controle e Inje\IeC {\c c}\IeC {\~a}o de Depend\IeC {\^e}ncia}{22}{subsection.2.1.2}
-\contentsline {chapter}{\numberline {3}An\IeC {\'a}lise est\IeC {\'a}tica}{27}{chapter.3}
-\contentsline {section}{\numberline {3.1}Checagem de tipo}{28}{section.3.1}
-\contentsline {section}{\numberline {3.2}Checagem de estilo}{28}{section.3.2}
-\contentsline {section}{\numberline {3.3}Entendimento do c\IeC {\'o}digo}{29}{section.3.3}
-\contentsline {section}{\numberline {3.4}Verifica\IeC {\c c}\IeC {\~a}o de programa}{29}{section.3.4}
-\contentsline {section}{\numberline {3.5}Verifica\IeC {\c c}\IeC {\~a}o de propriedade}{29}{section.3.5}
-\contentsline {chapter}{\numberline {4}Resultados}{31}{chapter.4}
-\contentsline {chapter}{Refer\^encias}{32}{section*.8}
+\contentsline {section}{\numberline {1.2}Objetivos Gerais}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Objetivos Espec\IeC {\'\i }ficos}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Metodologia}{3}{section.1.4}
+\contentsline {section}{\numberline {1.5}Hist\IeC {\'o}ria da linguagem}{4}{section.1.5}
+\contentsline {section}{\numberline {1.6}Aspectos evolutivos da liguagem Java}{9}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Java 2}{9}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Java 4}{12}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Java 5}{12}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.4}Java 6}{13}{subsection.1.6.4}
+\contentsline {subsection}{\numberline {1.6.5}Java 7}{13}{subsection.1.6.5}
+\contentsline {subsection}{\numberline {1.6.6}Java 8}{15}{subsection.1.6.6}
+\contentsline {section}{\numberline {1.7}Problema a ser Atacado}{17}{section.1.7}
+\contentsline {chapter}{\numberline {2}Arquitetura}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}Arquitetura}{19}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Visitors}{21}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Invers\IeC {\~a}o de Controle e Inje\IeC {\c c}\IeC {\~a}o de Depend\IeC {\^e}ncia}{23}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Apache Maven}{28}{subsection.2.1.3}
+\contentsline {chapter}{\numberline {3}An\IeC {\'a}lise est\IeC {\'a}tica}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Checagem de tipo}{30}{section.3.1}
+\contentsline {section}{\numberline {3.2}Checagem de estilo}{30}{section.3.2}
+\contentsline {section}{\numberline {3.3}Entendimento do c\IeC {\'o}digo}{31}{section.3.3}
+\contentsline {section}{\numberline {3.4}Verifica\IeC {\c c}\IeC {\~a}o de programa}{31}{section.3.4}
+\contentsline {section}{\numberline {3.5}Verifica\IeC {\c c}\IeC {\~a}o de propriedade}{31}{section.3.5}
+\contentsline {chapter}{\numberline {4}Resultados}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}ANT}{33}{section.4.1}
+\contentsline {chapter}{Refer\^encias}{34}{section*.8}

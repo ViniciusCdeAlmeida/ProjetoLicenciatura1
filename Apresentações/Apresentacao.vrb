@@ -1,0 +1,20 @@
+\frametitle{Cronograma}
+\begin{block}{Calendário}
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c}% centered column
+\hline \hline
+\textbf{Atividades}   & ABR & MAI & JUN & JUL & AGO & SET & OUT & NOV & DEZ\\ \hline
+Revisão bibliográfica & X & X & X &   &   &   &   &   & \\ \hline
+Implementação         &   & X & X & X & X &   &   &   & \\ \hline
+Coleta de Dados       &   &   & X & X & X & X & X &   & \\ \hline
+Escrever artigo       &   &   & X & X &   &   &   &   & \\ \hline
+Análise de dados      &   &   &   & X & X &   &   & X & \\ \hline
+Defesa TCC            &   &   &   &   &   &   &   &   & X\\ \hline
+\end{tabular}
+}
+\caption{Cronograma das atividades}
+\end{table}
+\end{block}
+

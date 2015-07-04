@@ -1,0 +1,381 @@
+\documentclass[]{beamer}
+\mode<presentation> {
+	
+	% The Beamer class comes with a number of default slide themes
+	% which change the colors and layouts of slides. Below this is a list
+	% of all the themes, uncomment each in turn to see what they look like.
+	
+	%\usetheme{default}
+	%\usetheme{AnnArbor}
+	%\usetheme{Antibes}
+	%\usetheme{Bergen}
+	\usetheme{Berkeley}
+	%\usetheme{Berlin}
+	%\usetheme{Boadilla}
+	%\usetheme{CambridgeUS}
+	%\usetheme{Copenhagen}
+	%\usetheme{Darmstadt}
+	%\usetheme{Dresden}
+	%\usetheme{Frankfurt}
+	%\usetheme{Goettingen}
+	%\usetheme{Hannover}
+	%\usetheme{Ilmenau}
+	%\usetheme{JuanLesPins}
+	%\usetheme{Luebeck}
+	%\usetheme{Madrid}
+	%\usetheme{Malmoe}
+	%\usetheme{Marburg}
+	%\usetheme{Montpellier}
+	%\usetheme{PaloAlto}
+	%\usetheme{Pittsburgh}
+	%\usetheme{Rochester}
+	%\usetheme{Singapore}
+	%\usetheme{Szeged}
+	%\usetheme{Warsaw}
+	
+	% As well as themes, the Beamer class has a number of color themes
+	% for any slide theme. Uncomment each of these in turn to see how it
+	% changes the colors of your current slide theme.
+	
+	%\usecolortheme{albatross}
+	%\usecolortheme{beaver}
+	%\usecolortheme{beetle}
+	%\usecolortheme{crane}
+	%\usecolortheme{dolphin}
+	%\usecolortheme{dove}
+	%\usecolortheme{fly}
+	%\usecolortheme{lily}
+	%\usecolortheme{orchid}
+	%\usecolortheme{rose}
+	%\usecolortheme{seagull}
+	%\usecolortheme{seahorse}
+	%\usecolortheme{whale}
+	%\usecolortheme{wolverine}
+	
+	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+	%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+	
+	%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage[utf8]{inputenc} % codificacao de caracteres
+\usepackage[T1]{fontenc}    % codificacao de fontes
+\usepackage[brazil]{babel}  % idioma
+\usepackage{listings}
+\usepackage{color}
+\usefonttheme[onlymath]{serif} % fonte modo matematic
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	showstringspaces=false,
+	commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+	morestring=[b]",
+	morestring=[s]{>}{<},
+	morecomment=[s]{<?}{?>},
+	stringstyle=\color{black},
+	identifierstyle=\color{darkblue},
+	keywordstyle=\color{cyan},
+	morekeywords={xmlns,version,type}% list your attributes here
+}
+
+
+%Titulo
+\title[\sc{Static Analisys}]{\textbf{Static analysis to detect evolution language in java projects}}
+\author[Thiago Cavalcanti - Vinícius Correa]{Thiago Gomes Cavalcanti \\ Vinícius Correa de Almeida}
+
+\institute{
+	\includegraphics[scale=0.6]{as_comp_cor.eps}\\
+	\textbf{Orientador: Prof. Dr. Rodrigo Bonifácio de Almeida}
+}
+\date[28/06/2015]{28 de junho de 2015}
+
+\begin{document}
+	\section{Início}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\section{Roteiro}
+	\begin{frame}
+		\frametitle{Roteiro}
+		\tableofcontents[pausesections]
+	\end{frame}
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%% CENÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Cenário}
+	\begin{frame}[label=problems]
+		\frametitle{O Software}
+		\begin{itemize}
+			\item Software novo com construções ultrapassadas.
+			\item Código de baixa qualidade e difícil entendimento.
+			\item Dificuldade em efetuar refactoring e testes.
+			\item Falhas de segurança inerentes ao desenvolvedor.
+			\item Desenvolvedores não conhecem de novas features da linguagem.
+			\item Time que está ganhando não se mexe!!!
+		\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}[fragile, t]
+		\frametitle{Cenário}
+		\centering \textbf{Em 2004, fora introduzido \textit{Generics} em Java5.}
+		\begin{table}[ht]
+			\centering
+			\adjustbox{max height=\dimexpr\textheight-5.0cm\relax,
+				max width=\textwidth}{
+				\begin{tabular}{c|c}% centered column
+					\hline \hline
+						\textbf{Type}               &   \textbf{Parameterizations}\\ \hline
+						List<String> 				&	1066 \\ \hline
+						ArrayList<String> 			&	682 \\ \hline
+						HashMap<String,String> 		&	554 \\ \hline
+						List<ObjectTreeNode> 		&	376 \\ \hline
+						List<ITableInfo> 			&	322 \\ \hline
+						Class<?> 					&	314 \\ \hline
+						List<TableColumnInfo> 		&	304 \\ \hline
+						Vector<String> 				&	234 \\ \hline
+						List<ArtifactStatus> 		&	196 \\ \hline
+						Collection<String[]> 		&	166 \\ \hline
+						List<Object[]> 				&	132 \\ \hline
+						Iterator<String> 			&	124 \\ \hline
+						ArrayList<MappedClassInfo> 	&	114 \\ \hline
+						Set<String> 				&	102 \\ \hline
+				\end{tabular}
+			}
+			\caption{Em 2011 +500Milhões loc em 20 projetos por Chris Parnin.}	
+		\end{table}
+	\end{frame}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% CENÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% MOTIVAÇÃO %%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Motivação}
+	
+	\begin{frame}[label=Motivação]
+		\frametitle{Motivação}
+		\begin{block}{Fortran}
+			\begin{itemize}
+				\item Remoção do ultrapassado estilo \textit{do loop} caso este terminasse com \textit{continue}, era substituído por construção equivalente \textit{end do}.
+				
+				\item Remoção do \textit{goto} por uma construção \textit{case} equivalente.
+				
+				\item Uso de palavras reservadas \textit{if, while, ...}, como variáveis.
+				
+				\item Introdução de OO em Fortran 2003 e um formato de fonte projetada para 80 colunas de cartão perfurados. Após essa versão os compiladores não forneciam suporte para versão anterior.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}[label=AspectosAnalisados]
+		\frametitle{Aspectos analisados}
+		\begin{block}{Evoluções em Java}
+			\begin{itemize}
+				\item Novas características introduzidas:
+					\begin{itemize}
+						\item Como a comunidade reage a novas características.
+						\item São utilizadas por poucos.
+						\item IDEs fornecem suporte.
+					\end{itemize}
+					
+				\item Identificas quais novas características são mais usadas.
+				\item Foco no software livre desenvolvido em JAVA.
+				\item Falta de suporte da IDE.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}[label=ApectosAnalisados]
+		\frametitle{Aspectos analisados}
+		
+			\begin{block}{Oportunidade de evolução em algumas características como:}
+				\begin{itemize}
+					\item Multicatch, \textit{catch(E1 | E2 | ...)}.
+					\item Try com Resources, \textit{try(BufferReader obj)}.
+					\item LambdaFunction, \textit{loop com condicional}.
+					\item Switch(string), \textit{if(string).. elseif(...) aninhados}.
+					\item Métodos com vargs, \textit{methodName(String...)}.
+					\item Usar API Stream em collections para trabalhar de forma Funcional.
+				\end{itemize}
+			\end{block}
+	\end{frame}
+	
+
+	
+%	\begin{frame}[label=DimensaoTrabalhos]
+%		\frametitle{Dimensões Alcancáveis}
+%		\begin{itemize}
+%			\item Falar da pretenção do analisador estático reduzir custo no desenvolvimento.
+%			\item E de como pode ajudar a ORACLE a tornar mais limpa as releases.
+%			
+%		\end{itemize}
+%	\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%% MOTIVAÇÃO %%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% Revisão teórica %%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Revisão Teórica}
+	\frametitle{Referências}
+	\begin{frame}[label=referencias]
+		\begin{block}{Referências}
+			\begin{itemize}
+				\item Chris Parnin, Christian Bird, and Emerson Murphy-Hill 2011. \textbf{Java generics adoption: How new features are introduced, championed, or ignored}.
+				
+				\item Jefrey L. Overbey and Ralph E. Johnson. \textbf{Regrowing a language: refactoring tools
+				allow programming languages to evolve}.
+				
+				\item Dyer, Robert and Rajan, Hridesh and Nguyen, Hoan Anh and Nguyen, Tien N. \textbf{Mining billions of AST nodes to study actual and potential usage of Java language features}.
+			\end{itemize}
+			
+		\end{block}
+	\end{frame}
+	
+%%%%%%%%%%%%%%%%%%%%%%%% Revisão teórica %%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Diretrizes da pesquisa %%%%%%%%%%%%%%%%%%%%
+	\section{Diretrizes da pesquisa}
+
+	\begin{frame}[fragile]\frametitle{Problema}
+		\begin{block}{Problema}
+			Quais as características da linguagem Java são mais utilizadas no desenvolvimento do software e como é a adoção de novas características da linguagem através das versões dos softwares?
+		\end{block}
+	\end{frame}	
+	
+	
+	\begin{frame}[fragile]\frametitle{Hipóteses}
+		
+	%	\begin{description}\item[\textbf{Hipótese 1}]\end{description}
+		\begin{block}{Hipótese 1}
+			\begin{itemize}
+				\item Novas características são pouco utilizadas ou ignoradas no desenvolvimento do software.
+			\end{itemize}
+		
+		\end{block}
+		
+		%\begin{description}\item[\textbf{Hipótese 2}]\end{description}
+		\begin{block}{Hipótese 2}
+			\begin{itemize}
+				\item Novas Códigos obsoletos são mantido em todas as releases do software.
+			\end{itemize}
+		\end{block}
+		
+	%	\begin{description}	\item[\textbf{Hipótese 3}]\end{description}
+		\begin{block}{Hipótese 3}
+			\begin{itemize}
+				\item Versões mais recentes do software não possem as últimas características adotadas na linguagem.
+			\end{itemize}
+		\end{block}
+		
+	\end{frame}
+	
+	
+	\begin{frame}[fragile]\frametitle{Objetivos}
+		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
+		\begin{block}{Geral}
+			\begin{itemize}
+				\item Identificar de forma eficiente código obsoleto para cada versão ao qual o software foi lançado.
+			\end{itemize}
+		\end{block}
+			
+		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
+			\begin{block}{Específicos}
+				\begin{itemize}
+					\item Elaborar um analisador estático que localize possíveis casos de código obsoleto.
+					\item Exibir um relatório final indicando os possíveis casos e a possível evolução para tal código.
+				\end{itemize}
+			\end{block}
+	\end{frame}
+%%%%%%%%%%%%%%%%%%%%% Diretrizes da pesquisa %%%%%%%%%%%%%%%%%%%%%
+	
+% % % % % % % % % % % % % % % Metodologia % % % % % % % % % % % % % % % % % %	
+	\section{Metodologia}
+	\begin{frame}[label=metodologia, fragile]
+		\frametitle{Procedimentos}
+		\begin{block}{Ordem das tarefas}
+			\begin{itemize}
+				\item Revisão Bibliográfica
+					\begin{itemize}
+						\item Seleção do projetos.
+						\item Escolha de projetos opensource.
+					\end{itemize}
+				\item Implementação do analisador estático.
+					\begin{itemize}
+						\item Definir arquitetura.
+						\item Implementação.
+						\item Coleta de dados.
+					\end{itemize}
+				\item Refazer os passos do artigo de Generics(escrever artigo).
+				\item Análise do dados coletados utilizando R.
+				\item Defesa TCC.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Cronograma}
+		\begin{block}{Calendário}
+			\begin{table}[ht]
+				\centering
+				\resizebox{\textwidth}{!}{
+					\begin{tabular}{c|c|c|c|c|c|c|c|c|c}% centered column
+						\hline \hline
+						\textbf{Atividades}   & ABR & MAI & JUN & JUL & AGO & SET & OUT & NOV & DEZ\\ \hline
+						Revisão bibliográfica & X & X & X &   &   &   &   &   & \\ \hline
+						Implementação         &   & X & X & X & X &   &   &   & \\ \hline
+						Coleta de Dados       &   &   & X & X & X & X & X &   & \\ \hline
+						Escrever artigo       &   &   & X & X &   &   &   &   & \\ \hline
+						Análise de dados      &   &   &   & X & X &   &   & X & \\ \hline
+						Defesa TCC            &   &   &   &   &   &   &   &   & X\\ \hline
+					\end{tabular}
+				}
+				\caption{Cronograma das atividades}
+			\end{table}
+		\end{block}
+		
+	\end{frame}
+% % % % % % % % % % % % % % % Metodologia % % % % % % % % % % % % % % % % % %		
+	
+
+%%%%%%%%%%%%%%%%%%%%% Resultados esperados %%%%%%%%%%%%%%%%%%%%%
+	\section{Resultados esperados}
+	\begin{frame}[fragile, label=re]\frametitle{Resultados esperados}
+		\begin{block}{Resultados}
+			\begin{itemize}
+				\item Desenvolver uma ferramenta capaz analisar estaticamente um projeto Java e encontrar construções ultrapassadas.
+				
+				\item Propor um relatório contendo a localização do código ultrapassado com sua possível atualização, cabendo ao desenvolvedor escolher ou não.
+				
+				\item Substituir código ultrapassado por um mais atual.(Futuro)
+			\end{itemize}
+		\end{block}
+	\end{frame}
+%%%%%%%%%%%%%%%%%%%%% Resultados esperados %%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%% Encerramento %%%%%%%%%%%%%%%%%%%%%
+	\section{Encerramento}
+	\begin{frame}[label=encerramento]
+		\frametitle{Encerramento}
+		\begin{block}{Perguntas}
+			\centering
+			\includegraphics[scale=0.6]{duvidas.jpg}\\
+		\end{block}
+	\end{frame}
+%%%%%%%%%%%%%%%%%%%%% Encerramento %%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

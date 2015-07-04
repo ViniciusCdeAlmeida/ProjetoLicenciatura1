@@ -1,0 +1,9 @@
+\frametitle{Resultados esperados}
+\begin{itemize}
+\item Desenvolver uma ferramenta capaz analisar estaticamente um projeto Java e encontrar construções ultrapassadas.
+
+\item Propor um relatório contendo a localização do código ultrapassado por um mais atual, cabendo ao desenvolvedor escolher ou não.
+
+\item Reescrita do código fonte substituindo tal código ultrapassado.(Futuro)
+\end{itemize}
+
