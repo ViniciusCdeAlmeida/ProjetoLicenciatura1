@@ -13,38 +13,39 @@ São cinco os componentes que compõem o JDT, e cada componente pode operar com 
 		\item \textbf{Text} fornece blocos básicos para editores de texto e textos dentro do eclipse e ainda contribui com o editor de texto padrão do eclipse. \item \textbf{UI} prove toda interface que necessite de iteração com o usuário final, e ainda fornece a manipulação e visualização do código Java na IDE.
 	\end{itemize} 
 	
+
+\clearpage
+	
 \section {Arquitetura}
 
-A arquitetura do analisador exibido na Figura ~\ref{arquiteturaVisitor} foi  implementado utilizando como base os componentes \textit{JDT} porém de maneira independente da IDE eclipse o qual não é um {\it plugin} da IDE mas sim uma ferramente que pode ser utilizada como apoio em qualquer processo de desenvolvimento ou para levantamento de dados sobre a história evolutiva de um software.\\
+A arquitetura do analisador exibido na Figura:\ref{fig:arqGeral} foi  implementado utilizando como base os componentes \textit{JDT} porém de maneira independente da IDE eclipse o qual não é um {\it plugin} da IDE mas sim uma ferramente que pode ser utilizada como apoio em qualquer processo de desenvolvimento ou para levantamento de dados sobre a história evolutiva de um software.\\
 
-Esta analisador tem com base para seu funcionamento o uso de {\it visitors}  \cite{Gamma:1995:DPE:186897} os quais possuem inteligência para verificar a adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e até mesmo efetuar a pesquisa de código ultrapassados através de padrões pré-definidos para que possam vir a ser melhorados caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.\\
-
-Tais analisador tem como entradas válidas um único arquivo arquivo separado por vírgula (CSV) que possui em seus campos o nome dos projeto, versões e caminho para que cada um seja analisado. Após o {\it input} é realizado uma pesquisa em seu diretório \textit{src} o qual contém os códigos Java que compõem o projeto, após todos os arquivos listas é realizado um parse para a construção de árvores de sintáxe abstratas (AST) uma por arquivo e dai é lançando os {\it visitors}  \cite{Gamma:1995:DPE:186897} com suas respectivas inteligências para pesquisar os padrões previamente definidos os quais são armazenados em uma única coleção de dados que gera um CSV para cada padrão designado e dentro informando onde e em qual versão do projeto fora encontrado.\\
-	
 \begin{figure}[h]
 	\center
 	\includegraphics[width=1.0\textwidth]{Imagens/Arquitetura}
-	\label{fig:arquiteturaVisitor}
+	\label{fig:arqGeral}
 	\caption{Arquitetura geral do software.}
-\end{figure}	
+\end{figure}
 
+Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995:DPE:186897} exemplificado na Figura:\ref{fig:arqVisitor} os quais possuem inteligência para verificar a adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e até mesmo efetuar a pesquisa de código ultrapassados através de padrões pré-definidos para que possam vir a ser melhorados caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.\\
+
+Tais analisador tem como entradas válidas um único arquivo arquivo separado por vírgula (CSV) que possui em seus campos o nome dos projeto, versões e caminho para que cada um seja analisado. Após o {\it input} é realizado uma pesquisa em seu diretório \textit{src} o qual contém os códigos Java que compõem o projeto, após todos os arquivos listas é realizado um parse para a construção de árvores de sintáxe abstratas (AST) uma por arquivo e dai é lançando os {\it visitors}  \cite{Gamma:1995:DPE:186897} com suas respectivas inteligências para pesquisar os padrões previamente definidos os quais são armazenados em uma única coleção de dados que gera um CSV para cada padrão designado e dentro informando onde e em qual versão do projeto fora encontrado.\\
+	
 \clearpage
 \subsection{Visitors}
 \begin{figure}[h]
 \center
 \includegraphics[width=1.0\textwidth]{Imagens/Visitors}
-\label{arquiteturaVisitor}
+\label{fig:arqVisitor}
 \caption{Organização dos Visitors.}
 \end{figure}
 
-Todos os visitors criados para o projeto extendem da classe \textit{Visitor.java} a qual implementa a interface \textit{IVisitor.java}, vale resaltar que a classe \textit{Visitor.java} extende por sua vez de ASTVisitor a qual é fornecida pelo Core do JDT eclipse tendo como método principal utilizado neste projeto o \textbf{{\it boolean visit(Statement node)}} o qual recebe como parâmento qualquer {\it Statement} descrito na lib JDT, este método é sobrescrito com todo conteúdo necessário para recolher as métricas de acordo com os padrões previamente estabelecidos.\\
-
-
+Todos os visitors criados para o projeto extendem da classe \textit{Visitor.java} a qual implementa a interface \textit{IVisitor.java} conforme a Figura:\ref{fig:ProjectAnalyser}, vale resaltar que a classe \textit{Visitor.java} extende por sua vez de ASTVisitor a qual é fornecida pelo Core do JDT eclipse tendo como método principal utilizado neste projeto o \textbf{{\it boolean visit(Statement node)}} o qual recebe como parâmento qualquer {\it Statement} descrito na lib JDT, este método é sobrescrito com todo conteúdo necessário para recolher as métricas de acordo com os padrões previamente estabelecidos.\\
 \clearpage
 \begin{figure}[h]
 	\center
 	\includegraphics[width=0.8\textwidth]{Imagens/ProjectAnalyser}
-	\label{ProjectAnalyser}
+	\label{fig:ProjectAnalyser}
 	\caption{Project analyser.}
 \end{figure}
 
@@ -58,12 +59,12 @@ Um ponto interessante é que o \textit{ProjectAnalyser.java} não tem a responsa
 \subsection{Inversão de Controle e Injeção de Dependência}
 O padrão de projeto inversão de controle \textbf{(IoC)} e injeção de dependência \textbf{(DI)} é utilizado quando deseja-se obter um baixo nível de acoplamento entre módulos que compõem um sistema tornando mais suave ou até mesmo removendo o acoplamento entres módulos para que seja mais fácil evoluir e manter o software. Desta forma a injeção faz-se de maneira configurável através de um arquivo \textit{XML} ou até mesmo uma classe \textit{Java}. Para tal função usaremos o {\it framework Spring} devido sua consolidação e popularidade no assunto.\\
 
-Para preparar o ambiente de acordo com as especificações do {\it Spring} é necessário definir o contexto da aplicação e para isso é faz-se necessário criar antes de injetar as dependências as configurações iniciais. Dentre as possíveis formas disponibilizadas pelo {\it framework} de conceder tal configuração para criação um contexto para aplicação \textit{ApplicationContext} o projeto segue com a criação de um arquivo \textit{XML} o que concentra as referências necessárias de quais objetos e onde estes serão injetados. O arquivo \textit{XML} criado para tal finalidade é o \textit{'Beans.xml'} exemplificado na figura ~\ref{ProjectAnalyser} . Atualmente na versão 4.1.6 do {\it framework spring} é possível utilizar uma classe para fazer o mesmo trabalho do arquivo \textit{XML}. \\
+Para preparar o ambiente de acordo com as especificações do {\it Spring} é necessário definir o contexto da aplicação e para isso é faz-se necessário criar antes de injetar as dependências as configurações iniciais. Dentre as possíveis formas disponibilizadas pelo {\it framework} de conceder tal configuração para criação um contexto para aplicação \textit{ApplicationContext} o projeto segue com a criação de um arquivo \textit{XML} o que concentra as referências necessárias de quais objetos e onde estes serão injetados. O arquivo \textit{XML} criado para tal finalidade é o \textit{'Beans.xml'} exemplificado na figura \ref{fig:Beans} . Atualmente na versão 4.1.6 do {\it framework spring} é possível utilizar uma classe para fazer o mesmo trabalho do arquivo \textit{XML}. \\
 
 \begin{figure}[h]
 	\center
 	\includegraphics[width=0.4\textwidth]{Imagens/Beans}
-	\label{fig:ProjectAnalyser}
+	\label{fig:Beans}
 	\caption{Localização Beans.xml.}
 \end{figure}
 \clearpage
@@ -155,7 +156,7 @@ Tal padrão que controla a quantidade de instâncias dos objetos se faz presente
 	}
 \end{lstlisting}
 
-Abaixo segue bibliotecas necessárias para que o ambiente de injeção de dependência utilizando o textit{spring framework} \cite{SPRING_REF} ocorra de maneira correta na linguagem \textit{Java}, estas devem ser adicionada como dependências do Maven conforme ilustas ~\ref{libsCDI}.
+Abaixo segue bibliotecas necessárias para que o ambiente de injeção de dependência utilizando o textit{spring framework} \cite{SPRING_REF} ocorra de maneira correta na linguagem \textit{Java}, estas devem ser adicionada como dependências do Maven conforme ilustas \ref{fig:libsCDI}.
 \begin{itemize}
 	\item spring-aop-4.1.6.RELEASE.jar
 	\item spring-beans-4.1.6.RELEASE.jar
@@ -176,8 +177,17 @@ Abaixo segue bibliotecas necessárias para que o ambiente de injeção de depend
 
 \clearpage
 \subsection{Apache Maven}
-Maven é um software que facilita a construção do software automatizando a compilação e gerencia de dependências das bibliotecas necessárias ao projeto. Esta faz o download automático das libs a qual o projeto necessita sendo estas descritas usando um conceito de \textit{project object model} ou simplemente pom.xml.
+Afim de gerenciar \textit{builds} deste analisador estático, o Maven foi introduzido para tornar as configurações uniformes no ambiente de desenvolvimento deste seguindo as boas práticas, compilação, gerência de dependências e distribuição da aplicação.\\
 
+O arquivo pom.xml \textit{project object model} é a essência de um projeto Maven conforme Figura:\ref{fig:pomMaven}, com poucas configurações é possível gerências as dependências, centralizando documentação do projeto e a compilação de \textit{builds} para a distribuição da aplicação (por exemplo, \textit{.jar, .war ou .ear}).\\
+
+
+\begin{figure}[h]
+	\center
+	\includegraphics[width=0.4\textwidth]{Imagens/PomMaven}
+	\label{fig:pomMaven}
+	\caption{Pom.xml, arquivo de configuração do Maven.}
+\end{figure}
 
 \begin{table}[ht]
 	\centering
