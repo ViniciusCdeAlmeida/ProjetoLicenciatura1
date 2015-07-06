@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{apacheAnt}
+Apache ant project {@ONLINE}.
+\newblock \url{http://ant.apache.org/}.
+\newblock Accessed: 2015-07-06.
+
 \bibitem{docMaven}
 Documentation apache maven project {@ONLINE}.
 \newblock \url{http://maven.apache.org/guides/}.
