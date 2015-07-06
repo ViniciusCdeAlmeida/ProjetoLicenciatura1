@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: monografia.aux
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: monografia.aux
 A level-1 auxiliary file: capitulos/capitulo1_Introducao.aux
 A level-1 auxiliary file: capitulos/capitulo1_historia_da_linguagem.aux
 A level-1 auxiliary file: capitulos/capitulo1_aspectos_evolutivos.aux
@@ -9,14 +11,55 @@ A level-1 auxiliary file: capitulos/capitulo3_section_2.aux
 A level-1 auxiliary file: capitulos/capitulo5_resultados.aux
 The style file: plain.bst
 Database file #1: referencias/referencias.bib
-Warning--I didn't find a database entry for "JSE7_ReleaseNotes"
+Warning--to sort, need author or key in SPRING_REF
 Warning--to sort, need author or key in JDK1.1
 Warning--to sort, need author or key in OracleGenerics
-Warning--to sort, need author or key in JSE8_Enhancements
 Warning--to sort, need author or key in JSE7
+Warning--to sort, need author or key in JSE8_Enhancements
 Warning--to sort, need author or key in JSE7_Advanced
-Warning--to sort, need author or key in SPRING_REF
+Warning--to sort, need author or key in docMaven
 Warning--empty journal in bracha1998gj
 Warning--empty year in bracha1998gj
 Warning--empty journal in dyer2013large
+You've used 19 entries,
+            2118 wiz_defined-function locations,
+            623 strings with 7887 characters,
+and the built_in function-call counts, 5445 in all, are:
+= -- 534
+> -- 242
+< -- 2
++ -- 101
+- -- 80
+* -- 362
+:= -- 861
+add.period$ -- 58
+call.type$ -- 19
+change.case$ -- 96
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 200
+empty$ -- 463
+format.name$ -- 80
+if$ -- 1162
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 14
+newline$ -- 97
+num.names$ -- 24
+pop$ -- 148
+preamble$ -- 1
+purify$ -- 78
+quote$ -- 0
+skip$ -- 136
+stack$ -- 0
+substring$ -- 267
+swap$ -- 31
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 10
+while$ -- 40
+width$ -- 21
+write$ -- 196
 (There were 10 warnings)
