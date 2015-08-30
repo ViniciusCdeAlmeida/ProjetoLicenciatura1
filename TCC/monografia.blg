@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: monografia.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: monografia.aux
 A level-1 auxiliary file: capitulos/capitulo1_Introducao.aux
 A level-1 auxiliary file: capitulos/capitulo1_historia_da_linguagem.aux
 A level-1 auxiliary file: capitulos/capitulo1_aspectos_evolutivos.aux
@@ -21,45 +19,4 @@ Warning--to sort, need author or key in docMaven
 Warning--empty journal in bracha1998gj
 Warning--empty year in bracha1998gj
 Warning--empty journal in dyer2013large
-You've used 20 entries,
-            2118 wiz_defined-function locations,
-            629 strings with 8023 characters,
-and the built_in function-call counts, 5664 in all, are:
-= -- 554
-> -- 249
-< -- 2
-+ -- 104
-- -- 82
-* -- 371
-:= -- 900
-add.period$ -- 61
-call.type$ -- 20
-change.case$ -- 99
-chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 212
-empty$ -- 485
-format.name$ -- 82
-if$ -- 1209
-int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 16
-newline$ -- 102
-num.names$ -- 26
-pop$ -- 155
-preamble$ -- 1
-purify$ -- 81
-quote$ -- 0
-skip$ -- 142
-stack$ -- 0
-substring$ -- 272
-swap$ -- 32
-text.length$ -- 2
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 74
-warning$ -- 10
-while$ -- 42
-width$ -- 22
-write$ -- 207
 (There were 10 warnings)
