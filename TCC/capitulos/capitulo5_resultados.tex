@@ -1,14 +1,14 @@
 \chapter {Resultados}
-Foram analisados através de mais de 40M de loc nos projetos Ant, CommonsCollections, FreeMind, Log4j, SquirrelSql, Xerces, Checkstyle, FindBugs, Jetty, Spring, Weka.\\
+Foram analisados através de mais de 67.648.820 de \textbf{LOC} nos projetos Ant, Checkstyle, CommonsCollections,  FindBugs,  FreeMind,  Hibernate,  JBoss,  Jetty,  Log4j,  Spring,  SquirrelSql,  Weka,  Xerces.\\
 
 \section{LambdaExpression}
 A maior mudança ocorrida em Java 8 foi a introdução de expressões lambda, que tem por definição prover um bloco de código limpo e conciso para representar um interface usando uma simples expressão. Também melhoram a manipulação de \textit{collections} tornando fácil a iteração através de filtros para extração de dados e adiciona novas características de concorrência que aumenta a performance em ambientes multicores.\\
 
-\textit{Anonymous inner classes} foram projetada para facilitar o desenvolvedor a tratar seus dados de forma fácil, mas isso não é tão simples como deveria ser, além de suas implementações serem usadas somente em local específico da aplicação, em boa parte de seu uso para tratar eventos decorrentes do usuário ou de algum processamento específico. Expressões Lambda podem vir a substituir \textit{Anonymous inner classes} o que acarreta em uma redução de linha de código e de tipos utilizados no sistema.\\
+\textit{Anonymous inner classes} foram projetada para facilitar o desenvolvedor a tratar seus dados de forma fácil, mas isso não é tão simples como deveria ser, além de suas implementações serem usadas somente em local específico da aplicação, em boa parte de seu uso para tratar eventos decorrentes do usuário ou de algum processamento específico. Expressões Lambda podem vir a substituir \textit{Anonymous inner classes} o que acarreta em uma redução na quantidade de linhas de código significativamente além de reduzir os tipos utilizados no sistema.\\
 
-Dentre os projetos analisados foram encontrados ocorrências de tal característica, \textit{Lambda Expression}, somente nos projetos \textit{Checkstyle} e \textit{Spring}, 320 e 420 ocorrências respectivamente totalizando 752 ocorrências dentre um total de XXX nós analisados.\\
+Dentre os projetos analisados foram encontrados ocorrências de tal característica, \textit{Lambda Expression}, somente nos projetos \textit{Checkstyle}, \textit{Hibernate}, \textit{Jetty} \textit{Spring}, totalizando 774 ocorrências dentre um total de 64.179.440 \textbf{LOC}.\\
 
-Tendo em vista que expressões lambdas podem vir a substituir \textit{Anonymous inner classes} e reduzir o número de \textit{types} dos projetos. Foram encontradas nos projetos CheckStyle e Spring, 2376 e 113069 ocorrências respectivamente de \textit{Anonymous inner classes}. Com uso de expressões lambda a quantidade de ocorrências de \textit{Anonymous inner classes} e \textit{types} teria a tendência natural de diminuir seu uso.\\
+Tendo em vista que expressões lambdas podem vir a substituir \textit{Anonymous inner classes} e \textit{Types} dos projetos segundo \cite{Java8Lambda}. Foram encontradas nos projetos \textit{CheckStyle}, \textit{Hibernate}, \textit{Jetty} e \textit{Spring}, 2201, 13654, 10016 e 113069 ocorrências respectivamente totalizando em 138940 ocorrências de \textit{Anonymous inner classes}. Com uso de expressões lambda a quantidade de ocorrências de \textit{Anonymous inner classes} e \textit{Types} teria a tendência natural de diminuir seu uso.\\
 
 Um uso corriqueiro de expressão lambda seria para substituir o seguinte bloco do projeto Checkstyle:
 \begin{lstlisting}
@@ -19,13 +19,37 @@ Um uso corriqueiro de expressão lambda seria para substituir o seguinte bloco d
 		}
 	});
 
-
 	//With Lambda Lambda Expression
 	button.addActionListener(event -> System.out.println("button clicked"));
 	
+	//###########################################################################
+	
+	TreeSet<String> paths = new TreeSet<String>(
+			new Comparator<String>({
+				public int compare(String o1, String o2){
+					int paths1 = new StringTokenizer(o1,"/",false).countTokens();
+					int paths2 = new StringTokenizer(o2,"/",false).countTokens();
+				
+					if (paths1 == paths2){
+						return o1.compareTo(o2);
+					}
+				
+					return paths2 - paths1;
+				}
+			}
+	);
+	
+	
+	ps = paths.stream().filter(p -> p.o1 != p.o2)
+					   .collect(Collectors.toSet());
+	
+	return new TreeSet(ps);
+	
 \end{lstlisting}
 
-Isso acarretaria diminuição no uso de \textit{Anonymous inner classes} para uma forma mais atual e nesse simples exemplo seria um redução de 80\% sobre o código utilizado anteriormente. E ainda uma redução de tipos 3 tipos(ActionListener, ActionEvent e void) para um único método anônimo que acarreta em 300\% na redução de tipos.
+Como este simples exemplo pode-se verificar do benefício das expressões lambda tendo em vista que  redução do uso de \textit{Anonymous inner classes} além de ser uma forma mais atual. Neste seria um redução de 80\% sobre o código utilizado anteriormente. Além da redução de tipos 3 tipos(\textit{ActionListener}, \textit{ActionEvent} e \textit{void}) para um único método anônimo que acarreta em 300\% na redução de tipos,  se fosse possível aplicar esta características em todas as 138940 ocorrências de \textit{Anonymous inner classes} seria uma redução significativa de \textbf{LOC}.
+
+Entretanto diante dos dados coletados é possível afirmar que Expressões Lambda não estão sendo adotadas com este intuito, o que pode leva a crer que esta característica por ser recente ainda pode não ter sido bem acolhida pela comunidade de desenvolvedores para tirar proveito desta  característica para benefício de seus projetos.\\
 
 
 

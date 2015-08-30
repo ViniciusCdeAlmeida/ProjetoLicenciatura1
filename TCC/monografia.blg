@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: monografia.aux
 A level-1 auxiliary file: capitulos/capitulo1_Introducao.aux
@@ -21,45 +21,45 @@ Warning--to sort, need author or key in docMaven
 Warning--empty journal in bracha1998gj
 Warning--empty year in bracha1998gj
 Warning--empty journal in dyer2013large
-You've used 19 entries,
+You've used 20 entries,
             2118 wiz_defined-function locations,
-            623 strings with 7887 characters,
-and the built_in function-call counts, 5445 in all, are:
-= -- 534
-> -- 242
+            629 strings with 8023 characters,
+and the built_in function-call counts, 5664 in all, are:
+= -- 554
+> -- 249
 < -- 2
-+ -- 101
-- -- 80
-* -- 362
-:= -- 861
-add.period$ -- 58
-call.type$ -- 19
-change.case$ -- 96
++ -- 104
+- -- 82
+* -- 371
+:= -- 900
+add.period$ -- 61
+call.type$ -- 20
+change.case$ -- 99
 chr.to.int$ -- 0
-cite$ -- 29
-duplicate$ -- 200
-empty$ -- 463
-format.name$ -- 80
-if$ -- 1162
+cite$ -- 30
+duplicate$ -- 212
+empty$ -- 485
+format.name$ -- 82
+if$ -- 1209
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 14
-newline$ -- 97
-num.names$ -- 24
-pop$ -- 148
+int.to.str$ -- 20
+missing$ -- 16
+newline$ -- 102
+num.names$ -- 26
+pop$ -- 155
 preamble$ -- 1
-purify$ -- 78
+purify$ -- 81
 quote$ -- 0
-skip$ -- 136
+skip$ -- 142
 stack$ -- 0
-substring$ -- 267
-swap$ -- 31
+substring$ -- 272
+swap$ -- 32
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 74
 warning$ -- 10
-while$ -- 40
-width$ -- 21
-write$ -- 196
+while$ -- 42
+width$ -- 22
+write$ -- 207
 (There were 10 warnings)
