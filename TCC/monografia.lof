@@ -14,7 +14,12 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces \IeC {\'A}rvore de parser.}}{32}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces \IeC {\'A}rvore AST.}}{34}{figure.3.2}
 \addvspace {10\p@ }
+<<<<<<< HEAD
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Tratamento de exce\IeC {\c c}\IeC {\~a}o ao longo das releases.}}{38}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Bloco Try com catchs iguais ao longo das releases.}}{39}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Atributos parametrizados ao longo das releases.}}{40}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces M\IeC {\'e}todos parametrizados ao longo das releases.}}{40}{figure.4.4}
+=======
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tratamento de exce\IeC {\c c}\IeC {\~a}o ao longo das releases.}}{40}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Bloco Try com catchs iguais ao longo das releases.}}{41}{figure.4.2}
+>>>>>>> Resultados-Lambda

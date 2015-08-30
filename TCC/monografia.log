@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.4)  24 AUG 2015 15:03
 entering extended mode
 **C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/monografia.tex
@@ -19,16 +20,42 @@ Document Class: unb-cic 2008/06/05 v0.93 Classe para trabalhos CIC UnB
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.12)  30 AUG 2015 15:28
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**monografia.tex
+(./monografia.tex
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./unb-cic.cls
+Document Class: unb-cic 2008/06/05 v0.93 Classe para trabalhos CIC UnB
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+>>>>>>> Resultados-Lambda
 \XKV@toks=\toks14
 \XKV@tempa@toks=\toks15
-\XKV@depth=\count79
-File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 
+<<<<<<< HEAD
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\keyval.tex")))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+=======
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count79
+File: xkeyval.tex 2014/05/25 v2.7 key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+>>>>>>> Resultados-Lambda
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -43,9 +70,15 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+<<<<<<< HEAD
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
 Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
 LaTeX Info: Redefining \em on input line 420.
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2014/09/29 v1.1s fixes to LaTeX
+LaTeX Info: Redefining \em on input line 430.
+>>>>>>> Resultados-Lambda
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
@@ -170,8 +203,13 @@ File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \c@bookmark@seq@number=\count98
 \Hy@SectionHShift=\skip43
 )
+<<<<<<< HEAD
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+>>>>>>> Resultados-Lambda
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -229,11 +267,22 @@ Package: babel 2008/07/08 v3.8m The Babel package
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
+<<<<<<< HEAD
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
+=======
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/09/25 3.9l The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/09/25 3.9l Babel common definitions
+>>>>>>> Resultados-Lambda
 \babel@savecnt=\count106
 \U@D=\dimen117
 )
@@ -263,7 +312,11 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count107
 )
+<<<<<<< HEAD
 (C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+>>>>>>> Resultados-Lambda
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -280,6 +333,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
+<<<<<<< HEAD
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks17
@@ -287,13 +341,27 @@ Package: inputenc 2008/03/30 v1.1d Input encoding file
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2014/04/30 v1.2b Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+>>>>>>> Resultados-Lambda
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
+<<<<<<< HEAD
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+>>>>>>> Resultados-Lambda
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -442,8 +510,13 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
+<<<<<<< HEAD
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+>>>>>>> Resultados-Lambda
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -473,8 +546,13 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
+<<<<<<< HEAD
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+>>>>>>> Resultados-Lambda
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -513,20 +591,34 @@ Now handling font encoding PD1 ...
 \lst@lineno=\count113
 \lst@maxwidth=\dimen121
 
+<<<<<<< HEAD
 (C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+>>>>>>> Resultados-Lambda
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count114
 \lst@skipnumbers=\count115
 \lst@framebox=\box29
 )
+<<<<<<< HEAD
 (C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+>>>>>>> Resultados-Lambda
 File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
+<<<<<<< HEAD
 (C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 ) (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\cores.tex)
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+) (./cores.tex)
+>>>>>>> Resultados-Lambda
 Package hyperref Info: Option `colorlinks' set `true' on input line 67.
 
 (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.aux
@@ -653,7 +745,11 @@ File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
 LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              Font shape `T1/ua1/b/n' tried instead on input line 102.
 
+<<<<<<< HEAD
 <positivo_cor.pdf, id=151, 119.44624pt x 60.225pt>
+=======
+<positivo_cor.pdf, id=156, 119.44624pt x 60.225pt>
+>>>>>>> Resultados-Lambda
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 102.
@@ -727,18 +823,37 @@ l.120   \begin{abstract}
 [4
 
 
+<<<<<<< HEAD
 ] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.toc)
+=======
+(./capitulos/abstract.tex) [4
+
+
+] (./monografia.toc [5
+
+])
+>>>>>>> Resultados-Lambda
 \tf@toc=\write4
 
+<<<<<<< HEAD
 [5
 
 ] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.lof)
+=======
+ [6] (./monografia.lof)
+>>>>>>> Resultados-Lambda
 \tf@lof=\write5
 
-[6
+[7
 
 ] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.lot)
 \tf@lot=\write6
+<<<<<<< HEAD
+=======
+\openout6 = `monografia.lot'.
+
+ [8
+>>>>>>> Resultados-Lambda
 
 [7
 
@@ -834,8 +949,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
+<<<<<<< HEAD
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+>>>>>>> Resultados-Lambda
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
@@ -876,10 +996,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_aspect
 os_evolutivos.tex
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
+<<<<<<< HEAD
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 [9
+=======
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [9
+>>>>>>> Resultados-Lambda
 
 
 ] [10] [11
@@ -968,7 +1095,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
+<<<<<<< HEAD
 <Imagens/Arquitetura.png, id=585, 1350.54562pt x 587.94656pt>
+=======
+<Imagens/Arquitetura.png, id=596, 1350.54562pt x 587.94656pt>
+>>>>>>> Resultados-Lambda
 File: Imagens/Arquitetura.png Graphic file (type png)
 
 <use Imagens/Arquitetura.png>
@@ -986,8 +1117,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
 [20
 
+<<<<<<< HEAD
  <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/Imagens/Arquitetura.png>]
  <Imagens/Visitors.png, id=595, 865.73438pt x 600.74437pt>
+=======
+ <./Imagens/Arquitetura.png>]
+<Imagens/Visitors.png, id=607, 865.73438pt x 600.74437pt>
+>>>>>>> Resultados-Lambda
 File: Imagens/Visitors.png Graphic file (type png)
 
 <use Imagens/Visitors.png>
@@ -1000,8 +1136,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
 [21
 
+<<<<<<< HEAD
  <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/Imagens/Visitors.png>] <I
 magens/ProjectAnalyser.png, id=603, 856.70062pt x 383.18156pt>
+=======
+ <./Imagens/Visitors.png>]
+<Imagens/ProjectAnalyser.png, id=614, 856.70062pt x 383.18156pt>
+>>>>>>> Resultados-Lambda
 File: Imagens/ProjectAnalyser.png Graphic file (type png)
 
 <use Imagens/ProjectAnalyser.png>
@@ -1030,7 +1171,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
+<<<<<<< HEAD
 <Imagens/Beans.png, id=611, 330.23375pt x 463.7325pt>
+=======
+<Imagens/Beans.png, id=622, 330.23375pt x 463.7325pt>
+>>>>>>> Resultados-Lambda
 File: Imagens/Beans.png Graphic file (type png)
  <use Imagens/Beans.png>
 Package pdftex.def Info: Imagens/Beans.png used on input line 66.
@@ -1075,7 +1220,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
 ] [26
 
+<<<<<<< HEAD
 ] <Imagens/libsSpring.png, id=699, 476.78125pt x 502.87875pt>
+=======
+] <Imagens/libsSpring.png, id=712, 476.78125pt x 502.87875pt>
+>>>>>>> Resultados-Lambda
 File: Imagens/libsSpring.png Graphic file (type png)
 
 <use Imagens/libsSpring.png>
@@ -1093,7 +1242,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
+<<<<<<< HEAD
 <Imagens/PomMaven.png, id=708, 361.35pt x 614.295pt>
+=======
+<Imagens/PomMaven.png, id=720, 361.35pt x 614.295pt>
+>>>>>>> Resultados-Lambda
 File: Imagens/PomMaven.png Graphic file (type png)
 
 <use Imagens/PomMaven.png>
@@ -1146,7 +1299,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 [31
 
 
+<<<<<<< HEAD
 ] <Imagens/Arvore.png, id=743, 533.74406pt x 577.40718pt>
+=======
+] <Imagens/Arvore.png, id=755, 533.74406pt x 577.40718pt>
+>>>>>>> Resultados-Lambda
 File: Imagens/Arvore.png Graphic file (type png)
 
 <use Imagens/Arvore.png>
@@ -1169,7 +1326,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
+<<<<<<< HEAD
 <Imagens/ArvoreAST.png, id=750, 1282.7925pt x 495.35063pt>
+=======
+<Imagens/ArvoreAST.png, id=764, 1282.7925pt x 495.35063pt>
+>>>>>>> Resultados-Lambda
 File: Imagens/ArvoreAST.png Graphic file (type png)
 
 <use Imagens/ArvoreAST.png>
@@ -1219,23 +1380,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--95
 ados.tex
 Cap\'{\i }tulo 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
+<<<<<<< HEAD
 <Imagens/trysAnt.png, id=792, 611.28375pt x 438.63875pt>
 File: Imagens/trysAnt.png Graphic file (type png)
+=======
+>>>>>>> Resultados-Lambda
 
-<use Imagens/trysAnt.png>
-Package pdftex.def Info: Imagens/trysAnt.png used on input line 10.
-(pdftex.def)             Requested size: 318.66948pt x 228.66237pt.
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
@@ -1243,13 +1413,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
 
 
+<<<<<<< HEAD
  <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/Imagens/trysAnt.png>]
 <Imagens/catchsIguais.png, id=800, 611.28375pt x 438.63875pt>
+=======
+]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+<Imagens/trysAnt.png, id=848, 611.28375pt x 438.63875pt>
+File: Imagens/trysAnt.png Graphic file (type png)
+
+<use Imagens/trysAnt.png>
+Package pdftex.def Info: Imagens/trysAnt.png used on input line 64.
+(pdftex.def)             Requested size: 318.66948pt x 228.66237pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+<Imagens/catchsIguais.png, id=850, 611.28375pt x 438.63875pt>
+>>>>>>> Resultados-Lambda
 File: Imagens/catchsIguais.png Graphic file (type png)
 
 <use Imagens/catchsIguais.png>
-Package pdftex.def Info: Imagens/catchsIguais.png used on input line 19.
+Package pdftex.def Info: Imagens/catchsIguais.png used on input line 73.
 (pdftex.def)             Requested size: 318.66948pt x 228.66237pt.
+<<<<<<< HEAD
+=======
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [40 <./Imagens/trysAnt.png>] [41 <./Imagens/catchsIguais.png>])
+(./monografia.bbl (./monografia.brf)
+\tf@brf=\write7
+\openout7 = `monografia.brf'.
+>>>>>>> Resultados-Lambda
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
@@ -1318,13 +1529,21 @@ Underfull \hbox (badness 1803) in paragraph at lines 36--36
  / docs . oracle . com / javase / tutorial /$
  []
 
+<<<<<<< HEAD
 [41
+=======
+[42
+>>>>>>> Resultados-Lambda
 
 
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
+<<<<<<< HEAD
  [42]
+=======
+ [43]
+>>>>>>> Resultados-Lambda
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
  (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.aux
 (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1_Introd
@@ -1346,13 +1565,28 @@ ados.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
+<<<<<<< HEAD
 (rerunfilecheck)             Checksum: 6295EC57DEEFDB9E02EEA6A8DA9993B3;2344.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
 (rerunfilecheck)             Checksum: 3C65CCE6F1CA928E9B8BE2CAD2024BD2;2645.
+=======
+(rerunfilecheck)             Checksum: F37EC4F0FEE78ABEB26159BB89A1C132;2370.
+Package rerunfilecheck Info: File `monografia.brf' has not changed.
+(rerunfilecheck)             Checksum: 0FE868DD31B29CA3062890F58DCFDC97;2602.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.74pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+>>>>>>> Resultados-Lambda
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  10424 strings out of 493921
  153329 string characters out of 3147271
  278947 words of memory out of 3000000
@@ -1381,4 +1615,31 @@ PDF statistics:
  1503 PDF objects out of 1728 (max. 8388607)
  406 named destinations out of 1000 (max. 500000)
  362 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 10681 strings out of 493105
+ 152509 string characters out of 6137072
+ 287257 words of memory out of 5000000
+ 13458 multiletter control sequences out of 15000+600000
+ 16864 words of font info for 38 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 43i,8n,72p,3179b,1893s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts
+/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
+i1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx
+2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2
+074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sftt1200.pfb>
+Output written on monografia.pdf (54 pages, 635004 bytes).
+PDF statistics:
+ 1067 PDF objects out of 1200 (max. 8388607)
+ 969 compressed objects within 10 object streams
+ 440 named destinations out of 1000 (max. 500000)
+ 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> Resultados-Lambda
 
