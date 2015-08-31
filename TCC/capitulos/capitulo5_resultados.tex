@@ -1,4 +1,4 @@
-\chapter {Resultados}
+\chapter{Resultados}
 Foram analisados através de mais de 67.648.820 de \textbf{LOC} nos projetos Ant, Checkstyle, CommonsCollections,  FindBugs,  FreeMind,  Hibernate,  JBoss,  Jetty,  Log4j,  Spring,  SquirrelSql,  Weka,  Xerces.\\
 
 \section{LambdaExpression}
@@ -12,14 +12,14 @@ Tendo em vista que expressões lambdas podem vir a substituir \textit{Anonymous 
 
 Um uso corriqueiro de expressão lambda seria para substituir o seguinte bloco do projeto Checkstyle:
 \begin{lstlisting}
-	//Without Lambda Lambda Expression
+	//Sem uso de Lambda Expression
 	button.addActionListener(new ActionListener(){
 		public void actionPerformed(ActionEvent e) {
 			System.out.println("button clicked");
 		}
 	});
 
-	//With Lambda Lambda Expression
+	//Usando Lambda Expression
 	button.addActionListener(event -> System.out.println("button clicked"));
 	
 	//###########################################################################
@@ -54,7 +54,52 @@ Entretanto diante dos dados coletados é possível afirmar que Expressões Lambd
 \section{MultiCatch}
 Com o advento do Java 7, foi introduzido o suporte a \textit{MultiCatch} que trouxe a possibilidade de trazer clareza e simplicidade ao código escrito.\\
 
-De todos os projetos analisados foram encontradas na soma das ocorrências 5247 estruturas que usam esse artificio. Os projetos que tiveram mais ocorrências de \textit{multicatchs} foram \textit{FindBugs}, \textit{Ant}, \textit{Log4j}, \textit{Checkstyle}, 976, 3133, 252 e 434 respectivamente.\\
+De todos os projetos analisados foram encontradas 5247 ocorrências do possível uso de \textit{multicatchs}, ou seja, a troca de varios blocos \textit{cacths} por estruturas que usam condicionais com no exemplo abaixo do \textit{Spring release} 4.1.1. Os projetos que tiveram mais ocorrências de \textit{multicatchs} foram \textit{FindBugs}, \textit{Ant}, \textit{Log4j}, \textit{Checkstyle}, 976, 3133, 252 e 434 respectivamente.\\
+
+\begin{lstlisting}
+	...
+	// Sem uso de multicacth
+	private <T> T doConvert(Object value, Class<T> requiredType, MethodParameter methodParam, Field field){
+		throws TypeMismatchException {
+			try {
+				if (field != null) {
+					return this.typeConverterDelegate.convertIfNecessary(value, requiredType, field);
+				}
+				else {
+					return this.typeConverterDelegate.convertIfNecessary(value, requiredType, methodParam);
+				}	
+			}
+			catch (ConverterNotFoundException ex) {
+				throw new ConversionNotSupportedException(value, requiredType, ex);
+			}
+			catch (ConversionException ex) {
+				throw new TypeMismatchException(value, requiredType, ex);
+			}
+			catch (IllegalStateException ex) {
+				throw new ConversionNotSupportedException(value, requiredType, ex);
+			}
+			catch (IllegalArgumentException ex) {
+				throw new TypeMismatchException(value, requiredType, ex);
+			}
+		}
+	}
+	
+//#######################################
+	...
+		//Com o uso de multicatch
+		catch (ConverterNotFoundException ex|IllegalStateException ex) {
+			throw new ConversionNotSupportedException(value, requiredType, ex);
+		}
+		catch (ConversionException ex|IllegalArgumentException ex) {
+			throw new TypeMismatchException(value, requiredType, ex);
+		}
+
+	
+\end{lstlisting}}
+
+No total de 64.179.440 \textbf{LOC} analisados o uso de \textit{multicatchs} em todas as \textit{releases} dos projeto representou somente 0,008\% do total de \textbf{LOC}, na relação do total de \textbf{trys} encontrados 563153, os \textit{multicatchs} representão 10315, ou seja, 1,83\% do total. \\
+
+Diante desses dados\\ 10315 563153
 
 \section{ANT}
 Até a última versão deste projeto, 1.9.5, não foram encontradas utilização métodos com \textit{vargs}, expressões lambdas, \textit{switch} com \textit{strings} e nem \textit{try} com \textit{resources}.\\
