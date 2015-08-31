@@ -52,9 +52,19 @@ Como este simples exemplo pode-se verificar do benefício das expressões lambda
 Entretanto diante dos dados coletados é possível afirmar que Expressões Lambda não estão sendo adotadas com este intuito, o que pode leva a crer que esta característica por ser recente ainda pode não ter sido bem acolhida pela comunidade de desenvolvedores para tirar proveito desta  característica para benefício de seus projetos.\\
 
 \section{MultiCatch}
-Com o advento do Java 7, foi introduzido o suporte a \textit{MultiCatch} que trouxe a possibilidade de trazer clareza e simplicidade ao código escrito.\\
+Com o advento do Java 7, foi introduzido o suporte a \textit{MultiCatch} que trouxe a possibilidade de trazer clareza e simplicidade no mecanismo de tratamento de exceção. O que aparentemente esta sendo um recurso pouco utilizado tendo em vista a grande quantidade de oportunidades de utilização desta elegante característica.\\
 
-De todos os projetos analisados foram encontradas 5247 ocorrências do possível uso de \textit{multicatchs}, ou seja, a troca de varios blocos \textit{cacths} por estruturas que usam condicionais com no exemplo abaixo do \textit{Spring release} 4.1.1. Os projetos que tiveram mais ocorrências de \textit{multicatchs} foram \textit{FindBugs}, \textit{Ant}, \textit{Log4j}, \textit{Checkstyle}, 976, 3133, 252 e 434 respectivamente.\\
+Em todos os projetos analisados foram encontradas 10314 ocorrências do possível uso de \textit{multicatchs}, ou seja, a troca de vários blocos \textit{cacths} por estruturas que usam condicionais com no exemplo abaixo do \textit{Spring release} 4.1.1.\\
+
+Dentre os projetos analisados é possível dar destaque ao \textit{FindBugs}, \textit{Hibernate}, \textit{JBoss}, \textit{Jetty} e \textit{Spring} os quais aparentam ignorar tal característica ao duplicar blocos \textit{catch} para o tratamento de exceção tornando o código deselengante tendo em vista que a linguagem fornece um suporte mais elegante e atual para estre tratamento.\\
+
+\begin{figure}[h]
+	\center
+	\includegraphics[width=1.1\textwidth]{Imagens/multicatch}
+	\label{fig:Muticatch}
+	\caption{Oportunidades de \textit{Multicatch} nos projetos.}
+\end{figure}
+\clearpage
 
 \begin{lstlisting}
 	...
@@ -104,12 +114,12 @@ Até a última versão deste projeto \cite{apacheAnt}, 1.9.5, não foram encontr
 
 Este projeto faz um bom uso de tratamento de exceções sendo encontrado em toda história de desenvolvimento foram produzidas 28 versões deste e com um total de 34722 blocos \textit{trys}, onde em média foram encontradas 1240 destes blocos por versão. E deste total pode-se verificar um total de 513 ocorrências de blocos \textit{trys} com \textit{catchs} iguais totalizando em 1,5\% de código repetido neste quesito conforme ilustra Figura: \ref{fig:TrysAnt}.\\
 
-	\begin{figure}[h]
-		\center
-		\includegraphics[width=0.7\textwidth]{Imagens/trysAnt}
-		\label{fig:TrysAnt}
-		\caption{Tratamento de exceção ao longo das releases.}
-	\end{figure}
+\begin{figure}[h]
+	\center
+	\includegraphics[width=0.7\textwidth]{Imagens/trysAnt}
+	\label{fig:TrysAnt}
+	\caption{Tratamento de exceção ao longo das releases.}
+\end{figure}
 
 Entretanto pode-se constatar conforme ilustrado na Figura: \ref{fig:catchIguais} que em todas as versões do projeto \textit{ANT} possui o tratamento de exceção como blocos \textit{catchs} iguais sendo contabilizado um total de 513 ocorrências e dando atenção especial entre as versões 1.9.0 e 1.9.5. Entretanto a partir da versão 1.9.0 por volta de 2012, java possuía o mecanismo de \textit{multicatch} que fora lançado por volta de 2011 em java 7. Entre as \textit{releases} desta versão foram encontradas em cada um dos 5 lançamentos do \textit{ANT} por volta de 27 ocorrências iguais de \textit{catchs} e acarreta em um total de 135 blocos repetidos. Caso fosse adotado \textit{multicatch} seria reduzido somente a 5 blocos a cada versão existente o que seria uma redução de código repetido em aproximadamente 18\%, e isso acarretaria em um código mais atual e elegante.\\
 
