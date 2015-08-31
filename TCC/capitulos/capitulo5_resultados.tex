@@ -1,8 +1,8 @@
-\chapter {Resultados}
+\chapter{Resultados}
 Foram analisados através de mais de 67.648.820 de \textbf{LOC} nos projetos Ant, Checkstyle, CommonsCollections,  FindBugs,  FreeMind,  Hibernate,  JBoss,  Jetty,  Log4j,  Spring,  SquirrelSql,  Weka,  Xerces.\\
 
 \section{LambdaExpression}
-A maior mudança ocorrida em Java 8 foi a introdução de expressões lambda, que tem por definição prover um bloco de código limpo e conciso para representar um interface usando uma simples expressão. Também melhoram a manipulação de \textit{collections} tornando fácil a iteração através de filtros para extração de dados e adiciona novas características de concorrência que aumenta a performance em ambientes multicores.\\
+A maior mudança ocorrida em Java 8 foi a introdução de expressões lambda, que tem por definição prover um bloco de código limpo e conciso para representar um interface usando uma simples expressão. Também melhoram a manipulação de \textit{collections} tornando fácil a iteração através de filtros para extração de dados e adiciona novas características de concorrência que aumenta a performance em ambientes \textit{multicores}.\\
 
 \textit{Anonymous inner classes} foram projetada para facilitar o desenvolvedor a tratar seus dados de forma fácil, mas isso não é tão simples como deveria ser, além de suas implementações serem usadas somente em local específico da aplicação, em boa parte de seu uso para tratar eventos decorrentes do usuário ou de algum processamento específico. Expressões Lambda podem vir a substituir \textit{Anonymous inner classes} o que acarreta em uma redução na quantidade de linhas de código significativamente além de reduzir os tipos utilizados no sistema.\\
 
@@ -12,14 +12,14 @@ Tendo em vista que expressões lambdas podem vir a substituir \textit{Anonymous 
 
 Um uso corriqueiro de expressão lambda seria para substituir o seguinte bloco do projeto Checkstyle:
 \begin{lstlisting}
-	//Without Lambda Lambda Expression
+	//Sem uso de Lambda Expression
 	button.addActionListener(new ActionListener(){
 		public void actionPerformed(ActionEvent e) {
 			System.out.println("button clicked");
 		}
 	});
 
-	//With Lambda Lambda Expression
+	//Usando Lambda Expression
 	button.addActionListener(event -> System.out.println("button clicked"));
 	
 	//###########################################################################
@@ -51,8 +51,55 @@ Como este simples exemplo pode-se verificar do benefício das expressões lambda
 
 Entretanto diante dos dados coletados é possível afirmar que Expressões Lambda não estão sendo adotadas com este intuito, o que pode leva a crer que esta característica por ser recente ainda pode não ter sido bem acolhida pela comunidade de desenvolvedores para tirar proveito desta  característica para benefício de seus projetos.\\
 
+\section{MultiCatch}
+Com o advento do Java 7, foi introduzido o suporte a \textit{MultiCatch} que trouxe a possibilidade de trazer clareza e simplicidade ao código escrito.\\
 
+De todos os projetos analisados foram encontradas 5247 ocorrências do possível uso de \textit{multicatchs}, ou seja, a troca de varios blocos \textit{cacths} por estruturas que usam condicionais com no exemplo abaixo do \textit{Spring release} 4.1.1. Os projetos que tiveram mais ocorrências de \textit{multicatchs} foram \textit{FindBugs}, \textit{Ant}, \textit{Log4j}, \textit{Checkstyle}, 976, 3133, 252 e 434 respectivamente.\\
 
+\begin{lstlisting}
+	...
+	// Sem uso de multicacth
+	private <T> T doConvert(Object value, Class<T> requiredType, MethodParameter methodParam, Field field){
+		throws TypeMismatchException {
+			try {
+				if (field != null) {
+					return this.typeConverterDelegate.convertIfNecessary(value, requiredType, field);
+				}
+				else {
+					return this.typeConverterDelegate.convertIfNecessary(value, requiredType, methodParam);
+				}	
+			}
+			catch (ConverterNotFoundException ex) {
+				throw new ConversionNotSupportedException(value, requiredType, ex);
+			}
+			catch (ConversionException ex) {
+				throw new TypeMismatchException(value, requiredType, ex);
+			}
+			catch (IllegalStateException ex) {
+				throw new ConversionNotSupportedException(value, requiredType, ex);
+			}
+			catch (IllegalArgumentException ex) {
+				throw new TypeMismatchException(value, requiredType, ex);
+			}
+		}
+	}
+	
+//#######################################
+	...
+		//Com o uso de multicatch
+		catch (ConverterNotFoundException ex|IllegalStateException ex) {
+			throw new ConversionNotSupportedException(value, requiredType, ex);
+		}
+		catch (ConversionException ex|IllegalArgumentException ex) {
+			throw new TypeMismatchException(value, requiredType, ex);
+		}
+
+	
+\end{lstlisting}}
+
+No total de 64.179.440 \textbf{LOC} analisados o uso de \textit{multicatchs} em todas as \textit{releases} dos projeto representou somente 0,008\% do total de \textbf{LOC}, na relação do total de \textbf{trys} encontrados 563153, os \textit{multicatchs} representão 10315, ou seja, 1,83\% do total. \\
+
+Diante desses dados\\ 10315 563153
 
 \section{ANT}
 Até a última versão deste projeto \cite{apacheAnt}, 1.9.5, não foram encontradas utilização métodos com \textit{vargs}, expressões lambdas, \textit{switch} com \textit{strings} e nem \textit{try} com \textit{resources}.\\

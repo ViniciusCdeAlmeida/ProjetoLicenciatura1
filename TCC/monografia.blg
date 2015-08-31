@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+This is BibTeX, Version 0.99dThe top-level auxiliary file: monografia.aux
+=======
+<<<<<<< HEAD
 This is BibTeX, Version 0.99d (TeX Live 2014/Debian)
 =======
 This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 >>>>>>> Resultados-Lambda
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: monografia.aux
+>>>>>>> master
 A level-1 auxiliary file: capitulos/capitulo1_Introducao.aux
 A level-1 auxiliary file: capitulos/capitulo1_historia_da_linguagem.aux
 A level-1 auxiliary file: capitulos/capitulo1_aspectos_evolutivos.aux
@@ -26,6 +30,8 @@ Warning--to sort, need author or key in apacheAnt
 Warning--empty journal in bracha1998gj
 Warning--empty year in bracha1998gj
 Warning--empty journal in dyer2013large
+<<<<<<< HEAD
+=======
 You've used 20 entries,
             2118 wiz_defined-function locations,
 <<<<<<< HEAD
@@ -105,5 +111,6 @@ warning$ -- 10
 while$ -- 42
 width$ -- 22
 write$ -- 207
+>>>>>>> master
 (There were 10 warnings)
 >>>>>>> Resultados-Lambda
