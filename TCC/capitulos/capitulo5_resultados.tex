@@ -102,7 +102,7 @@ No total de 64.179.440 \textbf{LOC} analisados o uso de \textit{multicatchs} em 
 Diante desses dados\\ 10315 563153
 
 \section{ANT}
-Até a última versão deste projeto, 1.9.5, não foram encontradas utilização métodos com \textit{vargs}, expressões lambdas, \textit{switch} com \textit{strings} e nem \textit{try} com \textit{resources}.\\
+Até a última versão deste projeto \cite{apacheAnt}, 1.9.5, não foram encontradas utilização métodos com \textit{vargs}, expressões lambdas, \textit{switch} com \textit{strings} e nem \textit{try} com \textit{resources}.\\
 
 Este projeto faz um bom uso de tratamento de exceções sendo encontrado em toda história de desenvolvimento foram produzidas 28 versões deste e com um total de 34722 blocos \textit{trys}, onde em média foram encontradas 1240 destes blocos por versão. E deste total pode-se verificar um total de 513 ocorrências de blocos \textit{trys} com \textit{catchs} iguais totalizando em 1,5\% de código repetido neste quesito conforme ilustra Figura: \ref{fig:TrysAnt}.\\
 
@@ -120,4 +120,28 @@ Entretanto pode-se constatar conforme ilustrado na Figura: \ref{fig:catchIguais}
 		\includegraphics[width=0.7\textwidth]{Imagens/catchsIguais}
 		\label{fig:catchIguais}
 		\caption{Bloco Try com catchs iguais ao longo das releases.}
+	\end{figure}
+
+
+Outro fato de bastente relevância é que o ANT faz uso de atributos parametrizados indicados na Figura: \ref{fig:atributosParametrizadosAnt}  e métodos parametrizados conforme Figura: \ref{fig:metodosParametrizadosAnt} desde sua versão 1.7.0, dezembro de 2006, o que leva a crer que foi aderido juntamente com o lançamento de \textit{Generics}, o que foi um marco na linguagem Java.\\
+
+Vale ressaltar que de um total de 244137 atributos foi encontrado 1408 destes sendo paramentrizados o que acarreta em menos de 1\% dos atributos são genéricos. E a respeito dos métodos foram encontrados um total de 282216 métodos sendo que deste somente 1080 são métodos parametrizados acarretando em menos de 1\% são parametrizados.\\
+
+O que leva a concluir que apesar do ANT fazer uso de tipos genéricos estes podem estar sendo subutilizados nesse projeto, ou esta característia não é de grande relevância para o projeto.\\
+
+
+
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.7\textwidth]{Imagens/atributosParametrizados.png}
+		\label{fig:atributosParametrizadosAnt}
+		\caption{Atributos parametrizados ao longo das releases.}
+	\end{figure}
+	
+	
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.7\textwidth]{Imagens/metodosParametrizados.png}
+		\label{fig:metodosParametrizadosAnt}
+		\caption{Métodos parametrizados ao longo das releases.}
 	\end{figure}

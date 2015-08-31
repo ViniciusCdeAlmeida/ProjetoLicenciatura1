@@ -33,7 +33,17 @@
 \contentsline {section}{\numberline {3.8}Verifica\IeC {\c c}\IeC {\~a}o de programa}{36}{section.3.8}
 \contentsline {section}{\numberline {3.9}Verifica\IeC {\c c}\IeC {\~a}o de propriedade}{36}{section.3.9}
 \contentsline {chapter}{\numberline {4}Resultados}{38}{chapter.4}
+<<<<<<< HEAD
+\contentsline {section}{\numberline {4.1}ANT}{38}{section.4.1}
+\contentsline {chapter}{Refer\^encias}{41}{section*.8}
+=======
 \contentsline {section}{\numberline {4.1}LambdaExpression}{38}{section.4.1}
+<<<<<<< HEAD
 \contentsline {section}{\numberline {4.2}MultiCatch}{40}{section.4.2}
 \contentsline {section}{\numberline {4.3}ANT}{41}{section.4.3}
 \contentsline {chapter}{Refer\^encias}{43}{section*.8}
+=======
+\contentsline {section}{\numberline {4.2}ANT}{40}{section.4.2}
+\contentsline {chapter}{Refer\^encias}{42}{section*.8}
+>>>>>>> Resultados-Lambda
+>>>>>>> master
