@@ -68,7 +68,6 @@ Um simples \textit{refactoring} unindo estes blocos semelhantes por igualdade ac
 
 De forma mais detalhada uma análise sobre uma classe do \textit{Spring 4.2.0.RC2} como exemplo é  \textit{org.springframework.beans.AbstractNestablePropertyAccessor.java}, o qual é possível verificar que tal característica é simples e rápida de ser implantada o que impacta em uma redução significativa do trecho de código mencionado algo entorno de 58\%.\\
 \begin{lstlisting}
-	...
 	// Sem uso de Multicacth 17LOC
 	try {
 		return this.typeConverterDelegate.convertIfNecessary(propertyName, oldValue, newValue, requiredType, td);
@@ -106,16 +105,21 @@ De forma mais detalhada uma análise sobre uma classe do \textit{Spring 4.2.0.RC
 \end{lstlisting}
  
 
-Uma análise mais detalhada sobre \textit{Spring} com 2620 ocorrências o que resulta em  afima que tal procedimento de tratar exceções estão presentes em todas as versões analisadas, iniciando na 3.0.0.M1 lançada em junho de 2009 até a mais recente até o momento 4.2.0.RC2. Conforme indicado na figura: \ref{fig:ocorrenciasMulticatchSpring} existe a possibilidade de que após a criação das classes estes trechos não sofram um significativo \textit{refactoring} e nem uma evolução para essa característica citada o que pode acarretar em uma propagação de um estilo ultrapassado de programação na linguagem \textit{Java}.\\
+Uma análise mais detalhada sobre \textit{Spring} com 2620 ocorrências o que resulta em  afima que tal procedimento de tratar exceções estão presentes em todas as versões analisadas, iniciando na 3.0.0.M1 lançada em junho de 2009 até a mais recente até o momento 4.2.0.RC2. Para uma análise mais criteriosa será elaborada um detalhamento a partir da versão 4.0.0.M1 até a 4.2.0.RC2 totalizando 927 oportunidades de \textit{multicatch} 35\% das ocorrências no \textit{Spring}.\\
+
+Conforme exibido na figura: \ref{fig:ocorrenciasMulticatchSpring}, obtem-se antes de um \textit{refactoring} uma média de 371 LOC e após uma proposta concisa de \textit{refactoring} é possível obter uma média de 106 LOC o que proporciona uma redução significativa de 71,46\%.\\
+
+% a possibilidade de que após a criação das classes estes trechos não sofram um significativo \textit{refactoring} e nem uma evolução para essa característica citada o que pode acarretar em uma propagação de um estilo ultrapassado de programação na linguagem \textit{Java}.\\
 
 \begin{figure}[h]
 	\center
 	\includegraphics[width=1.0\textwidth]{Imagens/ocorrenciasMulticatchSpring}
 	\label{fig:ocorrenciasMulticatchSpring}
-	\caption{Ocorrências de \textit{Multicatch} Spring.}
+	\caption{Ocorrências de \textit{Multicatch} Spring 4.X.}
 \end{figure}
 
 
+Dada uma redução significativa é impossível acreditar que projetos tão renomado não fazem uso desta \textit{feature}.  Ignorando uma característica que prove um código mais conciso e elegante conforme a proposta original desta \textit{feature} pela Oracle em 2007.\\
 
 
 \section{ANT}
