@@ -52,62 +52,71 @@ Como este simples exemplo pode-se verificar do benefício das expressões lambda
 Entretanto diante dos dados coletados é possível afirmar que Expressões Lambda não estão sendo adotadas com este intuito, o que pode leva a crer que esta característica por ser recente ainda pode não ter sido bem acolhida pela comunidade de desenvolvedores para tirar proveito desta  característica para benefício de seus projetos.\\
 
 \section{MultiCatch}
-Com o advento do Java 7, foi introduzido o suporte a \textit{MultiCatch} que trouxe a possibilidade de trazer clareza e simplicidade no mecanismo de tratamento de exceção. O que aparentemente esta sendo um recurso pouco utilizado tendo em vista a grande quantidade de oportunidades de utilização desta elegante característica.\\
+Conforme menciando anteriormente Java 7, introduziu suporte a \textit{MultiCatch} que trouxe a possibilidade de trazer clareza e simplicidade no mecanismo de tratamento de exceção. O que aparentemente esta sendo um recurso pouco utilizado tendo em vista a grande quantidade de oportunidades de utilização desta elegante característica.\\
 
-Em todos os projetos analisados foram encontradas 10314 ocorrências do possível uso de \textit{multicatchs}, ou seja, a troca de vários blocos \textit{cacths} por estruturas que usam condicionais com no exemplo abaixo do \textit{Spring release} 4.1.1.\\
+Foram encotrados um total de 5300 \textit{trys} que possuiam mais de um bloco mais de um \textit{catch}. O que acarretou em 46926 LOC, o teste de  similaridade entre os \textit{catchs} foi realizado através de uma chamada a um método exteno que verificava a igualdade podendo ser facilmente alterado para verificar a similaridade baseando em algum algoritmo existente.\\
 
-Dentre os projetos analisados é possível dar destaque ao \textit{FindBugs}, \textit{Hibernate}, \textit{JBoss}, \textit{Jetty} e \textit{Spring} os quais aparentam ignorar tal característica ao duplicar blocos \textit{catch} para o tratamento de exceção tornando o código deselengante tendo em vista que a linguagem fornece um suporte mais elegante e atual para estre tratamento.\\
+Um simples \textit{refactoring} unindo estes blocos semelhantes por igualdade acarretaria em redução de 32639 LOC  o que  gera uma redução de código duplicado na ordem de 75.95\% onde todos os \textit{catchs} após tal ação teriam um total 14287 LOC que torna essa \textit{feature} muito relevante na rescrita de um software além de utilizar o novo estilo de programação proposto nesta versão da linguagem.\\
 
 \begin{figure}[h]
 	\center
-	\includegraphics[width=1.1\textwidth]{Imagens/multicatch}
+	\includegraphics[width=1.0\textwidth]{Imagens/ocorrenciasMulticatch}
 	\label{fig:Muticatch}
 	\caption{Oportunidades de \textit{Multicatch} nos projetos.}
 \end{figure}
-\clearpage
 
+
+De forma mais detalhada uma análise sobre uma classe do \textit{Spring 4.2.0.RC2} como exemplo é  \textit{org.springframework.beans.AbstractNestablePropertyAccessor.java}, o qual é possível verificar que tal característica é simples e rápida de ser implantada o que impacta em uma redução significativa do trecho de código mencionado algo entorno de 58\%.\\
 \begin{lstlisting}
 	...
-	// Sem uso de multicacth
-	private <T> T doConvert(Object value, Class<T> requiredType, MethodParameter methodParam, Field field){
-		throws TypeMismatchException {
-			try {
-				if (field != null) {
-					return this.typeConverterDelegate.convertIfNecessary(value, requiredType, field);
-				}
-				else {
-					return this.typeConverterDelegate.convertIfNecessary(value, requiredType, methodParam);
-				}	
-			}
-			catch (ConverterNotFoundException ex) {
-				throw new ConversionNotSupportedException(value, requiredType, ex);
-			}
-			catch (ConversionException ex) {
-				throw new TypeMismatchException(value, requiredType, ex);
-			}
-			catch (IllegalStateException ex) {
-				throw new ConversionNotSupportedException(value, requiredType, ex);
-			}
-			catch (IllegalArgumentException ex) {
-				throw new TypeMismatchException(value, requiredType, ex);
-			}
-		}
+	// Sem uso de Multicacth 17LOC
+	try {
+		return this.typeConverterDelegate.convertIfNecessary(propertyName, oldValue, newValue, requiredType, td);
+	}catch (ConverterNotFoundException ex) {
+		PropertyChangeEvent pce =
+			new PropertyChangeEvent(this.rootObject, this.nestedPath + propertyName, oldValue, newValue);
+		throw new ConversionNotSupportedException(pce, td.getType(), ex);
+	}catch (ConversionException ex) {
+		PropertyChangeEvent pce =
+			new PropertyChangeEvent(this.rootObject, this.nestedPath + propertyName, oldValue, newValue);
+		throw new TypeMismatchException(pce, requiredType, ex);
+	}catch (IllegalStateException ex) {
+		PropertyChangeEvent pce =
+			new PropertyChangeEvent(this.rootObject, this.nestedPath + propertyName, oldValue, newValue);
+		throw new ConversionNotSupportedException(pce, requiredType, ex);
+	}catch (IllegalArgumentException ex) {
+		PropertyChangeEvent pce =
+			new PropertyChangeEvent(this.rootObject, this.nestedPath + propertyName, oldValue, newValue);
+		throw new TypeMismatchException(pce, requiredType, ex);
 	}
 	
-//#######################################
-	...
-		//Com o uso de multicatch
-		catch (ConverterNotFoundException ex|IllegalStateException ex) {
-			throw new ConversionNotSupportedException(value, requiredType, ex);
+// Com uso de Multicatch 10LOC
+	try {
+		return this.typeConverterDelegate.convertIfNecessary(propertyName, oldValue, newValue, requiredType, td);
+	}catch (ConverterNotFoundException ex | IllegalStateException ex | ConversionException ex | IllegalArgumentException ex) {
+		PropertyChangeEvent pce = 
+			new PropertyChangeEvent(this.rootObject, this.nestedPath + propertyName, oldValue, newValue);
+		
+		if(ex instanceof ConversionException || ex instanceof IllegalArgumentException){
+			throw new TypeMismatchException(pce, requiredType, ex);
+		}else{
+			throw new ConversionNotSupportedException(pce, td.getType(), ex);
 		}
-		catch (ConversionException ex|IllegalArgumentException ex) {
-			throw new TypeMismatchException(value, requiredType, ex);
-		}
-
-	
+	}	
 \end{lstlisting}
+ 
 
-No total de 64.179.440 \textbf{LOC} analisados a possibilidade de uso de \textit{multicatchs} em todas as \textit{releases} dos projeto representou somente 0,008\% do total de \textbf{LOC}, na relação do total de \textit{trys} encontrados 563153, os casos em que poderiam ser usados os \textit{multicatchs} representam 10315, ou seja, 1,83\% do total. Como no exemplo de código acima pode-se verificar a diminuição de linhas de código.\\
+Uma análise mais detalhada sobre \textit{Spring} com 2620 ocorrências o que resulta em  afima que tal procedimento de tratar exceções estão presentes em todas as versões analisadas, iniciando na 3.0.0.M1 lançada em junho de 2009 até a mais recente até o momento 4.2.0.RC2. Conforme indicado na figura: \ref{fig:ocorrenciasMulticatchSpring} existe a possibilidade de que após a criação das classes estes trechos não sofram um significativo \textit{refactoring} e nem uma evolução para essa característica citada o que pode acarretar em uma propagação de um estilo ultrapassado de programação na linguagem \textit{Java}.\\
+
+\begin{figure}[h]
+	\center
+	\includegraphics[width=1.0\textwidth]{Imagens/ocorrenciasMulticatchSpring}
+	\label{fig:ocorrenciasMulticatchSpring}
+	\caption{Ocorrências de \textit{Multicatch} Spring.}
+\end{figure}
+
+
+
 
 \section{ANT}
 Até a última versão deste projeto \cite{apacheAnt}, 1.9.5, não foram encontradas utilização métodos com \textit{vargs}, expressões lambdas, \textit{switch} com \textit{strings} e nem \textit{try} com \textit{resources}.\\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.12)  31 AUG 2015 20:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.14)  20 OCT 2015 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -972,7 +972,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-<Imagens/Arquitetura.png, id=607, 1350.54562pt x 587.94656pt>
+<Imagens/Arquitetura.png, id=609, 1350.54562pt x 587.94656pt>
 File: Imagens/Arquitetura.png Graphic file (type png)
 
 <use Imagens/Arquitetura.png>
@@ -991,7 +991,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 [20
 
  <./Imagens/Arquitetura.png>]
-<Imagens/Visitors.png, id=618, 865.73438pt x 600.74437pt>
+<Imagens/Visitors.png, id=620, 865.73438pt x 600.74437pt>
 File: Imagens/Visitors.png Graphic file (type png)
 
 <use Imagens/Visitors.png>
@@ -1005,7 +1005,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 [21
 
  <./Imagens/Visitors.png>]
-<Imagens/ProjectAnalyser.png, id=625, 856.70062pt x 383.18156pt>
+<Imagens/ProjectAnalyser.png, id=627, 856.70062pt x 383.18156pt>
 File: Imagens/ProjectAnalyser.png Graphic file (type png)
 
 <use Imagens/ProjectAnalyser.png>
@@ -1033,7 +1033,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-<Imagens/Beans.png, id=633, 330.23375pt x 463.7325pt>
+<Imagens/Beans.png, id=635, 330.23375pt x 463.7325pt>
 File: Imagens/Beans.png Graphic file (type png)
  <use Imagens/Beans.png>
 Package pdftex.def Info: Imagens/Beans.png used on input line 66.
@@ -1078,7 +1078,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
 ] [26
 
-] <Imagens/libsSpring.png, id=723, 476.78125pt x 502.87875pt>
+] <Imagens/libsSpring.png, id=725, 476.78125pt x 502.87875pt>
 File: Imagens/libsSpring.png Graphic file (type png)
 
 <use Imagens/libsSpring.png>
@@ -1096,7 +1096,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
-<Imagens/PomMaven.png, id=731, 361.35pt x 614.295pt>
+<Imagens/PomMaven.png, id=733, 361.35pt x 614.295pt>
 File: Imagens/PomMaven.png Graphic file (type png)
 
 <use Imagens/PomMaven.png>
@@ -1150,7 +1150,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 [31
 
 
-] <Imagens/Arvore.png, id=767, 533.74406pt x 577.40718pt>
+] <Imagens/Arvore.png, id=769, 533.74406pt x 577.40718pt>
 File: Imagens/Arvore.png Graphic file (type png)
 
 <use Imagens/Arvore.png>
@@ -1173,7 +1173,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-<Imagens/ArvoreAST.png, id=775, 1282.7925pt x 495.35063pt>
+<Imagens/ArvoreAST.png, id=777, 1282.7925pt x 495.35063pt>
 File: Imagens/ArvoreAST.png Graphic file (type png)
 
 <use Imagens/ArvoreAST.png>
@@ -1270,42 +1270,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-Package epstopdf Info: Source file: <Imagens/multicatch.eps>
-(epstopdf)                    date: 2015-08-31 20:25:25
-(epstopdf)                    size: 13694 bytes
-(epstopdf)             Output file: <Imagens/multicatch-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-08-31 20:25:30
-(epstopdf)                    size: 13352 bytes
-(epstopdf)             Command: <repstopdf --outfile=Imagens/multicatch-eps-con
-verted-to.pdf Imagens/multicatch.eps>
+Package epstopdf Info: Source file: <Imagens/ocorrenciasMulticatch.eps>
+(epstopdf)                    date: 2015-10-20 09:47:37
+(epstopdf)                    size: 6983 bytes
+(epstopdf)             Output file: <Imagens/ocorrenciasMulticatch-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2015-10-20 09:47:56
+(epstopdf)                    size: 12190 bytes
+(epstopdf)             Command: <repstopdf --outfile=Imagens/ocorrenciasMultica
+tch-eps-converted-to.pdf Imagens/ocorrenciasMulticatch.eps>
 (epstopdf)             \includegraphics on input line 63.
 Package epstopdf Info: Output file is already uptodate.
-<Imagens/multicatch-eps-converted-to.pdf, id=858, 770.88pt x 423.5825pt>
-File: Imagens/multicatch-eps-converted-to.pdf Graphic file (type pdf)
 
-<use Imagens/multicatch-eps-converted-to.pdf>
-Package pdftex.def Info: Imagens/multicatch-eps-converted-to.pdf used on input 
-line 63.
-(pdftex.def)             Requested size: 500.77129pt x 275.16377pt.
+<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=860, 602.25pt x 339.267
+5pt>
+File: Imagens/ocorrenciasMulticatch-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use Imagens/ocorrenciasMulticatch-eps-converted-to.pdf>
+Package pdftex.def Info: Imagens/ocorrenciasMulticatch-eps-converted-to.pdf use
+d on input line 63.
+(pdftex.def)             Requested size: 455.24411pt x 256.46376pt.
 
-Overfull \hbox (45.52718pt too wide) in paragraph at lines 63--65
- [] 
+Overfull \hbox (0.13635pt too wide) in paragraph at lines 69--70
+\T1/cmr/m/n/12 exem-plo é \T1/cmr/m/it/12 org.springframework.beans.AbstractNes
+tablePropertyAccessor.java\T1/cmr/m/n/12 , o qual é pos-
  []
 
-[40 <./Imagens/multicatch-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+[40 <./Imagens/ocorrenciasMulticatch-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+[41]
+Package epstopdf Info: Source file: <Imagens/ocorrenciasMulticatchSpring.eps>
+(epstopdf)                    date: 2015-10-20 17:28:13
+(epstopdf)                    size: 19060 bytes
+(epstopdf)             Output file: <Imagens/ocorrenciasMulticatchSpring-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2015-10-20 17:28:34
+(epstopdf)                    size: 13846 bytes
+(epstopdf)             Command: <repstopdf --outfile=Imagens/ocorrenciasMultica
+tchSpring-eps-converted-to.pdf Imagens/ocorrenciasMulticatchSpring.eps>
+(epstopdf)             \includegraphics on input line 113.
+Package epstopdf Info: Output file is already uptodate.
+
+<Imagens/ocorrenciasMulticatchSpring-eps-converted-to.pdf, id=914, 602.25pt x 3
+39.2675pt>
+File: Imagens/ocorrenciasMulticatchSpring-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use Imagens/ocorrenciasMulticatchSpring-eps-converted-to.pdf>
+Package pdftex.def Info: Imagens/ocorrenciasMulticatchSpring-eps-converted-to.p
+df used on input line 113.
+(pdftex.def)             Requested size: 455.24411pt x 256.46376pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
-
- []
-
-[41
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
@@ -1313,60 +1341,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--116
 File: Imagens/trysAnt.png Graphic file (type png)
 
 <use Imagens/trysAnt.png>
-Package pdftex.def Info: Imagens/trysAnt.png used on input line 119.
-(pdftex.def)             Requested size: 318.66948pt x 228.66237pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-<Imagens/catchsIguais.png, id=919, 611.28375pt x 438.63875pt>
-File: Imagens/catchsIguais.png Graphic file (type png)
-
-<use Imagens/catchsIguais.png>
-Package pdftex.def Info: Imagens/catchsIguais.png used on input line 128.
+Package pdftex.def Info: Imagens/trysAnt.png used on input line 128.
 (pdftex.def)             Requested size: 318.66948pt x 228.66237pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+[42 <./Imagens/ocorrenciasMulticatchSpring-eps-converted-to.pdf>]
+<Imagens/catchsIguais.png, id=932, 611.28375pt x 438.63875pt>
+File: Imagens/catchsIguais.png Graphic file (type png)
+
+<use Imagens/catchsIguais.png>
+Package pdftex.def Info: Imagens/catchsIguais.png used on input line 137.
+(pdftex.def)             Requested size: 318.66948pt x 228.66237pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
-[42 <./Imagens/trysAnt.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-<Imagens/atributosParametrizados.png, id=928, 582.175pt x 292.09125pt>
+<Imagens/atributosParametrizados.png, id=935, 582.175pt x 292.09125pt>
 File: Imagens/atributosParametrizados.png Graphic file (type png)
 
 <use Imagens/atributosParametrizados.png>
 Package pdftex.def Info: Imagens/atributosParametrizados.png used on input line
- 144.
-(pdftex.def)             Requested size: 318.66948pt x 159.88853pt.
-
-<Imagens/metodosParametrizados.png, id=929, 582.175pt x 292.09125pt>
-File: Imagens/metodosParametrizados.png Graphic file (type png)
-
-<use Imagens/metodosParametrizados.png>
-Package pdftex.def Info: Imagens/metodosParametrizados.png used on input line 1
-52.
+ 153.
 (pdftex.def)             Requested size: 318.66948pt x 159.88853pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [43 <./Imagens/catchsIguais.png> <./Imagens/atributosParametrizados.png>]
-[44 <./Imagens/metodosParametrizados.png>]) (./monografia.bbl (./monografia.brf
-)
+<Imagens/metodosParametrizados.png, id=936, 582.175pt x 292.09125pt>
+File: Imagens/metodosParametrizados.png Graphic file (type png)
+
+<use Imagens/metodosParametrizados.png>
+Package pdftex.def Info: Imagens/metodosParametrizados.png used on input line 1
+61.
+(pdftex.def)             Requested size: 318.66948pt x 159.88853pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [43 <./Imagens/trysAnt.png>] [44 <./Imagens/catchsIguais.png> <./Imagens/atri
+butosParametrizados.png> <./Imagens/metodosParametrizados.png>])
+(./monografia.bbl (./monografia.brf)
 \tf@brf=\write7
 \openout7 = `monografia.brf'.
 
@@ -1427,10 +1463,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 10778 strings out of 493105
- 154271 string characters out of 6137072
- 292257 words of memory out of 5000000
- 13495 multiletter control sequences out of 15000+600000
+ 10787 strings out of 493105
+ 154671 string characters out of 6137072
+ 303257 words of memory out of 5000000
+ 13503 multiletter control sequences out of 15000+600000
  16864 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,8n,72p,3179b,1893s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1446,10 +1482,10 @@ ublic/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2
 074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/
 texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sftt1200.pfb>
-Output written on monografia.pdf (57 pages, 662861 bytes).
+Output written on monografia.pdf (57 pages, 670199 bytes).
 PDF statistics:
- 1158 PDF objects out of 1200 (max. 8388607)
- 1048 compressed objects within 11 object streams
+ 1166 PDF objects out of 1200 (max. 8388607)
+ 1054 compressed objects within 11 object streams
  485 named destinations out of 1000 (max. 500000)
- 383 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 388 words of extra memory for PDF output out of 10000 (max. 10000000)
 
