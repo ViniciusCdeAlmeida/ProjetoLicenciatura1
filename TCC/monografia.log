@@ -1,29 +1,27 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.8.14)  21 OCT 2015 17:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.28)  21 OCT 2015 19:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **monografia.tex
 (./monografia.tex
-LaTeX2e <2014/05/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (./unb-cic.cls
 Document Class: unb-cic 2008/06/05 v0.93 Classe para trabalhos CIC UnB
 (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks14
 \XKV@tempa@toks=\toks15
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))
 \XKV@depth=\count79
-File: xkeyval.tex 2014/05/25 v2.7 key=value parser (HA)
-))
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -39,8 +37,8 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
-Package: fixltx2e 2014/09/29 v1.1s fixes to LaTeX
-LaTeX Info: Redefining \em on input line 430.
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
@@ -166,7 +164,7 @@ File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Hy@SectionHShift=\skip43
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -216,13 +214,13 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 \c@definition=\count105
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2014/09/25 3.9l The Babel package
+Package: babel 2013/12/03 3.9h The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2014/09/25 3.9l Babel common definitions
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count106
 \U@D=\dimen117
 )
@@ -252,7 +250,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count107
 )
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
@@ -270,19 +268,19 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2014/04/30 v1.2b Input encoding file
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -432,7 +430,7 @@ Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -463,7 +461,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -489,7 +487,7 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2423 (decimal 9251)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
-Package: acronym 2014/09/29 v1.40 Support for acronyms (Tobias Oetiker)
+Package: acronym 2012/10/29 v1.38 Support for acronyms (Tobias Oetiker)
 
 (/usr/share/texlive/texmf-dist/tex/latex/bigfoot/suffix.sty
 Package: suffix 2006/07/15 1.5 Variant command support
@@ -519,18 +517,18 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \lst@maxwidth=\dimen121
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 \c@lstnumber=\count116
 \lst@skipnumbers=\count117
 \lst@framebox=\box29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2014/09/06 1.5e listings configuration
+File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
-Package: listings 2014/09/06 1.5e (Carsten Heinz)
+Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) (./cores.tex)
 Package hyperref Info: Option `colorlinks' set `true' on input line 68.
 
@@ -759,7 +757,13 @@ Package babel Warning: You haven't loaded the language english yet
 
 ] (./siglas.tex) [9
 
-] (./capitulos/capitulo1.tex
+pdfTeX warning (ext4): destination with the same identifier (name{RSA}) has bee
+n already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.144   \textual
+                ] (./capitulos/capitulo1.tex
 \openout2 = `capitulos/capitulo1_Introducao.aux'.
 
 
@@ -843,66 +847,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  []
 
 
-Package acronym Warning: Acronym `JDK' is not defined on input line 7.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
-
-
-Package acronym Warning: Acronym `JDK' is not defined on input line 9.
-
-
-Package acronym Warning: Acronym `AWT' is not defined on input line 9.
-
-
-Package acronym Warning: Acronym `JDBC' is not defined on input line 9.
-
-
-Package acronym Warning: Acronym `RMI' is not defined on input line 9.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-
-Package acronym Warning: Acronym `JDK' is not defined on input line 11.
-
-
-Package acronym Warning: Acronym `API' is not defined on input line 11.
-
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
-
-
-Package acronym Warning: Acronym `JNI' is not defined on input line 14.
-
-
-Package acronym Warning: Acronym `GUI' is not defined on input line 15.
-
-
-Package acronym Warning: Acronym `API' is not defined on input line 15.
-
-
-Package acronym Warning: Acronym `AWT' is not defined on input line 15.
-
-
-Package acronym Warning: Acronym `API' is not defined on input line 16.
-
-[4
+ [4
 
 
 ]
-
-Package acronym Warning: Acronym `JDBC' is not defined on input line 19.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
@@ -939,16 +902,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ) [9
 
 
-] [10] [11
+] [10]
+! Undefined control sequence.
+l.56 			\item Para escrever um objeto remoto \acro
+                                                  {RMI}, escreve-se uma clas...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[11
 
 ] [12
 
-]
-[13
+] [13
 
 ] [14
 
@@ -1002,12 +974,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+)
+Underfull \hbox (badness 10000) in paragraph at lines 19--4
 
  []
 
-) [18]) (./capitulos/capitulo2.tex
+[18]) (./capitulos/capitulo2.tex
 \openout2 = `capitulos/capitulo2_arquitetura.aux'.
 
  (./capitulos/capitulo2_arquitetura.tex
@@ -1031,7 +1003,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-<Imagens/Arquitetura.png, id=632, 1350.54562pt x 587.94656pt>
+<Imagens/Arquitetura.png, id=679, 1350.54562pt x 587.94656pt>
 File: Imagens/Arquitetura.png Graphic file (type png)
 
 <use Imagens/Arquitetura.png>
@@ -1050,7 +1022,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 [20
 
  <./Imagens/Arquitetura.png>]
-<Imagens/Visitors.png, id=642, 865.73438pt x 600.74437pt>
+<Imagens/Visitors.png, id=689, 865.73438pt x 600.74437pt>
 File: Imagens/Visitors.png Graphic file (type png)
 
 <use Imagens/Visitors.png>
@@ -1064,7 +1036,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 [21
 
  <./Imagens/Visitors.png>]
-<Imagens/ProjectAnalyser.png, id=650, 856.70062pt x 383.18156pt>
+<Imagens/ProjectAnalyser.png, id=696, 856.70062pt x 383.18156pt>
 File: Imagens/ProjectAnalyser.png Graphic file (type png)
 
 <use Imagens/ProjectAnalyser.png>
@@ -1092,7 +1064,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-<Imagens/Beans.png, id=658, 330.23375pt x 463.7325pt>
+<Imagens/Beans.png, id=704, 330.23375pt x 463.7325pt>
 File: Imagens/Beans.png Graphic file (type png)
  <use Imagens/Beans.png>
 Package pdftex.def Info: Imagens/Beans.png used on input line 66.
@@ -1137,7 +1109,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
 ] [26
 
-] <Imagens/libsSpring.png, id=747, 476.78125pt x 502.87875pt>
+] <Imagens/libsSpring.png, id=794, 476.78125pt x 502.87875pt>
 File: Imagens/libsSpring.png Graphic file (type png)
 
 <use Imagens/libsSpring.png>
@@ -1155,7 +1127,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
-<Imagens/PomMaven.png, id=755, 361.35pt x 614.295pt>
+<Imagens/PomMaven.png, id=802, 361.35pt x 614.295pt>
 File: Imagens/PomMaven.png Graphic file (type png)
 
 <use Imagens/PomMaven.png>
@@ -1209,7 +1181,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 [31
 
 
-] <Imagens/Arvore.png, id=792, 533.74406pt x 577.40718pt>
+] <Imagens/Arvore.png, id=838, 533.74406pt x 577.40718pt>
 File: Imagens/Arvore.png Graphic file (type png)
 
 <use Imagens/Arvore.png>
@@ -1232,7 +1204,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-<Imagens/ArvoreAST.png, id=799, 1282.7925pt x 495.35063pt>
+<Imagens/ArvoreAST.png, id=845, 1282.7925pt x 495.35063pt>
 File: Imagens/ArvoreAST.png Graphic file (type png)
 
 <use Imagens/ArvoreAST.png>
@@ -1330,18 +1302,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
  []
 
 Package epstopdf Info: Source file: <Imagens/ocorrenciasMulticatch.eps>
-(epstopdf)                    date: 2015-10-21 16:40:41
+(epstopdf)                    date: 2015-10-20 18:58:34
 (epstopdf)                    size: 6984 bytes
 (epstopdf)             Output file: <Imagens/ocorrenciasMulticatch-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2015-10-21 16:40:41
+(epstopdf)                    date: 2015-10-20 18:59:19
 (epstopdf)                    size: 12094 bytes
 (epstopdf)             Command: <repstopdf --outfile=Imagens/ocorrenciasMultica
 tch-eps-converted-to.pdf Imagens/ocorrenciasMulticatch.eps>
 (epstopdf)             \includegraphics on input line 63.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=889, 602.25pt x 451.687
+<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=935, 602.25pt x 451.687
 5pt>
 File: Imagens/ocorrenciasMulticatch-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1371,18 +1343,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
  []
 
 Package epstopdf Info: Source file: <Imagens/ocorrenciasMulticatchSpring.eps>
-(epstopdf)                    date: 2015-10-21 16:40:41
-(epstopdf)                    size: 11270 bytes
+(epstopdf)                    date: 2015-10-21 19:16:55
+(epstopdf)                    size: 12261 bytes
 (epstopdf)             Output file: <Imagens/ocorrenciasMulticatchSpring-eps-co
 nverted-to.pdf>
-(epstopdf)                    date: 2015-10-21 16:40:41
-(epstopdf)                    size: 12350 bytes
+(epstopdf)                    date: 2015-10-21 19:17:43
+(epstopdf)                    size: 12182 bytes
 (epstopdf)             Command: <repstopdf --outfile=Imagens/ocorrenciasMultica
 tchSpring-eps-converted-to.pdf Imagens/ocorrenciasMulticatchSpring.eps>
 (epstopdf)             \includegraphics on input line 116.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasMulticatchSpring-eps-converted-to.pdf, id=943, 602.25pt x 4
+<Imagens/ocorrenciasMulticatchSpring-eps-converted-to.pdf, id=990, 602.25pt x 4
 51.6875pt>
 File: Imagens/ocorrenciasMulticatchSpring-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -1405,7 +1377,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-<Imagens/trysAnt.png, id=957, 611.28375pt x 438.63875pt>
+<Imagens/trysAnt.png, id=1004, 611.28375pt x 438.63875pt>
 File: Imagens/trysAnt.png Graphic file (type png)
 
 <use Imagens/trysAnt.png>
@@ -1416,7 +1388,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-<Imagens/catchsIguais.png, id=959, 611.28375pt x 438.63875pt>
+<Imagens/catchsIguais.png, id=1006, 611.28375pt x 438.63875pt>
 File: Imagens/catchsIguais.png Graphic file (type png)
 
 <use Imagens/catchsIguais.png>
@@ -1441,7 +1413,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-<Imagens/atributosParametrizados.png, id=969, 582.175pt x 292.09125pt>
+<Imagens/atributosParametrizados.png, id=1016, 582.175pt x 292.09125pt>
 File: Imagens/atributosParametrizados.png Graphic file (type png)
 
 <use Imagens/atributosParametrizados.png>
@@ -1449,7 +1421,7 @@ Package pdftex.def Info: Imagens/atributosParametrizados.png used on input line
  157.
 (pdftex.def)             Requested size: 318.66948pt x 159.88853pt.
 
-<Imagens/metodosParametrizados.png, id=970, 582.175pt x 292.09125pt>
+<Imagens/metodosParametrizados.png, id=1017, 582.175pt x 292.09125pt>
 File: Imagens/metodosParametrizados.png Graphic file (type png)
 
 <use Imagens/metodosParametrizados.png>
@@ -1509,14 +1481,9 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
 (rerunfilecheck)             Checksum: D36EDC132620675D9B2020064A2E9692;2485.
+Package rerunfilecheck Info: File `monografia.brf' has not changed.
+(rerunfilecheck)             Checksum: DF65BEEC4241235DB7C0E4CEE6DCB8EB;2648.
 
-
-Package rerunfilecheck Warning: File `monografia.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `monografia.brf':
-(rerunfilecheck)             Before: 8F3BC62C9960CD0B8A9FD5BDA00FF5AA;2648
-(rerunfilecheck)             After:  DF65BEEC4241235DB7C0E4CEE6DCB8EB;2648.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -1524,16 +1491,19 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 11275 strings out of 493105
- 161320 string characters out of 6137072
- 311890 words of memory out of 5000000
- 13963 multiletter control sequences out of 15000+600000
+ 11288 strings out of 493304
+ 161101 string characters out of 6139871
+ 310313 words of memory out of 5000000
+ 13960 multiletter control sequences out of 15000+600000
  16864 words of font info for 38 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 957 hyphenation exceptions out of 8191
  43i,8n,72p,3179b,1932s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts
 /enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/
@@ -1547,10 +1517,10 @@ ublic/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2
 074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/
 texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sftt1200.pfb>
-Output written on monografia.pdf (59 pages, 672883 bytes).
+Output written on monografia.pdf (59 pages, 680248 bytes).
 PDF statistics:
- 1200 PDF objects out of 1200 (max. 8388607)
- 1086 compressed objects within 11 object streams
- 497 named destinations out of 1000 (max. 500000)
+ 1250 PDF objects out of 1440 (max. 8388607)
+ 1135 compressed objects within 12 object streams
+ 510 named destinations out of 1000 (max. 500000)
  396 words of extra memory for PDF output out of 10000 (max. 10000000)
 
