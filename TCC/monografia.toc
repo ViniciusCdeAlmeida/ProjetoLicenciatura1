@@ -2,6 +2,7 @@
 \select@language {brazil}
 \select@language {american}
 \select@language {brazil}
+\contentsline {chapter}{Lista de Abreviaturas}{viii}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Objetivos Gerais}{3}{section.1.2}
@@ -36,4 +37,4 @@
 \contentsline {section}{\numberline {4.1}LambdaExpression}{38}{section.4.1}
 \contentsline {section}{\numberline {4.2}MultiCatch}{40}{section.4.2}
 \contentsline {section}{\numberline {4.3}ANT}{43}{section.4.3}
-\contentsline {chapter}{Refer\^encias}{46}{section*.8}
+\contentsline {chapter}{Refer\^encias}{46}{section*.9}

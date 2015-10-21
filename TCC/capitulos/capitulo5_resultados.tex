@@ -1,12 +1,12 @@
 \chapter{Resultados}
-Foram analisados através de mais de 67.648.820 de \textbf{LOC} nos projetos Ant, Checkstyle, CommonsCollections,  FindBugs,  FreeMind,  Hibernate,  JBoss,  Jetty,  Log4j,  Spring,  SquirrelSql,  Weka,  Xerces.\\
+Foram analisados através de mais de 67.648.820 \acs{LOC} nos projetos Ant, Checkstyle, CommonsCollections,  FindBugs,  FreeMind,  Hibernate,  JBoss,  Jetty,  Log4j,  Spring,  SquirrelSql,  Weka,  Xerces.\\
 
 \section{LambdaExpression}
 A maior mudança ocorrida em Java 8 foi a introdução de expressões lambda, que tem por definição prover um bloco de código limpo e conciso para representar um interface usando uma simples expressão. Também melhoram a manipulação de \textit{collections} tornando fácil a iteração através de filtros para extração de dados e adiciona novas características de concorrência que aumenta a performance em ambientes \textit{multicores}.\\
 
 \textit{Anonymous inner classes} foram projetada para facilitar o desenvolvedor a tratar seus dados de forma fácil, mas isso não é tão simples como deveria ser, além de suas implementações serem usadas somente em local específico da aplicação, em boa parte de seu uso para tratar eventos decorrentes do usuário ou de algum processamento específico. Expressões Lambda podem vir a substituir \textit{Anonymous inner classes} o que acarreta em uma redução na quantidade de linhas de código significativamente além de reduzir os tipos utilizados no sistema.\\
 
-Dentre os projetos analisados foram encontrados ocorrências de tal característica, \textit{Lambda Expression}, somente nos projetos \textit{Checkstyle}, \textit{Hibernate}, \textit{Jetty} \textit{Spring}, totalizando 774 ocorrências dentre um total de 64.179.440 \textbf{LOC}.\\
+Dentre os projetos analisados foram encontrados ocorrências de tal característica, \textit{Lambda Expression}, somente nos projetos \textit{Checkstyle}, \textit{Hibernate}, \textit{Jetty} \textit{Spring}, totalizando 774 ocorrências dentre um total de 64.179.440 \acs{LOC}.\\
 
 Tendo em vista que expressões lambdas podem vir a substituir \textit{Anonymous inner classes} e \textit{Types} dos projetos segundo \cite{Java8Lambda}. Foram encontradas nos projetos \textit{CheckStyle}, \textit{Hibernate}, \textit{Jetty} e \textit{Spring}, 2201, 13654, 10016 e 113069 ocorrências respectivamente totalizando em 138940 ocorrências de \textit{Anonymous inner classes}. Com uso de expressões lambda a quantidade de ocorrências de \textit{Anonymous inner classes} e \textit{Types} teria a tendência natural de diminuir seu uso.\\
 
@@ -47,16 +47,16 @@ Um uso corriqueiro de expressão lambda seria para substituir o seguinte bloco d
 	
 \end{lstlisting}
 
-Como este simples exemplo pode-se verificar do benefício das expressões lambda tendo em vista que  redução do uso de \textit{Anonymous inner classes} além de ser uma forma mais atual. Neste seria um redução de 80\% sobre o código utilizado anteriormente. Além da redução de tipos 3 tipos(\textit{ActionListener}, \textit{ActionEvent} e \textit{void}) para um único método anônimo que acarreta em 300\% na redução de tipos,  se fosse possível aplicar esta características em todas as 138940 ocorrências de \textit{Anonymous inner classes} seria uma redução significativa de \textbf{LOC}.
+Como este simples exemplo pode-se verificar do benefício das expressões lambda tendo em vista que  redução do uso de \textit{Anonymous inner classes} além de ser uma forma mais atual. Neste seria um redução de 80\% sobre o código utilizado anteriormente. Além da redução de tipos 3 tipos(\textit{ActionListener}, \textit{ActionEvent} e \textit{void}) para um único método anônimo que acarreta em 300\% na redução de tipos,  se fosse possível aplicar esta características em todas as 138940 ocorrências de \textit{Anonymous inner classes} seria uma redução significativa de \acs{LOC}.
 
 Entretanto diante dos dados coletados é possível afirmar que Expressões Lambda não estão sendo adotadas com este intuito, o que pode leva a crer que esta característica por ser recente ainda pode não ter sido bem acolhida pela comunidade de desenvolvedores para tirar proveito desta  característica para benefício de seus projetos.\\
 
 \section{MultiCatch}
 Conforme menciando anteriormente Java 7, introduziu suporte a \textit{MultiCatch} que trouxe a possibilidade de trazer clareza e simplicidade no mecanismo de tratamento de exceção. O que aparentemente esta sendo um recurso pouco utilizado tendo em vista a grande quantidade de oportunidades de utilização desta elegante característica.\\
 
-Foram encotrados um total de 5300 \textit{trys} que possuiam mais de um bloco mais de um \textit{catch}. O que acarretou em 46926 LOC, o teste de  similaridade entre os \textit{catchs} foi realizado através de uma chamada a um método exteno que verificava a igualdade podendo ser facilmente alterado para verificar a similaridade baseando em algum algoritmo existente.\\
+Foram encotrados um total de 5300 \textit{trys} que possuiam mais de um bloco mais de um \textit{catch}. O que acarretou em 46926 \acs{LOC}, o teste de  similaridade entre os \textit{catchs} foi realizado através de uma chamada a um método exteno que verificava a igualdade podendo ser facilmente alterado para verificar a similaridade baseando em algum algoritmo existente.\\
 
-Um simples \textit{refactoring} unindo estes blocos semelhantes por igualdade acarretaria em redução de 32639 LOC  o que  gera uma redução de código duplicado na ordem de 75.95\% onde todos os \textit{catchs} após tal ação teriam um total 14287 LOC que torna essa \textit{feature} muito relevante na rescrita de um software além de utilizar o novo estilo de programação proposto nesta versão da linguagem.\\
+Um simples \textit{refactoring} unindo estes blocos semelhantes por igualdade acarretaria em redução de 32639 \acs{LOC}  o que  gera uma redução de código duplicado na ordem de 75.95\% onde todos os \textit{catchs} após tal ação teriam um total 14287 \acs{LOC} que torna essa \textit{feature} muito relevante na rescrita de um software além de utilizar o novo estilo de programação proposto nesta versão da linguagem.\\
 
 \begin{figure}[h]
 	\center
@@ -107,7 +107,7 @@ De forma mais detalhada uma análise sobre uma classe do \textit{Spring 4.2.0.RC
 
 Uma análise mais detalhada sobre \textit{Spring} com 2620 ocorrências o que resulta em  afima que tal procedimento de tratar exceções estão presentes em todas as versões analisadas, iniciando na 3.0.0.M1 lançada em junho de 2009 até a mais recente até o momento 4.2.0.RC2. Para uma análise mais criteriosa será elaborada um detalhamento a partir da versão 4.0.0.M1 até a 4.2.0.RC2 totalizando 927 oportunidades de \textit{multicatch} 35\% das ocorrências no \textit{Spring}.\\
 
-Conforme exibido na figura: \ref{fig:ocorrenciasMulticatchSpring}, obtem-se antes de um \textit{refactoring} uma média de 371 LOC e após uma proposta concisa de \textit{refactoring} é possível obter uma média de 106 LOC o que proporciona uma redução significativa de 71,46\%.\\
+Conforme exibido na figura: \ref{fig:ocorrenciasMulticatchSpring}, obtem-se antes de um \textit{refactoring} uma média de 371 \acs{LOC} e após uma proposta concisa de \textit{refactoring} é possível obter uma média de 106 \acs{LOC} o que proporciona uma redução significativa de 71,46\%.\\
 
 % a possibilidade de que após a criação das classes estes trechos não sofram um significativo \textit{refactoring} e nem uma evolução para essa característica citada o que pode acarretar em uma propagação de um estilo ultrapassado de programação na linguagem \textit{Java}.\\
 

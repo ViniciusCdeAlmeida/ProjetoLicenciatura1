@@ -20,7 +20,8 @@
 \usepackage{natbib}
 \usepackage{xcolor,graphicx,url}
 \usepackage[utf8]{inputenc}
-
+\usepackage{hyperref}
+\usepackage{acronym}
 \usepackage{listings}
 \usepackage{color}
 
@@ -79,8 +80,8 @@
 \coordenador{\prof \dr Wilson Henrique Veneziano}{CIC/UnB}
 \diamesano{31}{março}{2015}
 
-\membrobanca{\prof \dr Professor I}{CIC/UnB}
-\membrobanca{\prof \dr Professor II}{CIC/UnB}
+\membrobanca{\prof \dr Genaina Nunes Rodriges}{CIC/UnB}
+\membrobanca{\prof \dr Edson Alves}{CIC/UnB}
 
 \autor{Thiago Gomes}{Cavalcanti}
 \coautor{Vinícius Correa}{de Almeida}
@@ -97,7 +98,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Texto
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%\makeglossaries
 \begin{document}
   \maketitle
   \pretextual
@@ -124,15 +125,16 @@
   
   \selectlanguage{brazil}
 
+
   \tableofcontents
   \listoffigures
   \listoftables
   
   
-%  \newpage
-%  \addcontentsline{toc}{chapter}{Lista de Abreviaturas}
-%  \chapter*{Lista de abreviaturas}
-%  \include{abreviaturas}
+  %\newpage
+  \addcontentsline{toc}{chapter}{Lista de Abreviaturas}
+  \chapter*{Lista de abreviaturas}
+  \input{siglas}
   
 %  \newpage
  % \addcontentsline{toc}{chapter}{List of Abbreviations}
@@ -150,5 +152,6 @@
   \postextual
   \bibliographystyle{plain}
   \bibliography{referencias/referencias}
-
+	
+ % \printglossaries
 \end{document}
