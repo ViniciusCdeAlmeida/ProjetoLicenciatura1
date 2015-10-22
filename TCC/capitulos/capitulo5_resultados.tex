@@ -1,5 +1,5 @@
 \chapter{Resultados}
-Foram analisados através de mais de 67.648.820 \acs{LOC} nos projetos Ant, Checkstyle, CommonsCollections,  FindBugs,  FreeMind,  Hibernate,  JBoss,  Jetty,  Log4j,  Spring,  SquirrelSql,  Weka,  Xerces.\\
+Foram analisados através de mais de 67M \acs{LOC} nos projetos Ant, Checkstyle, CommonsCollections,  FindBugs,  FreeMind,  Hibernate,  JBoss,  Jetty,  Log4j,  Spring,  SquirrelSql,  Weka,  Xerces.\\
 
 \section{LambdaExpression}
 A maior mudança ocorrida em Java 8 foi a introdução de expressões lambda, que tem por definição prover um bloco de código limpo e conciso para representar um interface usando uma simples expressão. Também melhoram a manipulação de \textit{collections} tornando fácil a iteração através de filtros para extração de dados e adiciona novas características de concorrência que aumenta a performance em ambientes \textit{multicores}.\\
@@ -54,13 +54,13 @@ Entretanto diante dos dados coletados é possível afirmar que Expressões Lambd
 \section{MultiCatch}
 Conforme menciando anteriormente Java 7, introduziu suporte a \textit{MultiCatch} que trouxe a possibilidade de trazer clareza e simplicidade no mecanismo de tratamento de exceção. O que aparentemente esta sendo um recurso pouco utilizado tendo em vista a grande quantidade de oportunidades de utilização desta elegante característica.\\
 
-Foram encotrados um total de 5300 \textit{trys} que possuiam mais de um bloco mais de um \textit{catch}. O que acarretou em 46926 \acs{LOC}, o teste de  similaridade entre os \textit{catchs} foi realizado através de uma chamada a um método exteno que verificava a igualdade podendo ser facilmente alterado para verificar a similaridade baseando em algum algoritmo existente.\\
+Foram encotrados um total de 10368 \textit{trys} que possuiam mais de um bloco mais de um \textit{catch}. O que acarretou em 97347 \acs{LOC}, o teste de  similaridade entre os \textit{catchs} foi realizado através de uma chamada a um método exteno que verificava a igualdade podendo ser facilmente alterado para verificar a similaridade baseando em algum algoritmo existente.\\
 
-Um simples \textit{refactoring} unindo estes blocos semelhantes por igualdade acarretaria em redução de 32639 \acs{LOC}  o que  gera uma redução de código duplicado na ordem de 75.95\% onde todos os \textit{catchs} após tal ação teriam um total 14287 \acs{LOC} que torna essa \textit{feature} muito relevante na rescrita de um software além de utilizar o novo estilo de programação proposto nesta versão da linguagem.\\
+Um simples \textit{refactoring} unindo estes blocos semelhantes por igualdade acarretaria em redução de 68063 \acs{LOC}  o que  gera uma redução de código duplicado na ordem de 70\% onde todos os \textit{catchs} após tal ação teriam um total 29284 \acs{LOC} que torna essa \textit{feature} muito relevante na rescrita de um software além de utilizar o novo estilo de programação proposto nesta versão da linguagem.\\
 
 \begin{figure}[h]
 	\center
-	\includegraphics[width=1.0\textwidth]{Imagens/ocorrenciasMulticatch}
+	\includegraphics[scale=0.8]{Imagens/ocorrenciasMulticatch}
 	\label{fig:Muticatch}
 	\caption{Oportunidades de \textit{Multicatch} nos projetos.}
 \end{figure}
@@ -105,7 +105,7 @@ De forma mais detalhada uma análise sobre uma classe do \textit{Spring 4.2.0.RC
 \end{lstlisting}
  
 
-Uma análise mais detalhada sobre \textit{Spring} com 2620 ocorrências o que resulta em  afima que tal procedimento de tratar exceções estão presentes em todas as versões analisadas, iniciando na 3.0.0.M1 lançada em junho de 2009 até a mais recente até o momento 4.2.0.RC2. Para uma análise mais criteriosa será elaborada um detalhamento a partir da versão 4.0.0.M1 até a 4.2.0.RC2 totalizando 927 oportunidades de \textit{multicatch} 35\% das ocorrências no \textit{Spring}.\\
+%Uma análise mais detalhada sobre \textit{JBoss, Spring, Hibernate e Findbugs} totalizando juntos 7778 ocorrências, iniciando na 3.0.0.M1 lançada em junho de 2009 até a mais recente até o momento 4.2.0.RC2. Para uma análise mais criteriosa será elaborada um detalhamento a partir da versão 4.0.0.M1 até a 4.2.0.RC2 totalizando 927 oportunidades de \textit{multicatch} 35\% das ocorrências no \textit{Spring}.\\
 
 Conforme exibido na figura: \ref{fig:ocorrenciasMulticatchSpring}, obtem-se antes de um \textit{refactoring} uma média de 371 \acs{LOC} e após uma proposta concisa de \textit{refactoring} é possível obter uma média de 106 \acs{LOC} o que proporciona uma redução significativa de 71,46\%.\\
 

@@ -14,7 +14,7 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces \IeC {\'A}rvore de parser.}}{32}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces \IeC {\'A}rvore AST.}}{34}{figure.3.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Oportunidades de \textit {Multicatch} nos projetos.}}{40}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Oportunidades de \textit {Multicatch} nos projetos.}}{41}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Ocorr\IeC {\^e}ncias de \textit {Multicatch} Spring 4.X.}}{42}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Tratamento de exce\IeC {\c c}\IeC {\~a}o ao longo das releases.}}{43}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Bloco Try com catchs iguais ao longo das releases.}}{44}{figure.4.4}
