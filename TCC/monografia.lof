@@ -4,19 +4,15 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Arquitetura geral do software.}}{20}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Organiza\IeC {\c c}\IeC {\~a}o dos Visitors.}}{21}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Project analyser.}}{22}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Localiza\IeC {\c c}\IeC {\~a}o Beans.xml.}}{23}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Libs Spring necess\IeC {\'a}rias para CDI.}}{27}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Pom.xml, arquivo de configura\IeC {\c c}\IeC {\~a}o do Maven.}}{28}{figure.2.6}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \IeC {\'A}rvore de parser.}}{19}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \IeC {\'A}rvore AST.}}{21}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \IeC {\'A}rvore de parser.}}{32}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \IeC {\'A}rvore AST.}}{34}{figure.3.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Arquitetura geral do software.}}{26}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Organiza\IeC {\c c}\IeC {\~a}o dos Visitors.}}{27}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Project analyser.}}{28}{figure.3.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Oportunidades de \textit {Multicatch} nos projetos.}}{41}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ocorr\IeC {\^e}ncias de \textit {Multicatch} Spring 4.X.}}{42}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Tratamento de exce\IeC {\c c}\IeC {\~a}o ao longo das releases.}}{43}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Bloco Try com catchs iguais ao longo das releases.}}{44}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Atributos parametrizados ao longo das releases.}}{44}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces M\IeC {\'e}todos parametrizados ao longo das releases.}}{45}{figure.4.6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o de \textit {Lambda} em testes unit\IeC {\'a}rios.}}{33}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Oportunidades de \textit {Multicatch} nos projetos.}}{35}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Oportunidades de \textit {Multicatch} nos projetos.}}{36}{figure.5.3}
+\addvspace {10\p@ }

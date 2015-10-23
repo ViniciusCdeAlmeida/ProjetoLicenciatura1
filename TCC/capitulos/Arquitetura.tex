@@ -1,0 +1,185 @@
+\chapter {Arquitetura}
+Como ambiente de desenvolvimento integrado (IDE) escolhido foi o eclipse devido ao favorecimento do desenvolvimento rápido com recursos que podem ser integrados através de {\it plugins}, além disso sua portabilidade para outras plataformas sem afetar os {\it plugins} adicionados favorecendo o desenvolvimento independente da plataforma escolhida pelo desenvolvedor.\\
+
+O Eclipse Java {\it development tools} (JDT), fornece plugins que implementam a IDE eclipse servindo com apoio para o desenvolvimento de qualquer aplicativo Java, inclusive plugins para a própria IDE Eclipse. São cinco os componentes que compõem o JDT, e cada componente pode operar com um projeto independente, que são:
+
+	\begin{itemize}
+		\item \textbf{APT} fornece plugins que adicionam e fornecem suporte ao processamento de anotações java.
+		\item \textbf{Core} é o core da infraestrutura Java da IDE eclipse provendo compiladores, API's modelos definidas em árvores Java, documentação, assitente de código, suporte e formatação de código fonte.
+		\item \textbf{Debug} componente de depuração da plataforma sendo definido independente da linguagem utilizada.
+		\item \textbf{Text} fornece blocos básicos para editores de texto e textos dentro do eclipse e ainda contribui com o editor de texto padrão do eclipse. \item \textbf{UI} prove toda interface que necessite de iteração com o usuário final, e ainda fornece a manipulação e visualização do código Java na IDE.
+	\end{itemize} 
+	
+
+	
+\section {Arquitetura}
+
+A arquitetura do analisador exibido na Figura: \ref{fig:arqGeral} foi  implementado utilizando como base os componentes \acs{JDT} porém de maneira independente da \acs{IDE} eclipse o qual não é um {\it plugin} da \acs{IDE} mas sim uma ferramente que pode ser utilizada como apoio em qualquer processo de desenvolvimento ou para levantar dados sobre evolução de um software.\\
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.3]{Imagens/Arquitetura}
+	\label{fig:arqGeral}
+	\caption{Arquitetura geral do software.}
+\end{figure}
+
+Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995:DPE:186897} exemplificado na Figura: \ref{fig:arqVisitor} os quais possuem inteligência para verificar a adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e até mesmo efetuar a pesquisa de código ultrapassados através de padrões pré-definidos para que possam vir a ser melhorados caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.\\
+
+%Tais analisador tem como entradas válidas um único arquivo arquivo separado por vírgula (CSV) que possui em seus campos o nome dos projeto, versões e caminho para que cada um seja analisado. Após o {\it input} é realizado uma pesquisa em seu diretório \textit{src} o qual contém os códigos Java que compõem o projeto, após todos os arquivos listas é realizado um parse para a construção de árvores de sintáxe abstratas (AST) uma por arquivo e dai é lançando os {\it visitors}  \cite{Gamma:1995:DPE:186897} com suas respectivas inteligências para pesquisar os padrões previamente definidos os quais são armazenados em uma única coleção de dados que gera um CSV para cada padrão designado e dentro informando onde e em qual versão do projeto fora encontrado.\\
+
+\subsection{Visitors}
+\begin{figure}[h]
+\center
+\includegraphics[scale=0.5]{Imagens/Visitors}
+\label{fig:arqVisitor}
+\caption{Organização dos Visitors.}
+\end{figure}
+
+Todos os visitors criados para o projeto extendem da classe \textit{Visitor.java} a qual implementa a interface \textit{IVisitor.java} conforme a Figura: \ref{fig:arqVisitor}. Qualquer pessoa que deseje implementar um visitor específico necessita somente externder de \textit{Visitor.java}  e declarar no \textit{Bean.xml} para que esta seja injetada e visite os nós da \acs{AST} gerada no \textit{parse} não tendo a necessidade de se aprofundar na \acs{API} \acs{JDT}, a seguir um exemplo de implementação de um \textit{visitor}.\\
+
+\begin{lstlisting}
+public class MeuVisitor extends Visitor{
+
+	public boolen visit(Statement node){
+		.....
+		
+		return super.visit(node);
+		
+	}
+}
+
+\end{lstlisting}
+
+
+% vale resaltar que a classe \textit{Visitor.java} extende por sua vez de ASTVisitor a qual é fornecida pelo Core do JDT eclipse tendo como método principal utilizado neste projeto o \textbf{{\it boolean visit(Statement node)}} o qual recebe como parâmento qualquer {\it Statement} descrito na lib JDT, este método é sobrescrito com todo conteúdo necessário para recolher as métricas de acordo com os padrões previamente estabelecidos.\\
+%\clearpage
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.4]{Imagens/ProjectAnalyser}
+	\label{fig:ProjectAnalyser}
+	\caption{Project analyser.}
+\end{figure}
+
+%Este diagrama exibe o coração da aplicação pois é aqui que ocorre a transformação de todo código Java que compõe o projete em árvore sintática para que os {\it visitors}  \cite{Gamma:1995:DPE:186897} possam pesquisar em seus nós pelos padrões estabelecidos.\\
+
+Um ponto interessante é que o \textit{ProjectAnalyser.java} Figura: \ref{ProjectAnalyser} não tem a responsabilidade de instanciar a lista de IVisitor a qual possui referência pois estas são injetadas usando o padrão de projeto injeção de dependência\textbf{(DI)} o qual aqui faz-se presente através do {\it framework spring} que injeta uma lista de \textit{bean} onde cada \textit{bean} representa cada classe de extendida de {\it Visitor} descrita anteriormente.\\
+
+
+
+\subsection{Inversão de Controle e Injeção de Dependência}
+O padrão de projeto inversão de controle \textbf{(IoC)} e injeção de dependência \textbf{(DI)} é utilizado quando deseja-se obter um baixo nível de acoplamento entre módulos que compõem um sistema tornando mais suave ou até mesmo removendo o acoplamento entres módulos para que seja mais fácil evoluir e manter o software. Desta forma a injeção faz-se de maneira configurável através de um arquivo \textit{XML} ou até mesmo uma classe \textit{Java}. Para tal função usaremos o {\it framework Spring} devido sua consolidação e popularidade no assunto.\\
+
+Para preparar o ambiente de acordo com as especificações do {\it Spring} é necessário definir o contexto da aplicação e para isso é faz-se necessário criar antes de injetar as dependências as configurações iniciais. Dentre as possíveis formas disponibilizadas pelo {\it framework} de conceder tal configuração para criação um contexto para aplicação \textit{ApplicationContext} o projeto segue com a criação de um arquivo \textit{XML} o que concentra as referências necessárias de quais objetos e onde estes serão injetados. O arquivo \textit{XML} criado para tal finalidade é o \textit{'Beans.xml'} . Atualmente na versão 4.1.6 do {\it framework spring} é possível utilizar uma classe para fazer o mesmo trabalho do arquivo \textit{XML}. \\
+
+
+
+Configuração necessária para o funcionamento da injeção de dependências com {\it Spring} conforme explicado na documentação do {\it framework} conforme \cite{SPRING_REF}.\\
+\begin{lstlisting}
+<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+		<bean id="tsVisitor" class="br.unb.cic.sa.visitors.TryStatementVisitor"/>
+		<bean id="opportinitiesLambda" class="br.unb.cic.sa.visitors.OpportunitiesLambdaVisitor"/>
+		<bean id="opportinitiesSwitchString" class="br.unb.cic.sa.visitors.OpportinitiesSwitchString"/>
+	</beans>
+	
+	<bean id="pa" class="br.unb.cic.sa.ProjectAnalyser">
+		<property name="listVisitors">
+		<list>
+			<ref bean="tsVisitor"/>
+			<ref bean="opportinitiesLambda"/>
+			<ref bean="opportinitiesSwitchString"/>
+		</list>
+		</property>
+	</bean>
+\end{lstlisting}
+
+
+O {\it framework} trabalha com \textit{beans} onde cada \textit{bean} representa uma classe Java a ser injetada vale ressaltar que essas por simplicidade devem ter o construtor sem parâmetros para que o trabalho possa ocorrer da maneira mais simples, caso seja necessário parâmetros estes sejam passados vias os métodos Sets.\\
+
+Identificação de cada bean no arquivo de configuração \textit{XML}, é atributo \textbf{id} contido na {\it tag} \textbf{bean} onde cada deve ser único para que a gerência das dependências ocorra da forma preconizada pelo {\it framework}.\\
+
+Todos os {\it Beans} são injetados na classe \textit{ProjectAnalyser.java} através de uma lista de IVisitor. E desta forma indicamos no \textit{XML} através da tag \textbf{<property name="listVisitors">} onde o atributo \textbf{name} deve conter o mesmo nome que o atributo na classe Java,  neste caso o algo é \textbf{listVisitors} que existe uma lista de IVisitor com este mesmo nome dentro da classe \textit{ProjectAnalyser.java}.\\
+
+Para concluir com sucesso a injeção faz-se necessário somente indicar em qual classe e em qual local será injetada tal dependêcia, nesse caso a classe é a \textit{ProjectAnalyser.java} e o local é definido pela anotação \textbf{\textit{@Autowired}} logo acima do atributo o qual será injetado.\\
+
+\begin{lstlisting}
+	public class ProjectAnalyser... {
+
+		@Autowired
+		private List<IVisitor> listVisitors;
+		.
+		.
+		.
+	}
+\end{lstlisting}
+
+Para finalizar todo ambiente de configuração de injeção de dependência é necessário somente criar uma classe que seja um {\it Singleton} \cite{Gamma:1995:DPE:186897} conforme cita Gamma e amigos e faz-se necessária conforme indica a documentação \cite{SPRING_REF}, para ter o controle de que exista somente um único ambiente de injeção. Tal padrão que controla a quantidade de instâncias dos objetos se faz presente através da classe \textit{CDI.java}.
+\begin{lstlisting}
+	public class CDI {
+		private static CDI instance;
+		private ApplicationContext ctx;
+		
+		private CDI(){ 
+			ctx = new ClassPathXmlApplicationContext("Beans.xml");
+		}
+		
+		public static CDI Instance(){
+			if(instance == null)
+				instance = new CDI();
+		
+			return instance;
+		}
+		
+		public ApplicationContext getContextCdi(){
+			return ctx;
+		}
+	}
+\end{lstlisting}
+
+Abaixo segue bibliotecas necessárias para que o ambiente de injeção de dependência utilizando o textit{spring framework} \cite{SPRING_REF} ocorra de maneira correta na linguagem \textit{Java}, estas devem ser adicionada como dependências do Maven.
+
+
+\subsection{Apache Maven}
+Afim de gerenciar \textit{builds} deste analisador estático, o Maven foi introduzido para tornar as configurações uniformes no ambiente de desenvolvimento deste seguindo as boas práticas, compilação, gerência de dependências e distribuição da aplicação, a tabela \ref{tab:DependenciasMaven} detalhas as bibliotecas e versões utilizadas.\\
+
+%O arquivo pom.xml segundo a documentação \cite{docMaven}, \textit{project object model} é a essência de um projeto Maven, com poucas configurações é possível gerências as dependências, centralizando documentação do projeto e a compilação de \textit{builds} para a distribuição da aplicação (por exemplo, \textit{.jar, .war ou .ear}).\\
+
+
+\begin{table}[ht]
+	\centering
+	\caption{Dependências gerenciadas através do Maven}
+		\label{tab:DependenciasMaven}
+		\begin{tabular}{c|c}% centered column
+			\hline \hline
+			\textbf{Dependência}    &   \textbf{Versão}\\ \hline
+			junit 			    	&	4.12 \\ \hline
+			commons-collections 	&	3.2.1 \\ \hline
+			commons-configuration 	&	1.6 \\ \hline
+			commons-lang 	    	&	2.5 \\ \hline
+			ommons-logging 			&	1.1.1 \\ \hline
+			org.eclipse.core.contenttype & 3.4.100.v20100505-1235 \\ \hline
+			org.eclipse.core.jobs 		&	3.5.100.v20110404 \\ \hline
+			org.eclipse.core.resources  &	3.7.100.v20110510-0712 \\ \hline
+			org.eclipse.core.runtime		&	3.1.200-v20070502 \\ \hline
+			org.eclipse.equinox.common		&	3.6.0.v20100503 \\ \hline
+			org.eclipse.equinox.preferences &	3.4.0.v20110502 \\ \hline
+			org.eclipse.jdt.core 			&	3.10.0.v20140604-1726 \\ \hline
+			org.eclipse.osgi 	&	3.7.1 \\ \hline
+			org.osgi.core 		&	6.0.0 \\ \hline
+			spring-aop 	    	&	4.1.6.RELEASE \\ \hline
+			spring-beans 		&	4.1.6.RELEASE \\ \hline
+			spring-context 		&	4.1.6.RELEASE \\ \hline
+			spring-context 		&	4.1.6.RELEASE \\ \hline 		
+			spring-expression 	&	4.1.6.RELEASE \\ \hline
+		\end{tabular}
+	
+\end{table}
+
+
+

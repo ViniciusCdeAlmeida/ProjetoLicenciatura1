@@ -1,0 +1,304 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdftex 2015.8.14)  22 OCT 2015 16:13
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**TCC/monografia.tex
+(./TCC/monografia.tex
+! Undefined control sequence.
+l.10 \documentclass
+                   [licenciatura]{unb-cic}
+? 
+! Undefined control sequence.
+l.17 \usepackage
+                [brazil,american]{babel}
+? 
+! Undefined control sequence.
+l.18 \usepackage
+                [T1]{fontenc}
+? 
+! Undefined control sequence.
+l.19 \usepackage
+                {indentfirst}
+? 
+! Undefined control sequence.
+l.20 \usepackage
+                {natbib}
+? 
+! Undefined control sequence.
+l.21 \usepackage
+                {xcolor,graphicx,url}
+? 
+! Undefined control sequence.
+l.22 \usepackage
+                [utf8]{inputenc}
+? 
+! Undefined control sequence.
+l.23 \usepackage
+                {hyperref}
+? 
+! Undefined control sequence.
+l.24 \usepackage
+                {acronym}
+? 
+
+Overfull \hbox (0.27379pt too wide) in paragraph at lines 17--25
+[]\tenrm [brazil,american]babel [T1]fontenc in-dent-first nat-bib xcolor,graphi
+cx,url [utf8]inputenc hy-per-ref acronym |
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm [
+.\tenrm b
+.\tenrm r
+.\tenrm a
+.etc.
+
+! Undefined control sequence.
+l.26 \usepackage
+                {listings}
+? 
+! Undefined control sequence.
+l.27 \usepackage
+                {color}
+? 
+! Undefined control sequence.
+l.28 \definecolor
+                 {mygreen}{rgb}{0,0.6,0}
+? 
+! Undefined control sequence.
+l.29 \definecolor
+                 {mygray}{rgb}{0.5,0.5,0.5}
+? 
+! Undefined control sequence.
+l.30 \definecolor
+                 {mymauve}{rgb}{0.58,0,0.82}
+? 
+! Undefined control sequence.
+l.32 \lstset
+            { %
+? 
+! Undefined control sequence.
+l.33 	backgroundcolor=\color
+                            {white},   % choose the background color; you mu...
+
+? 
+! Undefined control sequence.
+l.34 	basicstyle=\footnotesize
+                              ,        % the size of the fonts that are used...
+
+? 
+! Undefined control sequence.
+l.38 	commentstyle=\color
+                         {mygreen},    % comment style
+? 
+! Undefined control sequence.
+l.44 	keywordstyle=\color
+                         {blue},       % keyword style
+? 
+! Undefined control sequence.
+l.49 	numberstyle=\tiny
+                       \color{black}, % the style that is used for the line-...
+
+? 
+! Undefined control sequence.
+l.49 	numberstyle=\tiny\color
+                             {black}, % the style that is used for the line-...
+
+? 
+! Undefined control sequence.
+l.50 	rulecolor=\color
+                      {black},         % if not set, the frame-color may be ...
+
+? 
+! Undefined control sequence.
+l.55 	stringstyle=\color
+                        {mymauve},     % string literal style
+? 
+! Undefined control sequence.
+l.57 	title=\lstname
+                                       % show the filename of files included...
+
+? 
+
+Overfull \hbox (27.24596pt too wide) in paragraph at lines 33--59
+\tenrm mentstyle=mygreen, deletekey-words=..., es-capein-side=%**), ex-tend-ed-
+chars=true, frame=single, keepspaces=true,|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm m
+.\tenrm e
+.\tenrm n
+.\kern-0.27779
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (5.82939pt too wide) in paragraph at lines 33--59
+\tenrm key-word-style=blue, lan-guage=Java, oth-erkey-words=*,..., num-bers=lef
+t, num-bersep=5pt, num-ber-style=black,|
+
+\hbox(7.5+1.94444)x469.75499, glue set - 1.0
+.\tenrm k
+.\kern-0.27779
+.\tenrm e
+.\tenrm y
+.\discretionary
+..\tenrm -
+.etc.
+
+
+Overfull \hbox (29.27376pt too wide) in paragraph at lines 33--59
+\tenrm rule-color=black, shows-paces=false, show-stringspaces=false, showtabs=f
+alse, step-num-ber=1, stringstyle=mymauve,|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm r
+.\tenrm u
+.\tenrm l
+.\tenrm e
+.\discretionary
+..\tenrm -
+.etc.
+
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l.69 \input{cores}
+                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name: 
+! I can't find file `{cores}'.
+l

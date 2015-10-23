@@ -1,15 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{apacheAnt}
-Apache ant project {@ONLINE}.
-\newblock \url{http://ant.apache.org/}.
-\newblock Accessed: 2015-07-06.
-
-\bibitem{docMaven}
-Documentation apache maven project {@ONLINE}.
-\newblock \url{http://maven.apache.org/guides/}.
-\newblock Accessed: 2015-07-06.
-
 \bibitem{JSE8_Enhancements}
 Enhancements in java se 8 {@ONLINE}.
 \newblock
@@ -102,20 +92,25 @@ Chris Parnin, Christian Bird, and Emerson Murphy-Hill.
 \newblock In {\em Proceedings of the 8th Working Conference on Mining Software
   Repositories}, MSR '11, pages 3--12, New York, NY, USA, 2011. ACM.
 
+\bibitem{R}
+{R Core Team}.
+\newblock {\em R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2014.
+
 \bibitem{Schaefer:2010:SIR:1932682.1869485}
 Max Schaefer and Oege de~Moor.
 \newblock Specifying and implementing refactorings.
 \newblock {\em SIGPLAN Not.}, 45(10):286--301, October 2010.
-
-\bibitem{Java8Lambda}
-RICHARD WARBURTON.
-\newblock {\em Java 8 Lambdas Functional Programming For The Masses}.
-\newblock O'Reilly Media; 1 edition (April 7, 2014), USA, 2014.
 
 \bibitem{Wichmann95industrialperspective}
 Ba~Wichmann, Aa. Canning, D.~L. Clutterbuck, L~A Winsborrow, N.~J. Ward, and
   D.~W.~R. Marsh.
 \newblock Industrial perspective on static analysis.
 \newblock {\em Software Engineering Journal}, 1995.
+
+\bibitem{ggplot}
+Hadley Wickham.
+\newblock {\em ggplot2: elegant graphics for data analysis}.
+\newblock Springer New York, 2009.
 
 \end{thebibliography}

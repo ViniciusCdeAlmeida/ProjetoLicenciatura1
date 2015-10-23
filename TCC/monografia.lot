@@ -4,6 +4,9 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Depend\IeC {\^e}ncias gerenciadas atrav\IeC {\'e}s do Maven}}{29}{table.2.1}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Depend\IeC {\^e}ncias gerenciadas atrav\IeC {\'e}s do Maven}}{30}{table.3.1}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Projetos Escolhidos}}{32}{table.4.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

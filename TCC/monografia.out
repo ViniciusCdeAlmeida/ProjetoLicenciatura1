@@ -17,24 +17,35 @@
 \BOOKMARK [2][-]{subsection.1.6.5}{Java 7}{section.1.6}% 17
 \BOOKMARK [2][-]{subsection.1.6.6}{Java 8}{section.1.6}% 18
 \BOOKMARK [1][-]{section.1.7}{Problema a ser Atacado}{chapter.1}% 19
-\BOOKMARK [0][-]{chapter.2}{Arquitetura}{}% 20
-\BOOKMARK [1][-]{section.2.1}{Arquitetura}{chapter.2}% 21
-\BOOKMARK [2][-]{subsection.2.1.1}{Visitors}{section.2.1}% 22
-\BOOKMARK [2][-]{subsection.2.1.2}{Invers\343o de Controle e Inje\347\343o de Depend\352ncia}{section.2.1}% 23
-\BOOKMARK [2][-]{subsection.2.1.3}{Apache Maven}{section.2.1}% 24
-\BOOKMARK [0][-]{chapter.3}{An\341lise est\341tica}{}% 25
-\BOOKMARK [1][-]{section.3.1}{An\341lise l\351xica}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.2}{Parser}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.2.1}{Paser JDT Eclipse}{section.3.2}% 28
-\BOOKMARK [1][-]{section.3.3}{Sintaxe abstrata}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.4}{An\341lise sem\342ntica}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.5}{Checagem de tipo}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.6}{Checagem de estilo}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.7}{Entendimento do c\363digo}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.8}{Verifica\347\343o de programa}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.9}{Verifica\347\343o de propriedade}{chapter.3}% 35
-\BOOKMARK [0][-]{chapter.4}{Resultados}{}% 36
-\BOOKMARK [1][-]{section.4.1}{LambdaExpression}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.2}{MultiCatch}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.3}{ANT}{chapter.4}% 39
-\BOOKMARK [0][-]{section*.9}{Refer\352ncias}{}% 40
+\BOOKMARK [0][-]{chapter.2}{An\341lise est\341tica}{}% 20
+\BOOKMARK [1][-]{section.2.1}{An\341lise l\351xica}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.2}{Parser}{chapter.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.1}{Paser JDT Eclipse}{section.2.2}% 23
+\BOOKMARK [1][-]{section.2.3}{Sintaxe abstrata}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.4}{An\341lise sem\342ntica}{chapter.2}% 25
+\BOOKMARK [1][-]{section.2.5}{Checagem de tipo}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.6}{Checagem de estilo}{chapter.2}% 27
+\BOOKMARK [1][-]{section.2.7}{Entendimento do c\363digo}{chapter.2}% 28
+\BOOKMARK [1][-]{section.2.8}{Verifica\347\343o de programa}{chapter.2}% 29
+\BOOKMARK [1][-]{section.2.9}{Verifica\347\343o de propriedade}{chapter.2}% 30
+\BOOKMARK [0][-]{chapter.3}{Arquitetura}{}% 31
+\BOOKMARK [1][-]{section.3.1}{Arquitetura}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.1.1}{Visitors}{section.3.1}% 33
+\BOOKMARK [2][-]{subsection.3.1.2}{Invers\343o de Controle e Inje\347\343o de Depend\352ncia}{section.3.1}% 34
+\BOOKMARK [2][-]{subsection.3.1.3}{Apache Maven}{section.3.1}% 35
+\BOOKMARK [0][-]{chapter.4}{Obten\347\343o de Dados\(***** Melhorar *****\)}{}% 36
+\BOOKMARK [1][-]{section.4.1}{Tratar Dados}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.2}{Projetos Escolhidos}{chapter.4}% 38
+\BOOKMARK [0][-]{chapter.5}{Resultados}{}% 39
+\BOOKMARK [1][-]{section.5.1}{Lambda}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.1.1}{Oportunidades de Aplicar Lambda}{section.5.1}% 41
+\BOOKMARK [1][-]{section.5.2}{MultiCatch}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.3}{Try Resource}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.4}{Switch String}{chapter.5}% 44
+\BOOKMARK [0][-]{chapter.6}{Considera\347\365es Finais e Projeto Fututos}{}% 45
+\BOOKMARK [1][-]{section.6.1}{Multicatch}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.2}{Lambda}{chapter.6}% 47
+\BOOKMARK [1][-]{section.6.3}{Try Resource}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.4}{Switch String}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.5}{Projeto Futuro}{chapter.6}% 50
+\BOOKMARK [0][-]{section*.9}{Refer\352ncias}{}% 51
