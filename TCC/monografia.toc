@@ -38,14 +38,14 @@
 \contentsline {section}{\numberline {4.2}Projetos Escolhidos}{31}{section.4.2}
 \contentsline {chapter}{\numberline {5}Resultados}{33}{chapter.5}
 \contentsline {section}{\numberline {5.1}Lambda}{33}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Oportunidades de Aplicar Lambda}{34}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}MultiCatch}{34}{section.5.2}
-\contentsline {section}{\numberline {5.3}Try Resource}{36}{section.5.3}
-\contentsline {section}{\numberline {5.4}Switch String}{36}{section.5.4}
-\contentsline {chapter}{\numberline {6}Considera\IeC {\c c}\IeC {\~o}es Finais e Projeto Fututos}{37}{chapter.6}
-\contentsline {section}{\numberline {6.1}Multicatch}{37}{section.6.1}
-\contentsline {section}{\numberline {6.2}Lambda}{37}{section.6.2}
-\contentsline {section}{\numberline {6.3}Try Resource}{37}{section.6.3}
-\contentsline {section}{\numberline {6.4}Switch String}{37}{section.6.4}
-\contentsline {section}{\numberline {6.5}Projeto Futuro}{37}{section.6.5}
-\contentsline {chapter}{Refer\^encias}{38}{section*.9}
+\contentsline {subsection}{\numberline {5.1.1}Oportunidades de Aplicar Lambda}{33}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}MultiCatch}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}Try Resource}{37}{section.5.3}
+\contentsline {section}{\numberline {5.4}Switch String}{38}{section.5.4}
+\contentsline {chapter}{\numberline {6}Considera\IeC {\c c}\IeC {\~o}es Finais e Projeto Fututos}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Multicatch}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}Lambda}{39}{section.6.2}
+\contentsline {section}{\numberline {6.3}Try Resource}{39}{section.6.3}
+\contentsline {section}{\numberline {6.4}Switch String}{39}{section.6.4}
+\contentsline {section}{\numberline {6.5}Projeto Futuro}{39}{section.6.5}
+\contentsline {chapter}{Refer\^encias}{40}{section*.9}
