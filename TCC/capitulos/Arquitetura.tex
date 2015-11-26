@@ -23,7 +23,18 @@ A arquitetura do analisador exibido na Figura: \ref{fig:arqGeral} foi  implement
 	\caption{Arquitetura geral do software.}
 \end{figure}
 
-Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995:DPE:186897} exemplificado na Figura: \ref{fig:arqVisitor} os quais possuem inteligência para verificar a adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e até mesmo efetuar a pesquisa de código ultrapassados através de padrões pré-definidos para que possam vir a ser melhorados caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.\\
+Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995:DPE:186897} exemplificado na Figura: \ref{fig:arqVisitor} os quais possuem inteligência para identificar padrões de código que podem vir a ser especificados pelo desenvolvedor. A pesquisa pela adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e podem até mesmo efetuar a pesquisa de código ultrapassados através de padrões pré-definidos para que possam vir a ser melhorados caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.
+
+Para exemplificar um padrão de pesquisa de um visitor segue o código abaixo como trecho do visitor que pesquisa por \textit{try's} que contém mais de um \textit{catch} aninhado onde este podem ser migrados para um único bloco \textit{multicatch}. 
+\begin{lstlisting}
+....
+if (node.catchClauses().size() > 1){
+	if(this.checkSimilarity(node.catchClauses()){
+		....
+	}
+}
+....
+\end{lstlisting}
 
 %Tais analisador tem como entradas válidas um único arquivo arquivo separado por vírgula (CSV) que possui em seus campos o nome dos projeto, versões e caminho para que cada um seja analisado. Após o {\it input} é realizado uma pesquisa em seu diretório \textit{src} o qual contém os códigos Java que compõem o projeto, após todos os arquivos listas é realizado um parse para a construção de árvores de sintáxe abstratas (AST) uma por arquivo e dai é lançando os {\it visitors}  \cite{Gamma:1995:DPE:186897} com suas respectivas inteligências para pesquisar os padrões previamente definidos os quais são armazenados em uma única coleção de dados que gera um CSV para cada padrão designado e dentro informando onde e em qual versão do projeto fora encontrado.\\
 

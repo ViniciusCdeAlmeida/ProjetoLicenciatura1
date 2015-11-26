@@ -1,9 +1,9 @@
-\chapter{Obtenção de Dados(***** Melhorar *****)}
+\chapter{Obtenção de Dados}
 
 Para executar o analisador é necessário um \acs{CSV} que possui em seus campos o nome dos projeto, versões e caminho para que cada um seja analisado. Após o {\it input} é realizado uma pesquisa dados o caminho fornecido pelo \acs{CSV}.
-É elaborada um pesquisa pelos arquivos fontes \textit{Java} e são armazenados em uma \textit{Collection} para que seja efetuada uma contagem das \acs{LOC} com o programa \acs{CLOC}.\\
+É elaborada um pesquisa pelos arquivos fontes \textit{Java} e são armazenados em uma \textit{Collection} para que seja efetuada uma contagem das \acs{LOC} com o programa \acs{CLOC}.
 
-Posteriormente os arquivos armazenados na \textit{Collection} são direcionados para a classe \textit{ProjectAnaliser.java} que que esta gere um \textit{parser} para cada arquivo e os \textit{visitors} elaborem uma pesquisa conforme suas configurações. Cada característica pesquisada é armazenada em uma \textit{Collection} de resultado a qual ao final de todo processo será tratada e cada característica será escrita um um arquivo \acs{CSV}.\\
+Posteriormente os arquivos armazenados na \textit{Collection} são direcionados para a classe \textit{ProjectAnaliser.java} que que esta gere um \textit{parser} para cada arquivo e os \textit{visitors} elaborem uma pesquisa conforme suas configurações. Cada característica pesquisada é armazenada em uma \textit{Collection} de resultado a qual ao final de todo processo será tratada e cada característica será escrita um um arquivo \acs{CSV}.
 
 
 \section{Tratar Dados}
@@ -11,7 +11,7 @@ Os dados obtidos serão tratados com o software R \cite{R} versão (3.1.2) além
 
 
 \section{Projetos Escolhidos}
-Os projetos foram escolhidos baseados nos estudos realizados por \cite{Parnin:2011:JGA:1985441.1985446} e \cite{Dyer:2014:MBA:2568225.2568295}. Este projetos totalizaram um total de mais de 67M \acs{LOC} onde a tabela \ref{tab:ProjetosEscolhidos} exibe em detalhes as versões escolhidas.\\
+Os projetos foram escolhidos baseados nos estudos realizados por \cite{Parnin:2011:JGA:1985441.1985446} e \cite{Dyer:2014:MBA:2568225.2568295}. Este projetos totalizaram um total de mais de 67M \acs{LOC} onde a tabela \ref{tab:ProjetosEscolhidos} exibe em detalhes as versões escolhidas.
 
 
 \begin{table}[ht]
