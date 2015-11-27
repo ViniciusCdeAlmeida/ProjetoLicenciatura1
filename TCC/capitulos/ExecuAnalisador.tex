@@ -1,9 +1,84 @@
 \chapter{Obtenção de Dados}
-
 Para executar o analisador é necessário um \acs{CSV} que possui em seus campos o nome dos projeto, versões e caminho para que cada um seja analisado. Após o {\it input} é realizado uma pesquisa dados o caminho fornecido pelo \acs{CSV}.
 É elaborada um pesquisa pelos arquivos fontes \textit{Java} e são armazenados em uma \textit{Collection} para que seja efetuada uma contagem das \acs{LOC} com o programa \acs{CLOC}.
 
 Posteriormente os arquivos armazenados na \textit{Collection} são direcionados para a classe \textit{ProjectAnaliser.java} que que esta gere um \textit{parser} para cada arquivo e os \textit{visitors} elaborem uma pesquisa conforme suas configurações. Cada característica pesquisada é armazenada em uma \textit{Collection} de resultado a qual ao final de todo processo será tratada e cada característica será escrita um um arquivo \acs{CSV}.
+
+Para este trabalho foram implementados \textit{visitors} que pesquisavam sobre adoção de \textit{if(String) - elseif} aninhados podendo ser convertidos para \textit{Switch(String)},  adoção de \textit{Try(resource)},  adoção de \textit{Multicatch} e \textit{trys} que tivessem mais de um \textit{catch} aninhado e \textit{LambdaExpression} onde neste foi elaborado um trabalho mais detalhado para ir além da adoção. Pesquisando possíveis casos onde Loops For, \textit{EnhancedFor}, que iteram sobre uma \textit{Collection} e funcionassem de forma específica como \textit{Filter} ou \textit{Exists} abaixo seguem alguns modelos de exemplo como inspiração para pesquisa dos \textit{visitors}.
+
+\begin{lstlisting}
+//Com if else
+if(String.equals(...)){
+...
+}else if(String.equals(...)){
+...
+}else{
+...
+}
+
+//Switch
+Switch(String){
+	case "...":
+		...
+	case "...":
+		...
+	default:
+		....
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+static String readFirstLineFromFile(String path) throws IOException {
+	try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+		return br.readLine();
+	}
+}
+\end{lstlisting}
+
+
+\begin{lstlisting}
+	// Sem Multicatch
+	try {
+		...
+	}catch (ConversionException ex) {
+		...
+	}catch (IllegalArgumentException ex) {
+		...
+	}
+	
+	//Multicatch
+	try {
+		...
+	}catch (ConversionException ex | IllegalArgumentException ex) {
+		...
+	}
+\end{lstlisting}
+
+\begin{lstlisting}
+
+//Exists
+for(String s : getList()){
+	if(s == null){
+		return true;
+}
+
+//Com Lambda
+boolean exists = getList().stream()
+            .anyMatch(s -> s == null));
+            
+
+//Filter
+List<String> l;
+for(String s : getList()){
+	if(s.equals(...)){
+		l.add(s);
+	}
+}
+
+//Com Lambda
+List<String> l = getList().stream().filter(s.equals(...));
+
+\end{lstlisting}
 
 
 \section{Tratar Dados}
