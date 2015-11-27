@@ -1,5 +1,5 @@
 \chapter {Arquitetura}
-Como ambiente de desenvolvimento integrado (IDE) escolhido foi o eclipse devido ao favorecimento do desenvolvimento rápido com recursos que podem ser integrados através de {\it plugins}, além disso sua portabilidade para outras plataformas sem afetar os {\it plugins} adicionados favorecendo o desenvolvimento independente da plataforma escolhida pelo desenvolvedor.\\
+Como ambiente de desenvolvimento integrado (IDE) escolhido foi o eclipse devido ao favorecimento do desenvolvimento rápido com recursos que podem ser integrados através de {\it plugins}, além disso sua portabilidade para outras plataformas sem afetar os {\it plugins} adicionados favorecendo o desenvolvimento independente da plataforma escolhida pelo desenvolvedor.
 
 O Eclipse Java {\it development tools} (JDT), fornece plugins que implementam a IDE eclipse servindo com apoio para o desenvolvimento de qualquer aplicativo Java, inclusive plugins para a própria IDE Eclipse. São cinco os componentes que compõem o JDT, e cada componente pode operar com um projeto independente, que são:
 
@@ -11,29 +11,26 @@ O Eclipse Java {\it development tools} (JDT), fornece plugins que implementam a 
 	\end{itemize} 
 	
 
-	
 \section {Arquitetura}
-
-A arquitetura do analisador exibido na Figura: \ref{fig:arqGeral} foi  implementado utilizando como base os componentes \acs{JDT} porém de maneira independente da \acs{IDE} eclipse o qual não é um {\it plugin} da \acs{IDE} mas sim uma ferramente que pode ser utilizada como apoio em qualquer processo de desenvolvimento ou para levantar dados sobre evolução de um software.\\
+A arquitetura do analisador exibido na Figura: \ref{fig:arqGeral} foi implementado utilizando como base os componentes \acs{JDT} porém de maneira independente de qualquer \acs{IDE} neste caso o Eclipse e não a intenção de criar um {\it plugin} para \acs{IDE} mas sim uma ferramenta que pode ser utilizada com auxílio ao longo do processo de desenvolvimento ou para minerar dados sobre evolução do software identificando contruções ultrapassadas.
 
 \begin{figure}[h]
 	\center
-	\includegraphics[scale=0.3]{Imagens/Arquitetura}
+	\includegraphics[scale=0.45]{Imagens/Arquitetura}
 	\label{fig:arqGeral}
 	\caption{Arquitetura geral do software.}
 \end{figure}
 
-Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995:DPE:186897} exemplificado na Figura: \ref{fig:arqVisitor} os quais possuem inteligência para identificar padrões de código que podem vir a ser especificados pelo desenvolvedor. A pesquisa pela adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e podem até mesmo efetuar a pesquisa de código ultrapassados através de padrões pré-definidos para que possam vir a ser melhorados caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.
+
+Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995:DPE:186897} exemplificado na Figura: \ref{fig:arqVisitor} os quais possuem inteligência para identificar padrões de código que podem vir a ser especificados pelo desenvolvedor. A pesquisa pela adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e podem até mesmo efetuar a pesquisa de código ultrapassados através destes padrões para que possam vir a sofrer um \textit{refactoring} caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.
 
 Para exemplificar um padrão de pesquisa de um visitor segue o código abaixo como trecho do visitor que pesquisa por \textit{try's} que contém mais de um \textit{catch} aninhado onde este podem ser migrados para um único bloco \textit{multicatch}. 
 \begin{lstlisting}
-....
 if (node.catchClauses().size() > 1){
 	if(this.checkSimilarity(node.catchClauses()){
-		....
+		...
 	}
 }
-....
 \end{lstlisting}
 
 %Tais analisador tem como entradas válidas um único arquivo arquivo separado por vírgula (CSV) que possui em seus campos o nome dos projeto, versões e caminho para que cada um seja analisado. Após o {\it input} é realizado uma pesquisa em seu diretório \textit{src} o qual contém os códigos Java que compõem o projeto, após todos os arquivos listas é realizado um parse para a construção de árvores de sintáxe abstratas (AST) uma por arquivo e dai é lançando os {\it visitors}  \cite{Gamma:1995:DPE:186897} com suas respectivas inteligências para pesquisar os padrões previamente definidos os quais são armazenados em uma única coleção de dados que gera um CSV para cada padrão designado e dentro informando onde e em qual versão do projeto fora encontrado.\\
@@ -46,19 +43,43 @@ if (node.catchClauses().size() > 1){
 \caption{Organização dos Visitors.}
 \end{figure}
 
-Todos os visitors criados para o projeto extendem da classe \textit{Visitor.java} a qual implementa a interface \textit{IVisitor.java} conforme a Figura: \ref{fig:arqVisitor}. Qualquer pessoa que deseje implementar um visitor específico necessita somente externder de \textit{Visitor.java}  e declarar no \textit{Bean.xml} para que esta seja injetada e visite os nós da \acs{AST} gerada no \textit{parse} não tendo a necessidade de se aprofundar na \acs{API} \acs{JDT}, a seguir um exemplo de implementação de um \textit{visitor}.\\
+Para a implementação de um \textit{visitor} é necessário extender da classe parametrizada \textit{Visitor<T>.java} onde \textit{T} é apenas um modelo que armazena dados como o arquivo onde foi encontrado a construção conforme exibido na Figura:~\ref{fig:ProjectAnalyser}, linha de código inicial e final do bloco. A classe \textit{Visitor<T>} implementa um interface parametrizada, \textit{Data<T>}, que por sua vez é a coleção de dados os quais foram pesquisados pelos \textit{visitors}. Segue um simples exemplo de como implementar um \textit{visitor}. 
 
 \begin{lstlisting}
-public class MeuVisitor extends Visitor{
-
+public class MeuVisitor extends Visitor<LambdaModel>{
 	public boolen visit(Statement node){
 		.....
-		
 		return super.visit(node);
-		
 	}
 }
+\end{lstlisting}
 
+Após a implementação de \textit{visitor} desejado, é necessário declarar o \textit{visitor} no \textit{Beans.xml} com seu respectivo cabeçalho para que este seja injetado na classe \textit{ProjectAnalyser.java} para que a pesquisa ao qual foi condicionado nas árvores sintátitcas dos códigos fontes do projetos geradas pela classe \textit{Parser.java} seja realizada com sucesso. Abaixo é exemplificado o cabeçalho do arquivo \acs{CSV} de saída e a declaração do Visitor no \textit{Beans.xml}.
+
+\begin{lstlisting}
+	// Visitor com o respectivo cabecalho 
+	<bean id="tryStatementData" class="br.unb.cic.sa.model.CSVData">
+		<property name="outDir" value="output"/>
+		<property name="fileName" value="tryStatement"/>
+		<property name="head" value="typeProject, before, project, version, file, start, end, resource, multiCatch"/> 
+	</bean>
+	...
+	
+	// Visitor com sua respectiva Data<T> collection
+	<bean id="tryStatementVisitor" class="br.unb.cic.sa.visitors.TryStatementVisitor">
+		<property name="collectedData" ref="tryStatementData"/>
+	</bean>
+	...
+	
+	//Lista de visitors a ser injetada na Classe ProjectAnalyser.java
+	<bean id="pa" class="br.unb.cic.sa.ProjectAnalyser">
+		<property name="listVisitors">
+		 	<list>	
+		 		<ref bean="tryStatementVisitor"/> 
+		 	</list>
+		</property>
+	</bean>
+		
 \end{lstlisting}
 
 
@@ -71,53 +92,54 @@ public class MeuVisitor extends Visitor{
 	\caption{Project analyser.}
 \end{figure}
 
+
+Para exportar os dados para o arquivo \acs{CSV} é utlizado \textit{reflection} onde é verificado todos os valores \textit{T} armazenados pelos \textit{Visitors} e extratido dos métodos \textit{get} contidos nos modelos os quais foram criados para armazenar os dados pesquisados nas árvores sintáticas. Esta característica do analisador permite que o usuário não se preocupe com a exportação dos dados que é feita de forma automática, concentrando apenas seus esforços na criação dos \textit{Visitors}.
+
 %Este diagrama exibe o coração da aplicação pois é aqui que ocorre a transformação de todo código Java que compõe o projete em árvore sintática para que os {\it visitors}  \cite{Gamma:1995:DPE:186897} possam pesquisar em seus nós pelos padrões estabelecidos.\\
 
-Um ponto interessante é que o \textit{ProjectAnalyser.java} Figura: \ref{ProjectAnalyser} não tem a responsabilidade de instanciar a lista de IVisitor a qual possui referência pois estas são injetadas usando o padrão de projeto injeção de dependência\textbf{(DI)} o qual aqui faz-se presente através do {\it framework spring} que injeta uma lista de \textit{bean} onde cada \textit{bean} representa cada classe de extendida de {\it Visitor} descrita anteriormente.\\
+%Um ponto interessante é que o \textit{ProjectAnalyser.java} Figura: ~\ref{fig:ProjectAnalyser} não tem a responsabilidade de instanciar a lista de IVisitor a qual possui referência pois estas são injetadas usando o padrão de projeto injeção de dependência\textbf{(DI)} o qual aqui faz-se presente através do {\it framework spring} que injeta uma lista de \textit{bean} onde cada \textit{bean} representa cada classe de extendida de {\it Visitor} descrita anteriormente.\\
 
 
 
 \subsection{Inversão de Controle e Injeção de Dependência}
-O padrão de projeto inversão de controle \textbf{(IoC)} e injeção de dependência \textbf{(DI)} é utilizado quando deseja-se obter um baixo nível de acoplamento entre módulos que compõem um sistema tornando mais suave ou até mesmo removendo o acoplamento entres módulos para que seja mais fácil evoluir e manter o software. Desta forma a injeção faz-se de maneira configurável através de um arquivo \textit{XML} ou até mesmo uma classe \textit{Java}. Para tal função usaremos o {\it framework Spring} devido sua consolidação e popularidade no assunto.\\
+O padrão de projeto inversão de controle \textbf{(IoC)} e injeção de dependência \textbf{(DI)} é utilizado quando deseja-se obter um baixo nível de acoplamento entre módulos que compõem um sistema tornando mais suave ou até mesmo removendo o acoplamento entres módulos para que seja mais fácil evoluir e manter o software. Desta forma a injeção faz-se de maneira configurável através de um arquivo \textit{XML} ou até mesmo uma classe \textit{Java}. Para tal função usaremos o {\it framework Spring} devido sua consolidação e popularidade no assunto.
 
-Para preparar o ambiente de acordo com as especificações do {\it Spring} é necessário definir o contexto da aplicação e para isso é faz-se necessário criar antes de injetar as dependências as configurações iniciais. Dentre as possíveis formas disponibilizadas pelo {\it framework} de conceder tal configuração para criação um contexto para aplicação \textit{ApplicationContext} o projeto segue com a criação de um arquivo \textit{XML} o que concentra as referências necessárias de quais objetos e onde estes serão injetados. O arquivo \textit{XML} criado para tal finalidade é o \textit{'Beans.xml'} . Atualmente na versão 4.1.6 do {\it framework spring} é possível utilizar uma classe para fazer o mesmo trabalho do arquivo \textit{XML}. \\
+Para preparar o ambiente de acordo com as especificações do {\it Spring} é necessário definir o contexto da aplicação e para isso é faz-se necessário criar antes de injetar as dependências as configurações iniciais. Dentre as possíveis formas disponibilizadas pelo {\it framework} de conceder tal configuração para criação um contexto para aplicação \textit{ApplicationContext} o projeto segue com a criação de um arquivo \textit{XML} o que concentra as referências necessárias de quais objetos e onde estes serão injetados. O arquivo \textit{XML} criado para tal finalidade é o \textit{'Beans.xml'} . Atualmente na versão 4.1.6 do {\it framework spring} é possível utilizar uma classe para fazer o mesmo trabalho do arquivo \textit{XML}. 
 
-
-
-Configuração necessária para o funcionamento da injeção de dependências com {\it Spring} conforme explicado na documentação do {\it framework} conforme \cite{SPRING_REF}.\\
-\begin{lstlisting}
-<?xml version="1.0" encoding="UTF-8"?>
-	<beans xmlns="http://www.springframework.org/schema/beans"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-		xsi:schemaLocation="http://www.springframework.org/schema/beans 
-		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-		http://www.springframework.org/schema/context 
-		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
-
-		<bean id="tsVisitor" class="br.unb.cic.sa.visitors.TryStatementVisitor"/>
-		<bean id="opportinitiesLambda" class="br.unb.cic.sa.visitors.OpportunitiesLambdaVisitor"/>
-		<bean id="opportinitiesSwitchString" class="br.unb.cic.sa.visitors.OpportinitiesSwitchString"/>
-	</beans>
-	
-	<bean id="pa" class="br.unb.cic.sa.ProjectAnalyser">
-		<property name="listVisitors">
-		<list>
-			<ref bean="tsVisitor"/>
-			<ref bean="opportinitiesLambda"/>
-			<ref bean="opportinitiesSwitchString"/>
-		</list>
-		</property>
-	</bean>
-\end{lstlisting}
+%Configuração necessária para o funcionamento da injeção de dependências com {\it Spring} conforme explicado na documentação do {\it framework} conforme \cite{SPRING_REF}.\\
+%\begin{lstlisting}
+%<?xml version="1.0" encoding="UTF-8"?>
+%	<beans xmlns="http://www.springframework.org/schema/beans"
+%		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+%		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+%		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+%		http://www.springframework.org/schema/context 
+%		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+%
+%		<bean id="tsVisitor" class="br.unb.cic.sa.visitors.TryStatementVisitor"/>
+%		<bean id="opportinitiesLambda" class="br.unb.cic.sa.visitors.OpportunitiesLambdaVisitor"/>
+%		<bean id="opportinitiesSwitchString" class="br.unb.cic.sa.visitors.OpportinitiesSwitchString"/>
+%	</beans>
+%	
+%	<bean id="pa" class="br.unb.cic.sa.ProjectAnalyser">
+%		<property name="listVisitors">
+%		<list>
+%			<ref bean="tsVisitor"/>
+%			<ref bean="opportinitiesLambda"/>
+%			<ref bean="opportinitiesSwitchString"/>
+%		</list>
+%		</property>
+%	</bean>
+%\end{lstlisting}
 
 
-O {\it framework} trabalha com \textit{beans} onde cada \textit{bean} representa uma classe Java a ser injetada vale ressaltar que essas por simplicidade devem ter o construtor sem parâmetros para que o trabalho possa ocorrer da maneira mais simples, caso seja necessário parâmetros estes sejam passados vias os métodos Sets.\\
+O {\it framework} trabalha com \textit{beans} onde cada \textit{bean} representa uma classe Java a ser injetada vale ressaltar que essas por simplicidade devem ter o construtor sem parâmetros para que o trabalho possa ocorrer da maneira mais simples, caso seja necessário parâmetros estes sejam passados vias os métodos Sets.
 
-Identificação de cada bean no arquivo de configuração \textit{XML}, é atributo \textbf{id} contido na {\it tag} \textbf{bean} onde cada deve ser único para que a gerência das dependências ocorra da forma preconizada pelo {\it framework}.\\
+Identificação de cada bean no arquivo de configuração \textit{XML}, é atributo \textbf{id} contido na {\it tag} \textbf{bean} onde cada deve ser único para que a gerência das dependências ocorra da forma preconizada pelo {\it framework}.
 
-Todos os {\it Beans} são injetados na classe \textit{ProjectAnalyser.java} através de uma lista de IVisitor. E desta forma indicamos no \textit{XML} através da tag \textbf{<property name="listVisitors">} onde o atributo \textbf{name} deve conter o mesmo nome que o atributo na classe Java,  neste caso o algo é \textbf{listVisitors} que existe uma lista de IVisitor com este mesmo nome dentro da classe \textit{ProjectAnalyser.java}.\\
+Todos os {\it Beans} são injetados na classe \textit{ProjectAnalyser.java} através de uma lista de IVisitor. E desta forma indicamos no \textit{XML} através da tag \textbf{<property name="listVisitors">} onde o atributo \textbf{name} deve conter o mesmo nome que o atributo na classe Java,  neste caso o algo é \textbf{listVisitors} que existe uma lista de IVisitor com este mesmo nome dentro da classe \textit{ProjectAnalyser.java}.
 
-Para concluir com sucesso a injeção faz-se necessário somente indicar em qual classe e em qual local será injetada tal dependêcia, nesse caso a classe é a \textit{ProjectAnalyser.java} e o local é definido pela anotação \textbf{\textit{@Autowired}} logo acima do atributo o qual será injetado.\\
+Para concluir com sucesso a injeção faz-se necessário somente indicar em qual classe e em qual local será injetada tal dependêcia, nesse caso a classe é a \textit{ProjectAnalyser.java} e o local é definido pela anotação \textbf{\textit{@Autowired}} logo acima do atributo o qual será injetado.
 
 \begin{lstlisting}
 	public class ProjectAnalyser... {
@@ -157,7 +179,7 @@ Abaixo segue bibliotecas necessárias para que o ambiente de injeção de depend
 
 
 \subsection{Apache Maven}
-Afim de gerenciar \textit{builds} deste analisador estático, o Maven foi introduzido para tornar as configurações uniformes no ambiente de desenvolvimento deste seguindo as boas práticas, compilação, gerência de dependências e distribuição da aplicação, a tabela \ref{tab:DependenciasMaven} detalhas as bibliotecas e versões utilizadas.\\
+Afim de gerenciar \textit{builds} deste analisador estático, o Maven foi introduzido para tornar as configurações uniformes no ambiente de desenvolvimento deste seguindo as boas práticas, compilação, gerência de dependências e distribuição da aplicação, a tabela \ref{tab:DependenciasMaven} detalhas as bibliotecas e versões utilizadas.
 
 %O arquivo pom.xml segundo a documentação \cite{docMaven}, \textit{project object model} é a essência de um projeto Maven, com poucas configurações é possível gerências as dependências, centralizando documentação do projeto e a compilação de \textit{builds} para a distribuição da aplicação (por exemplo, \textit{.jar, .war ou .ear}).\\
 
