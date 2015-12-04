@@ -22,7 +22,7 @@ A arquitetura do analisador exibido na Figura: \ref{fig:arqGeral} foi implementa
 \end{figure}
 
 
-Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995:DPE:186897} exemplificado na Figura: \ref{fig:arqVisitor} os quais possuem inteligência para identificar padrões de código que podem vir a ser especificados pelo desenvolvedor. A pesquisa pela adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e podem até mesmo efetuar a pesquisa de código ultrapassados através destes padrões para que possam vir a sofrer um \textit{refactoring} caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.
+Este analisador tem com base para seu funcionamento o uso de {\it visitors} \cite{Gamma:1995} exemplificado na Figura: \ref{fig:arqVisitor} os quais possuem inteligência para identificar padrões de código que podem vir a ser especificados pelo desenvolvedor. A pesquisa pela adoção de códigos recentemente adicionados a novas {\it releases} da linguagem Java como {\it multicatchs} e podem até mesmo efetuar a pesquisa de código ultrapassados através destes padrões para que possam vir a sofrer um \textit{refactoring} caso o desenvolvedor assim que julgue necessário conforme é o caso de vários {\it catchs} aninhados que pode ser um potencial caso de se tornar um bloco único de {\it multicatch} tornando o código mais elegante, atual e legível.
 
 Para exemplificar um padrão de pesquisa de um visitor segue o código abaixo como trecho do visitor que pesquisa por \textit{try's} que contém mais de um \textit{catch} aninhado onde este podem ser migrados para um único bloco \textit{multicatch}. 
 \begin{lstlisting}
@@ -152,7 +152,7 @@ Para concluir com sucesso a injeção faz-se necessário somente indicar em qual
 	}
 \end{lstlisting}
 
-Para finalizar todo ambiente de configuração de injeção de dependência é necessário somente criar uma classe que seja um {\it Singleton} \cite{Gamma:1995:DPE:186897} conforme cita Gamma e amigos e faz-se necessária conforme indica a documentação \cite{SPRING_REF}, para ter o controle de que exista somente um único ambiente de injeção. Tal padrão que controla a quantidade de instâncias dos objetos se faz presente através da classe \textit{CDI.java}.
+Para finalizar todo ambiente de configuração de injeção de dependência é necessário somente criar uma classe que seja um {\it Singleton} \cite{Gamma:1995} conforme cita Gamma e amigos e faz-se necessária conforme indica a documentação \cite{SPRING_REF}, para ter o controle de que exista somente um único ambiente de injeção. Tal padrão que controla a quantidade de instâncias dos objetos se faz presente através da classe \textit{CDI.java}.
 \begin{lstlisting}
 	public class CDI {
 		private static CDI instance;
