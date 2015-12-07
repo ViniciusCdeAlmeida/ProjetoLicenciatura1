@@ -48,11 +48,7 @@
 \backcite {Wichmann95industrialperspective}{{17}{2.1}{section.2.1}}
 \backcite {Chess:2007:SPS:1406221}{{17}{2.2}{section.2.2}}
 \backcite {Gamma:1995}{{19}{2.2.1}{lstnumber.-15.14}}
-\backcite {Gamma:1995}{{23}{3.1}{figure.3.1}}
-\backcite {Gamma:1995}{{27}{3.1.2}{lstnumber.-20.8}}
-\backcite {SPRING_REF}{{27}{3.1.2}{lstnumber.-20.8}}
-\backcite {SPRING_REF}{{28}{3.1.2}{lstnumber.-21.19}}
-\backcite {R}{{31}{4.1}{section.4.1}}
-\backcite {ggplot}{{31}{4.1}{section.4.1}}
-\backcite {Parnin:ACM2011}{{31}{4.2}{section.4.2}}
-\backcite {Dyer:ACM2014}{{31}{4.2}{section.4.2}}
+\backcite {R}{{27}{4.1}{section.4.1}}
+\backcite {ggplot}{{27}{4.1}{section.4.1}}
+\backcite {Dyer:ACM2014}{{27}{4.2}{section.4.2}}
+\backcite {Parnin:ACM2011}{{27}{4.2}{section.4.2}}

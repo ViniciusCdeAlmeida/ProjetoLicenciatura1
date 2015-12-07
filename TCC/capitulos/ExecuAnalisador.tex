@@ -1,4 +1,4 @@
-\chapter{Obtenção de Dados}
+\chapter{Investigação}
 Para executar o analisador é necessário um \acs{CSV} que possui em seus campos o nome dos projeto, versões e caminho para que cada um seja analisado. Após o {\it input} é realizado uma pesquisa dados o caminho fornecido pelo \acs{CSV}.
 É elaborada um pesquisa pelos arquivos fontes \textit{Java} e são armazenados em uma \textit{Collection} para que seja efetuada uma contagem das \acs{LOC} com o programa \acs{CLOC}.
 
@@ -6,79 +6,7 @@ Posteriormente os arquivos armazenados na \textit{Collection} são direcionados 
 
 Para este trabalho foram implementados \textit{visitors} que pesquisavam sobre adoção de \textit{if(String) - elseif} aninhados podendo ser convertidos para \textit{Switch(String)},  adoção de \textit{Try(resource)},  adoção de \textit{Multicatch} e \textit{trys} que tivessem mais de um \textit{catch} aninhado e \textit{LambdaExpression} onde neste foi elaborado um trabalho mais detalhado para ir além da adoção. Pesquisando possíveis casos onde Loops For, \textit{EnhancedFor}, que iteram sobre uma \textit{Collection} e funcionassem de forma específica como \textit{Filter} ou \textit{Exists} abaixo seguem alguns modelos de exemplo como inspiração para pesquisa dos \textit{visitors}.
 
-\begin{lstlisting}
-//Com if else
-if(String.equals(...)){
-...
-}else if(String.equals(...)){
-...
-}else{
-...
-}
 
-//Switch
-Switch(String){
-	case "...":
-		...
-	case "...":
-		...
-	default:
-		....
-}
-\end{lstlisting}
-
-\begin{lstlisting}
-static String readFirstLineFromFile(String path) throws IOException {
-	try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-		return br.readLine();
-	}
-}
-\end{lstlisting}
-
-
-\begin{lstlisting}
-	// Sem Multicatch
-	try {
-		...
-	}catch (ConversionException ex) {
-		...
-	}catch (IllegalArgumentException ex) {
-		...
-	}
-	
-	//Multicatch
-	try {
-		...
-	}catch (ConversionException ex | IllegalArgumentException ex) {
-		...
-	}
-\end{lstlisting}
-
-\begin{lstlisting}
-
-//Exists
-for(String s : getList()){
-	if(s == null){
-		return true;
-}
-
-//Com Lambda
-boolean exists = getList().stream()
-            .anyMatch(s -> s == null));
-            
-
-//Filter
-List<String> l;
-for(String s : getList()){
-	if(s.equals(...)){
-		l.add(s);
-	}
-}
-
-//Com Lambda
-List<String> l = getList().stream().filter(s.equals(...));
-
-\end{lstlisting}
 
 
 \section{Tratar Dados}
@@ -86,30 +14,70 @@ Os dados obtidos serão tratados com o software R \cite{R} versão (3.1.2) além
 
 
 \section{Projetos Escolhidos}
-Os projetos foram escolhidos baseados nos estudos realizados por \cite{Parnin:ACM2011} e \cite{Dyer:ACM2014}. Este projetos totalizaram um total de mais de 67M \acs{LOC} onde a tabela \ref{tab:ProjetosEscolhidos} exibe em detalhes as versões escolhidas.
+Os projetos foram escolhidos baseados nos estudos realizados por \cite{Parnin:ACM2011, Dyer:ACM2014}. Este projetos totalizaram um total de mais de 67M \acs{LOC} onde a tabela \ref{tab:systems} exibe em detalhes as versões escolhidas e a divisão em 3 subgrupos.
 
 
-\begin{table}[ht]
-	\centering
+\begin{table}[ht!] \footnotesize
+\centering
 	\caption{Projetos Escolhidos}
-	\label{tab:ProjetosEscolhidos}
-	\begin{tabular}{c|c|c}
-		\hline \hline
-		\textbf{Projeto}    &   \textbf{Versão} & \textbf{Quantidade Releases}\\ \
-	      Ant & 1.0 até 1.9.6 & 33\\
-	      Checkstyle & 4.4 até 6.8.1 & 21\\
-	      CommonsCollections & 1.0 até 4.4.0-alpha1 & 9\\
-	      FindBugs & 1.2.1 até 3.0.1 & 13\\
-	      FreeMind & 0.0.até 1.0.1 & 18\\
-	      Hibernate & 4.2.1 até 5.0.0 & 24\\
-	      JBoss & 3.2.8 até 9.0.1 & 25\\
-	      Jetty & 5.1.8 até 9.3.2 & 65\\
-	      Log4j & 2.0 até 2.3 & 19\\
-	      Spring & 3.0.0M1 até 4.2.0.RC2 & 72\\
-	      SquirrelSql & 2.3.2 até 3.2.3 & 4\\
-	      Weka & 3.6.0 até 3.6.12 & 13\\
-	      Xerces & 2.9.1 até 2.11.0 & 3\\
-	      
-      \hline
-    \end{tabular}
+	\begin{tabular}{l|lcclc}\hline
+		 & \textbf{Sisema} & \textbf{Versão} &  \textbf{LOC} \\\hline\hline
+		\multirow{22}{*}{\rotatebox[origin=c]{90}{\textbf{Application}}} 
+																 & ANT & 1.9.6 & 135741\\
+																 & ANTLR  & 4.5.1 & 89935 \\
+																 & Archiva  & 2.2.0 & 84632\\
+																 & Checkstyle & 1.0 & 82163\\
+																 & Eclipse & R4\_5 & 13429\\
+																 & Eclipse-CS & 6.9.0 & 20426\\
+																 & FindBugs & 3.0.1 & 131351\\
+																 & FitNesse & 20150814 & 72836\\
+																 & Free-Mind & 1.0.1 & 67357\\
+																 & Gradle & 2.7& 193428\\
+																 & GWT & 2.7.0 & 15421\\
+																 & Ivy & 2.4.0 & 72630\\
+																 & jEdit & 5.2.0 & 118492\\
+						   									     & Jenkins & 1.629 & 113763\\
+																 & JMeter & 2.13 & 111317\\
+																 & Maven & 3.3.3 & 78476\\
+																 & Openmeetings & 3.0.6 & 50496\\
+																 & Postgree JDBC & 9.4.1202 & 43596\\ 
+																 & Sonar & 5.0.1 & 362284\\
+																 & Squirrel & 3.4.0 & 252997\\
+																 & Vuze & 5621-39 & 608670\\
+																 & Weka & 3.6.12 & 274978\\
+																 \hline
+					
+					\multirow{18}{*}{\rotatebox[origin=c]{90}{\textbf{Library}}} 
+																  & Axis & 1.4 & 121820\\		
+																  & Commons Collections & 4.4.0 & 51622\\
+																  & Crawler4j & 4.1 & 3986\\
+																  & Hibernate & 5.0.1 & 541116\\
+																  & Isis & 1.9.0& 262247\\
+																  & JClouds & 1.9.1 & 301592\\
+																  & JUnit & 4.1.2 & 26456\\
+																  & Log4j & 2.2 & 69525\\
+   						   									      & MyFaces & 2.2.8 & 222865& \\
+																  & Quartz & 2.2.1 & 31968\\
+																  & Spark & 1.5.0 & 31282\\
+																  & Spring-Framework & 4.2.1 & 531757\\
+																  & Storm & 0.10.0 & 98344\\
+															      & UimaDucc & 2.0.0 & 96020\\
+																  & Wicket & 7.0.0 & 211618\\
+																  & Woden & 1.0 & 29348\\
+																  & Xerces & 2.11.0 & 126228\\	
+																  \hline		
+																					 
+					\multirow{8}{*}{\rotatebox[origin=c]{90}{\textbf{Server - Database}}} 
+																  & Cassandra & 2.2.1 & 282336\\	
+																  & Hadoop & 2.6.1 & 896615\\
+						   									      & Jetty & 9.3.2 & 299923\\
+																  & Lucene & 5.3.1 & 506711\\
+						   									      & Tomcat & 8.0.26 & 287897\\
+						   									      & UniversalMedia Server & 5.2.2 & 54912\\
+						   									      & Wildfly & 9.0.1 & 392776\\ 
+						   									      & Zookeeper & 3.4.6 & 61708\\ 
+						   									      \hline		
+
+	\label{tab:systems}
+	\end{tabular}
 \end{table}

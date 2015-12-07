@@ -7,17 +7,14 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces \IeC {\'A}rvore de parser.}}{18}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces \IeC {\'A}rvore AST.}}{19}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Arquitetura geral do software.}}{24}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Organiza\IeC {\c c}\IeC {\~a}o dos Visitors.}}{25}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Project analyser.}}{26}{figure.3.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o de \textit {Lambda} em testes unit\IeC {\'a}rios.}}{32}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Ocorr\IeC {\^e}ncias de Filter e Exists nos Projetos.}}{33}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Ocorr\IeC {\^e}ncias de Filter nas Vers\IeC {\~o}es do Spring.}}{33}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Ocorr\IeC {\^e}ncias de Exists nas Vers\IeC {\~o}es do Spring.}}{34}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Oportunidades de \textit {Multicatch} nos projetos.}}{34}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Oportunidades de \textit {Multicatch} nos projetos.}}{36}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Oportunidades de \textit {Try with Resource} nos projetos.}}{37}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Oportunidades de \textit {Switch with String} nos projetos.}}{38}{figure.5.8}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o de \textit {Lambda} em testes unit\IeC {\'a}rios.}}{29}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Ocorr\IeC {\^e}ncias de Filter e Exists nos Projetos.}}{30}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Ocorr\IeC {\^e}ncias de Filter nas Vers\IeC {\~o}es do Spring.}}{30}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Ocorr\IeC {\^e}ncias de Exists nas Vers\IeC {\~o}es do Spring.}}{31}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Oportunidades de \textit {Multicatch} nos projetos.}}{31}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Oportunidades de \textit {Multicatch} nos projetos.}}{33}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Oportunidades de \textit {Try with Resource} nos projetos.}}{34}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Oportunidades de \textit {Switch with String} nos projetos.}}{35}{figure.5.8}
 \addvspace {10\p@ }
