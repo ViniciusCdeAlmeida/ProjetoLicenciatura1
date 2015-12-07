@@ -91,12 +91,15 @@ public class Visitor<T> extends ASTVisitor implements IVisitor<T> {
 \end{lstlisting}
 
 
-A tabela:~\ref{tab:VisitorsCriados} detalha os 18 \textit{Visitors} criados para a realização deste trabalho com suas respectivas atribuições. Para exemplificar a criação de \textit{Visitors} esta etapa é composta de 4 passos os quais serão exemplificados de maneira detalhada utilizando o \textit{TryStatementVisitor} como modelo.
+A tabela:~\ref{tab:VisitorsCriados} detalha os 18 \textit{Visitors} criados com a respectiva descrição do trabalho ralizado. Como forma de exemplificar a criação de um \textit{Visitors}, etapa a qual é composta de 4 passos quo serão demonstrados a seguir.
 
-A pesquisa de \textit{trys} onde será minerado a adoção de \textit{resources, multicatch} e a oportunidade de utilizar \textit{multicatch} em blocos \textit{trys} que contenham \textit{catchs} aninhados, neste caso de oportunidades os \textit{catchs} são testados por igualdade mas é trivial a utilização de um algoritmo mais avançado que teste a similaridade.
+A investigação para saber como o tratamento de exceção Java tem sido utilizado acarretou na criação de um \textit{Visitor} específico para este fim, \textit{TryStatementVisitor}, responsável por pesquisar este mecanismo o qual pode contar com alguma evoluções ao logo do histórico da linguagem Java. A pesquisa é iniciada encontrando blocos \textit{trys/catch}, onde destes será coletadas as infomações referentes a adoção de \textit{resources} e oportunidade de utilizar \textit{multicatch} em blocos \textit{trys} que contenham \textit{catchs} iguais ainhados.
+%, neste caso de oportunidades os \textit{catchs} são testados por igualdade mas é trivial a utilização de um algoritmo mais avançado que teste a similaridade.
+
+Criaçãd do \textit{Visitor TryStatementVisitor} com exemplo.
 
 	\begin{enumerate}
-		\item Criar a classe modelo que receberá os dados a serem armazenados pela pesquisa dos \textit{Visitors}, basicamente todas as classes são compostas de \textit{getters} e \textit{setters} e deve ser declaradas no pacote  \textit{\textbf{br.unb.cic.sa.model}}.
+		\item Inicialmente é necessário criar a classe modelo onde esta terá atribuição de receber os dados que serão extraídos pelos \textit{Visitors}, basicamente as classes modelos são compostas de \textit{getters} e \textit{setters} e são declaradas no pacote  \textit{\textbf{br.unb.cic.sa.model}}.
 			\begin{lstlisting}
 package br.unb.cic.sa.model;
 
@@ -118,7 +121,7 @@ public class TryStatementData  {
 			\end{lstlisting}
 			
 			
-		\item Criação do \textit{Visitor}, basta criar a classe no pacote \textit{\textbf{br.unb.cic.sa.visitors}} e extendendo da classe parametrizada \textit{\textbf{Visitor<TryStatementData>}} onde o parâmetro é a classe modelo declarada anteriormente.
+		\item Em seguida, é concebida a criação do \textit{Visitor} no pacote \textit{\textbf{br.unb.cic.sa.visitors}} onde esta nova classe será extendida da classe parametrizada \textit{\textbf{Visitor<TryStatementData>}} apresentada anteriormente onde a parametrização desta classe é o modelo criado anteriormente.
 			
 			\begin{lstlisting}
 package br.unb.cic.sa.visitors;
@@ -139,7 +142,7 @@ public class TryStatementVisitor extends Visitor<TryStatementData> {
 	}
 
 	@Override
-	public boolean visit(TryStatement node) {
+	public boolean visit(s node) {
 
 		TryStatementData t = new TryStatementData(this.file, unit.getLineNumber(node.getStartPosition()),
 				unit.getLineNumber(node.getStartPosition() + node.getLength()));
@@ -179,8 +182,10 @@ public class TryStatementVisitor extends Visitor<TryStatementData> {
 }
 			\end{lstlisting}
 			
+		 Na linha24, é testada a condição para saber se este bloco fez adoção de \textit{Resouce}. Na linha 30 é verificado que o bloco é um possível caso de \textit{multicatch} pois existe mais de um bloco. Na linha 39 tem-se o método \textit{checkSimilarity} o qual efetua a comparação dos blocos \textit{Catch} aninhados em um \textit{try}, entretando de forma trivial na linha 46, pode ser utilizado um algoritmo mais sofisticado para testar sim a similaridade modeificando apenas o método \textbf{\textit{checkSimilarity}} da classe \textit{\textbf{SimilarityChecker}} o que não resulta em mudanças neste \textit{Visitor}.
+		
 	
-			\item Declarar o cabeçalho no \textit{resource/Beans.xml} do \textit{Spring} que estará presente no \acs{CSV} de saída. Onde este cabeçalho é composto pelos atributos declarados no modelo que irá conter os dados extraídos pelo seu respectivo \textit{Visitor}.
+			\item Em seguida deve-se declarar o cabeçalho no arquivo \textit{resource/Beans.xml} do \textit{Spring} que estará presente no \acs{CSV} de saída. Onde este cabeçalho é composto pelo dados que serão extraídos pelos \textit{Visitors} e armazenados no modelo criado.
 			
 			\begin{lstlisting}
 <bean id="tryStatementData" class="br.unb.cic.sa.model.CSVData">
@@ -191,7 +196,7 @@ public class TryStatementVisitor extends Visitor<TryStatementData> {
 			\end{lstlisting}
 			
 			
-			\item Para finalizar a criação resta somente declarar o \textit{Visitor} como um \textit{bean} do \textit{Spring} para que este seja injetado no projeto e assim realize sua pesquisa.
+			\item Por fim declarar o \textit{Visitor} como um \textit{bean} do \textit{Spring} para que este seja injetado no projeto e assim realize sua pesquisa.
 			
 			\begin{lstlisting}
 <bean id="tryStatementVisitor" class="br.unb.cic.sa.visitors.TryStatementVisitor">
