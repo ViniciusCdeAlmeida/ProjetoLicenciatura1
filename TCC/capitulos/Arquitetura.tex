@@ -1,5 +1,22 @@
 \chapter {Ferramentas de Análise Estática}
-%A \acs{IDE} adotada foi o eclipse devido ao favorecimento do desenvolvimento rápido com recursos que podem ser integrados através de {\it plugins}, além disso sua portabilidade para outras plataformas sem afetar os {\it plugins} adicionados favorecendo o desenvolvimento independente da plataforma escolhida pelo desenvolvedor.
+
+Projetar analisador estático que verifique o código desenvolvido não é uma simples tarefa, entretanto com a infraestrutura provida pelo EclipseJDT~\cite{EclipseJDT} tornou menos árduo esta jornada possibilitando projetar uma arquitetura para este analisador onde o desenvolvedor concentre-se apenas na produção de seus \textit{Visitors}. 
+
+Um ponto de estrema relevância foi tornar este analisador independente de qualquer plataforma e \acs{IDE} foi um ponto vital para o desenvolvimento deste projeto que não tem como intuito ser plugin de qualquer \acs{IDE} o que acarretaria na limitação do seu uso a um cenário específico. Utilizando a portabilidade nativa entre as plataformas provido pela linguagem Java este trablho foi concebido com intuíto de atender ao mais diversos desenvolvedores quer utilizem linux, windows, mac ou qualquer outro sistema operacional que tenha suporte para Java.
+
+A análise tem como início a seleção de projetos, nesse caso seleção em repositórios públicos, onde após o download é informado analisador o diretório raíz onde estes estão localizados. Após é iniciado uma listagem dos arquivos fonte Java contidos nos projeto e contabilizados o total de \acs{LOC} e criado uma árvore sintática para cada arquivo encontrado através de um \textit{parser} provido pela biblioteca EclipseJDT~\cite{EclipseJDT}. Em seguida os \textit{Visitors} são instanciados com o objetivo de percorrer os nós destas árvores para pesquisar por contruções de código previamente determinadas.
+
+Todas as contruções pesquisadas quando encontradas pelos \textit{Visitors} são armazenadas temporariamente enquanto o analisador verifica todo projeto, quando é verificado a última árvore sintática pelos \textit{Visitors} é iniciado o processo de exportar os dados encontrados para um arquivo \acs{CSV} o conteúdo relevate destes blocos, a Figura:~\ref{fig:Arquitetura} demostra de maneira clara o funcionamento do analisador. Após a exportação dos dados o analisador inicia todo processo novamente caso exista mais de um projeto.
+
+Devido ao mescanismo de \textit{reflection} proveniente da linguagem Java, o desenvolvedor não tem a necessidade de implementar código para exportação de dados tendo em vista que isto ocorre automaticamente através da introspecção realizada pelo analisador extraíndo os dados armazendados pelos \textit{Visitors}.
+
+	\begin{figure}[h]
+		\center
+		\includegraphics[scale=0.52]{Imagens/Arquitetura}
+		\label{fig:Arquitetura}
+		\caption{Funcionamento analisador estático.}
+	\end{figure}
+
 
 \section{Arquitetura}
 
@@ -28,13 +45,13 @@
 			
 			LambdaExpressionVisitor & Pesquisa casos de utilização da expressões lambda. \\ \hline
 			
-			LockVisitor & \\ \hline
+			LockVisitor & Verifica se nos métodos declarados existe alguma variável chamada Lock, ReentrantLock, ReadLock ou WriteLock. \\ \hline
 			
-			MapPatternVisitor & Pesquisa \textit{EnhancedFor} que iteram sobre uma coleção onde seja aplicado algum método sobre os items desta coleção caracterizando o Map. \\ \hline
+			MapPatternVisitor & Pesquisa \textit{EnhancedFor} que iteram sobre uma coleção onde seja aplicado algum método sobre os items desta coleção. \\ \hline
 			
-			MethodCallVisitor & \\ \hline
+			MethodCallVisitor & Verifica onde esta sendo utilizado reflection no projeto.\\ \hline
 			
-			MethodDeclarationVisitor & \\ \hline
+			MethodDeclarationVisitor & Coleta informações sobre os métodos declarados nos projetos. \\ \hline
 			
 			ScriptingEngineVisitor & Verifica se o projeto faz chamada a algum \textit{Scripting}.\\ \hline
 			
@@ -42,7 +59,6 @@
 			
 			SwitchStringOpportunitiesVisitor &  Pesquisa \textit{If-Else} aninhados onde no \textit{If} contenha \textit{String}, caracterizando uma possibilidade de adoção de \textit{Switch} com \textit{String}.\\ \hline
 			
-			ThisExpressionVisitor &	 \\ \hline
 			
 			TryStatementVisitor & Pesquisa \textit{trys} que utilizar \textit{resource}, adoção de \textit{multicatch} e \textit{trys} que possuem \textit{catchs} aninhados.\\ \hline
 			
@@ -51,14 +67,15 @@
 \end{table}
 
 
-Conforme seja necessário a criação de novos \textit{Visitors}, a arquitetura deste analisador requer que todos sejam  obrigatoriamente extendidos da classe \textit{Visitor.java} a qual por sua vez extende da \acs{API}  \textit{ASTVisitor}, e implementa uma interface parametrizada que possui um coleção do tipo, \textit{\textbf{<T>}}, onde esta terá a responsabilidade de armazenar os dados minerados pelos \textit{Visitors}.
+Conforme mencioando anteriormente, nos \textit{Visitors} é onde deve ser concentrado todo esforço para extair as informações com a maior confiabilidade possível. Efetuar a criação de novos \textit{Visitor} quando necessário na atual arquitetura deste analisador requer que todos sejam  obrigatoriamente extendidos da classe \textit{Visitor.java} a qual por sua vez extende da \acs{API}  \textit{ASTVisitor}, e implementa uma interface parametrizada que possui um coleção do tipo, \textit{\textbf{<T>}}, onde esta terá a responsabilidade de armazenar os dados minerados pelos \textit{Visitors}. 
+
+Os \textit{Visitors} criados necessitam somente que cada \textit{Visitor} sobrescreva o método \textit{public boolean visit} que é um método abstrato da classe \textit{ASTVisitor} de acordo com sua necessidade.
 
 \begin{lstlisting}
 package br.unb.cic.sa.visitors;
 
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.CompilationUnit;
-
 import br.unb.cic.sa.model.Data;
 
 public class Visitor<T> extends ASTVisitor implements IVisitor<T> {
@@ -69,29 +86,21 @@ public class Visitor<T> extends ASTVisitor implements IVisitor<T> {
 	public Visitor() {}
 	
 	@Override
-	public void setUnit(CompilationUnit unit) {
-		this.unit = unit;
-	}
+	public void setUnit(CompilationUnit unit) { this.unit = unit; }
 	
 	@Override
-	public void setCollectedData(Data<T> colletion) {
-		this.collectedData = colletion;
-	}
+	public void setCollectedData(Data<T> colletion) { this.collectedData = colletion; }
 	
 	@Override
-	public void setFile(String file) {
-		this.file = file;
-	}
+	public void setFile(String file) {	this.file = file; }
 
 	@Override
-	public Data<T> getCollectedData() {
-		return collectedData;
-	}	
+	public Data<T> getCollectedData() {	return collectedData;	}	
 }
 \end{lstlisting}
 
 
-A tabela:~\ref{tab:VisitorsCriados} detalha os 18 \textit{Visitors} criados com a respectiva descrição do trabalho ralizado. Como forma de exemplificar a criação de um \textit{Visitors}, etapa a qual é composta de 4 passos quo serão demonstrados a seguir.
+A tabela:~\ref{tab:VisitorsCriados} detalha os 17 \textit{Visitors} criados com a respectiva descrição do trabalho ralizado. Como forma de exemplificar a criação de um \textit{Visitors}, etapa a qual é composta de 4 passos quo serão demonstrados a seguir.
 
 A investigação para saber como o tratamento de exceção Java tem sido utilizado acarretou na criação de um \textit{Visitor} específico para este fim, \textit{TryStatementVisitor}, responsável por pesquisar este mecanismo o qual pode contar com alguma evoluções ao logo do histórico da linguagem Java. A pesquisa é iniciada encontrando blocos \textit{trys/catch}, onde destes será coletadas as infomações referentes a adoção de \textit{resources} e oportunidade de utilizar \textit{multicatch} em blocos \textit{trys} que contenham \textit{catchs} iguais ainhados.
 %, neste caso de oportunidades os \textit{catchs} são testados por igualdade mas é trivial a utilização de um algoritmo mais avançado que teste a similaridade.
