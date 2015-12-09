@@ -58,8 +58,7 @@ Devido ao mescanismo de \textit{reflection} proveniente da linguagem Java, o des
 			SwitchStatementVisitor & Pesquisa \textit{Switchs} que utlizam \textit{String} como parâmetro.\\ \hline
 			
 			SwitchStringOpportunitiesVisitor &  Pesquisa \textit{If-Else} aninhados onde no \textit{If} contenha \textit{String}, caracterizando uma possibilidade de adoção de \textit{Switch} com \textit{String}.\\ \hline
-			
-			
+		
 			TryStatementVisitor & Pesquisa \textit{trys} que utilizar \textit{resource}, adoção de \textit{multicatch} e \textit{trys} que possuem \textit{catchs} aninhados.\\ \hline
 			
 			TypeDeclarationVisitor & Pesquisa todos os tipos declarados.\\ \hline 		
@@ -191,7 +190,7 @@ public class TryStatementVisitor extends Visitor<TryStatementData> {
 }
 			\end{lstlisting}
 			
-		 Na linha24, é testada a condição para saber se este bloco fez adoção de \textit{Resouce}. Na linha 30 é verificado que o bloco é um possível caso de \textit{multicatch} pois existe mais de um bloco. Na linha 39 tem-se o método \textit{checkSimilarity} o qual efetua a comparação dos blocos \textit{Catch} aninhados em um \textit{try}, entretando de forma trivial na linha 46, pode ser utilizado um algoritmo mais sofisticado para testar sim a similaridade modeificando apenas o método \textbf{\textit{checkSimilarity}} da classe \textit{\textbf{SimilarityChecker}} o que não resulta em mudanças neste \textit{Visitor}.
+		 Na linha24, é testada a condição para saber se este bloco fez adoção de \textit{Resouce}. Na linha 30 é verificado que o bloco é um possível caso de \textit{multicatch} pois existe mais de um bloco. Na linha 39 tem-se o método \textit{checkSimilarity} o qual efetua a comparação dos blocos \textit{Catch} aninhados, entretando de forma trivial na linha 46, pode ser utilizado um algoritmo mais sofisticado para testar por similaridade modificando apenas o conteúdo do método \textbf{\textit{checkSimilarity}} da classe \textit{\textbf{SimilarityChecker}} o que não resulta em mudanças neste \textit{Visitor}.
 		
 	
 			\item Em seguida deve-se declarar o cabeçalho no arquivo \textit{resource/Beans.xml} do \textit{Spring} que estará presente no \acs{CSV} de saída. Onde este cabeçalho é composto pelo dados que serão extraídos pelos \textit{Visitors} e armazenados no modelo criado.
@@ -217,9 +216,115 @@ public class TryStatementVisitor extends Visitor<TryStatementData> {
 
 
 
+\subsection{Exportar Dados}
+A exportação dos dados para \acs{CSV} é realizado de forma automática utilizando o mecanismo de \textit{reflection} fornecido por Java. A classe parametrizada \textbf{\textit{CSVData<T>}} no pacote \textbf{\textit{br.unb.cic.sa.model}} implementa a interface \textit{\textbf{Data<T>}} onde \textbf{\textit{<T>}} faz  aos modelos declarados para as informações coletadas.
 
-\subsection{Dados Coletados}
+\begin{lstlisting}
+package br.unb.cic.sa.model;
 
+public interface Data<T> {
+	public void setProject(Project project);
+	public void addValue(T value);
+	public void export();
+	public int size();
+	public void clean();
+}
+\end{lstlisting}
+
+
+Onde o atributo \textit{String[] head} é injetado pelo \textit{Spring} pois fora declarado anteriormente na criação do visitor. O método \textbf\textit{{export()}}, na linha 23, é o método resposável para exportar os dados em seus respectivos \acs{CSV} pois este método recupera as informações contidas nas coleções populadas pelos \textit{Visitors} e com \textit{reflection} captura os campos declarados em especial para os métodos quais são pré-fixados com \textit{get ou is} que terão seus valores capturados para que sejam exportados.
+
+\begin{lstlisting}
+package br.unb.cic.sa.model;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+public class CSVData<T> implements Data<T>{
+
+	private Project project;
+	private String fileName;
+	private String outDir;
+	private String[] head; 
+	private List<T> data;
+
+	...
+	
+	@Override
+	public void export() {
+		
+		try (FileWriter writer = new FileWriter(this.makeCsv(head), true)){
+		
+			StringBuffer str = new StringBuffer("");
+
+			if(data == null) {
+				return;
+			}
+			
+			for(T value : data) {
+				str = new StringBuffer("");
+				
+				str.append(project.getTypeOfProject());
+				str.append(";");
+				str.append(project.getBefore());
+				str.append(";");
+				str.append(project.getProjectName());
+				str.append(";");
+				str.append(project.getProjectRevision());
+				str.append(";");
+			
+				for(Field f: value.getClass().getDeclaredFields()){
+										
+					String fieldName = f.getName();
+					String prefix = "get";
+					
+					if(f.getType().isPrimitive() &&
+					   f.getType().equals(Boolean.TYPE)) {
+						prefix = "is";
+					}
+					
+					String methodName = prefix + 
+								Character.toUpperCase(fieldName.charAt(0)) +
+								fieldName.substring(1);
+										
+					try {
+						Method m = value.getClass().getDeclaredMethod(methodName);						
+						str.append(m.invoke(value));
+						str.append(";");
+					}catch(
+							NoSuchMethodException | 
+							IllegalAccessException |
+							IllegalArgumentException |
+							InvocationTargetException e) {
+							
+						throw new RuntimeException("Type " + 
+											value.getClass().getName() +
+											" must have a method named " +
+											 methodName);
+					}
+				}
+				
+				writer.append(str.toString());
+				writer.append("\n");
+				
+			}
+		
+			writer.flush();
+		
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+\end{lstlisting}
 
 %O Eclipse Java {\it development tools} (JDT), fornece plugins que implementam a IDE eclipse servindo com apoio para o desenvolvimento de qualquer aplicativo Java, inclusive plugins para a própria IDE Eclipse. São cinco os componentes que compõem o JDT, e cada componente pode operar com um projeto independente, que são:
 
