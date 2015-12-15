@@ -24,7 +24,7 @@ Os dados contidos no arquivos \acs{CSV} foram processados e analisados com o sof
 \centering
 	\caption{Projetos Escolhidos}
 	\begin{tabular}{l|lcclc}\hline
-		 & \textbf{Sistema} & \textbf{Versão} &  \textbf{LOC} \\\hline\hline
+		 & \textbf{Sisema} & \textbf{Versão} &  \textbf{LOC} \\\hline\hline
 		\multirow{22}{*}{\rotatebox[origin=c]{90}{\textbf{Application}}} 
 												 & ANT & 1.9.6 & 135741\\
 												 & ANTLR  & 4.5.1 & 89935 \\
