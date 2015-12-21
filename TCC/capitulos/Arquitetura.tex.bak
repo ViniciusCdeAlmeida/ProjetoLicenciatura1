@@ -1,5 +1,30 @@
 \chapter {Ferramentas de Análise Estática}
 
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.55]{Imagens/Arquitetura}
+	\label{fig:Arquitetura}
+	\caption{Alto nível de funcionamento do analisador estático.}
+\end{figure}
+
+ No mais elevado nível de abstração do analisador estático a Figura:~\ref{fig:Arquitetura} demonstra seu funcionamento que é encontrar um código fonte Java, criar um \textit{Parse} que é uma representação intermediária deste código fonte em seguida é aplicado uma série de mecanismos de análise estática para coletar as informações de interesse no código fonte e por fim é gerado relatórios~\acs{CSV}.
+
+Atualmente existem diversas tecnologias capazes de prover ferramentas para implementar um analisador estático entretanto devido a maior experiência com uso da linguagem Java, neste projeto foi utilizado a infraestrutura da plataforma Eclipse JDT, \textit{Eclipse Java Development Tools}~\cite{EclipseJDT}. O EclipseJDT~\cite{EclipseJDT} fornece um conjunto de ferramentas que contribuem com elaboração uma análise sobre o código Java. \textcolor{red}{Melhorar o detalhamento da JDT.}
+
+A biblioteca JDT é composta 4 componentes \textit{APT, Core, Debug} e \textit{UI}, neste projeto a adoção deu-se através do \textit{JDT Core} que dispõe de uma modelo Java para a navegação dos elementos de uma árvore sintática,~\acs{AST}, onde os elementos podem ser pacotes, tipos, métodos e atributos. Também existe API pronta para a manipulação de código fonte. Para a manipulação de código fonte esta biblioteca fornece 122 classes que podem auxiliar na investigação direta de contruções onde destes 22 são \textit{statments} que ajudam a encontrar ocorrências de palavras reservadas da linguagem Java.
+
+O Eclipse JDT~\cite{EclipseJDT} fornece para este projeto um \textit{Parser} que produz uma representação intermediária baseada em um conjunto de classes Java que representam uma ~\acs{AST} de um código fonte. Fornece ainda uma infraestrutura de \textit{visitors}~\cite{Gamma:1995} que possibilitam a análise estática de código fonte.
+
+
+
+\textcolor{red}{Um \textit{visitor}~\cite{Gamma:1995} detalhar....}
+
+
+
+
+
+
+
 Projetar um analisador estático para extrair informações de softwares desenvolvido não é uma simples tarefa, entretanto EclipseJDT~\cite{EclipseJDT} prove uma abstração significativa tornado menos árdua este projeto. O que pode possibilitar projetar uma arquitetura mais robusta para este analisador onde o foco de qualquer desenvolvedor que deseje utilizá-lo concentre-se apenas na produção de seus \textit{Visitors}. 
 
 Um ponto de extrema relevância foi tornar este analisador independente de qualquer plataforma e \acs{IDE} foi um ponto vital para o concepção deste projeto que não tem como intuito ser plugin de qualquer \acs{IDE} o que acarretaria na limitação do seu uso a um cenário específico mas sim uma ferramenta para apoiar no desenvolvimento de um software com construções atuais. Utilizando a portabilidade nativa entre as plataformas provido pela linguagem Java este trabalho foi concebido com intuito de atender ao mais diversos desenvolvedores quer utilizem Linux, Windows, Mac ou qualquer outro sistema operacional que tenha suporte para Java.
@@ -10,12 +35,12 @@ Todas as construções pesquisadas quando encontradas pelos \textit{Visitors} s�
 
 Devido ao mecanismo de \textit{reflection} proveniente da linguagem Java, o desenvolvedor não tem a necessidade de implementar código para exportação de dados tendo em vista que isto ocorre automaticamente através da introspecção realizada pelo analisador extraindo os dados armazenados pelos \textit{Visitors}.
 
-	\begin{figure}[h]
-		\center
-		\includegraphics[scale=0.52]{Imagens/Arquitetura}
-		\label{fig:Arquitetura}
-		\caption{Funcionamento analisador estático.}
-	\end{figure}
+%	\begin{figure}[h]
+%		\center
+%		\includegraphics[scale=0.52]{Imagens/Arquitetura}
+%		\label{fig:Arquitetura}
+%		\caption{Funcionamento analisador estático.}
+%	\end{figure}
 
 
 \section{Arquitetura}
@@ -101,7 +126,7 @@ public class Visitor<T> extends ASTVisitor implements IVisitor<T> {
 
 A tabela:~\ref{tab:VisitorsCriados} detalha os 17 \textit{Visitors} criados com a respectiva descrição do trabalho realizado. Como forma de exemplificar a criação de um \textit{Visitors}, etapa a qual é composta de 4 passos quo serão demonstrados a seguir.
 
-A investigação para saber como o tratamento de exceção Java tem sido utilizado acarretou na criação de um \textit{Visitor} específico para este fim, \textit{TryStatementVisitor}, responsável por pesquisar este mecanismo o qual pode contar com alguma evoluções ao logo do histórico da linguagem Java. A pesquisa é iniciada encontrando blocos \textit{trys/catch}, onde destes será coletadas as informações referentes a adoção de \textit{resources} e oportunidade de utilizar \textit{multicatch} em blocos \textit{trys} que contenham \textit{catchs} iguais ainhados.
+A investigação para saber como o tratamento de exceção Java tem sido utilizado acarretou na criação de um \textit{Visitor} específico para este fim, \textit{TryStatementVisitor}, responsável por pesquisar este mecanismo o qual pode contar com alguma evoluções ao logo do histórico da linguagem Java. A pesquisa é iniciada encontrando blocos \textit{trys/catch}, onde destes será coletadas as informações referentes a adoção de \textit{resources} e oportunidade de utilizar \textit{multicatch} em blocos \textit{trys} que contenham \textit{catchs} iguais aninhados.
 %, neste caso de oportunidades os \textit{catchs} são testados por igualdade mas é trivial a utilização de um algoritmo mais avançado que teste a similaridade.
 
 Criação do \textit{Visitor TryStatementVisitor} com exemplo.
