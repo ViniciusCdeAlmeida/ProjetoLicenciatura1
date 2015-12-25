@@ -112,10 +112,9 @@ Também focando na flexibilidade do sistema, a geração de relatórios é dada 
 
 A geração dos relatórios ocorre utilizando a classe \textbf{CSVData<T>} onde o tipo \textbf{<T>} é o mesmo utilizado modelar os dados coletados pelos \textit{Visitors}. Os dados são obtidos através dos métodos \textit{getters} destas classes modelos e exportados para arquivos ~\acs{CSV}, nesta classe também existe a injeção de dependência que é somente o cabeçalho do arquivo ~\acs{CSV} o qual é declarado no \textit{beans.xml} ao mesmo tempo em que o \textit{Visitor} é declarado, a Figura:~\ref{fig:DiagramaCSVData} exibe o diagrama de classe.
 
-O cabeçalho de cada \acs{CSV} é injetado pelo Spring no atributo \textbf{head:String[]}. Logo em seguida o método \textit{export()} da classe \textbf{CSVData<T>} inicia seu trabalho realizando introspecção recuperando de uma coleção dos dados armazenados do projeto, lista \textbf{Data<T>}. Após a recuperação destes dados é realizada o \textit{reflection} para recuperar cada classe modelo e com isso detectar todos os métodos \textit{getters} destas classes e como isso imprimir-los no relatório que é o arquivo \acs{CSV} de saída. 
+O cabeçalho de cada \acs{CSV} é injetado pelo Spring no atributo \textbf{head:String[]}. Logo em seguida o método \textit{export()} da classe \textbf{CSVData<T>} inicia seu trabalho realizando introspecção recuperando de uma coleção dos dados armazenados do projeto, lista \textbf{Data<T>}. Após a recuperação destes dados é realizada o \textit{reflection} para recuperar cada classe modelo e com isso detectar todos os métodos \textit{getters} destas classes e como isso imprimir-los no relatório que é o arquivo \acs{CSV} de saída. O Listing:~\ref{lst:reflection} demonstra o uso de \textit{reflection} para gerar os relatórios.
 
-\begin{lstlisting}
-
+\begin{lstlisting}[caption={Reflection na geração de relatório.}\label{lst:reflection},language=Java] 
 public class CSVData<T> implements Data<T>{
 	...
 	@Override

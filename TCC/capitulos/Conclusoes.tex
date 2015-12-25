@@ -1,24 +1,11 @@
 \chapter{Considerações Finais e Projeto Fututos}
-Dada uma redução significativa de código duplicado no caso da adoção de \textit{multicatch} é impossível acreditar que projetos tão renomado não fazem uso desta \textit{feature}. Ignorando uma característica que prove um código mais conciso e elegante conforme a proposta original desta \textit{feature} pela Oracle em 2007. Entretanto vale ressaltar ainda como ponto vital no desenvolvimento que equipes não tem a evolução da linguagem como ponto relevante no desenvolvimento de seu produto. 
-Conforme relatado pela equipe do Spring em seu forum a adoção de características como \textit{Lambda} ou \textit{Multicatch} ainda não foram adotadas pois seus projetos são desenvolvidos em Java7 e que ainda não faz total uso das \textit{features} de Java7 o que leva a crer que somente farão adesão de features de Java8 quando utilizarem totalmente Java7.
+%Dada uma redução significativa de código duplicado no caso da adoção de \textit{multicatch} é impossível acreditar que projetos tão renomado não fazem uso desta \textit{feature}. Ignorando uma característica que prove um código mais conciso e elegante conforme a proposta original desta \textit{feature} pela Oracle em 2007. Entretanto vale ressaltar ainda como ponto vital no desenvolvimento que equipes não tem a evolução da linguagem como ponto relevante no desenvolvimento de seu produto. 
+%Conforme relatado pela equipe do Spring em seu forum a adoção de características como \textit{Lambda} ou \textit{Multicatch} ainda não foram adotadas pois seus projetos são desenvolvidos em Java7 e que ainda não faz total uso das \textit{features} de Java7 o que leva a crer que somente farão adesão de features de Java8 quando utilizarem totalmente Java7.
 
 \section{Projeto Futuro}
-Existe também a possibilidade da extensão do anaslisador para indentificar \textit{multicatch} por similaridade onde atualmente essa tarefa é realizada por igualdade. Com um algoritmo eficiente que detecte a similaridade com certeza a eficiência dessa \textit{feature} irá crescer consideravelmente o que acarretará em um \textit{refactoring} ainda mais significativo.Existe ainda a possibilidade de ampliar a pesquisa para encontrar objetos que contém método \textit{close} dentro de blocos \textit{Try's} o que acarretaria em um outro \textit{refactoring} visando migrar estes objetos para os \textit{resources} que estes pode receber.
+%Existe também a possibilidade da extensão do anaslisador para indentificar \textit{multicatch} por similaridade onde atualmente essa tarefa é realizada por igualdade. Com um algoritmo eficiente que detecte a similaridade com certeza a eficiência dessa \textit{feature} irá crescer consideravelmente o que acarretará em um \textit{refactoring} ainda mais significativo.Existe ainda a possibilidade de ampliar a pesquisa para encontrar objetos que contém método \textit{close} dentro de blocos \textit{Try's} o que acarretaria em um outro \textit{refactoring} visando migrar estes objetos para os \textit{resources} que estes pode receber.
+%
+%Existem diversas caracterísitcas evolutivas da linguagem \textit{Java} a serem atacados tais como \textit{boilerplate} e \textit{anonymousInnerClass} que podem ser tratados com \textit{LambdaExpression}. Um projeto futuro de grande valia seria a evolução desta ferramenta para que obter um \textit{refactoring} automático de códigos ultrapassados assim possibilitando a evolulção natural de \textit{softwares} legados e \textit{opensource}.
+%
+%Como exemplo destes códigos temos o caso de \textit{EnhancedFor} que iteram sobre uma \textit{Collection} o que a evolução deste abre algumas possibilidade como a facilidade de aplicar concorrência na evolução com \textit{Lambda} o que atualmente é muito complicado adicionar concorrência em um loop.
 
-Existem diversas caracterísitcas evolutivas da linguagem \textit{Java} a serem atacados tais como \textit{boilerplate} e \textit{anonymousInnerClass} que podem ser tratados com \textit{LambdaExpression}. Um projeto futuro de grande valia seria a evolução desta ferramenta para que obter um \textit{refactoring} automático de códigos ultrapassados assim possibilitando a evolulção natural de \textit{softwares} legados e \textit{opensource}.
-
-Como exemplo destes códigos temos o caso de \textit{EnhancedFor} que iteram sobre uma \textit{Collection} o que a evolução deste abre algumas possibilidade como a facilidade de aplicar concorrência na evolução com \textit{Lambda} o que atualmente é muito complicado adicionar concorrência em um loop.
-
-\begin{lstlisting}
-//	EnhacedFor
-	List<Transaction> groceryTransactions = new Arraylist<>();
-	for(Transaction t: transactions){
-		if(t.getType() == Transaction.GROCERY){
-			groceryTransactions.add(t);
-		}
-	}
-
-//	Lambda Stream
-	List<Integer> transactionsIds = 
-		transactions.stream().filter(t -> t.getType() == Transaction.GROCERY);
-\end{lstlisting}
