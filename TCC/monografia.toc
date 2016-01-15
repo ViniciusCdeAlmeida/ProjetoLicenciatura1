@@ -9,33 +9,29 @@
 \contentsline {section}{\numberline {1.3}Metodologia}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Problema a ser Atacado}{2}{section.1.4}
 \contentsline {chapter}{\numberline {2}Fundamenta\IeC {\c c}\IeC {\~a}o}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Hist\IeC {\'o}ria da linguagem}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}Aspectos evolutivos da liguagem Java}{10}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Java 2}{10}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Java 4}{13}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Java 5}{13}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Java 6}{14}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Java 7}{14}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Java 8}{16}{subsection.2.2.6}
-\contentsline {section}{\numberline {2.3}An\IeC {\'a}lise l\IeC {\'e}xica}{17}{section.2.3}
-\contentsline {section}{\numberline {2.4}Parser}{17}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Paser JDT Eclipse}{19}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}Sintaxe abstrata}{19}{section.2.5}
-\contentsline {section}{\numberline {2.6}An\IeC {\'a}lise sem\IeC {\^a}ntica}{20}{section.2.6}
-\contentsline {section}{\numberline {2.7}Checagem de tipo}{21}{section.2.7}
-\contentsline {section}{\numberline {2.8}Checagem de estilo}{21}{section.2.8}
-\contentsline {section}{\numberline {2.9}Entendimento do c\IeC {\'o}digo}{22}{section.2.9}
-\contentsline {section}{\numberline {2.10}Verifica\IeC {\c c}\IeC {\~a}o de programa}{22}{section.2.10}
-\contentsline {section}{\numberline {2.11}Verifica\IeC {\c c}\IeC {\~a}o de propriedade}{23}{section.2.11}
-\contentsline {chapter}{\numberline {3}Ferramentas de An\IeC {\'a}lise Est\IeC {\'a}tica}{24}{chapter.3}
-\contentsline {section}{\numberline {3.1}Entrada de dados}{25}{section.3.1}
-\contentsline {section}{\numberline {3.2}An\IeC {\'a}lise Est\IeC {\'a}tica}{25}{section.3.2}
-\contentsline {section}{\numberline {3.3}Extensibilidade da Plataforma}{26}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Inje\IeC {\c c}ao de Depend\IeC {\^e}ncia}{26}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Reflection}{27}{subsection.3.3.2}
-\contentsline {chapter}{\numberline {4}Resultados}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}Generics}{29}{section.4.1}
-\contentsline {section}{\numberline {4.2}Lambda Expression}{30}{section.4.2}
-\contentsline {chapter}{\numberline {5}Considera\IeC {\c c}\IeC {\~o}es Finais e Projeto Fututos}{35}{chapter.5}
-\contentsline {section}{\numberline {5.1}Projeto Futuro}{35}{section.5.1}
-\contentsline {chapter}{Refer\^encias}{36}{section*.9}
+\contentsline {section}{\numberline {2.1}Hist\IeC {\'o}ria da linguagem}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}An\IeC {\'a}lise est\IeC {\'a}tica}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Aspectos evolutivos da liguagem Java}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Java 2}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Java 4}{13}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Java 5}{13}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Java 6}{14}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Java 7}{14}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}Java 8}{16}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}An\IeC {\'a}lise l\IeC {\'e}xica}{17}{section.2.4}
+\contentsline {section}{\numberline {2.5}Parser}{17}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Paser JDT Eclipse}{19}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Sintaxe abstrata}{19}{section.2.6}
+\contentsline {section}{\numberline {2.7}An\IeC {\'a}lise sem\IeC {\^a}ntica}{20}{section.2.7}
+\contentsline {chapter}{\numberline {3}Ferramentas de An\IeC {\'a}lise Est\IeC {\'a}tica}{22}{chapter.3}
+\contentsline {section}{\numberline {3.1}Entrada de dados}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}An\IeC {\'a}lise Est\IeC {\'a}tica}{23}{section.3.2}
+\contentsline {section}{\numberline {3.3}Extensibilidade da Plataforma}{24}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Inje\IeC {\c c}ao de Depend\IeC {\^e}ncia}{24}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Reflection}{25}{subsection.3.3.2}
+\contentsline {chapter}{\numberline {4}Resultados}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Generics}{27}{section.4.1}
+\contentsline {section}{\numberline {4.2}Lambda Expression}{28}{section.4.2}
+\contentsline {chapter}{\numberline {5}Considera\IeC {\c c}\IeC {\~o}es Finais e Projeto Fututos}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Projeto Futuro}{33}{section.5.1}
+\contentsline {chapter}{Refer\^encias}{34}{section*.9}
