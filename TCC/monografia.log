@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  14 JAN 2016 10:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  23 JAN 2016 16:29
 entering extended mode
 **monografia.tex
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.tex
@@ -840,7 +840,7 @@ File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
 LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <20> not available
 (Font)              Font shape `T1/ua1/b/n' tried instead on input line 114.
 
-<positivo_cor.pdf, id=151, 119.44624pt x 60.225pt>
+<positivo_cor.pdf, id=115, 119.44624pt x 60.225pt>
 File: positivo_cor.pdf Graphic file (type pdf)
  <use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 114.
@@ -919,22 +919,22 @@ l.132   \begin{abstract}
 [4
 
 
-] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.toc [5
-
-])
+] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.toc)
 \tf@toc=\write5
 
-[6] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.lof)
+[5
+
+] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.lof)
 \tf@lof=\write6
 
-[7
+[6
 
 ] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.lot)
 \tf@lot=\write7
 
-[8
+[7
 
-] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\siglas.tex) [9
+] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\siglas.tex) [8
 
 ]
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo1.tex
@@ -947,111 +947,33 @@ Cap\'{\i }tulo 1.
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/ProblemaASerAtaca
 do.tex [2]) [3])
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/capitulo3.tex
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/HistoriaDaLinguag
-em.tex [4]
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/AnaliseEstatica.t
+ex [4]
 Cap\'{\i }tulo 2.
+)
+(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/AnaliseLexica.tex
 [5
 
-]
-
-Package acronym Warning: Acronym `RSA' is not defined on input line 27.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
- []
-
-[6]
-
-Package acronym Warning: Acronym `JSE2' is not defined on input line 34.
-
-[7]
-
-Package acronym Warning: Acronym `JAX-WS' is not defined on input line 52.
-
-
-Package acronym Warning: Acronym `JAXB' is not defined on input line 52.
-
-
-Package acronym Warning: Acronym `STAX' is not defined on input line 52.
-
-
-Package acronym Warning: Acronym `JAXP' is not defined on input line 52.
-
-
-Package acronym Warning: Acronym `JVM' is not defined on input line 53.
-
-
-Package acronym Warning: Acronym `JVM' is not defined on input line 62.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-
- []
-
-[8]
-
-Package acronym Warning: Acronym `JVM' is not defined on input line 68.
-
-)
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/AnaliseEstatica.t
-ex [9])
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/AspectosEvolutivo
-s.tex
-
-Package acronym Warning: Acronym `DSA' is not defined on input line 5.
-
-
-Package acronym Warning: Acronym `MD5' is not defined on input line 5.
-
-
-Package acronym Warning: Acronym `RSA' is not defined on input line 5.
-
-[10]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 50.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 50.
- [11] [12
-
-] [13
-
-] [14
-
-] [15
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
-
- []
-
-[16
-
-])
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/AnaliseLexica.tex
-[17
-
-] <Imagens/Arvore.png, id=654, 533.74406pt x 577.40718pt>
+] <Imagens/Arvore.png, id=315, 533.74406pt x 577.40718pt>
 File: Imagens/Arvore.png Graphic file (type png)
 
 <use Imagens/Arvore.png>
 Package pdftex.def Info: Imagens/Arvore.png used on input line 22.
 (pdftex.def)             Requested size: 364.19667pt x 394.00613pt.
- [18 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Arvore.png>]
-<Imagens/ArvoreAST.png, id=667, 1282.7925pt x 495.35063pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6] [7 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Arvore.png>]
+<Imagens/ArvoreAST.png, id=354, 1282.7925pt x 495.35063pt>
 File: Imagens/ArvoreAST.png Graphic file (type png)
 
 <use Imagens/ArvoreAST.png>
 Package pdftex.def Info: Imagens/ArvoreAST.png used on input line 56.
 (pdftex.def)             Requested size: 455.24411pt x 175.78645pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ))
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Arquitetura.tex
-[19] [20 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/ArvoreAST.
-png>] [21]
+[8 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/ArvoreAST.png>]
 Cap\'{\i }tulo 3.
 Package epstopdf Info: Source file: <Imagens/Arquitetura.eps>
 (epstopdf)                    date: 2016-01-11 10:21:44
@@ -1063,14 +985,14 @@ Package epstopdf Info: Source file: <Imagens/Arquitetura.eps>
 verted-to.pdf Imagens/Arquitetura.eps>
 (epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
-<Imagens/Arquitetura-eps-converted-to.pdf, id=696, 813.0375pt x 147.55125pt>
+<Imagens/Arquitetura-eps-converted-to.pdf, id=360, 813.0375pt x 147.55125pt>
 File: Imagens/Arquitetura-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imagens/Arquitetura-eps-converted-to.pdf>
 Package pdftex.def Info: Imagens/Arquitetura-eps-converted-to.pdf used on input
  line 5.
 (pdftex.def)             Requested size: 447.17201pt x 81.15343pt.
- [22
+ [9
 
  <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Arquitetura-eps-co
 nverted-to.pdf>]
@@ -1086,7 +1008,7 @@ s-converted-to.pdf Imagens/InputArquitetura.eps>
 (epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/InputArquitetura-eps-converted-to.pdf, id=728, 443.6575pt x 138.5175pt
+<Imagens/InputArquitetura-eps-converted-to.pdf, id=392, 443.6575pt x 138.5175pt
 >
 File: Imagens/InputArquitetura-eps-converted-to.pdf Graphic file (type pdf)
  <use Imagens/InputArquitetura-eps-converted-to.pdf>
@@ -1105,20 +1027,25 @@ df>
 (epstopdf)             \includegraphics on input line 40.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/diagramaVisitor-eps-converted-to.pdf, id=733, 1432.35126pt x 658.46pt>
+<Imagens/diagramaVisitor-eps-converted-to.pdf, id=397, 1432.35126pt x 658.46pt>
 File: Imagens/diagramaVisitor-eps-converted-to.pdf Graphic file (type pdf)
 <use Imagens/diagramaVisitor-eps-converted-to.pdf>
 Package pdftex.def Info: Imagens/diagramaVisitor-eps-converted-to.pdf used on i
 nput line 40.
 (pdftex.def)             Requested size: 358.08693pt x 164.6146pt.
- [23 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/InputArquitetu
+ [10 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/InputArquitetu
 ra-eps-converted-to.pdf> <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Im
 agens/diagramaVisitor-eps-converted-to.pdf>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 55.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 55.
+
 Overfull \hbox (2.77586pt too wide) in paragraph at lines 55--92
  [][] 
  []
 
-[24]
+[11]
 Package epstopdf Info: Source file: <Imagens/diagramaCSVData.eps>
 (epstopdf)                    date: 2016-01-11 10:21:44
 (epstopdf)                    size: 207448 bytes
@@ -1131,19 +1058,19 @@ df>
 (epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/diagramaCSVData-eps-converted-to.pdf, id=799, 989.6975pt x 475.7775pt>
+<Imagens/diagramaCSVData-eps-converted-to.pdf, id=463, 989.6975pt x 475.7775pt>
 File: Imagens/diagramaCSVData-eps-converted-to.pdf Graphic file (type pdf)
 <use Imagens/diagramaCSVData-eps-converted-to.pdf>
 Package pdftex.def Info: Imagens/diagramaCSVData-eps-converted-to.pdf used on i
 nput line 108.
 (pdftex.def)             Requested size: 346.3993pt x 166.52461pt.
- [25 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/diagramaCSVDat
+ [12 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/diagramaCSVDat
 a-eps-converted-to.pdf>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 117.
 )
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Resultados.tex
-[26]
+[13]
 Cap\'{\i }tulo 4.
 
 Overfull \vbox (2.95917pt too high) detected at line 72
@@ -1159,20 +1086,20 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 111.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [27
+) [14
 
 ]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28] [29]
+[15] [16]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Conclusoes.tex
-[30] [31] [32]
+[17] [18] [19]
 Cap\'{\i }tulo 5.
-) [33
+) [20
 
 ] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.brf)
@@ -1201,32 +1128,32 @@ Underfull \hbox (badness 1803) in paragraph at lines 31--31
  / docs . oracle . com / javase / tutorial /$
  []
 
-[34
+[21
 
 
-] [35])
+] [22])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
- [36]
+ [23]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
 
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 72C1E06B253DC266540CC6297D34BCBC;2328.
+(rerunfilecheck)             Checksum: C48C56FDEED9BCBA3B8BD9AB7E07C897;1735.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 37A0C49CB06028E921805AC51577231D;3458.
+(rerunfilecheck)             Checksum: E7CBAF2BD43BD9C461F0BFC332334393;2525.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 11640 strings out of 493921
- 166599 string characters out of 3147273
- 452177 words of memory out of 3000000
- 14227 multiletter control sequences out of 15000+200000
+ 11265 strings out of 493921
+ 161227 string characters out of 3147273
+ 451177 words of memory out of 3000000
+ 14069 multiletter control sequences out of 15000+200000
  31290 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,12n,69p,3169b,1991s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,12n,69p,3157b,1966s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): 
 name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed o
 ne
@@ -1239,9 +1166,9 @@ pen\ec\dpi600\ecrm0800.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk
 \Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Vin
 icius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> 
 <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecrm1000.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecrm0600.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\
+ecbx1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecrm1000.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\
 2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk> <C:\Users\Vinicius\AppData\
 Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Vini
 cius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <
@@ -1253,9 +1180,9 @@ jfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2
 fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/arial/ua1b8a.pfb>
-Output written on monografia.pdf (48 pages, 906774 bytes).
+Output written on monografia.pdf (34 pages, 809023 bytes).
 PDF statistics:
- 1808 PDF objects out of 2073 (max. 8388607)
- 451 named destinations out of 1000 (max. 500000)
- 332 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1393 PDF objects out of 1440 (max. 8388607)
+ 240 named destinations out of 1000 (max. 500000)
+ 260 words of extra memory for PDF output out of 10000 (max. 10000000)
 

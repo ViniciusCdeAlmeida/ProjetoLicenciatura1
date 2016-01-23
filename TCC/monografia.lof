@@ -4,12 +4,12 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces \IeC {\'A}rvore de parser.}}{18}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces \IeC {\'A}rvore AST.}}{20}{figure.2.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \IeC {\'A}rvore de parser.}}{7}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \IeC {\'A}rvore AST.}}{8}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Alto n\IeC {\'\i }vel de funcionamento do analisador est\IeC {\'a}tico.}}{22}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Input para funcionamento do analisador est\IeC {\'a}tico.}}{23}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama Visitor.}}{23}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama gera\IeC {\c c}\IeC {\~a}o de relat\IeC {\'o}rios.}}{25}{figure.3.4}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Alto n\IeC {\'\i }vel de funcionamento do analisador est\IeC {\'a}tico.}}{9}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Input para funcionamento do analisador est\IeC {\'a}tico.}}{10}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama Visitor.}}{10}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama gera\IeC {\c c}\IeC {\~a}o de relat\IeC {\'o}rios.}}{12}{figure.3.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
