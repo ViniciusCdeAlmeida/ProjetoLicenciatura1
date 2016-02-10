@@ -1,4 +1,4 @@
-\chapter {Ferramentas de Análise Estática}
+\chapter{Suporte Ferramental}
 
 
 A Figura:~\ref{fig:Arquitetura} apresenta uma vis\~{a}o abstrata dos elementos que comp\~{o}em o 
@@ -53,6 +53,18 @@ restante dessa se\c c\~{a}o apresenta mais detalhes sobre a arquitetura e implem
 
 \section{Entrada de dados}
 
+
+O analisador estático recebe como entrada um arquivo \acs{CSV} que contém informa\c c\~{o}es sobre 
+os projetos a serem analisados, como nome do projeto, caminho absoluto para uma entrada no sistema 
+de arquivos com o c\'{o}digo fonte do projeto e a quantidade de linhas de código previamente 
+computadas (conforme ilustrado na Figura:~\ref{fig:InputArquitetura}). As informações contidas no arquivo \acs{CSV} s\~{a}o processadas 
+por um conjunto de classes utilitárias que varrem os diretórios de um determinado projeto e listando todos os arquivos fonte da 
+linguagem Java. Os códigos fontes Java encontrados servem ent\~{a}o como a entrada descrita na representa\c c\~{a}o abstrata 
+do analisador est\'{a}tico (Figura:~\ref{fig:Arquitetura}). Ou seja, para cada projeto é feita uma varredura dos arquivos contendo 
+c\'{o}digo fonte Java, que s\~{a}o convertidos para uma representa\c c\~{a}o intermedi\'{a}ria (por meio de 
+um parser existente); processados e analisados com uma infra-estrutura de \emph{visitors}, e os resultados das an\'{a}lises
+s\~{a}o por fim exportados.
+
 \begin{figure}[h]
 	\center
 	\includegraphics[scale=0.55]{Imagens/InputArquitetura}
@@ -60,22 +72,68 @@ restante dessa se\c c\~{a}o apresenta mais detalhes sobre a arquitetura e implem
 	\caption{Input para funcionamento do analisador estático.}
 \end{figure}
 
-A entrada do analisador estático é iniciado com um arquivo \acs{CSV} que contém nome dos projetos, caminho e quantidade de linhas de código conforme demonstrado na Figura:~\ref{fig:InputArquitetura}. As informações contidas no arquivo \acs{CSV} são extraídas por um conjunto de classes utilitárias que varrem os diretórios de um determinado projeto pesquisando por todos os arquivos fonte Java. Os códigos fontes Java encontrados são a entrada descrita no funcionamento em alto nível da Figura:~\ref{fig:Arquitetura}. Onde para cada projeto é feito a varredura de arquivos Java, gerado o \textit{Parser} dos códigos Java e exportar os relatórios.
+\section{Análise da Representa\c c\~{a}o Intermedi\'{a}ria}
 
-\section{Análise Estática}
+{\color{red}{\bf rbonifacio}parece que ocorre uma transi\c c\~{a}o muito abrupta de uma discussao alto nivel 
+para uma discussao muito rica em detalhes.}
 
-\begin{figure}[h]
-	\center
-	\includegraphics[scale=0.25]{Imagens/diagramaVisitor}
-	\label{fig:DiagramaVisitor}
-	\caption{Diagrama Visitor.}
-\end{figure}
+Após a gera\c c\~{a}o da representa\c c\~{a}o intermedi\'{a}ria, para cada arquivo fonte o analisador
+est\'{a}tico realiza a coleta de dados utilizando uma infraestrutura de \textit{visitors}. No contexto deste projeto, 
+e objetivando um maior grau de reuso,
+todo \emph{visitor} precisa herdar de uma classe abstrata e parametrizada em rela\c c\~{a}o a um tipo \textbf{T}, a classe \textbf{\textit{Visitor<T>}}, 
+onde o tipo \textbf{T} deve corresponder a classe usada para armazenar as informações coletadas pelo \emph{visitor}, 
+conforme o diagrama da Figura:~\ref{fig:DiagramaVisitor} {\color{red}n\~{a}o sei se esse diagrama 
+representa corretamente o uso de visitors}. O parâmetro de tipo \textbf{T} faz referência a uma 
+classe composta basicamente por atributos e por opera\c c\~{o}es de acesso (\textit{getters} e \textit{setters}), que serve para representar os dados extraídos. 
+{\color{red}Em geral, de acordo com a arquitetura do analisador est\'{a}tico proposto, para cada constru\c c\~{a}o que se 
+deseja identificar o perfil de ado\c c\~{a}o nos projetos, s\~{a}o criadas duas classes: uma classe (\texttt{public class C\{ \ldots \}}) 
+para representar as informa\c c\~{o}es de interesse associadas ao uso de uma constru\c c\~{a}o particular da 
+linguagem Java e uma classe (\texttt{public class ConstVisitor extends Visitor<C> \{ \ldots \}}) que \emph{visita} 
+a constru\c c\~{a}o de interesse na \'{a}rvore sint\'{a}tica abstrata.} 
 
-Após o \textit{Parser} é feita a coleta de dados utilizando uma infraestrutura de \textit{Visitors}. Onde para este projeto uma classe \textit{Visitor} é parametrizada em um tipo \textbf{T}, \textbf{\textit{Visitor<T>}}, onde este tipo \textbf{T} é a classe criada que vai armazenar as informações coletadas, conforme o diagrama da Figura:~\ref{fig:DiagramaVisitor}. O parâmetro \textbf{<T>} descrito faz referência a uma classe modelo composta por \textit{getters} e \textit{setters} para modelar os dados extraídos e que sejam armazenados corretamente. 
+Por exemplo, a Listagem~\ref{lst:enum} apresenta 
+o c\'{o}digo necess\'{a}rio para visitar e popular informa\c c\~{o}es relacionadas a declara\c c\~{a}o de 
+enumera\c c\~{o}es. A classe \texttt{public class Visitor<T> \{ \ldots \}} possui uma cole\c c\~{a}o 
+de objetos do tipo parametrizado, sendo poss\'{i}vel adicionar inst\^{a}ncias desses objetos com a chamada 
+\texttt{collectedData.addValue()}. Note que o exemplo apresentado corresponde a um dos mais simples 
+\emph{visitors} implementados. Outros \emph{visitors} possuem uma l\'{o}gica mais elaborada, como por exemplo os 
+\emph{visitors} que identificam oportunidades para usar constru\c c\~{o}es como \emph{multi-catch} ou \emph{lambda 
+expressions}. 
+
+\begin{lstlisting}[caption={Classes usadas para capturar declara\c c\~{a}o de enumera\c c\~{o}es.}\label{lst:enum},language=Java] 
+public class EnumDeclaration {
+  private String file;
+  private int startLine;
+  private int endLine;
+	
+  //constructos + getters and setters.
+}
+
+public class EnumDeclarationVisitor extends Visitor<EnumDeclaration> {
+
+  @Override
+  public boolean visit(org.eclipse.jdt.core.dom.EnumDeclaration node) {
+    
+    EnumDeclaration dec = new EnumDeclaration(this.file, unit.getLineNumber(node.getStartPosition()), unit.getLineNumber(node.getLength() - node.getStartPosition()));
+		
+    collectedData.addValue(dec);
+
+    return true;
+  }
+
+}
+
+
+\end{lstlisting}
+
+
+
+
 
 Confome exemplificado na Figura:~\ref*{fig:DiagramaVisitor}, com a necessidade de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. 
 
-A Tabela:~\ref{tab:VisitorsCriados} exibe todos os \textit{Visitors} criados neste projeto com sua respectiva descrição.
+A Tabela:~\ref{tab:VisitorsCriados} exibe todos os \textit{Visitors} criados neste projeto com sua respectiva descrição. {\color{red}importante incluir mais 
+informa\c c\~{o}es aqui, como complexidade ciclom\'{a}tica e linhas de c\'{o}digo fonte de cada visitor}. 
 
 \begin{table}[ht!] \footnotesize
 	\centering
