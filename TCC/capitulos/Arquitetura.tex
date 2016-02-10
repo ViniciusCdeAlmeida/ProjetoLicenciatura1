@@ -1,25 +1,54 @@
 \chapter {Ferramentas de Análise Estática}
 
-\begin{figure}[h]
+
+A Figura:~\ref{fig:Arquitetura} apresenta uma vis\~{a}o abstrata dos elementos que comp\~{o}em o 
+analisador est\'{a}tico desenvolvido durante a condu\c c\~{a}o deste trabalho de gradua\c c\~{a}o. Em linhas 
+gerais, tal suporte ferramental recupera do sistema de arquivos todos os arquivos contendo código fonte 
+escrito na linguagem Java, {\color{red}reliza} o \textit{parse} desses arquivos gerando uma representação 
+intermediária correspondente, mais adequada para as an\'{a}lises de interesse deste projeto, 
+aplica uma série de mecanismos de análise estática para coletar as informações sobre o uso das 
+caracter\'{i}sticas da linguagem de programa\c c\~{a}o e, por fim, gera os resultados no formato 
+apropriado para as an\'{a}lises estat\'{i}sticas (no contexto deste projeto, foi feita a op\c c\~{a}o pelo 
+formato CVS).
+
+Atualmente existem diversas tecnologias capazes de prover ferramentas para implementar um analisador estático 
+conforme as nossas necessidades. Entretanto, devido a maior experiência dos participantes do projeto com uso da linguagem Java, 
+foi feita a op\c c\~{a}o por se utilizar a infraestrutura da plataforma \textit{Eclipse Java Development Tools}~\cite{EclipseJDT} 
+(Eclipse JDT). O EclipseJDT~\cite{EclipseJDT} fornece um conjunto de ferramentas que auxiliam na constru\c c\~{a}o 
+de ferramentas que permitem processar c\'{o}digo fonte escrito na linguagem de programa\c c\~{a}o Java. 
+
+A plataforma Eclipse JDT é composta por 4 componentes principais \textit{APT, Core, Debug} e \textit{UI}. Neste projeto a 
+plataforma foi usada essencialmente através do \textit{JDT Core}, que dispõe de uma representa\c c\~{a}o Java para a navega\c c\~{a}o 
+e manipula\c c\~{a}o dos elementos de uma árvore sintática~\acs{AST} gerada a partir do c\'{o}digo fonte, onde os elementos 
+da representa\c c\~{a}o correspondem aos elementeos sint\'{a}ticos da linguagem (como pacotes, classes, interfaces métodos e atributos). 
+
+A~\acs{AST} provida pelo JDT é composta por 122 classes, como por exemplo existem 22 classe para representar senten\c cas  
+como \textit{IF-Than-Else, Switch, While, BreakStatement} entre outras. Exitem 5 classes que trabalham exclusivamente com métodos referenciados 
+e 6 classes exclusiva que tratam os tipos declarados como classes, interfaces e enumera\c c\~{o}es em Java.
+
+O Eclipse JDT~\cite{EclipseJDT} disponibiliza ainda um \textit{Parser} para a linguagem Java que atende a especifica\c c\~{a}o 
+Java 8 da linguagem (a mais atual com lan\c camento p\'{u}blico) e que produz a representação intermediária baseada no conjunto de classes Java 
+mencionado anteriormente e que correspondem a uma~\acs{AST} do código fonte. A plataforma tamb\'{e}m oferece uma hierarquia de classes 
+para traversia na AST, de acordo com o padr\~{a}o de projeto \textit{Visitors}~\cite{Gamma:1995}, e que facilita a análise estática 
+de código fonte.
+
+O padr\~{a}o de projeto \textit{Visitor}~\cite{Gamma:1995} \'{e} um padrão de projeto de característica comportamental que representa 
+uma operação a ser realizada sobre elementos de uma \'{a}rvore de objetos. Neste caso a operação a ser realizadas é visitar nós de interesse da AST Java 
+(como os n\'{o}s que representam o uso de uma express\~{a}o Lambda em Java). Cada \textit{visitor} permite que uma nova operação seja criada 
+sem que a estrutura da \'{a}rvore de objetos sofra alterações. Com isso é trivial adicionar novas funcionalidades em um \textit{visitor} existente ou criar um novo.
+
+Por outro lado, a biblioteca Eclipse JDT não fornece mecanismos para extração e exporta\c c\~{a}o de dados. Entretanto, no contexto 
+deste projeto, foi implementado um conjunto de classes 
+que visam obter maior facilidade e flexibilidade na exporta\c c\~{a}o das informa\c c\~{o}es coletadas durante a traversia nos n\'{o}s das 
+ASTs. Essa flexibilidade foi alcançada com a utilização de introspecção de código que em Java é conhecido como \textit{reflection}. O 
+restante dessa se\c c\~{a}o apresenta mais detalhes sobre a arquitetura e implementa\c c\~{a}o do analisador est\'{a}tico. 
+
+\begin{figure}[tb]
 	\center
 	\includegraphics[scale=0.55]{Imagens/Arquitetura}
 	\label{fig:Arquitetura}
 	\caption{Alto nível de funcionamento do analisador estático.}
 \end{figure}
-
- No mais elevado nível de abstração do analisador estático a Figura:~\ref{fig:Arquitetura} demonstra seu funcionamento que é encontrar um código fonte Java, criar um \textit{Parse} que é uma representação intermediária deste código fonte em seguida é aplicado uma série de mecanismos de análise estática para coletar as informações de interesse no código fonte e por fim é gerado relatórios~\acs{CSV}.
-
-Atualmente existem diversas tecnologias capazes de prover ferramentas para implementar um analisador estático entretanto devido a maior experiência com uso da linguagem Java, neste projeto foi utilizado a infraestrutura da plataforma Eclipse JDT, \textit{Eclipse Java Development Tools}~\cite{EclipseJDT}. O EclipseJDT~\cite{EclipseJDT} fornece um conjunto de ferramentas que contribuem com elaboração uma análise sobre o código Java.
-
-A biblioteca JDT é composta 4 componentes \textit{APT, Core, Debug} e \textit{UI}, neste projeto a adoção deu-se através do \textit{JDT Core} que dispõe de uma modelo Java para a navegação dos elementos de uma árvore sintática,~\acs{AST}, onde os elementos podem ser pacotes, tipos, métodos e atributos. Também existe API pronta para a manipulação de código fonte.
-
-A~\acs{AST} provida pelo JDT é composta por 122 classes, como por exemplo existem 22 classe para representar palavras reservadas \textit{IF-Than-Else, Switch, While, BreakStatement} e outras. Exitem 5 classes que trabalham exclusivamente com métodos referenciados, e 6 classes exclusiva que tratam somente os tipos declarados em um classe Java.
-
-O Eclipse JDT~\cite{EclipseJDT} fornece para este projeto um \textit{Parser} que produz uma representação intermediária baseada em um conjunto de classes Java que representam uma ~\acs{AST} de um código fonte. Fornece ainda uma infraestrutura de \textit{visitors}~\cite{Gamma:1995} que possibilitam a análise estática de código fonte.
-
-Um \textit{visitor} é um padrão de projetos proposto por Eric Gamma~\cite{Gamma:1995}, este padrão de projeto de característica comportamental que representa uma operação a ser realizada sobre elementos de uma estrutura de um objetos. Neste caso operação a ser realizadas é visitar os nós de uma árvore sintática de um código fonte Java. Um \textit{visitor} permite que uma nova operação seja criada sem que os elementos operados sofram alterações. Com isso é trivial adicionar novas funcionalidades em um \textit{visitor} existente ou criar um novo.
-
-A biblioteca Eclipse JDT não fornece mecanismo para extração de dados, entretanto foi acoplado um conjunto de classe visando obter a maior facilidade e flexibilidade na geração dos relatórios com os dados contidos na análise estática realizada. Essa flexibilidade foi alcançada com a utilização de introspecção de código que em Java é conhecido como \textit{reflection}.
 
 
 \section{Entrada de dados}
