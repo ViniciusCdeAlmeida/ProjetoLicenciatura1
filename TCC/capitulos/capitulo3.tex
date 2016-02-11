@@ -1,5 +1,22 @@
 %\input{capitulos/HistoriaDaLinguagem}
 %\input{capitulos/AspectosEvolutivos}
+\chapter{Fundamentação}
+Um ponto crítico quanto a análise de código fonte é o \textit{parser} da linguagem, onde é necessário reconhecer uma frase para efetuar a interpretação ou fazer a tradução. Inicialmente é necessário identificar se a frase que será tratada é um \textit{assignment} ou uma chamada de função.
+ 
+Reconhecer uma frase acarreta em duas coisas, distingui-la de outras construções e identificar os elementos e as subestruturas que compõem esta frase. Por exemplo se uma frase for reconhecida como um \textit{assignment}, pode-se identificar as variáveis a esquerda do operador \textbf{=} e uma expressão que é a subestrutura a direita. Este ato de reconhecer uma frase é denominado \textit{Parse}.
+
+\section{Parse}
+
+Para conceber uma ferramenta de análise de código é necessário gerar um \textit{parse} do código fonte o que torna isto uma tarefa complexa e desafiadora. Entretanto existem alguns padrões e neste será aborda os 3 mais importantes segundo Terence Parr em \cite{Parr:2009:LIP:1823613}.
+\begin{itemize}
+	\item \textbf{Backtracking Parser}\\
+	
+	\item \textbf{Memoizing Parser}\\
+	
+	\item \textbf{Predicated Parser}\\
+	Este padrão utiliza a o modo top-down para percorrer um árvore semântica com o auxílio de expressões booleanas que ajudam na tomada de decisão e estas expressões são conhecidas como predicados semâncitcos.
+	
+\end{itemize}
 
 \input{capitulos/AnaliseEstatica}
 \input{capitulos/AnaliseLexica}
