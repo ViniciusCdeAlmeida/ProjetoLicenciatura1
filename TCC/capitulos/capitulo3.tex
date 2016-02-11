@@ -7,13 +7,17 @@ Reconhecer uma frase acarreta em duas coisas, distingui-la de outras construçõ
 
 \section{Parse}
 
-Para conceber uma ferramenta de análise de código é necessário gerar um \textit{parse} do código fonte o que torna isto uma tarefa complexa e desafiadora. Entretanto existem alguns padrões e neste será aborda os 3 mais importantes segundo Terence Parr em \cite{Parr:2009:LIP:1823613}.
+Para conceber uma ferramenta de análise de código é necessário gerar um \textit{parse} do código fonte o que torna isto uma tarefa complexa e desafiadora. Entretanto existem alguns padrões e neste será aborda os 4 mais importantes segundo Terence Parr em \cite{Parr:2009:LIP:1823613}.
 \begin{itemize}
-	\item \textbf{Backtracking Parser}\\
+	\item \textbf{Mapping Grammars to Recursive-Descent Recognizers}\\
+	Sua proposta é traduzir uma gramática para uma recursão descendente para reconhecer frases e sentenças em uma linguagem especificada por uma gramática. Este pradrão identifica o núcleo do fluxo de controle para qualquer recursão descendente e é utilizado nos 3 padrões seguintes. 
+	Para contruir reconhecedor léxico ou parsers manualmente o melhor ponto de início é a gramática, com isso este padrão fornece uma maneira simples de contruir reconhecedores diretamente de sua gramática.
 	
-	\item \textbf{Memoizing Parser}\\
+	\item \textbf{LL(1) Recursive-Descent Lexer}\\
 	
-	\item \textbf{Predicated Parser}\\
+	\item \textbf{LL(1) Recursive-Descent Parser}\\
+	
+	\item \textbf{LL(k) Recursive-Descent Parser}\\
 	Este padrão utiliza a o modo top-down para percorrer um árvore semântica com o auxílio de expressões booleanas que ajudam na tomada de decisão e estas expressões são conhecidas como predicados semâncitcos.
 	
 \end{itemize}
