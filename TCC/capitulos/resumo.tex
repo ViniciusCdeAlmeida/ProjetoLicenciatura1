@@ -1,1 +1,6 @@
-Este tem o objetivo analisar se o desenvolvimento do software evolui em conformidade a evolução das linguagens em específico java.
+Atualmente encontrar blocos de código específicos tem sido de grande importância para atualizar esse trechos por um mais moderno ou mais eficiênte e assim ter os projetos utilizando sempre o que há de mais recente disponibilizado por cada \textit{feature} das linguagem no caso deste trabalho Java.
+
+Com isso o principal objetivo deste trabalho é criar um analisador estático com o objetivo de encontrar construções específicas na linguagem Java, contruções que podem ser código ultrapassado ou até mesmo modificações de um \textit{foreach} por uma expressão lambda. Tais contruções após encontradas farão parte de um relatório de saída para que possa ser tomada a decisão se tais contruções serão refatoradas ou não.
+
+Visando a maior flexibilidade possível na contrução deste analisador, a parte responsável por encontrar código fonte pré-determinado é flexível fazendo com que a qualquer momento que seja necessário possam ser criados novos visitantes sem causar impacto na estrutura do analisador. Os relatórios gerados também são flexíveis e automático podendo a qualquer momento ser modificado a geração de arquivos CSV na saída por um banco de dados caso seja de interesse do desenvolvedor.
+
