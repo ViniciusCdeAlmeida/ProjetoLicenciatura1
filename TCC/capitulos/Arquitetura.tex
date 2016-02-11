@@ -54,7 +54,7 @@ restante dessa se\c c\~{a}o apresenta mais detalhes sobre a arquitetura e implem
 \section{Entrada de dados}
 
 
-O analisador estático recebe como entrada um arquivo \acs{CSV} que contém informa\c c\~{o}es sobre 
+O analisador estático recebe como entrada um arquivo \acs{CSV} (comma-separated values) que contém informa\c c\~{o}es sobre 
 os projetos a serem analisados, como nome do projeto, caminho absoluto para uma entrada no sistema 
 de arquivos com o c\'{o}digo fonte do projeto e a quantidade de linhas de código previamente 
 computadas (conforme ilustrado na Figura:~\ref{fig:InputArquitetura}). As informações contidas no arquivo \acs{CSV} s\~{a}o processadas 
@@ -128,9 +128,7 @@ public class EnumDeclarationVisitor extends Visitor<EnumDeclaration> {
 
 
 
-
-
-Confome exemplificado na Figura:~\ref*{fig:DiagramaVisitor}, com a necessidade de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. 
+Confome exemplificado na Figura:~\ref*{fig:DiagramaVisitor}, com a necessidade de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. {\color{red}refletir se esse par\'{a}grafo eh necessario}
 
 A Tabela:~\ref{tab:VisitorsCriados} exibe todos os \textit{Visitors} criados neste projeto com sua respectiva descrição. {\color{red}importante incluir mais 
 informa\c c\~{o}es aqui, como complexidade ciclom\'{a}tica e linhas de c\'{o}digo fonte de cada visitor}. 
@@ -178,26 +176,51 @@ informa\c c\~{o}es aqui, como complexidade ciclom\'{a}tica e linhas de c\'{o}dig
 		\end{tabular}
 \end{table}
 
-\section{Extensibilidade da Plataforma}
+% \section{Exporta\c c\~{a}o dos dados}
 
-\subsection{Injeçao de Dependência}
-Injeção de dependência \acs{DI}, originalmente foi denominado inversão de controle \acs{IoC} pois a sequência de criação dos objetos depende de como são solicitados pelo sistema. Quando um sistema é iniciado todos os objetos que o compoe são criados mas utilizando. Entretanto isto não acontece quando é utilizado \acs{DI} pois os objetos serão criados, injetados, a medida que são necessitados pelo sistema.
+%% Para exportar os dados coletadas, foi constru\'{i}da uma solu\c c\~{a}o extens\'{i}vel, baseada no padr\~{a}o 
+%% \emph{Inje\c c\~{a}o de Depend\^{e}ncia} e introspec\c c\~{a}o de c\'{o}digo. 
+%% %\subsection{Injeçao de Dependência}
 
-A extensibilidade da plataforma é alcançada devido o conceito de \acs{DI} através do \textit{framework} Spring~\cite{SPRING_REF} para flexibilixar a criação de \textit{Visitors}. Com isso o acoplamento entre a classe que cria a árvore sintática de um código fonte e a classe que analisa esta árvore possuem um baixo acoplamento pois quando for solicitado um \textit{visitor} para uma pesquisa o \textit{framework} Spring~\cite{SPRING_REF} saberá o momento certo de instanciar e injetar o \textit{visitor} na classe que o solicita.
 
-Devido este conceito adotado no sistema o desenvolvedor deve concentrar seu esforço na criação de \textit{visitors} fazendo como que estes extraim as informações mais precisas bastando somente declarar o \textit{visitor} criado no arquivo \textit{bean.xml} do Spring~\cite{SPRING_REF}.
+Para tornar a solu\c c\~{a}o mais extens\'{i}vel, foram utilizados os mecanismos de 
+\emph{Inje\c c\~{a}o de Depend\^{e}ncia} e introspec\c c\~{a}o de c\'{o}digo. 
+Injeção de dependência \acs{DI}, \'{e} um mecanismo de extensibilidade mais 
+conhecido como um padr\~{a}o de projeto originalmente denominado de inversão de controle \acs{IoC}. 
+De acordo com esse mecanismo, a sequência de criação dos objetos depende de como os mesmos são 
+solicitados pelo sistema. Ou seja, quando um sistema é iniciado, 
+os objetos necess\'{a}rios são instanciados e injetados de forma apropriada, 
+geralmente de acordo com arquivo de configura\c c\~{o}es.
 
-\subsection{Reflection}
-Também focando na flexibilidade do sistema, a geração de relatórios é dada baseado no conceito de \textit{Reflection} que é a introspecção de código que Java possui. Isto é a capacidade de um programa possui de se observar e até modificar sua estrutura ou comportamento em tempo de execução.
+O mecanismo de inje\c c\~{a}o de depend\^{e}ncia foi incorporado na arquitetura 
+com o uso do \textit{framework} Spring~\cite{SPRING_REF}, o que n\~{a}o causou 
+nenhum impacto significativo na solu\c c\~{a}o inicialmente proposta e que n\~{a}o 
+fazia uso de tal mecanismo--- os \emph{visitors} eram instanciados de maneira 
+\emph{program\'{a}tica}. O uso do mecanismo de inje\c c\~{a}o de depend\^{e}ncia 
+serviu para flexibilizar n\~{a}o apenas a incorpora\c c\~{a}o de novos \emph{visitors}, 
+mas tamb\'{e}m para definir, de forma mais flex\'{i}vel, a estrat\'{e}gia de exporta\c c\~{a}o dos dados 
+coletados. Gra\c cas ao mecanismo de inje\c c\~{a}o de depend\^{e}ncia, o desenvolvedor pode 
+concentrar seu esforço na criação de \textit{visitors}, fazendo como que estes implementem a 
+l\'{o}gica necess\'{a}ria para extrair as informações. Para que novos \emph{visitors} se conectem 
+a plataforma, tornou-se necess\'{a}rio declarar o \textit{visitor} no arquivo com a defini\c c\~{a}o 
+dos objetos gerenciados pelo Spring~\cite{SPRING_REF}.
 
-\begin{figure}[h]
-	\center
-	\includegraphics[scale=0.35]{Imagens/diagramaCSVData}
-	\label{fig:DiagramaCSVData}
-	\caption{Diagrama geração de relatórios.}
-\end{figure}
 
-A geração dos relatórios ocorre utilizando a classe \textbf{CSVData<T>} onde o tipo \textbf{<T>} é o mesmo utilizado modelar os dados coletados pelos \textit{Visitors}. Os dados são obtidos através dos métodos \textit{getters} destas classes modelos e exportados para arquivos ~\acs{CSV}, nesta classe também existe a injeção de dependência que é somente o cabeçalho do arquivo ~\acs{CSV} o qual é declarado no \textit{beans.xml} ao mesmo tempo em que o \textit{Visitor} é declarado, a Figura:~\ref{fig:DiagramaCSVData} exibe o diagrama de classe.
+\subsection{Exporta\c c\~{a}o dos Dados}
+
+Na vers\~{a}o atual do suporte ferramental desenvolvido nessa monografia, os dados 
+coletados pelo analisador est\'{a}tico s\~{a}o exportados exclusivamente no formato 
+CSV. Esse formato facilita as an\'{a}lises estat\'{i}sticas usando o ambiente e linguagem 
+de programa\c c\~{a}o R~\cite{R}. Também com foco na extensibilidade do sistema, os componentes envolvidos na 
+geração de relatórios utilizam os mecanismos de inje\c c\~{a}o de depend\^{e}ncia, mencionado na 
+se\c c\~{a}o anterior, e introspec\c c\~{a}o de c\'{o}digo, via a a API \textit{Reflection} da linguagem de 
+programa\c c\~{a}o Java. Tal mecanismo oferece aos programadores a capacidade de escreverem componentes 
+que podem observar e até modificar a estrutura e o comportamento dos objetos em tempo de execução.
+
+A geração dos relatórios ocorre utilizando a classe \texttt{public class CSVData<T> \{ \ldots \}} onde o 
+tipo parametrizado \textbf{<T>} é o mesmo utilizado para modelar os dados coletados pelos \textit{visitors}. 
+Os dados são obtidos através dos métodos de acesso (\textit{getters}) destas classes e exportados para arquivos~\acs{CSV}. 
+Na classe \texttt{CSVData} nesta classe também existe a injeção de dependência que é somente o cabeçalho do arquivo ~\acs{CSV} o qual é declarado no \textit{beans.xml} ao mesmo tempo em que o \textit{Visitor} é declarado, a Figura:~\ref{fig:DiagramaCSVData} exibe o diagrama de classe.
 
 O cabeçalho de cada \acs{CSV} é injetado pelo Spring no atributo \textbf{head:String[]}. Logo em seguida o método \textit{export()} da classe \textbf{CSVData<T>} inicia seu trabalho realizando introspecção recuperando de uma coleção dos dados armazenados do projeto, lista \textbf{Data<T>}. Após a recuperação destes dados é realizada o \textit{reflection} para recuperar cada classe modelo e com isso detectar todos os métodos \textit{getters} destas classes e como isso imprimir-los no relatório que é o arquivo \acs{CSV} de saída. O Listing:~\ref{lst:reflection} demonstra o uso de \textit{reflection} para gerar os relatórios.
 
