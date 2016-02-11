@@ -217,12 +217,22 @@ se\c c\~{a}o anterior, e introspec\c c\~{a}o de c\'{o}digo, via a a API \textit{
 programa\c c\~{a}o Java. Tal mecanismo oferece aos programadores a capacidade de escreverem componentes 
 que podem observar e até modificar a estrutura e o comportamento dos objetos em tempo de execução.
 
-A geração dos relatórios ocorre utilizando a classe \texttt{public class CSVData<T> \{ \ldots \}} onde o 
-tipo parametrizado \textbf{<T>} é o mesmo utilizado para modelar os dados coletados pelos \textit{visitors}. 
+A geração dos relatórios ocorre utilizando a classe \texttt{public class CSVData<T> \{ \ldots \ \}} onde o 
+tipo parametrizado \textbf{<T>} é o mesmo utilizado para representar os dados coletados pelos \textit{visitors}. 
 Os dados são obtidos através dos métodos de acesso (\textit{getters}) destas classes e exportados para arquivos~\acs{CSV}. 
-Na classe \texttt{CSVData} nesta classe também existe a injeção de dependência que é somente o cabeçalho do arquivo ~\acs{CSV} o qual é declarado no \textit{beans.xml} ao mesmo tempo em que o \textit{Visitor} é declarado, a Figura:~\ref{fig:DiagramaCSVData} exibe o diagrama de classe.
+%Na classe \texttt{CSVData} nesta classe também existe a injeção de dependência que é somente o cabeçalho do 
+%arquivo ~\acs{CSV} o qual é declarado no \textit{beans.xml} ao mesmo tempo em que o \textit{Visitor} é 
+% declarado, a Figura:~\ref{fig:DiagramaCSVData} exibe o diagrama de classe.
 
-O cabeçalho de cada \acs{CSV} é injetado pelo Spring no atributo \textbf{head:String[]}. Logo em seguida o método \textit{export()} da classe \textbf{CSVData<T>} inicia seu trabalho realizando introspecção recuperando de uma coleção dos dados armazenados do projeto, lista \textbf{Data<T>}. Após a recuperação destes dados é realizada o \textit{reflection} para recuperar cada classe modelo e com isso detectar todos os métodos \textit{getters} destas classes e como isso imprimir-los no relatório que é o arquivo \acs{CSV} de saída. O Listing:~\ref{lst:reflection} demonstra o uso de \textit{reflection} para gerar os relatórios.
+% O cabeçalho de cada \acs{CSV} é injetado pelo Spring no atributo \textbf{head:String[]}. Logo em seguida 
+O método \textit{export()} da classe \textbf{CSVData<T>} descobre quais dados s\~{a}o armazenados nos objetos do 
+tipo \textbf{<T>}, usando o mecanismo de introspec\c c\~{a}o de c\'{o}digo. Com isso, \'{e} poss\'{i}vel 
+generalizar a implementa\c c\~{a}o e simplificar a exporta\c c\~{a}o de dados coletados a partir de 
+\textit{visitors} espec\'{i}ficos. Ou seja, após a descoberta dos dados coletados pelos \textit{visitors} usando 
+introspec\c c\~{a}o, \'{e} poss\'{i}vel recuperar os mesmos assumindo a exist\^{e}ncia de m\'{e}todos de 
+acesso (\textit{getters} de acordo com a especifica\c c\~{a}o Java Beans) e, como isso, export\'{a}-los em arquivos \acs{CSV} de saída. 
+A Listagem:~\ref{lst:reflection} demonstra o uso desse mecanismo para generalizar a exporta\c c\~{a}o dos 
+dados. 
 
 \begin{lstlisting}[caption={Reflection na geração de relatório.}\label{lst:reflection},language=Java] 
 public class CSVData<T> implements Data<T>{
