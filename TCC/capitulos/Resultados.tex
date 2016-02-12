@@ -1,10 +1,15 @@
 \chapter{Resultados}
-Neste capítulo caracteriza como foi a adoção de construções da linguagem Java, o que pode vir a orientar desenvolvedores a compreender a melhor forma de aplicar algumas desta construções.
+Este capítulo caracteriza como foi a adoção de construções da linguagem Java, o que pode vir a orientar desenvolvedores a compreender a melhor forma de aplicar algumas desta construções em seus projetos.
+A contribuição desta monografia aborda dois características da linguagem Java, \textit{Java Generics} e \textit{Java Lambda Expression} onde a questão que direcionou este trabalho \textbf{RQ1: Qual o típico uso de Java Generics e Java Lambda Expressions?}
 
-A contribuição desta monografia aborda dois marcos da linguagem \textit{Java Generics} e \textit{Lambda Expression} onde a questão de pesquisa para abordar esses assuntos é \textbf{RQ1:} Qual o típico uso de Java Generics e Java Lambda Expressions? 
+Foi investivado a adoção de \textit{Java Generics} em projetos opensource através da replicação e extensão de um estudo de Parnin et al~\cite{Parnin:ACM2011}. Este sendo diferenciando do trabalho original onde este trabalho visando a compreensão de como \textit{Java Generics} se correlaciona com a \textit{release} inicial dos projetos selecionados. 
+E também investigar empiricamente como a adoção de \textit{Java Lambda Expression} se iniciou, vale ressaltar para melhor conhecimento não há estudo empírico que investigou tal questão até o presente momento.
+Ainda em relação a \textit{Java Lambda Expression} foi levantando um questionamento nas comunidade \textit{opensources} para descobrir qual o comportamento  adotado após o lançamento desta \textit{feature}. 
 
-A adoção de \textit{Java Generics} em projetos opensource através da replicação e extensão de um estudo de Parnin et al~\cite{Parnin:ACM2011}. Diferenciando do trabalho original este trabalho visa a compreensão de como a adoção de \textit{Java Generics} se correlaciona com a data de lançamento inicial dos projetos selecionados. 
-E como os desenvolvedores usam \textit{Java Lambda Expression} e para o melhor conhecimento não há estudo empírico que investigou tal questão.
+Para a realização a investigação os 47 projetos opensource escolhidos foram separados em 3 grupos \textbf{G1} projetos iniciados antes do lançamento de \textit{Java Generics}, \textbf{G2} projetos iniciados após o lançamento de \textit{Java Generics} e \textbf{G3} projetos com a última \textit{release} em 2015. Alguns destes projetos são os mesmos utilizados em, \cite{Parnin:ACM2011, Dyer:ACM2014, ward2015performance}, e também fora separados pela natureza da projeto,  Aplicações, Bibliotecas e Servidores/Banco de dados conforme tabela:~\ref{tab:systems} o que totalizou mais de 8.5M de~\acs{LOC} detalhados na Tabela:~\ref*{tab:systems}.
+
+Para a investigação foram utilizados os \textit{visitors} criados exbibidos na  Tabela:~\ref{tab:VisitorsCriados}. A conclusão do estudo de \textit{Java Generics} foram utilizados os seguintes \textit{visitors}:\textit{MethodCallVisitor, FieldAndVariableDeclarationVisitor e TypeDeclarationVisitor} e para o \textit{Java Lambda Expression} estes: \textit{AICVisitor, ExistPatternVisitor, FilterPatternVisitor, LambdaExpressionVisitor, LockVisitor e MapPatternVisitor}.
+
 
 
 %Conforme afirmado por Jeffrey L. Overbey e Ralph E. Johnson em ~\cite{Overbey:2009}, Java mantém construções ultrapassas ao longo das versões do desenvolvimento do software o que de fato acontece devido a compatibilidade mantida entre as versões da linguagem. Tais construções somente seriam evitadas caso ocorresse um grande e radical \textit{refactoring} como ocorreu na linguagem Fortan~\cite{Overbey:2009}, quando foi introduzido o paradigma de orientação a objeto que acarretou na quebra de compatibilidade com a versões anteriores.
@@ -28,7 +33,7 @@ E como os desenvolvedores usam \textit{Java Lambda Expression} e para o melhor c
 
 %Os dados contidos no arquivos ~\acs{CSV} foram processados e analisados com o software R~\cite{R} versão (3.1.2) além da biblioteca ggplot~\cite{ggplot} versão (1.0.1) para gerar gráficos mais consistentes.
 
-\begin{table}[h]\footnotesize
+\begin{table}[H]\footnotesize
 \centering
 	\caption{Projetos.}
 	\begin{tabular}{l|lccrr}\hline
@@ -93,14 +98,14 @@ E como os desenvolvedores usam \textit{Java Lambda Expression} e para o melhor c
 \end{table}
 
 
-
+\clearpage
 
 \section{Adoção de Java Generics}
-Relacionado com a adoção de \textit{Generics}, foi descoberto que o maioria dos projetos apresentam um porção significante entre a quantidade de tipos genéricos e a quantidade total de tipos declarados em média(5.31\% e 12.31\%). Pode-se comprovar que em 16\% dos sistemas não declaram nenhum tipo genérico e que o projeto \textit{Commons Collections} é o sistema que com a relação mais expressiva de tipos parametrizados: 75\% de todos os tipos declarados são genéricos.
+Relacionado com a adoção de \textit{Java Generics}, a maioria dos projetos apresentam um porção significantiva entre a quantidade de tipos genéricos e a quantidade total de tipos declarados em média(5.31\% e 12.31\%). Pode-se comprovar que em 16\% dos sistemas não declaram nenhum tipo genérico e que o projeto \textit{Commons Collections} é o sistema que com a relação mais expressiva de tipos parametrizados: 75\% de todos os tipos declarados são genéricos.
 
-Também foi investigado a relação entre tipos genéricos declarados e todos os tipos considerando o tipo e idade do sistemas. Tabela:~\ref{tab:std} apresenta um resumo desta observação onde é possível comprovar que o uso típico de Java \textit{Generics} não muda significativamente entre os tipos de projetos Java, embora essa proporção seja mais baixa para Aplicações e servidores/bancos de dados com versões anteriores ao lançamento do Java SE 5.0.
+Também foi investigado a relação entre tipos genéricos declarados e todos os tipos considerando os tipos e idade dos sistemas. Tabela:~\ref{tab:std} apresenta um resumo desta observação onde é possível comprovar que o uso típico de  \textit{Java Generics} não muda significativamente entre os tipos de projetos Java, embora essa proporção seja mais baixa para Aplicações e servidores/bancos de dados com versões anteriores ao lançamento do Java SE 5.0.
 
-\begin{table}[h]
+\begin{table}[h!]
 	\centering
 	\caption{Resumo dos tipos agrupados por idade e do tipo dos projetos.}
 	\begin{tabular}{ccccc} \hline 
@@ -116,11 +121,11 @@ Também foi investigado a relação entre tipos genéricos declarados e todos os
 \end{table}
 
 
-Há também um número expressivo de campos e variáveis declaradas como instâncias de tipos genéricos. Isto é, a partir de 925925 variáveis e campos declarados em todos os projetos, 84.880 são instâncias de tipos genéricos, 10 \% de todos os campos e variáveis declaradas. Além disso, a partir destes campos e as variáveis declaradas como instância de tipos genéricos, quase 17\% são instâncias dos tipos presentes na Tabela:~\ref{tab:tipoXnumeroInstancia}. Note que, em um trabalho anterior, Parning et al.~\cite{Parnin:ACM2011} apresenta \texttt{List$<$String$>$} com quase 25\% de todos os genéricos. Aqui pode ser confirmado que \texttt{List$<$String$>$} ainda é o tipo mais frequente na ocorrência de tipos genéricos, embora não tão difundido anteriormente. No entanto com 730720 métodos, apenas entre 6157, 0.84\%, são \emph{métodos parametrizados.}
+Existe um número expressivo de atributos e variáveis declaradas como instâncias de tipos genéricos. A partir de 925.925 variáveis e atributos declarados em todos os projetos, 84.880 são instâncias de tipos genéricos, 10 \% de todas as declarações. Além disso, a partir destes atributos e variáveis declaradas como instância de tipos genéricos, quase 17\% são instâncias dos tipos presentes na Tabela:~\ref{tab:tipoXnumeroInstancia}. Note que, em um trabalho anterior, Parning et al.~\cite{Parnin:ACM2011} apresenta \texttt{List$<$String$>$} com quase 25\% de todos os genéricos. O que pode ser confirmado que \texttt{List$<$String$>$} ainda é o tipo com maior frequência deuso entre os tipos genéricos. No entanto com 730.720 métodos, apenas entre 6157, 0.84\%, são \emph{métodos parametrizados.}
 
 \begin{table}[ht]
 	\centering
-	\caption{Tipo declarado X Número de instancia}
+	\caption{Tipo declarado X Número de instância}
 	\begin{tabular}{cc}
 		\hline
 		Tipo & Número de Instância\\ 
@@ -134,7 +139,7 @@ Há também um número expressivo de campos e variáveis declaradas como instân
 	\label{tab:tipoXnumeroInstancia} %std means summary of type declarations
 \end{table}
 
-Também fora investigado o uso mais avançado de Java \textit{Generics}, incluindo construções que fazem polimorfismo parametrizado. Com este recurso é possível criar classes paramétricas que aceitam qualquer tipo \textbf{T} como argumento, uma vez que um tipo \textbf{T} satisfaça um determinada pré-condição isto é, o tipo \textbf{T} deve ser um qualquer um subtipo (usando o modificador \textit{extends}) ou um super-tipo ( usando o modificador \textit{super}) de um determinado tipo existente. Estes modificadores pode ser usado tanto na declaração de novos tipos, bem como na declaração de campos e variáveis em combinação com o wildcard \textbf{?}). A partir de 4355 tipos genéricos declarados em todos os sistemas, descobriu-se que 1.271, quase 30\% usam alguns desses modificadores, extends, super, ou ?. Notavelmente, o modificador \textit{extends} é o mais comum, e está presente em todos os tipos genéricos que usam os modificadores \textit{?} e \textit{super}. Em alguns casos de uso são combinações de modificadores, como no exemplo da Listing:~\ref{lst:tp}, onde a classe IntervalTree (projeto CASSANDRA) é parametrizado de acordo com três parâmetros de tipo (C, D e I). Com relação aos campos e declarações de variáveis, quase 13\% de todos os casos genéricos usam o \textit{?} \textit{wildcard} e 3,13\% usam o \textit{extends}.
+Também fora investigado o uso mais avançado de \textit{Java Generics}, incluindo construções que fazem polimorfismo parametrizado. Com este recurso é possível criar classes paramétricas que aceitam qualquer tipo \textbf{T} como argumento, uma vez que um tipo \textbf{T} satisfaça um determinada pré-condição isto é, o tipo \textbf{T} deve ser um qualquer um subtipo (usando o modificador \textit{extends}) ou um super-tipo ( usando o modificador \textit{super}) de um determinado tipo existente. Estes modificadores pode ser usado tanto na declaração de novos tipos, bem como na declaração de campos e variáveis em combinação com o \textit{wildcard} \textbf{?}). A partir de 4355 tipos genéricos declarados em todos os sistemas, descobriu-se que 1.271, quase 30\% usam alguns desses modificadores, extends, super, ou ?. Notavelmente, o modificador \textit{extends} é o mais comum, e está presente em todos os tipos genéricos que usam os modificadores \textit{?} e \textit{super}. Alguns casos de uso são combinações de modificadores, como no exemplo da Listing:~\ref{lst:tp}, onde a classe IntervalTree (projeto CASSANDRA) é parametrizado de acordo com três parâmetros de tipo (C, D e I). Com relação aos campos e declarações de variáveis, quase 13\% de todos os casos genéricos usam o \textit{?} \textit{wildcard} e 3,13\% usam o \textit{extends}.
 
 \begin{lstlisting}[caption={Declaração não trivial de Generics.}\label{lst:tp},language=Java] 
 public class IntervalTree<C extends Comparable<? super C>, D, I extends Interval<C, D>> implements Iterable<I>{
@@ -143,7 +148,7 @@ public class IntervalTree<C extends Comparable<? super C>, D, I extends Interval
 \end{lstlisting}
 
 
-Em suma, os resultados mostram que Java \textit{Generics} é uma \textit{feature} em que corresponde a 5\% de todos os tipos declarados dos sistemas, portanto, um grande quantidade de código repetido e tipo coerções (moldes) foram evitado usando tipos genéricos. Além disso, a partir desses tipos genéricos, quase 30\% usam um recurso avançado (como amplia e de super envolvendo parâmetros de tipo). Também foi descoberto que quase 10\% de todos os atributos e variáveis declaradas são tipos genéricos, embora a maior parte são instâncias de tipos genéricos da biblioteca \textit{Java Collection}. Finalmente, embora Parnin et ai.~\cite{Parnin:ACM2011} argumentam que uma classe como \textit{StringList} pode cumprir 25\% das necessidades de desenvolvedores entretanto, o uso de Java \textit{Generics}  não deve ser negligenciada devido aos benefícios que são incorporados ao sistema.
+Os resultados mostram que \textit{Java Generics} é uma \textit{feature} em que corresponde a 5\% de todos os tipos declarados dos sistemas, portanto, uma grande quantidade de código repetido e tipo coerções (moldes) foram evitado usando tipos genéricos. Além disso, a partir desses tipos genéricos, quase 30\% usam um recurso avançado (como extends e super envolvendo parâmetros de tipo). Também foi descoberto que quase 10\% de todos os atributos e variáveis declaradas são tipos genéricos, embora a maior parte são instâncias de tipos genéricos da biblioteca \textit{Java Collection}. Finalmente, embora Parnin et ai.~\cite{Parnin:ACM2011} argumentam que uma classe como \textit{StringList} pode cumprir 25\% das necessidades de desenvolvedores entretanto, o uso de \textit{Java Generics} não deve ser negligenciada devido aos benefícios que são incorporados ao sistema.
 
 
 
@@ -171,7 +176,6 @@ Ou seja, a partir de milhares de casos de testes unitários no Hibernate, apenas
 Foi enviado mensagens para grupos do desenvolvedores sobre o assunto, e algumas respostas esclarecem a atual situação da adoção de \textit{Java Lambda Expression}. Primeiro de tudo, para os sistemas estabelecidos, as equipes de desenvolvedores muitas vezes não podem assumir que todos os utilizadores são capazes de migrar para uma nova versão do \textit{Java Runtime Environment}. Por exemplo, o seguinte \textit{post} explica uma das razões para não adotar algumas construções adicionada a linguagem Java: "É, sobretudo, para permitir que as pessoas que estão vinculados (por qualquer motivo) a versões mais antigas do ~\acs{JDK} utilizem nosso software. Há um grande número de projetos que não são capazes de usar novas versões do ~\acs{JDK}. Eu sei que este é um tema controverso e acho que a maioria de gostaria de usar todos esses recursos. Mas não devemos esquecer as pessoas usando nosso software em seu trabalho diário" (http://goo.gl/h0uloY).
 
 Além disso, um abordagem inicial utilizando uma nova característica da linguagem é mais oportunista. Ou seja, os desenvolvedores não migram todo o projeto, mas em vez disso as modificações que introduzem estas novas construções de linguagem ocorrem quando eles estão implementando novas funcionalidades. Duas respostas a estas perguntas deixam isso claro: "Nós tentamos evitar reescrever grandes trechos de código base, sem uma boa razão. Em vez disso, tirar proveito dos novos recursos de linguagem ao escrever novo código ou refatoração código antigo."(https://goo.gl/2WgjVG) e "Eu, pessoalmente, não gosto da idéia de mover todo o código para uma nova versão Java, eu modifico áreas que atualmente trabalho."(http://goo.gl/ GQ4Ckn). Observe que não se pode generalizar estas conclusões com base nessas respostas, uma vez que não foi realizado um inquérito mais estruturado. No entanto, estas respostas podem apoiar trabalhos contra a adoção antecipada de novos recursos de linguagem por sistemas estabelecidos com uma enorme comunidade de usuários.
-
 
 Também foi efetuada uma busca no \textit{STACK OVERFLOW} tentando descobrir se \textit{Java Lambda Expression} é um tema discutido atualmente ou não~\footnote{Última pesquisa realizada em Novembro 2015}, utilizando \textit{tags} Java e Lambda. Foi encontrada mais de 1000 questões respondidas. Este número é bastante expressivo, quando considerou-se uma busca por questões marcadas com as \textit{tag} de Java Generics levou-se a um número próximo de 10 000 perguntas, embora \textit{Generics} tenha sido introduzido há mais de dez anos. Possivelmente, \textit{Java Lambda Expression} está sendo usado principalmente em pequenos projetos e experimentais. Isso pode contrastar com os resultados de ~\cite{Dyer:ACM2014}, que sugerem uma adoção antecipada de novos recursos da linguagem (mesmo antes de lançamentos oficiais). Com base nesses resultados, pode-se comprovar com este trabalho que a adoção antecipada de novos recursos da linguagem ocorre em projetos pequenos e experimentais.
 
