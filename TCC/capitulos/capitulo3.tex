@@ -11,14 +11,15 @@ Para conceber uma ferramenta de análise de código é necessário gerar um \tex
 \begin{itemize}
 	\item \textbf{Mapping Grammars to Recursive-Descent Recognizers}\\
 	Sua proposta é traduzir uma gramática para uma recursão descendente para reconhecer frases e sentenças em uma linguagem especificada por uma gramática. Este pradrão identifica o núcleo do fluxo de controle para qualquer recursão descendente e é utilizado nos 3 padrões seguintes. 
-	Para contruir reconhecedor léxico ou parsers manualmente o melhor ponto de início é a gramática, com isso este padrão fornece uma maneira simples de contruir reconhecedores diretamente de sua gramática.
+	Para construir um reconhecedor léxico ou \textit{parsers} manualmente o melhor ponto de início é a gramática, com isso este padrão fornece uma maneira simples de construir reconhecedores diretamente de sua gramática.
 	
 	\item \textbf{LL(1) Recursive-Descent Lexer}\\
-	
+	O objectivo deste pradrão é para emitir uma sequência de símbolos. Cada símbolo tem dois atributos primários: um tipo de \textit{token}(símbolo da categoria) e o texto associado por exemplo 
+	no português, temos categorias como verbos e substantivos, bem como símbolos de pontuação, como vírgulas e pontos. Todas as palavras dentro de uma determinada categoria são do mesmo tipo de \textit{token}, embora o texto associado seja diferente. O tipo de nome do \textit{token} representa o categoria identificador. Então precisamos tipos de \textit{token} para o vocabulário \textit{string} fixa símbolos como também lidar com espaços em branco e comentários.
 	\item \textbf{LL(1) Recursive-Descent Parser}\\
 	
 	\item \textbf{LL(k) Recursive-Descent Parser}\\
-	Este padrão utiliza a o modo top-down para percorrer um árvore semântica com o auxílio de expressões booleanas que ajudam na tomada de decisão e estas expressões são conhecidas como predicados semâncitcos.
+	Este padrão utiliza a o modo \textit{top-down} para percorrer um árvore semântica com o auxílio de expressões booleanas que ajudam na tomada de decisão e estas expressões são conhecidas como predicados semânticos.
 	
 \end{itemize}
 
