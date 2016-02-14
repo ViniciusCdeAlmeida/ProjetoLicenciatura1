@@ -67,18 +67,25 @@ um parser existente); processados e analisados com uma infra-estrutura de \emph{
 	\center
 	\includegraphics[scale=0.53]{Imagens/InputArquitetura}
 	\label{fig:InputArquitetura}
-	\caption{Input para funcionamento do analisador estático.}
+	\caption{Input analisador estático.}
 \end{figure}
 
 \section{Análise da Representa\c c\~{a}o Intermedi\'{a}ria}
 
 Após todos os código fontes Java identificado é dado início a verificação destes arquivos onde são processados e gerado um \textit{parser} para que os \textit{visitors} pesquisam padrões previamente estabelecidos onde a pesquisa elaborada com o principal objetivo de reconhecer elementos e sua subestruturas contidos no código fonte.
-Com isso a representação intermediária deste analisador é o processamento do código fonte para converte-lo em um \textit{parser} para que os  \textit{visitor} realizem sua pesquisa.
+Com isso a representação intermediária deste analisador é o processamento do código fonte para converte-lo em um \textit{parser} para que os  \textit{visitor} realizem sua pesquisa. A Figura:~\ref{fig:FuncionamentoAnalisador} demonstra o mais alto nível do funcionamento deste projeto.
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.5]{Imagens/FuncionamentoVisitor}
+	\label{fig:FuncionamentoAnalisador}
+	\caption{Funcionamento analisador estático.}
+\end{figure}
 
 {\color{red}{\bf rbonifacio}parece que ocorre uma transi\c c\~{a}o muito abrupta de uma discussao alto nivel 
 para uma discussao muito rica em detalhes.}
 
-Sendo mais preciso ainda na representa\c c\~{a}o intermedi\'{a}ria, para cada arquivo fonte o analisador
+De forma mais técnica, a representa\c c\~{a}o intermedi\'{a}ria, para cada arquivo fonte o analisador
 est\'{a}tico realiza a coleta de dados utilizando uma infraestrutura de \textit{visitors}. No contexto deste projeto, 
 e objetivando um maior grau de reuso,
 todo \emph{visitor} precisa herdar de uma classe abstrata e parametrizada em rela\c c\~{a}o a um tipo \textbf{T}, a classe \textbf{\textit{Visitor<T>}}, 

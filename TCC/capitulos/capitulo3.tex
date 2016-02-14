@@ -14,7 +14,7 @@ Para conceber uma ferramenta de análise de código é necessário gerar um \tex
 	Para construir um reconhecedor léxico ou \textit{parsers} manualmente o melhor ponto de início é a gramática, com isso este padrão fornece uma maneira simples de construir reconhecedores diretamente de sua gramática.
 	
 	\item \textbf{LL(1) Recursive-Descent Lexer}\\
-	O objectivo deste pradrão é para emitir uma sequência de símbolos. Cada símbolo tem dois atributos primários: um tipo de \textit{token}(símbolo da categoria) e o texto associado por exemplo 
+	O objetivo deste pradrão é para emitir uma sequência de símbolos. Cada símbolo tem dois atributos primários: um tipo de \textit{token}(símbolo da categoria) e o texto associado por exemplo 
 	no português, temos categorias como verbos e substantivos, bem como símbolos de pontuação, como vírgulas e pontos. Todas as palavras dentro de uma determinada categoria são do mesmo tipo de \textit{token}, embora o texto associado seja diferente. O tipo de nome do \textit{token} representa o categoria identificador. Então precisamos tipos de \textit{token} para o vocabulário \textit{string} fixa símbolos como também lidar com espaços em branco e comentários.
 	\item \textbf{LL(1) Recursive-Descent Parser}\\
 	

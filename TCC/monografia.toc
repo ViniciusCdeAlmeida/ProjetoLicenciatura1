@@ -19,9 +19,8 @@
 \contentsline {section}{\numberline {3.1}Entrada de dados}{11}{section.3.1}
 \contentsline {section}{\numberline {3.2}An\IeC {\'a}lise da Representa\c c\~{a}o Intermedi\'{a}ria}{12}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Exporta\c c\~{a}o dos Dados}{14}{subsection.3.2.1}
-\contentsline {chapter}{\numberline {4}Resultados}{16}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ado\IeC {\c c}\IeC {\~a}o de Java Generics}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}Ado\IeC {\c c}\IeC {\~a}o de Java Lambda Expression}{19}{section.4.2}
-\contentsline {chapter}{\numberline {5}Considera\IeC {\c c}\IeC {\~o}es Finais e Projeto Fututos}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Projeto Futuro}{23}{section.5.1}
-\contentsline {chapter}{Refer\^encias}{24}{section*.9}
+\contentsline {chapter}{\numberline {4}Resultados}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ado\IeC {\c c}\IeC {\~a}o de Java Generics}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Ado\IeC {\c c}\IeC {\~a}o de Java Lambda Expression}{20}{section.4.2}
+\contentsline {chapter}{\numberline {5}Considera\IeC {\c c}\IeC {\~o}es Finais e Projeto Fututos}{24}{chapter.5}
+\contentsline {section}{\numberline {5.1}Projeto Futuro}{24}{section.5.1}
