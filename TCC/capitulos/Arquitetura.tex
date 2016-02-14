@@ -89,9 +89,7 @@ De forma mais técnica, a representa\c c\~{a}o intermedi\'{a}ria, para cada arqu
 est\'{a}tico realiza a coleta de dados utilizando uma infraestrutura de \textit{visitors}. No contexto deste projeto, 
 e objetivando um maior grau de reuso,
 todo \emph{visitor} precisa herdar de uma classe abstrata e parametrizada em rela\c c\~{a}o a um tipo \textbf{T}, a classe \textbf{\textit{Visitor<T>}}, 
-onde o tipo \textbf{T} deve corresponder a classe usada para armazenar as informações coletadas pelo \emph{visitor}, 
-conforme o diagrama da Figura:~\ref{fig:DiagramaVisitor} {\color{red}n\~{a}o sei se esse diagrama 
-representa corretamente o uso de visitors}. O parâmetro de tipo \textbf{T} faz referência a uma 
+onde o tipo \textbf{T} deve corresponder a classe usada para armazenar as informações coletadas pelo \emph{visitor}. O parâmetro de tipo \textbf{T} faz referência a uma 
 classe composta basicamente por atributos e por opera\c c\~{o}es de acesso (\textit{getters} e \textit{setters}), que serve para representar os dados extraídos. 
 {\color{red}Em geral, de acordo com a arquitetura do analisador est\'{a}tico proposto, para cada constru\c c\~{a}o que se 
 deseja identificar o perfil de ado\c c\~{a}o nos projetos, s\~{a}o criadas duas classes: uma classe (\texttt{public class C\{ \ldots \}}) 
@@ -136,9 +134,20 @@ public class EnumDeclarationVisitor extends Visitor<EnumDeclaration> {
 
 
 
-Confome exemplificado na Figura:~\ref*{fig:DiagramaVisitor}, com a necessidade de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. {\color{red}refletir se esse par\'{a}grafo eh necessario}
 
-A Tabela:~\ref{tab:VisitorsCriados} exibe todos os \textit{Visitors} criados neste projeto com sua respectiva descrição. {\color{red}importante incluir mais 
+O diagrama da Figura:~\ref*{fig:DiagramaVisitor} exibe de maneira técnica o procedimento de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. {\color{red}refletir se esse par\'{a}grafo eh necessario}
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.25]{Imagens/diagramaVisitor}
+	\label{fig:DiagramaVisitor}
+	\caption{Funcionamento analisador estático.}
+\end{figure}
+
+
+A Tabela:~\ref{tab:VisitorsCriados} exibe todos os \textit{Visitors} criados neste projeto com sua respectiva descrição. A complexidade ciclomática dos \textit{Visitors} a qual é dada pela quantidade de caminhos independentes em um trecho de código, vale ressaltar que a complexidade dos \textit{Visitors} varia de 1 a 8 sendo a média 2,5 e a quantidade média de linha de código total necessária para escrever cada \textit{Visitor} é 47.
+
+{\color{red}importante incluir mais 
 informa\c c\~{o}es aqui, como complexidade ciclom\'{a}tica e linhas de c\'{o}digo fonte de cada visitor}. 
 
 \begin{table}[ht!] \footnotesize
