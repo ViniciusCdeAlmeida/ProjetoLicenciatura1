@@ -15,26 +15,6 @@ Para a investigação foram utilizados os \textit{visitors} criados exbibidos na
 
 
 
-%Conforme afirmado por Jeffrey L. Overbey e Ralph E. Johnson em ~\cite{Overbey:2009}, Java mantém construções ultrapassas ao longo das versões do desenvolvimento do software o que de fato acontece devido a compatibilidade mantida entre as versões da linguagem. Tais construções somente seriam evitadas caso ocorresse um grande e radical \textit{refactoring} como ocorreu na linguagem Fortan~\cite{Overbey:2009}, quando foi introduzido o paradigma de orientação a objeto que acarretou na quebra de compatibilidade com a versões anteriores.
-%
-%Baseado nesta assertiva este trabalho tem como principal objetivo de encontrar construções obsoletas e encontrar possíveis casos de trechos de código que poderiam ter sido evoluídos ao longo das versões de Java e que não evoluíram. Neste caso esta sendo pesquisado caso onde deveriam ter sofrido o \textit{refactoring} baseado nas características de Java 7 e Java 8. Dentre as característica mais importante a ser procuradas estão:
-%
-%\begin{itemize}
-%\item Adoção e oportunidades de Multicatch.
-%\item Adoção de Try com resource.
-%\item Adoção e oportunidades de Switch com String.
-%\item Adoção de Expressões Lambda.
-%\item Oportunidades de exist - Expressões Lambda.
-%\item Oportunidades de filter - Expressões Lambda.
-%\item Oportunidades de map - Expressões Lambda.
-%\end{itemize}
-%
-%Além da replicação do estudo de Parnin .et.al~\cite{Parnin:ACM2011} e diferentemente do trabalho original, estender  como objetivo compreender como a adoção de Generics se correlaciona com a data de lançamento inicial dos
-%projetos selecionados. 
-
-%Para a realização deste trabalho foram escolhidos 47 projetos open-source separados em 3 grupos \textbf{G1} projetos iniciados antes do lançamento de \textit{Generics}, \textbf{G2} projetos iniciados após o lançamento de \textit{Generics} e \textbf{G3} projetos com a última \textit{release} em 2015. Alguns destes projetos são os mesmos utilizados em, \cite{Parnin:ACM2011, Dyer:ACM2014, ward2015performance}, este também fora separados pela natureza da aplicação,  Aplicações, Bibliotecas e Servidores/Banco de dados conforme tabela:~\ref{tab:systems} o que totalizou mais de 8.5M de~\acs{LOC}.
-
-%Os dados contidos no arquivos ~\acs{CSV} foram processados e analisados com o software R~\cite{R} versão (3.1.2) além da biblioteca ggplot~\cite{ggplot} versão (1.0.1) para gerar gráficos mais consistentes.
 
 \begin{table}[h]\footnotesize
 \centering
@@ -101,7 +81,7 @@ Para a investigação foram utilizados os \textit{visitors} criados exbibidos na
 \end{table}
 
 
-\clearpage
+% \clearpage
 
 \section{Adoção de Java Generics}
 Relacionado com a adoção de \textit{Java Generics}, a maioria dos projetos apresentam um porção significantiva entre a quantidade de tipos genéricos e a quantidade total de tipos declarados em média(5.31\% e 12.31\%). Pode-se comprovar que em 16\% dos sistemas não declaram nenhum tipo genérico e que o projeto \textit{Commons Collections} é o sistema que com a relação mais expressiva de tipos parametrizados: 75\% de todos os tipos declarados são genéricos.
@@ -246,7 +226,45 @@ Também foi investigado o típico uso de características de concorrência em Ja
 	\label{tab:concorrenciaJava} %std means summary of type declarations
 \end{table}
 
+\section{An\'{a}lises adicionais}
+
+Os principais resultados dessa monografia estavam relacionados \'{a} investiga\c c\~{a}o 
+discutida nas se\c c\~{o}es anteriores. Por outro lado, a infraestrutura constru\'{i}da 
+durante a realiza\c c\~{a}o desse trabalho de conclus\~{a}o de curso permitiu 
+investigar outros mecanismos e oportunidades que surgiram com a evolu\c c\~{a}o 
+da linguagem Java. Conforme citado por Jeffrey L. Overbey e Ralph E. Johnson~\cite{Overbey:2009}, 
+Java mantém construções ultrapassas ao longo das versões do desenvolvimento do software o que 
+de fato acontece devido a compatibilidade mantida entre as versões da linguagem. Tais construções somente 
+seriam evitadas caso ocorresse uma adapta\c c\~{a}o da linguagem mais impactante, como ocorreu na linguagem Fortan~\cite{Overbey:2009}, 
+introduzindo o paradigma de orientação a objeto e levando a quebra de compatibilidade com a versões anteriores da linguagem.
+
+%
+
+Baseado nesta assertiva, foi feita uma investiga\c c\~{a}o adicional que visa minerar o uso de construções obsoletas 
+em c\'{o}digo fonte Java existente e encontrar possíveis casos de trechos de código que poderiam ter sido evoluídos ao longo das versões de Java. 
+Essas situa\c c\~{o}es caracterizam cen\'{a}rios potenciais de melhoria de c\'{o}digo e que preservam 
+o comportamento do sistema (tipicamente um \textit{refactoring}), com o objetivo \'{u}nico de usar constru\c c\~{o}es introduzidas 
+nas vers\~{o}es 7 e 8 da linguagem Java. Dentre as característica investigadas, as 
+seguintes est\~{a}o sendo reportadas no restante desse cap\'{i}tulo. 
+%
+%\begin{itemize}
+%\item Adoção e oportunidades de Multicatch.
+%\item Adoção de Try com resource.
+%\item Adoção e oportunidades de Switch com String.
+%\item Adoção de Expressões Lambda.
+%\item Oportunidades de exist - Expressões Lambda.
+%\item Oportunidades de filter - Expressões Lambda.
+%\item Oportunidades de map - Expressões Lambda.
+%\end{itemize}
+%
+%Além da replicação do estudo de Parnin .et.al~\cite{Parnin:ACM2011} e diferentemente do trabalho original, estender  como objetivo compreender como a adoção de Generics se correlaciona com a data de lançamento inicial dos
+%projetos selecionados. 
+
+%Para a realização deste trabalho foram escolhidos 47 projetos open-source separados em 3 grupos \textbf{G1} projetos iniciados antes do lançamento de \textit{Generics}, \textbf{G2} projetos iniciados após o lançamento de \textit{Generics} e \textbf{G3} projetos com a última \textit{release} em 2015. Alguns destes projetos são os mesmos utilizados em, \cite{Parnin:ACM2011, Dyer:ACM2014, ward2015performance}, este também fora separados pela natureza da aplicação,  Aplicações, Bibliotecas e Servidores/Banco de dados conforme tabela:~\ref{tab:systems} o que totalizou mais de 8.5M de~\acs{LOC}.
+
+%Os dados contidos no arquivos ~\acs{CSV} foram processados e analisados com o software R~\cite{R} versão (3.1.2) além da biblioteca ggplot~\cite{ggplot} versão (1.0.1) para gerar gráficos mais consistentes.
+
 %\input{capitulos/Lambda}
-%\input{capitulos/Multicatch}
-%\input{capitulos/TryResource}
-%\input{capitulos/SwitchString}
+\input{capitulos/Multicatch}
+\input{capitulos/TryResource}
+\input{capitulos/SwitchString}
