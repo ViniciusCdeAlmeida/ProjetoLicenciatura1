@@ -9,14 +9,14 @@ A replicação do estudo de \textit{Java Generics} ocorreu através de projetos 
 Também foi investigado empiricamente como esta ocorrendo a adoção de \textit{Java Lambda Expression}, vale ressaltar para melhor conhecimento não há estudo empírico que investigou tal questão até o presente momento.
 Ainda em relação a \textit{Java Lambda Expression} foi levantando um questionamento nas comunidade \textit{opensources} para descobrir qual o comportamento adotado pelas equipes de desenvolvedores após o lançamento desta \textit{feature}. 
 
-Para a realização a investigação os 47 projetos opensource escolhidos foram separados em 3 grupos \textbf{G1} projetos iniciados antes do lançamento de \textit{Java Generics}, \textbf{G2} projetos iniciados após o lançamento de \textit{Java Generics} e \textbf{G3} projetos com a última \textit{release} em 2015. Alguns destes projetos são os mesmos utilizados em, \cite{Parnin:ACM2011, Dyer:ACM2014, ward2015performance}, e também fora separados pela natureza da projeto,  Aplicações, Bibliotecas e Servidores/Banco de dados conforme tabela:~\ref{tab:systems} o que totalizou mais de 8.5M de~\acs{LOC} detalhados na Tabela:~\ref*{tab:systems}.
+Para a realização a investigação os 46 projetos opensource escolhidos foram separados em 3 grupos \textbf{G1} projetos iniciados antes do lançamento de \textit{Java Generics}, \textbf{G2} projetos iniciados após o lançamento de \textit{Java Generics} e \textbf{G3} projetos com a última \textit{release} em 2015. Alguns destes projetos são os mesmos utilizados em, \cite{Parnin:ACM2011, Dyer:ACM2014, ward2015performance}, e também fora separados pela natureza da projeto,  Aplicações, Bibliotecas e Servidores/Banco de dados conforme tabela:~\ref{tab:systems} o que totalizou mais de 9M de~\acs{LOC} detalhados na Tabela:~\ref*{tab:systems}.
 
-Para a investigação foram utilizados os \textit{visitors} criados exbibidos na  Tabela:~\ref{tab:VisitorsCriados}. A conclusão do estudo de \textit{Java Generics} foram utilizados os seguintes \textit{visitors}:\textit{MethodCallVisitor, FieldAndVariableDeclarationVisitor e TypeDeclarationVisitor} e para o \textit{Java Lambda Expression} estes: \textit{AICVisitor, ExistPatternVisitor, FilterPatternVisitor, LambdaExpressionVisitor, LockVisitor e MapPatternVisitor}.
+Para a investigação foram utilizados os \textit{visitors} criados exbibidos na  Tabela:~\ref{tab:VisitorsCriados}. A conclusão do estudo de \textit{Java Generics} foram utilizados os seguintes \textit{visitors}:\textit{MethodCallVisitor, FieldAndVariableDeclarationVisitor e TypeDeclarationVisitor} e para o \textit{Java Lambda Expression} estes: \textit{AICVisitor, ExistPatternVisitor, FilterPatternVisitor, LambdaExpressionVisitor, LockVisitor  MapPatternVisitor, TryStatementVisitor, SwitchStringOpportunitiesVisitor e SwitchStatementVisitor}.
 
+\newpage
 
-
-
-\begin{table}[h]\footnotesize
+  
+\begin{table}[h!]\footnotesize
 \centering
 	\caption{Projetos.}
 	\begin{tabular}{l|lccrr}\hline
@@ -226,26 +226,14 @@ Também foi investigado o típico uso de características de concorrência em Ja
 	\label{tab:concorrenciaJava} %std means summary of type declarations
 \end{table}
 
-\section{An\'{a}lises adicionais}
+\section{Análises adicionais}
+Os principais resultados dessa monografia estavam relacionados à investigação discutida nas seções anteriores. Por outro lado, a infraestrutura construída  durante a realizaçãoo desse trabalho favorece a investigação de outras contruções da linguagem Java. Conforme discutido por Jeffrey L. Overbey at al~\cite{Overbey:2009}, desenvolvedores Java mantém construções ultrapassas ao longo histórico de versões de um  software o que de fato é possível devido a compatibilidade mantida entre as versões da linguagem. Tais construções somente seriam evitadas caso ocorresse umaa ruptura desta filosofia de compatibilidate da linguagem tal como ocorreu na linguagem Fortan conforme explicado por Jeffrey L. Overbey at al~\cite{Overbey:2009} quando foi  introduzindo o paradigma de orientação a objeto e levando a quebra de compatibilidade com versões anteriores da linguagem Fortan.
 
-Os principais resultados dessa monografia estavam relacionados \'{a} investiga\c c\~{a}o 
-discutida nas se\c c\~{o}es anteriores. Por outro lado, a infraestrutura constru\'{i}da 
-durante a realiza\c c\~{a}o desse trabalho de conclus\~{a}o de curso permitiu 
-investigar outros mecanismos e oportunidades que surgiram com a evolu\c c\~{a}o 
-da linguagem Java. Conforme citado por Jeffrey L. Overbey e Ralph E. Johnson~\cite{Overbey:2009}, 
-Java mantém construções ultrapassas ao longo das versões do desenvolvimento do software o que 
-de fato acontece devido a compatibilidade mantida entre as versões da linguagem. Tais construções somente 
-seriam evitadas caso ocorresse uma adapta\c c\~{a}o da linguagem mais impactante, como ocorreu na linguagem Fortan~\cite{Overbey:2009}, 
-introduzindo o paradigma de orientação a objeto e levando a quebra de compatibilidade com a versões anteriores da linguagem.
+Baseado nesta assertiva, foi feita uma investigação adicional que visa minerar o uso de construções obsoletas 
+em código fonte existente e encontrar possíveis casos de trechos de código que poderiam ter evoluído ao longo das versões da linguagem Java. Essas situações caracterizam cenários potenciais de melhoria de código e preservam 
+o comportamento do sistema (tipicamente um \textit{refactoring}), com o objetivo único de usar construções introduzidas nas versões 7 e 8 da linguagem Java.
 
-%
-
-Baseado nesta assertiva, foi feita uma investiga\c c\~{a}o adicional que visa minerar o uso de construções obsoletas 
-em c\'{o}digo fonte Java existente e encontrar possíveis casos de trechos de código que poderiam ter sido evoluídos ao longo das versões de Java. 
-Essas situa\c c\~{o}es caracterizam cen\'{a}rios potenciais de melhoria de c\'{o}digo e que preservam 
-o comportamento do sistema (tipicamente um \textit{refactoring}), com o objetivo \'{u}nico de usar constru\c c\~{o}es introduzidas 
-nas vers\~{o}es 7 e 8 da linguagem Java. Dentre as característica investigadas, as 
-seguintes est\~{a}o sendo reportadas no restante desse cap\'{i}tulo. 
+Dentre as evoluções da linguagem as características investigadas, esse trabalho foca em descobrir oportunidades de adoção das características \textit{multicatch, try resource e switch com string} e se as mesmas etão sendo adotadas.
 %
 %\begin{itemize}
 %\item Adoção e oportunidades de Multicatch.

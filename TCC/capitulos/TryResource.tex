@@ -1,21 +1,49 @@
 \subsection{Try Resource}
-O visitor responsável por detectar a adoção desta \textit{feature} pesquisou por padrões como o código abaixo onde não foi pesquisado oportunidades de \textit{refactoring} mas sim onde esta característica estava sendo adotada.
-\begin{lstlisting}
-static String readFirstLineFromFile(String path) throws IOException {
-	try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-		return br.readLine();
-	}
+Como continuação da evolução do mecanismo de exceção de Java 7 introduziu \texttt{try-resource} onde o \texttt{resouce} é um objeto que implemente \texttt{java.lang.AutoCloseable } ou \texttt{java.io.Closeable} e com isso o mecanismo garante o encerramento do recurso com encerramento do \texttt{statement} o que antes de recurso só era capaz utilizando um bloco \texttt{finally}\footnote{\texttt{try-resource} pode utilizar \texttt{catch} e \texttt{finally} de forma igual ao \texttt{try-catch}}.
+
+\begin{lstlisting}[caption={Try sem adoção de resource.}\label{lst:semResource},language=Java]
+static String readFirstLineFromFileWithFinallyBlock(String path)
+                                                     throws IOException {
+    BufferedReader br = new BufferedReader(new FileReader(path));
+    try {
+        return br.readLine();
+    } finally {
+        if (br != null) br.close();
+    }
 }
 \end{lstlisting}
 
-Com o advento do Java 7 foi introduzido o \textit{Try with Resource} onde um \textit{resource} é um objeto que pode ser fechado antes do programa ser encerrado. Com isso promoveu uma maior autonomia e flexibilidade ao programador. Foi encontrado no total 284321 \textit{trys} nos quais  esta \textit{feature} totaliza 1.8\%, ou seja, 5186 casos. Conforme exibido na figura: ~\ref{fig:Try with Resource} exibe a distribuição desta \textit{feature} entre os projetos onde pode-se constatar que somente 4 projetos fizera a adoção. Com exceção do projeto \textit{Jetty} que totaliza 87\% dos casos os demais projetos não aderiram de forma massiva esta caracterísitica.
+\begin{lstlisting}[caption={Try adotando resource.}\label{lst:comResource},language=Java]
+static String readFirstLineFromFileWithFinallyBlock(String path)
+                                                     throws IOException {
+    try ( BufferedReader br = new BufferedReader(new FileReader(path));){
+        return br.readLine();
+    } 
+}
+\end{lstlisting}
 
+Após a realização das análise foram encontrados \num{1616} ocorrências da utilização deste recurso onde a Figura:~\ref{fig:Try-Resource} demonstra a distribuição por projetos e somente 13 projetos utilizam o que totaliza  \num{28}\% destes.
 
 \begin{figure}[h]
 	\center
-	\includegraphics[scale=0.5]{Imagens/ocorrenciasTryResource}
-	\label{fig:Try with Resource}
-	\caption{Oportunidades de \textit{Try with Resource} nos projetos.}
+	\includegraphics[scale=0.62]{Imagens/ocorrenciasTryResource}
+	\label{fig:Try-Resource}
+	\caption{Adoção de \texttt{Try-Resource} nos projetos.}
 \end{figure}
+
+A Tabela:~\ref{tab:adocaoResource} exibe a distribuição deste recurso baseado no tipo do projeto. Onde pode-se constatar que os \texttt{Servers-Database} realizaram uma adoção significativa de \num{91}\% em relação aos demais tipos.
+\begin{table}[h]
+	\centering
+	\caption{Adoção Try-Resource por tipo do sistema.}
+	\begin{tabular}{cc}
+		\hline
+		Natureza & Ocorrências \\ 
+		\hline \hline
+		\texttt{Application} & 115 \\ 
+		\texttt{Library} & 17 \\ 
+		\texttt{Servers - Database} & 1484 \\ \hline
+	\end{tabular}
+	\label{tab:adocaoResource} %std means summary of type declarations
+\end{table}
 
 
