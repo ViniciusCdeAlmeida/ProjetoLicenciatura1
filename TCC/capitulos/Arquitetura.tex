@@ -20,7 +20,7 @@ de ferramentas que permitem processar c\'{o}digo fonte escrito na linguagem de p
 A plataforma Eclipse JDT é composta por 4 componentes principais \textit{APT, Core, Debug} e \textit{UI}. Neste projeto a 
 plataforma foi usada essencialmente através do \textit{JDT Core}, que dispõe de uma representa\c c\~{a}o Java para a navega\c c\~{a}o 
 e manipula\c c\~{a}o dos elementos de uma árvore sintática~\acs{AST} gerada a partir do c\'{o}digo fonte, onde os elementos 
-da representa\c c\~{a}o correspondem aos elementeos sint\'{a}ticos da linguagem (como pacotes, classes, interfaces métodos e atributos). 
+da representa\c c\~{a}o correspondem aos elementos sint\'{a}ticos da linguagem (como pacotes, classes, interfaces métodos e atributos). 
 
 A~\acs{AST} provida pelo JDT é composta por 122 classes, como por exemplo existem 22 classe para representar senten\c cas  
 como \textit{IF-Than-Else, Switch, While, BreakStatement} entre outras. Exitem 5 classes que trabalham exclusivamente com métodos referenciados 
@@ -61,7 +61,7 @@ computadas (conforme ilustrado na Figura:~\ref{fig:InputArquitetura}). As inform
 por um conjunto de classes utilitária que varrem os diretórios de um determinado projeto e seleciona todos os arquivos fonte da linguagem Java. Os códigos fontes Java encontrados servem ent\~{a}o como a entrada descrita na representa\c c\~{a}o abstrata 
 do analisador est\'{a}tico (Figura:~\ref{fig:Arquitetura}). Ou seja, para cada projeto é feita uma varredura dos arquivos contendo 
 c\'{o}digo fonte Java, que s\~{a}o convertidos para uma representa\c c\~{a}o intermedi\'{a}ria (por meio de 
-um parser existente); processados e analisados com uma infra-estrutura de \emph{visitors}, e os resultados das an\'{a}lises s\~{a}o por fim exportados.
+um parser existente); processados e analisados com uma infraestrutura de \emph{visitors}, e os resultados das an\'{a}lises s\~{a}o por fim exportados.
 
 \begin{figure}[h]
 	\center
@@ -73,7 +73,7 @@ um parser existente); processados e analisados com uma infra-estrutura de \emph{
 \section{Análise da Representa\c c\~{a}o Intermedi\'{a}ria}
 
 Após todos os código fontes Java identificado é dado início a verificação destes arquivos onde são processados e gerado um \textit{parser} para que os \textit{visitors} pesquisam padrões previamente estabelecidos onde a pesquisa elaborada com o principal objetivo de reconhecer elementos e sua subestruturas contidos no código fonte.
-Com isso a representação intermediária deste analisador é o processamento do código fonte para converte-lo em um \textit{parser} para que os  \textit{visitor} realizem sua pesquisa. A Figura:~\ref{fig:FuncionamentoAnalisador} demonstra o mais alto nível do funcionamento deste projeto.
+Com isso a representação intermediária deste analisador é o processamento do código fonte para convertê-lo em um \textit{parser} para que os  \textit{visitor} realizem sua pesquisa. A Figura:~\ref{fig:FuncionamentoAnalisador} demonstra o mais alto nível do funcionamento deste projeto.
 
 \begin{figure}[h]
 	\center
@@ -82,8 +82,7 @@ Com isso a representação intermediária deste analisador é o processamento do
 	\caption{Funcionamento analisador estático.}
 \end{figure}
 
-{\color{red}{\bf rbonifacio}parece que ocorre uma transi\c c\~{a}o muito abrupta de uma discussao alto nivel 
-para uma discussao muito rica em detalhes.}
+{\color{red}{\bf rbonifacio}parece que ocorre uma transi\c c\~{a}o muito abrupta de uma discussão alto nivel para uma discussão muito rica em detalhes.}
 
 De forma mais técnica, a representa\c c\~{a}o intermedi\'{a}ria, para cada arquivo fonte o analisador
 est\'{a}tico realiza a coleta de dados utilizando uma infraestrutura de \textit{visitors}. No contexto deste projeto, 
@@ -135,7 +134,7 @@ public class EnumDeclarationVisitor extends Visitor<EnumDeclaration> {
 
 
 
-O diagrama da Figura:~\ref*{fig:DiagramaVisitor} exibe de maneira técnica o procedimento de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. {\color{red}refletir se esse par\'{a}grafo eh necessario}
+O diagrama da Figura:~\ref*{fig:DiagramaVisitor} exibe de maneira técnica o procedimento de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. {\color{red}refletir se esse par\'{a}grafo eh necessário}
 
 \begin{figure}[h]
 	\center
