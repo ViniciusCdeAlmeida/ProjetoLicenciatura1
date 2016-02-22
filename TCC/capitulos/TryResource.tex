@@ -22,16 +22,17 @@ static String readFirstLineFromFileWithFinallyBlock(String path)
 }
 \end{lstlisting}
 
-Após a realização das análise foram encontrados \num{1616} ocorrências da utilização deste recurso onde a Figura:~\ref{fig:Try-Resource} demonstra a distribuição por projetos e somente 13 projetos utilizam o que totaliza  \num{28}\% destes.
+Este trabalho contribui com a pesquisa para verificar como é a adoção deste recurso, após a realização das análise foram encontrados \num{1616} ocorrências de utilização onde a Figura:~\ref{fig:Try-Resource} demonstra a distribuição por projetos e somente 13 projetos o utilizam totalizando apenas \num{28}\% dos projetos verificados.
 
 \begin{figure}[h]
 	\center
-	\includegraphics[scale=0.62]{Imagens/ocorrenciasTryResource}
+	\includegraphics[scale=0.55]{Imagens/ocorrenciasTryResource}
 	\label{fig:Try-Resource}
 	\caption{Adoção de \texttt{Try-Resource} nos projetos.}
 \end{figure}
 
-A Tabela:~\ref{tab:adocaoResource} exibe a distribuição deste recurso baseado no tipo do projeto. Onde pode-se constatar que os \texttt{Servers-Database} realizaram uma adoção significativa de \num{91}\% em relação aos demais tipos.
+A Tabela:~\ref{tab:adocaoResource} exibe a distribuição deste recurso por  tipo de sistema. Onde pode-se constatar que os \texttt{Servers-Database} realizaram uma adoção significativa de \num{91}\% em relação aos demais tipos.
+
 \begin{table}[h]
 	\centering
 	\caption{Adoção Try-Resource por tipo do sistema.}
@@ -42,6 +43,7 @@ A Tabela:~\ref{tab:adocaoResource} exibe a distribuição deste recurso baseado 
 		\texttt{Application} & 115 \\ 
 		\texttt{Library} & 17 \\ 
 		\texttt{Servers - Database} & 1484 \\ \hline
+		\texttt{Total} & 1616 \\ \hline
 	\end{tabular}
 	\label{tab:adocaoResource} %std means summary of type declarations
 \end{table}
