@@ -4,7 +4,7 @@
 A Figura:~\ref{fig:Arquitetura} apresenta uma vis\~{a}o abstrata dos elementos que comp\~{o}em o 
 analisador est\'{a}tico desenvolvido durante a condu\c c\~{a}o deste trabalho de gradua\c c\~{a}o. Em linhas 
 gerais, tal suporte ferramental recupera do sistema de arquivos todos os arquivos contendo código fonte 
-escrito na linguagem Java, {\color{red}reliza} o \textit{parse} desses arquivos gerando uma representação 
+escrito na linguagem Java, realiza o \textit{parse} desses arquivos gerando uma representação 
 intermediária correspondente, mais adequada para as an\'{a}lises de interesse deste projeto, 
 aplica uma série de mecanismos de análise estática para coletar as informações sobre o uso das 
 caracter\'{i}sticas da linguagem de programa\c c\~{a}o e, por fim, gera os resultados no formato 
@@ -82,7 +82,7 @@ Com isso a representação intermediária deste analisador é o processamento do
 	\caption{Funcionamento analisador estático.}
 \end{figure}
 
-{\color{red}{\bf rbonifacio}parece que ocorre uma transi\c c\~{a}o muito abrupta de uma discussão alto nivel para uma discussão muito rica em detalhes.}
+%{\color{red}{\bf rbonifacio}parece que ocorre uma transi\c c\~{a}o muito abrupta de uma discussão alto nivel para uma discussão muito rica em detalhes.}
 
 De forma mais técnica, a representa\c c\~{a}o intermedi\'{a}ria, para cada arquivo fonte o analisador
 est\'{a}tico realiza a coleta de dados utilizando uma infraestrutura de \textit{visitors}. No contexto deste projeto, 
@@ -90,11 +90,11 @@ e objetivando um maior grau de reuso,
 todo \emph{visitor} precisa herdar de uma classe abstrata e parametrizada em rela\c c\~{a}o a um tipo \textbf{T}, a classe \textbf{\textit{Visitor<T>}}, 
 onde o tipo \textbf{T} deve corresponder a classe usada para armazenar as informações coletadas pelo \emph{visitor}. O parâmetro de tipo \textbf{T} faz referência a uma 
 classe composta basicamente por atributos e por opera\c c\~{o}es de acesso (\textit{getters} e \textit{setters}), que serve para representar os dados extraídos. 
-{\color{red}Em geral, de acordo com a arquitetura do analisador est\'{a}tico proposto, para cada constru\c c\~{a}o que se 
+Em geral, de acordo com a arquitetura do analisador est\'{a}tico proposto, para cada constru\c c\~{a}o que se 
 deseja identificar o perfil de ado\c c\~{a}o nos projetos, s\~{a}o criadas duas classes: uma classe (\texttt{public class C\{ \ldots \}}) 
 para representar as informa\c c\~{o}es de interesse associadas ao uso de uma constru\c c\~{a}o particular da 
 linguagem Java e uma classe (\texttt{public class ConstVisitor extends Visitor<C> \{ \ldots \}}) que \emph{visita} 
-a constru\c c\~{a}o de interesse na \'{a}rvore sint\'{a}tica abstrata.} 
+a constru\c c\~{a}o de interesse na \'{a}rvore sint\'{a}tica abstrata. 
 
 Por exemplo, a Listagem~\ref{lst:enum} apresenta 
 o c\'{o}digo necess\'{a}rio para visitar e popular informa\c c\~{o}es relacionadas a declara\c c\~{a}o de 
@@ -146,49 +146,46 @@ O diagrama da Figura:~\ref*{fig:DiagramaVisitor} exibe de maneira técnica o pro
 
 A Tabela:~\ref{tab:VisitorsCriados} exibe todos os \textit{Visitors} criados neste projeto com sua respectiva descrição. A complexidade ciclomática dos \textit{Visitors} a qual é dada pela quantidade de caminhos independentes em um trecho de código, vale ressaltar que a complexidade dos \textit{Visitors} varia de 1 a 8 sendo a média 2,5 e a quantidade média de linha de código total necessária para escrever cada \textit{Visitor} é 47.
 
-{\color{red}importante incluir mais 
-informa\c c\~{o}es aqui, como complexidade ciclom\'{a}tica e linhas de c\'{o}digo fonte de cada visitor}. 
 
 \begin{table}[ht!] \footnotesize
 	\centering
-	\caption{Tabela de Visitors criados com suas respectivas atribuições}
+	\caption{Visitors com a respectiva descrição, complexidade ciclomática e LOC.}
 	\label{tab:VisitorsCriados}	
-    \begin{tabular}{ >{\arraybackslash}p{2.5in} | >{\arraybackslash}m{3.5in} }
+    \begin{tabular}{ >{\arraybackslash}p{1.7in} | >{\arraybackslash}m{3.2in} | >{\arraybackslash}p{0.3in} | >{\arraybackslash}p{0.3in}}
 %		\begin{tabular}{M|p{9cm}}% centered column
 			\hline 
-			\textbf{Visitor} & \textbf{Atribuição}\\ \hline \hline
+			\textbf{Visitor} & \textbf{Atribuição} & \textbf{\acs{CC}} & \textbf{\acs{LOC}}\\ \hline \hline
 			
-			AICVisitor & Pesquisar \textit{Anonymous Inner Class} declaradas.\\ \hline
+			AIC & Pesquisar \textit{Anonymous Inner Class} declaradas. & 6 & 64\\ \hline
 			
-			EnumDeclarationVisitor 	& Pesquisa por \textit{Enums} declarados.\\ \hline
-			
-			ExistPatternVisitor	& Pesquisa \textit{EnhancedFor} que iteram sobre uma coleção procurando qualquer ocorrência nessa coleção.\\ \hline
-			
-			FieldAndVariableDeclarationVisitor & Lista todos as variáveis declaradas como os respectivos tipos.\\ \hline
-			
-			FilterPatternVisitor &  Lista todos os \textit{EnhancedFor} que iteram uma coleção filtrando elementos desta mesma coleção.\\ \hline
-			
-			ImportDeclarationVisitor & Lista todos os \textit{imports}.\\ \hline
-			
-			LambdaExpressionVisitor & Pesquisa casos de utilização da expressões lambda. \\ \hline
-			
-			LockVisitor & Verifica se nos métodos declarados existe alguma variável chamada Lock, ReentrantLock, ReadLock ou WriteLock. \\ \hline
-			
-			MapPatternVisitor & Pesquisa \textit{EnhancedFor} que iteram sobre uma coleção onde seja aplicado algum método sobre os itens desta coleção. \\ \hline
-			
-			MethodCallVisitor & Verifica onde esta sendo utilizado reflection no projeto.\\ \hline
-			
-			MethodDeclarationVisitor & Coleta informações sobre os métodos declarados nos projetos. \\ \hline
-			
-			ScriptingEngineVisitor & Verifica se o projeto faz chamada a algum \textit{Scripting}.\\ \hline
-			
-			SwitchStatementVisitor & Pesquisa \textit{Switchs} que utilizam \textit{String} como parâmetro.\\ \hline
-			
-			SwitchStringOpportunitiesVisitor &  Pesquisa \textit{If-Else} aninhados onde no \textit{If} contenha \textit{String}, caracterizando uma possibilidade de adoção de \textit{Switch} com \textit{String}.\\ \hline
 		
-			TryStatementVisitor & Pesquisa \textit{trys} que utilizar \textit{resource}, adoção de \textit{multicatch} e \textit{trys} que possuem \textit{catchs} aninhados.\\ \hline
+			ExistPattern & Pesquisa \textit{EnhancedFor} que iteram sobre uma coleção procurando qualquer ocorrência nessa coleção. & 28 & 116\\ \hline
 			
-			TypeDeclarationVisitor & Pesquisa todos os tipos declarados.\\ \hline 		
+			FieldAndVariableDeclaration & Lista todos as variáveis declaradas como os respectivos tipos. & 8 & 81\\ \hline
+			
+			FilterPattern &  Lista todos os \textit{EnhancedFor} que iteram uma coleção filtrando elementos desta mesma coleção. & 43 & 168\\ \hline
+			
+			ImportDeclaration & Lista todos os \textit{imports} existentes em cada classe. & 1 & 63\\ \hline
+			
+			LambdaExpression & Pesquisa casos de utilização da expressões lambda. & 1 & 33\\ \hline
+			
+			Lock & Verifica se nos métodos declarados existe alguma variável chamada Lock, ReentrantLock, ReadLock ou WriteLock.  & 12 & 75\\ \hline
+			
+			MapPattern & Pesquisa \textit{EnhancedFor} que iteram sobre uma coleção onde seja aplicado algum método sobre os itens desta coleção. & 27 & 103\\ \hline
+			
+			MethodCall & Verifica onde esta sendo utilizado reflection no projeto. & 2 & 22\\ \hline
+			
+			MethodDeclaration & Coleta informações sobre os métodos declarados nos projetos. & 5 & 45\\ \hline
+			
+			ScriptingEngine & Verifica se o projeto faz chamada a algum \textit{Scripting}. & 5 & 39\\ \hline
+			
+			SwitchStatement & Pesquisa \textit{Switchs} que utilizam \textit{String} como parâmetro. & 3 & 35\\ \hline
+			
+			SwitchStringOpportunities &  Pesquisa \textit{If-Else} aninhados onde no \textit{If} contenha \textit{String}, caracterizando uma possibilidade de adoção de \textit{Switch} com \textit{String}. & 3 & 50\\ \hline
+		
+			TryStatement & Pesquisa \textit{trys} que utilizar \textit{resource}, adoção de \textit{multicatch} e \textit{trys} que possuem \textit{catchs} aninhados. & 11 & 80\\ \hline
+			
+			TypeDeclaration & Pesquisa todos os tipos declarados. & 2 & 41\\ \hline 		
 		\end{tabular}
 \end{table}
 
