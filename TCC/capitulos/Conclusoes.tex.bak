@@ -1,0 +1,15 @@
+\chapter{Considerações Finais e Projeto Fututos}
+Com este projeto pode-se comprovar a existência de uma grande quantidade  de código duplicado em projetos renomados. Houve um contato via email com diversas comunidades de desenvolvimento como \textit{cassandra} e \textit{maven} onde foi constatado que os desenvolvedores preferem á não adoção de novas \textit{features} por usam versão mais antiga da JDK (http://goo.gl/h0uloY) ou efetuam a alteração em áreas que estão trabalhando no momento (http://goo.gl/GQ4Ckn). E também a existência de código duplicado pode ser dado pelo fato das equipes de desenvolvimento não adotarem uma \textit{feature} ou uma característica lançada como no caso de \texttt{multi-catch} para eliminar \texttt{catchs} aninhados com tratamento iguais ou até mesmo vir a utilizar expressões lambada para eliminar alguns \texttt{enhancedfor} o que proporcionaria uma evolução  do software junto com a evolução da linguagem.
+
+
+\section{Projeto Futuro}
+Como projeto futuro a especialização deste trabalho para efetuar o \textit{refectoring} de maneira automática seria de grande importância na evolução de código congelado. Com os \textit{visitors} existentes é possível identificar oportunidades reais de empregar \textit{multicatch} e \textit{swicht com String} o que seria uma evolução. 
+
+Visando o enriquecimento para tornar esta ferramenta robusta acoplar uma linguagem especializada em metaprogramação para efetuar este trabalho seria de suma importância tanto para evoulução dos alunos quanto da ferramenta. Com isso a linguagem Rascal MPL se destaca tendo em vista que é uma linguagem que atenderia perfeitamente esta evolução dada sua fácil integração com Java e por ser uma linguagem de metaprogamação.
+
+%Existe também a possibilidade da extensão do anaslisador para indentificar \textit{multicatch} por similaridade onde atualmente essa tarefa é realizada por igualdade. Com um algoritmo eficiente que detecte a similaridade com certeza a eficiência dessa \textit{feature} irá crescer consideravelmente o que acarretará em um \textit{refactoring} ainda mais significativo.Existe ainda a possibilidade de ampliar a pesquisa para encontrar objetos que contém método \textit{close} dentro de blocos \textit{Try's} o que acarretaria em um outro \textit{refactoring} visando migrar estes objetos para os \textit{resources} que estes pode receber.
+%
+%Existem diversas caracterísitcas evolutivas da linguagem \textit{Java} a serem atacados tais como \textit{boilerplate} e \textit{anonymousInnerClass} que podem ser tratados com \textit{LambdaExpression}. Um projeto futuro de grande valia seria a evolução desta ferramenta para que obter um \textit{refactoring} automático de códigos ultrapassados assim possibilitando a evolulção natural de \textit{softwares} legados e \textit{opensource}.
+%
+%Como exemplo destes códigos temos o caso de \textit{EnhancedFor} que iteram sobre uma \textit{Collection} o que a evolução deste abre algumas possibilidade como a facilidade de aplicar concorrência na evolução com \textit{Lambda} o que atualmente é muito complicado adicionar concorrência em um loop.
+
