@@ -51,6 +51,11 @@ Com o lançamento do Java SE 8 em 18 de Março de 2014, permitiu uma maior produ
 
 O \acs{JDK} 8 adicionou novas funcionalidades como as expressões lambda são suportados pelas seguintes características: As referências a métodos são compactas, maior legibilidade expressões lambda para métodos que já têm um nome. Métodos padrão que permitem adicionar novas funcionalidades para as interfaces de suas bibliotecas e assegurar a compatibilidade binária com o código escrito para versões mais antigas dessas interfaces. Eles são os métodos de interface que têm uma aplicação e a palavra-chave padrão no início da assinatura do método. Além disso, pode-se definir métodos estáticos em interfaces. Novos e aprimorados APIs que se aproveitam de expressões lambda e dos {\it streams} em Java 8 descrevem as classes novos e aprimorados que se aproveitam de expressões lambda e {\it streams}. Aprimoramento do compilador Java aproveita digitação alvo para inferir os parâmetros de tipo de um método de invocação genérica. O tipo de destino de uma expressão é o tipo de dados que o compilador Java espera, dependendo de onde a expressão aparece, por exemplo, pode-se usar o tipo de destino de uma instrução de atribuição para o tipo de inferência em Java 7. No entanto, em Java 8, você pode usar o tipo de destino para a inferência de tipos em mais contextos. Anotações sobre tipos Java onde é possível aplicar uma anotação em qualquer lugar onde um tipo é usado, utilizado em um conjunto com um sistema de tipo de conector, isso permite a verificação de tipo mais forte de seu código e repetição de anotações que agora é possível aplicar o mesmo tipo de anotação mais de uma vez para a mesma declaração ou o tipo de utilização.
 
+
+
+
+
+
 \section{Software Language Engineering}\label{sec:softEng}
 
 \begin{figure}[h]
@@ -60,11 +65,13 @@ O \acs{JDK} 8 adicionou novas funcionalidades como as expressões lambda são su
 	\caption{Fases de aplicações com linguagens.}
 \end{figure}
 
-Aplicações de manipulação de linguagem de programação é um trabalho desafiador e complicado por isso é necessário dividir este trabalho em componentes que quando combinados proporcionam a análise e manipulação de uma linguagem. Com isso é permitido que uma entrada válida seja trabalhada e convertida para que esta se torne uma saída que internamente é uma entrada interna de um outro estágio deste processo confome exemplificado na Figura:~\ref{fig:stagesLanguageApp}. 
+A manipulação de qualquer linguagem de programaçãoé uma tarefa desafiadora e complicada de tal forma que o cenário para estes aplicativos podem ser a manipulação de um \texttt{XML}, automatizar a transformação dos dados de um banco de dados antigo para um mais atual, efetuar a importação de usuário de uma antiga versão ou até mesmo de um produto concorrente dentre outros softwares que manipulam uma linguagem.
 
-Atualmente existe um esforço para tratar a engenharia de linguagens de programação como sendo o desenvolvimento de um software comum. Algumas aplicações típicas deste domínio são \texttt{reconhecedor, interpretador, tradutor, generator} conforme menciona Terrance Parr em~\cite{Parr:2009:LIP:1823613},  além de \texttt{ferramentas para a identificação de bugs}. Uma dessas é a ferramenta \textit{FindBugs}~\cite{FindBugs} a qual faz uso de alguns dos estágios descritos por Terance Parr em ~\cite{Parr:2009:LIP:1823613}.
+Tendo em vista a complexidade envolvida é necessário dividir este trabalho de manipulação de uma linguagem em componentes que quando combinados proporcionam um programa capaz de realizar a tarefa desejada com a linguagem trabalhada. A Figura:~\ref{fig:stagesLanguageApp} exibe as divisões ocorridas para trabalha uma linguagem onde fica claro o \textit{pipeline} para a manipulação da entrada onde cada estágio tem como entrada a saída do estágio anterior.
 
-A combinação de algumas das ferramentas citadas anteriormente, originou o \textit{FindBugs}~\cite{FindBugs} que é uma ferramenta desenvolvida em Java que processa o \texttt{bytecode} para identificar padões de erros. A Figura:~\ref{fig:findBugs} demonstra no mais alto nível a junção de algumas ferramentas. 
+Existe um esforço considerável para tratar a engenharia de linguagens de programação como sendo o desenvolvimento de um software comum. Algumas aplicações típicas deste domínio são \texttt{reconhecedor, interpretador, tradutor, gerador} conforme menciona Terrance Parr em~\cite{Parr:2009:LIP:1823613},  além de \texttt{ferramentas reconhecedoras de bugs}. Uma dessas é a ferramenta \textit{FindBugs}~\cite{FindBugs} que faz uso de alguns estágios descritos por Terance Parr em ~\cite{Parr:2009:LIP:1823613} para encontrar possíveis falhas em um programa que utilize a linguagem Java.
+
+A combinação de algumas das ferramentas citadas anteriormente, originou o \textit{FindBugs}~\cite{FindBugs} que é uma ferramenta desenvolvida em Java que processa o \texttt{bytecode} para identificar padrões de erros. A Figura:~\ref{fig:findBugs} demonstra no mais alto nível a junção das ferramentas que o compõe. 
 
 \begin{figure}[h]
 	\center
@@ -72,6 +79,16 @@ A combinação de algumas das ferramentas citadas anteriormente, originou o \tex
 	\label{fig:findBugs}
 	\caption{Fase do pipiline do FindBugs.}
 \end{figure}
+
+\texttt{Reconhecedor:} É uma contrução capaz de receber uma estutura de dado como um input ou um fluxo de inputs. O fluxo de input pode geralmente é texto puro mas pode ser utilizado dado binário. Como exemplo de aplicação tem-se ferramentas analisadoras de referências cruzadas, e ferramantas para carregar classes.
+
+\texttt{Interpretador:} Um interpretador, lê uma entrada, decodifica e executa as instruções, interpretadores variam de simples calculadoras até a implementação de linguagens de programação como Java, Python e PHP.
+
+\texttt{Tradutor:}A partir um input de texto ou binário é emitido uma saída para uma linguagem que pode ser a mesma ou não. É a combinação do \textit{reader} e \textit{generator}. COmo exemplo tem-se tradutores de linguagens extintas para linguagens atuais, \texttt{refactorers},  gerador de logs e macro pre-processadores.
+	
+\texttt{Gerador:} Percorre uma estutura de dado e emite uma saída. Como exemplo tem-se ferramentas de mapeamento de objetos relacionais em banco de dados, serializador de objetos, gerador de código fonte e geradores de página web.
+
+
 
 Especificamente no caso deste trabalho é necessário a contrução de um software que realiza análise estática de código para identificar o uso e oportunidades do uso construções da linguagem Java. E para isso a Figura:~\ref{fig:stagesAnalyzer} exemplifica no alto nível as ferramentas qua compõem o analisador.
 
@@ -82,17 +99,12 @@ Especificamente no caso deste trabalho é necessário a contrução de um softwa
 	\caption{Ferramentas necessárias para contrução do analisador estático.}
 \end{figure}
 
-%\begin{itemize}
-%	\item \textit{Reader:} É uma contrução capaz de receber uma estutura de dado como um input ou um fluxo de inputs. O fluxo de input pode geralmente é texto puro mas pode ser utilizado dado binário. Como exemplo de aplicação tem-se ferramentas analisadoras de referências cruzadas, e ferramantas para carregar classes.
-%	
-%	\item \textit{Generator:} Percorre uma estutura de dado e emite uma saída. Como exemplo tem-se ferramentas de mapeamento de objetos relacionais em banco de dados, serializador de objetos, gerador de código fonte e geradores de página web.
-%	
-%	\item \textit{Translator or Rewriter:}A partir um input de texto ou binário é emitido uma saída para uma linguagem que pode ser a mesma ou não. É a combinação do \textit{reader} e \textit{generator}. COmo exemplo tem-se tradutores de linguagens extintas para linguagens atuais, \texttt{refactorers},  gerador de logs e macro pre-processadores.
-%	
-%	\item \textit{Interpreter:} Um interpretador, lê uma entrada, decodifica e executa as instruções, interpretadores variam de simples calculadoras até a implementação de linguagens de programação como Java, Python e PHP.
-%\end{itemize}
 
 
+{\color{red}{
+Atualemente a evolução de uma linguagem de programação ocorre predominantemente de forma ad-hoc e em muitos casos manual, isso ocorre na tradução de aplicativos legados, 
+}
+}
 
 
 
