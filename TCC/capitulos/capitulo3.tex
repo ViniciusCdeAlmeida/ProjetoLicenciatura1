@@ -1,9 +1,59 @@
 %\input{capitulos/HistoriaDaLinguagem}
 %\input{capitulos/AspectosEvolutivos}
 \chapter{Fundamentação}
-Um ponto crítico quanto a análise de código fonte é o \textit{parser} da linguagem, onde é necessário reconhecer uma frase para efetuar a interpretação ou fazer a tradução. Inicialmente é necessário identificar se a frase que será tratada é um \textit{assignment} ou uma chamada de função.
+Conforme mencionado no capítulo anterior, o principal objetivo deste trabalho de conclusão de curso é identificar oportunidades de evolução de código em projetos que utilize recursos anteriores a Java 7 e Java 8 podendo vir a introduzir novos recursos como por exemplo: \texttt{multi-catch, try-resourse, switch-string, lambda expression}. Onde essa evolução muitas vezes é caracterizada como um \textit{refactoring} confome mencionado por Jeffrey L. Overbey at al~\cite{Overbey:2009}. Para atingir este objetivo e dar mais clareza ao leitor sobre essa temática esse capítulo discute sobre a evolução da lingugem Java na seção:~\ref{sec:evolucaoJava},  técnicas de \textit{software language engineering} na seção:~\ref{sec:softEng} e a problemática de \textit{refactoring} em particular na evolução de linguagens mas note que neste trabalho de graduação o intuíto é detectar oportunidades onde a implementação do \textit{refactoring} poderá ser o objetivo de trabalhos futuros. % (técnicas para contruir software para processar linguagens).
+
+\section{Evolução Linguagem Java}\label{sec:evolucaoJava}
+
+
+\section{Software Language Engineering}\label{sec:softEng}
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.9]{Imagens/stagesLanguageApp}
+	\label{fig:stagesLanguageApp}
+	\caption{Fases de aplicações com linguagens.}
+\end{figure}
+
+Aplicações de manipulação de linguagem de programação é um trabalho desafiador e complicado por isso é necessário dividir este trabalho em componentes que quando combinados proporcionam a análise e manipulação de uma linguagem. Com isso é permitido que uma entrada válida seja trabalhada e convertida para que esta se torne uma saída que internamente é uma entrada interna de um outro estágio deste processo confome exemplificado na Figura:~\ref{fig:stagesLanguageApp}. 
+
+Atualmente existe um esforço para tratar a engenharia de linguagens de programação como sendo o desenvolvimento de um software comum. Algumas aplicações típicas deste domínio são \texttt{reconhecedor, interpretador, tradutor, generator} conforme menciona Terrance Parr em~\cite{Parr:2009:LIP:1823613},  além de \texttt{ferramentas para a identificação de bugs}. Uma dessas é a ferramenta \textit{FindBugs}~\cite{FindBugs} a qual faz uso de alguns dos estágios descritos por Terance Parr em ~\cite{Parr:2009:LIP:1823613}.
+
+A combinação de algumas das ferramentas citadas anteriormente, originou o \textit{FindBugs}~\cite{FindBugs} que é uma ferramenta desenvolvida em Java que processa o \texttt{bytecode} para identificar padões de erros. A Figura:~\ref{fig:findBugs} demonstra no mais alto nível a junção de algumas ferramentas. 
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.9]{Imagens/pipelineFindbugs}
+	\label{fig:findBugs}
+	\caption{Fase do pipiline do FindBugs.}
+\end{figure}
+
+Especificamente no caso deste trabalho é necessário a contrução de um software que realiza análise estática de código para identificar o uso e oportunidades do uso construções da linguagem Java. E para isso a Figura:~\ref{fig:stagesAnalyzer} exemplifica no alto nível as ferramentas qua compõem o analisador.
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.9]{Imagens/stagesAnalizer}
+	\label{fig:stagesAnalyzer}
+	\caption{Ferramentas necessárias para contrução do analisador estático.}
+\end{figure}
+
+%\begin{itemize}
+%	\item \textit{Reader:} É uma contrução capaz de receber uma estutura de dado como um input ou um fluxo de inputs. O fluxo de input pode geralmente é texto puro mas pode ser utilizado dado binário. Como exemplo de aplicação tem-se ferramentas analisadoras de referências cruzadas, e ferramantas para carregar classes.
+%	
+%	\item \textit{Generator:} Percorre uma estutura de dado e emite uma saída. Como exemplo tem-se ferramentas de mapeamento de objetos relacionais em banco de dados, serializador de objetos, gerador de código fonte e geradores de página web.
+%	
+%	\item \textit{Translator or Rewriter:}A partir um input de texto ou binário é emitido uma saída para uma linguagem que pode ser a mesma ou não. É a combinação do \textit{reader} e \textit{generator}. COmo exemplo tem-se tradutores de linguagens extintas para linguagens atuais, \texttt{refactorers},  gerador de logs e macro pre-processadores.
+%	
+%	\item \textit{Interpreter:} Um interpretador, lê uma entrada, decodifica e executa as instruções, interpretadores variam de simples calculadoras até a implementação de linguagens de programação como Java, Python e PHP.
+%\end{itemize}
+
+
+
+
+
+Um ponto crítico quanto a análise de código fonte é o \textit{parser} da linguagem, onde é necessário reconhecer uma frase para efetuar a interpretação ou fazer a tradução para que a criação da representação intermediária aconteça. Inicialmente é necessário identificar se a frase que será tratada é um \textit{assignment} ou uma chamada de função.
  
-Reconhecer uma frase acarreta em duas coisas, distingui-la de outras construções e identificar os elementos e as subestruturas que compõem esta frase. Por exemplo se uma frase for reconhecida como um \textit{assignment}, pode-se identificar as variáveis a esquerda do operador \textbf{=} e uma expressão que é a subestrutura a direita. Este ato de reconhecer uma frase é denominado \textit{Parse}.
+Reconhecer uma frase acarreta em duas coisas, distingui-la de outras construções e identificar os elementos e as subestruturas que compõem esta frase. Por exemplo se uma frase for reconhecida como um \textit{assignment}, pode-se identificar as variáveis a esquerda do operador \texttt{=} e uma expressão que é a subestrutura a direita. Este ato de reconhecer uma frase é denominado \textit{Parse}.
 
 \section{Parse}
 
