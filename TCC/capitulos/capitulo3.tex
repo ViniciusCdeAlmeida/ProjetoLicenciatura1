@@ -1,8 +1,26 @@
 %\input{capitulos/HistoriaDaLinguagem}
 %\input{capitulos/AspectosEvolutivos}
 \chapter{Fundamentação}
-Conforme mencionado no capítulo anterior, o principal objetivo deste trabalho de conclusão de curso é identificar oportunidades de evolução de código em projetos que utilize recursos anteriores a Java 7 e Java 8 podendo vir a introduzir novos recursos como por exemplo: \texttt{multi-catch, try-resourse, switch-string, lambda expression}. Onde essa evolução muitas vezes é caracterizada como um \textit{refactoring} confome mencionado por Jeffrey L. Overbey at al~\cite{Overbey:2009}. Para atingir este objetivo e dar mais clareza ao leitor sobre essa temática esse capítulo discute sobre a evolução da lingugem Java na seção:~\ref{sec:evolucaoJava},  técnicas de \textit{software language engineering} na seção:~\ref{sec:softEng} e a problemática de \textit{refactoring} em particular na evolução de linguagens mas note que neste trabalho de graduação o intuíto é detectar oportunidades onde a implementação do \textit{refactoring} poderá ser o objetivo de trabalhos futuros. % (técnicas para contruir software para processar linguagens).
 
+Conforme mencionado no capítulo anterior, o principal objetivo deste trabalho de conclusão de curso é 
+identificar oportunidades de evolução de código em projetos que utilizam recursos anteriores a Java 7 e Java 8, 
+algo necess\'{a}rio para o contexto de reestrutura\c c\~{a}o de c\'{o}digo que visa adequar um c\'{o}digo 
+existente para usar constru\c c\~{o}es mais atuais de uma determinada de linguagem de programa\c c\~{a}o 
+(no caso, a linguagem Java). Importante destacar que as vers\~{o}es da linguagem Java mencionadas anteriormente
+introduziram novos recursos, tais como: \texttt{multi-catch}, \texttt{try-with-resourse}, \texttt{switch-string} 
+e \texttt{lambda expressions}; e que esse tipo de evolução constitui uma nova perspectiva de \textit{refactoring}, que se caracteriza 
+por uma transforma\c c\~{a}o de c\'{o}digo que preserva comportamento e que passa a usar  
+novas constru\c c\~{o}es da linguagem de programa\c c\~{a}o (confome defendido por Overbey and Johnson~\cite{Overbey:2009}). 
+
+Para atingir o objetivo do trabalho de conclus\~{a}o de curso, foi necess\'{a}rio estudar temas relacionados 
+\`{a} evolu\c c\~{a}o da linguagem Java, engenharia de linguagens de software (ou no Ingl\^{e}s Software 
+Language Engineering) e refatoramento de c\'{o}digo (\emph{code refactoring}).  Para dar mais clareza ao leitor 
+sobre essas temáticas, esse capítulo apresenta uma vis\~{a}o geral sobre esses temas. Note que n\~{a}o foi objetivo
+deste trabalho implementar um mecanismo de transforma\c c\~{a}o de c\'{o}digo, mas sim construir um suporte ferramental 
+efetivo para compreender como os desenvolvedores usam as constru\c c\~{o}es existentes na linguagem Java e {\bf identificar 
+oportunidades de melhoria de c\'{o}digo}, algo essencial para permitir a atualiza\c c\~{a}o de um c\'{o}digo existente 
+que usa constru\c c\~{o}es ultrapassadas de uma linguagem de programa\c c~{a}o. 
+ 
 \section{Evolução Linguagem Java}\label{sec:evolucaoJava}
 
 No começo da década de 90 um pequeno grupo de engenheiros da Oracle chamados de "\textit{Green Team}" acreditava que a próxima onde de na area da computação seria a união de equipamentos eletroeletrônicos com os computadores. O "\textit{Green Team}" liderado por James Gosling, demonstraram que a linguagem de programação Java, que foi desenvolvida pela equipe e originalmente era chamado de Oak, foi desenvolvida para dispositivos de entretenimento como aparelhos de tv a cabo, porem não foi bem aceita no meio. Em 1995 com a massificação da Internet, a linguagem Java teve sua primeira grande aplicação o navegador Netscape.
