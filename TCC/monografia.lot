@@ -1,0 +1,20 @@
+\select@language {american}
+\select@language {brazil}
+\select@language {american}
+\select@language {brazil}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Visitors com a respectiva descri\IeC {\c c}\IeC {\~a}o, complexidade ciclom\IeC {\'a}tica e LOC.}}{18}{table.4.1}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Projetos.}}{22}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Resumo dos tipos agrupados por idade e do tipo dos projetos.}}{23}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Tipo declarado X N\IeC {\'u}mero de inst\IeC {\^a}ncia}}{23}{table.5.3}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Ocorr\IeC {\^e}ncias de Express\IeC {\~o}es Lambda.}}{25}{table.5.4}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Classes concorrentes que \textit {extends Thread} ou implementam \textit {Runnable}.}}{27}{table.5.5}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Oportunidades de \texttt {multi-catch} por tipo do sistema.}}{29}{table.5.6}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o Try-Resource por tipo do sistema.}}{31}{table.5.7}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o \texttt {Switch String} por tipo do sistema.}}{31}{table.5.8}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Oportunidade de aplicar \texttt {switch} por tipo de sistema.}}{32}{table.5.9}
+\addvspace {10\p@ }
