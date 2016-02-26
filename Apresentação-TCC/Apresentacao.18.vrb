@@ -1,0 +1,9 @@
+\frametitle{Resultados}
+\begin{block}{Switch-String}
+\begin{itemize}
+\item Uma ferramenta capaz analisar estaticamente um projeto.
+
+\item Exportar um relatório contendo as métricas analisadas.
+
+\end{itemize}
+\end{block}

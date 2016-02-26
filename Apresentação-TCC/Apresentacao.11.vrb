@@ -1,0 +1,19 @@
+\frametitle{Procedimentos}
+\begin{block}{Ordem das tarefas}
+\begin{itemize}
+\item Revisão Bibliográfica
+\begin{itemize}
+\item Seleção do projetos.
+\item Escolha de projetos opensource.
+\end{itemize}
+\item Implementação do analisador estático.
+\begin{itemize}
+\item Definir arquitetura.
+\item Implementação.
+\item Coleta de dados.
+\end{itemize}
+\item Refazer os passos do artigo de Generics(escrever artigo).
+\item Análise do dados coletados utilizando R.
+\item Defesa TCC.
+\end{itemize}
+\end{block}

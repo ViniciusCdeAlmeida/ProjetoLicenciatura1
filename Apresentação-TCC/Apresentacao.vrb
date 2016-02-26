@@ -1,0 +1,15 @@
+\frametitle{Objetivos}
+%\begin{description} \item[\textbf{Objetivo Geral}]\end{description}
+\begin{block}{Geral}
+\begin{itemize}
+\item Identificar de forma eficiente código obsoleto para cada versão ao qual o software foi lançado.
+\end{itemize}
+\end{block}
+
+%\begin{description} \item[\textbf{Objetivo Geral}]\end{description}
+\begin{block}{Específicos}
+\begin{itemize}
+\item Elaborar um analisador estático que localize possíveis casos de código obsoleto.
+\item Exibir um relatório final indicando os possíveis casos e a possível evolução para tal código.
+\end{itemize}
+\end{block}

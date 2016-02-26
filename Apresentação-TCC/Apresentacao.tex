@@ -1,0 +1,409 @@
+\documentclass[]{beamer}
+\mode<presentation> {
+	
+	% The Beamer class comes with a number of default slide themes
+	% which change the colors and layouts of slides. Below this is a list
+	% of all the themes, uncomment each in turn to see what they look like.
+	
+	%\usetheme{default}
+	%\usetheme{AnnArbor}
+	%\usetheme{Antibes}
+	%\usetheme{Bergen}
+	\usetheme{Berkeley}
+	%\usetheme{Berlin}
+	%\usetheme{Boadilla}
+	%\usetheme{CambridgeUS}
+	%\usetheme{Copenhagen}
+	%\usetheme{Darmstadt}
+	%\usetheme{Dresden}
+	%\usetheme{Frankfurt}
+	%\usetheme{Goettingen}
+	%\usetheme{Hannover}
+	%\usetheme{Ilmenau}
+	%\usetheme{JuanLesPins}
+	%\usetheme{Luebeck}
+	%\usetheme{Madrid}
+	%\usetheme{Malmoe}
+	%\usetheme{Marburg}
+	%\usetheme{Montpellier}
+	%\usetheme{PaloAlto}
+	%\usetheme{Pittsburgh}
+	%\usetheme{Rochester}
+	%\usetheme{Singapore}
+	%\usetheme{Szeged}
+	%\usetheme{Warsaw}
+	
+	% As well as themes, the Beamer class has a number of color themes
+	% for any slide theme. Uncomment each of these in turn to see how it
+	% changes the colors of your current slide theme.
+	
+	%\usecolortheme{albatross}
+	%\usecolortheme{beaver}
+	%\usecolortheme{beetle}
+	%\usecolortheme{crane}
+	%\usecolortheme{dolphin}
+	%\usecolortheme{dove}
+	%\usecolortheme{fly}
+	%\usecolortheme{lily}
+	%\usecolortheme{orchid}
+	%\usecolortheme{rose}
+	%\usecolortheme{seagull}
+	%\usecolortheme{seahorse}
+	%\usecolortheme{whale}
+	%\usecolortheme{wolverine}
+	
+	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+	%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+	
+	%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage[utf8]{inputenc} % codificacao de caracteres
+\usepackage[T1]{fontenc}    % codificacao de fontes
+\usepackage[brazil]{babel}  % idioma
+\usepackage{listings}
+\usepackage{color}
+\usefonttheme[onlymath]{serif} % fonte modo matematic
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+\lstset{
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	showstringspaces=false,
+	commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+	morestring=[b]",
+	morestring=[s]{>}{<},
+	morecomment=[s]{<?}{?>},
+	stringstyle=\color{black},
+	identifierstyle=\color{darkblue},
+	keywordstyle=\color{cyan},
+	morekeywords={xmlns,version,type}% list your attributes here
+}
+
+
+%Titulo
+\title[\sc{Static Analisys}]{\textbf{Análise estática para detectar a evoulução da
+linguagem java em projetos open source}}
+\author[Thiago Cavalcanti - Vinícius Correa]{Thiago Gomes Cavalcanti \\ Vinícius Correa de Almeida}
+
+\institute{
+	\includegraphics[scale=0.6]{as_comp_cor.eps}\\
+	\textbf{Orientador: Prof. Dr. Rodrigo Bonifácio de Almeida}
+}
+\date[04/03/2016]{04 de março de 2016}
+
+\begin{document}
+	\section{Início}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\section{Roteiro}
+	\begin{frame}
+		\frametitle{Roteiro}
+		\tableofcontents
+	\end{frame}
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%% CENÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Cenário}
+	\begin{frame}[label=problems]
+		\frametitle{O Software}
+		\begin{itemize}
+			\item Software atual com construções ultrapassadas.
+			\item Código de baixa qualidade e difícil entendimento.
+			\item Dificuldade em efetuar refactoring e testes.
+			\item Desenvolvedores não conhecem de novas features da linguagem.
+			\item A release não é importante no desenvolvimento.
+			\item Time que está ganhando não se mexe!!!
+		\end{itemize}
+	\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%% CENÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% MOTIVAÇÃO %%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Motivação}
+	
+	\begin{frame}[label=Motivação]
+		\frametitle{Motivação}
+		\begin{block}{Fortran}
+			\begin{itemize}
+				\item Artigo Regrowing a Language de Jeffrey L. Overbey e Ralph E. Johnson.
+				
+				\item Remoção do ultrapassado estilo \textit{do loop} caso este terminasse com \textit{continue}, era substituído por construção equivalente \textit{end do}.
+				
+				\item Remoção do \textit{goto} por uma construção \textit{case} equivalente.
+				
+				\item Uso de palavras reservadas \textit{if, while, ...}, como variáveis.
+				
+				\item Introdução de OO em Fortran 2003.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}[label=AspectosAnalisados]
+		\frametitle{Aspectos analisados}
+		\begin{block}{Aspectos Analisados}
+			\begin{itemize}
+				\item Investigação empíraca da adoção de features Java e standard libraries.
+				
+				\item Replicação de um estudo existente de Parnin et al.
+				
+				\item Investigou-se as características:
+					\begin{itemize}
+						\item \texttt{Genericas}.
+						\item \texttt{Lambda Expression}.
+						\item \texttt{Multi-catch}.
+						\item \texttt{Try-Resource}.
+						\item \texttt{Switch-Stgring}.
+					\end{itemize}
+					
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}[label=ApectosAnalisados]
+		\frametitle{Aspectos analisados}
+		
+			\begin{block}{Oportunidade de evolução em:}
+				\begin{itemize}
+					\item \texttt{Lambda Expression}, \texttt{foreach, exists}.
+					\item \texttt{Multi-catch}, \texttt{catch(E1 | E2 | ...)}.
+				%	\item \texttt{Try-Resource}, \texttt{java.lang.AutoCloseable} ou \texttt{java.io.Closeable}.
+					\item \texttt{Switch-String}, \textit{if(string.equals(""))}.
+				\end{itemize}
+			\end{block}
+	\end{frame}
+	
+
+	
+%	\begin{frame}[label=DimensaoTrabalhos]
+%		\frametitle{Dimensões Alcancáveis}
+%		\begin{itemize}
+%			\item Falar da pretenção do analisador estático reduzir custo no desenvolvimento.
+%			\item E de como pode ajudar a ORACLE a tornar mais limpa as releases.
+%			
+%		\end{itemize}
+%	\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%% MOTIVAÇÃO %%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% Revisão teórica %%%%%%%%%%%%%%%%%%%%%%%%
+	\section{Revisão Teórica}
+	\frametitle{Referências}
+	\begin{frame}[label=referencias]
+		\begin{block}{Referências}
+			\begin{itemize}
+				\item Chris Parnin, Christian Bird, and Emerson Murphy-Hill 2011. \textbf{Java generics adoption: How new features are introduced, championed, or ignored}.
+				
+				\item Jefrey L. Overbey and Ralph E. Johnson. \textbf{Regrowing a language: refactoring tools
+				allow programming languages to evolve}.
+				
+				\item Dyer, Robert and Rajan, Hridesh and Nguyen, Hoan Anh and Nguyen, Tien N. \textbf{Mining billions of AST nodes to study actual and potential usage of Java language features}.
+			\end{itemize}
+			
+		\end{block}
+	\end{frame}
+	
+%%%%%%%%%%%%%%%%%%%%%%%% Revisão teórica %%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Diretrizes da pesquisa %%%%%%%%%%%%%%%%%%%%
+	\section{Diretrizes da pesquisa}
+
+	\begin{frame}[fragile]\frametitle{Problema}
+		\begin{block}{Problema}
+			Quais as características da linguagem Java são mais utilizadas no desenvolvimento do software e como é a adoção de novas características da linguagem através das versões dos softwares?
+		\end{block}
+	\end{frame}	
+	
+	
+	\begin{frame}[fragile]\frametitle{Hipóteses}
+		
+	%	\begin{description}\item[\textbf{Hipótese 1}]\end{description}
+		\begin{block}{Hipótese 1}
+			\begin{itemize}
+				\item Novas características são pouco utilizadas ou ignoradas no desenvolvimento do software.
+			\end{itemize}
+		
+		\end{block}
+		
+		%\begin{description}\item[\textbf{Hipótese 2}]\end{description}
+		\begin{block}{Hipótese 2}
+			\begin{itemize}
+				\item Novas Códigos obsoletos são mantido em todas as releases do software.
+			\end{itemize}
+		\end{block}
+		
+	%	\begin{description}	\item[\textbf{Hipótese 3}]\end{description}
+		\begin{block}{Hipótese 3}
+			\begin{itemize}
+				\item Versões mais recentes do software não possem as últimas características adotadas na linguagem.
+			\end{itemize}
+		\end{block}
+		
+	\end{frame}
+	
+	
+	\begin{frame}[fragile]\frametitle{Objetivos}
+		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
+		\begin{block}{Geral}
+			\begin{itemize}
+				\item Identificar de forma eficiente código obsoleto para cada versão ao qual o software foi lançado.
+			\end{itemize}
+		\end{block}
+			
+		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
+			\begin{block}{Específicos}
+				\begin{itemize}
+					\item Elaborar um analisador estático que localize possíveis casos de código obsoleto.
+					\item Exibir um relatório final indicando os possíveis casos e a possível evolução para tal código.
+				\end{itemize}
+			\end{block}
+	\end{frame}
+%%%%%%%%%%%%%%%%%%%%% Diretrizes da pesquisa %%%%%%%%%%%%%%%%%%%%%
+	
+% % % % % % % % % % % % % % % Metodologia % % % % % % % % % % % % % % % % % %	
+	\section{Metodologia}
+	\begin{frame}[label=metodologia, fragile]
+		\frametitle{Procedimentos}
+		\begin{block}{Ordem das tarefas}
+			\begin{itemize}
+				\item Revisão Bibliográfica
+					\begin{itemize}
+						\item Seleção do projetos.
+						\item Escolha de projetos opensource.
+					\end{itemize}
+				\item Implementação do analisador estático.
+					\begin{itemize}
+						\item Definir arquitetura.
+						\item Implementação.
+						\item Coleta de dados.
+					\end{itemize}
+				\item Refazer os passos do artigo de Generics(escrever artigo).
+				\item Análise do dados coletados utilizando R.
+				\item Defesa TCC.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+		
+% % % % % % % % % % % % % % % Metodologia % % % % % % % % % % % % % % % % % %		
+	
+
+%%%%%%%%%%%%%%%%%%%%% Resultados %%%%%%%%%%%%%%%%%%%%%
+	\section{Resultados}
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Resultados}
+			\begin{itemize}
+				\item Uma ferramenta capaz analisar estaticamente um projeto.
+				
+				\item Exportar um relatório contendo as métricas analisadas.
+				
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Generics}
+			\begin{itemize}
+				\item Uma ferramenta capaz analisar estaticamente um projeto.
+				
+				\item Exportar um relatório contendo as métricas analisadas.
+				
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Lambda}
+			\begin{itemize}
+				\item Uma ferramenta capaz analisar estaticamente um projeto.
+				
+				\item Exportar um relatório contendo as métricas analisadas.
+				
+			\end{itemize}
+		\end{block}
+	\end{frame}	
+	
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Multicatch}
+			\begin{itemize}
+				\item Uma ferramenta capaz analisar estaticamente um projeto.
+				
+				\item Exportar um relatório contendo as métricas analisadas.
+				
+			\end{itemize}
+		\end{block}
+	\end{frame}	
+	
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Try-Resource}
+			\begin{itemize}
+				\item Representam 1.15\% de todos os \texttt{try} dos sitemas.
+			
+				\item Encontrados 1616 ocorrências em 13 Projetos.
+								
+				\item \texttt{Server-Database} concentram 91\% das ocorrências.
+			
+			\end{itemize}
+			
+		\end{block}
+		
+	\end{frame}
+	
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Try-Resource}
+	
+			\begin{figure}[Th]
+					\center
+					\includegraphics[scale=0.42]{../TCC/Imagens/ocorrenciasTryResource}
+					\label{fig:Try-Resource}
+					\caption{Adoção de \texttt{Try-Resource} nos projetos.}
+			\end{figure}
+		\end{block}
+	
+	\end{frame}
+	
+	
+	
+	
+	
+	
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Switch-String}
+			\begin{itemize}
+				\item Uma ferramenta capaz analisar estaticamente um projeto.
+				
+				\item Exportar um relatório contendo as métricas analisadas.
+				
+			\end{itemize}
+		\end{block}
+	\end{frame}
+%%%%%%%%%%%%%%%%%%%%% Resultados esperados %%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%% Encerramento %%%%%%%%%%%%%%%%%%%%%
+	\section{Encerramento}
+	\begin{frame}[label=encerramento]
+		\frametitle{Encerramento}
+		\begin{block}{Perguntas}
+			\centering
+			\includegraphics[scale=0.6]{duvidas.jpg}\\
+		\end{block}
+	\end{frame}
+%%%%%%%%%%%%%%%%%%%%% Encerramento %%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
