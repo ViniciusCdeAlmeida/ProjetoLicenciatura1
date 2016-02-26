@@ -1,0 +1,19 @@
+\select@language {american}
+\select@language {brazil}
+\select@language {american}
+\select@language {brazil}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Fases de aplica\IeC {\c c}\IeC {\~o}es com linguagens.}}{9}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Fase do pipiline do FindBugs.}}{9}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ferramentas necess\IeC {\'a}rias para contru\IeC {\c c}\IeC {\~a}o do analisador est\IeC {\'a}tico.}}{10}{figure.2.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Alto n\IeC {\'\i }vel de funcionamento do analisador est\IeC {\'a}tico.}}{14}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Input analisador est\IeC {\'a}tico.}}{14}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Funcionamento analisador est\IeC {\'a}tico.}}{15}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Funcionamento analisador est\IeC {\'a}tico.}}{16}{figure.3.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Oportunidades de \texttt {multi-catch} nos projetos.}}{27}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o de \texttt {Try-Resource} nos projetos.}}{29}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Oportunidades de \textit {refactoring} em \texttt {if-then-else} por sistema.}}{31}{figure.4.3}
+\addvspace {10\p@ }

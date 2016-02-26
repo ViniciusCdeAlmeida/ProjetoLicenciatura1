@@ -100,13 +100,11 @@ Especificamente no caso deste trabalho é necessário a contrução de um softwa
 \end{figure}
 
 
-
-{\color{red}{
-Atualemente a evolução de uma linguagem de programação ocorre predominantemente de forma ad-hoc e em muitos casos manual, isso ocorre na tradução de aplicativos legados, 
-}
-}
-
-
+Atualmente a evolução de uma linguagem de programação ocorre predominantemente de forma {\it ad-hoc} e em muitos casos manual, isso ocorre na tradução de aplicativos legados, conforme necessário para ferramentas de engenharia reversa de software. A abordagem mais comum é manualmente codificar uma gramática de entrada de um analisador específico gerador de forma incomum. Encontramos apenas uma instância de ferramentas {\it grammarware} neste processo: um gerador de analise. O princípio de condução é apelar para a classe gramatical que é suportada pelo gerador de analise que muitas vezes é realizado por tentativa e erro. A base de código que deve ser analisado, é o oráculo, para este processo. Especificações do analisador são derivados automaticamente da semi gramática. Recuperado
+o uso de ferramentas que personalizam gramáticas para uma determinada tecnologia. Diferente
+tecnologias de análise que podem ser orientada em oposição a um compromisso para uma
+tecnologia específica. O processo de personalização é susceptível de exigir a entrada de
+um engenheiro de {\it grammarware}.
 
 Um ponto crítico quanto a análise de código fonte é o \textit{parser} da linguagem, onde é necessário reconhecer uma frase para efetuar a interpretação ou fazer a tradução para que a criação da representação intermediária aconteça. Inicialmente é necessário identificar se a frase que será tratada é um \textit{assignment} ou uma chamada de função.
  
