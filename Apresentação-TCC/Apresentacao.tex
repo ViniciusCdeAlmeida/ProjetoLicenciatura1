@@ -154,35 +154,32 @@ linguagem java em projetos open source}}
 		\frametitle{Aspectos analisados}
 		\begin{block}{Aspectos Analisados}
 			\begin{itemize}
-				\item Investigação empíraca da adoção de features Java e standard libraries.
+				\item Investigação empíraca da adoção de features Java.
 				
 				\item Replicação de um estudo existente de Parnin et al.
 				
 				\item Investigou-se as características:
 					\begin{itemize}
-						\item \texttt{Genericas}.
+						\item \texttt{Generics}.
 						\item \texttt{Lambda Expression}.
 						\item \texttt{Multi-catch}.
 						\item \texttt{Try-Resource}.
 						\item \texttt{Switch-Stgring}.
 					\end{itemize}
-					
+
+				\item Oportunidade de evolução em:
+					\begin{itemize}
+						\item \texttt{Lambda Expression}, \texttt{foreach, exists}.
+						\item \texttt{Multi-catch}, \texttt{catch(E1 | E2 | ...)}.
+					%	\item \texttt{Try-Resource}, \texttt{java.lang.AutoCloseable} ou \texttt{java.io.Closeable}.
+						\item \texttt{Switch-String}, \textit{if(string.equals(""))}.
+					\end{itemize}
+
 			\end{itemize}
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}[label=ApectosAnalisados]
-		\frametitle{Aspectos analisados}
-		
-			\begin{block}{Oportunidade de evolução em:}
-				\begin{itemize}
-					\item \texttt{Lambda Expression}, \texttt{foreach, exists}.
-					\item \texttt{Multi-catch}, \texttt{catch(E1 | E2 | ...)}.
-				%	\item \texttt{Try-Resource}, \texttt{java.lang.AutoCloseable} ou \texttt{java.io.Closeable}.
-					\item \texttt{Switch-String}, \textit{if(string.equals(""))}.
-				\end{itemize}
-			\end{block}
-	\end{frame}
+
 	
 
 	
@@ -260,15 +257,14 @@ linguagem java em projetos open source}}
 		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
 		\begin{block}{Geral}
 			\begin{itemize}
-				\item Identificar de forma eficiente código obsoleto para cada versão ao qual o software foi lançado.
+				\item Identificar de forma eficiente código obsoleto.
 			\end{itemize}
 		\end{block}
 			
 		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
 			\begin{block}{Específicos}
 				\begin{itemize}
-					\item Elaborar um analisador estático que localize possíveis casos de código obsoleto.
-					\item Exibir um relatório final indicando os possíveis casos e a possível evolução para tal código.
+					\item Elaborar um analisador estático flexível.
 				\end{itemize}
 			\end{block}
 	\end{frame}
@@ -292,8 +288,8 @@ linguagem java em projetos open source}}
 						\item Coleta de dados.
 					\end{itemize}
 				\item Refazer os passos do artigo de Generics(escrever artigo).
-				\item Análise do dados coletados utilizando R.
-				\item Defesa TCC.
+				
+				\item Contribuições adicionais.
 			\end{itemize}
 		\end{block}
 	\end{frame}
@@ -304,51 +300,172 @@ linguagem java em projetos open source}}
 
 %%%%%%%%%%%%%%%%%%%%% Resultados %%%%%%%%%%%%%%%%%%%%%
 	\section{Resultados}
-	\begin{frame}[fragile, label=re]\frametitle{Resultados}
-		\begin{block}{Resultados}
-			\begin{itemize}
-				\item Uma ferramenta capaz analisar estaticamente um projeto.
-				
-				\item Exportar um relatório contendo as métricas analisadas.
-				
-			\end{itemize}
-		\end{block}
-	\end{frame}
 	
 	\begin{frame}[fragile, label=re]\frametitle{Resultados}
 		\begin{block}{Generics}
 			\begin{itemize}
-				\item Uma ferramenta capaz analisar estaticamente um projeto.
+				\item 16\% dos projetos não declaram \texttt{Generics}.
 				
-				\item Exportar um relatório contendo as métricas analisadas.
+				\item \textit{Commons Collections} possui 75\% dos tipos genéricos.
+				
+				\item De 925.925 atributos e variáveis apenas 9.1\% são tipos genéricos (84880).
+				
+				\item \texttt{List<String>} possui quase 25\% de todos os genéricos conforme Parnis.
+				
+				\item Apenas 0.84\% de 730.720 métodos parametrizados.
+				
+				\item Considerando o tipo e idade da aplicação \texttt{Generics} não exerce influencia significativa.
 				
 			\end{itemize}
 		\end{block}
 	\end{frame}
 
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Generics}
+				\begin{table}[h!]\footnotesize
+					\centering
+					\caption{Resumo dos tipos agrupados por idade e do tipo dos projetos.}
+					\begin{tabular}{ccccc} \hline 
+						Tipo de Projeto & Antes Java SE 5.0 & Tipo & Tipo Genérico & (\%) \\ \hline\hline
+						Aplication & Yes & 18168 & 177 & 0.97 \\
+						Aplication & No & 16148 & 744 & 4.61 \\
+						Library & Yes & 21537 & 1198 & 5.56 \\
+						Library & No & 22639 & 947 & 4.18 \\
+						Server/Database & Yes & 18038 & 552 & 3.10 \\ 
+						Server/Database & No & 11790 & 760 & 6.45 \\ \hline
+					\end{tabular}
+					\label{tab:std} %std means summary of type declarations
+				\end{table}
+	
+			\end{block}
+		\end{frame}
+		
+		
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Generics}
+			\begin{table}[ht]\footnotesize
+				\centering
+				\caption{Tipo declarado X Número de instância}
+				\begin{tabular}{cc}
+					\hline
+					Tipo & Número de Instância\\ 
+					\hline \hline
+					\texttt{List$<$String$>$} & 4993 \\ 
+					\texttt{Class$<$?$>$} & 3033 \\ 
+					\texttt{Set$<$String$>$} & 2872 \\ 
+					\texttt{Map$<$String,String$>$} & 2294 \\ 
+					\texttt{Map$ < $String,Object$>$} & 1554 \\ \hline
+				\end{tabular}
+				\label{tab:tipoXnumeroInstancia} %std means summary of type declarations
+			\end{table}
+	
+			\end{block}
+		\end{frame}
 
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Generics}
+			\begin{itemize}
+				\item Foram encontrados 4355 que fazem polimorfismo parametrizado.
+				
+				\item 30\% do polimorfismo pesquisado possui \texttt{Super, extends ou ?}.
+				
+				\item Todos os tipos que utilizam \texttt{? ou Super}, utilizam o \texttt{extends}.
+				
+				\item De 925.925 atributos e variáveis apenas 9.1\% são tipos genéricos (84880).
+				
+				\item Também foi descoberto que quase 10\% de todos os atributos e variáveis são tipos genéricos.
+				
+				\item Considerando o tipo e idade da aplicação \texttt{Generics} não exerce influencia significativa.
+				
+			\end{itemize}
+		\end{block}
+	\end{frame}	
+	
+
+% Lamba -----------------------------------------------------------------------------------------------	
 	\begin{frame}[fragile, label=re]\frametitle{Resultados}
 		\begin{block}{Lambda}
 			\begin{itemize}
-				\item Uma ferramenta capaz analisar estaticamente um projeto.
-				
-				\item Exportar um relatório contendo as métricas analisadas.
-				
+				\item Apenas 5\% faz uso de \texttt{Lamba Expression}.
+				\item Utilização apenas em Teste Unitários.
+				\item Esforços individuais para incorporar \texttt{Lambda}.
+			\end{itemize}
+		
+			\begin{table}[h]\footnotesize
+				\centering
+				\caption{Ocorrências de Expressões Lambda.}
+				\begin{tabular}{cc}
+					\hline
+					Sistema & Ocorrências Expressões Lambda\\ 
+					\hline \hline
+					\texttt{Hinernate} & 168 \\ 
+					\texttt{Jetty} & 2 \\ 
+					\texttt{Lucene} & 11 \\ 
+					\texttt{Spark} & 77 \\ 
+					\texttt{Spring-framework} & 121 \\ \hline
+				\end{tabular}
+				\label{tab:adocaoLambda} %std means summary of type declarations
+			\end{table}
+		\end{block}
+	\end{frame}	
+	
+	
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Oportunidade de aplicar Lambda}
+			\begin{itemize}
+				\item \texttt{EXIST PATTERN, FILTER PATTERN e MAP PATTERN}.
+				\item Foram encontrados 2496 oportunidades.
+				\item 2190 correspondem a \texttt{MAP PATTERN}, 87\%.
 			\end{itemize}
 		\end{block}
+	\end{frame}
+	
+%------------------------------------------------------------------------------------------------------------	
+% Multi-catch -----------------------------------------------------------------------------------------------	
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Multi-catch}
+			\begin{itemize}
+				\item Representam 1\% do mecanismo de exceção.
+				
+				\item 95\% dos projetos com oportunidades reais.
+				
+				\item 1474 \texttt{Try} com \texttt{catch} similares repetidos.
+				
+			\end{itemize}
+			
+		\end{block}
+		
+		\begin{table}[h]
+			\centering
+			\caption{Oportunidades de \texttt{multi-catch} por tipo do sistema.}
+			\begin{tabular}{cc}
+				\hline
+				Natureza & Ocorrências \\ 
+				\hline \hline
+				\texttt{Application} & 551 \\ 
+				\texttt{Library} &  464 \\ 
+				\texttt{Servers - Database} &  459 \\ \hline
+			\end{tabular}
+			\label{tab:oportunidadesMulticatch} %std means summary of type declarations
+		\end{table}
+		
 	\end{frame}	
 	
 	\begin{frame}[fragile, label=re]\frametitle{Resultados}
-		\begin{block}{Multicatch}
-			\begin{itemize}
-				\item Uma ferramenta capaz analisar estaticamente um projeto.
-				
-				\item Exportar um relatório contendo as métricas analisadas.
-				
-			\end{itemize}
-		\end{block}
-	\end{frame}	
+		\begin{block}{Multi-catch}
 	
+			\begin{figure}[h]
+				\center
+					\includegraphics[scale=0.35]{../TCC/Imagens/ocorrenciasMulticatch}
+				\label{fig:muticatch}
+				\caption{Oportunidades de \texttt{multi-catch} nos projetos.}
+			\end{figure}
+		\end{block}
+	
+	\end{frame}	
+%-------------------------------------------------------------------------------------------------	
+
+% Try-Resource------------------------------------------------------------------------------------------------
 	\begin{frame}[fragile, label=re]\frametitle{Resultados}
 		\begin{block}{Try-Resource}
 			\begin{itemize}
@@ -368,31 +485,92 @@ linguagem java em projetos open source}}
 		\begin{block}{Try-Resource}
 	
 			\begin{figure}[Th]
-					\center
-					\includegraphics[scale=0.42]{../TCC/Imagens/ocorrenciasTryResource}
-					\label{fig:Try-Resource}
-					\caption{Adoção de \texttt{Try-Resource} nos projetos.}
+				\center
+				\includegraphics[scale=0.39]{../TCC/Imagens/ocorrenciasTryResource}
+				\label{fig:tryresource}
+				\caption{Adoção de \texttt{Try-Resource} nos projetos.}
 			\end{figure}
 		\end{block}
 	
+	\end{frame}	
+%-------------------------------------------------------------------------------------------------	
+	
+% Switch-String------------------------------------------------------------------------------------------------	
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Switch-String}
+			Menos de 1\% dos  6827 \texttt{Switch} usam \texttt{String}.
+
+			\begin{table}[ht!] \footnotesize
+				\centering
+				\caption{Adoção \texttt{Switch String} por tipo do sistema.}
+				\begin{tabular}{cc}
+					\hline
+					Sistema & Ocorrências \\ 
+					\hline \hline
+					\texttt{Cassandra} & 14 \\ 
+					\texttt{FindBugs} & 3 \\ 
+					\texttt{Jetty} & 16 \\
+					\texttt{Lucene} & 2 \\
+					\texttt{Sonar} & 1 \\
+					\texttt{Spring} & 2 \\
+					\texttt{Tomcat} & 8 \\
+					\texttt{UniversalMediaServer} & 18 \\
+					\texttt{Wicket} & 1 \\
+					\texttt{Wildfly} & 1 \\	 \hline
+					\texttt{Total} & 66 \\ \hline
+				\end{tabular}
+				\label{tab:adocaoSwitchString} %std means summary of type declarations
+			\end{table}
+		\end{block}
 	\end{frame}
-	
-	
-	
 	
 	
 	
 	\begin{frame}[fragile, label=re]\frametitle{Resultados}
 		\begin{block}{Switch-String}
 			\begin{itemize}
-				\item Uma ferramenta capaz analisar estaticamente um projeto.
-				
-				\item Exportar um relatório contendo as métricas analisadas.
-				
+				\item Pesquisa por \texttt{if(String.equals(""))}.
+				\item Foram encontrados 4940 em 45 dos 46 sistemas.
+				\item \texttt{Switch-String} mais eficiênte que \texttt{if}.
 			\end{itemize}
+			
+			\begin{table}[h]
+				\centering
+				\caption{Oportunidade de aplicar \texttt{switch} por tipo de sistema.}
+				\begin{tabular}{cc}
+					\hline
+					Natureza & Ocorrências \\ 
+					\hline \hline
+					\texttt{Application} & 1773 \\ 
+					\texttt{Library} & 1881 \\ 
+					\texttt{Servers - Database} & 1286 \\ \hline
+					\texttt{Total} & 4940 \\ \hline
+				\end{tabular}
+				\label{tab:oportunidadesSwitchPorNatureza} %std means summary of type declarations
+			\end{table}
+			
 		\end{block}
 	\end{frame}
-%%%%%%%%%%%%%%%%%%%%% Resultados esperados %%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{frame}[fragile, label=re]\frametitle{Resultados}
+		\begin{block}{Switch-String}
+			\begin{figure}[h]
+				\center
+				\includegraphics[scale=0.30]{../TCC/Imagens/oportunidadesSwitchString}
+				\label{fig:oportunidadesSwitchString}
+				\caption{Oportunidades de \textit{refactoring} em \texttt{if-then-else} por sistema.}
+			\end{figure}		
+		\end{block}
+	\end{frame}
+	
+%e------------------------------------------------------------------------------------------------
+
+% Conclusão ------------------------------------------------------------------------------------------------
+	\begin{frame}[fragile, label=re]\frametitle{Conclusão}
+		\begin{block}{Conclusão}
+		
+		\end{block}
+	\end{frame}	
 
 
 %%%%%%%%%%%%%%%%%%%%% Encerramento %%%%%%%%%%%%%%%%%%%%%

@@ -1,11 +1,27 @@
 \frametitle{Resultados}
-\begin{block}{Try-Resource}
+\begin{block}{Multi-catch}
+\begin{itemize}
+\item Representam 1\% do mecanismo de exceção.
 
-\begin{figure}[Th]
-\center
-\includegraphics[scale=0.42]{../TCC/Imagens/ocorrenciasTryResource}
-\label{fig:Try-Resource}
-\caption{Adoção de \texttt{Try-Resource} nos projetos.}
-\end{figure}
+\item 95\% dos projetos com oportunidades reais.
+
+\item 1474 \texttt{Try} com \texttt{catch} similares repetidos.
+
+\end{itemize}
+
 \end{block}
+
+\begin{table}[h]
+\centering
+\caption{Oportunidades de \texttt{multi-catch} por tipo do sistema.}
+\begin{tabular}{cc}
+\hline
+Natureza & Ocorrências \\
+\hline \hline
+\texttt{Application} & 551 \\
+\texttt{Library} &  464 \\
+\texttt{Servers - Database} &  459 \\ \hline
+\end{tabular}
+\label{tab:oportunidadesMulticatch} %std means summary of type declarations
+\end{table}
 

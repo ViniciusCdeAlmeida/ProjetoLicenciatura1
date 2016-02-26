@@ -12,7 +12,7 @@ Uma decisão não tão simples é manter uma porção do código congelado, sem 
 \section{Objetivos}
 	
 	O principal objetivo deste trabalho é analisar a adoção de construções da linguagem de programação 
-	Java em projetos open-source, com o intuito de compreender a forma típica de utilização das construções 
+	Java em projetos \textit{open-source}, com o intuito de compreender a forma típica de utilização das construções 
 	da linguagem e verificar a adoção ou não das \textit{features} mais recentemente lançadas. Especificamente, 
 	os seguintes objetivos foram traçados:
 	
@@ -21,7 +21,7 @@ Uma decisão não tão simples é manter uma porção do código congelado, sem 
 	    de construções da linguagem Java. 
 	  
 	  \item avaliar o uso de construções nas diferentes versões da linguagem Java, considerando 
-	  projeto open-source. 
+	  projeto \textit{open-source}. 
 	  
 	  \item realizar um \textit{survey} inicial para verificar o porque da não adoção de algumas construções 
 	  da linguagem nos projetos. 
@@ -35,20 +35,20 @@ Uma decisão não tão simples é manter uma porção do código congelado, sem 
 %	Criar um analisador estático de código para projetos java, com foco em projetos \textit{opensource}, e através deste pesquisar através da infraestrutura de árvores sintáticas \cite{chomsky1956three} e visitors \cite{Gamma:1995:DPE:186897} provida pela biblioteca \textit{JDT} do eclipse e encontrar construções de código ultrapassadas e verificar se novas características veem sendo adotados pelo desenvolvedores ao longo do projeto.
 %	
 
-%A base deste trabalho eh o desenvolvimento de um suporte ferramental que auxilie na evoluçao de um código legado para reduzir o uso de construç~oes obsoletas. Essas ferramentas tem como base a sua construção em linguagem {\it Java} com o intuito de tornar o processo de construção mais ágil e posteriormente aberto para o acoplamento de novos módulos. A construção de uma árvore sintática é um passo onde é feito para cada arquivo de código {\it .Java} e posteriormente de todos os arquivos {\it .Java} contidos em qualquer projeto para posterior análise. Este parser implica em listar todos os arquivos Java e gerar uma \acs{AST} para que posteriormente haja um percorrimento usando um visitor  \cite{Gamma:1995:DPE:186897} nos blocos de código contidos nos nós da \acs{AST}  \cite{Dyer:2014:MBA:2568225.2568295} afim de compará-los como estes com a versão atual.
+%A base deste trabalho eh o desenvolvimento de um suporte ferramental que auxilie na evolução de um código legado para reduzir o uso de construções~  obsoletas. Essas ferramentas tem como base a sua construção em linguagem {\it Java} com o intuito de tornar o processo de construção mais ágil e posteriormente aberto para o acoplamento de novos módulos. A construção de uma árvore sintática é um passo onde é feito para cada arquivo de código {\it .Java} e posteriormente de todos os arquivos {\it .Java} contidos em qualquer projeto para posterior análise. Este parser implica em listar todos os arquivos Java e gerar uma \acs{AST} para que posteriormente haja um percorrimento usando um visitor  \cite{Gamma:1995:DPE:186897} nos blocos de código contidos nos nós da \acs{AST}  \cite{Dyer:2014:MBA:2568225.2568295} afim de compará-los como estes com a versão atual.
 %
 %O processo de refatoração \cite{Schaefer:2010:SIR:1932682.1869485} tem como motivação a reestruturação de código, de forma que o código considerado pelo processo, morto,duplicado ou com perca de desempenho não haja código morto, duplicado ou com perca de desempenho em um determinado trecho de código. Esse processo não tem como premissa a atualização do código para novas estruturas de versões da linguagem mais recentes. Essa nova abordagem de refatoração tem com motivação a retirada de código obsoleto, devido a novas abordagens e estruturas das novas versões, e com baixo desempenho de sistemas sem prejuízo na sua engenharia e funcionamento.
 %
 %Devido a esse tipo de refatoração de código visa a evolução do código para a uma mais recente com estruturas onde não haja perda de desempenho devido a mudança e também a atualização do código legado para estruturas modernas. Tais estruturas antigas com a ação dessa proposta de refatoração, tendem com o tempo a sair das estruturas providas pela linguagem Java como aconteceu com Fortan 90 como visto em Overbey  \cite{Overbey:2009:RLR:1639949.1640127} e essa abordagem tem o intuito de diminuir a quantidade de estruturas antigas que não fazem mais sentido pois novas estruturas realizam as mesmas funções no interpretador da linguagem Java. As modificações propostas pela ferramenta de refatoração não deverão trazer com que perca de desempenho ou aumento da complexidade do código portanto deixando como uma sugestão a alteração do código ou segmento de código para o usuário a adesão das propostas de refatoração ou não.
 %
-%A \acs{AST} proposta por Chomsky em 1956 \cite{chomsky1956three},  é uma estrutura de dados que representa estruturas de cadeias sintáticas representada por um esqueleto semântico da linguagem em questão. É constituída através de um framework do ambiente de desenvolvimento integrado chamado Eclipse onde o nome desse framework é chamado de EclispeJDT agir sobre traz métodos implementados pelo próprio framework para o percorrer e ações na árvore sintática. A ideia é transformar inicialmente qualquer código fonte java em uma árvore sintática e devido a isso, o mapeamento da arvore já construída que é muito conveniente para inspecionar o código fonte de um arquivo ou de um projeto com vários arquivos em diferentes diretórios. Com isso é possível realizar ou sugerir ao usuário modificações no código fonte através desta árvore construída e isto seria referenciado automaticamente no código fonte.
+%A \acs{AST} proposta por Chomsky em 1956 \cite{chomsky1956three},  é uma estrutura de dados que representa estruturas de cadeias sintáticas representada por um esqueleto semântico da linguagem em questão. É constituída através de um \textit{framework} do ambiente de desenvolvimento integrado chamado Eclipse onde o nome desse \textit{framework} é chamado de EclispeJDT agir sobre traz métodos implementados pelo próprio \textit{framework} para o percorrer e ações na árvore sintática. A ideia é transformar inicialmente qualquer código fonte java em uma árvore sintática e devido a isso, o mapeamento da arvore já construída que é muito conveniente para inspecionar o código fonte de um arquivo ou de um projeto com vários arquivos em diferentes diretórios. Com isso é possível realizar ou sugerir ao usuário modificações no código fonte através desta árvore construída e isto seria referenciado automaticamente no código fonte.
 %
 %A proposta é criar ferramentas de análise estática para códigos fonte da linguagem Java para que possa-se apurar projetos pequenos e posteriormente em projetos {\it open-sources} para a verificação da existência de alguma defasagem \cite{dyer2013large} de estruturas entre qualquer versão da linguagem Java que fora concebido para a versão atual e estável na qual a linguagem se encontra. O desenvolvimento das ferramentas será com a versão mais atual da linguagem Java que neste momento é o Java versão 8 para verificar se os softwares desenvolvidos está versão nesta versão e como acompanharam a evolução de décadas de novas versões sem atualização do código por motivo de engenharia outro qualquer.
 
 
 \section{Metodologia}
     
-    A realizaçao deste trabalho envolveu atividades de revisão da literatura, contemplando um estudo 
+    A realização deste trabalho envolveu atividades de revisão da literatura, contemplando um estudo 
     de artigos científicos que abordam a adoção de novas características da linguagem Java ao longo do 
     lançamento das diferentes versões para a comunidade de desenvolvedores~\cite{Schaefer:ACM2009, Dyer:2013, Parnin:ACM2011, Overbey:2009, Dyer:ACM2014, Bracha:ACM1998, bonifacio:scam2015}. Com isso, foi 
     possível compreender a limitação dos trabalhos existentes e, dessa forma, definir o escopo da 
@@ -57,14 +57,14 @@ Uma decisão não tão simples é manter uma porção do código congelado, sem 
     Posteriormente, foi necessário buscar uma compreensão sobre como implementar ferramentas de 
     análise estática, e escolher uma plataforma de desenvolvimento apropriada (no caso, a plataforma 
     Eclipse JDT~\cite{EclipseJDT}). Posteriormente, foi iniciada uma fase de implementação dos analisadores 
-    estáticos usando padrões de projetos típicos para essa finialidade: visitor, dependency injection, ...
+    estáticos usando padrões de projetos típicos para essa finalidade: visitor, dependency injection, ...
     
      Finalmente, foi seguida uma estrategia de Mineração em Repositórios de Software, onde foram 
-     feitas as análises da adoção de construções da linguagem Java em projetos open-source, de forma 
+     feitas as análises da adoção de construções da linguagem Java em projetos \textit{open-source}, de forma 
      similar a outros artigos existentes~\cite{Schaefer:ACM2010,pinto-jss:2015,donovan:2004,dinklage:2004, Schaefer:ACM2009, Schaefer:ACM2010, Overbey:2009, Wichmann95industrialperspective, Ayewah:2008:USA:1439186.1439221, bracha1998gj}. 
      
      %todos
 	
-	Após tal entendimento sobre adoção de novas características, fora realizado um estudo sobre análise estática em códigos escritos na linguagem java o que se torna a base deste trabalho. E logo após a consolidação deste conhecimento, foi realizado a escolha de projetos Java de maior relevância na comunidade open-source.
+	Após tal entendimento sobre adoção de novas características, fora realizado um estudo sobre análise estática em códigos escritos na linguagem java o que se torna a base deste trabalho. E logo após a consolidação deste conhecimento, foi realizado a escolha de projetos Java de maior relevância na comunidade \textit{open-source}.
 	
 	Em seguida foi estudada a melhor arquitetura para a elaboração do analisador estático proposto de modo que esta no tivesse um fraco acoplamento entre os módulos necessários e facilitasse a pesquisa de outras características através da injeção do visitors \cite{Gamma:1995} usando o \textit{spring framework}~\cite{SPRING_REF}. Mais adiante a arquitetura escolhida será exibida com mais detalhes.

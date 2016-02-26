@@ -1,9 +1,17 @@
 \frametitle{Resultados}
-\begin{block}{Lambda}
+\begin{block}{Generics}
 \begin{itemize}
-\item Uma ferramenta capaz analisar estaticamente um projeto.
+\item Foram encontrados 4355 que fazem polimorfismo parametrizado.
 
-\item Exportar um relatório contendo as métricas analisadas.
+\item 30\% do polimorfismo pesquisado possui \texttt{Super, extends ou ?}.
+
+\item Todos os tipos que utilizam \texttt{? ou Super}, utilizam o \texttt{extends}.
+
+\item De 925.925 atributos e variáveis apenas 9.1\% são tipos genéricos (84880).
+
+\item Também foi descoberto que quase 10\% de todos os atributos e variáveis são tipos genéricos.
+
+\item Considerando o tipo e idade da aplicação \texttt{Generics} não exerce influencia significativa.
 
 \end{itemize}
 \end{block}

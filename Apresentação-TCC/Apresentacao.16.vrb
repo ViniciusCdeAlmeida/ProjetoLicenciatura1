@@ -1,13 +1,8 @@
 \frametitle{Resultados}
-\begin{block}{Try-Resource}
+\begin{block}{Oportunidade de aplicar Lambda}
 \begin{itemize}
-\item Representam 1.15\% de todos os \texttt{try} dos sitemas.
-
-\item Encontrados 1616 ocorrências em 13 Projetos.
-
-\item \texttt{Server-Database} concentram 91\% das ocorrências.
-
+\item \texttt{EXIST PATTERN, FILTER PATTERN e MAP PATTERN}.
+\item Foram encontrados 2496 oportunidades.
+\item 2190 correspondem a \texttt{MAP PATTERN}, 87\%.
 \end{itemize}
-
 \end{block}
-

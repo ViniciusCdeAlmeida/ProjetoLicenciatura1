@@ -1,19 +1,17 @@
-\frametitle{Procedimentos}
-\begin{block}{Ordem das tarefas}
+\frametitle{Resultados}
+\begin{block}{Generics}
 \begin{itemize}
-\item Revisão Bibliográfica
-\begin{itemize}
-\item Seleção do projetos.
-\item Escolha de projetos opensource.
-\end{itemize}
-\item Implementação do analisador estático.
-\begin{itemize}
-\item Definir arquitetura.
-\item Implementação.
-\item Coleta de dados.
-\end{itemize}
-\item Refazer os passos do artigo de Generics(escrever artigo).
-\item Análise do dados coletados utilizando R.
-\item Defesa TCC.
+\item 16\% dos projetos não declaram \texttt{Generics}.
+
+\item \textit{Commons Collections} possui 75\% dos tipos genéricos.
+
+\item De 925.925 atributos e variáveis apenas 9.1\% são tipos genéricos (84880).
+
+\item \texttt{List<String>} possui quase 25\% de todos os genéricos conforme Parnis.
+
+\item Apenas 0.84\% de 730.720 métodos parametrizados.
+
+\item Considerando o tipo e idade da aplicação \texttt{Generics} não exerce influencia significativa.
+
 \end{itemize}
 \end{block}

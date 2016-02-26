@@ -29,7 +29,7 @@ e 6 classes exclusiva que tratam os tipos declarados como classes, interfaces e 
 O Eclipse JDT~\cite{EclipseJDT} disponibiliza ainda um \textit{Parser} para a linguagem Java que atende a especifica\c c\~{a}o 
 Java 8 da linguagem (a mais atual com lan\c camento p\'{u}blico) e que produz a representação intermediária baseada no conjunto de classes Java 
 mencionado anteriormente e que correspondem a uma~\acs{AST} do código fonte. A plataforma tamb\'{e}m oferece uma hierarquia de classes 
-para traversia na AST, de acordo com o padr\~{a}o de projeto \textit{Visitors}~\cite{Gamma:1995}, e que facilita a análise estática 
+para travessia na AST, de acordo com o padr\~{a}o de projeto \textit{Visitors}~\cite{Gamma:1995}, e que facilita a análise estática 
 de código fonte.
 
 O padr\~{a}o de projeto \textit{Visitor}~\cite{Gamma:1995} \'{e} um padrão de projeto de característica comportamental que representa 
@@ -39,7 +39,7 @@ sem que a estrutura da \'{a}rvore de objetos sofra alterações. Com isso é tri
 
 Por outro lado, a biblioteca Eclipse JDT não fornece mecanismos para extração e exporta\c c\~{a}o de dados. Entretanto, no contexto 
 deste projeto, foi implementado um conjunto de classes 
-que visam obter maior facilidade e flexibilidade na exporta\c c\~{a}o das informa\c c\~{o}es coletadas durante a traversia nos n\'{o}s das 
+que visam obter maior facilidade e flexibilidade na exporta\c c\~{a}o das informa\c c\~{o}es coletadas durante a travessia nos n\'{o}s das 
 ASTs. Essa flexibilidade foi alcançada com a utilização de introspecção de código que em Java é conhecido como \textit{reflection}. O 
 restante dessa se\c c\~{a}o apresenta mais detalhes sobre a arquitetura e implementa\c c\~{a}o do analisador est\'{a}tico. 
 
