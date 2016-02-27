@@ -1,11 +1,11 @@
 \frametitle{Resultados}
-\begin{block}{Try-Resource}
+\begin{block}{Multi-catch}
 
-\begin{figure}[Th]
+\begin{figure}[h]
 \center
-\includegraphics[scale=0.39]{../TCC/Imagens/ocorrenciasTryResource}
-\label{fig:tryresource}
-\caption{Adoção de \texttt{Try-Resource} nos projetos.}
+\includegraphics[scale=0.35]{../TCC/Imagens/ocorrenciasMulticatch}
+\label{fig:muticatch}
+\caption{Oportunidades de \texttt{multi-catch} nos projetos.}
 \end{figure}
 \end{block}
 

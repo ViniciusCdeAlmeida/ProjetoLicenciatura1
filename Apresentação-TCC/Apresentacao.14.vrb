@@ -1,17 +1,18 @@
 \frametitle{Resultados}
 \begin{block}{Generics}
-\begin{itemize}
-\item Foram encontrados 4355 que fazem polimorfismo parametrizado.
+\begin{table}[h!]\footnotesize
+\centering
+\caption{Resumo dos tipos agrupados por idade e do tipo dos projetos.}
+\begin{tabular}{ccccc} \hline
+Tipo de Projeto & Antes Java SE 5.0 & Tipo & Tipo Genérico & (\%) \\ \hline\hline
+Aplication & Yes & 18168 & 177 & 0.97 \\
+Aplication & No & 16148 & 744 & 4.61 \\
+Library & Yes & 21537 & 1198 & 5.56 \\
+Library & No & 22639 & 947 & 4.18 \\
+Server/Database & Yes & 18038 & 552 & 3.10 \\
+Server/Database & No & 11790 & 760 & 6.45 \\ \hline
+\end{tabular}
+\label{tab:std} %std means summary of type declarations
+\end{table}
 
-\item 30\% do polimorfismo pesquisado possui \texttt{Super, extends ou ?}.
-
-\item Todos os tipos que utilizam \texttt{? ou Super}, utilizam o \texttt{extends}.
-
-\item De 925.925 atributos e variáveis apenas 9.1\% são tipos genéricos (84880).
-
-\item Também foi descoberto que quase 10\% de todos os atributos e variáveis são tipos genéricos.
-
-\item Considerando o tipo e idade da aplicação \texttt{Generics} não exerce influencia significativa.
-
-\end{itemize}
 \end{block}

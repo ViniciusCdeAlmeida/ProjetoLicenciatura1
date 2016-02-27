@@ -1,27 +1,24 @@
 \frametitle{Resultados}
-\begin{block}{Multi-catch}
+\begin{block}{Lambda}
 \begin{itemize}
-\item Representam 1\% do mecanismo de exceção.
-
-\item 95\% dos projetos com oportunidades reais.
-
-\item 1474 \texttt{Try} com \texttt{catch} similares repetidos.
-
+\item Apenas 5\% faz uso de \texttt{Lamba Expression}.
+\item Utilização apenas em Teste Unitários.
+\item Esforços individuais para incorporar \texttt{Lambda}.
 \end{itemize}
 
-\end{block}
-
-\begin{table}[h]
+\begin{table}[h]\footnotesize
 \centering
-\caption{Oportunidades de \texttt{multi-catch} por tipo do sistema.}
+\caption{Ocorrências de Expressões Lambda.}
 \begin{tabular}{cc}
 \hline
-Natureza & Ocorrências \\
+Sistema & Ocorrências Expressões Lambda\\
 \hline \hline
-\texttt{Application} & 551 \\
-\texttt{Library} &  464 \\
-\texttt{Servers - Database} &  459 \\ \hline
+\texttt{Hinernate} & 168 \\
+\texttt{Jetty} & 2 \\
+\texttt{Lucene} & 11 \\
+\texttt{Spark} & 77 \\
+\texttt{Spring-framework} & 121 \\ \hline
 \end{tabular}
-\label{tab:oportunidadesMulticatch} %std means summary of type declarations
+\label{tab:adocaoLambda} %std means summary of type declarations
 \end{table}
-
+\end{block}

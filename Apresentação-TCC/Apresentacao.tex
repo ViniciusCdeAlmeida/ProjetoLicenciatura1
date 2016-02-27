@@ -101,12 +101,10 @@ linguagem java em projetos open source}}
 \date[04/03/2016]{04 de março de 2016}
 
 \begin{document}
-	\section{Início}
 	\begin{frame}
 		\titlepage
 	\end{frame}
 	
-	\section{Roteiro}
 	\begin{frame}
 		\frametitle{Roteiro}
 		\tableofcontents
@@ -150,6 +148,7 @@ linguagem java em projetos open source}}
 		\end{block}
 	\end{frame}
 	
+		
 	\begin{frame}[label=AspectosAnalisados]
 		\frametitle{Aspectos analisados}
 		\begin{block}{Aspectos Analisados}
@@ -216,12 +215,19 @@ linguagem java em projetos open source}}
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%% Diretrizes da pesquisa %%%%%%%%%%%%%%%%%%%%
 	\section{Diretrizes da pesquisa}
 
 	\begin{frame}[fragile]\frametitle{Problema}
 		\begin{block}{Problema}
-			Quais as características da linguagem Java são mais utilizadas no desenvolvimento do software e como é a adoção de novas características da linguagem através das versões dos softwares?
+			\begin{itemize}
+				\item Desenvolver um analisador estático de código Java.
+			
+				\item Pesquisar características ultrapassadas em projetos atuais.
+			
+				\item Refazer estudo de \texttt{Generis}.
+			\end{itemize}
 		\end{block}
 	\end{frame}	
 	
@@ -239,16 +245,16 @@ linguagem java em projetos open source}}
 		%\begin{description}\item[\textbf{Hipótese 2}]\end{description}
 		\begin{block}{Hipótese 2}
 			\begin{itemize}
-				\item Novas Códigos obsoletos são mantido em todas as releases do software.
+				\item Código obsoleto é mantido em releases atuais.
 			\end{itemize}
 		\end{block}
 		
 	%	\begin{description}	\item[\textbf{Hipótese 3}]\end{description}
-		\begin{block}{Hipótese 3}
-			\begin{itemize}
-				\item Versões mais recentes do software não possem as últimas características adotadas na linguagem.
-			\end{itemize}
-		\end{block}
+%		\begin{block}{Hipótese 3}
+%			\begin{itemize}
+%				\item Versões mais recentes do software não possem as últimas características adotadas na linguagem.
+%			\end{itemize}
+%		\end{block}
 		
 	\end{frame}
 	
@@ -257,7 +263,7 @@ linguagem java em projetos open source}}
 		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
 		\begin{block}{Geral}
 			\begin{itemize}
-				\item Identificar de forma eficiente código obsoleto.
+				\item Identificar de forma eficiente construções na linguagem Java.
 			\end{itemize}
 		\end{block}
 			
@@ -270,7 +276,7 @@ linguagem java em projetos open source}}
 	\end{frame}
 %%%%%%%%%%%%%%%%%%%%% Diretrizes da pesquisa %%%%%%%%%%%%%%%%%%%%%
 	
-% % % % % % % % % % % % % % % Metodologia % % % % % % % % % % % % % % % % % %	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Metodologia %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\section{Metodologia}
 	\begin{frame}[label=metodologia, fragile]
 		\frametitle{Procedimentos}
@@ -287,15 +293,48 @@ linguagem java em projetos open source}}
 						\item Implementação.
 						\item Coleta de dados.
 					\end{itemize}
+					
 				\item Refazer os passos do artigo de Generics(escrever artigo).
-				
+			
 				\item Contribuições adicionais.
 			\end{itemize}
 		\end{block}
 	\end{frame}
 	
 		
-% % % % % % % % % % % % % % % Metodologia % % % % % % % % % % % % % % % % % %		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Metodologia %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ANALISADOR ESTÁTICO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Arquitetura e Funcionamento Analisador Estático}
+
+
+\begin{frame}[label=metodologia, fragile]
+	\frametitle{Analisador Estático}
+	\begin{block}{Classes Utilitárias}
+			\begin{figure}[h]
+				\center
+				\includegraphics[scale=0.50]{../TCC/Imagens/InputArquitetura}
+				\label{fig:oportunidadesSwitchString}
+				\caption{Classes Utilitárias.}
+			\end{figure}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}[label=metodologia, fragile]
+	\frametitle{Analisador Estático}
+	\begin{block}{Arquitetura}
+			\begin{figure}[h]
+				\center
+				\includegraphics[scale=0.30]{../TCC/Imagens/FuncionamentoVisitor}
+				\label{fig:oportunidadesSwitchString}
+				\caption{Funcionamento Analisador Estático.}
+			\end{figure}
+	\end{block}
+\end{frame}
+
+	
 	
 
 %%%%%%%%%%%%%%%%%%%%% Resultados %%%%%%%%%%%%%%%%%%%%%
@@ -568,7 +607,13 @@ linguagem java em projetos open source}}
 % Conclusão ------------------------------------------------------------------------------------------------
 	\begin{frame}[fragile, label=re]\frametitle{Conclusão}
 		\begin{block}{Conclusão}
-		
+			\begin{itemize}
+				\item Código obsoleto é mantido em versões atuais.
+				\item Apesar da grande espectativa sobre Lambda, não existe um entusiasmo para adoção.
+				\item A \texttt{realease} da linguagem não é importante no desenvolvimento.
+				\item Temos um analisador flexível e estável para tentar automatizar \texttt{refactoring}.
+			\end{itemize}
+			
 		\end{block}
 	\end{frame}	
 

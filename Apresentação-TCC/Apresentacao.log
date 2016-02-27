@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.2.21)  26 FEB 2016 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.2.21)  27 FEB 2016 09:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1069,22 +1069,19 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 (./Apresentacao.aux
 
-LaTeX Warning: Label `re<1>' multiply defined.
+LaTeX Warning: Label `metodologia<1>' multiply defined.
 
 
-LaTeX Warning: Label `re' multiply defined.
+LaTeX Warning: Label `metodologia' multiply defined.
 
 
-LaTeX Warning: Label `re<1>' multiply defined.
+LaTeX Warning: Label `metodologia<1>' multiply defined.
 
 
-LaTeX Warning: Label `re' multiply defined.
+LaTeX Warning: Label `metodologia' multiply defined.
 
 
-LaTeX Warning: Label `re<1>' multiply defined.
-
-
-LaTeX Warning: Label `re' multiply defined.
+LaTeX Warning: Label `fig:oportunidadesSwitchString' multiply defined.
 
 
 LaTeX Warning: Label `re<1>' multiply defined.
@@ -1139,6 +1136,27 @@ LaTeX Warning: Label `re<1>' multiply defined.
 
 
 LaTeX Warning: Label `re' multiply defined.
+
+
+LaTeX Warning: Label `re<1>' multiply defined.
+
+
+LaTeX Warning: Label `re' multiply defined.
+
+
+LaTeX Warning: Label `re<1>' multiply defined.
+
+
+LaTeX Warning: Label `re' multiply defined.
+
+
+LaTeX Warning: Label `re<1>' multiply defined.
+
+
+LaTeX Warning: Label `re' multiply defined.
+
+
+LaTeX Warning: Label `fig:oportunidadesSwitchString' multiply defined.
 
 
 LaTeX Warning: Label `re<1>' multiply defined.
@@ -1285,24 +1303,24 @@ Package epstopdf Info: Source file: <as_comp_cor.eps>
 (epstopdf)                    size: 12342 bytes
 (epstopdf)             Command: <repstopdf --outfile=as_comp_cor-eps-converted-
 to.pdf as_comp_cor.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             \includegraphics on input line 106.
 Package epstopdf Info: Output file is already uptodate.
 
-<as_comp_cor-eps-converted-to.pdf, id=49, 301.125pt x 26.0975pt>
+<as_comp_cor-eps-converted-to.pdf, id=45, 301.125pt x 26.0975pt>
 File: as_comp_cor-eps-converted-to.pdf Graphic file (type pdf)
 
 <use as_comp_cor-eps-converted-to.pdf>
 Package pdftex.def Info: as_comp_cor-eps-converted-to.pdf used on input line 10
-7.
+6.
 (pdftex.def)             Requested size: 180.67638pt x 15.65862pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 107.
+(Font)              size <5> substituted on input line 106.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' undefined
-(Font)              using `T1/cmss/m/n' instead on input line 107.
+(Font)              using `T1/cmss/m/n' instead on input line 106.
 
 
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
@@ -1333,7 +1351,7 @@ Overfull \hbox (1.48978pt too wide) has occurred while \output is active
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 180.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 179.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1394,27 +1412,115 @@ Overfull \hbox (1.48978pt too wide) has occurred while \output is active
 ]
 \openout4 = `Apresentacao.11.vrb'.
 
- (./Apresentacao.11.vrb)
+pdfTeX warning (ext4): destination with the same identifier (name{metodologia<1
+>}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.322 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{metodologia}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.322 \end{frame}
+                  (./Apresentacao.11.vrb
+Package epstopdf Info: Source file: <../TCC/Imagens/InputArquitetura.eps>
+(epstopdf)                    date: 2015-12-25 12:22:56
+(epstopdf)                    size: 368078 bytes
+(epstopdf)             Output file: <../TCC/Imagens/InputArquitetura-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2015-12-25 12:22:56
+(epstopdf)                    size: 127513 bytes
+(epstopdf)             Command: <repstopdf --outfile=../TCC/Imagens/InputArquit
+etura-eps-converted-to.pdf ../TCC/Imagens/InputArquitetura.eps>
+(epstopdf)             \includegraphics on input line 5.
+Package epstopdf Info: Output file is already uptodate.
+
+<../TCC/Imagens/InputArquitetura-eps-converted-to.pdf, id=425, 443.6575pt x 138
+.5175pt>
+File: ../TCC/Imagens/InputArquitetura-eps-converted-to.pdf Graphic file (type p
+df)
+ <use ../TCC/Imagens/InputArquitetura-eps-converted-to.pdf>
+Package pdftex.def Info: ../TCC/Imagens/InputArquitetura-eps-converted-to.pdf u
+sed on input line 5.
+(pdftex.def)             Requested size: 221.8282pt x 69.25858pt.
+)
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
 
 [11
 
-]
+ <../TCC/Imagens/InputArquitetura-eps-converted-to.pdf>]
 \openout4 = `Apresentacao.12.vrb'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{metodologia<1
+>}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.335 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{metodologia}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.335 \end{frame}
+                  (./Apresentacao.12.vrb
+Package epstopdf Info: Source file: <../TCC/Imagens/FuncionamentoVisitor.eps>
+(epstopdf)                    date: 2016-02-14 14:38:38
+(epstopdf)                    size: 567136 bytes
+(epstopdf)             Output file: <../TCC/Imagens/FuncionamentoVisitor-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2016-02-14 14:39:24
+(epstopdf)                    size: 232043 bytes
+(epstopdf)             Command: <repstopdf --outfile=../TCC/Imagens/Funcionamen
+toVisitor-eps-converted-to.pdf ../TCC/Imagens/FuncionamentoVisitor.eps>
+(epstopdf)             \includegraphics on input line 5.
+Package epstopdf Info: Output file is already uptodate.
+
+<../TCC/Imagens/FuncionamentoVisitor-eps-converted-to.pdf, id=505, 767.86874pt 
+x 417.56pt>
+File: ../TCC/Imagens/FuncionamentoVisitor-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ../TCC/Imagens/FuncionamentoVisitor-eps-converted-to.pdf>
+Package pdftex.def Info: ../TCC/Imagens/FuncionamentoVisitor-eps-converted-to.p
+df used on input line 5.
+(pdftex.def)             Requested size: 230.3624pt x 125.26895pt.
+pdfTeX warning (ext4): destination with the same identifier (name{fig:oportunid
+adesSwitchString}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.6 \label{fig:oportunidadesSwitchString}
+                                         )
+Overfull \hbox (1.48978pt too wide) has occurred while \output is active
+ []\T1/cmss/m/sc/6 Encerramento  
+ []
+
+[12
+
+ <../TCC/Imagens/FuncionamentoVisitor-eps-converted-to.pdf>]
+\openout4 = `Apresentacao.13.vrb'.
+
+
+(./Apresentacao.13.vrb)
+Overfull \hbox (1.48978pt too wide) has occurred while \output is active
+ []\T1/cmss/m/sc/6 Encerramento  
+ []
+
+[13
+
+]
+\openout4 = `Apresentacao.14.vrb'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.341 		\end{frame}
+l.380 		\end{frame}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.341 		\end{frame}
-                    (./Apresentacao.12.vrb
+l.380 		\end{frame}
+                    (./Apresentacao.14.vrb
 LaTeX Font Info:    Try loading font information for U+msa on input line 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1429,46 +1535,6 @@ Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
 
-[12
-
-]
-\openout4 = `Apresentacao.13.vrb'.
-
-pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.363 		\end{frame}
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{re}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.363 		\end{frame}
-                    (./Apresentacao.13.vrb)
-Overfull \hbox (1.48978pt too wide) has occurred while \output is active
- []\T1/cmss/m/sc/6 Encerramento  
- []
-
-[13
-
-]
-\openout4 = `Apresentacao.14.vrb'.
-
-pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.382 	\end{frame}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{re}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.382 	\end{frame}
-                   (./Apresentacao.14.vrb)
-Overfull \hbox (1.48978pt too wide) has occurred while \output is active
- []\T1/cmss/m/sc/6 Encerramento  
- []
-
 [14
 
 ]
@@ -1478,13 +1544,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.410 	\end{frame}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{re}) has been already used, duplicate ignored
+l.402 		\end{frame}
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.410 	\end{frame}
-                   (./Apresentacao.15.vrb)
+l.402 		\end{frame}
+                    (./Apresentacao.15.vrb)
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
@@ -1518,12 +1584,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.452 	\end{frame}
+l.449 	\end{frame}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.452 	\end{frame}
+l.449 	\end{frame}
                    (./Apresentacao.17.vrb)
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
@@ -1538,58 +1604,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.465 	\end{frame}
+l.460 	\end{frame}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.465 	\end{frame}
-                   (./Apresentacao.18.vrb
-Package epstopdf Info: Source file: <../TCC/Imagens/ocorrenciasMulticatch.eps>
-(epstopdf)                    date: 2016-02-19 21:07:06
-(epstopdf)                    size: 13383 bytes
-(epstopdf)             Output file: <../TCC/Imagens/ocorrenciasMulticatch-eps-c
-onverted-to.pdf>
-(epstopdf)                    date: 2016-02-19 21:07:12
-(epstopdf)                    size: 14752 bytes
-(epstopdf)             Command: <repstopdf --outfile=../TCC/Imagens/ocorrencias
-Multicatch-eps-converted-to.pdf ../TCC/Imagens/ocorrenciasMulticatch.eps>
-(epstopdf)             \includegraphics on input line 6.
-Package epstopdf Info: Output file is already uptodate.
-
-<../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=698, 530.98375pt
- x 530.98375pt>
-File: ../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.pdf Graphic file (t
-ype pdf)
-
-<use ../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.pdf>
-Package pdftex.def Info: ../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.
-pdf used on input line 6.
-(pdftex.def)             Requested size: 185.84709pt x 185.84709pt.
-)
-Overfull \vbox (32.40576pt too high) detected at line 465
- []
-
-
+l.460 	\end{frame}
+                   (./Apresentacao.18.vrb)
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
 
 [18
 
- <../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.pdf>]
+]
 \openout4 = `Apresentacao.19.vrb'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.482 	\end{frame}
+l.491 	\end{frame}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.482 	\end{frame}
+l.491 	\end{frame}
                    (./Apresentacao.19.vrb)
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
@@ -1604,59 +1644,59 @@ pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.495 	\end{frame}
+l.504 	\end{frame}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.495 	\end{frame}
+l.504 	\end{frame}
                    (./Apresentacao.20.vrb
-Package epstopdf Info: Source file: <../TCC/Imagens/ocorrenciasTryResource.eps>
-
-(epstopdf)                    date: 2016-02-19 22:16:42
-(epstopdf)                    size: 7720 bytes
-(epstopdf)             Output file: <../TCC/Imagens/ocorrenciasTryResource-eps-
-converted-to.pdf>
-(epstopdf)                    date: 2016-02-19 22:19:30
-(epstopdf)                    size: 12623 bytes
+Package epstopdf Info: Source file: <../TCC/Imagens/ocorrenciasMulticatch.eps>
+(epstopdf)                    date: 2016-02-19 21:07:06
+(epstopdf)                    size: 13383 bytes
+(epstopdf)             Output file: <../TCC/Imagens/ocorrenciasMulticatch-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2016-02-19 21:07:12
+(epstopdf)                    size: 14752 bytes
 (epstopdf)             Command: <repstopdf --outfile=../TCC/Imagens/ocorrencias
-TryResource-eps-converted-to.pdf ../TCC/Imagens/ocorrenciasTryResource.eps>
+Multicatch-eps-converted-to.pdf ../TCC/Imagens/ocorrenciasMulticatch.eps>
 (epstopdf)             \includegraphics on input line 6.
 Package epstopdf Info: Output file is already uptodate.
 
-<../TCC/Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=780, 534.99875p
-t x 369.38pt>
-File: ../TCC/Imagens/ocorrenciasTryResource-eps-converted-to.pdf Graphic file (
-type pdf)
- <use ../TCC/Imagens/ocorrenciasTryResource-eps-converted-to.pdf>
-Package pdftex.def Info: ../TCC/Imagens/ocorrenciasTryResource-eps-converted-to
-.pdf used on input line 6.
-(pdftex.def)             Requested size: 208.64867pt x 144.05762pt.
+<../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=842, 530.98375pt
+ x 530.98375pt>
+File: ../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.pdf Graphic file (t
+ype pdf)
+
+<use ../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.pdf>
+Package pdftex.def Info: ../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.
+pdf used on input line 6.
+(pdftex.def)             Requested size: 185.84709pt x 185.84709pt.
 )
+Overfull \vbox (32.40576pt too high) detected at line 504
+ []
+
+
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
 
 [20
 
- <../TCC/Imagens/ocorrenciasTryResource-eps-converted-to.pdf>]
+ <../TCC/Imagens/ocorrenciasMulticatch-eps-converted-to.pdf>]
 \openout4 = `Apresentacao.21.vrb'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.525 	\end{frame}
+l.521 	\end{frame}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.525 	\end{frame}
+l.521 	\end{frame}
                    (./Apresentacao.21.vrb)
-Overfull \vbox (7.56499pt too high) detected at line 525
- []
-
-
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
@@ -1670,20 +1710,42 @@ pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.553 	\end{frame}
+l.534 	\end{frame}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.553 	\end{frame}
-                   (./Apresentacao.22.vrb)
+l.534 	\end{frame}
+                   (./Apresentacao.22.vrb
+Package epstopdf Info: Source file: <../TCC/Imagens/ocorrenciasTryResource.eps>
+
+(epstopdf)                    date: 2016-02-19 22:16:42
+(epstopdf)                    size: 7720 bytes
+(epstopdf)             Output file: <../TCC/Imagens/ocorrenciasTryResource-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2016-02-19 22:19:30
+(epstopdf)                    size: 12623 bytes
+(epstopdf)             Command: <repstopdf --outfile=../TCC/Imagens/ocorrencias
+TryResource-eps-converted-to.pdf ../TCC/Imagens/ocorrenciasTryResource.eps>
+(epstopdf)             \includegraphics on input line 6.
+Package epstopdf Info: Output file is already uptodate.
+
+<../TCC/Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=921, 534.99875p
+t x 369.38pt>
+File: ../TCC/Imagens/ocorrenciasTryResource-eps-converted-to.pdf Graphic file (
+type pdf)
+ <use ../TCC/Imagens/ocorrenciasTryResource-eps-converted-to.pdf>
+Package pdftex.def Info: ../TCC/Imagens/ocorrenciasTryResource-eps-converted-to
+.pdf used on input line 6.
+(pdftex.def)             Requested size: 208.64867pt x 144.05762pt.
+)
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
 
 [22
 
-]
+ <../TCC/Imagens/ocorrenciasTryResource-eps-converted-to.pdf>]
 \openout4 = `Apresentacao.23.vrb'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
@@ -1696,7 +1758,51 @@ name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.564 	\end{frame}
-                   (./Apresentacao.23.vrb
+                   (./Apresentacao.23.vrb)
+Overfull \vbox (7.56499pt too high) detected at line 564
+ []
+
+
+Overfull \hbox (1.48978pt too wide) has occurred while \output is active
+ []\T1/cmss/m/sc/6 Encerramento  
+ []
+
+[23
+
+]
+\openout4 = `Apresentacao.24.vrb'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.592 	\end{frame}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{re}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.592 	\end{frame}
+                   (./Apresentacao.24.vrb)
+Overfull \hbox (1.48978pt too wide) has occurred while \output is active
+ []\T1/cmss/m/sc/6 Encerramento  
+ []
+
+[24
+
+]
+\openout4 = `Apresentacao.25.vrb'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.603 	\end{frame}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{re}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.603 	\end{frame}
+                   (./Apresentacao.25.vrb
 Package epstopdf Info: Source file: <../TCC/Imagens/oportunidadesSwitchString.e
 ps>
 (epstopdf)                    date: 2016-02-21 22:54:41
@@ -1711,8 +1817,8 @@ s>
 (epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
 
-<../TCC/Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=898, 781.921
-25pt x 393.47pt>
+<../TCC/Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=1036, 781.92
+125pt x 393.47pt>
 File: ../TCC/Imagens/oportunidadesSwitchString-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
@@ -1720,44 +1826,49 @@ e (type pdf)
 Package pdftex.def Info: ../TCC/Imagens/oportunidadesSwitchString-eps-converted
 -to.pdf used on input line 5.
 (pdftex.def)             Requested size: 234.57819pt x 118.0419pt.
-)
+pdfTeX warning (ext4): destination with the same identifier (name{fig:oportunid
+adesSwitchString}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.6 \label{fig:oportunidadesSwitchString}
+                                         )
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
 
-[23
+[25
 
  <../TCC/Imagens/oportunidadesSwitchString-eps-converted-to.pdf>]
-\openout4 = `Apresentacao.24.vrb'.
+\openout4 = `Apresentacao.26.vrb'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{re<1>}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.573 	\end{frame}
+l.618 	\end{frame}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{re}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.573 	\end{frame}
-                   (./Apresentacao.24.vrb)
+l.618 	\end{frame}
+                   (./Apresentacao.26.vrb)
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
 
-[24
+[26
 
-] <duvidas.jpg, id=976, 301.125pt x 229.85875pt>
+] <duvidas.jpg, id=1113, 301.125pt x 229.85875pt>
 File: duvidas.jpg Graphic file (type jpg)
  <use duvidas.jpg>
-Package pdftex.def Info: duvidas.jpg used on input line 584.
+Package pdftex.def Info: duvidas.jpg used on input line 629.
 (pdftex.def)             Requested size: 180.67638pt x 137.91629pt.
 
 Overfull \hbox (1.48978pt too wide) has occurred while \output is active
  []\T1/cmss/m/sc/6 Encerramento  
  []
 
-[25
+[27
 
  <./duvidas.jpg>]
 \tf@nav=\write6
@@ -1769,13 +1880,13 @@ Overfull \hbox (1.48978pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Apresentacao.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 587.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 587.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 632.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 632.
  (./Apresentacao.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 587.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 587.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 632.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 632.
 Package rerunfilecheck Info: File `Apresentacao.out' has not changed.
-(rerunfilecheck)             Checksum: DEA230D2434FF96E0EDEF009E7CD38D0;432.
+(rerunfilecheck)             Checksum: 0734AFCE7153841FAFD911D17D261536;431.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1787,13 +1898,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 587.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 632.
  ) 
 Here is how much of TeX's memory you used:
- 19993 strings out of 493105
- 369834 string characters out of 6137072
- 447875 words of memory out of 5000000
- 22799 multiletter control sequences out of 15000+600000
+ 20014 strings out of 493105
+ 370516 string characters out of 6137072
+ 447949 words of memory out of 5000000
+ 22809 multiletter control sequences out of 15000+600000
  21373 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,59p,413b,645s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1809,10 +1920,10 @@ e1/public/cm-super/sfsx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 fsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb></usr/sh
 are/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sftt1095.pfb>
-Output written on Apresentacao.pdf (25 pages, 348885 bytes).
+Output written on Apresentacao.pdf (27 pages, 706774 bytes).
 PDF statistics:
- 1082 PDF objects out of 1200 (max. 8388607)
- 1013 compressed objects within 11 object streams
- 83 named destinations out of 1000 (max. 500000)
- 140 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1217 PDF objects out of 1440 (max. 8388607)
+ 1060 compressed objects within 11 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

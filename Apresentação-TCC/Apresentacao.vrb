@@ -2,7 +2,7 @@
 %\begin{description} \item[\textbf{Objetivo Geral}]\end{description}
 \begin{block}{Geral}
 \begin{itemize}
-\item Identificar de forma eficiente código obsoleto.
+\item Identificar de forma eficiente construções na linguagem Java.
 \end{itemize}
 \end{block}
 
