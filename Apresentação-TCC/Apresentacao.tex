@@ -168,7 +168,7 @@ linguagem java em projetos open source}}
 
 				\item Oportunidade de evolução em:
 					\begin{itemize}
-						\item \texttt{Lambda Expression}, \texttt{foreach, exists}.
+						\item \texttt{Lambda Expression}, \texttt{exists, filter e map}.
 						\item \texttt{Multi-catch}, \texttt{catch(E1 | E2 | ...)}.
 					%	\item \texttt{Try-Resource}, \texttt{java.lang.AutoCloseable} ou \texttt{java.io.Closeable}.
 						\item \texttt{Switch-String}, \textit{if(string.equals(""))}.
@@ -224,9 +224,11 @@ linguagem java em projetos open source}}
 			\begin{itemize}
 				\item Desenvolver um analisador estático de código Java.
 			
-				\item Pesquisar características ultrapassadas em projetos atuais.
+				\item Flexibilidade para pesquisar caracteríticas Java.
 			
 				\item Refazer estudo de \texttt{Generis}.
+				
+				\item Contribuições adicionais.
 			\end{itemize}
 		\end{block}
 	\end{frame}	
@@ -263,14 +265,16 @@ linguagem java em projetos open source}}
 		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
 		\begin{block}{Geral}
 			\begin{itemize}
-				\item Identificar de forma eficiente construções na linguagem Java.
+				\item Elaborar um analisador estático flexível.
 			\end{itemize}
 		\end{block}
 			
 		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
 			\begin{block}{Específicos}
 				\begin{itemize}
-					\item Elaborar um analisador estático flexível.
+					\item Identificar de forma eficiente construções na linguagem Java.
+					
+					\item Gerar relatório com as identificações realizadas.
 				\end{itemize}
 			\end{block}
 	\end{frame}
@@ -306,11 +310,11 @@ linguagem java em projetos open source}}
 	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% ANALISADOR ESTÁTICO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Arquitetura e Funcionamento Analisador Estático}
+\section{Arquitetura Analisador Estático}
 
 
 \begin{frame}[label=metodologia, fragile]
-	\frametitle{Analisador Estático}
+	\frametitle{Funcionamento Analisador Estático}
 	\begin{block}{Classes Utilitárias}
 			\begin{figure}[h]
 				\center
@@ -334,8 +338,31 @@ linguagem java em projetos open source}}
 	\end{block}
 \end{frame}
 
+\begin{frame}[label=metodologia, fragile]
+	\frametitle{Analisador Estático}
+	\begin{block}{Criação de Visitor}
+		\begin{itemize}
+			\item Classe modelo (\texttt{br.unb.cic.sa.model}).
+			\item MeuVisitor (\texttt{br.unb.cic.sa.visitors}).
+				\begin{itemize}
+					\item extends Visitor<class modelo>
+				\end{itemize}
+			
+			\item Declarar no Bean.xml.
+					\begin{itemize}
+						\item Cabeçalho do csv de output mapeado pela classe modelo.
+						\item O Visitor criado.
+					\end{itemize}
+		
+			\item Dados exportados automaticamente ao fim de cada projeto.
+		
+		\end{itemize}
+		
+	\end{block}
+\end{frame}
+
 	
-	
+%	Falar dos visitors
 
 %%%%%%%%%%%%%%%%%%%%% Resultados %%%%%%%%%%%%%%%%%%%%%
 	\section{Resultados}
@@ -353,7 +380,6 @@ linguagem java em projetos open source}}
 				
 				\item Apenas 0.84\% de 730.720 métodos parametrizados.
 				
-				\item Considerando o tipo e idade da aplicação \texttt{Generics} não exerce influencia significativa.
 				
 			\end{itemize}
 		\end{block}
@@ -410,7 +436,6 @@ linguagem java em projetos open source}}
 				
 				\item Todos os tipos que utilizam \texttt{? ou Super}, utilizam o \texttt{extends}.
 				
-				\item De 925.925 atributos e variáveis apenas 9.1\% são tipos genéricos (84880).
 				
 				\item Também foi descoberto que quase 10\% de todos os atributos e variáveis são tipos genéricos.
 				
@@ -566,7 +591,7 @@ linguagem java em projetos open source}}
 	
 	
 	\begin{frame}[fragile, label=re]\frametitle{Resultados}
-		\begin{block}{Switch-String}
+		\begin{block}{Oportunidade de Aplicar Switch-String}
 			\begin{itemize}
 				\item Pesquisa por \texttt{if(String.equals(""))}.
 				\item Foram encontrados 4940 em 45 dos 46 sistemas.
@@ -575,7 +600,7 @@ linguagem java em projetos open source}}
 			
 			\begin{table}[h]
 				\centering
-				\caption{Oportunidade de aplicar \texttt{switch} por tipo de sistema.}
+				\caption{Oportunidade de aplicar \texttt{switch} por sistema.}
 				\begin{tabular}{cc}
 					\hline
 					Natureza & Ocorrências \\ 
@@ -605,17 +630,23 @@ linguagem java em projetos open source}}
 %e------------------------------------------------------------------------------------------------
 
 % Conclusão ------------------------------------------------------------------------------------------------
-	\begin{frame}[fragile, label=re]\frametitle{Conclusão}
+	\begin{frame}[fragile, label=re]\frametitle{Conclusão  \& Trabalho Futuro}
 		\begin{block}{Conclusão}
 			\begin{itemize}
 				\item Código obsoleto é mantido em versões atuais.
 				\item Apesar da grande espectativa sobre Lambda, não existe um entusiasmo para adoção.
 				\item A \texttt{realease} da linguagem não é importante no desenvolvimento.
-				\item Temos um analisador flexível e estável para tentar automatizar \texttt{refactoring}.
+				\item O Analisador é flexível e estável.
 			\end{itemize}
-			
+		\end{block}
+		
+		\begin{block}{Trabalho Futuro}
+			\begin{itemize}
+				\item Implementar o refectoring utilizando linguagem de metaprogramação.
+			\end{itemize}
 		\end{block}
 	\end{frame}	
+
 
 
 %%%%%%%%%%%%%%%%%%%%% Encerramento %%%%%%%%%%%%%%%%%%%%%

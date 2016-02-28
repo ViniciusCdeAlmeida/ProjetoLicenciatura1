@@ -1,9 +1,0 @@
-\frametitle{Resultados}
-\begin{block}{Switch-String}
-\begin{figure}[h]
-\center
-\includegraphics[scale=0.30]{../TCC/Imagens/oportunidadesSwitchString}
-\label{fig:oportunidadesSwitchString}
-\caption{Oportunidades de \textit{refactoring} em \texttt{if-then-else} por sistema.}
-\end{figure}
-\end{block}
