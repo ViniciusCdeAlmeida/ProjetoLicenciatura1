@@ -100,11 +100,15 @@ Especificamente no caso deste trabalho é necessário a construção de um softw
 \end{figure}
 
 
-Atualmente a evolução de uma linguagem de programação ocorre predominantemente de forma {\it ad-hoc} e em muitos casos manual, isso ocorre na tradução de aplicativos legados, conforme necessário para ferramentas de engenharia reversa de software. A abordagem mais comum é manualmente codificar uma gramática de entrada de um analisador específico gerador de forma incomum. Encontramos apenas uma instância de ferramentas {\it grammarware} neste processo: um gerador de analise. O princípio de condução é apelar para a classe gramatical que é suportada pelo gerador de analise que muitas vezes é realizado por tentativa e erro. A base de código que deve ser analisado, é o oráculo, para este processo. Especificações do analisador são derivados automaticamente da semi gramática. Recuperado
-o uso de ferramentas que personalizam gramáticas para uma determinada tecnologia. Diferente
-tecnologias de análise que podem ser orientada em oposição a um compromisso para uma
-tecnologia específica. O processo de personalização é susceptível de exigir a entrada de
-um engenheiro de {\it grammarware}.
+Pode-se compreender este analisador como um {\it grammarware} pois é um software que depende de gramática para seu funcionamento neste caso a gramática da linguagem Java, pois estes softwares possuem conhecimentos essenciais da  gramática que manipulam. Como exemplos de arquiteturas que possuem tal conhecimento tem-se os programas de conversão de dados, processadores de \texttt{XML} e os que efetuam \textit{parses}.
+
+Alguns cenários favorecem o desenvolvimento de softwares {\it grammarware}, onde dentre os diversos cenários pode-se destacar uma aplicação que necessite importar perfis de usuários para promover a transição da versão antiga para uma versão nova. Esta transição deve ser robusta e provavelmente necessitará de adptação deverá passar por um parser para que as partes que necessitem de adaptação possam ser identificadas.
+
+Um outro cenário real é desenvolvimento de aplicações de banco de dados onde é necessário adotar uma nova linguagem de definição para um ambiente específico. De forma que automatizar esta solução requer o uso de um parser o qual será responsável por identificar os inputs de entrada para efetuar o mapeamento correto para a saída desejada no formato correto.
+
+
+
+%Atualmente a evolução de uma linguagem de programação ocorre predominantemente de forma {\it ad-hoc} e em muitos casos manualmente, para a tradução de aplicativos legados, conforme a demanda. A ferramentas de análise para gerar a evolução necessária, {\it grammarware}, tende a condizir este processo abordando a classe gramatical que deve ser evoluída. Neste caso analisador que muitas vezes realizaria o trabalho por tentativa e erro, tem como base a gramática do código a ser analisado. Especificações do analisador são derivados automaticamente da semi gramática. Diferentes tecnologias de análise que podem ser orientadas em oposição a uma tecnologia específica. Assim o processo de personalização/evolução é susceptível de exigir a entrada de um engenheiro de {\it grammarware} o qual tem conhecimento prévio da gramática a ser analisada.
 
 %Um ponto crítico quanto a análise de código fonte é o \textit{parser} da linguagem, onde é necessário reconhecer uma frase para efetuar a interpretação ou fazer a tradução para que a criação da representação intermediária aconteça. Inicialmente é necessário identificar se a frase que será tratada é um \textit{assignment} ou uma chamada de função.
  
@@ -112,7 +116,7 @@ um engenheiro de {\it grammarware}.
 
 \section{Parse}
 
-Para conceber uma ferramenta de análise de código é necessário gerar um \textit{parse} do código fonte o que torna isto uma tarefa complexa e desafiadora. Entretanto existem alguns padrões e neste será aborda os 4 mais importantes segundo Terence Parr em \cite{Parr:2009:LIP:1823613}.
+Confome introduzido anteriormente a concepção de uma ferramenta de análise de código faz-se necessário trabalhar com  \textit{parser} do código fonte o que torna isto uma tarefa complexa e desafiadora. Entretanto existem alguns padrões adotados para este contexto e com isso este trabalho abordará os quatro conceitos  mais importantes segundo Terence Parr em \cite{Parr:2009:LIP:1823613} para prover o parser de acordo com a necessidade.
 \begin{itemize}
 	\item \textbf{Mapping Grammars to Recursive-Descent Recognizers}\\
 	Sua proposta é traduzir uma gramática para uma recursão descendente para reconhecer frases e sentenças em uma linguagem especificada por uma gramática. Este padrão identifica o núcleo do fluxo de controle para qualquer recursão descendente e é utilizado nos 3 padrões seguintes. 
