@@ -1,0 +1,144 @@
+%\input{capitulos/HistoriaDaLinguagem}
+%\input{capitulos/AspectosEvolutivos}
+\chapter{Fundamentaç\~{a}o}
+
+Conforme mencionado no cap\'{i}tulo anterior, o principal objetivo deste trabalho de conclus\~{a}o de curso \'{e} 
+identificar oportunidades de evoluç\~{a}o de c\'{o}digo em projetos que utilizam recursos anteriores a Java 7 e Java 8, 
+algo necess\'{a}rio para o contexto de reestrutura\c c\~{a}o de c\'{o}digo que visa adequar um c\'{o}digo 
+existente para usar constru\c c\~{o}es mais atuais de uma determinada de linguagem de programa\c c\~{a}o 
+(no caso, a linguagem Java). Importante destacar que as vers\~{o}es da linguagem Java mencionadas anteriormente
+introduziram novos recursos, tais como: \texttt{multi-catch}, \texttt{try-with-resourse}, \texttt{switch-string} 
+e \texttt{lambda expressions}; e que esse tipo de evoluç\~{a}o constitui uma nova perspectiva de \textit{refactoring}, que se caracteriza 
+por uma transforma\c c\~{a}o de c\'{o}digo que preserva comportamento e que passa a usar  
+novas constru\c c\~{o}es da linguagem de programa\c c\~{a}o (conforme defendido por Overbey and Johnson~\cite{Overbey:2009}). 
+
+Para atingir o objetivo do trabalho de conclus\~{a}o de curso, foi necess\'{a}rio estudar temas relacionados 
+\`{a} evolu\c c\~{a}o da linguagem Java, engenharia de linguagens de software (ou no Ingl\^{e}s Software 
+Language Engineering) e refatoramento de c\'{o}digo (\emph{code refactoring}).  Para dar mais clareza ao leitor 
+sobre essas tem\'{a}ticas, esse cap\'{i}tulo apresenta uma vis\~{a}o geral sobre esses temas. Note que n\~{a}o foi objetivo
+deste trabalho implementar um mecanismo de transforma\c c\~{a}o de c\'{o}digo, mas sim construir um suporte ferramental 
+efetivo para compreender como os desenvolvedores usam as constru\c c\~{o}es existentes na linguagem Java e {\bf identificar 
+oportunidades de melhoria de c\'{o}digo}, algo essencial para permitir a atualiza\c c\~{a}o de um c\'{o}digo existente 
+que usa constru\c c\~{o}es ultrapassadas de uma linguagem de programa\c c~{a}o. 
+ 
+\section{Evoluç\~{a}o Linguagem Java}\label{sec:evolucaoJava}
+
+
+
+No começo da d\'{e}cada de 90 um pequeno grupo de engenheiros da SUN Microsystems chamados de "\textit{Green Team}" acreditava que a pr\'{o}xima grande \'{a}rea da computaç\~{a}o seria a uni\~{a}o de equipamentos eletroeletrônicos com os computadores. O "\textit{Green Team}" liderado por James Gosling, demonstrou a linguagem de programaç\~{a}o Java, que foi desenvolvida pela equipe e originalmente era chamada de Oak, foi desenvolvida para dispositivos de entretenimento como aparelhos de TV a cabo, por\'{e}m n\~{a}o foi bem aceita no meio. Em 1995 com a massificaç\~{a}o da Internet, a linguagem Java teve sua primeira grande aplicaç\~{a}o o navegador Netscape.
+
+Java \'{e} uma linguagem de programaç\~{a}o de prop\'{o}sito geral orientada a objetos, concebida especificadamente para ter poucas dependências de implementaç\~{a}o o que acarreta que uma vez que a aplicaç\~{a}o foi desenvolvida ela poder\'{a} ser executada em qualquer ambiente computacional.
+
+Na sua primeira vers\~{a}o chamada de Java 1 (\acs{JDK} 1.0.2) haviam oito pacotes b\'{a}sicos do java como: \texttt{java.lang}, \texttt{java.io}, \texttt{java.util}, \texttt{java.net}, \texttt{java.awt}, \texttt{java.awt.image}, \texttt{java.awt.peer} e \texttt{java.applet}. Com isso passou a ser a adotada para o desenvolvimento de ferramentas populares na \'{e}poca como o Netscape 3.0 e o Internet Explorer 3.0.
+
+Sua segunda vers\~{a}o foi o \acs{JDK}1.1 \cite{JDK1.1} que trouxe ganhos em funcionalidades, desempenho e qualidade. Novas aplicaç\~{o}es tamb\'{e}m surgiram como : JavaBeans, aprimoramento do \acs{AWT}, novas funcionalidades como o \acs{JDBC}, acesso remoto ao objeto \acs{RMI} e suporte ao padr\~{a}o Unicode 2.0.
+
+A terceira vers\~{a}o Java 2 (\acs{JDK} 1.2) ofereceu melhorias significativas no desempenho, um novo modelo de segurança flex\'{i}vel e um conjunto completo de Interface de Programaç\~{a}o de Aplicaç\~{a}o \acs{API}'s. O modelo de "\textit{sandbox}" foi ampliado para dar aos desenvolvedores, usu\'{a}rios e administradores de sistema a opç\~{a}o de especificar e gerenciar um conjunto de pol\'{i}ticas de segurança flex\'{i}vel que gerenciam as aç\~{o}es de uma aplicaç\~{a}o ou \textit{applet} que pode ou n\~{a}o ser executada. Foi introduzido o suporte nativo a \textit{thread} para o ambiente operacional Solaris e tamb\'{e}m a compress\~{a}o de mem\'{o}ria para classes carregadas. Alocaç\~{a}o de mem\'{o}ria com melhor desempenho e aprimoramento da coleta de lixo. Arquitetura de m\'{a}quina virtual conect\'{a}vel para outras m\'{a}quinas virtuais, incluindo a \textit{Java HotSpot VMNew}. \textit{Java Native Interface }\acs{JNI} de convers\~{a}o. O novo conjunto de componentes de projeto, \acs{GUI} (\textit{Swing}). \acs{API} Java 2D que fornece novos recursos gr\'{a}ficos 2D e \acs{AWT}, bem como suporte para impress\~{a}o. Java \textit{plug-in} para navegadores, fornecendo um tempo de execuç\~{a}o totalmente compat\'{i}vel com a m\'{a}quina virtual Java amplamente implantadas em navegadores. A inclus\~{a}o do \acs{JDBC} que fornece um acesso mais f\'{a}cil aos dados para consultas mais flex\'{i}veis, suporte ao SQL3 e trouxe melhor desempenho e estabilidade promovidos por cursores de rolagem.
+
+
+Em 8 de Maio de 2000 foi anunciado o Java 2 vers\~{a}o 1.3 que trouxe ganho de desempenho em relaç\~{a}o a primeira vers\~{a}o da JS2E de cerca de 40\%  no tempo de {\it  start-up}. O {\it Java HotSpot VM} cliente e suas bibliotecas atentando ao desempenho ao fazer o J2SE vers\~{a}o 1.3 a {\it release} o mais r\'{a}pido at\'{e} à data. Novos recursos, como o {\it caching applet} e instalaç\~{a}o do pacote opcional Java atrav\'{e}s da tecnologia Java {\it  Plug-in} para aumentar a velocidade e a flexibilidade com que os {\it applets} e aplicativos baseados na tecnologia Java podem ser implantados. Java {\it  Plug-in} tecnologia \'{e} um componente do ambiente de execuç\~{a}o Java 2 que permite Java {\it applets} e aplicativos executarem. O novo suporte para \acs{RSA}, assinatura eletrônica, com um gerenciamento mais confi\'{a}vel e din\^{a}mico, certificados X.509, e verificaç\~{a}o de arquivos o que significa aumento das possibilidades que os desenvolvedores tem para proteger dados eletrônicos. Uma s\'{e}rie de novos recursos e ferramentas de desenvolvimento da tecnologia J2SE vers\~{a}o 1.3 que permite o desenvolvimento mais f\'{a}cil e r\'{a}pido de aplicaç\~{o}es baseadas na tecnologia {\it web} ou Java {\it  standalone} de alto desempenho. A adiç\~{a}o de RMI/IIOP e o JNDI para a vers\~{a}o 1.3, melhora na interoperabilidade J2SE. Melhora da conectividade com sistemas de {\it  back-end} que suportam CORBA. O novo suporte que o JNDI fornece acesso aos diret\'{o}rios que suportam o populares LDAP Lightweight Directory Access Protocol, entre outros.
+
+
+No ano de 2002 no dia 6 de Fevereiro, foi lançado a J2SE vers\~{a}o 1.4. Com a vers\~{a}o 1.4, as empresas puderam usar a tecnologia Java para desenvolver aplicativos de neg\'{o}cios mais exigentes e com menos esforço e em menos tempo. As novas funcionalidades como a nova I/O e suporte a 64 bits. A J2SE se tornou plataforma ideal para a mineraç\~{a}o em grande escala de dados, inteligência de neg\'{o}cios, engenharia e cient\'{i}ficos. A vers\~{a}o 1.4 forneceu suporte aprimorado para tecnologias padr\~{o}es da ind\'{u}stria, tais como SSL, LDAP e CORBA a fim de garantir a operacionalidade em plataformas heterogêneas, sistemas e ambientes. Com o apoio embutido para XML, a autenticaç\~{a}o avançada, e um conjunto completo de serviços de segurança, est\'{a} vers\~{a}o forneceu base para padr\~{o}es de aplicaç\~{o}es Web e serviços interoper\'{a}veis. O J2SE avançou para o desenvolvimento de aplicativos de cliente com novos controles de GUI, acelerou Java 2D, a performance gr\'{a}fica, internacionalizaç\~{a}o e localizaç\~{a}o expandida de apoio, novas opç\~{o}es de implantaç\~{a}o e suporte expandido para o at\'{e} ent\~{a}o {\it Windows XP}.
+
+Com a chegada da \acs{JSE2} vers\~{a}o 1.5 (Java 5.0) em 30 de Setembro de 2004, impulsionou benef\'{i}cios extensivos para desenvolvedores, incluindo a facilidade de uso, desempenho global e escalabilidade, monitoramento do sistema e gest\~{a}o e desenvolvimento. O Java 5 foi derivado do trabalho de 15 componentes Java Specification Requests (JSRs) englobando recursos avançados para a linguagem e plataforma. Os l\'{i}deres da ind\'{u}stria na \'{e}poca que participam no grupo de peritos J2SE 5.0 incluiram: Apache Software Foundation, Apple Computer, BEA Systems, Borland Software Corporation, Cisco Systems, Fujitsu Limited, HP, IBM, Macromedia, Nokia Corporation, Oracle, SAP AG, SAS Institute, SavaJe Technologies e Sun Microsystems.
+
+Houve novas funcionalidades foram implementadas como: facilidade de desenvolvimento onde os programadores da linguagem Java pode ser mais eficiente e produtivos com os recursos de linguagem Java 5 que permitiram a codificaç\~{a}o mais segura. Nesta vers\~{a}o surgiu o {\it Generics} ~\cite{OracleGenerics, bracha1998gj}, tipos enumerados, metadados e autoboxing de tipos primitivos permitindo assim uma f\'{a}cil e r\'{a}pida codificaç\~{a}o. Monitoramento e gest\~{a}o permitindo um foco para a nova vers\~{a}o da plataforma, a aplicativos baseados na tecnologia Java {\it Virtual Machine} que passou a ser monitorado e gerenciado com o {\it built-in} de suporte para Java {\it Management Extensions}. Suporte para sistemas de gest\~{a}o empresarial baseados em SNMP tamb\'{e}m \'{e} vi\'{a}vel. Um olhar novo sobre aplicativos baseado na tecnologia Java padr\~{a}o e proporcionou um melhor desenvolvimento GUI para aplicativos baseados na tecnologia Java. A J2SE 5.0 teve suporte completo a internacionalizaç\~{a}o e tamb\'{e}m inseriu suporte para aceleraç\~{a}o de hardware por meio da {\it API OpenGL } e tamb\'{e}m para o sistema operacional Solaris e sistemas operacionais da distribuiç\~{a}o Linux. **Maior desempenho e escalabilidade com a nova vers\~{a}o que incluiu melhorias de desempenho, reduç\~{a}o no tempo de inicializaç\~{a}o, um menor consumo de mem\'{o}ria e JVM auto ajust\'{a}vel para gerar maior desempenho geral do aplicativo e desenvolvimento em J2SE 5.0 em relaç\~{a}o a vers\~{o}es anteriores.
+
+Java 1.6 (Java 6) foi divulgado em 11 de dezembro de 2006. Tornou o desenvolvimento mais f\'{a}cil, r\'{a}pido e eficiente em termos de custos e ofereceu funcionalidades para serviços web, suporte linguagem din\^{a}mica, diagn\'{o}sticos e aplicaç\~{o}es {\it desktop}. Com a chegada dessa nova vers\~{a}o do Java houve combinaç\~{a}o com o {\it NetBeans} IDE 5.5 fornecendo aos desenvolvedores uma estrutura confi\'{a}vel, de c\'{o}digo aberto e compat\'{i}vel, de alta performance para entregar aplicativos baseados na tecnologia Java mais r\'{a}pido e f\'{a}cil do que nunca. O {\it NetBeans} IDE fornece uma fonte aberta e de alto desempenho, modular, extens\'{i}vel, multiplataforma Java IDE para acelerar o desenvolvimento de aplicaç\~{o}es baseadas em software e serviços {\it web}. O Java 1.6 ajudou a acelerar a inovaç\~{a}o para o desenvolvedor, aplicativos de colaboraç\~{a}o {\it online} e baseadas na {\it web}, incluindo um novo quadro de desenvolvedores \acs{API}'s para permitir a mistura da tecnologia Java com linguagens de tipagem din\^{a}mica, tais como PHP, Python, Ruby e tecnologia JavaScript. A Sun tamb\'{e}m criou uma coleç\~{a}o de mecanismos de {\it script} e pr\'{e}-configurado o motor {\it JavaScript Rhino} na plataforma Java. Al\'{e}m disso, o software inclui uma pilha completa de clientes de serviços web e suporta as mais recentes especificaç\~{o}es de serviços {\it web}, como \acs{JAX-WS} 2.0, \acs{JAXB} 2.0, \acs{STAX} e \acs{JAXP}. A plataforma Java 1.6 forneceu ferramentas expandidas para o diagn\'{o}stico, gest\~{a}o e monitoramento de aplicaç\~{o}es e tamb\'{e}m inclui suporte para o novo {\it NetBeans Profiler} 5.5 para {\it Solaris DTrace } e, uma estrutura de rastreamento din\^{a}mico abrangente que est\'{a} inclu\'{i}do no sistema operacional Solaris 10. Al\'{e}m disso, o software Java SE 6 aumenta ainda mais a facilidade de desenvolvimento com atualizaç\~{o}es de interface ferramenta para o {\it Java Virtual Machine} (\acs{JVM}) e o {\it Java Platform Debugger Architecture} (\acs{ACDP}).
+
+Java 7 ~\cite{JSE7} foi lançado no dia 28 de julho de 2011. Essa vers\~{a}o foi resultado do desenvolvimento de toda a ind\'{u}stria o que envolveu uma revis\~{a}o de c\'{o}digo aberto e extensa colaboraç\~{a}o entre os engenheiros da {\it Oracle} e membros do ecossistema Java em todo o mundo atrav\'{e}s da comunidade {\it OpenJDK} e do {\it Java Community Process} (\acs{JCP}). Compatibilidade com vers\~{o}es anteriores de Java 7 com vers\~{o}es anteriores da plataforma a fim de preservar os conjuntos de habilidades dos desenvolvedores de software Java e proteger os investimentos em tecnologia Java. As alteraç\~{o}es da linguagem ajudaram a aumentar a produtividade do desenvolvedor e simplificar tarefas comuns de programaç\~{a}o, reduzindo a quantidade de c\'{o}digo necess\'{a}rio, esclarecendo sintaxe e tornar o c\'{o}digo com mais legibilidade. Melhor suporte para linguagens din\^{a}micas incluindo: Ruby, Python e JavaScript, resultando em aumentos substanciais de desempenho no \acs{JVM}. Uma nova API {\it multicore ready} que permite aos desenvolvedores para se decompor mais facilmente problemas em tarefas que podem ser executadas em paralelo em n\'{u}meros arbitr\'{a}rios de n\'{u}cleos de processador. Uma interface de I/O abrangente para trabalhar com sistemas de arquivos que podem acessar uma ampla gama de atributos de arquivos e oferecem mais informaç\~{o}es quando ocorrem erros. Novos recursos de rede e de segurança. Suporte expandido para a internacionalizaç\~{a}o, incluindo suporte a Unicode 6.0. Al\'{e}m de vers\~{o}es atualizadas das bibliotecas padr\~{a}o.
+
+Com o lançamento do Java SE 8 em 18 de Março de 2014, permitiu uma maior produtividade e desenvolvimento de aplicativos significativos aumentos de desempenho atrav\'{e}s da reduç\~{a}o de linhas de c\'{o}digo, {\it collectons} melhoradas, modelos mais simples de programaç\~{a}o paralela e uso mais eficiente de processadores {\it multi-core}. As principais caracter\'{i}sticas do \acs{JDK} 8 s\~{a}o o projeto Lambda, {\it Nashorn JavaScript Engine}, um conjunto de perfis compactas e a remoç\~{a}o da "geraç\~{a}o permanente" do {\it HotSpot Java Virtual Machine} (\acs{JVM}). A \acs{JDK} 8 alcançou desempenho recorde mundial para 4 sistemas de soquete em servidores baseados em Intel e NEC por 2 sistemas de soquete em servidores SPARC da Oracle T5, com uma melhoria de desempenho de 12\% para 41\% em comparaç\~{a}o com o JDK 7 na mesma configuraç\~{a}o de Oracle.
+
+%O \acs{JDK} 8 adicionou novas funcionalidades como as express\~{o}es lambda com as seguintes caracter\'{i}sticas: referências a m\'{e}todos s\~{a}o compactas e maior legibilidade express\~{o}es lambda para m\'{e}todos que j\'{a} têm um nome. M\'{e}todos padr\~{a}o que permitem adicionar novas funcionalidades para as interfaces de suas bibliotecas e assegurar a compatibilidade bin\'{a}ria com o c\'{o}digo escrito para vers\~{o}es mais antigas dessas interfaces. Eles m\'{e}todos de interface que têm uma aplicaç\~{a}o e a palavra-chave padr\~{a}o no in\'{i}cio da assinatura do m\'{e}todo. Al\'{e}m disso, pode-se definir m\'{e}todos est\'{a}ticos em interfaces. Novos e aprimorados APIs que se aproveitam de express\~{o}es lambda e dos {\it streams} em Java 8 descrevem as classes novos e aprimorados que se aproveitam de express\~{o}es lambda e {\it streams}. Aprimoramento do compilador Java aproveita digitaç\~{a}o alvo para inferir os par\^{a}metros de tipo de um m\'{e}todo de invocaç\~{a}o gen\'{e}rica. O tipo de destino de uma express\~{a}o \'{e} o tipo de dados que o compilador Java espera, dependendo de onde a express\~{a}o aparece, por exemplo, pode-se usar o tipo de destino de uma instruç\~{a}o de atribuiç\~{a}o para o tipo de inferência em Java 7. No entanto, em Java 8, você pode usar o tipo de destino para a inferência de tipos em mais contextos. Anotaç\~{o}es sobre tipos Java onde \'{e} poss\'{i}vel aplicar uma anotaç\~{a}o em qualquer lugar onde um tipo \'{e} usado, utilizado em um conjunto com um sistema de tipo de conector, isso permite a verificaç\~{a}o de tipo mais forte de seu c\'{o}digo e repetiç\~{a}o de anotaç\~{o}es que agora \'{e} poss\'{i}vel aplicar o mesmo tipo de anotaç\~{a}o mais de uma vez para a mesma declaraç\~{a}o ou o tipo de utilizaç\~{a}o.
+
+
+
+
+
+
+\section{Engenharia dos Softwares de Linguagem}\label{sec:softEng}
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.9]{Imagens/stagesLanguageApp}
+	\label{fig:stagesLanguageApp}
+	\caption{Fases de aplicaç\~{o}es com linguagens.}
+\end{figure}
+
+A manipulaç\~{a}o de qualquer linguagem de programaç\~{a}o \'{e} uma tarefa desafiadora e complicada de tal forma que o cen\'{a}rio para estes aplicativos podem ser a manipulaç\~{a}o de um \texttt{XML}, automatizar a transformaç\~{a}o dos dados de um banco de dados antigo para um mais atual, efetuar a importaç\~{a}o de usu\'{a}rio de uma antiga vers\~{a}o ou at\'{e} mesmo de um produto concorrente dentre outros softwares que manipulam uma linguagem.
+
+Tendo em vista a complexidade envolvida \'{e} necess\'{a}rio dividir este trabalho de manipulaç\~{a}o de uma linguagem em componentes que quando combinados proporcionam um programa capaz de realizar a tarefa desejada com a linguagem trabalhada. A Figura:~\ref{fig:stagesLanguageApp} exibe as divis\~{o}es ocorridas para trabalha uma linguagem onde fica claro o \textit{pipeline} para a manipulaç\~{a}o da entrada onde cada est\'{a}gio tem como entrada a sa\'{i}da do est\'{a}gio anterior.
+
+Existe um esforço consider\'{a}vel para tratar a engenharia de linguagens de programaç\~{a}o como sendo o desenvolvimento de um software comum. Algumas aplicaç\~{o}es t\'{i}picas deste dom\'{i}nio s\~{a}o \texttt{reconhecedor, interpretador, tradutor, gerador} conforme menciona Terrance Parr em~\cite{Parr:2009:LIP:1823613},  al\'{e}m de \texttt{ferramentas reconhecedoras de bugs}. Uma dessas \'{e} a ferramenta \textit{FindBugs}~\cite{FindBugs} que faz uso de alguns est\'{a}gios descritos por Terance Parr em ~\cite{Parr:2009:LIP:1823613} para encontrar poss\'{i}veis falhas em um programa que utilize a linguagem Java.
+
+A combinaç\~{a}o de algumas das ferramentas citadas anteriormente, originou o \textit{FindBugs}~\cite{FindBugs} que \'{e} uma ferramenta desenvolvida em Java que processa o \texttt{bytecode} para identificar padr\~{o}es de erros. A Figura:~\ref{fig:findBugs} demonstra no mais alto n\'{i}vel a junç\~{a}o das ferramentas que o comp\~{o}e. 
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.9]{Imagens/pipelineFindbugs}
+	\label{fig:findBugs}
+	\caption{Fase do pipiline do FindBugs.}
+\end{figure}
+
+\texttt{Reconhecedor:} É uma construç\~{a}o capaz de receber uma estrutura de dado como um input ou um fluxo de inputs. O fluxo de input pode geralmente \'{e} texto puro mas pode ser utilizado dado bin\'{a}rio. Como exemplo de aplicaç\~{a}o tem-se ferramentas analisadoras de referências cruzadas, e ferramentas para carregar classes.
+
+\texttt{Interpretador:} Um interpretador, lê uma entrada, decodifica e executa as instruç\~{o}es, interpretadores variam de simples calculadoras at\'{e} a implementaç\~{a}o de linguagens de programaç\~{a}o como Java, Python e PHP.
+
+\texttt{Tradutor:}A partir um input de texto ou bin\'{a}rio \'{e} emitido uma sa\'{i}da para uma linguagem que pode ser a mesma ou n\~{a}o. É a combinaç\~{a}o do \textit{reader} e \textit{generator}. Como exemplo tem-se tradutores de linguagens extintas para linguagens atuais, \texttt{refactorers},  gerador de logs e macro pre-processadores.
+	
+\texttt{Gerador:} Percorre uma estrutura de dado e emite uma sa\'{i}da. Como exemplo tem-se ferramentas de mapeamento de objetos relacionais em banco de dados, serializador de objetos, gerador de c\'{o}digo fonte e geradores de p\'{a}gina web.
+
+
+
+Especificamente no caso deste trabalho \'{e} necess\'{a}rio a construç\~{a}o de um software que realiza an\'{a}lise est\'{a}tica de c\'{o}digo para identificar o uso e oportunidades do uso construç\~{o}es da linguagem Java. E para isso a Figura:~\ref{fig:stagesAnalyzer} exemplifica no alto n\'{i}vel as ferramentas que comp\~{o}em o analisador.
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.9]{Imagens/stagesAnalizer}
+	\label{fig:stagesAnalyzer}
+	\caption{Ferramentas necess\'{a}rias para construç\~{a}o do analisador est\'{a}tico.}
+\end{figure}
+
+
+Pode-se compreender este analisador como um {\it grammarware} pois \'{e} um software que depende de gram\'{a}tica para seu funcionamento neste caso a gram\'{a}tica da linguagem Java, pois estes softwares possuem conhecimentos essenciais da  gram\'{a}tica que manipulam. Como exemplos de arquiteturas que possuem tal conhecimento tem-se os programas de convers\~{a}o de dados, processadores de \texttt{XML} e os que efetuam \textit{parses}.
+
+Alguns cen\'{a}rios favorecem o desenvolvimento de softwares {\it grammarware}, onde dentre os diversos cen\'{a}rios pode-se destacar uma aplicaç\~{a}o que necessite importar perfis de usu\'{a}rios para promover a transiç\~{a}o da vers\~{a}o antiga para uma vers\~{a}o nova. Esta transiç\~{a}o deve ser robusta e provavelmente necessitar\'{a} de adptaç\~{a}o dever\'{a} passar por um parser para que as partes que necessitem de adaptaç\~{a}o possam ser identificadas.
+
+Um outro cen\'{a}rio real \'{e} desenvolvimento de aplicaç\~{o}es de banco de dados onde \'{e} necess\'{a}rio adotar uma nova linguagem de definiç\~{a}o para um ambiente espec\'{i}fico. De forma que automatizar esta soluç\~{a}o requer o uso de um parser o qual ser\'{a} respons\'{a}vel por identificar os inputs de entrada para efetuar o mapeamento correto para a sa\'{i}da desejada no formato correto.
+
+
+Um \textit{software} que efeuta manipula\c{c}\~{a}o da gram\'{a}tica de uma linguagem, como no caso deste trabalho de conclus\~{a}o fica evidente o aparecimento da quest\~{a}o sobre \textit{refactoring} e dentre diversas caracter\'{i}sitas explicadas por Martin Fowler~\cite{martinFowlerRafactoring}, fica claro que este trabalho contribui com o intu\'{\i}to de identificar constru\c{c}\~{o}es obsoletas n\~{a}o efetuando \textit{refactoring} autom\'{a}tico mas fazendo  com que o desenvolvedor opte pela evolu\c{c}\~{a}o ou n\~{a}o. Pois a evolu\c{c}\~{a}o do c\'{o}digo por um mais atual \'{e} uma das oportunidades de melhorar o desgin do \textit{software} conforme aborda por Martin Fowler~\cite{martinFowlerRafactoring} em seu livro.
+
+Mesmo sem a implementa\c{c}\~{a}o de \textit{refactoring} uma contribui\c{c}\~{a}o que este trabalho faz \'{e} a identifi\c{c}\~{a}o a capacidade de encontrar c\'{o}digo duplicado como por exemplo ao identificar \texttt{catch} repetidos, ou at\'{e} mesmo melhorar o desempenho com no caso da da utilizaç\~{a}o do \texttt{switch-string} ao inv\'{e}s do \texttt{if-string} pois oracle afirma que o desempenho \'{e} melhor de a implementa\c{c}\~{a}o otimizada do \texttt{switch-string} na documenta\c{c}\~{a}o~\cite{docSwitch}.
+
+
+
+
+%Atualmente a evoluç\~{a}o de uma linguagem de programaç\~{a}o ocorre predominantemente de forma {\it ad-hoc} e em muitos casos manualmente, para a traduç\~{a}o de aplicativos legados, conforme a demanda. A ferramentas de an\'{a}lise para gerar a evoluç\~{a}o necess\'{a}ria, {\it grammarware}, tende a condizir este processo abordando a classe gramatical que deve ser evolu\'{i}da. Neste caso analisador que muitas vezes realizaria o trabalho por tentativa e erro, tem como base a gram\'{a}tica do c\'{o}digo a ser analisado. Especificaç\~{o}es do analisador s\~{a}o derivados automaticamente da semi gram\'{a}tica. Diferentes tecnologias de an\'{a}lise que podem ser orientadas em oposiç\~{a}o a uma tecnologia espec\'{i}fica. Assim o processo de personalizaç\~{a}o/evoluç\~{a}o \'{e} suscept\'{i}vel de exigir a entrada de um engenheiro de {\it grammarware} o qual tem conhecimento pr\'{e}vio da gram\'{a}tica a ser analisada.
+
+%Um ponto cr\'{i}tico quanto a an\'{a}lise de c\'{o}digo fonte \'{e} o \textit{parser} da linguagem, onde \'{e} necess\'{a}rio reconhecer uma frase para efetuar a interpretaç\~{a}o ou fazer a traduç\~{a}o para que a criaç\~{a}o da representaç\~{a}o intermedi\'{a}ria aconteça. Inicialmente \'{e} necess\'{a}rio identificar se a frase que ser\'{a} tratada \'{e} um \textit{assignment} ou uma chamada de funç\~{a}o.
+ 
+%Reconhecer uma frase acarreta em duas coisas, distingui-la de outras construç\~{o}es e identificar os elementos e as subestruturas que comp\~{o}em esta frase. Por exemplo se uma frase for reconhecida como um \textit{assignment}, pode-se identificar as vari\'{a}veis a esquerda do operador \texttt{=} e uma express\~{a}o que \'{e} a subestrutura a direita. Este ato de reconhecer uma frase \'{e} denominado \textit{Parse}.
+
+\section{Parse}
+
+Confome introduzido anteriormente a concepç\~{a}o de uma ferramenta de an\'{a}lise de c\'{o}digo faz-se necess\'{a}rio trabalhar com  \textit{parser} do c\'{o}digo fonte o que torna isto uma tarefa complexa e desafiadora. Entretanto existem alguns padr\~{o}es adotados para este contexto e com isso este trabalho abordar\'{a} os quatro conceitos  mais importantes segundo Terence Parr em \cite{Parr:2009:LIP:1823613} para prover o parser de acordo com a necessidade.
+\begin{itemize}
+	\item \textbf{Mapping Grammars to Recursive-Descent Recognizers}\\
+	Sua proposta \'{e} traduzir uma gram\'{a}tica para uma recurs\~{a}o descendente para reconhecer frases e sentenças em uma linguagem especificada por uma gram\'{a}tica. Este padr\~{a}o identifica o n\'{u}cleo do fluxo de controle para qualquer recurs\~{a}o descendente e \'{e} utilizado nos 3 padr\~{o}es seguintes. 
+	Para construir um reconhecedor l\'{e}xico ou \textit{parsers} manualmente o melhor ponto de in\'{i}cio \'{e} a gram\'{a}tica, com isso este padr\~{a}o fornece uma maneira simples de construir reconhecedores diretamente de sua gram\'{a}tica.
+	
+	\item \textbf{LL(1) Recursive-Descent Lexer}\\
+	O objetivo deste padr\~{a}o \'{e} para emitir uma sequência de s\'{i}mbolos. Cada s\'{i}mbolo tem dois atributos prim\'{a}rios: um tipo de \textit{token}(s\'{i}mbolo da categoria) e o texto associado por exemplo 
+	no português, temos categorias como verbos e substantivos, bem como s\'{i}mbolos de pontuaç\~{a}o, como v\'{i}rgulas e pontos. Todas as palavras dentro de uma determinada categoria s\~{a}o do mesmo tipo de \textit{token}, embora o texto associado seja diferente. O tipo de nome do \textit{token} representa o categoria identificador. Ent\~{a}o precisamos tipos de \textit{token} para o vocabul\'{a}rio \textit{string} fixa s\'{i}mbolos como tamb\'{e}m lidar com espaços em branco e coment\'{a}rios.
+	\item \textbf{LL(1) Recursive-Descent Parser}\\
+	Esse \'{e} o mais conhecido padr\~{a}o de an\'{a}lise descendente recursiva. Ele s\'{o} precisa	a olhar para o s\'{i}mbolo de entrada atual para tomar decis\~{o}es de an\'{a}lise. Para cada regra de gram\'{a}tica, existe um m\'{e}todo de an\'{a}lise no analisador. Este padr\~{a}o analisa a estrutura sint\'{a}tica da sequência sinal de uma frase usando um \'{u}nico \textit{token} \textit{lookahead}. Este analisador pertence à LL(1) classe do analisador de cima para baixo, em especial, porque usa um \'{u}nico sinal de verificaç\~{a}o à frente (da\'{i} o "1" no nome). É o principal mecanismo de todos os padr\~{o}es de an\'{a}lise subsequentes. Este padr\~{a}o mostra como implementar as decis\~{o}es de an\'{a}lise que utilizam um s\'{i}mbolo \'{u}nico da vis\~{a}o antecipada. É a forma mais fraca de descendente recursivo parser, mas o mais f\'{a}cil de compreender e aplicar.
+	\item \textbf{LL(k) Recursive-Descent Parser}\\
+	Este padr\~{a}o utiliza a o modo \textit{top-down} para percorrer um \'{a}rvore sem\^{a}ntica com o aux\'{i}lio de express\~{o}es booleanas que ajudam na tomada de decis\~{a}o e estas express\~{o}es s\~{a}o conhecidas como predicados sem\^{a}nticos.
+	
+\end{itemize}
+
+\input{capitulos/AnaliseEstatica}
+%\input{capitulos/AnaliseLexica}
