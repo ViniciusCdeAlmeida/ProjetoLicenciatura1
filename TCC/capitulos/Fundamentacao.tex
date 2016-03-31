@@ -14,7 +14,7 @@ de uma determinada de linguagem de programa\c c\~{a}o
 (no caso, a linguagem Java). Importante destacar 
 que as vers\~{o}es da linguagem Java mencionadas anteriormente
 introduziram novos recursos, tais como: 
-\texttt{multi-catch}, \texttt{try-with-resourse}, \texttt{switch-string} 
+\texttt{multi-catch}, \texttt{try-with-resource}, \texttt{switch-string} 
 e \texttt{lambda expressions}; e que esse tipo de 
 evoluç\~{a}o constitui uma nova perspectiva 
 de \textit{refactoring}, que se caracteriza 
@@ -28,8 +28,8 @@ foi necess\'{a}rio estudar temas relacionados
 \`{a} evolu\c c\~{a}o da linguagem Java, engenharia de 
 linguagens de software (ou no Ingl\^{e}s \emph{Software 
 Language Engineering}) e refatoramento de c\'{o}digo 
-(\emph{code refactoring}). Para dar mais clareza ao leitor 
-sobre essas tem\'{a}ticas, esse cap\'{i}tulo apresenta 
+(\emph{code refactoring}). Para fornecer uma introdu\c c\~{a}o ao leitor, 
+esse cap\'{i}tulo apresenta 
 uma vis\~{a}o geral sobre esses temas. Note que n\~{a}o foi objetivo
 deste trabalho implementar um mecanismo de transforma\c c\~{a}o 
 de c\'{o}digo, mas sim construir um suporte ferramental 
@@ -38,13 +38,13 @@ constru\c c\~{o}es existentes na linguagem Java e {\bf identificar
 oportunidades de melhoria de c\'{o}digo}, algo essencial para 
 permitir a atualiza\c c\~{a}o de um c\'{o}digo existente 
 que usa constru\c c\~{o}es ultrapassadas de uma 
-linguagem de programa\c c~{a}o. 
+linguagem de programa\c c\~{a}o. 
  
 \section{Evoluç\~{a}o Linguagem Java}\label{sec:evolucaoJava}
 
 
 
-No in\'{i}cio dos anos noventa, um pequeno grupo de engenheiros da 
+No in\'{i}cio dos anos noventa, um grupo de engenheiros da 
 Sun Microsystems, chamados de \textit{Green Team}, acreditava 
 que a pr\'{o}xima grande \'{a}rea da computaç\~{a}o 
 seria a uni\~{a}o de equipamentos eletroeletrônicos com os 
@@ -65,7 +65,7 @@ possa ser executada em qualquer ambiente computacional que possui
 uma JVM aderente \`{a} especifica\c c\~{a}o da linguagem.
 
 Na sua primeira vers\~{a}o publicamente dispon\'{i}vel 
-(\acs{JDK} 1.0.2), haviam apenas oito bibliotecas 
+(\acs{JDK} 1.0.2), existiam apenas oito bibliotecas 
 presentes na especifica\c c\~{a} Java, tais como 
 \texttt{java.lang}, \texttt{java.io}, \texttt{java.util},  
 \texttt{java.net}, \texttt{java.awt} e \texttt{java.applet}; 
@@ -98,7 +98,7 @@ perspectiva sem\^{a}ntica, as principais contribui\c c\~{o}es
 da especifica\c c\~{a}o Java 5.0 introduziram o suporte 
 a polimorfismo parametrizado (Java Generics) e enumera\c c\~{o}es; 
 o uso de constru\c c\~{o}es \texttt{foreach} para iterar 
-sobre cole\c c\~{o}es; defini\c c\~{a}o de m\'{u}ltiplos 
+sobre cole\c c\~{o}es; a possibilidade de defini\c c\~{a}o de m\'{u}ltiplos 
 argumentos com a constru\c c\~{a}o \texttt{varargs} (suportados em 
 linguagens como C); e o uso do mecanismo intitulado 
 \emph{autoboxing} para converter tipos primitivos nas 
@@ -109,12 +109,12 @@ e sem\^{a}nticas bastante aguardadas pela comunidade de
 desenvolvedores, tais como:
 
 \begin{description}
-\item[Java 7] introduziu facilidades como (a) suporte ao tipo \texttt{String} 
+\item[Java 7] introduziu em 2011 facilidades como (a) suporte ao tipo \texttt{String} 
 em senten\c cas condicionais \texttt{switch}, (b) infer\^{e}ncia de tipos 
 na instancia\c c\~{a}o de classes gen\'{e}ricas e (c) captura de 
 m\'{u}ltiplos tipos de exce\c c\~{a}o. 
 
-\item[Java 8] introduziu o suporte a express\~{o}es lambda e a implementa\c c\~{a}o de 
+\item[Java 8] introduziu em 2014 o suporte a express\~{o}es lambda e a implementa\c c\~{a}o de 
 m\'{e}todos \emph{default} em interfaces Java. O suporte a express\~{o}es lambda pode 
 ser compreendido como uma evolu\c c\~{a}o da linguagem t\~{a}o significativo 
 quanto a introdu\c c\~{a}o de Java Generics, na vers\~{a}o Java 5. Isso porque 
@@ -158,24 +158,51 @@ concorrente) est\~{a}o sendo propostos para a linguagem com base em tal constru\
 
 A manipulaç\~{a}o de artefatos escritos em 
 uma linguagem de programaç\~{a}o (ou em linguagens de software) 
-\'{e} uma tarefa desafiadora, envolvendo, por exemplo, cen\'{a}rio para a 
-manipulaç\~{a}o de arquivos \texttt{XML}, automatizar a transformaç\~{a}o de 
+\'{e} uma tarefa desafiadora, mas que permite o desenvolvimento 
+de software aplic\'{a}vel a diferentes cen\'{a}rios, mas que permitem, por exemplo, 
+manipular arquivos \texttt{XML}, transformar 
 informa\c c\~{o}es e scripts presentes 
-de um banco de dados legado, efetuar a tradu\c c\~{a}o de programas 
+em bancos de dados legados, efetuar a tradu\c c\~{a}o de programas 
 escritos em uma vers\~{a}o desatualizada de uma linguagem. 
 
+Por envolver diferentes est\'{a}gios, o desenho desse tipo de solu\c c\~{a}o requer, geralmente, 
+um estilo arquitetural baseado em um \emph{pipeline},  onde cada est\'{a}gio necess\'{a}rio \`{a}  
+ manipulaç\~{a}o de uma linguagem \'{e} implementado como um componente de software. Quando combinados, 
+tais componentes proporcionam um programa capaz de realizar a tarefa desejada para realizar o processamento 
+de uma ou mais linguagens. A Figura:~\ref{fig:stagesLanguageApp} exibe uma organiza\c c\~{a}o 
+t\'{i}pica de componentes para o processamento de artefatos escritos em uma linguagem de 
+programa\c c\~{a}o, onde a cada est\'{a}gio do \emph{pipeline}, um componente 
+utiliza os resultados do est\'{a}gio anterior para gerar uma sa\'{i}da para o componente 
+que realiza o processamento no est\'{a}gio posterior.  
+
 \begin{figure}[h]
-	\center
-	\includegraphics[scale=0.9]{Imagens/stagesLanguageApp}
-	\label{fig:stagesLanguageApp}
-	\caption{Fases de aplicaç\~{o}es com linguagens.}
+  \center
+  \includegraphics[scale=0.9]{Imagens/stagesLanguageApp}
+  \label{fig:stagesLanguageApp}
+  \caption{Fases de aplicaç\~{o}es com linguagens.}
 \end{figure}
 
-Tendo em vista a complexidade envolvida \'{e} necess\'{a}rio dividir este trabalho de manipulaç\~{a}o de uma linguagem em componentes que quando combinados proporcionam um programa capaz de realizar a tarefa desejada com a linguagem trabalhada. A Figura:~\ref{fig:stagesLanguageApp} exibe as divis\~{o}es ocorridas para trabalha uma linguagem onde fica claro o \textit{pipeline} para a manipulaç\~{a}o da entrada onde cada est\'{a}gio tem como entrada a sa\'{i}da do est\'{a}gio anterior.
+Existe um esforço consider\'{a}vel para tratar a engenharia de linguagens de programaç\~{a}o como sendo o desenvolvimento de um software comum. 
+Algumas aplicaç\~{o}es t\'{i}picas deste dom\'{i}nio s\~{a}o \texttt{reconhecedores, interpretadores, tradutores e geradores}, 
+conforme menciona Terrance Parr~\cite{Parr:2009:LIP:1823613}. 
 
-Existe um esforço consider\'{a}vel para tratar a engenharia de linguagens de programaç\~{a}o como sendo o desenvolvimento de um software comum. Algumas aplicaç\~{o}es t\'{i}picas deste dom\'{i}nio s\~{a}o \texttt{reconhecedor, interpretador, tradutor, gerador} conforme menciona Terrance Parr em~\cite{Parr:2009:LIP:1823613},  al\'{e}m de \texttt{ferramentas reconhecedoras de bugs}. Uma dessas \'{e} a ferramenta \textit{FindBugs}~\cite{FindBugs} que faz uso de alguns est\'{a}gios descritos por Terance Parr em ~\cite{Parr:2009:LIP:1823613} para encontrar poss\'{i}veis falhas em um programa que utilize a linguagem Java.
+%% Um \emph{Reconhecedor} \'{e} uma construç\~{a}o capaz de receber uma estrutura de dado como um input ou um fluxo de inputs. O fluxo de input pode geralmente \'{e} texto puro mas pode ser utilizado dado bin\'{a}rio. Como exemplo de aplicaç\~{a}o tem-se ferramentas analisadoras de referências cruzadas, e ferramentas para carregar classes.
 
-A combinaç\~{a}o de algumas das ferramentas citadas anteriormente, originou o \textit{FindBugs}~\cite{FindBugs} que \'{e} uma ferramenta desenvolvida em Java que processa o \texttt{bytecode} para identificar padr\~{o}es de erros. A Figura:~\ref{fig:findBugs} demonstra no mais alto n\'{i}vel a junç\~{a}o das ferramentas que o comp\~{o}e. 
+%% \texttt{Interpretador:} Um interpretador, lê uma entrada, decodifica e executa as instruç\~{o}es, interpretadores variam de simples calculadoras at\'{e} a implementaç\~{a}o de linguagens de programaç\~{a}o como Java, Python e PHP.
+
+%% \texttt{Tradutor:}A partir um input de texto ou bin\'{a}rio \'{e} emitido uma sa\'{i}da para uma linguagem que pode ser a mesma ou n\~{a}o. É a combinaç\~{a}o do \textit{reader} e \textit{generator}. Como exemplo tem-se tradutores de linguagens extintas para linguagens atuais, \texttt{refactorers},  gerador de logs e macro pre-processadores.
+	
+%% \texttt{Gerador:} Percorre uma estrutura de dado e emite uma sa\'{i}da. Como exemplo tem-se ferramentas de mapeamento de objetos relacionais em banco de dados, serializador de objetos, gerador de c\'{o}digo fonte e geradores de p\'{a}gina web.
+
+
+
+Al\'{e}m dessas aplica\c c\~{o}es t\'{i}picas, 
+ferramentas para a identifica\c c\~{a}o est\'{a}tica de \emph{bugs}, por exemplo, tamb\'{e}m s\~{a}o comumente 
+implementadas usando uma organiza\c c\~{a}o como a representada na Figura~\ref{fig:stagesLanguageApp}. 
+A ferramenta \textit{FindBugs}~\cite{FindBugs} serve como um exemplo de solu\c c\~{a}o para identifica\c c\~{a}o 
+de poss\'{i}veis erros em programas escritos na linguagem Java, a partir do \emph{bytecode} resultante do 
+processo de compila\c c\~{a}o. Note na Figura:~\ref{fig:findBugs} a semelhan\c ca arquitetural com as 
+abordagens t\'{i}picas para o processamento de artefatos de linguagens de programa\c c\~{a}o. 
 
 \begin{figure}[h]
 	\center
@@ -184,17 +211,12 @@ A combinaç\~{a}o de algumas das ferramentas citadas anteriormente, originou o \
 	\caption{Fase do pipiline do FindBugs.}
 \end{figure}
 
-\texttt{Reconhecedor:} É uma construç\~{a}o capaz de receber uma estrutura de dado como um input ou um fluxo de inputs. O fluxo de input pode geralmente \'{e} texto puro mas pode ser utilizado dado bin\'{a}rio. Como exemplo de aplicaç\~{a}o tem-se ferramentas analisadoras de referências cruzadas, e ferramentas para carregar classes.
 
-\texttt{Interpretador:} Um interpretador, lê uma entrada, decodifica e executa as instruç\~{o}es, interpretadores variam de simples calculadoras at\'{e} a implementaç\~{a}o de linguagens de programaç\~{a}o como Java, Python e PHP.
-
-\texttt{Tradutor:}A partir um input de texto ou bin\'{a}rio \'{e} emitido uma sa\'{i}da para uma linguagem que pode ser a mesma ou n\~{a}o. É a combinaç\~{a}o do \textit{reader} e \textit{generator}. Como exemplo tem-se tradutores de linguagens extintas para linguagens atuais, \texttt{refactorers},  gerador de logs e macro pre-processadores.
-	
-\texttt{Gerador:} Percorre uma estrutura de dado e emite uma sa\'{i}da. Como exemplo tem-se ferramentas de mapeamento de objetos relacionais em banco de dados, serializador de objetos, gerador de c\'{o}digo fonte e geradores de p\'{a}gina web.
-
-
-
-Especificamente no caso deste trabalho \'{e} necess\'{a}rio a construç\~{a}o de um software que realiza an\'{a}lise est\'{a}tica de c\'{o}digo para identificar o uso e oportunidades do uso construç\~{o}es da linguagem Java. E para isso a Figura:~\ref{fig:stagesAnalyzer} exemplifica no alto n\'{i}vel as ferramentas que comp\~{o}em o analisador.
+Especificamente no caso deste trabalho, percebeu-se a necessidade de construç\~{a}o de um software que 
+realiza a an\'{a}lise est\'{a}tica de c\'{o}digo para identificar tanto o uso quanto as oportunidades do uso de construç\~{o}es 
+sint\'{a}ticas / sem\^{a}nticas da linguagem Java. Em termos arquiteturais, a Figura:~\ref{fig:stagesAnalyzer} ilustra, 
+em um alto n\'{i}vel de abstra\c c\~{a}o, os principais componentes que formam o \emph{pipeline} do analisador est\'{a}tico 
+implementado nesse trabalho e cujos detalhes de implementa\c c\~{a}o s\~{a}o apresentados no pr\'{o}ximo cap\'{i}tulo.
 
 \begin{figure}[h]
 	\center
@@ -204,16 +226,25 @@ Especificamente no caso deste trabalho \'{e} necess\'{a}rio a construç\~{a}o de
 \end{figure}
 
 
-Pode-se compreender este analisador como um {\it grammarware} pois \'{e} um software que depende de gram\'{a}tica para seu funcionamento neste caso a gram\'{a}tica da linguagem Java, pois estes softwares possuem conhecimentos essenciais da  gram\'{a}tica que manipulam. Como exemplos de arquiteturas que possuem tal conhecimento tem-se os programas de convers\~{a}o de dados, processadores de \texttt{XML} e os que efetuam \textit{parses}.
+Pode-se compreender este analisador como um \emph{grammarware}~\cite{} pois \'{e} um software 
+que depende fortemente de uma gram\'{a}tica para seu funcionamento--- neste caso a gram\'{a}tica da linguagem Java. 
+%\emph{Grammawares} demandam um conhecimento essencial das  gram\'{a}ticas que manipulam. 
+%Como exemplos de arquiteturas que possuem tal conhecimento tem-se os programas de convers\~{a}o de dados, processadores de \texttt{XML} e os que efetuam \textit{parses}.
+De acordo com~\cite{}, alguns cen\'{a}rios favorecem o desenvolvimento de softwares alinhados com a abordagem 
+\emph{grammarware}, com destaque \`{a}s aplicaç\~{o}es que necessitam importar perfis de usu\'{a}rios para promover a transiç\~{a}o da vers\~{a}o 
+antiga para uma vers\~{a}o nova {\color{red}[rba] n\~{a}o consegui entender bem essa senten\c ca}. 
+Esta transiç\~{a}o deve ser robusta e provavelmente necessitar\'{a} de adptaç\~{a}o dever\'{a} passar 
+por um parser para que as partes que necessitem de adaptaç\~{a}o possam ser identificadas.
 
-Alguns cen\'{a}rios favorecem o desenvolvimento de softwares {\it grammarware}, onde dentre os diversos cen\'{a}rios pode-se destacar uma aplicaç\~{a}o que necessite importar perfis de usu\'{a}rios para promover a transiç\~{a}o da vers\~{a}o antiga para uma vers\~{a}o nova. Esta transiç\~{a}o deve ser robusta e provavelmente necessitar\'{a} de adptaç\~{a}o dever\'{a} passar por um parser para que as partes que necessitem de adaptaç\~{a}o possam ser identificadas.
+Um outro cen\'{a}rio real \'{e} o desenvolvimento de aplicaç\~{o}es de banco de dados onde se faz necess\'{a}rio adotar 
+uma nova linguagem de definiç\~{a}o para um ambiente espec\'{i}fico. De forma que automatizar esta soluç\~{a}o requer o uso de um 
+parser que ser\'{a} respons\'{a}vel por reconhecer as entradas necess\'{a}rias para efetuar o mapeamento 
+para a \emph{linguagem} destino.
 
-Um outro cen\'{a}rio real \'{e} desenvolvimento de aplicaç\~{o}es de banco de dados onde \'{e} necess\'{a}rio adotar uma nova linguagem de definiç\~{a}o para um ambiente espec\'{i}fico. De forma que automatizar esta soluç\~{a}o requer o uso de um parser o qual ser\'{a} respons\'{a}vel por identificar os inputs de entrada para efetuar o mapeamento correto para a sa\'{i}da desejada no formato correto.
 
+%% Um \textit{software} que efeta manipula\c{c}\~{a}o da gram\'{a}tica de uma linguagem, como no caso deste trabalho de conclus\~{a}o fica evidente o aparecimento da quest\~{a}o sobre \textit{refactoring} e dentre diversas caracter\'{i}sitas explicadas por Martin Fowler~\cite{martinFowlerRafactoring}, fica claro que este trabalho contribui com o intu\'{\i}to de identificar constru\c{c}\~{o}es obsoletas n\~{a}o efetuando \textit{refactoring} autom\'{a}tico mas fazendo  com que o desenvolvedor opte pela evolu\c{c}\~{a}o ou n\~{a}o. Pois a evolu\c{c}\~{a}o do c\'{o}digo por um mais atual \'{e} uma das oportunidades de melhorar o desgin do \textit{software} conforme aborda por Martin Fowler~\cite{martinFowlerRafactoring} em seu livro.
 
-Um \textit{software} que efeuta manipula\c{c}\~{a}o da gram\'{a}tica de uma linguagem, como no caso deste trabalho de conclus\~{a}o fica evidente o aparecimento da quest\~{a}o sobre \textit{refactoring} e dentre diversas caracter\'{i}sitas explicadas por Martin Fowler~\cite{martinFowlerRafactoring}, fica claro que este trabalho contribui com o intu\'{\i}to de identificar constru\c{c}\~{o}es obsoletas n\~{a}o efetuando \textit{refactoring} autom\'{a}tico mas fazendo  com que o desenvolvedor opte pela evolu\c{c}\~{a}o ou n\~{a}o. Pois a evolu\c{c}\~{a}o do c\'{o}digo por um mais atual \'{e} uma das oportunidades de melhorar o desgin do \textit{software} conforme aborda por Martin Fowler~\cite{martinFowlerRafactoring} em seu livro.
-
-Mesmo sem a implementa\c{c}\~{a}o de \textit{refactoring} uma contribui\c{c}\~{a}o que este trabalho faz \'{e} a identifi\c{c}\~{a}o a capacidade de encontrar c\'{o}digo duplicado como por exemplo ao identificar \texttt{catch} repetidos, ou at\'{e} mesmo melhorar o desempenho com no caso da da utilizaç\~{a}o do \texttt{switch-string} ao inv\'{e}s do \texttt{if-string} pois oracle afirma que o desempenho \'{e} melhor de a implementa\c{c}\~{a}o otimizada do \texttt{switch-string} na documenta\c{c}\~{a}o~\cite{docSwitch}.
+%% Mesmo sem a implementa\c{c}\~{a}o de \textit{refactoring} uma contribui\c{c}\~{a}o que este trabalho faz \'{e} a identifi\c{c}\~{a}o a capacidade de encontrar c\'{o}digo duplicado como por exemplo ao identificar \texttt{catch} repetidos, ou at\'{e} mesmo melhorar o desempenho com no caso da da utilizaç\~{a}o do \texttt{switch-string} ao inv\'{e}s do \texttt{if-string} pois oracle afirma que o desempenho \'{e} melhor de a implementa\c{c}\~{a}o otimizada do \texttt{switch-string} na documenta\c{c}\~{a}o~\cite{docSwitch}.
 
 
 
@@ -224,16 +255,30 @@ Mesmo sem a implementa\c{c}\~{a}o de \textit{refactoring} uma contribui\c{c}\~{a
  
 %Reconhecer uma frase acarreta em duas coisas, distingui-la de outras construç\~{o}es e identificar os elementos e as subestruturas que comp\~{o}em esta frase. Por exemplo se uma frase for reconhecida como um \textit{assignment}, pode-se identificar as vari\'{a}veis a esquerda do operador \texttt{=} e uma express\~{a}o que \'{e} a subestrutura a direita. Este ato de reconhecer uma frase \'{e} denominado \textit{Parse}.
 
+
 \section{Parse}
 
-Confome introduzido anteriormente a concepç\~{a}o de uma ferramenta de an\'{a}lise de c\'{o}digo faz-se necess\'{a}rio trabalhar com  \textit{parser} do c\'{o}digo fonte o que torna isto uma tarefa complexa e desafiadora. Entretanto existem alguns padr\~{o}es adotados para este contexto e com isso este trabalho abordar\'{a} os quatro conceitos  mais importantes segundo Terence Parr em \cite{Parr:2009:LIP:1823613} para prover o parser de acordo com a necessidade.
+Confome discutido anteriormente, o parser de programas escritos em uma linguagem de program\c c\~{a}o 
+\'{e} um dos componentes necess\'{a}rios para a constru\c c\~{a}o de ferramentas de an\'{a}lise 
+est\'{a}tica. Vale ressaltar que o analisador est\'{a}tico constru\'{i}do neste trabalho reusou uma infraestrutura 
+da plataforma Eclipse~\cite{} que oferece um parser atualizado da linguagem Java. Por outro lado, como 
+se trata de um tipo de componente central para solu\c c\~{o}es baseadas em gram\'{a}tica, esta se\c c\~{a}o 
+revisa brevemente quatro padr\~{o}es adotados para a implementa\c c\~{a}o de parsers~\cite{Parr:2009:LIP:1823613}. S\~{a}o eles: 
+
+{\color{red}Por favor, revisem essa se\c c\~{a}o.}
+
 \begin{itemize}
 	\item \textbf{Mapping Grammars to Recursive-Descent Recognizers}\\
-	Sua proposta \'{e} traduzir uma gram\'{a}tica para uma recurs\~{a}o descendente para reconhecer frases e sentenças em uma linguagem especificada por uma gram\'{a}tica. Este padr\~{a}o identifica o n\'{u}cleo do fluxo de controle para qualquer recurs\~{a}o descendente e \'{e} utilizado nos 3 padr\~{o}es seguintes. 
-	Para construir um reconhecedor l\'{e}xico ou \textit{parsers} manualmente o melhor ponto de in\'{i}cio \'{e} a gram\'{a}tica, com isso este padr\~{a}o fornece uma maneira simples de construir reconhecedores diretamente de sua gram\'{a}tica.
+
+	Sua proposta \'{e} traduzir uma gram\'{a}tica para uma implementa\c c\~{a}o que usa recurs\~{a}o descendente 
+para reconhecer frases e sentenças em uma linguagem especifica. Este padr\~{a}o identifica o n\'{u}cleo do fluxo de controle 
+para qualquer recurs\~{a}o descendente e \'{e} utilizado nos 3 padr\~{o}es seguintes. Para construir um reconhecedor l\'{e}xico ou \textit{parsers} 
+manualmente o melhor ponto de in\'{i}cio \'{e} a gram\'{a}tica, com isso este padr\~{a}o fornece uma maneira simples de construir reconhecedores diretamente de sua gram\'{a}tica.
 	
 	\item \textbf{LL(1) Recursive-Descent Lexer}\\
-	O objetivo deste padr\~{a}o \'{e} para emitir uma sequência de s\'{i}mbolos. Cada s\'{i}mbolo tem dois atributos prim\'{a}rios: um tipo de \textit{token}(s\'{i}mbolo da categoria) e o texto associado por exemplo 
+
+	O objetivo deste padr\~{a}o \'{e} emitir uma sequência de s\'{i}mbolos. Cada s\'{i}mbolo tem dois atributos prim\'{a}rios: 
+um tipo de \textit{token} (s\'{i}mbolo da categoria) e o texto associado por exemplo 
 	no português, temos categorias como verbos e substantivos, bem como s\'{i}mbolos de pontuaç\~{a}o, como v\'{i}rgulas e pontos. Todas as palavras dentro de uma determinada categoria s\~{a}o do mesmo tipo de \textit{token}, embora o texto associado seja diferente. O tipo de nome do \textit{token} representa o categoria identificador. Ent\~{a}o precisamos tipos de \textit{token} para o vocabul\'{a}rio \textit{string} fixa s\'{i}mbolos como tamb\'{e}m lidar com espaços em branco e coment\'{a}rios.
 	\item \textbf{LL(1) Recursive-Descent Parser}\\
 	Esse \'{e} o mais conhecido padr\~{a}o de an\'{a}lise descendente recursiva. Ele s\'{o} precisa	a olhar para o s\'{i}mbolo de entrada atual para tomar decis\~{o}es de an\'{a}lise. Para cada regra de gram\'{a}tica, existe um m\'{e}todo de an\'{a}lise no analisador. Este padr\~{a}o analisa a estrutura sint\'{a}tica da sequência sinal de uma frase usando um \'{u}nico \textit{token} \textit{lookahead}. Este analisador pertence à LL(1) classe do analisador de cima para baixo, em especial, porque usa um \'{u}nico sinal de verificaç\~{a}o à frente (da\'{i} o "1" no nome). É o principal mecanismo de todos os padr\~{o}es de an\'{a}lise subsequentes. Este padr\~{a}o mostra como implementar as decis\~{o}es de an\'{a}lise que utilizam um s\'{i}mbolo \'{u}nico da vis\~{a}o antecipada. É a forma mais fraca de descendente recursivo parser, mas o mais f\'{a}cil de compreender e aplicar.

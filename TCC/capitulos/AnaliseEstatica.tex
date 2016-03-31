@@ -1,8 +1,23 @@
 \section{Análise estática}
-Análise estática é uma técnica automática no processo de verificação de software realizado por algumas ferramentas sem a necessidade de que o software tenha sido executado. Para Java exitem duas possibilidades de realizar tal análise na qual uma das técnicas realiza análise no código fonte e a outra a realiza no {\it bytecode} do programa segundo ~\cite{Ayewah:2008:USA:1439186.1439221}. Neste trabalho ser utilizada a pesquisa baseada no código fonte sem que tenha sido executado devido a flexibilidade e infraestrutura consolidada encontrada no eclipse AST.
 
-Um fato importante é que tal análise somente obtém sucesso se forem determinados padrões ou comportamento para que sejam pesquisados no software. Neste projeto o tais comportamentos são determinados por {\it visitors} conforme explica Gamma et. al. ~\cite{Gamma:1995} devido a toda infraestrutura a qual as ferramentas do eclipse fornecem facilidade para que seja realizada uma análise baseada em padrões.
-
-Devido a este trabalho de verificação de software é possível detectar falhas de forma precoce nas fases de  desenvolvimento evitando que bugs e falhas sejam introduzidas e até mesmo postergados e isso é uma vantagem existe a economia de tempo com falhas simples, {\it  feedback} rápido para alertar a equipe devido as falhas ocorridas e pode-se ir além de simples casos de testes podendo aprimorar estes para que  fiquem mais rigorosos pois a partir do momento que o analisador encontrar uma falha é possível criar um teste de caso para que esta seja testada aumentando a confiabilidade do software.
-
-Existe limitações nestes verificadores estáticos como em software desenvolvidos sem qualquer uso de padrões ou sem arquiteturas consolidadas, criado por equipes composta de desenvolvedores inexperientes o qual a ferramente poderá apontar erros que são falsos positivos que são erros detectados que não existem pois o analisador pesquisa por padrões e estruturas consolidadas. Tais problemas são desagradáveis porém não oferecem riscos ao desenvolvimento, podem afetar outras áreas como a de {\it refactoring} a qual poderá encontrar dificuldade em melhorar um código que não segue padrão. Vale ainda ressaltar que a penalidade de encontrar um falso positivo é a perda de tempo em fazer uma inspeção no código para comprovar se é ou não uma falha. Também há a possibilidade de falsos negativos o que cabe ao programador verificar para evitar que tais limitação do analisador não se propague durante o ciclo de desenvolvimento.
+Análise estática é uma técnica automática usada no processo de verificação e que n\~{a}o requer a 
+execu\c c\~{a}o do software. Para a linguagem Java, duas estrat\'{e}gias s\~{a}o tipicamentes usadas pelas ferramentas. 
+A primeira utiliza basicamente o código fonte dos programas nas an\'{a}lises, enquanto que a segunda estrat\'{e}gia 
+realiza as an\'{a}lises usando o c\'{o}digo compilado dos programas (i.e., o \emph{bytecode} correspondente)~\cite{Ayewah:2008:USA:1439186.1439221}. 
+Neste trabalho, o analisador est\'{a}tico segue a primeira estrat\'{e}gia, realizando as an\'{a}lises 
+usando exclusivamente o código fonte. % sem que tenha sido executado devido a flexibilidade e infraestrutura consolidada encontrada no eclipse AST.
+Um fato importante é que a análise est\'{a}tica somente obtém sucesso quando s\~{a}o identificados determinados padrões de uso 
+de constru\c c\~{o}es de software. Neste projeto, tais padr\~{o}es são identificados por {\it visitors}~\cite{Gamma:1995}, implementados usando 
+a infraesturua do Eclipse JDT (Java Development Tools).
+Este esfor\c co de verificação de software permite detectar falhas em fases iniciais de  desenvolvimento, 
+evitando que \emph{bugs} e falhas sejam introduzidas e até mesmo postergados. O {\it  feedback} rápido pode alertar as equipes sobre 
+falhas ocorridas, sendo uma abordagem complementar a casos de testes---  a partir do momento que um analisador est\'{a}tico encontra 
+uma poss\'{i}vel viola\c c\~{a}o, é possível criar um teste de caso para que esta seja testada; aumentando assim a confiabilidade do software.
+Por outro lado, existem limitações nestes verificadores estáticos como em software desenvolvidos sem qualquer uso de padrões ou 
+sem arquiteturas consolidadas, criado por equipes composta de desenvolvedores inexperientes o qual a ferramente poderá apontar erros que são falsos positivos. 
+Ou seja, desvios detectados que não correspondem a erros. 
+Tais \emph{falsos positivos} são desagradáveis, porém não comprometem, a princ\'{i}pio, a qualidade do 
+software sendo desenvolvido. Por outro lado, a ocorr\^{e}ncia de falsos positivos pode afetar outras atividades, como a de {\it refactoring}, 
+uma vez que dificulta a melhoraria de um código que não segue padrão. Vale ainda ressaltar que a penalidade de encontrar um falso 
+positivo envolve a perda de tempo em fazer uma inspeção no código para comprovar se é ou não um desvio de qualidade. 
+Também há a possibilidade de falsos negativos, o que cabe ao programador verificar para evitar que tais limitação do analisador não se propague durante o ciclo de desenvolvimento.
