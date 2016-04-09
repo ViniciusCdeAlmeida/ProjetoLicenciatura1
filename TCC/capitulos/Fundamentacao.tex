@@ -225,21 +225,39 @@ implementado nesse trabalho e cujos detalhes de implementa\c c\~{a}o s\~{a}o apr
 	\caption{Ferramentas necess\'{a}rias para construç\~{a}o do analisador est\'{a}tico.}
 \end{figure}
 
+O analisador desenvolvido neste trabalho \'{e} considerado um {\it grammarware} pois \'{e} um software que depende da gram\'{a}tica da linguagem Java para seu funcionamento pois tais softwares devem possum s\'{o}lido conhecimento da  gram\'{a}tica que manipulam. Como exemplos de arquiteturas que possuem tal conhecimento tem-se os programas de convers\~{a}o de dados, processadores de \texttt{XML} e os softwares que efetuam \textit{parses}.
 
-Pode-se compreender este analisador como um \emph{grammarware}~\cite{} pois \'{e} um software 
-que depende fortemente de uma gram\'{a}tica para seu funcionamento--- neste caso a gram\'{a}tica da linguagem Java. 
-%\emph{Grammawares} demandam um conhecimento essencial das  gram\'{a}ticas que manipulam. 
-%Como exemplos de arquiteturas que possuem tal conhecimento tem-se os programas de convers\~{a}o de dados, processadores de \texttt{XML} e os que efetuam \textit{parses}.
-De acordo com~\cite{}, alguns cen\'{a}rios favorecem o desenvolvimento de softwares alinhados com a abordagem 
-\emph{grammarware}, com destaque \`{a}s aplicaç\~{o}es que necessitam importar perfis de usu\'{a}rios para promover a transiç\~{a}o da vers\~{a}o 
-antiga para uma vers\~{a}o nova {\color{red}[rba] n\~{a}o consegui entender bem essa senten\c ca}. 
-Esta transiç\~{a}o deve ser robusta e provavelmente necessitar\'{a} de adptaç\~{a}o dever\'{a} passar 
-por um parser para que as partes que necessitem de adaptaç\~{a}o possam ser identificadas.
+Paul Klint at.al.~\cite{klint2005toward} vai mais al\'{e}m para caracterizar um {\it grammarware} como sendo um software comum, afirmando que este deve  adotar t\'{e}cnicas contempor\^{a}neas a engenharia de software tendo em vista que tais t\'{e}cnicas s\~{a}o utilizadas diariamente no desenvolvimento n\~{a}o sendo nenhuma novidade. A contemporaneidade deste analisador da-se por utilizar t\'{e}cnicas para inje\c{c}\~{a}o de depend\^{e}ncia, controle de dep\^{e}ndencia e  reposit\'{o}rio para manter gerenciamento do software.
 
-Um outro cen\'{a}rio real \'{e} o desenvolvimento de aplicaç\~{o}es de banco de dados onde se faz necess\'{a}rio adotar 
-uma nova linguagem de definiç\~{a}o para um ambiente espec\'{i}fico. De forma que automatizar esta soluç\~{a}o requer o uso de um 
-parser que ser\'{a} respons\'{a}vel por reconhecer as entradas necess\'{a}rias para efetuar o mapeamento 
-para a \emph{linguagem} destino.
+Gram\'{a}ticas e software dependentes de gram\'{a}tica n\~{a}o s\~{a}o inven\c{c}\~{o}es recentes e este conceito faz-se presente em \'{a}reas da computa\c{c}\~{a}o como engenharia reversa, desnvolvimento orientado a aspectos, tranforma\c{c}\~{o}es de programas e metamodelagem.
+
+Alguns cen\'{a}rios favorecem o desenvolvimento de softwares {\it grammarware}, onde dentre os diversos cen\'{a}rios pode-se destacar uma aplicaç\~{a}o que necessite importar perfis de usu\'{a}rios para promover a transi\c{c}\~{a}o da vers\~{a}o antiga para uma vers\~{a}o atual. Esta transi\c{c}\~{a}o deve ser robusta e provavelmente necessitar\'{a} de adpta\c{c}\~{a}o o que em muitos casos necessita de um \textit{parser} para partes que necessitam ser adaptadas.
+
+Um outro cen\'{a}rio real \'{e} desenvolvimento de aplica\c{c}\~{o}es de banco de dados onde \'{e} necess\'{a}rio adotar uma nova linguagem de defini\c{c}\~{a}o para um ambiente espec\'{i}fico. De forma que automatizar esta solu\c{c}\~{a}o requer o uso de um \textit{parser} o qual ser\'{a} respons\'{a}vel por identificar os inputs de entrada para efetuar o mapeamento correto para a sa\'{i}da desejada no formato mais atual.
+
+Outro tipo de \textit{software} que manipula a gram\'{a}tica de uma linguagem,s\~{a}o os que realizam \textit{refactoring}. Dentre diversas caracter\'{i}sitas explicadas por Martin Fowler at.al.~\cite{martinFowlerRafactoring}, fica claro que este trabalho contribui com o intu\'{\i}to de identificar constru\c{c}\~{o}es obsoletas e oportunidades para alguma evolu\c{c}\~{a}o e n\~{a}o efetuando \textit{refactoring} de modo autom\'{a}tico mas sim sugerindo ao desenvolvedor escolher pela evolu\c{c}\~{a}o ou n\~{a}o.
+
+A evolu\c{c}\~{a}o do c\'{o}digo para um mais atual \'{e} mais que procurar por \textit{bad smell} onde s\~{a}o ocorr\^{e}ncias pontuais j\'{a} estabelecidas. A oportunidade de evoluir para uma vers\~{a}o mais atual \'{e} muito mais complexa que meramente melhorar o desgin do \textit{software} e por isso essa sugest\~{a}o deve ser apreciada pelo desenvolvedor com cuidado pois pode ser um quest\~{a}o mais profunda. %depender de SO, versao de compilador etc.
+
+Mesmo sem a implementa\c{c}\~{a}o de \textit{refactoring} uma contribui\c{c}\~{a}o que este trabalho faz \'{e} a identifi\c{c}\~{a}o a capacidade de encontrar c\'{o}digo duplicado como por exemplo ao identificar \texttt{catch} repetidos, ou at\'{e} mesmo melhorar o desempenho com no caso da da utilizaç\~{a}o do \texttt{switch-string} ao inv\'{e}s do \texttt{if-string} pois oracle afirma que o desempenho \'{e} melhor de a implementa\c{c}\~{a}o otimizada do \texttt{switch-string} na documenta\c{c}\~{a}o~\cite{docSwitch}.
+
+
+
+
+%Pode-se compreender este analisador como um \emph{grammarware}~\cite{} pois \'{e} um software 
+%que depende fortemente de uma gram\'{a}tica para seu funcionamento--- neste caso a gram\'{a}tica da linguagem Java. 
+%%\emph{Grammawares} demandam um conhecimento essencial das  gram\'{a}ticas que manipulam. 
+%%Como exemplos de arquiteturas que possuem tal conhecimento tem-se os programas de convers\~{a}o de dados, processadores de \texttt{XML} e os que efetuam \textit{parses}.
+%De acordo com~\cite{}, alguns cen\'{a}rios favorecem o desenvolvimento de softwares alinhados com a abordagem 
+%\emph{grammarware}, com destaque \`{a}s aplicaç\~{o}es que necessitam importar perfis de usu\'{a}rios para promover a transiç\~{a}o da vers\~{a}o 
+%antiga para uma vers\~{a}o nova {\color{red}[rba] n\~{a}o consegui entender bem essa senten\c ca}. 
+%Esta transiç\~{a}o deve ser robusta e provavelmente necessitar\'{a} de adptaç\~{a}o dever\'{a} passar 
+%por um parser para que as partes que necessitem de adaptaç\~{a}o possam ser identificadas.
+%
+%Um outro cen\'{a}rio real \'{e} o desenvolvimento de aplicaç\~{o}es de banco de dados onde se faz necess\'{a}rio adotar 
+%uma nova linguagem de definiç\~{a}o para um ambiente espec\'{i}fico. De forma que automatizar esta soluç\~{a}o requer o uso de um 
+%parser que ser\'{a} respons\'{a}vel por reconhecer as entradas necess\'{a}rias para efetuar o mapeamento 
+%para a \emph{linguagem} destino.
 
 
 %% Um \textit{software} que efeta manipula\c{c}\~{a}o da gram\'{a}tica de uma linguagem, como no caso deste trabalho de conclus\~{a}o fica evidente o aparecimento da quest\~{a}o sobre \textit{refactoring} e dentre diversas caracter\'{i}sitas explicadas por Martin Fowler~\cite{martinFowlerRafactoring}, fica claro que este trabalho contribui com o intu\'{\i}to de identificar constru\c{c}\~{o}es obsoletas n\~{a}o efetuando \textit{refactoring} autom\'{a}tico mas fazendo  com que o desenvolvedor opte pela evolu\c{c}\~{a}o ou n\~{a}o. Pois a evolu\c{c}\~{a}o do c\'{o}digo por um mais atual \'{e} uma das oportunidades de melhorar o desgin do \textit{software} conforme aborda por Martin Fowler~\cite{martinFowlerRafactoring} em seu livro.
@@ -256,36 +274,116 @@ para a \emph{linguagem} destino.
 %Reconhecer uma frase acarreta em duas coisas, distingui-la de outras construç\~{o}es e identificar os elementos e as subestruturas que comp\~{o}em esta frase. Por exemplo se uma frase for reconhecida como um \textit{assignment}, pode-se identificar as vari\'{a}veis a esquerda do operador \texttt{=} e uma express\~{a}o que \'{e} a subestrutura a direita. Este ato de reconhecer uma frase \'{e} denominado \textit{Parse}.
 
 
-\section{Parse}
+%\section{Parse}
 
-Confome discutido anteriormente, o parser de programas escritos em uma linguagem de program\c c\~{a}o 
-\'{e} um dos componentes necess\'{a}rios para a constru\c c\~{a}o de ferramentas de an\'{a}lise 
-est\'{a}tica. Vale ressaltar que o analisador est\'{a}tico constru\'{i}do neste trabalho reusou uma infraestrutura 
-da plataforma Eclipse~\cite{} que oferece um parser atualizado da linguagem Java. Por outro lado, como 
-se trata de um tipo de componente central para solu\c c\~{o}es baseadas em gram\'{a}tica, esta se\c c\~{a}o 
-revisa brevemente quatro padr\~{o}es adotados para a implementa\c c\~{a}o de parsers~\cite{Parr:2009:LIP:1823613}. S\~{a}o eles: 
+%Confome discutido anteriormente, o parser de programas escritos em uma linguagem de program\c c\~{a}o 
+%\'{e} um dos componentes necess\'{a}rios para a constru\c c\~{a}o de ferramentas de an\'{a}lise 
+%est\'{a}tica. Vale ressaltar que o analisador est\'{a}tico constru\'{i}do neste trabalho reusou uma infraestrutura 
+%da plataforma Eclipse~\cite{} que oferece um parser atualizado da linguagem Java. Por outro lado, como 
+%se trata de um tipo de componente central para solu\c c\~{o}es baseadas em gram\'{a}tica, esta se\c c\~{a}o 
+%revisa brevemente quatro padr\~{o}es adotados para a implementa\c c\~{a}o de parsers~\cite{Parr:2009:LIP:1823613}. S\~{a}o eles: 
+%
+%{\color{red}Por favor, revisem essa se\c c\~{a}o.}
 
-{\color{red}Por favor, revisem essa se\c c\~{a}o.}
+\section{Representa\c{c}\~{a}o Intermedi\'{a}ria {\color{red}Se\c{c}\~{a}o Revisada -Parser-.}}\label{sec:IR}
 
+Conforme introduzido anteriormente na Figura:~\ref{fig:stagesAnalyzer}, \'{e} gerar uma representa\c{c}\~{a}o intermedi\'{a}ria da linguagem Java. Para efetuar essa tarefa é necessário antes de tudo reconhecer \texttt{frases} entretanto para criar um reconhecimento de \texttt{frases} faz-se necessário duas etapas. Distinguir as contruções que compoem a linguagem e identificar os elementos e subestruturas das \texttt{frases}. Terrance Parr em ~\cite{Parr:2009:LIP:1823613}, explica que o ato de reconhecer \texttt{frase} em computa\c{c}\~{a}o é denominado \textit{parser}.
+
+A estrutura do \textit{parser} \'{e} composta de maneira similar as senten\c{c}as da l\'{\i}ngua portuguesa, identificando verbos, nomes, substantivos, etc... De modo similar \'{e} necess\'{a}rio fazer a mesma identifica\c{c}\~{a}o em um linguagem de programa\c{c}\~{a}o, reconhecendo operadores, vari\'{a}veis e outros s\'{\i}mbolos. E a combina\c{c}\~{a}o dos s\'{i}mbolos \'{e} denominado \texttt{tokens}.
+
+A representa\c{c}\~{a}o do \textit{parser} \'{e} feita atrav\'{e}s de uma árvore onde Tokens ficam nas folhas e estas  compoem as frases. \'{E} utilizando uma \'{a}rvore para representar porque com esta \'{e} poss\'{\i}vel extair toda informa\c{c}\~{a}o que seja necess\'{a}ria da linguagem. A Figura:~\ref{fig:treeParse} exibe com mais detalhes o parser sendo representado por uma \'{a}rvore.
+
+\begin{figure}[h]
+	\center
+	\includegraphics[scale=0.9]{Imagens/treeParser}
+	\label{fig:treeParse}
+	\caption{Representa\c{c}\~{a}o da uma frase.}
+\end{figure}
+
+
+Existem muitos padr\~{o}es de parses pois algumas linguagens s\~{a}o mais complexas que outras. Tendo em visata o desafio que \'{e} trabalhar e analisar uma linguagem de programa\c{c}\~{a}o, alguns padr\~{o}es adotados para este contexto facilitam esta tarefa e com isso este trabalho abordar\'{a} os quatro conceitos  mais importantes segundo Terence Parr em \cite{Parr:2009:LIP:1823613} para prover o parser de acordo com a necessidade.
 \begin{itemize}
 	\item \textbf{Mapping Grammars to Recursive-Descent Recognizers}\\
-
-	Sua proposta \'{e} traduzir uma gram\'{a}tica para uma implementa\c c\~{a}o que usa recurs\~{a}o descendente 
-para reconhecer frases e sentenças em uma linguagem especifica. Este padr\~{a}o identifica o n\'{u}cleo do fluxo de controle 
-para qualquer recurs\~{a}o descendente e \'{e} utilizado nos 3 padr\~{o}es seguintes. Para construir um reconhecedor l\'{e}xico ou \textit{parsers} 
-manualmente o melhor ponto de in\'{i}cio \'{e} a gram\'{a}tica, com isso este padr\~{a}o fornece uma maneira simples de construir reconhecedores diretamente de sua gram\'{a}tica.
+	Sua proposta \'{e} traduzir uma gram\'{a}tica para uma recurs\~{a}o descendente para reconhecer frases e sentenças em uma linguagem especificada por uma gram\'{a}tica. Este padr\~{a}o identifica o n\'{u}cleo do fluxo de controle para qualquer recurs\~{a}o descendente e \'{e} utilizado nos 3 padr\~{o}es seguintes. 
+	Para construir um reconhecedor l\'{e}xico ou \textit{parsers} manualmente o melhor ponto de in\'{i}cio \'{e} a gram\'{a}tica, com isso este padr\~{a}o fornece uma maneira simples de construir reconhecedores diretamente de sua gram\'{a}tica.
 	
 	\item \textbf{LL(1) Recursive-Descent Lexer}\\
-
-	O objetivo deste padr\~{a}o \'{e} emitir uma sequência de s\'{i}mbolos. Cada s\'{i}mbolo tem dois atributos prim\'{a}rios: 
-um tipo de \textit{token} (s\'{i}mbolo da categoria) e o texto associado por exemplo 
+	O objetivo deste padr\~{a}o \'{e} para emitir uma sequência de s\'{i}mbolos. Cada s\'{i}mbolo tem dois atributos prim\'{a}rios: um tipo de \textit{token}(s\'{i}mbolo da categoria) e o texto associado por exemplo 
 	no português, temos categorias como verbos e substantivos, bem como s\'{i}mbolos de pontuaç\~{a}o, como v\'{i}rgulas e pontos. Todas as palavras dentro de uma determinada categoria s\~{a}o do mesmo tipo de \textit{token}, embora o texto associado seja diferente. O tipo de nome do \textit{token} representa o categoria identificador. Ent\~{a}o precisamos tipos de \textit{token} para o vocabul\'{a}rio \textit{string} fixa s\'{i}mbolos como tamb\'{e}m lidar com espaços em branco e coment\'{a}rios.
 	\item \textbf{LL(1) Recursive-Descent Parser}\\
 	Esse \'{e} o mais conhecido padr\~{a}o de an\'{a}lise descendente recursiva. Ele s\'{o} precisa	a olhar para o s\'{i}mbolo de entrada atual para tomar decis\~{o}es de an\'{a}lise. Para cada regra de gram\'{a}tica, existe um m\'{e}todo de an\'{a}lise no analisador. Este padr\~{a}o analisa a estrutura sint\'{a}tica da sequência sinal de uma frase usando um \'{u}nico \textit{token} \textit{lookahead}. Este analisador pertence à LL(1) classe do analisador de cima para baixo, em especial, porque usa um \'{u}nico sinal de verificaç\~{a}o à frente (da\'{i} o "1" no nome). É o principal mecanismo de todos os padr\~{o}es de an\'{a}lise subsequentes. Este padr\~{a}o mostra como implementar as decis\~{o}es de an\'{a}lise que utilizam um s\'{i}mbolo \'{u}nico da vis\~{a}o antecipada. É a forma mais fraca de descendente recursivo parser, mas o mais f\'{a}cil de compreender e aplicar.
 	\item \textbf{LL(k) Recursive-Descent Parser}\\
 	Este padr\~{a}o utiliza a o modo \textit{top-down} para percorrer um \'{a}rvore sem\^{a}ntica com o aux\'{i}lio de express\~{o}es booleanas que ajudam na tomada de decis\~{a}o e estas express\~{o}es s\~{a}o conhecidas como predicados sem\^{a}nticos.
-	
 \end{itemize}
 
-\input{capitulos/AnaliseEstatica}
-%\input{capitulos/AnaliseLexica}
+
+O principal motivo da representa\c{c}\~{a}o intermedi\'{a}ria ser uma \'{a}rvore \'{e} por possuir uma estrutura regular e com os n\'{o}s preservam a hierarquia, devido essa regularidade \'{e} poss\'{i}vel automatizar esta tarefa utilizando ferramentas como no caso deste trabalho a biblioteca Eclipse JDT a qual possui classes especializadas em gerar e analisar as representa\c{c}\~{o}es intermedi\'{a}rias dos c\'{o}digo fonte da linguagem Java.
+
+
+
+
+\section{Refactoring}\label{sec:refactoring}
+
+Por defini\c{c}\~{a}o o refactoring \'{e} mudan\c{c}a interna do software sem alterar seu comportamento tornando assim seu entendimento mais claro. Visando evitar que sejam perdidas diversa horas para identificar poss\'{\i}veis oportunidades de classes onde possam ser evolu\'{\i}das, este trabalho de conclus\~{a}o identifica trechos de c\'{o}digo dentro das classes que pode ser evolu\'{i}dos.
+
+Muitas modifica\c{c}\~{o}es podem ser feitas em um software mas segundo M.Fowler at al~\cite{martinFowlerRafactoring} somente \'{e} considerado refactoring mudan\c{c}as que facilitam o entendimento do software. Contrastando esta vis\~{a}o existem mudanças com objetivo de melhorar o desempenho do software onde somente s\~{a}o alterada as estruturas internas permanecendo inalterado o comportamento do software. Entretanto a melhoria na performance do software geralmente eleva o grau de dificuldade para sua compreens\~{a}o, o que faz com que algumas dessas evolu\c{c}es\~{o} visando desempenho n\~{a}o sejam caracterizadas como refactoring dado a defini\c{c}\~{a}o.
+
+Dentre refatorar para facilitar o entendimento, para tornar o programa mais r\'{a}pido, para encontrar bugs e para melhorar/atualizar o design, motivos apresentados por M.Fowler at. al.~\cite{martinFowlerRafactoring}, este trabalho concentrou-se no \'{u}ltimo motivo para identificar poss\'{\i}veis casos onde o design do software pode ser evolu\'{\i}do por substituir funcionalidades de vers\~{o}es anteriores da linguagem Java.
+
+Um software que n\~{a}o \'{e} refatorado tem o seu desgin deteriorado, o que leva a dificultar o entendimento do c\'{o}digo. Um design ultrapassado tem mais c\'{o}digo que o necess\'{a}rio para realizar a mesma tarefa. O que leva a um aspecto crucial para a melhoria, que \'{e} código duplicado. Vale ressaltar que reduzir a quantidade de c\'{o}digo n\'{a}o impl\'{i}ca necessariamente na melhora do desempenho do software mas sim em ter um design mais atual.
+
+O Listing:~\ref{lst:fp}, exemplifica de forma emp\'{i}rica um {\it filter} em um {\it collection} onde ocorre uma redu\c{c}\~{a}o significativa de c\'{o}digo al\'{e}m de um design mais atual por utilizar express\~{o}es lambda que foram adicionadas em Java 8. Vale destacandar que o Listing:~\ref{lst:fp} continua com mesmo comportamento após o refactoring, desta forma nenhum usuário ou desenvolvedor pode alegar que o software foi modificado.
+
+
+\begin{lstlisting}[caption={The \textsc{Exmplo de Filter Pattern}}\label{lst:fp},language=Java] 
+//...
+for(T e: collection) {
+   if(e.pred(args)) {
+      otherCollection.add(e);
+   }
+}
+
+//might be replaced by:
+collection.stream().
+	filter(e->pred(args).
+		forEach(e -> otherCollection.add(e));
+\end{lstlisting}
+
+
+Conforme explica M.Fowler at. al.~\cite{martinFowlerRafactoring} algumas vezes n\~{a}o se deve ser refatorar o c\'{o}digo. Um desses casos \'{e} quando existir a necessidade de reescrever todo o c\'{o}digo, um outro caso \'{e} a necessidade de manter um  c\'{o}digo de f\'{a}cil entendimento para os programadores iniciantes. O que \'{e} uma decis\~{a}o dif\'{i}cil, no caso do Listing:~\ref{lst:fp} \'{e} poss\'{\i}vel fazer uma evolu\c{c}\~{a}o com a parte funcional de Java 8 entretanto alguns desenvolvedores podem n\~{a}o possuir  conhecimento adequado da parte funcional e com isso \'{e} recomendado que n\~{a}o seja evolu\'{\i}do o c\'{o}digo.
+
+
+Tendo em vista que aplicar um \textit{refactoring} demanda tempo isto torna uma tarefa custosa para empresas, este fator \'{e} determinante para que programadores n\~{a}o refatorem seu c\'{o}digos em muitos casos. Com esse cen\'{a}rio \'{e} imprecind\'{i}vel o uso de ferramentas refatorem ou auxiliem nesta tarefa. Auxiliando nesta tarefa este trabalho identifica possibilidades de refatora\c{c}\~{a}o, ao utilizarem estas ferramentas torna mais acessível ao programador e a emrpesa refatorar pois o trabalho é direcionado fazendo com que tempo seja poupado.
+
+
+
+\section{Análise estática}\label{sec:as}
+
+Em computa\c{c}\~{a}o an\'{a}lise est\'{a}tica \'{e} a refer\^{e}ncia a qualquer processamento realizado em c\'{o}digo fonte sem a necessidade de execut\'{a}-lo, com isto a an\'{a}lise est\'{a}tica torna-se uma poderosa t\'{e}cnica por permitir r\'{a}pidas considera\c{c}\~{o}es por possibilitar uma larga explora\c{c}\~{a}o em um projeto podendo evitar erros triviais e simular alguns cen\~{a}rios para tal an\'{a}lise sem a necessidade do projeto ser executado.
+
+Ferramentas que auxiliem a an\'{a}lise est\'{a}tica tem grande chance de ser um poderoso aux\'{i}lio no desenvolvimento do software tendo em vista que pode reduzir a quantidade de erros e diminuir a quantidade de \texttt{refactoring} o qual tem um custo elevado para os projetos de software.
+
+\'{E} nesse contexto que este trabalho faz sua contribui\c{c}\~{a}o por utilizar a an\'{a}lise est\'{a}tica para verificar n\~{a}o possibilidade de falhas ou \textit{bad smell}, mas sim de identificar chances reais de evoluir para \'{u}ltimas \textit{features} da linguagem Java sem interferir no comportamento interno do programa conforme preconiza M.Fowler at. al.~\cite{martinFowlerRafactoring}.
+
+A linguagem Java proporciana duas maneiras de realizar an\'{a}lise est\'{a}tica, a primeira \'{e} através c\'{o}digo fonte, \textit{.java} e a segunda atrav\'{e}s do \textit{bytecode}, \textit{.class}. Este trabalho foca em realizar an\'{a}lise no c\'{o}digo fonte, entre tanto nada impede que o trabalho seja realizado da segunda maneira. Existem programas renomados que realizam tal an\'{a}lise utilizando os \textit{bytecodes} e um destes programas \'{e} o FindBugs~\cite{FindBugs}.
+
+%Análise estática é uma técnica automática no processo de verificação de software realizado por algumas ferramentas sem a necessidade de que o software tenha sido executado. Para Java exitem duas possibilidades de realizar tal análise na qual uma das técnicas realiza a primeira \'{e} aanálise no código fonte e a outra a realiza no {\it bytecode} do programa segundo N. Ayewah at. al. ~\cite{Ayewah:2008:USA:1439186.1439221}. Neste trabalho ser utilizada a pesquisa baseada no código fonte sem que tenha sido executado devido a flexibilidade e infraestrutura consolidada encontrada no Eclipse AST.
+
+Para obter sucesso atrav\'{e}s nas an\'{a}lises realizadas, \'{e} necess\'{a}rio determinar padr\~{o}es para encontrar caracter\'{i}sticas que dejesam ser evolu\'{i}das para a \'{u}ltima vers\~{a}o da linguagem Java. Estes padr\~{o}es s\~{a}o estabelecidos em uma estrutura que seja capaz de pesquisar nos n\'{o}s da \'{a}rvore da representa\c{c}\~{a}o intermedi\'{a}ria para extrair as informa\c{c}\~{o}es pertinentes.
+
+%Um fato importante é que tal análise somente obt\'{e}m sucesso se forem determinados padr\~{o}es ou comportamento para que sejam pesquisados no software. Neste projeto o tais comportamentos são determinados por {\it visitors} conforme explica Gamma et. al. ~\cite{Gamma:1995} devido a toda infraestrutura a qual as ferramentas do eclipse fornecem facilidade para que seja realizada uma análise baseada em padrões.
+
+A t\'{e}cnica utilizada para pesquisar nos n\'{o}s das \'{a}rvores foi utilizar o padr\~{a}o de projeto \textit{Visitor} proposto por  Gamma et. al.~\cite{Gamma:1995}, pois este possibilitar que seja realizada uma opera\c{c}\~{a}o sobre todos os elementos de uma estrutura,  neste caso a opera\c{c}\~{a}o  \'{e} a pesquisa e a estrutura a representa\c{c}\~{a}o intermedi\'{a}ria.
+
+
+A verifica\c{c}\~{a}o de software possibilita a detec\c{c}\~{a}o de falhas de maneira precoce durante as fases de desenvolvimento entretanto este n\~{a}o \'{e} o objetivo deste trabalho pois existem ferramentas consolidadas que realizam tal an\'{a}lise de maneira excepcional. Aqui o objetivo principal \'{e} alertar ao desenvolvedor a possibilidade de usar o que h\'{a} de mais recente na linguagem Java.
+
+%Devido a este trabalho de verificação de software é possível detectar falhas de forma precoce nas fases de  desenvolvimento evitando que bugs e falhas sejam introduzidas e até mesmo postergados e isso é uma vantagem existe a economia de tempo com falhas simples, {\it  feedback} rápido para alertar a equipe devido as falhas ocorridas e pode-se ir além de simples casos de testes podendo aprimorar estes para que  fiquem mais rigorosos pois a partir do momento que o analisador encontrar uma falha é possível criar um teste de caso para que esta seja testada aumentando a confiabilidade do software.
+
+%Existe limita\c{c}\~{a}o quanto a capacidade dos analisadores est\'{a}ticos como em \textit{software} desenvolvidos sem qualquer uso de padrões ou sem arquiteturas consolidadas, criado por equipes composta de desenvolvedores inexperientes o qual a ferramente poderá apontar erros que são falsos positivos que são erros detectados que não existem pois o analisador pesquisa por padrões e estruturas consolidadas. Tais problemas são desagradáveis porém não oferecem riscos ao desenvolvimento, podem afetar outras áreas como a de {\it refactoring} a qual poderá encontrar dificuldade em melhorar um código que não segue padrão. Vale ainda ressaltar que a penalidade de encontrar um falso positivo é a perda de tempo em fazer uma inspeção no código para comprovar se é ou não uma falha. Também há a possibilidade de falsos negativos o que cabe ao programador verificar para evitar que tais limitação do analisador não se propague durante o ciclo de desenvolvimento.
+
+
+%A capacidade dos analisadores est\'{a}ticos 
+
+
+%\input{capitulos/AnaliseLexica}%\input{capitulos/AnaliseLexica}
