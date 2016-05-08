@@ -112,7 +112,7 @@ presentes na especifica\c c\~{a} Java, tais como
 \texttt{java.net}, \texttt{java.awt} e \texttt{java.applet}; 
 onde as tr\^{e}s \'{u}ltimas favoreciam a constru\c c\~{a}o de 
 solu\c c\~{o}es envolvendo mobilidade de c\'{o}digo:
-um componente (um applet Java) poderia ser transferido de um 
+um componente (um \textit{applet} Java) poderia ser transferido de um 
 servidor para um cliente e, dessa forma, 
 ser executado em um navegador Web compat\'{i}vel. As caracter\'{i}sticas de 
 independ\^{e}ncia de plataforma e a aproxima\c c\~{a}o com a Web fez 
@@ -120,7 +120,7 @@ com que a linguagem Java se tornasse bastante popular, passando a ser
 usada em outros dom\'{i}nios (como o desenvolvimento de software 
 para cart\~{o}es inteligentes, para jogos eletr\^{o}nicos e para ambientes corporativos) e a ter 
 uma evolu\c c\~{a}o natural com a melhoria de desempenho da 
-JVM e a incorpora\c c\~{a}o de um conjunto significativo de 
+\acs{JVM} e a incorpora\c c\~{a}o de um conjunto significativo de 
 bibliotecas. 
 
 Apesar de toda essa evolu\c c\~{a}o, que 
@@ -270,13 +270,13 @@ O analisador desenvolvido neste trabalho \'{e} considerado um {\it grammarware} 
 
 Paul Klint at.al.~\cite{klint2005toward} vai mais al\'{e}m para caracterizar um {\it grammarware} como sendo um software comum, afirmando que este deve  adotar t\'{e}cnicas contempor\^{a}neas a engenharia de software tendo em vista que tais t\'{e}cnicas s\~{a}o utilizadas diariamente no desenvolvimento n\~{a}o sendo nenhuma novidade. A contemporaneidade deste analisador da-se por utilizar t\'{e}cnicas para inje\c{c}\~{a}o de depend\^{e}ncia, controle de dep\^{e}ndencia e  reposit\'{o}rio para manter gerenciamento do software.
 
-Gram\'{a}ticas e software dependentes de gram\'{a}tica n\~{a}o s\~{a}o inven\c{c}\~{o}es recentes e este conceito faz-se presente em \'{a}reas da computa\c{c}\~{a}o como engenharia reversa, desnvolvimento orientado a aspectos, tranforma\c{c}\~{o}es de programas e metamodelagem.
+Gram\'{a}ticas e software dependentes de gram\'{a}tica n\~{a}o s\~{a}o inven\c{c}\~{o}es recentes e este conceito faz-se presente em \'{a}reas da computa\c{c}\~{a}o como engenharia reversa, desenvolvimento orientado a aspectos, tranforma\c{c}\~{o}es de programas e metamodelagem.
 
 Alguns cen\'{a}rios favorecem o desenvolvimento de softwares {\it grammarware}, onde dentre os diversos cen\'{a}rios pode-se destacar uma aplica\c{c}\~{a}o que necessite importar perfis de usu\'{a}rios para promover a transi\c{c}\~{a}o da vers\~{a}o antiga para uma vers\~{a}o atual. Esta transi\c{c}\~{a}o deve ser robusta e provavelmente necessitar\'{a} de adpta\c{c}\~{a}o o que em muitos casos necessita de um \textit{parser} para partes que necessitam ser adaptadas.
 
 Um outro cen\'{a}rio real \'{e} desenvolvimento de aplica\c{c}\~{o}es de banco de dados onde \'{e} necess\'{a}rio adotar uma nova linguagem de defini\c{c}\~{a}o para um ambiente espec\'{i}fico. De forma que automatizar esta solu\c{c}\~{a}o requer o uso de um \textit{parser} o qual ser\'{a} respons\'{a}vel por identificar os inputs de entrada para efetuar o mapeamento correto para a sa\'{i}da desejada no formato mais atual.
 
-Outro tipo de \textit{software} que manipula a gram\'{a}tica de uma linguagem,s\~{a}o os que realizam \textit{refactoring}. Dentre diversas caracter\'{i}sitas explicadas por Martin Fowler at.al.~\cite{martinFowlerRafactoring}, fica claro que este trabalho contribui com o intu\'{\i}to de identificar constru\c{c}\~{o}es obsoletas e oportunidades para alguma evolu\c{c}\~{a}o e n\~{a}o efetuando \textit{refactoring} de modo autom\'{a}tico mas sim sugerindo ao desenvolvedor escolher pela evolu\c{c}\~{a}o ou n\~{a}o.
+Outro tipo de \textit{software} que manipula a gram\'{a}tica de uma linguagem, s\~{a}o os que realizam \textit{refactoring}. Dentre diversas caracter\'{i}sitas explicadas por Martin Fowler at.al.~\cite{martinFowlerRafactoring}, fica claro que este trabalho contribui com o intu\'{\i}to de identificar constru\c{c}\~{o}es obsoletas e oportunidades para alguma evolu\c{c}\~{a}o e n\~{a}o efetuando \textit{refactoring} de modo autom\'{a}tico mas sim sugerindo ao desenvolvedor escolher pela evolu\c{c}\~{a}o ou n\~{a}o.
 
 A evolu\c{c}\~{a}o do c\'{o}digo para um mais atual \'{e} mais que procurar por \textit{bad smell} onde s\~{a}o ocorr\^{e}ncias pontuais j\'{a} estabelecidas. A oportunidade de evoluir para uma vers\~{a}o mais atual \'{e} muito mais complexa que meramente melhorar o desgin do \textit{software} e por isso essa sugest\~{a}o deve ser apreciada pelo desenvolvedor com cuidado pois pode ser um quest\~{a}o mais profunda. %depender de SO, versao de compilador etc.
 
@@ -354,7 +354,7 @@ Existem muitos padr\~{o}es de \textit{parses} pois algumas linguagens s\~{a}o ma
 	Para construir um reconhecedor l\'{e}xico ou \textit{parsers} manualmente o melhor ponto de in\'{i}cio \'{e} a gram\'{a}tica, com isso este padr\~{a}o fornece uma maneira simples de construir reconhecedores diretamente de sua gram\'{a}tica.
 	
 	\item \textbf{LL(1) Recursive-Descent Lexer}\\
-	O objetivo deste padr\~{a}o \'{e} para emitir uma sequência de s\'{i}mbolos. Cada s\'{i}mbolo tem dois atributos prim\'{a}rios: um tipo de \textit{token}(s\'{i}mbolo da categoria) e o texto associado por exemplo 
+	O objetivo deste padr\~{a}o \'{e} para emitir uma sequência de s\'{i}mbolos. Cada s\'{i}mbolo tem dois atributos prim\'{a}rios: um tipo de \textit{token} (s\'{i}mbolo da categoria) e o texto associado por exemplo 
 	no português, temos categorias como verbos e substantivos, bem como s\'{i}mbolos de pontua\c{c}\~{a}o, como v\'{i}rgulas e pontos. Todas as palavras dentro de uma determinada categoria s\~{a}o do mesmo tipo de \textit{token}, embora o texto associado seja diferente. O tipo de nome do \textit{token} representa o categoria identificador. Ent\~{a}o precisamos tipos de \textit{token} para o vocabul\'{a}rio \textit{string} fixa s\'{i}mbolos como tamb\'{e}m lidar com espa\c{c}os em branco e coment\'{a}rios.
 	\item \textbf{LL(1) Recursive-Descent Parser}\\
 	Esse \'{e} o mais conhecido padr\~{a}o de an\'{a}lise descendente recursiva. Ele s\'{o} precisa	a olhar para o s\'{i}mbolo de entrada atual para tomar decis\~{o}es de an\'{a}lise. Para cada regra de gram\'{a}tica, existe um m\'{e}todo de an\'{a}lise no analisador. Este padr\~{a}o analisa a estrutura sint\'{a}tica da sequência sinal de uma frase usando um \'{u}nico \textit{token} \textit{lookahead}. Este analisador pertence à LL(1) classe do analisador de cima para baixo, em especial, porque usa um \'{u}nico sinal de verifica\c{c}\~{a}o à frente (da\'{i} o "1" no nome). É o principal mecanismo de todos os padr\~{o}es de an\'{a}lise subsequentes. Este padr\~{a}o mostra como implementar as decis\~{o}es de an\'{a}lise que utilizam um s\'{i}mbolo \'{u}nico da vis\~{a}o antecipada. É a forma mais fraca de descendente recursivo parser, mas o mais f\'{a}cil de compreender e aplicar.
@@ -396,7 +396,7 @@ collection.stream().
 Conforme explica M.Fowler at. al.~\cite{martinFowlerRafactoring} algumas vezes n\~{a}o se deve ser refatorar o c\'{o}digo. Um desses casos \'{e} quando existir a necessidade de reescrever todo o c\'{o}digo, um outro caso \'{e} a necessidade de manter um  c\'{o}digo de f\'{a}cil entendimento para os programadores iniciantes. O que \'{e} uma decis\~{a}o dif\'{i}cil, no caso do Listing:~\ref{lst:fp} \'{e} poss\'{\i}vel fazer uma evolu\c{c}\~{a}o com a parte funcional de Java 8 entretanto alguns desenvolvedores podem n\~{a}o possuir  conhecimento adequado da parte funcional e com isso \'{e} recomendado que n\~{a}o seja evolu\'{\i}do o c\'{o}digo.
 
 
-Tendo em vista que aplicar um \textit{refactoring} demanda tempo isto torna uma tarefa custosa para empresas, este fator \'{e} determinante para que programadores n\~{a}o refatorem seu c\'{o}digos em muitos casos. Com esse cen\'{a}rio \'{e} imprecind\'{i}vel o uso de ferramentas refatorem ou auxiliem nesta tarefa. Auxiliando nesta tarefa este trabalho identifica possibilidades de refatora\c{c}\~{a}o, ao utilizarem estas ferramentas torna mais acessível ao programador e a emrpesa refatorar pois o trabalho é direcionado fazendo com que tempo seja poupado.
+Tendo em vista que aplicar um \textit{refactoring} demanda tempo isto torna uma tarefa custosa para empresas, este fator \'{e} determinante para que programadores n\~{a}o refatorem seu c\'{o}digos em muitos casos. Com esse cen\'{a}rio \'{e} imprecind\'{i}vel o uso de ferramentas que refatorem ou auxiliem nesta tarefa. Auxiliando nesta tarefa este trabalho identifica possibilidades de refatora\c{c}\~{a}o, ao utilizarem estas ferramentas torna mais acessível ao programador e a emrpesa refatorar pois o trabalho é direcionado fazendo com que tempo seja poupado.
 
 
 

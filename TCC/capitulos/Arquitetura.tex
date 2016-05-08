@@ -38,7 +38,7 @@ fornece um conjunto de ferramentas que auxiliam na constru\c c\~{a}o
 de ferramentas que permitem processar c\'{o}digo fonte escrito 
 na linguagem de programa\c c\~{a}o Java. 
 A plataforma Eclipse JDT é composta por 4 componentes principais: 
-APT, Core, Debug e UI. Neste projeto a 
+APT, \textit{Core}, \textit{Debug} e UI. Neste projeto a 
 plataforma foi usada essencialmente através do \textit{JDT Core}, 
 que dispõe de uma representa\c c\~{a}o Java 
 para a navega\c c\~{a}o 
@@ -47,7 +47,7 @@ sintática~\acs{AST} gerada a partir do c\'{o}digo fonte, onde os elementos
 da representa\c c\~{a}o correspondem \`{a}s constru\c c\~{o}es 
 sint\'{a}ticas da linguagem (como pacotes, classes, interfaces métodos e atributos). 
 
-A~\acs{AST} provida pelo JDT é composta por 122 classes, 
+A~\acs{AST} provida pelo \acs{JDT} é composta por 122 classes, 
 como por exemplo existem 22 classe para representar senten\c cas  
 como \textit{IF-Than-Else, Switch, While, BreakStatement} 
 entre outras. Exitem cinco classes que trabalham exclusivamente com métodos referenciados 
@@ -98,7 +98,7 @@ que contém informa\c c\~{o}es sobre
 os projetos a serem analisados, como nome do projeto, 
 caminho absoluto para uma pasta no sistema 
 de arquivos contendo o c\'{o}digo fonte do projeto e a quantidade de linhas de código previamente 
-computadas (conforme ilustrado na Figura:~\ref{fig:InputArquitetura}). 
+computadas (conforme ilustrado na Figura:~\ref{fig:Arquitetura}). 
 As informações contidas no arquivo \acs{CSV} s\~{a}o processadas 
 por um conjunto de classes utilitárias que percorrem os diretórios 
 de um determinado projeto e seleciona todos os arquivos fonte da linguagem Java. 
@@ -342,7 +342,7 @@ filtrar elementos presentes na cole\c c\~{a}o. Tal informa\c c\~{a}o \'{e} \'{u}
 para estimar oportunidades de uso de express\~{o}es lambda. 
 
 \item \texttt{ImportDeclaration:} Coleta informa\c c\~{o}es relacionadas \`{a}
-importa\c c\~{a}o de bibliotecas, sendo ]\'{u}til para estimar a ado\c c\~{a}o 
+importa\c c\~{a}o de bibliotecas, sendo \'{u}til para estimar a ado\c c\~{a}o 
 de bibliotecas voltadas para programa\c c\~{a}o concorrente ou integra\c c\~{a}o 
 com linguagens de scripting, por exemplo. 
 
@@ -448,7 +448,7 @@ geralmente de acordo com arquivo de configura\c c\~{o}es.
 O mecanismo de inje\c c\~{a}o de depend\^{e}ncia foi incorporado na arquitetura 
 com o uso do \textit{framework} Spring~\cite{SPRING_REF}, o que n\~{a}o causou 
 nenhum impacto significativo na solu\c c\~{a}o inicialmente proposta e que n\~{a}o 
-fazia uso de tal mecanismo--- os \emph{visitors} eram instanciados de maneira 
+fazia uso de tal mecanismo os \emph{visitors} eram instanciados de maneira 
 \emph{program\'{a}tica}. O uso do mecanismo de inje\c c\~{a}o de depend\^{e}ncia 
 serviu para flexibilizar n\~{a}o apenas a incorpora\c c\~{a}o de novos \emph{visitors}, 
 mas tamb\'{e}m para definir, de forma mais flex\'{i}vel, a estrat\'{e}gia de exporta\c c\~{a}o dos dados 
@@ -456,7 +456,7 @@ coletados. Gra\c cas ao mecanismo de inje\c c\~{a}o de depend\^{e}ncia, o desenv
 concentrar seu esforço na criação de \textit{visitors}, fazendo como que estes implementem a 
 l\'{o}gica necess\'{a}ria para extrair as informações. Para que novos \emph{visitors} se conectem 
 a plataforma, tornou-se necess\'{a}rio declarar o \textit{visitor} no arquivo com a defini\c c\~{a}o 
-dos objetos gerenciados pelo Spring~\cite{SPRING_REF}. A 
+dos objetos gerenciados pelo Spring~\cite{SPRING_REF}.
 
 
 \section{Exporta\c c\~{a}o dos Dados}
