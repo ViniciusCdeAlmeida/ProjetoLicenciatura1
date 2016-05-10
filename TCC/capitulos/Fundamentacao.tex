@@ -48,17 +48,17 @@ No in\'{i}cio dos anos noventa, um grupo de engenheiros da
 Sun Microsystems, chamados de \textit{Green Team}, acreditava 
 que a pr\'{o}xima grande \'{a}rea da computaç\~{a}o 
 seria a uni\~{a}o de equipamentos eletroeletrônicos com os 
-computadores~\cite{}. O \textit{Green Team}, liderado por James Gosling, 
+computadores. O \textit{Green Team}, liderado por James Gosling, 
 especificou a linguagem de programaç\~{a}o Java, 
 inicialmente proposta para dispositivos de entretenimento 
 como aparelhos de TV a cabo. Por outro lado, apenas em 1995, 
 com a massificaç\~{a}o da Internet, a linguagem Java 
 teve sua primeira grande aplicaç\~{a}o: a constru\c c\~{a}o 
-de componentes de software para o navegador Netscape.
+de componentes de software para o navegador \textit{Netscape}.
 
 Java \'{e} uma linguagem de programaç\~{a}o de prop\'{o}sito geral, 
 orientada a objetos e concebida para ser independente de plataforma, 
-gra\c cas ao uso de uma m\'{a}quina virtual---a 
+gra\c cas ao uso de uma m\'{a}quina virtual a 
 \emph{Java Virtual Machine} (JVM). Isso permite 
 que uma aplica\c c\~{a}o Java
 possa ser executada em qualquer ambiente computacional que possui 
@@ -71,7 +71,7 @@ presentes na especifica\c c\~{a} Java, tais como
 \texttt{java.net}, \texttt{java.awt} e \texttt{java.applet}; 
 onde as tr\^{e}s \'{u}ltimas favoreciam a constru\c c\~{a}o de 
 solu\c c\~{o}es envolvendo mobilidade de c\'{o}digo:
-um componente (um applet Java) poderia ser transferido de um 
+um componente (um \textit{applet} Java) poderia ser transferido de um 
 servidor para um cliente e, dessa forma, 
 ser executado em um navegador Web compat\'{i}vel. As caracter\'{i}sticas de 
 independ\^{e}ncia de plataforma e a aproxima\c c\~{a}o com a Web fez 
@@ -226,13 +226,13 @@ implementado nesse trabalho e cujos detalhes de implementa\c c\~{a}o s\~{a}o apr
 \end{figure}
 
 
-Pode-se compreender este analisador como um \emph{grammarware}~\cite{} pois \'{e} um software 
-que depende fortemente de uma gram\'{a}tica para seu funcionamento--- neste caso a gram\'{a}tica da linguagem Java. 
+Pode-se compreender este analisador como um \emph{grammarware} pois \'{e} um software 
+que depende fortemente de uma gram\'{a}tica para seu funcionamento neste caso a gram\'{a}tica da linguagem Java. 
 %\emph{Grammawares} demandam um conhecimento essencial das  gram\'{a}ticas que manipulam. 
 %Como exemplos de arquiteturas que possuem tal conhecimento tem-se os programas de convers\~{a}o de dados, processadores de \texttt{XML} e os que efetuam \textit{parses}.
-De acordo com~\cite{}, alguns cen\'{a}rios favorecem o desenvolvimento de softwares alinhados com a abordagem 
+De acordo com~\cite{klint2005toward}, alguns cen\'{a}rios favorecem o desenvolvimento de softwares alinhados com a abordagem 
 \emph{grammarware}, com destaque \`{a}s aplicaç\~{o}es que necessitam importar perfis de usu\'{a}rios para promover a transiç\~{a}o da vers\~{a}o 
-antiga para uma vers\~{a}o nova {\color{red}[rba] n\~{a}o consegui entender bem essa senten\c ca}. 
+antiga para uma vers\~{a}o nova. 
 Esta transiç\~{a}o deve ser robusta e provavelmente necessitar\'{a} de adptaç\~{a}o dever\'{a} passar 
 por um parser para que as partes que necessitem de adaptaç\~{a}o possam ser identificadas.
 
@@ -261,11 +261,9 @@ para a \emph{linguagem} destino.
 Confome discutido anteriormente, o parser de programas escritos em uma linguagem de program\c c\~{a}o 
 \'{e} um dos componentes necess\'{a}rios para a constru\c c\~{a}o de ferramentas de an\'{a}lise 
 est\'{a}tica. Vale ressaltar que o analisador est\'{a}tico constru\'{i}do neste trabalho reusou uma infraestrutura 
-da plataforma Eclipse~\cite{} que oferece um parser atualizado da linguagem Java. Por outro lado, como 
+da plataforma Eclipse que oferece um parser atualizado da linguagem Java. Por outro lado, como 
 se trata de um tipo de componente central para solu\c c\~{o}es baseadas em gram\'{a}tica, esta se\c c\~{a}o 
 revisa brevemente quatro padr\~{o}es adotados para a implementa\c c\~{a}o de parsers~\cite{Parr:2009:LIP:1823613}. S\~{a}o eles: 
-
-{\color{red}Por favor, revisem essa se\c c\~{a}o.}
 
 \begin{itemize}
 	\item \textbf{Mapping Grammars to Recursive-Descent Recognizers}\\

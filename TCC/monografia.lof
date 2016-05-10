@@ -4,20 +4,17 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Resumo cronol\'{o}gico da linguagem Java.}}{4}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Portabilidade da liguagem Java.}}{4}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Fases de aplica\c {c}\~{o}es com linguagens.}}{6}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Fase do pipiline do FindBugs.}}{6}{figure.2.4}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Ferramentas necess\'{a}rias para constru\c {c}\~{a}o do analisador est\'{a}tico.}}{7}{figure.2.5}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Representa\c {c}\~{a}o da uma frase.}}{8}{figure.2.6}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Fases de aplica\IeC {\c c}\~{o}es com linguagens.}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Fase do pipiline do FindBugs.}}{5}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ferramentas necess\'{a}rias para constru\IeC {\c c}\~{a}o do analisador est\'{a}tico.}}{6}{figure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Vis\~{a}o geral da arquitetura do analisador est\'{a}tico}}{13}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Classe que representa o programa principal do analisador est\'{a}tico}}{14}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Implementa\c c\~{a}o do m\'{e}todo \texttt {analyse}, na classe \texttt {ProjectAnalyser}.}}{15}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Classes usadas para capturar declara\c c\~{o}es de enumera\c c\~{o}es.}}{16}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Exporta\c c\~{a}o de dados usando o mecanismo de introspec\c c\~{a}o de c\'{o}digo.}}{19}{figure.3.5}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Vis\~{a}o geral da arquitetura do analisador est\'{a}tico}}{11}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Classe que representa o programa principal do analisador est\'{a}tico}}{12}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Implementa\c c\~{a}o do m\'{e}todo \texttt {analyse}, na classe \texttt {ProjectAnalyser}.}}{13}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Classes usadas para capturar declara\c c\~{o}es de enumera\c c\~{o}es.}}{14}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Exporta\c c\~{a}o de dados usando o mecanismo de introspec\c c\~{a}o de c\'{o}digo.}}{17}{figure.3.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Oportunidades de \texttt {multi-catch} nos projetos.}}{27}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o de \texttt {Try-Resource} nos projetos.}}{29}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Oportunidades de \textit {refactoring} em \texttt {if-then-else} por sistema.}}{31}{figure.4.3}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Oportunidades de \texttt {multi-catch} nos projetos.}}{25}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o de \texttt {Try-Resource} nos projetos.}}{27}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Oportunidades de \textit {refactoring} em \texttt {if-then-else} por sistema.}}{29}{figure.4.3}
 \addvspace {10\p@ }

@@ -34,7 +34,7 @@ acordo com algum algoritmo existente. A Tabela:~\ref{tab:oportunidadesMulticatch
 	\label{tab:oportunidadesMulticatch} %std means summary of type declarations
 \end{table}
 		
-A implantação de \texttt{multi-catch} em um projeto pode ser iniciada com substituição de blocos \texttt{catch} aninhados por este recurso tornado evidente a redução significativa das ~\acs{LOC} duplicadas. A classe \texttt{AbstractNestablePropertyAccessor} do projeto  \textit{Spring 4.2.0.RC2} contém \texttt{catch} duplicado conforme a listagem:~\ref{lst:semMulticatch}. Entretanto após um \textit{refactoring} na listagem:~\ref{lst:semMulticatch} para implantação do recurso \texttt{multi-catch} pode-se verificar na listagem:~\ref{lst:comMulticatch} a redução significativa de código duplicado na ordem de \num{42}\% o que torna este recurso muito útil sem causar grandes mudanças no software.
+A implantação de \texttt{multi-catch} em um projeto pode ser iniciada com substituição de blocos \texttt{catch} aninhados por este recurso tornado evidente a redução significativa das ~\acs{LOC} duplicadas. A classe \texttt{AbstractNestablePropertyAccessor} do projeto  \textit{Spring 4.2.0.RC2} contém \texttt{catch} duplicado conforme a listagem:~\ref{lst:semMulticatch}. Entretanto após um \textit{refactoring} na Listing:~\ref{lst:semMulticatch} para implantação do recurso \texttt{multi-catch} pode-se verificar na Listing:~\ref{lst:comMulticatch} a redução significativa de código duplicado na ordem de \num{42}\% o que torna este recurso muito útil sem causar grandes mudanças no software.
 
 
 %Considere os exemplos nas listagens:~\ref{lst:codigoSemMulticatch} e ~\ref{lst:codigoComMulticatch}, 

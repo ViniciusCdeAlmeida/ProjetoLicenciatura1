@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  8 MAY 2016 12:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.4)  10 MAY 2016 14:39
 entering extended mode
 **monografia.tex
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.tex
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\unb-cic.cls
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\unb-cic.cls
 Document Class: unb-cic 2008/06/05 v0.93 Classe para trabalhos CIC UnB
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
@@ -139,7 +139,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ))
 \c@Hy@tempcnt=\count92
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -191,7 +191,7 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gin@req@height=\dimen107
 \Gin@req@width=\dimen108
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\boites\boites.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\boites\boites.sty
 File: boites.sty 
 Package: boites 2013/11/21 v1.1 Colored, framed and breakable across pages boxe
 s
@@ -215,13 +215,12 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@dimlist=\toks16
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 \c@TotPaginas=\count104
 \c@definition=\count105
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
@@ -230,10 +229,10 @@ Package: babel 2008/07/08 v3.8m The Babel package
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-portuges\portuge
+s.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count106
 \U@D=\dimen117
@@ -241,38 +240,38 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
-Language: english 2005/03/30 v3.3o English support from the babel system
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-english\english.
+ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty"
-("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
-Package: expl3 2016/01/19 v6377 L3 programming layer (loader) 
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\siunitx\siunitx.sty
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\expl3.sty
+Package: expl3 2016/04/20 v6476 L3 programming layer (loader) 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex"
-Package: expl3 2016/01/19 v6377 L3 programming layer (code)
-L3 Module: l3bootstrap 2016/01/01 v6339 L3 Bootstrap code
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\expl3-code.te
+x
+Package: expl3 2016/04/20 v6476 L3 programming layer (code)
+L3 Module: l3bootstrap 2016/02/12 v6412 L3 Bootstrap code
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty"
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \et@xins=\count107
 )
-L3 Module: l3names 2015/12/21 v6328 L3 Namespace for primitives
+L3 Module: l3names 2016/03/11 v6433 L3 Namespace for primitives
 L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
 L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
-L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
-L3 Module: l3str 2016/01/03 v6357 L3 Strings
+L3 Module: l3tl 2016/03/26 v6465 L3 Token lists
+L3 Module: l3str 2016/03/24 v6441 L3 Strings
 L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
-L3 Module: l3int 2016/01/05 v6366 L3 Integers
+L3 Module: l3int 2016/03/24 v6441 L3 Integers
 \c_max_int=\count108
 \l_tmpa_int=\count109
 \l_tmpb_int=\count110
@@ -282,10 +281,10 @@ L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
 L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
 \g__prg_map_int=\count113
 L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
-L3 Module: l3token 2015/11/11 v6249 L3 Experimental token manipulation
+L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
 L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
-L3 Module: l3msg 2015/09/28 v6113 L3 Messages
-L3 Module: l3file 2015/12/03 v6317 L3 File and I/O operations
+L3 Module: l3msg 2016/03/26 v6464 L3 Messages
+L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
 \l_iow_line_count_int=\count114
 \l__iow_target_count_int=\count115
 \l__iow_current_line_int=\count116
@@ -313,7 +312,7 @@ L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
 \g__keyval_level_int=\count119
 \l_keys_choice_int=\count120
-L3 Module: l3fp 2015/08/25 v5890 L3 Floating points
+L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
 \c__fp_leading_shift_int=\count121
 \c__fp_middle_shift_int=\count122
 \c__fp_trailing_shift_int=\count123
@@ -329,7 +328,7 @@ L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \l_tmpb_box=\box30
 \g_tmpa_box=\box31
 \g_tmpb_box=\box32
-L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
+L3 Module: l3coffins 2016/03/24 v6440 L3 Coffin code layer
 \l__coffin_internal_box=\box33
 \l__coffin_internal_dim=\dimen124
 \l__coffin_offset_x_dim=\dimen125
@@ -351,7 +350,7 @@ L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
 \l__coffin_display_y_dim=\dimen133
 L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
 L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
-L3 Module: l3candidates 2016/01/14 v6376 L3 Experimental additions to l3kernel
+L3 Module: l3candidates 2016/03/25 v6456 L3 Experimental additions to l3kernel
 \l__box_top_dim=\dimen134
 \l__box_bottom_dim=\dimen135
 \l__box_left_dim=\dimen136
@@ -368,23 +367,23 @@ L3 Module: l3candidates 2016/01/14 v6376 L3 Experimental additions to l3kernel
 \l__coffin_top_corner_dim=\dimen146
 \l__coffin_scaled_total_height_dim=\dimen147
 \l__coffin_scaled_width_dim=\dimen148
-L3 Module: l3luatex 2015/11/11 v6250 L3 Experimental LuaTeX-specific functions
+L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode.def"
-File: l3pdfmode.def 2015/11/11 v6250 L3 Experimental driver: PDF mode
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\l3kernel\l3pdfmode.def
+File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
 \l__driver_color_stack_int=\count130
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty"
-Package: xparse 2016/01/19 v6377 L3 Experimental document command parser
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\l3packages\xparse\xpar
+se.sty
+Package: xparse 2016/04/20 v6476 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count131
 \l__xparse_m_args_int=\count132
 \l__xparse_mandatory_args_int=\count133
 \l__xparse_processor_int=\count134
 \l__xparse_v_nesting_int=\count135
 )
-Package: siunitx 2016/01/19 v2.6p A comprehensive (SI) units package
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: siunitx 2016/03/01 v2.6q A comprehensive (SI) units package
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
@@ -400,8 +399,9 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip50
 \backup@length=\skip51
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty"
-Package: l3keys2e 2016/01/19 v6377 LaTeX2e option processing using LaTeX3 keys
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\l3packages\l3keys2e\l3
+keys2e.sty
+Package: l3keys2e 2016/04/20 v6476 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box43
 \l__siunitx_tmp_dim=\dimen152
@@ -486,98 +486,99 @@ Package: l3keys2e 2016/01/19 v6377 LaTeX2e option processing using LaTeX3 keys
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \num with sig. 'om' on line 7259.
+. Defining command \num with sig. 'om' on line 7260.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7267.
+. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7269.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numrange with sig. 'omm' on line 7275.
+. Defining command \numrange with sig. 'omm' on line 7278.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7286.
+. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7290.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIrange with sig. 'ommm' on line 7297.
+. Defining command \SIrange with sig. 'ommm' on line 7302.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SI with sig. 'omom' on line 7308.
+. Defining command \SI with sig. 'omom' on line 7314.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \sisetup with sig. 'm' on line 7311.
+. Defining command \sisetup with sig. 'm' on line 7317.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \tablenum with sig. 'om' on line 7323.
+. Defining command \tablenum with sig. 'om' on line 7332.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \si with sig. 'om' on line 7334.
+. Defining command \si with sig. 'om' on line 7344.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_num:w with sig. 'om' on line 7381.
+. Defining command \__siunitx_bookmark_num:w with sig. 'om' on line 7391.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \__siunitx_bookmark_numrange:w with sig. 'omm' on line
-. 7383.
+. 7393.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_SI:w with sig. 'omom' on line 7385.
+. Defining command \__siunitx_bookmark_SI:w with sig. 'omom' on line 7395.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_SIlist:w with sig. 'omm' on line 7387.
+. Defining command \__siunitx_bookmark_SIlist:w with sig. 'omm' on line 7397.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \__siunitx_bookmark_SIrange:w with sig. 'ommm' on line
-. 7389.
+. 7399.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7390.
+. Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7400.
 .................................................
 \g__file_internal_ior=\read1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\translator.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator
+\translator.sty
 Package: translator 2010/06/12 ver 1.10
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\translator-langu
-age-mappings.tex")))
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator
+\translator-language-mappings.tex)))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip56
 \bibsep=\skip57
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count153
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -813,14 +814,14 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\acronym\acronym.sty
 Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\bigfoot\suffix.sty
 Package: suffix 2006/07/15 1.5a Variant command support
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
-("C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\xstring\xstring.sty
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\generic\xstring\xstring.tex
 \@xs@message=\write3
 \integerpart=\count154
 \decimalpart=\count155
@@ -828,8 +829,7 @@ Package: suffix 2006/07/15 1.5a Variant command support
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks21
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -998,7 +998,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count156
 \lst@gtempboxa=\box50
 \lst@token=\toks22
@@ -1012,27 +1012,25 @@ G,.JBIG2,.JB2,.eps]
 \lst@lineno=\count161
 \lst@maxwidth=\dimen167
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count162
 \lst@skipnumbers=\count163
 \lst@framebox=\box51
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen168
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\cores.tex)
+) (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\cores.tex)
 Package hyperref Info: Option `colorlinks' set `true' on input line 104.
 
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.aux)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
 LaTeX Font Info:    ... okay on input line 138.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
@@ -1071,11 +1069,11 @@ LaTeX Info: Redefining \ref on input line 138.
 LaTeX Info: Redefining \pageref on input line 138.
 LaTeX Info: Redefining \nameref on input line 138.
 
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.out)
 \@outlinefile=\write4
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count165
 \scratchdimen=\dimen169
@@ -1133,12 +1131,13 @@ Package: hypernat 2001/07/09 v1.0b hyperref and natbib compatibility (jb)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\hypcap.sty"
 Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\translator
--basic-dictionary\translator-basic-dictionary-English.dict"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator
+\dicts\translator-basic-dictionary\translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg"
-File: siunitx-abbreviations.cfg 2016/01/19 v2.6p siunitx: Abbreviated units
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\siunitx\siunitx-abbrev
+iations.cfg
+File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
 )
 \c@lstlisting=\count171
 \c__siunitx_mathsf_int=\count172
@@ -1154,7 +1153,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \len@uacaph=\skip60
 LaTeX Font Info:    Try loading font information for T1+ua1 on input line 139.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\arial\t1ua1.fd"
+(C:\Users\ViniciusC\AppData\Roaming\MiKTeX\2.9\tex\latex\arial\t1ua1.fd
 File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
 )
 LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <20> not available
@@ -1174,8 +1173,8 @@ LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <10> not available
 
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Vinicius/Desktop
-/ProjetoLicenciatura1/TCC/positivo_cor.pdf>]
+{C:/Users/ViniciusC/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/User
+s/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/positivo_cor.pdf>]
 \@tempa=\count174
  [2
 
@@ -1184,18 +1183,18 @@ LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <10> not available
 \len@uadesch=\skip64
 \len@uacaph=\skip65
 File: positivo_cor.pdf Graphic file (type pdf)
- <use positivo_cor.pdf>
+
+<use positivo_cor.pdf>
 Package pdftex.def Info: positivo_cor.pdf used on input line 139.
 (pdftex.def)             Requested size: 70.28004pt x 35.43501pt.
 \len@lskipoffset=\skip66
 \len@lskipoffset=\skip67
-
-[3
+ [3
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/dedicatoria.tex)p
-dfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
-een already used, duplicate ignored
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/dedicatoria.tex)
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.146   \begin{agradecimentos}
@@ -1204,8 +1203,8 @@ l.146   \begin{agradecimentos}
 
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/agradecimentos.te
-x)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/agradecimentos.t
+ex)
 Underfull \hbox (badness 10000) in paragraph at lines 1--149
 
  []
@@ -1219,9 +1218,9 @@ l.151   \begin{resumo}
 
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/resumo.tex)pdfTeX
- warning (ext4): destination with the same identifier (name{page.iii}) has been
- already used, duplicate ignored
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/resumo.tex)pdfTe
+X warning (ext4): destination with the same identifier (name{page.iii}) has bee
+n already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.157   \begin{abstract}
@@ -1229,11 +1228,11 @@ l.157   \begin{abstract}
 
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/abstract.tex)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/abstract.tex)
 [4
 
 
-] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.toc
+] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.toc
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 26.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
@@ -1243,189 +1242,131 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
  [5
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.lof)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.lof)
 \tf@lof=\write6
  [6
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.lot)
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.lot)
 \tf@lot=\write7
  [7
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\siglas.tex) [8
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\siglas.tex) [8
 
 ]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Introducao.tex
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/Introducao.tex
 Cap\'{\i }tulo 1.
 [1
 
 
 ])
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Fundamentacao.tex
-[2]
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/Fundamentacao.te
+x [2]
 Cap\'{\i }tulo 2.
 [3
 
-]
-Package epstopdf Info: Source file: <Imagens/timeLineJava.eps>
-(epstopdf)                    date: 2016-04-17 19:13:22
-(epstopdf)                    size: 46658 bytes
-(epstopdf)             Output file: <Imagens/timeLineJava-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2016-04-17 19:13:22
-(epstopdf)                    size: 22455 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imagens/timeLineJava-eps-co
-nverted-to.pdf Imagens/timeLineJava.eps>
-(epstopdf)             \includegraphics on input line 31.
-Package epstopdf Info: Output file is already uptodate.
-
-<Imagens/timeLineJava-eps-converted-to.pdf, id=340, 431.6125pt x 145.54375pt>
-File: Imagens/timeLineJava-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Imagens/timeLineJava-eps-converted-to.pdf>
-Package pdftex.def Info: Imagens/timeLineJava-eps-converted-to.pdf used on inpu
-t line 31.
-(pdftex.def)             Requested size: 431.61143pt x 145.54338pt.
-
-
-Package acronym Warning: Acronym `JVM' is not defined on input line 36.
-
-Package epstopdf Info: Source file: <Imagens/portabilidadeJava.eps>
-(epstopdf)                    date: 2016-04-17 19:13:22
-(epstopdf)                    size: 437419 bytes
-(epstopdf)             Output file: <Imagens/portabilidadeJava-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2016-04-17 19:13:22
-(epstopdf)                    size: 222180 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imagens/portabilidadeJava-e
-ps-converted-to.pdf Imagens/portabilidadeJava.eps>
-(epstopdf)             \includegraphics on input line 41.
-Package epstopdf Info: Output file is already uptodate.
-<Imagens/portabilidadeJava-eps-converted-to.pdf, id=342, 369.38pt x 297.11pt>
-File: Imagens/portabilidadeJava-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Imagens/portabilidadeJava-eps-converted-to.pdf>
-Package pdftex.def Info: Imagens/portabilidadeJava-eps-converted-to.pdf used on
- input line 41.
-(pdftex.def)             Requested size: 295.5044pt x 237.68831pt.
- [4 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/timeLineJava-ep
-s-converted-to.pdf> <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens
-/portabilidadeJava-eps-converted-to.pdf>]
-
-Package acronym Warning: Acronym `JVM' is not defined on input line 123.
-
-[5]
+] [4]
 Package epstopdf Info: Source file: <Imagens/stagesLanguageApp.eps>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 316484 bytes
 (epstopdf)             Output file: <Imagens/stagesLanguageApp-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 153601 bytes
 (epstopdf)             Command: <epstopdf --outfile=Imagens/stagesLanguageApp-e
 ps-converted-to.pdf Imagens/stagesLanguageApp.eps>
-(epstopdf)             \includegraphics on input line 221.
+(epstopdf)             \includegraphics on input line 180.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/stagesLanguageApp-eps-converted-to.pdf, id=371, 481.8pt x 118.4425pt>
+<Imagens/stagesLanguageApp-eps-converted-to.pdf, id=339, 481.8pt x 118.4425pt>
 File: Imagens/stagesLanguageApp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imagens/stagesLanguageApp-eps-converted-to.pdf>
 Package pdftex.def Info: Imagens/stagesLanguageApp-eps-converted-to.pdf used on
- input line 221.
+ input line 180.
 (pdftex.def)             Requested size: 433.61598pt x 106.59724pt.
 Package epstopdf Info: Source file: <Imagens/pipelineFindbugs.eps>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 273249 bytes
 (epstopdf)             Output file: <Imagens/pipelineFindbugs-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 107562 bytes
 (epstopdf)             Command: <epstopdf --outfile=Imagens/pipelineFindbugs-ep
 s-converted-to.pdf Imagens/pipelineFindbugs.eps>
-(epstopdf)             \includegraphics on input line 250.
+(epstopdf)             \includegraphics on input line 209.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/pipelineFindbugs-eps-converted-to.pdf, id=376, 471.7625pt x 75.28125pt
+<Imagens/pipelineFindbugs-eps-converted-to.pdf, id=344, 471.7625pt x 75.28125pt
 >
 File: Imagens/pipelineFindbugs-eps-converted-to.pdf Graphic file (type pdf)
  <use Imagens/pipelineFindbugs-eps-converted-to.pdf>
 Package pdftex.def Info: Imagens/pipelineFindbugs-eps-converted-to.pdf used on 
-input line 250.
+input line 209.
 (pdftex.def)             Requested size: 424.58232pt x 67.75247pt.
 Package epstopdf Info: Source file: <Imagens/stagesAnalizer.eps>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 319965 bytes
 (epstopdf)             Output file: <Imagens/stagesAnalizer-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 150931 bytes
 (epstopdf)             Command: <epstopdf --outfile=Imagens/stagesAnalizer-eps-
 converted-to.pdf Imagens/stagesAnalizer.eps>
-(epstopdf)             \includegraphics on input line 264.
+(epstopdf)             \includegraphics on input line 223.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/stagesAnalizer-eps-converted-to.pdf, id=378, 464.73625pt x 166.6225pt>
+<Imagens/stagesAnalizer-eps-converted-to.pdf, id=346, 464.73625pt x 166.6225pt>
 File: Imagens/stagesAnalizer-eps-converted-to.pdf Graphic file (type pdf)
 <use Imagens/stagesAnalizer-eps-converted-to.pdf>
 Package pdftex.def Info: Imagens/stagesAnalizer-eps-converted-to.pdf used on in
-put line 264.
+put line 223.
 (pdftex.def)             Requested size: 418.25876pt x 149.95885pt.
- [6 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/stagesLanguageA
-pp-eps-converted-to.pdf> <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Im
-agens/pipelineFindbugs-eps-converted-to.pdf>] [7 <C:/Users/Vinicius/Desktop/Pro
-jetoLicenciatura1/TCC/Imagens/stagesAnalizer-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <Imagens/treeParser.eps>
-(epstopdf)                    date: 2016-04-17 19:13:22
-(epstopdf)                    size: 29507 bytes
-(epstopdf)             Output file: <Imagens/treeParser-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-04-17 19:13:22
-(epstopdf)                    size: 14327 bytes
-(epstopdf)             Command: <epstopdf --outfile=Imagens/treeParser-eps-conv
-erted-to.pdf Imagens/treeParser.eps>
-(epstopdf)             \includegraphics on input line 342.
-Package epstopdf Info: Output file is already uptodate.
+ [5 <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/Imagens/stagesLanguage
+App-eps-converted-to.pdf> <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/
+Imagens/pipelineFindbugs-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
-<Imagens/treeParser-eps-converted-to.pdf, id=439, 249.93375pt x 119.44624pt>
-File: Imagens/treeParser-eps-converted-to.pdf Graphic file (type pdf)
+ []
 
-<use Imagens/treeParser-eps-converted-to.pdf>
-Package pdftex.def Info: Imagens/treeParser-eps-converted-to.pdf used on input 
-line 342.
-(pdftex.def)             Requested size: 224.9383pt x 107.50061pt.
- [8 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/treeParser-eps-
-converted-to.pdf>] [9]
+[6 <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/Imagens/stagesAnalizer-
+eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
+
+ []
+
+[7]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 381.
- [10])
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Arquitetura.tex
-[11]
+nput line 303.
+ [8])
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/Arquitetura.tex
+[9]
 Cap\'{\i }tulo 3.
-[12
+[10
 
 ]
 Package epstopdf Info: Source file: <Imagens/Arquitetura.eps>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 275474 bytes
 (epstopdf)             Output file: <Imagens/Arquitetura-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 84583 bytes
 (epstopdf)             Command: <epstopdf --outfile=Imagens/Arquitetura-eps-con
 verted-to.pdf Imagens/Arquitetura.eps>
 (epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/Arquitetura-eps-converted-to.pdf, id=498, 813.0375pt x 147.55125pt>
+<Imagens/Arquitetura-eps-converted-to.pdf, id=452, 813.0375pt x 147.55125pt>
 File: Imagens/Arquitetura-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imagens/Arquitetura-eps-converted-to.pdf>
 Package pdftex.def Info: Imagens/Arquitetura-eps-converted-to.pdf used on input
  line 88.
 (pdftex.def)             Requested size: 447.17201pt x 81.15343pt.
- [13 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/Arquitetura-ep
-s-converted-to.pdf>] [14]
-[15] [16]
+ [11 <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/Imagens/Arquitetura-e
+ps-converted-to.pdf>] [12]
+[13] [14]
 Overfull \hbox (6.0417pt too wide) in paragraph at lines 349--351
 []\T1/cmtt/m/n/12 LambdaExpression: \T1/cmr/m/n/12 Co-leta in-for-ma-ções re-la
 -ci-o-na-das à ado-ção de ex-pres-sões lambda. 
@@ -1444,9 +1385,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 Package acronym Warning: Acronym `LoC' is not defined on input line 397.
 
-[17])
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Resultados.tex
-[18] [19]
+[15])
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/Resultados.tex
+[16] [17]
 Cap\'{\i }tulo 4.
 
 Overfull \hbox (3.92148pt too wide) in paragraph at lines 14--15
@@ -1455,35 +1396,35 @@ n/12 fo-ram uti-li-za-dos os se-guin-tes \T1/cmr/m/it/12 vi-si-tors\T1/cmr/m/n/
 12 :\T1/cmr/m/it/12 MethodCallVisitor,
  []
 
-[20
+[18
 
 ]
 Overfull \vbox (2.95917pt too high) detected at line 68
  []
 
-[21] [22]
+[19] [20]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23] [24] [25]
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Multicatch.tex
+[21] [22] [23]
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/Multicatch.tex
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1.
 
-[26]
+[24]
 Package epstopdf Info: Source file: <Imagens/ocorrenciasMulticatch.eps>
-(epstopdf)                    date: 2016-02-21 10:18:20
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 14159 bytes
 (epstopdf)             Output file: <Imagens/ocorrenciasMulticatch-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 14917 bytes
 (epstopdf)             Command: <epstopdf --outfile=Imagens/ocorrenciasMulticat
 ch-eps-converted-to.pdf Imagens/ocorrenciasMulticatch.eps>
 (epstopdf)             \includegraphics on input line 17.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=795, 530.98375pt x 530.
+<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=748, 530.98375pt x 530.
 98375pt>
 File: Imagens/ocorrenciasMulticatch-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1495,9 +1436,9 @@ d on input line 17.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/ocorrenciasMult
-icatch-eps-converted-to.pdf>])
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/TryResource.tex
+[25 <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/Imagens/ocorrenciasMul
+ticatch-eps-converted-to.pdf>])
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/TryResource.tex
 Overfull \hbox (27.28107pt too wide) in paragraph at lines 2--3
 []\T1/cmr/m/n/12 Como con-ti-nu-a-ção da evo-lu-ção do me-ca-nismo de ex-ce-ção
  de Java 7 in-tro-du-ziu \T1/cmtt/m/n/12 try-resource
@@ -1516,20 +1457,20 @@ Overfull \hbox (4.87564pt too wide) in paragraph at lines 2--3
 com en-cer-ra-mento do \T1/cmtt/m/n/12 statement
  []
 
-[28]
+[26]
 Package epstopdf Info: Source file: <Imagens/ocorrenciasTryResource.eps>
-(epstopdf)                    date: 2016-02-21 10:18:20
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 8114 bytes
 (epstopdf)             Output file: <Imagens/ocorrenciasTryResource-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 12718 bytes
 (epstopdf)             Command: <epstopdf --outfile=Imagens/ocorrenciasTryResou
 rce-eps-converted-to.pdf Imagens/ocorrenciasTryResource.eps>
 (epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=846, 534.99875pt x 369
+<Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=800, 534.99875pt x 369
 .38pt>
 File: Imagens/ocorrenciasTryResource-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1542,22 +1483,22 @@ ed on input line 29.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/SwitchString.tex
-[29 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/ocorrenciasTryR
-esource-eps-converted-to.pdf>]
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/SwitchString.tex
+[27 <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/Imagens/ocorrenciasTry
+Resource-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Imagens/oportunidadesSwitchString.eps>
-(epstopdf)                    date: 2016-02-23 21:35:41
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 15086 bytes
 (epstopdf)             Output file: <Imagens/oportunidadesSwitchString-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2016-04-17 19:13:22
+(epstopdf)                    date: 2016-04-11 15:45:11
 (epstopdf)                    size: 14800 bytes
 (epstopdf)             Command: <epstopdf --outfile=Imagens/oportunidadesSwitch
 String-eps-converted-to.pdf Imagens/oportunidadesSwitchString.eps>
 (epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=882, 781.92125pt x 
+<Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=836, 781.92125pt x 
 393.47pt>
 File: Imagens/oportunidadesSwitchString-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1572,38 +1513,44 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)) (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Conclusoes.tex
-[30] [31 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/oportunida
-desSwitchString-eps-converted-to.pdf>]
+))
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\capitulos/Conclusoes.tex
+[28] [29 <C:/Users/ViniciusC/Desktop/ProjetoLicenciatura1/TCC/Imagens/oportunid
+adesSwitchString-eps-converted-to.pdf>]
 Cap\'{\i }tulo 5.
-) [32
+) [30
 
-] (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
-(C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.brf)
+] (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.bbl
+(C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.brf)
 \tf@brf=\write8
- [33
+ [31
 
 
 ]
-[34])
+[32])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
- [35]
+ [33]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
- (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.aux)
+ (C:\Users\ViniciusC\Desktop\ProjetoLicenciatura1\TCC\monografia.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 57E0FF370D347C877B1BC97EF21976F2;2155.
-Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 4718B593EC6AE5B77E4F32728A858CEA;3076.
+(rerunfilecheck)             Checksum: 83BE9EB886AEC2FB7C68B9A39A83B619;2124.
+
+Package rerunfilecheck Warning: File `monografia.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `monografia.brf':
+(rerunfilecheck)             Before: F61936326242019717C2B754286F7667;2859
+(rerunfilecheck)             After:  23A7A1619BE1A709CA12494D8C0DFC9F;2910.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
  20824 strings out of 493921
- 376611 string characters out of 3147273
- 466682 words of memory out of 3000000
- 23448 multiletter control sequences out of 15000+200000
+ 377851 string characters out of 3147271
+ 468428 words of memory out of 3000000
+ 23454 multiletter control sequences out of 15000+200000
  33261 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,12n,72p,10385b,2350s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1614,31 +1561,32 @@ ne
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
- <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ectt1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm0700.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk
-\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Vinicius\AppData
-\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Vin
-icius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> 
-<C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ectt1000.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\eccc1200.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\tcrm1200.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users\Vinicius\AppData\
-Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Vini
-cius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <
-C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-cbx1200.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecrm1200.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk>{C:/Program Files/MiKTeX 2.9/
-fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/arial/ua1b8a.pfb>
-Output written on monografia.pdf (46 pages, 1249146 bytes).
+ <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ectt1440.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecrm0700.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\ViniciusC\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\ViniciusC\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\User
+s\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx144
+0.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ectt1000.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk> <C:\Users\ViniciusC\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users\Viniciu
+sC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:
+\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ec
+bx2488.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecbx1200.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\ViniciusC\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\ViniciusC\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk>{C:/Program F
+iles/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><C:/Users/ViniciusC/AppData/Roaming/MiKTeX/2.9/f
+onts/type1/urw/arial/ua1b8a.pfb>
+Output written on monografia.pdf (44 pages, 986442 bytes).
 PDF statistics:
- 1757 PDF objects out of 2073 (max. 8388607)
- 362 named destinations out of 1000 (max. 500000)
- 296 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1705 PDF objects out of 1728 (max. 8388607)
+ 357 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
