@@ -23,7 +23,7 @@ caracter\'{i}sticas da linguagem de programa\c c\~{a}o e, por fim,
 gera os resultados no formato 
 apropriado para as an\'{a}lises estat\'{i}sticas 
 (no contexto deste projeto, foi feita a op\c c\~{a}o pelo 
-formato CVS).
+formato \acs{CSV}).
 
 Atualmente existem diversas ferramentas e bibliotecas 
 de programa\c c\~{a}o que auxiliam a constru\c c\~{a}o
@@ -43,7 +43,7 @@ plataforma foi usada essencialmente através do \textit{JDT Core},
 que dispõe de uma representa\c c\~{a}o Java 
 para a navega\c c\~{a}o 
 e manipula\c c\~{a}o dos elementos de uma árvore 
-sintática~\acs{AST} gerada a partir do c\'{o}digo fonte, onde os elementos 
+sintática \acs{AST} gerada a partir do c\'{o}digo fonte, onde os elementos 
 da representa\c c\~{a}o correspondem \`{a}s constru\c c\~{o}es 
 sint\'{a}ticas da linguagem (como pacotes, classes, interfaces métodos e atributos). 
 
@@ -59,14 +59,14 @@ Java 8 da linguagem e que produz a representação intermediária baseada no con
 mencionado anteriormente e que corresponde 
 a uma~\acs{AST} do código fonte. A plataforma tamb\'{e}m oferece 
 uma hierarquia de classes 
-para travessia na AST, de acordo com o padr\~{a}o de projeto \textit{visitor}~\cite{Gamma:1995}, e 
+para travessia na \acs{AST}, de acordo com o padr\~{a}o de projeto \textit{visitor}~\cite{Gamma:1995}, e 
 que facilita a análise estática 
 de código fonte.
 
 O padr\~{a}o de projeto \textit{Visitor}~\cite{Gamma:1995} \'{e} um 
 padrão de projeto de característica comportamental que representa 
 uma operação a ser realizada sobre elementos de uma \'{a}rvore de objetos. 
-Neste caso, a operação a ser realizadas é visitar nós de interesse da AST Java 
+Neste caso, a operação a ser realizadas é visitar nós de interesse da \acs{AST} Java 
 (como os n\'{o}s que representam o uso de uma express\~{a}o Lambda em Java). 
 Cada \textit{visitor} permite que uma nova operação seja criada 
 sem que a estrutura da \'{a}rvore de objetos sofra alterações. Com isso, torna-se relativamente  
@@ -117,7 +117,7 @@ de cada arquivo Java dos projetos analisados. Sob a perspectiva de usabilidade,
 o usu\'{a}rio deve executar o programa principal informando, na linha de 
 comando, o caminho para o arquivo \acs{CSV} contendo as defini\c c\~{o}es dos 
 projetos. Isso produz uma lista contendo todos os projetos a serem processados 
-(ver Linha 25 na Figura~\ref{fig:programaPrincipal}). Ap\'{o}s a lista de 
+(ver Linha 25 no Listing:~\ref{lst:programaPrincipal}). Ap\'{o}s a lista de 
 projetos ter sido carregada, cada projeto \'{e} analisado com o uso 
 da classe \texttt{ProjectAnalyser}, que possui um m\'{e}todo 
 (\texttt{analyse}) com a l\'{o}gica necess\'{a}ria para 
@@ -138,7 +138,7 @@ intermedi\'{a}ria. Isso \'{e} feito considerando cada um dos
   
 
 \begin{figure}[htb]
-\begin{lstlisting}
+\begin{lstlisting}[numbers=left,   numberstyle=\tiny]
 public class Main {
    
   public static void main(String[] args) {
@@ -174,7 +174,7 @@ public class Main {
 }
 \end{lstlisting}
   \caption{Classe que representa o programa principal do analisador est\'{a}tico}
-  \label{fig:programaPrincipal}
+  \label{lst:programaPrincipal}
 \end{figure}
 
 
@@ -215,10 +215,10 @@ public void analyse(Project p)  {
 Conforme mencionado na se\c c\~{a}o anterior, o resultado do 
 \textit{parser} em um arquivo fonte produz uma inst\^{a}ncia 
 da classe \texttt{CompilationUnit}, que corresponde a 
-uma AST com todas as defini\c c\~{o}es de tipo e 
+uma \acs{AST} com todas as defini\c c\~{o}es de tipo e 
 implementa\c c\~{a}o de comportamento presentes em um m\'{o}dulo 
 Java. A plataforma Eclipse JDT oferece uma infraestrutura 
-de classes para realizar a traversia em uma AST, usando 
+de classes para realizar a traversia em uma \acs{AST}, usando 
 o padr\~{a}o de projeto \textit{visitor}. Dessa forma, 
 foi feita uma implementa\c c\~{a}o de biblioteca de 
 \textit{visitors}, para extrair as informa\c c\~{o}es 
@@ -463,11 +463,11 @@ dos objetos gerenciados pelo Spring~\cite{SPRING_REF}.
 
 Na vers\~{a}o atual do suporte ferramental desenvolvido nessa monografia, os dados 
 coletados pelo analisador est\'{a}tico s\~{a}o exportados exclusivamente no formato 
-CSV. Esse formato facilita as an\'{a}lises estat\'{i}sticas usando o ambiente e linguagem 
+\acs{CSV}. Esse formato facilita as an\'{a}lises estat\'{i}sticas usando o ambiente e linguagem 
 de programa\c c\~{a}o R~\cite{R}. Também com foco na extensibilidade do sistema, os componentes envolvidos na 
 geração de relatórios utilizam os mecanismos de inje\c c\~{a}o de depend\^{e}ncia, mencionado na 
-se\c c\~{a}o anterior, e introspec\c c\~{a}o de c\'{o}digo, via a a API \textit{Reflection} da linguagem de 
-programa\c c\~{a}o Java. Tal mecanismo oferece aos programadores a capacidade de escreverem componentes 
+se\c c\~{a}o anterior, e introspec\c c\~{a}o de c\'{o}digo, via \acs{API} \textit{Reflection} da linguagem de 
+programa\c c\~{a}o Java. Tal mecanismo oferece aos programadores a capacidade de escrever componentes 
 que podem observar e até modificar a estrutura e o comportamento dos objetos em tempo de execução.
 
 A geração dos relatórios utiliza a classe \texttt{public class CSVData<T> \{ \ldots \ \}} onde o 
