@@ -1,19 +1,32 @@
 \chapter{Introdução}
-\section{Introdução}
+
+% \section{Introdução}
 Uma premissa na Engenharia de Software é a \emph{natureza evolutiva} do software, e, com isso, 
 custos significativos são relacionados com as atividades de manutenção. De forma semelhante, 
-as linguagens de programação evoluem, com o intuito de se adaptarem as novas demandas e trazerem 
+as linguagens de programação evoluem, com o intuito de se adaptarem a novas demandas e trazerem 
 benefícios relacionados a produtividade e a melhoria da qualidade dos softwares construídos. Entretanto, um 
 desafio inerente é a evolução de sistemas existentes em direção a adoção de novas construções 
-disponibilizadas nas linguagens~\cite{Dyer:2013}. Conforme explicado por Jeffrey L. Overbey e Ralph E. Johnson. ~\cite{Overbey:2009}, tal evolução faz com que características obsoletas sejam mantidas e raramente são removidas de uma linguagem o que acarreta em um aumento da complexidade, aprendizagem e da manutenção do software. Isso naturalmente aumenta a dificuldade de desenvolvimento o que resulta em um aumento de dificuldade de aprendizagem de determinada versão já ultrapassada de uma linguagem e faz com que a equipe alterne entre propriedades atuais e antigas as quais passam a ser quase um dialeto da linguagem implicando no aumento de tempo para conceber um projeto e consequentemente gerindo aumento no custo final projeto.
+disponibilizadas nas linguagens~\cite{Dyer:2013}. 
 
-Uma decisão não tão simples é manter uma porção do código congelado, sem evolução, ao longo projeto devido alguma restrição técnica. O que infelizmente acarreta em uma estagnação de todo um sistema pois não é somente o projeto afetado, mas sim uma toda infraestrutura como compiladores, banco de dados e sistema operacional e que se de alguma forma vierem a ser atualizados com esta porção código estagnado pode ocasionar problemas como uma queda significativa de desempenho ou até mesmo o sistema parar de funcionar. Devido a esses problemas de código não atualizado, com as versões com estruturas mais atuais, a proposta da realização de refatoração através de ferramentas a ser desenvolvidas que visem atacar esse gargalo deixado por código obsoleto.
+Conforme discutido por Overbey e Johnson~\cite{Overbey:2009}, 
+tal evolução faz com que características obsoletas sejam mantidas e raramente removidas de uma linguagem, 
+levando a um aumento da complexidade, esfor\c co de aprendizagem e custos de manutenção do software. 
+Al\'{e}m disso, a falta de evolu\c c\~{a}o de um c\'{o}digo fonte em dire\c c\~{a}o a 
+novas vers\~{o}es de uma linguagem de programa\c c\~{a}o faz com que a equipe de 
+desenvolvimento alterne entre caracter\'{i}sticas atuais e antigas, as quais passam a ser 
+quase um dialeto da linguagem--- o que aumenta o tempo para conceber um projeto 
+e consequentemente gerindo aumento no custo final projeto.
+
+Uma decisão não tão simples é manter uma porção do código congelada, sem evolução, ao longo projeto devido alguma restrição técnica. O que infelizmente acarreta em uma estagnação de todo um sistema pois não somente o projeto \'{e} afetado, mas sim toda uma infraestrutura como compiladores, banco de dados e sistema operacional que, se de alguma forma vierem a ser atualizados com esta porção código estagnado, 
+podem ocasionar problemas como uma queda significativa de desempenho ou até mesmo o sistema parar de funcionar. Devido a esses problemas de código não atualizado, com as versões com estruturas mais atuais, a proposta da realização de refatoração através de 
+ferramentas objetivam atacar essas limita\c c\~{o}es decorrentes de código obsoleto.
 
 \section{Objetivos}
 	
 	O principal objetivo deste trabalho é analisar a adoção de construções da linguagem de programação 
 	Java em projetos \textit{open-source}, com o intuito de compreender a forma típica de utilização das construções 
-	da linguagem e verificar a adoção ou não das \textit{features} mais recentemente lançadas. Especificamente, 
+	da linguagem e verificar a adoção ou não das \textit{caracter\'{i}sticas} presentes nas vers\~{o}es 
+        mais recentes da linguagem. Especificamente, 
 	os seguintes objetivos foram traçados:
 	
 	\begin{itemize}
@@ -21,9 +34,9 @@ Uma decisão não tão simples é manter uma porção do código congelado, sem 
 	    de construções da linguagem Java. 
 	  
 	  \item avaliar o uso de construções nas diferentes versões da linguagem Java, considerando 
-	  projeto \textit{open-source}. 
+	  projetos \textit{open-source}. 
 	  
-	  \item realizar um \textit{survey} inicial para verificar o porque da não adoção de algumas construções 
+	  \item realizar um \textit{survey} inicial para verificar o porqu\^{e} da não adoção de algumas construções 
 	  da linguagem nos projetos. 
 	  
 	  \item contrastar os resultados das nossas análises com trabalhos de pesquisa recentemente publicados, 
@@ -48,7 +61,7 @@ Uma decisão não tão simples é manter uma porção do código congelado, sem 
 
 \section{Metodologia}
     
-    A realização deste trabalho envolveu atividades de revisão da literatura, contemplando um estudo 
+    A realização deste trabalho envolveu atividades de revisão da literatura, contemplando a leitura 
     de artigos científicos que abordam a adoção de novas características da linguagem Java ao longo do 
     lançamento das diferentes versões para a comunidade de desenvolvedores~\cite{Schaefer:ACM2009, Dyer:2013, Parnin:ACM2011, Overbey:2009, Dyer:ACM2014, Bracha:ACM1998, bonifacio:scam2015}. Com isso, foi 
     possível compreender a limitação dos trabalhos existentes e, dessa forma, definir o escopo da 
@@ -56,14 +69,33 @@ Uma decisão não tão simples é manter uma porção do código congelado, sem 
     
     Posteriormente, foi necessário buscar uma compreensão sobre como implementar ferramentas de 
     análise estática, e escolher uma plataforma de desenvolvimento apropriada (no caso, a plataforma 
-    Eclipse JDT~\cite{EclipseJDT}). Posteriormente, foi iniciada uma fase de implementação dos analisadores estáticos usando padrões de projetos típicos para essa finalidade como  \textit{visitor} e \textit{dependency injection}.
+    Eclipse JDT~\cite{EclipseJDT}). Posteriormente, foi iniciada uma fase de implementação dos 
+    analisadores estáticos de forma a atender ao requisito de extensibilidade, ou seja, o ambiente 
+    deve favorecer a inclus\~{a}o de novos \emph{analisadores}, levando ao uso de 
+    padrões de projetos típicos para essa finalidade como \textit{visitor} e \textit{dependency injection}.
     
      Finalmente, foi seguida uma estrategia de Mineração em Repositórios de Software, onde foram 
-     feitas as análises da adoção de construções da linguagem Java em projetos \textit{open-source}, de forma 
+     feitas as análises da adoção de construções da linigouagem Java em projetos \textit{open-source}, de forma 
      similar a outros artigos existentes~\cite{Schaefer:ACM2010,pinto-jss:2015,donovan:2004,dinklage:2004, Schaefer:ACM2009, Schaefer:ACM2010, Overbey:2009, Wichmann95industrialperspective, Ayewah:2008:USA:1439186.1439221, bracha1998gj}. 
      
      %todos
 	
-	Após tal entendimento sobre adoção de novas características, fora realizado um estudo sobre análise estática em códigos escritos na linguagem Java o que se torna a base deste trabalho. E logo após a consolidação deste conhecimento, foi realizado a escolha de projetos Java de maior relevância na comunidade \textit{open-source}.
+	%% Após tal entendimento sobre adoção de novas características, fora realiza um estudo sobre análise estática em códigos escritos na linguagem Java o que se torna a base deste trabalho. E logo após a consolidação deste conhecimento, foi realizado a escolha de projetos Java de maior relevância na comunidade \textit{open-source}.
 	
-	Em seguida foi estudada a melhor arquitetura para a elaboração do analisador estático proposto de modo que esta no tivesse um fraco acoplamento entre os módulos necessários e facilitasse a pesquisa de outras características através da injeção do \textit{visitors} \cite{Gamma:1995} usando o \textit{spring framework}~\cite{SPRING_REF}. Mais adiante a arquitetura escolhida será exibida com mais detalhes.
+	%% Em seguida foi estudada a melhor arquitetura para a elaboração do analisador estático proposto de modo que esta no tivesse um fraco acoplamento entre os módulos necessários e facilitasse a pesquisa de outras características através da injeção do \textit{visitors} \cite{Gamma:1995} usando o \textit{spring framework}~\cite{SPRING_REF}. Mais adiante a arquitetura escolhida será exibida com mais detalhes.
+
+\section{Organiza\c c\~{a}o da Monografia} 
+
+Este documento est\'{a} organizado em cinco cap\'{i}tulos, incluindo esse cap\'{i}tulo de 
+introdu\c c\~{a}o. O Cap\'{i}tulo 2 apresenta uma revis\~{a}o da literatura sobre os 
+temas relacionados a essa monografia (incluindo t\'{e}cnicas para an\'{a}lise est\'{a}tica 
+de c\'{o}digo fonte). O Cap\'{i}tulo 3 apresenta detalhes sobre a implementa\c c\~{a}o do 
+analisador est\'{a}tico, constru\'{i}do usando recursos da plataforma \emph{Eclipse Java 
+Development Tools}. O Cap\'{i}tulo 4 apresenta o resultado de uma investiga\c c\~{a}o 
+emp\'{i}rica, seguindo um estilo de pesquisa t\'{i}pico de minera\c c\~{a}o em 
+reposit\'{o}rios de software, que busca (a) compreender como os desenvolvedores 
+Java utilizam os recursos da linguagem de programa\c c\~{a}o e (b) identificar 
+oportunidades de melhoria de c\'{o}digo usando constru\c c\~{o}es mais 
+recentes da linguagem de programa\c c\~{a}o. Finalmente, o Cap\'{i}tulo 
+apresenta as considera\c c\~{o}es finais e algumas sugest\~{o}es de 
+trabalhos futuros. 
