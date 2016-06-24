@@ -1,0 +1,11 @@
+\frametitle{Resultados}
+\begin{block}{Try-Resource}
+
+\begin{figure}[Th]
+\center
+\includegraphics[scale=0.39]{../TCC/Imagens/ocorrenciasTryResource}
+\label{fig:tryresource}
+\caption{Adoção de \texttt{Try-Resource} nos projetos.}
+\end{figure}
+\end{block}
+

@@ -1,0 +1,9 @@
+\frametitle{Analisador Estático}
+\begin{block}{Arquitetura}
+\begin{figure}[h]
+\center
+\includegraphics[scale=0.30]{../TCC/Imagens/FuncionamentoVisitor}
+\label{fig:oportunidadesSwitchString}
+\caption{Funcionamento Analisador Estático.}
+\end{figure}
+\end{block}

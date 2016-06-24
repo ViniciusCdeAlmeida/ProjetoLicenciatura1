@@ -1,0 +1,20 @@
+\frametitle{Analisador Estático}
+\begin{block}{Criação de Visitor}
+\begin{itemize}
+\item Classe modelo (\texttt{br.unb.cic.sa.model}).
+\item MeuVisitor (\texttt{br.unb.cic.sa.visitors}).
+\begin{itemize}
+\item extends Visitor<class modelo>
+\end{itemize}
+
+\item Declarar no Bean.xml.
+\begin{itemize}
+\item Cabeçalho do csv de output mapeado pela classe modelo.
+\item O Visitor criado.
+\end{itemize}
+
+\item Dados exportados automaticamente ao fim de cada projeto.
+
+\end{itemize}
+
+\end{block}

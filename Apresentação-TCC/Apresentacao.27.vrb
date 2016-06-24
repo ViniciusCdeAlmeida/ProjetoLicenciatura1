@@ -1,0 +1,15 @@
+\frametitle{Conclusão  \& Trabalho Futuro}
+\begin{block}{Conclusão}
+\begin{itemize}
+\item Código obsoleto é mantido em versões atuais.
+\item Apesar da grande espectativa sobre Lambda, não existe um entusiasmo para adoção.
+\item A \texttt{realease} da linguagem não é importante no desenvolvimento.
+\item O Analisador é flexível e estável.
+\end{itemize}
+\end{block}
+
+\begin{block}{Trabalho Futuro}
+\begin{itemize}
+\item Implementar o refectoring utilizando linguagem de metaprogramação.
+\end{itemize}
+\end{block}
