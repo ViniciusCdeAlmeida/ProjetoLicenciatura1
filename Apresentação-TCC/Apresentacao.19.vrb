@@ -1,0 +1,8 @@
+\frametitle{Resultados}
+\begin{block}{Oportunidade de aplicar Lambda}
+\begin{itemize}
+\item \texttt{EXIST PATTERN, FILTER PATTERN e MAP PATTERN}.
+\item Foram encontrados 2496 oportunidades.
+\item 2190 correspondem a \texttt{MAP PATTERN}, 87\%.
+\end{itemize}
+\end{block}

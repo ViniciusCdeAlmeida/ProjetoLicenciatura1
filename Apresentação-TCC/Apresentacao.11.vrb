@@ -1,0 +1,9 @@
+\frametitle{Funcionamento Analisador Estático}
+\begin{block}{Classes Utilitárias}
+\begin{figure}[h]
+\center
+\includegraphics[scale=0.50]{../TCC/Imagens/InputArquitetura}
+\label{fig:oportunidadesSwitchString}
+\caption{Classes Utilitárias.}
+\end{figure}
+\end{block}
