@@ -1,4 +1,4 @@
-\chapter{Suporte Ferramental para Minerar Padr\~{o}es de Uso de Constru\c c\~{o}es da Linguagem Java}
+\chapter{Analisador Est\'{a}tico e Caracteriza\c c\~{a}o do Uso de Constru\c c\~{o}es da Linguagem Java}
 
 Com o intuito de obter uma compreens\~{a}o sobre o uso 
 das constru\c c\~{o}es da linguagem Java, tornou-se 
@@ -6,7 +6,14 @@ necess\'{a}ria a implementa\c c\~{a}o de uma ferramenta
 de an\'{a}lise est\'{a}tica de prop\'{o}sito bem 
 espec\'{i}fico, por outro lado com capacidade de 
 ser extens\'{i}vel para extrair diferentes tipos de 
-informa\c c\~{o}es. 
+informa\c c\~{o}es. Utilizando esse suporte ferramental, 
+descrito na Se\c c\~{a}o~\ref{sec:ferramenta}, foi conduzido 
+um estudo emp\'{i}rico para caracterizar o uso de 
+constru\c c\~{o}es da linguagem Java, cujos resultados 
+est\~{a}o descritos na Se\c c\~{a}o~\ref{sec:resultados}.
+
+\section{Analisador Est\'{a}tico}\label{sec:ferramenta}
+
 A Figura~\ref{fig:Arquitetura} apresenta 
 uma vis\~{a}o geral dos elementos que comp\~{o}em o 
 analisador est\'{a}tico desenvolvido durante a condu\c c\~{a}o 
@@ -48,7 +55,7 @@ da representa\c c\~{a}o correspondem \`{a}s constru\c c\~{o}es
 sint\'{a}ticas da linguagem (como pacotes, classes, interfaces métodos e atributos). 
 
 A~\acs{AST} provida pelo \acs{JDT} é composta por 122 classes, 
-como por exemplo existem 22 classe para representar senten\c cas  
+como, por exemplo, existem 22 classe para representar senten\c cas  
 como \textit{IF-Than-Else, Switch, While, BreakStatement} 
 entre outras. Exitem cinco classes que trabalham exclusivamente com métodos referenciados 
 e seis classes exclusivas que tratam os tipos declarados, como classes, interfaces 
@@ -59,7 +66,7 @@ Java 8 da linguagem e que produz a representação intermediária baseada no con
 mencionado anteriormente e que corresponde 
 a uma~\acs{AST} do código fonte. A plataforma tamb\'{e}m oferece 
 uma hierarquia de classes 
-para travessia na \acs{AST}, de acordo com o padr\~{a}o de projeto \textit{visitor}~\cite{Gamma:1995}, e 
+para travessia na \acs{AST}, de acordo com o padr\~{a}o de projeto \textit{Visitor}~\cite{Gamma:1995}, e 
 que facilita a análise estática 
 de código fonte.
 
@@ -77,8 +84,8 @@ deste projeto, foi implementado um conjunto de classes
 que visam obter maior facilidade e flexibilidade na exporta\c c\~{a}o das 
 informa\c c\~{o}es coletadas durante a travessia nos n\'{o}s das 
 ASTs. Essa flexibilidade foi alcançada com a utilização de introspecção de 
-código que em Java é conhecido como \textit{reflection}. O 
-restante desse cap\'{i}tulo apresenta mais detalhes sobre a arquitetura e 
+código, que em Java é conhecido como \textit{reflection}. As 
+pr\'{o}ximas se\c c\~{o}es apresentam mais detalhes sobre a arquitetura e 
 implementa\c c\~{a}o do analisador est\'{a}tico, descrevendo 
 as principais decis\~{o}es de projeto relacionadas \`{a}s cinco 
 fases do analisador est\'{a}tico. 
@@ -91,20 +98,21 @@ fases do analisador est\'{a}tico.
 \end{figure}
 
 
-\section{Defini\c c\~{a}o dos Projetos a Serem Analisados}
+\subsection{Entrada do Analisador Est\'{a}tico}
 
-O analisador estático recebe como entrada um arquivo \acs{CSV} (comma-separated values) 
+O analisador estático recebe como entrada um arquivo \acs{CSV} 
+(\emph{comma-separated values}) 
 que contém informa\c c\~{o}es sobre 
 os projetos a serem analisados, como nome do projeto, 
 caminho absoluto para uma pasta no sistema 
 de arquivos contendo o c\'{o}digo fonte do projeto e a quantidade de linhas de código previamente 
-computadas (conforme ilustrado na Figura:~\ref{fig:Arquitetura}). 
+computadas (conforme ilustrado na Figura~\ref{fig:Arquitetura}). 
 As informações contidas no arquivo \acs{CSV} s\~{a}o processadas 
 por um conjunto de classes utilitárias que percorrem os diretórios 
 de um determinado projeto e seleciona todos os arquivos fonte da linguagem Java. 
-Os códigos fontes Java encontrados servem ent\~{a}o como a entrada 
+Os arquivos contendo código fonte Java servem ent\~{a}o como a entrada 
 descrita na representa\c c\~{a}o abstrata 
-do analisador est\'{a}tico (Figura:~\ref{fig:Arquitetura}). Ou seja, para cada 
+do analisador est\'{a}tico (Figura~\ref{fig:Arquitetura}). Ou seja, para cada 
 projeto s\~{a}o recuperados os arquivos contendo 
 c\'{o}digo fonte Java, que s\~{a}o convertidos para uma 
 representa\c c\~{a}o intermedi\'{a}ria (por meio de 
@@ -125,7 +133,7 @@ processar a base de c\'{o}digo fonte de cada projeto. A Figura~\ref{fig:metodoAn
 apresenta a implementa\c c\~{a}o do m\'{e}todo \texttt{analyse}, que 
 recebe como par\^{a}metro um projeto. Note na linha seis da 
 Figura~\ref{fig:metodoAnalyse} que o resultado do \textit{parse} 
-em um arquivo fonte produz uma insta\^{a}ncia da classe 
+em um arquivo fonte produz uma inst\^{a}ncia da classe 
 \texttt{CompilationUnit} que pertence a plataforma 
 Eclipse JDT e que representa a AST de um determinado 
 arquivo Java. Essa classe possui um m\'{e}todo \texttt{accept}, 
@@ -210,7 +218,7 @@ public void analyse(Project p)  {
 %% \end{figure}
 
 
-\section{Análise da Representa\c c\~{a}o Intermedi\'{a}ria}
+\subsection{Análise da Representa\c c\~{a}o Intermedi\'{a}ria}
 
 Conforme mencionado na se\c c\~{a}o anterior, o resultado do 
 \textit{parser} em um arquivo fonte produz uma inst\^{a}ncia 
@@ -225,7 +233,7 @@ foi feita uma implementa\c c\~{a}o de biblioteca de
 presentes na representa\c c\~{a}o intermedi\'{a}ria.   
 
 %% Após todos os código fontes Java identificado é dado início a verificação destes arquivos onde são processados e gerado um \textit{parser} para que os \textit{visitors} pesquisam padrões previamente estabelecidos onde a pesquisa elaborada com o principal objetivo de reconhecer elementos e sua subestruturas contidos no código fonte.
-%% Com isso a representação intermediária deste analisador é o processamento do código fonte para convertê-lo em um \textit{parser} para que os  \textit{visitor} realizem sua pesquisa. A Figura:~\ref{fig:FuncionamentoAnalisador} demonstra o mais alto nível do funcionamento deste projeto.
+%% Com isso a representação intermediária deste analisador é o processamento do código fonte para convertê-lo em um \textit{parser} para que os  \textit{visitor} realizem sua pesquisa. A Figura~\ref{fig:FuncionamentoAnalisador} demonstra o mais alto nível do funcionamento deste projeto.
 
 %% \begin{figure}[h]
 %% 	\center
@@ -256,7 +264,7 @@ deseja identificar o perfil de ado\c c\~{a}o nos projetos, s\~{a}o criadas
 duas classes: uma classe (\texttt{public class C\{ \ldots \}}) 
 que representar as informa\c c\~{o}es de interesse 
 associadas ao uso de uma constru\c c\~{a}o da 
-linguagem Java e uma classe (\texttt{public class ConstVisitor extends Visitor<C> \{ \ldots \}}) 
+linguagem Java e uma classe (\texttt{public class CVisitor extends Visitor<C> \{ \ldots \}}) 
 que \emph{visita} a constru\c c\~{a}o de interesse na \'{a}rvore sint\'{a}tica abstrata. 
 Por exemplo, a Figura~\ref{fig:enum} apresenta 
 o c\'{o}digo necess\'{a}rio para visitar e popular informa\c c\~{o}es relacionadas a declara\c c\~{a}o de 
@@ -296,7 +304,7 @@ public class EnumDeclarationVisitor extends Visitor<EnumDeclaration> {
 \end{figure}
 
 
-%% O diagrama da Figura:~\ref*{fig:DiagramaVisitor} 
+%% O diagrama da Figura~\ref*{fig:DiagramaVisitor} 
 %% exibe de maneira técnica o procedimento de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. {\color{red}refletir se esse par\'{a}grafo eh necessário}
 
 %% \begin{figure}[h]
@@ -306,7 +314,7 @@ public class EnumDeclarationVisitor extends Visitor<EnumDeclaration> {
 %% 	\caption{Funcionamento analisador estático.}
 %% \end{figure}
 
-\subsection{Descri\c c\~{a}o dos Visitors}
+\subsubsection{Descri\c c\~{a}o dos Visitors}
 Os \textit{visitors} implementados neste projeto 
 s\~{a}o brevemente descritos a seguir, enquanto que 
 a Tabela~\ref{tab:VisitorsCriados} apresenta 
@@ -435,12 +443,13 @@ o intuito, por exemplo, de estimar a ado\c c\~{a}o de Java Generics.
 %% %\subsection{Injeçao de Dependência}
 
 
-\subsection{Extensibilidade para Inclus\~{a}o de Novos Visitors}
+\subsubsection{Extensibilidade para Inclus\~{a}o de Novos Visitors}
 
 Para tornar a solu\c c\~{a}o mais extens\'{i}vel, foram utilizados os mecanismos de 
 \emph{Inje\c c\~{a}o de Depend\^{e}ncia} e introspec\c c\~{a}o de c\'{o}digo. 
-Injeção de dependência \acs{DI}, \'{e} um mecanismo de extensibilidade mais 
-conhecido como um padr\~{a}o de projeto originalmente denominado de inversão de controle (\acs{IoC}). 
+Injeção de dependência (\emph{Dependency Injection}, \acs{DI}), 
+\'{e} um mecanismo de extensibilidade mais 
+conhecido como um padr\~{a}o de projeto originalmente denominado de inversão de controle (\emph{Inversion of Control}, \acs{IoC}). 
 De acordo com esse mecanismo, a sequência de criação dos objetos depende de como os mesmos são 
 solicitados pelo sistema. Ou seja, quando um sistema é iniciado, 
 os objetos necess\'{a}rios são instanciados e injetados de forma apropriada, 
@@ -448,18 +457,18 @@ geralmente de acordo com arquivo de configura\c c\~{o}es.
 O mecanismo de inje\c c\~{a}o de depend\^{e}ncia foi incorporado na arquitetura 
 com o uso do \textit{framework} Spring~\cite{SPRING_REF}, o que n\~{a}o causou 
 nenhum impacto significativo na solu\c c\~{a}o inicialmente proposta e que n\~{a}o 
-fazia uso de tal mecanismo os \emph{visitors} eram instanciados de maneira 
+fazia uso de tal mecanismo--- nesse caso, os \emph{visitors} eram instanciados de maneira 
 \emph{program\'{a}tica}. O uso do mecanismo de inje\c c\~{a}o de depend\^{e}ncia 
 serviu para flexibilizar n\~{a}o apenas a incorpora\c c\~{a}o de novos \emph{visitors}, 
 mas tamb\'{e}m para definir, de forma mais flex\'{i}vel, a estrat\'{e}gia de exporta\c c\~{a}o dos dados 
 coletados. Gra\c cas ao mecanismo de inje\c c\~{a}o de depend\^{e}ncia, o desenvolvedor pode 
 concentrar seu esforço na criação de \textit{visitors}, fazendo como que estes implementem a 
 l\'{o}gica necess\'{a}ria para extrair as informações. Para que novos \emph{visitors} se conectem 
-a plataforma, tornou-se necess\'{a}rio declarar o \textit{visitor} no arquivo com a defini\c c\~{a}o 
+\`{a} plataforma, tornou-se necess\'{a}rio declarar o \textit{visitor} no arquivo com a defini\c c\~{a}o 
 dos objetos gerenciados pelo Spring~\cite{SPRING_REF}.
 
 
-\section{Exporta\c c\~{a}o dos Dados}
+\subsection{Exporta\c c\~{a}o dos Dados}
 
 Na vers\~{a}o atual do suporte ferramental desenvolvido nessa monografia, os dados 
 coletados pelo analisador est\'{a}tico s\~{a}o exportados exclusivamente no formato 
@@ -532,7 +541,7 @@ public class CSVData<T> implements Data<T> {
 %
 %A análise tem como início a seleção de projetos, nesse caso seleção em repositórios públicos, onde após o download é informado analisador o diretório raiz onde estes estão localizados. Após é iniciado uma listagem dos arquivos fonte Java contidos nos projeto e contabilizados o total de \acs{LOC} e criado uma árvore sintática para cada arquivo encontrado através de um \textit{parser} provido pela biblioteca EclipseJDT~\cite{EclipseJDT}. Em seguida os \textit{Visitors} são instanciados com o objetivo de percorrer os nós destas árvores para pesquisar por construções de código previamente determinadas.
 %
-%Todas as construções pesquisadas quando encontradas pelos \textit{Visitors} são armazenadas temporariamente enquanto o analisador verifica todo projeto, quando é verificado a última árvore sintática pelos \textit{Visitors} é iniciado o processo de exportar os dados encontrados para um arquivo \acs{CSV} o conteúdo relevante destes blocos, a Figura:~\ref{fig:Arquitetura} demostra de maneira clara o funcionamento do analisador. Após a exportação dos dados o analisador inicia todo processo novamente caso exista mais de um projeto.
+%Todas as construções pesquisadas quando encontradas pelos \textit{Visitors} são armazenadas temporariamente enquanto o analisador verifica todo projeto, quando é verificado a última árvore sintática pelos \textit{Visitors} é iniciado o processo de exportar os dados encontrados para um arquivo \acs{CSV} o conteúdo relevante destes blocos, a Figura~\ref{fig:Arquitetura} demostra de maneira clara o funcionamento do analisador. Após a exportação dos dados o analisador inicia todo processo novamente caso exista mais de um projeto.
 %
 %Devido ao mecanismo de \textit{reflection} proveniente da linguagem Java, o desenvolvedor não tem a necessidade de implementar código para exportação de dados tendo em vista que isto ocorre automaticamente através da introspecção realizada pelo analisador extraindo os dados armazenados pelos \textit{Visitors}.
 

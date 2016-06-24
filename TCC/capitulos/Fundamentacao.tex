@@ -20,21 +20,20 @@ evoluç\~{a}o constitui uma nova perspectiva
 de \textit{refactoring}, que se caracteriza 
 por uma transforma\c c\~{a}o de c\'{o}digo que 
 preserva comportamento e que passa a usar  
-novas constru\c c\~{o}es da linguagem de programa\c c\~{a}o 
-(conforme defendido por Overbey and Johnson~\cite{Overbey:2009}). 
+novas constru\c c\~{o}es da linguagem de programa\c c\~{a}o~\cite{Overbey:2009}). 
 
 Para atingir o objetivo do trabalho de conclus\~{a}o de curso, 
-foi necess\'{a}rio estudar temas relacionados 
+foi necess\'{a}rio compreender temas relacionados 
 \`{a} evolu\c c\~{a}o da linguagem Java, engenharia de 
 linguagens de software (ou no Ingl\^{e}s \emph{Software 
 Language Engineering}) e refatoramento de c\'{o}digo 
 (\emph{code refactoring}). Para fornecer uma introdu\c c\~{a}o ao leitor, 
-esse cap\'{i}tulo apresenta 
+este cap\'{i}tulo apresenta 
 uma vis\~{a}o geral sobre esses temas. Note que n\~{a}o foi objetivo
 deste trabalho implementar um mecanismo de transforma\c c\~{a}o 
 de c\'{o}digo, mas sim construir um suporte ferramental 
 efetivo para compreender como os desenvolvedores usam as 
-constru\c c\~{o}es existentes na linguagem Java e {\bf identificar 
+constru\c c\~{o}es existentes na linguagem Java e \emph{identificar 
 oportunidades de melhoria de c\'{o}digo}, algo essencial para 
 permitir a atualiza\c c\~{a}o de um c\'{o}digo existente 
 que usa constru\c c\~{o}es ultrapassadas de uma 
@@ -58,7 +57,7 @@ de componentes de software para o navegador \textit{Netscape}.
 
 Java \'{e} uma linguagem de programaç\~{a}o de prop\'{o}sito geral, 
 orientada a objetos e concebida para ser independente de plataforma, 
-gra\c cas ao uso de uma m\'{a}quina virtual a 
+gra\c cas ao uso de uma m\'{a}quina virtual: a 
 \emph{Java Virtual Machine} (JVM). Isso permite 
 que uma aplica\c c\~{a}o Java
 possa ser executada em qualquer ambiente computacional que possui 
@@ -159,7 +158,7 @@ concorrente) est\~{a}o sendo propostos para a linguagem com base em tal constru\
 A manipulaç\~{a}o de artefatos escritos em 
 uma linguagem de programaç\~{a}o (ou em linguagens de software) 
 \'{e} uma tarefa desafiadora, mas que permite o desenvolvimento 
-de software aplic\'{a}vel a diferentes cen\'{a}rios, mas que permitem, por exemplo, 
+de software aplic\'{a}vel a diferentes cen\'{a}rios, como, por exemplo, 
 manipular arquivos \texttt{XML}, transformar 
 informa\c c\~{o}es e scripts presentes 
 em bancos de dados legados, efetuar a tradu\c c\~{a}o de programas 
@@ -168,8 +167,8 @@ escritos em uma vers\~{a}o desatualizada de uma linguagem.
 Por envolver diferentes est\'{a}gios, o desenho desse tipo de solu\c c\~{a}o requer, geralmente, 
 um estilo arquitetural baseado em um \emph{pipeline},  onde cada est\'{a}gio necess\'{a}rio \`{a}  
  manipulaç\~{a}o de uma linguagem \'{e} implementado como um componente de software. Quando combinados, 
-tais componentes proporcionam um programa capaz de realizar a tarefa desejada para realizar o processamento 
-de uma ou mais linguagens. A Figura:~\ref{fig:stagesLanguageApp} exibe uma organiza\c c\~{a}o 
+tais componentes constituem uma solu\c c\~{a}o que realiza o processamento 
+de uma ou mais linguagens. A Figura~\ref{fig:stagesLanguageApp} exibe uma organiza\c c\~{a}o 
 t\'{i}pica de componentes para o processamento de artefatos escritos em uma linguagem de 
 programa\c c\~{a}o, onde a cada est\'{a}gio do \emph{pipeline}, um componente 
 utiliza os resultados do est\'{a}gio anterior para gerar uma sa\'{i}da para o componente 
@@ -182,9 +181,9 @@ que realiza o processamento no est\'{a}gio posterior.
   \caption{Fases de aplicaç\~{o}es com linguagens.}
 \end{figure}
 
-Existe um esforço consider\'{a}vel para tratar a engenharia de linguagens de programaç\~{a}o como sendo o desenvolvimento de um software comum. 
-Algumas aplicaç\~{o}es t\'{i}picas deste dom\'{i}nio s\~{a}o \texttt{reconhecedores, interpretadores, tradutores e geradores}, 
-conforme menciona Terrance Parr~\cite{Parr:2009:LIP:1823613}. 
+Existe uma forte rela\c c\~{a}o entre a engenharia de linguagens de programaç\~{a}o 
+e a constru\c c\~{a}o t\'{i}pica de um software, onde as aplica\c c\~{o}es deste 
+dom\'{i}nio compreendemo \texttt{reconhecedores, interpretadores, tradutores e geradores}~\cite{Parr:2009:LIP:1823613}. 
 
 %% Um \emph{Reconhecedor} \'{e} uma construç\~{a}o capaz de receber uma estrutura de dado como um input ou um fluxo de inputs. O fluxo de input pode geralmente \'{e} texto puro mas pode ser utilizado dado bin\'{a}rio. Como exemplo de aplicaç\~{a}o tem-se ferramentas analisadoras de referências cruzadas, e ferramentas para carregar classes.
 
@@ -201,20 +200,20 @@ ferramentas para a identifica\c c\~{a}o est\'{a}tica de \emph{bugs}, por exemplo
 implementadas usando uma organiza\c c\~{a}o como a representada na Figura~\ref{fig:stagesLanguageApp}. 
 A ferramenta \textit{FindBugs}~\cite{FindBugs} serve como um exemplo de solu\c c\~{a}o para identifica\c c\~{a}o 
 de poss\'{i}veis erros em programas escritos na linguagem Java, a partir do \emph{bytecode} resultante do 
-processo de compila\c c\~{a}o. Note na Figura:~\ref{fig:findBugs} a semelhan\c ca arquitetural com as 
+processo de compila\c c\~{a}o. Note na Figura~\ref{fig:findBugs} a semelhan\c ca arquitetural com as 
 abordagens t\'{i}picas para o processamento de artefatos de linguagens de programa\c c\~{a}o. 
 
 \begin{figure}[h]
 	\center
 	\includegraphics[scale=0.9]{Imagens/pipelineFindbugs}
 	\label{fig:findBugs}
-	\caption{Fase do pipiline do FindBugs.}
+	\caption{Fases do pipiline do FindBugs.}
 \end{figure}
 
 
 Especificamente no caso deste trabalho, percebeu-se a necessidade de construç\~{a}o de um software que 
 realiza a an\'{a}lise est\'{a}tica de c\'{o}digo para identificar tanto o uso quanto as oportunidades do uso de construç\~{o}es 
-sint\'{a}ticas / sem\^{a}nticas da linguagem Java. Em termos arquiteturais, a Figura:~\ref{fig:stagesAnalyzer} ilustra, 
+sint\'{a}ticas / sem\^{a}nticas da linguagem Java. Em termos arquiteturais, a Figura~\ref{fig:stagesAnalyzer} ilustra, 
 em um alto n\'{i}vel de abstra\c c\~{a}o, os principais componentes que formam o \emph{pipeline} do analisador est\'{a}tico 
 implementado nesse trabalho e cujos detalhes de implementa\c c\~{a}o s\~{a}o apresentados no pr\'{o}ximo cap\'{i}tulo.
 
@@ -226,11 +225,11 @@ implementado nesse trabalho e cujos detalhes de implementa\c c\~{a}o s\~{a}o apr
 \end{figure}
 
 
-Pode-se compreender este analisador como um \emph{grammarware} pois \'{e} um software 
-que depende fortemente de uma gram\'{a}tica para seu funcionamento neste caso a gram\'{a}tica da linguagem Java. 
+Pode-se compreender este analisador como um \emph{grammarware}, pois \'{e} um software 
+que depende fortemente de uma gram\'{a}tica para seu funcionamento; neste caso a gram\'{a}tica da linguagem Java. 
 %\emph{Grammawares} demandam um conhecimento essencial das  gram\'{a}ticas que manipulam. 
 %Como exemplos de arquiteturas que possuem tal conhecimento tem-se os programas de convers\~{a}o de dados, processadores de \texttt{XML} e os que efetuam \textit{parses}.
-De acordo com Paul Klint et al~\cite{klint2005toward}, alguns cen\'{a}rios favorecem o desenvolvimento de softwares alinhados com a abordagem 
+De acordo com Paul Klint et al.~\cite{klint2005toward}, alguns cen\'{a}rios favorecem o desenvolvimento de softwares alinhados com a abordagem 
 \emph{grammarware}, com destaque \`{a}s aplicaç\~{o}es que necessitam importar perfis de usu\'{a}rios para promover a transiç\~{a}o da vers\~{a}o 
 antiga para uma vers\~{a}o nova. 
 Esta transiç\~{a}o deve ser robusta e provavelmente necessitar\'{a} de adptaç\~{a}o dever\'{a} passar 
@@ -256,31 +255,39 @@ para a \emph{linguagem} destino.
 %Reconhecer uma frase acarreta em duas coisas, distingui-la de outras construç\~{o}es e identificar os elementos e as subestruturas que comp\~{o}em esta frase. Por exemplo se uma frase for reconhecida como um \textit{assignment}, pode-se identificar as vari\'{a}veis a esquerda do operador \texttt{=} e uma express\~{a}o que \'{e} a subestrutura a direita. Este ato de reconhecer uma frase \'{e} denominado \textit{Parse}.
 
 
-\section{Parse}
+\section{Reconhecedores Sint\'{a}ticos (Parses)}
 
-Confome discutido anteriormente, o parser de programas escritos em uma linguagem de program\c c\~{a}o 
-\'{e} um dos componentes necess\'{a}rios para a constru\c c\~{a}o de ferramentas de an\'{a}lise 
+Confome discutido anteriormente, os reconhecedores (parsers, deste ponto 
+em diante) de programas escritos em uma linguagem de program\c c\~{a}o 
+s\~{a}o componentes necess\'{a}rios para a constru\c c\~{a}o de ferramentas de an\'{a}lise 
 est\'{a}tica. Vale ressaltar que o analisador est\'{a}tico constru\'{i}do neste trabalho reusou uma infraestrutura 
 da plataforma Eclipse que oferece um parser atualizado da linguagem Java. Por outro lado, como 
 se trata de um tipo de componente central para solu\c c\~{o}es baseadas em gram\'{a}tica, esta se\c c\~{a}o 
-revisa brevemente quatro padr\~{o}es adotados para a implementa\c c\~{a}o de parsers segundo Terence Parr~\cite{Parr:2009:LIP:1823613}. S\~{a}o eles: 
+revisa brevemente quatro padr\~{o}es adotados para a implementa\c c\~{a}o de parsers~\cite{Parr:2009:LIP:1823613}.
+% S\~{a}o eles: 
 
 \begin{itemize}
-	\item \textbf{Mapping Grammars to Recursive-Descent Recognizers}\\
+	\item \emph{Mapping Grammars to Recursive-Descent Recognizers}\\
 
 	Sua proposta \'{e} traduzir uma gram\'{a}tica para uma implementa\c c\~{a}o que usa recurs\~{a}o descendente 
 para reconhecer frases e sentenças em uma linguagem especifica. Este padr\~{a}o identifica o n\'{u}cleo do fluxo de controle 
-para qualquer recurs\~{a}o descendente e \'{e} utilizado nos 3 padr\~{o}es seguintes. Para construir um reconhecedor l\'{e}xico ou \textit{parsers} 
+para qualquer recurs\~{a}o descendente e \'{e} utilizado nos pr\'{o}ximos tr\^{e}s 
+padr\~{o}es seguintes. Para construir um parser
 manualmente o melhor ponto de in\'{i}cio \'{e} a gram\'{a}tica, com isso este padr\~{a}o fornece uma maneira simples de construir reconhecedores diretamente de sua gram\'{a}tica.
 	
-	\item \textbf{LL(1) Recursive-Descent Lexer}\\
+	\item \emph{LL(1) Recursive-Descent Lexer}\\
 
 	O objetivo deste padr\~{a}o \'{e} emitir uma sequência de s\'{i}mbolos. Cada s\'{i}mbolo tem dois atributos prim\'{a}rios: 
-um tipo de \textit{token} (s\'{i}mbolo da categoria) e o texto associado por exemplo 
-	no português, temos categorias como verbos e substantivos, bem como s\'{i}mbolos de pontuaç\~{a}o, como v\'{i}rgulas e pontos. Todas as palavras dentro de uma determinada categoria s\~{a}o do mesmo tipo de \textit{token}, embora o texto associado seja diferente. O tipo de nome do \textit{token} representa o categoria identificador. Ent\~{a}o precisamos tipos de \textit{token} para o vocabul\'{a}rio \textit{string} fixa s\'{i}mbolos como tamb\'{e}m lidar com espaços em branco e coment\'{a}rios.
-	\item \textbf{LL(1) Recursive-Descent Parser}\\
-	Esse \'{e} o mais conhecido padr\~{a}o de an\'{a}lise descendente recursiva. Ele s\'{o} precisa	a olhar para o s\'{i}mbolo de entrada atual para tomar decis\~{o}es de an\'{a}lise. Para cada regra de gram\'{a}tica, existe um m\'{e}todo de an\'{a}lise no analisador. Este padr\~{a}o analisa a estrutura sint\'{a}tica da sequência sinal de uma frase usando um \'{u}nico \textit{token} \textit{lookahead}. Este analisador pertence à LL(1) classe do analisador de cima para baixo, em especial, porque usa um \'{u}nico sinal de verificaç\~{a}o à frente (da\'{i} o "1" no nome). É o principal mecanismo de todos os padr\~{o}es de an\'{a}lise subsequentes. Este padr\~{a}o mostra como implementar as decis\~{o}es de an\'{a}lise que utilizam um s\'{i}mbolo \'{u}nico da vis\~{a}o antecipada. É a forma mais fraca de descendente recursivo parser, mas o mais f\'{a}cil de compreender e aplicar.
-	\item \textbf{LL(k) Recursive-Descent Parser}\\
+um tipo de \textit{token} (s\'{i}mbolo da categoria) e o texto associado. Por exemplo, 
+	no Português, temos categorias como verbos e substantivos, bem como s\'{i}mbolos de pontuaç\~{a}o, como v\'{i}rgulas e pontos. Todas as palavras dentro de uma determinada categoria s\~{a}o do mesmo tipo de \textit{token}, embora o texto associado seja diferente. O tipo de nome do \textit{token} representa o categoria identificador. Ent\~{a}o precisamos tipos de \textit{token} para o vocabul\'{a}rio \textit{string} fixa s\'{i}mbolos como tamb\'{e}m lidar com espaços em branco e coment\'{a}rios.
+
+	\item \emph{LL(1) Recursive-Descent Parser}\\
+	Esse \'{e} o mais conhecido padr\~{a}o de an\'{a}lise descendente recursiva. Ele s\'{o} precisa	consultar o s\'{i}mbolo de entrada atual para tomar decis\~{o}es de an\'{a}lise. Para cada regra de gram\'{a}tica, existe um m\'{e}todo de an\'{a}lise no analisador. Este padr\~{a}o analisa a estrutura sint\'{a}tica da sequência sinal de uma frase usando um \'{u}nico \textit{token} \textit{lookahead}. Este analisador pertence à LL(1) classe do analisador de cima para baixo, em especial, porque usa um \'{u}nico sinal de verificaç\~{a}o à frente (da\'{i} 
+o ``1" no nome). É o principal mecanismo de todos os padr\~{o}es de an\'{a}lise subsequentes. Este padr\~{a}o mostra 
+como implementar as decis\~{o}es de an\'{a}lise que utilizam um s\'{i}mbolo \'{u}nico da vis\~{a}o antecipada. 
+É a forma mais fraca de descendente recursivo parser, mas o mais f\'{a}cil de compreender e aplicar.
+
+	\item \emph{LL(k) Recursive-Descent Parser}\\
 	Este padr\~{a}o utiliza a o modo \textit{top-down} para percorrer um \'{a}rvore sem\^{a}ntica com o aux\'{i}lio de express\~{o}es booleanas que ajudam na tomada de decis\~{a}o e estas express\~{o}es s\~{a}o conhecidas como predicados sem\^{a}nticos.
 	
 \end{itemize}
@@ -289,18 +296,59 @@ um tipo de \textit{token} (s\'{i}mbolo da categoria) e o texto associado por exe
 
 \section{Refactoring}\label{sec:refactoring}
 
-Por defini\c{c}\~{a}o o \textit{refactoring} \'{e} mudan\c{c}a interna do software sem alterar seu comportamento tornando assim seu entendimento mais claro. Visando evitar que sejam perdidas diversa horas para identificar poss\'{\i}veis oportunidades de classes onde possam ser evolu\'{\i}das, este trabalho de conclus\~{a}o identifica trechos de c\'{o}digo dentro das classes que podem ser evolu\'{i}dos.
+Por defini\c{c}\~{a}o, \textit{refactoring} \'{e} corresponde a 
+um conjunto de transforma\c c\~{o}es  
+de c\'{o}digo que objetiva melhorar atributos internos de qualidade  
+do software (como facilidade de compreens\~{a}o e 
+manuten\c c\~{a}o), mas que \'{e} caracterizado por preservar o comportamento do 
+sistema. 
+%% Esse tipo de transforma\c c\~{a}o Visando evitar que sejam perdidas diversa horas para identificar poss\'{\i}veis 
+%% oportunidades de classes onde possam ser evolu\'{\i}das, este trabalho de conclus\~{a}o 
+%% identifica trechos de c\'{o}digo dentro das classes que podem ser evolu\'{i}dos.
 
-Muitas modifica\c{c}\~{o}es podem ser feitas em um software mas segundo M.Fowler et al~\cite{martinFowlerRafactoring} somente \'{e} considerado \textit{refactoring} mudan\c{c}as que facilitam o entendimento do software. Contrastando esta vis\~{a}o existem mudan\c{c}as com objetivo de melhorar o desempenho do software onde somente s\~{a}o alterada as estruturas internas permanecendo inalterado o comportamento do software. Entretanto a melhoria na performance do software geralmente eleva o grau de dificuldade para sua compreens\~{a}o, o que faz com que algumas dessas evolu\c{c}\~{o}es visando desempenho n\~{a}o sejam caracterizadas como \textit{refactoring} dado a defini\c{c}\~{a}o.
+Ou seja, muitos tipos de transforma\c c\~{a}o 
+podem ser aplicados em um software, mas, segundo M. Fowler et al.~\cite{martinFowlerRafactoring}, 
+uma transforma\c c\~{a}o somente pode ser considerada um \textit{refactoring} quando 
+leva a uma melhoria na facilidade de entendimento do software. 
+Contrastando esta vis\~{a}o, existem mudan\c{c}as com objetivo de melhorar o desempenho do 
+software onde somente s\~{a}o alteradas as estruturas internas; permanecendo inalterado o comportamento do software. 
+Entretanto, uma melhoria na performance do software geralmente eleva o grau de dificuldade para sua 
+compreens\~{a}o, o que faz com que algumas dessas evolu\c{c}\~{o}es visando desempenho n\~{a}o sejam 
+caracterizadas como \textit{refactoring}.
 
-Dentre refatorar para facilitar o entendimento, para tornar o programa mais r\'{a}pido, para encontrar bugs e para melhorar/atualizar o design, motivos apresentados por M.Fowler et al~\cite{martinFowlerRafactoring}, este trabalho concentrou-se no \'{u}ltimo motivo para identificar poss\'{\i}veis casos onde o design do software pode ser evolu\'{\i}do por substituir funcionalidades de vers\~{o}es anteriores da linguagem Java.
+%% Dentre refatorar para facilitar o entendimento, para tornar o programa mais eficiente, 
+%% para encontrar bugs e para melhorar/atualizar o design, motivos apresentados por M.Fowler 
+%% et al~\cite{martinFowlerRafactoring}, este trabalho concentrou-se no \'{u}ltimo 
+%% motivo para identificar poss\'{\i}veis casos onde o design do software pode ser evolu\'{\i}do por 
+%% substituir funcionalidades de vers\~{o}es anteriores da linguagem Java.
 
-Um software que n\~{a}o \'{e} refatorado tem o seu desgin deteriorado, o que leva a dificultar o entendimento do c\'{o}digo. Um design ultrapassado tem mais c\'{o}digo que o necess\'{a}rio para realizar a mesma tarefa. O que leva a um aspecto crucial para a melhoria, que \'{e} código duplicado. Vale ressaltar que reduzir a quantidade de c\'{o}digo n\~{a}o impl\'{i}ca necessariamente na melhora do desempenho do software mas sim em ter um design mais atual.
+De acordo com as abordagens \'{a}geis de 
+desenvolvimento, um software que n\~{a}o \'{e} constantemente melhorado em 
+termos de decis\~{o}es de design, tem o seu design deteriorado, 
+o que leva a dificuldades de entendimento e modifica\c c\~{a}o do c\'{o}digo. 
+Em geral, um design inadequado tem mais c\'{o}digo 
+que o necess\'{a}rio para realizar a mesma tarefa. O que leva a um sintoma apontado 
+como crucial para oportunidades de melhoria: 
+a exist\^{e}ncia de código duplicado (frequentemente considerado um 
+\emph{bad smell}). 
 
-O Listing:~\ref{lst:fp}, exemplifica de forma emp\'{i}rica um {\it filter} em um {\it collection} onde ocorre uma redu\c{c}\~{a}o significativa de c\'{o}digo al\'{e}m de um design mais atual por utilizar express\~{o}es lambda que foram adicionadas em Java 8. Vale destacar que o Listing:~\ref{lst:fp} continua com mesmo comportamento ap\'{o}s o \textit{refactoring}, desta forma nenhum usu\'{a}rio ou desenvolvedor pode alegar que o software foi modificado.
+%Vale ressaltar que reduzir a quantidade 
+%de c\'{o}digo n\~{a}o impl\'{i}ca necessariamente na melhora do desempenho do software, 
+%mas sim em ter um design mais adequado.
+
+A Listagem~\ref{lst:fp} exemplifica um poss\'{i}vel \emph{refactoring} relacionado \`{a} 
+redu\c c\~{a}o da quantidade de linhas de c\'{o}digo e \emph{rejuvenecimento} 
+das decis\~{o}es de design com o uso de constru\c c\~{o}es mais atuais da 
+linguagem Java. Neste caso, a parte superior da listagem descreve um c\'{o}digo 
+escrito antes da vers\~{a}o Java 8 da linguagem; enquanto que a parte inferior descreve o 
+c\'{o}digo resultante ap\'{o}s o \emph{rejuvenecimento}--- demonstrando a   
+aplica\c c\~{a}o de um {\it filter} em uma {\it collection}. No exemplo, \'{e}  
+poss\'{i}Vel perceber uma redu\c{c}\~{a}o significativa de c\'{o}digo. 
+Vale destacar que a transforma\c c\~{a}o descrita
+na Listagem~\ref{lst:fp} preserva o comportamento
 
 
-\begin{lstlisting}[caption={The \textsc{Exmplo de Filter Pattern}}\label{lst:fp},language=Java] 
+\begin{lstlisting}[caption={Uso do padr\~{a}o \textsc{Filter}}\label{lst:fp},language=Java] 
 //...
 for(T e: collection) {
    if(e.pred(args)) {
@@ -315,11 +363,15 @@ collection.stream().
 \end{lstlisting}
 
 
-Conforme explica M.Fowler et al~\cite{martinFowlerRafactoring} algumas vezes n\~{a}o se deve ser refatorar o c\'{o}digo. Um desses casos \'{e} quando existir a necessidade de reescrever todo o c\'{o}digo, um outro caso \'{e} a necessidade de manter um  c\'{o}digo de f\'{a}cil entendimento para os programadores iniciantes. O que \'{e} uma decis\~{a}o dif\'{i}cil, no caso do Listing:~\ref{lst:fp} \'{e} poss\'{\i}vel fazer uma evolu\c{c}\~{a}o com caracter\'{i}sticas funcionais introduzidas em Java 8 entretanto alguns desenvolvedores podem n\~{a}o possuir  conhecimento adequado de tal funcionalidade e com isso \'{e} recomendado que n\~{a}o seja evolu\'{\i}do o c\'{o}digo.
+%% Conforme explica M.Fowler et al~\cite{martinFowlerRafactoring} algumas vezes n\~{a}o se deve 
+%% ser refatorar o c\'{o}digo. Um desses casos \'{e} quando existir a necessidade de reescrever todo o c\'{o}digo, um outro caso \'{e} a necessidade de manter um  c\'{o}digo de f\'{a}cil entendimento para os programadores iniciantes. O que \'{e} uma decis\~{a}o dif\'{i}cil, no caso do Listing:~\ref{lst:fp} \'{e} poss\'{\i}vel fazer uma evolu\c{c}\~{a}o com caracter\'{i}sticas funcionais introduzidas em Java 8 entretanto alguns desenvolvedores podem n\~{a}o possuir  conhecimento adequado de tal funcionalidade e com isso \'{e} recomendado que n\~{a}o seja evolu\'{\i}do o c\'{o}digo.
 
 
-Tendo em vista que aplicar um \textit{refactoring} demanda tempo isto torna uma tarefa custosa para empresas, este fator \'{e} determinante para que programadores n\~{a}o refatorem seu c\'{o}digos em muitos casos. Com esse cen\'{a}rio \'{e} imprecind\'{i}vel o uso de ferramentas que refatorem ou auxiliem nesta tarefa. Auxiliando nesta tarefa este trabalho identifica possibilidades de refatora\c{c}\~{a}o, ao utilizarem estas ferramentas torna mais acessível ao programador e a emrpesa refatorar pois o trabalho é direcionado fazendo com que tempo seja poupado.
-
+Tendo em vista que aplicar um \textit{refactoring} demanda tempo, 
+isto pode se tornar uma tarefa custosa para empresas. Este fator \'{e} determinante 
+para que programadores n\~{a}o utilizem essa pr\'{a}tica frequentemente. Com esse 
+cen\'{a}rio, \'{e} imprecind\'{i}vel o uso de ferramentas que refatorem ou auxiliem 
+nessa atividade. 
 
 
 \section{Análise estática}\label{sec:as}
