@@ -1,0 +1,17 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: monografia.aux
+The style file: plain.bst
+Database file #1: referencias/referencias.bib
+I was expecting a `,' or a `}'---line 199 of file referencias/referencias.bib
+ :  
+ :  booktitle = {Proceedings of the 2015 15th IEEE International Working Conference on Source Code Analysis and Manipulation},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in EclipseJDT
+Warning--to sort, need author or key in FindBugs
+Warning--to sort, need author or key in SPRING_REF
+Warning--to sort, need author or key in docSwitch
+Warning--empty author and editor in martinFowlerRafactoring
+Warning--empty booktitle in bonifacio:scam2015
+Warning--empty year in bonifacio:scam2015
+Warning--empty journal in Dyer:2013
+(There was 1 error message)
