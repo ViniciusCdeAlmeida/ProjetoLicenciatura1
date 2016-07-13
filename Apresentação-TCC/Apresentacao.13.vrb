@@ -1,20 +1,16 @@
-\frametitle{Analisador Estático}
-\begin{block}{Criação de Visitor}
+\frametitle{Resultados}
+\begin{block}{Generics}
 \begin{itemize}
-\item Classe modelo (\texttt{br.unb.cic.sa.model}).
-\item MeuVisitor (\texttt{br.unb.cic.sa.visitors}).
-\begin{itemize}
-\item extends Visitor<class modelo>
-\end{itemize}
+\item 16\% dos projetos não declaram \texttt{Generics}.
 
-\item Declarar no Bean.xml.
-\begin{itemize}
-\item Cabeçalho do csv de output mapeado pela classe modelo.
-\item O Visitor criado.
-\end{itemize}
+\item \textit{Commons Collections} possui 75\% dos tipos genéricos.
 
-\item Dados exportados automaticamente ao fim de cada projeto.
+\item De 925.925 atributos e variáveis apenas 9.1\% são tipos genéricos (84880).
+
+\item \texttt{List<String>} possui quase 25\% de todos os genéricos conforme Parnis.
+
+\item Apenas 0.84\% de 730.720 métodos parametrizados.
+
 
 \end{itemize}
-
 \end{block}

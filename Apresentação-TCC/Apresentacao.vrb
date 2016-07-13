@@ -2,15 +2,16 @@
 %\begin{description} \item[\textbf{Objetivo Geral}]\end{description}
 \begin{block}{Geral}
 \begin{itemize}
-\item Elaborar um analisador estático flexível.
+\item Analisar construções da linguagem Java em projetos open-source.
 \end{itemize}
 \end{block}
 
 %\begin{description} \item[\textbf{Objetivo Geral}]\end{description}
 \begin{block}{Específicos}
 \begin{itemize}
-\item Identificar de forma eficiente construções na linguagem Java.
-
-\item Gerar relatório com as identificações realizadas.
+\item Implementar um ambiente favorável para extrair informações dos projetos.
+\item Avaliar construções em diferentes versões da linguagem.
+\item Pesquisar o motivo da não adoção de algumas construções Java.
+\item Contrastar os resultados de nossas análises com pesquisas recentes.
 \end{itemize}
 \end{block}

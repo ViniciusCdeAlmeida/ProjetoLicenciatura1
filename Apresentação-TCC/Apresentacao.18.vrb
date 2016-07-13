@@ -1,24 +1,8 @@
 \frametitle{Resultados}
-\begin{block}{Lambda}
+\begin{block}{Oportunidade de aplicar Lambda}
 \begin{itemize}
-\item Apenas 5\% faz uso de \texttt{Lamba Expression}.
-\item Utilização apenas em Teste Unitários.
-\item Esforços individuais para incorporar \texttt{Lambda}.
+\item \texttt{EXIST PATTERN, FILTER PATTERN e MAP PATTERN}.
+\item Foram encontrados 2496 oportunidades.
+\item 2190 correspondem a \texttt{MAP PATTERN}, 87\%.
 \end{itemize}
-
-\begin{table}[h]\footnotesize
-\centering
-\caption{Ocorrências de Expressões Lambda.}
-\begin{tabular}{cc}
-\hline
-Sistema & Ocorrências Expressões Lambda\\
-\hline \hline
-\texttt{Hinernate} & 168 \\
-\texttt{Jetty} & 2 \\
-\texttt{Lucene} & 11 \\
-\texttt{Spark} & 77 \\
-\texttt{Spring-framework} & 121 \\ \hline
-\end{tabular}
-\label{tab:adocaoLambda} %std means summary of type declarations
-\end{table}
 \end{block}

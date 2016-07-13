@@ -144,13 +144,10 @@ Java por meio de uma an\'{a}lise da representa\c c\~{a}o
 intermedi\'{a}ria. Isso \'{e} feito considerando cada um dos 
 \emph{visitors} aplicados em uma an\'{a}lise espec\'{i}fica. 
   
-
-\begin{figure}[htb]
+\begin{figure}[ht]
 \begin{lstlisting}[numbers=left,   numberstyle=\tiny]
 public class Main {
-   
   public static void main(String[] args) {
-    
     String pathCsv = ``''; 
     
     if(args.length == 1) {
@@ -186,7 +183,7 @@ public class Main {
 \end{figure}
 
 
-\begin{figure}[htb]
+\begin{figure}[ht]
 \begin{lstlisting}[language=Java]
 public void analyse(Project p)  {
   CompilationUnit compilationUnit = null;
@@ -494,7 +491,7 @@ como isso, export\'{a}-los em arquivos \acs{CSV} de saída.
 A Figura~\ref{fig:exportacao} apresenta o uso desse mecanismo para generalizar a exporta\c c\~{a}o dos 
 dados. 
 
-\begin{figure}
+\begin{figure}[ht]
 \begin{lstlisting}[language=Java]
 public class CSVData<T> implements Data<T> {
 

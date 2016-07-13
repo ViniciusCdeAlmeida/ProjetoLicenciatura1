@@ -1,8 +1,27 @@
 \frametitle{Resultados}
-\begin{block}{Oportunidade de aplicar Lambda}
+\begin{block}{Multi-catch}
 \begin{itemize}
-\item \texttt{EXIST PATTERN, FILTER PATTERN e MAP PATTERN}.
-\item Foram encontrados 2496 oportunidades.
-\item 2190 correspondem a \texttt{MAP PATTERN}, 87\%.
+\item Representam 1\% do mecanismo de exceção.
+
+\item 95\% dos projetos com oportunidades reais.
+
+\item 1474 \texttt{Try} com \texttt{catch} similares repetidos.
+
 \end{itemize}
+
 \end{block}
+
+\begin{table}[h]
+\centering
+\caption{Oportunidades de \texttt{multi-catch} por tipo do sistema.}
+\begin{tabular}{cc}
+\hline
+Natureza & Ocorrências \\
+\hline \hline
+\texttt{Application} & 551 \\
+\texttt{Library} &  464 \\
+\texttt{Servers - Database} &  459 \\ \hline
+\end{tabular}
+\label{tab:oportunidadesMulticatch} %std means summary of type declarations
+\end{table}
+

@@ -2,9 +2,9 @@
 \select@language {brazil}
 \beamer@sectionintoc {1}{Cen\IeC {\'a}rio}{3}{0}{1}
 \beamer@sectionintoc {2}{Motiva\IeC {\c c}\IeC {\~a}o}{4}{0}{2}
-\beamer@sectionintoc {3}{Revis\IeC {\~a}o Te\IeC {\'o}rica}{6}{0}{3}
-\beamer@sectionintoc {4}{Diretrizes da pesquisa}{7}{0}{4}
-\beamer@sectionintoc {5}{Metodologia}{10}{0}{5}
-\beamer@sectionintoc {6}{Arquitetura Analisador Est\IeC {\'a}tico}{11}{0}{6}
-\beamer@sectionintoc {7}{Resultados}{14}{0}{7}
-\beamer@sectionintoc {8}{Encerramento}{28}{0}{8}
+\beamer@sectionintoc {3}{Revis\IeC {\~a}o Te\IeC {\'o}rica}{5}{0}{3}
+\beamer@sectionintoc {4}{Diretrizes da pesquisa}{6}{0}{4}
+\beamer@sectionintoc {5}{Metodologia}{8}{0}{5}
+\beamer@sectionintoc {6}{Arquitetura Analisador Est\IeC {\'a}tico}{10}{0}{6}
+\beamer@sectionintoc {7}{Resultados}{13}{0}{7}
+\beamer@sectionintoc {8}{Encerramento}{27}{0}{8}

@@ -90,15 +90,14 @@
 
 
 %Titulo
-\title[\sc{Static Analisys}]{\textbf{Análise estática para detectar a evoulução da
-linguagem java em projetos open source}}
+\title[\sc{Static Analisys}]{\textbf{Caracterização do Uso de Construções da Linguagem Java em Projetos Open-Source}}
 \author[Thiago Cavalcanti - Vinícius Correa]{Thiago Gomes Cavalcanti \\ Vinícius Correa de Almeida}
 
 \institute{
 	\includegraphics[scale=0.6]{as_comp_cor.eps}\\
 	\textbf{Orientador: Prof. Dr. Rodrigo Bonifácio de Almeida}
 }
-\date[04/03/2016]{30 de junho de 2016}
+\date[04/03/2016]{14 de julho de 2016}
 
 \begin{document}
 	\begin{frame}
@@ -113,14 +112,27 @@ linguagem java em projetos open source}}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%% CENÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\section{Cenário}
-	\begin{frame}[label=problems]
-		\frametitle{O Software}
+	\begin{frame}
+		\frametitle{Cenário}
 		\begin{itemize}
-			\item Software atual com construções ultrapassadas.
-			\item Código de baixa qualidade e difícil entendimento.
+			\item Características adicionadas ao longo do tempo raramente removidas.
+			
+			\item Aumento na complexidade dificulta o aprendizado de novos programadores.
+
+			
+			\item Projetitas de linguagens não tem estratégia de alertar os desenvolvedores de contruções ultrapassadas.
+			
+
+			\item Alternância entre versões da linguagem no mesmo projeto.
+			%Dialetos da linguagem. alternância entre versões atuais e versoes antigas da linguagem
+			
 			\item Dificuldade evoluir, testar e refatorar.
-			\item A release não é importante no desenvolvimento.
+			
+			\item Congelamento de código devido a restrições técnicas.
+			%Banco de dados ou alguma outra caracteristica do sistema
 		\end{itemize}
+	
+		
 	\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%% CENÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -129,52 +141,30 @@ linguagem java em projetos open source}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%% MOTIVAÇÃO %%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\section{Motivação}
 	
-	\begin{frame}[label=Motivação]
+	\begin{frame}
 		\frametitle{Motivação}
 		\begin{block}{Fortran}
 			\begin{itemize}
-				\item Artigo Regrowing a Language de Jeffrey L. Overbey e Ralph E. Johnson.
+				\item \textbf{F-66} adaptada para incorparar subprogramas.
 				
-				\item Remoção do ultrapassado estilo \textit{do loop} caso este terminasse com \textit{continue}, era substituído por construção equivalente \textit{end do}.
+				\item \textbf{F-77} facilitou a programação estruturada por introduzir \texttt{IF - DO/WHILE - END/DO}.
 				
-				\item Remoção do \textit{goto} por uma construção \textit{case} equivalente.
 				
-				\item Uso de palavras reservadas \textit{if, while, ...}, como variáveis.
+				\item \textbf{F-90} modularização e alocação dinâmica de memória. Tentativa de normalizar a linguagem e quebra de compatibilidade. 
 				
-				\item Introdução de OO em Fortran 2003.
+				\item Adição de novas características acabaria por gerar dialetos.
+				
+				\item Introduziu-se \textbf{F-03} orientação a objetos  e inter-operacionalidade com \textbf{C} e em 2008 co-arrays.
+				
+				\item Como evoluir após 1/2 século(2003) e manter compatibilidade com versões anteriores.
+				
+				
+				
 			\end{itemize}
 		\end{block}
 	\end{frame}
 	
 		
-	\begin{frame}[label=AspectosAnalisados]
-		\frametitle{Aspectos analisados}
-		\begin{block}{Aspectos Analisados}
-			\begin{itemize}				
-				\item Replicação de um estudo existente de Parnin et al.
-				
-				\item Investigação empírica da adoção de features Java:
-					\begin{itemize}
-						\item \texttt{Generics}.
-						\item \texttt{Lambda Expression}.
-						\item \texttt{Multi-catch}.
-						\item \texttt{Try-Resource}.
-						\item \texttt{Switch-Stgring}.
-					\end{itemize}
-
-				\item Oportunidade de evolução em:
-					\begin{itemize}
-						\item \texttt{Lambda Expression}, \texttt{exists, filter e map}.
-						\item \texttt{Multi-catch}, \texttt{catch(E1 | E2 | ...)}.
-					%	\item \texttt{Try-Resource}, \texttt{java.lang.AutoCloseable} ou \texttt{java.io.Closeable}.
-						\item \texttt{Switch-String}, \textit{if(string.equals(""))}.
-					\end{itemize}
-
-			\end{itemize}
-		\end{block}
-	\end{frame}
-	
-
 	
 
 	
@@ -215,17 +205,17 @@ linguagem java em projetos open source}}
 %%%%%%%%%%%%%%%%%%%%% Diretrizes da pesquisa %%%%%%%%%%%%%%%%%%%%
 	\section{Diretrizes da pesquisa}
 
-	\begin{frame}[fragile]\frametitle{Problema}
-		\begin{block}{Problema}
-			\begin{itemize}
-				\item Desenvolver um analisador estático flexível e de fácil evolução.
-			
-				\item Refazer estudo de \texttt{Generis}.
-				
-				\item Contribuições adicionais.
-			\end{itemize}
-		\end{block}
-	\end{frame}	
+%	\begin{frame}[fragile]\frametitle{Problema}
+%		\begin{block}{Problema}
+%			\begin{itemize}
+%				\item Desenvolver um analisador estático flexível e de fácil evolução.
+%			
+%				\item Refazer estudo de \texttt{Generis}.
+%				
+%				\item Contribuições adicionais.
+%			\end{itemize}
+%		\end{block}
+%	\end{frame}	
 	
 	
 	\begin{frame}[fragile]\frametitle{Hipóteses}
@@ -244,13 +234,7 @@ linguagem java em projetos open source}}
 				\item Código obsoleto é mantido em releases atuais.
 			\end{itemize}
 		\end{block}
-		
-	%	\begin{description}	\item[\textbf{Hipótese 3}]\end{description}
-%		\begin{block}{Hipótese 3}
-%			\begin{itemize}
-%				\item Versões mais recentes do software não possem as últimas características adotadas na linguagem.
-%			\end{itemize}
-%		\end{block}
+
 		
 	\end{frame}
 	
@@ -259,16 +243,17 @@ linguagem java em projetos open source}}
 		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
 		\begin{block}{Geral}
 			\begin{itemize}
-				\item Elaborar um analisador estático flexível.
+				\item Analisar construções da linguagem Java em projetos open-source.
 			\end{itemize}
 		\end{block}
 			
 		%\begin{description}	\item[\textbf{Objetivo Geral}]\end{description}
 			\begin{block}{Específicos}
 				\begin{itemize}
-					\item Identificar de forma eficiente construções na linguagem Java.
-					
-					\item Gerar relatório com as identificações realizadas.
+					\item Implementar um ambiente favorável para extrair informações dos projetos.
+					\item Avaliar construções em diferentes versões da linguagem.
+					\item Pesquisar o motivo da não adoção de algumas construções Java.
+					\item Contrastar os resultados de nossas análises com pesquisas recentes.
 				\end{itemize}
 			\end{block}
 	\end{frame}
@@ -285,18 +270,47 @@ linguagem java em projetos open source}}
 						\item Seleção do projetos.
 						\item Escolha de projetos opensource.
 					\end{itemize}
-				\item Implementação do analisador estático.
+				\item Implementação do ambiente de análise.
 					\begin{itemize}
 						\item Definir arquitetura.
 						\item Implementação.
-						\item Coleta de dados.
 					\end{itemize}
 			
-				\item Pesquisar (features) e extraír dados.
+				\item Extração de dados.
+				\item Comparação com outras pesquisas.
 			\end{itemize}
 		\end{block}
 	\end{frame}
 	
+		
+	\begin{frame}[label=AspectosAnalisados]
+		\frametitle{Aspectos analisados}
+		\begin{block}{Aspectos Analisados}
+			\begin{itemize}				
+				\item Replicação de um estudo existente de Parnin et al.
+				
+				\item Investigação empírica da adoção de features Java:
+					\begin{itemize}
+						\item \texttt{Generics}.
+						\item \texttt{Lambda Expression}.
+						\item \texttt{Multi-catch}.
+						\item \texttt{Try-Resource}.
+						\item \texttt{Switch-String}.
+					\end{itemize}
+
+				\item Oportunidade de evolução em:
+					\begin{itemize}
+						\item \texttt{Lambda Expression}, \texttt{exists, filter e map}.
+						\item \texttt{Multi-catch}, \texttt{catch(E1 | E2 | ...)}.
+					%	\item \texttt{Try-Resource}, \texttt{java.lang.AutoCloseable} ou \texttt{java.io.Closeable}.
+						\item \texttt{Switch-String}, \textit{if(string.equals(""))}.
+					\end{itemize}
+
+			\end{itemize}
+		\end{block}
+	\end{frame}	
+		
+		
 		
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Metodologia %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
@@ -306,7 +320,7 @@ linguagem java em projetos open source}}
 
 
 \begin{frame}[label=metodologia, fragile]
-	\frametitle{Funcionamento Analisador Estático}
+	\frametitle{Ambiente de Análise}
 	\begin{block}{Classes Utilitárias}
 			\begin{figure}[h]
 				\center
@@ -332,23 +346,24 @@ linguagem java em projetos open source}}
 
 \begin{frame}[label=metodologia, fragile]
 	\frametitle{Analisador Estático}
-	\begin{block}{Criação de Visitor}
-		\begin{itemize}
+	\begin{block}{Novos Visitor}
+		\begin{enumerate}
 			\item Classe modelo (\texttt{br.unb.cic.sa.model}).
-			\item MeuVisitor (\texttt{br.unb.cic.sa.visitors}).
+			\item NovoVisitor (\texttt{br.unb.cic.sa.visitors}).
 				\begin{itemize}
 					\item extends Visitor<class modelo>
 				\end{itemize}
 			
-			\item Declarar no Bean.xml.
+			\item Injeção de dependência - Spring.
 					\begin{itemize}
-						\item Cabeçalho do csv de output mapeado pela classe modelo.
-						\item O Visitor criado.
+						\item Criar o modelo de cabeçalho para CSV - output.
+						\item Declarar o NovoVisitor criado.
 					\end{itemize}
 		
-			\item Dados exportados automaticamente ao fim de cada projeto.
-		
-		\end{itemize}
+			\item Reflection Java para Extração das classes modelos.
+			\end{enumerate}
+			
+			Após cada análise os dados são exportados para os CSV's.
 		
 	\end{block}
 \end{frame}

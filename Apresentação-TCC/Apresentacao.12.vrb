@@ -1,9 +1,21 @@
 \frametitle{Analisador Estático}
-\begin{block}{Arquitetura}
-\begin{figure}[h]
-\center
-\includegraphics[scale=0.30]{../TCC/Imagens/FuncionamentoVisitor}
-\label{fig:oportunidadesSwitchString}
-\caption{Funcionamento Analisador Estático.}
-\end{figure}
+\begin{block}{Novos Visitor}
+\begin{enumerate}
+\item Classe modelo (\texttt{br.unb.cic.sa.model}).
+\item NovoVisitor (\texttt{br.unb.cic.sa.visitors}).
+\begin{itemize}
+\item extends Visitor<class modelo>
+\end{itemize}
+
+\item Injeção de dependência - Spring.
+\begin{itemize}
+\item Criar o modelo de cabeçalho para CSV - output.
+\item Declarar o NovoVisitor criado.
+\end{itemize}
+
+\item Reflection Java para Extração das classes modelos.
+\end{enumerate}
+
+Após cada análise os dados são exportados para os CSV's.
+
 \end{block}

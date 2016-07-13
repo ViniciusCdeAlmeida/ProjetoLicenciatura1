@@ -1,18 +1,9 @@
-\frametitle{Procedimentos}
-\begin{block}{Ordem das tarefas}
-\begin{itemize}
-\item Revisão Bibliográfica
-\begin{itemize}
-\item Seleção do projetos.
-\item Escolha de projetos opensource.
-\end{itemize}
-\item Implementação do analisador estático.
-\begin{itemize}
-\item Definir arquitetura.
-\item Implementação.
-\item Coleta de dados.
-\end{itemize}
-
-\item Pesquisar (features) e extraír dados.
-\end{itemize}
+\frametitle{Ambiente de Análise}
+\begin{block}{Classes Utilitárias}
+\begin{figure}[h]
+\center
+\includegraphics[scale=0.50]{../TCC/Imagens/InputArquitetura}
+\label{fig:oportunidadesSwitchString}
+\caption{Classes Utilitárias.}
+\end{figure}
 \end{block}

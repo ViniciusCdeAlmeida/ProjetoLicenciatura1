@@ -1,0 +1,18 @@
+\frametitle{Procedimentos}
+\begin{block}{Ordem das tarefas}
+\begin{itemize}
+\item Revisão Bibliográfica
+\begin{itemize}
+\item Seleção do projetos.
+\item Escolha de projetos opensource.
+\end{itemize}
+\item Implementação do ambiente de análise.
+\begin{itemize}
+\item Definir arquitetura.
+\item Implementação.
+\end{itemize}
+
+\item Extração de dados.
+\item Comparação com outras pesquisas.
+\end{itemize}
+\end{block}
