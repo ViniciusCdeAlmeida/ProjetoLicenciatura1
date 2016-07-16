@@ -1,19 +1,18 @@
 \chapter{Introdução}
 
-% \section{Introdução}
 Uma premissa na Engenharia de Software é a \emph{natureza evolutiva} do software, e, com isso, 
 custos significativos são relacionados com as atividades de manutenção. De forma semelhante, 
 as linguagens de programação evoluem, com o intuito de se adaptarem a novas demandas e trazerem 
 benefícios relacionados a produtividade e a melhoria da qualidade dos softwares construídos. Entretanto, um 
 desafio inerente é a evolução de sistemas existentes em direção a adoção de novas construções 
-disponibilizadas nas linguagens~\cite{Dyer:2013}. 
+disponibilizadas nas linguagens \cite{Dyer:2013}.
 
-Conforme discutido por Overbey e Johnson~\cite{Overbey:2009}, 
+Conforme discutido por Overbey e Johnson \cite{Overbey:2009}, 
 tal evolução faz com que características obsoletas sejam mantidas e raramente removidas de uma linguagem, 
 levando a um aumento da complexidade, esfor\c co de aprendizagem e custos de manutenção do software. 
-Al\'{e}m disso, a falta de evolu\c c\~{a}o de um c\'{o}digo fonte em dire\c c\~{a}o a 
-novas vers\~{o}es de uma linguagem de programa\c c\~{a}o faz com que a equipe de 
-desenvolvimento alterne entre caracter\'{i}sticas atuais e antigas, as quais passam a ser 
+Além disso, a falta de evolução de um código fonte em direção a 
+novas versões de uma linguagem de programação faz com que a equipe de 
+desenvolvimento alterne entre características atuais e antigas, as quais passam a ser 
 quase um dialeto da linguagem--- o que aumenta o tempo para conceber um projeto 
 e consequentemente gerindo aumento no custo final projeto.
 
@@ -21,28 +20,46 @@ Uma decisão não tão simples é manter uma porção do código congelada, sem 
 podem ocasionar problemas como uma queda significativa de desempenho ou até mesmo o sistema parar de funcionar. Devido a esses problemas de código não atualizado, com as versões com estruturas mais atuais, a proposta da realização de refatoração através de 
 ferramentas objetivam atacar essas limita\c c\~{o}es decorrentes de código obsoleto.
 
-\section{Objetivos}
+
+\section{Contexto}
+
+\section{Motivação}Overbey e Johnson
+	Aritgo de FORTRAN....
+\section{Problema}
+
+\section{Objetivo}
+	Este trabalho tem como principal objetivo a especificação e desenvolvimento de um ambiente de análise estática para projetos desenvolvidos com a linguagem Java. Tal ambiente será capaz de caracterizar uso de construções específicas da linguagem com intuito de compreender a forma típica de utlização destas contruções. 
 	
-	O principal objetivo deste trabalho é analisar a adoção de construções da linguagem de programação 
-	Java em projetos \textit{open-source}, com o intuito de compreender a forma típica de utilização das construções 
-	da linguagem e verificar a adoção ou não das \textit{caracter\'{i}sticas} presentes nas vers\~{o}es 
-        mais recentes da linguagem. Especificamente, 
-	os seguintes objetivos foram traçados:
+	Tal ambiente proverá funcionalidades que possibilite desenvolvedores com pouco conhecimento técnico sobre análise estática tenham a capacidade de criar artefatos para analisar seu código fonte dispensando profundo conhecimento sobre o domínio de aplicação aqui abordado.
+	
+	Especificamente para que o objetivo principal seja alcançados foram traçados os seguintes objetivos:
+
+
+%	O principal objetivo deste trabalho é analisar a adoção de construções da linguagem de programação  	Java em projetos \textit{open-source}, com o intuito de compreender a forma típica de utilização das construções 
+	%da linguagem e verificar a adoção ou não das \textiti{caracter\'{i}sticas} presentes nas vers\~{o}es 
+     %   mais recentes da linguagem. Especificamente, 
+	%os seguintes objetivos foram traçados:
 	
 	\begin{itemize}
-	  \item implementar um ambiente de análise estática que recupera informações relacionadas ao uso 
-	    de construções da linguagem Java. 
+	  \item implementar um ambiente de análise estática que recupera informações relacionadas ao uso  de construções da linguagem Java. 
 	  
-	  \item avaliar o uso de construções nas diferentes versões da linguagem Java, considerando 
-	  projetos \textit{open-source}. 
+	  \item avaliar o uso de construções nas diferentes versões da linguagem Java, considerando  projetos \textit{open-source}. 
 	  
-	  \item realizar um \textit{survey} inicial para verificar o porqu\^{e} da não adoção de algumas construções 
-	  da linguagem nos projetos. 
+	  \item realizar um \textit{survey} inicial para verificar o porqu\^{e} da não adoção de algumas construções  da linguagem nos projetos. 
 	  
-	  \item contrastar os resultados das nossas análises com trabalhos de pesquisa recentemente publicados, 
-	  mas que possivelmente não analisam todas as construções de interesse deste trabalho, em particular 
+	  \item contrastar os resultados das nossas análises com trabalhos de pesquisa recentemente publicados, mas que possivelmente não analisam todas as construções de interesse deste trabalho, em particular 
 	  a adoção de construções recentes na linguagem (como Expressões Lambda). 
+	  
+	  \item criar um software que facilite o uso para desenvolvedores com pouco conhecimento técnico.
 	\end{itemize}
+
+
+\section{Estrutura do Trabalho}
+
+ 
+
+
+
 	
 %\section{Objetivos Específicos}
 %	Criar um analisador estático de código para projetos java, com foco em projetos \textit{opensource}, e através deste pesquisar através da infraestrutura de árvores sintáticas \cite{chomsky1956three} e visitors \cite{Gamma:1995:DPE:186897} provida pela biblioteca \textit{JDT} do eclipse e encontrar construções de código ultrapassadas e verificar se novas características veem sendo adotados pelo desenvolvedores ao longo do projeto.
