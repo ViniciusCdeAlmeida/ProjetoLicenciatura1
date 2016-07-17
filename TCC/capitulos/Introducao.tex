@@ -1,46 +1,30 @@
 \chapter{Introdução}
 
-Uma premissa na Engenharia de Software é a \emph{natureza evolutiva} do software, e, com isso, 
-custos significativos são relacionados com as atividades de manutenção. De forma semelhante, 
-as linguagens de programação evoluem, com o intuito de se adaptarem a novas demandas e trazerem 
-benefícios relacionados a produtividade e a melhoria da qualidade dos softwares construídos. Entretanto, um 
-desafio inerente é a evolução de sistemas existentes em direção a adoção de novas construções 
-disponibilizadas nas linguagens \cite{Dyer:2013}.
-
-Conforme discutido por Overbey e Johnson \cite{Overbey:2009}, 
-tal evolução faz com que características obsoletas sejam mantidas e raramente removidas de uma linguagem, 
-levando a um aumento da complexidade, esfor\c co de aprendizagem e custos de manutenção do software. 
-Além disso, a falta de evolução de um código fonte em direção a 
-novas versões de uma linguagem de programação faz com que a equipe de 
-desenvolvimento alterne entre características atuais e antigas, as quais passam a ser 
-quase um dialeto da linguagem--- o que aumenta o tempo para conceber um projeto 
-e consequentemente gerindo aumento no custo final projeto.
-
-Uma decisão não tão simples é manter uma porção do código congelada, sem evolução, ao longo projeto devido alguma restrição técnica. O que infelizmente acarreta em uma estagnação de todo um sistema pois não somente o projeto \'{e} afetado, mas sim toda uma infraestrutura como compiladores, banco de dados e sistema operacional que, se de alguma forma vierem a ser atualizados com esta porção código estagnado, 
-podem ocasionar problemas como uma queda significativa de desempenho ou até mesmo o sistema parar de funcionar. Devido a esses problemas de código não atualizado, com as versões com estruturas mais atuais, a proposta da realização de refatoração através de 
-ferramentas objetivam atacar essas limita\c c\~{o}es decorrentes de código obsoleto.
 
 
 \section{Contexto}
+Uma premissa na Engenharia de Software é a \emph{natureza evolutiva} do software, e, com isso, custos significativos são relacionados com as atividades de manutenção. De forma semelhante, as linguagens de programação evoluem, com o intuito de suprir a demandas atuais e crescente. Geralmente a evolução incorpora benefícios visando aumentar a produtividade e facilitar o desenvolvimento para que com isso obtenha-se aumento na qualidade com um esforço condizente. O que acarreta em grande desafio que é evoluir sistemas existentes por aderir novas caracterísiticas incorporadas em versões atuais da linguagens \cite{Dyer:2013} que o projeto utilize.
 
-\section{Motivação}Overbey e Johnson
-	Aritgo de FORTRAN....
+Conforme discutido por Overbey e Johnson \cite{Overbey:2009}, características incorporadas raramente são removidas de um programa o que as torna obsoleta e assim acarretando em um maior esforço para a manutenção e uma  sobrecarga na complexidade. Isto gera grande esforço na aprendizagem para novos programadores  que são incorporados nestes projetos o que pode vir a elavar os custos de manutenção. 
+
+Por outro lado, a decisão de não modernizar o código fonte em direção a novas versões da linguagem faz com que a equipe de desenvolvimento alterne entre características atuais e antigas, as quais passam a ser quase um dialeto da linguagem confome explica Overbey e Johnson em \cite{Overbey:2009}, --- o que aumenta o tempo para conceber um projeto e consequentemente gerindo aumento no custo final projeto.
+
+Uma decisão não tão simples é manter uma porção do código congelada, sem evolução, ao longo projeto devido alguma restrição técnica. O que infelizmente acarreta em uma estagnação de todo um sistema pois não somente o projeto é afetado, mas sim toda uma infraestrutura como compiladores, banco de dados e sistema operacional que, se de alguma forma vierem a ser atualizados com esta porção código estagnado, podem ocasionar problemas como uma queda significativa de desempenho ou até mesmo o sistema parar de funcionar. Devido a esses problemas de código não atualizado, com as versões com estruturas mais atuais, a proposta da realização de refatoração através de ferramentas objetivam atacar essas limitações decorrentes de código obsoleto.
+
+\section{Motivação}
+A principal motivação para este trabalho foi o artigo \textit{Regrowing a Language} \cite{Overbey:2009} que realiza um comparativo entre FORTRAN e Java  e como características de que eram foram incorporadas em FORTRAN por quase meio século foi mantida compatibilidade entre versões atuais e modernas entretando em após FORTRAN-90 alguma características não eram mais suportadas o que acarretou em quebra de compatibilidade com versões atuais o que obrigou desenvolvedores a mirgra para versão mais atual.
+	
 \section{Problema}
+Com a crescente demanda de produção de software cada vez menos tempo é dedicado para evolução de características de um sofrware o que acarretam em códigos que antigos que raramente são removidos. Em alguns casos a evolução é realizado por esforço individual de algum programador ou quando alguma parte do programa necessita ser retrabalhado. Tendo em vista tal problemátca este trabalho tem o intuito não de forçar evolução de características da linguagem Java mas sim criar um ambiente favorável que facilite identificar contruções ultrapassadas. Características essas que serão elencadas mais adiante.
 
 \section{Objetivo}
-	Este trabalho tem como principal objetivo a especificação e desenvolvimento de um ambiente de análise estática para projetos desenvolvidos com a linguagem Java. Tal ambiente será capaz de caracterizar uso de construções específicas da linguagem com intuito de compreender a forma típica de utlização destas contruções. 
+O principal objetivo deste trabalho é criar um programa capaz de realizar análise estática em projetos desenvolvidos na linguagem Java para caracterizar uso de construções específicas da linguagem com intuito de compreender a forma típica de utlização destas contruções desde que atendam alguns requisitos que serão detalhados no cápitulo \ref{cap:arquiteruta}.
 	
-	Tal ambiente proverá funcionalidades que possibilite desenvolvedores com pouco conhecimento técnico sobre análise estática tenham a capacidade de criar artefatos para analisar seu código fonte dispensando profundo conhecimento sobre o domínio de aplicação aqui abordado.
-	
-	Especificamente para que o objetivo principal seja alcançados foram traçados os seguintes objetivos:
+Especificamente para que o objetivo principal seja alcançados foram traçados os seguintes objetivos:
 
-
-%	O principal objetivo deste trabalho é analisar a adoção de construções da linguagem de programação  	Java em projetos \textit{open-source}, com o intuito de compreender a forma típica de utilização das construções 
-	%da linguagem e verificar a adoção ou não das \textiti{caracter\'{i}sticas} presentes nas vers\~{o}es 
-     %   mais recentes da linguagem. Especificamente, 
-	%os seguintes objetivos foram traçados:
-	
 	\begin{itemize}
+		\item simplicidade para possibilitar desenvolvedores com pouco conhecimento técnico sejam capazes de criar estruturas que possam pesquisar por construções específicas.
+	
 	  \item implementar um ambiente de análise estática que recupera informações relacionadas ao uso  de construções da linguagem Java. 
 	  
 	  \item avaliar o uso de construções nas diferentes versões da linguagem Java, considerando  projetos \textit{open-source}. 
@@ -56,7 +40,20 @@ ferramentas objetivam atacar essas limita\c c\~{o}es decorrentes de código obso
 
 \section{Estrutura do Trabalho}
 
- 
+ Este trabalho está organizado da seguinte forma:
+	\begin{itemize}
+		\item Capítulo 1: faz uma introdução do tema e o problema que diversos softwares possuem, específica a problemática a ser trabalhada, a motivação principara para a elaboração deste documento e por fim os objetivos deste trabalho;
+		
+		\item Capítulo 2: apresenta uma revisão da literatura sobre os temas relacionados a essa monografia (incluindo técnicas para análise estática de código fonte) para provê a fundamentação teórica necessária ao entendimento deste trabalho;
+		
+		\item Capítulo 3: descreve a arquitetura da ferramenta que é resultado deste trabalho e a maneira como qualquer programador possa vir a utilizá-lo para pesquisar suas características desde que atendam requisitos mínimos;
+		
+		\item Capítulo 4: \textbf{(a)} apresenta os resultados da replicação do estudo realizado por Parnin \cite{Parnin:ACM2011}, \textbf{(b)} os resultados de uma investigação empírica, seguindo um estilo de pesquisa típico de mineração em 
+		repositórios de software, \textbf{(c}) compreender como os desenvolvedores 
+		Java utilizam os recursos da linguagem de programação, \textbf{(d)} identificar 
+		oportunidades de melhoria de código usando construções mais 
+		recentes da linguagem de programação e \textbf{(e)} por fim apresentação das considerações finais e sugestões para trabalhos futuros. 
+	\end{itemize}
 
 
 
@@ -78,42 +75,10 @@ ferramentas objetivam atacar essas limita\c c\~{o}es decorrentes de código obso
 
 \section{Metodologia}
     
-    A realização deste trabalho envolveu atividades de revisão da literatura, contemplando a leitura 
-    de artigos científicos que abordam a adoção de novas características da linguagem Java ao longo do 
-    lançamento das diferentes versões para a comunidade de 
-    desenvolvedores~\cite{Schaefer:ACM2009, Parnin:ACM2011,Overbey:2009,bonifacio:scam2015}. Com isso, foi 
-    possível compreender a limitação dos trabalhos existentes e, dessa forma, definir o escopo da 
-    investigação. 
+    A realização deste trabalho envolveu atividades de revisão da literatura, contemplando a leitura de artigos científicos e livros que abordam a adoção de novas características de linguagem de programação, análise estática e estudos empíricos sobre adoção de características ao longo do lançamento das diferentes versões. \cite{Schaefer:ACM2009,Parnin:ACM2011,Overbey:2009,bonifacio:scam2015}. Com isso, foi possível compreender a limitação dos trabalhos existentes e, dessa forma, definir o escopo da investigação. 
     
     Posteriormente, foi necessário buscar uma compreensão sobre como implementar ferramentas de 
-    análise estática, e escolher uma plataforma de desenvolvimento apropriada (no caso, a plataforma 
-    Eclipse JDT~\cite{EclipseJDT}). Posteriormente, foi iniciada uma fase de implementação dos 
-    analisadores estáticos de forma a atender ao requisito de extensibilidade, ou seja, o ambiente 
-    deve favorecer a inclus\~{a}o de novos \emph{analisadores}, levando ao uso de 
-    padrões de projetos típicos para essa finalidade como \textit{visitor} e \textit{dependency injection}.
-    
-     Finalmente, foi seguida uma estrategia de Mineração em Repositórios de Software, onde foram 
-     feitas as análises da adoção de construções da linigouagem Java em projetos \textit{open-source}, de forma 
-     similar a outros artigos existentes~\cite{pinto-jss:2015,Schaefer:ACM2009, Schaefer:ACM2010, Overbey:2009}
+    análise estática, e escolher uma plataforma de desenvolvimento apropriada (no caso, a plataforma Eclipse-JDT \cite{EclipseJDT}). Posteriormente, foi iniciada a fase de implementação do analisador estático de forma a atender adequadamente a identificação de características da linguagem Java. Além de um ambiente que seja favorecer a inclusão de classes que realizem a pesquisa de caracetrísticas específicas.   
      
-     %todos
-	
-	%% Após tal entendimento sobre adoção de novas características, fora realiza um estudo sobre análise estática em códigos escritos na linguagem Java o que se torna a base deste trabalho. E logo após a consolidação deste conhecimento, foi realizado a escolha de projetos Java de maior relevância na comunidade \textit{open-source}.
-	
-	%% Em seguida foi estudada a melhor arquitetura para a elaboração do analisador estático proposto de modo que esta no tivesse um fraco acoplamento entre os módulos necessários e facilitasse a pesquisa de outras características através da injeção do \textit{visitors} \cite{Gamma:1995} usando o \textit{spring framework}~\cite{SPRING_REF}. Mais adiante a arquitetura escolhida será exibida com mais detalhes.
-
-\section{Organiza\c c\~{a}o da Monografia} 
-
-Este documento est\'{a} organizado em cinco cap\'{i}tulos, incluindo esse cap\'{i}tulo de 
-introdu\c c\~{a}o. O Cap\'{i}tulo 2 apresenta uma revis\~{a}o da literatura sobre os 
-temas relacionados a essa monografia (incluindo t\'{e}cnicas para an\'{a}lise est\'{a}tica 
-de c\'{o}digo fonte). O Cap\'{i}tulo 3 apresenta detalhes sobre a implementa\c c\~{a}o do 
-analisador est\'{a}tico, constru\'{i}do usando recursos da plataforma \emph{Eclipse Java 
-Development Tools}. O Cap\'{i}tulo 4 apresenta o resultado de uma investiga\c c\~{a}o 
-emp\'{i}rica, seguindo um estilo de pesquisa t\'{i}pico de minera\c c\~{a}o em 
-reposit\'{o}rios de software, que busca (a) compreender como os desenvolvedores 
-Java utilizam os recursos da linguagem de programa\c c\~{a}o e (b) identificar 
-oportunidades de melhoria de c\'{o}digo usando constru\c c\~{o}es mais 
-recentes da linguagem de programa\c c\~{a}o. Finalmente, o Cap\'{i}tulo 
-apresenta as considera\c c\~{o}es finais e algumas sugest\~{o}es de 
-trabalhos futuros. 
+    Finalmente, foi seguida uma estrategia de Mineração em repositórios de software, onde foram feitas as análises da adoção de construções da linguagem Java em projetos \textit{open-source}, de forma similar a outros artigos existentes~\cite{pinto-jss:2015,Schaefer:ACM2009, Schaefer:ACM2010, Overbey:2009}
+     
