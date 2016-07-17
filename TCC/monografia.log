@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  17 JUL 2016 10:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  17 JUL 2016 11:30
 entering extended mode
 **monografia.tex
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.tex
@@ -1369,10 +1369,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--219
  []
 
 [10 <C:/Users/Vinicius/Desktop/ProjetoLicenciatura1/TCC/Imagens/stagesAnalizer-
-eps-converted-to.pdf>]
+eps-converted-to.pdf>] [11]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 291.
- [11] [12])
+ [12])
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\capitulos/Arquitetura.tex
 [13]
 Cap\'{\i }tulo 3.
@@ -1390,7 +1390,7 @@ verted-to.pdf Imagens/Arquitetura.eps>
 (epstopdf)             \includegraphics on input line 95.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/Arquitetura-eps-converted-to.pdf, id=518, 813.0375pt x 147.55125pt>
+<Imagens/Arquitetura-eps-converted-to.pdf, id=519, 813.0375pt x 147.55125pt>
 File: Imagens/Arquitetura-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imagens/Arquitetura-eps-converted-to.pdf>
@@ -1451,7 +1451,7 @@ ch-eps-converted-to.pdf Imagens/ocorrenciasMulticatch.eps>
 (epstopdf)             \includegraphics on input line 22.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=810, 530.98375pt x 530.
+<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=811, 530.98375pt x 530.
 98375pt>
 File: Imagens/ocorrenciasMulticatch-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1500,7 +1500,7 @@ rce-eps-converted-to.pdf Imagens/ocorrenciasTryResource.eps>
 (epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=864, 534.99875pt x 369
+<Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=865, 534.99875pt x 369
 .38pt>
 File: Imagens/ocorrenciasTryResource-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1524,7 +1524,7 @@ String-eps-converted-to.pdf Imagens/oportunidadesSwitchString.eps>
 (epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=896, 781.92125pt x 
+<Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=897, 781.92125pt x 
 393.47pt>
 File: Imagens/oportunidadesSwitchString-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1560,9 +1560,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 69CA5DEE5C65B74DB1F96CD55213C644;2722.
+(rerunfilecheck)             Checksum: BBF7E43F9D27C3EAA3525AE8CB51E786;2728.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: DFA9AF00A8975C5AC63215D9B5FC48A2;2377.
+(rerunfilecheck)             Checksum: 1B7C64D04A4B14D572A1743507A4B31D;2425.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
@@ -1606,9 +1606,9 @@ ius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk>{C:
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/urw/arial/ua1b8a.pfb>
-Output written on monografia.pdf (48 pages, 1046598 bytes).
+Output written on monografia.pdf (48 pages, 1047070 bytes).
 PDF statistics:
- 1857 PDF objects out of 2073 (max. 8388607)
+ 1858 PDF objects out of 2073 (max. 8388607)
  365 named destinations out of 1000 (max. 500000)
  350 words of extra memory for PDF output out of 10000 (max. 10000000)
 

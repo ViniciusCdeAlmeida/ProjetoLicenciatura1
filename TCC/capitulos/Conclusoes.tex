@@ -1,14 +1,14 @@
 \chapter{Considerações Finais e Trabalhos Futuros}
-Este c\'{a}pitulo tem o objetivo de destacar as principais caracter\'{i}sticas do analisador est\'{a}tico desenvolvido neste tabalho de conclus\~{a}o, al\'{e}m de destar alguns pontos relevantes para poss\'{i}veis abordagens em trabalhos futuros que adotem esta ferramenta como objeto para pesquisa.
+Este c\'{a}pitulo tem o objetivo de destacar as principais caracter\'{i}sticas do analisador est\'{a}tico desenvolvido neste trabalho de conclus\~{a}o, al\'{e}m de destar alguns pontos relevantes para poss\'{i}veis abordagens em trabalhos futuros que adotem esta ferramenta como objeto para pesquisa.
 
 \section{Considerações Finais}
 Atualmente utilizar o analisador est\'{a}tico projetado ao longo deste trabalho de conclus\~{a}o \'{e} bem simples para o usu\'{a}rio final pois durante os est\'{a}gios de desenvolvimento sempre foi uma premissa ocultar a complexidade encontrada no desenvolvimento para simplificar a utiliza\c{c}\~{a}o da ferramenta. Para que qualquer desenvolvedor em qualquer grau de experi\^{e}cia tenha confian\c{c}a e seguran\c{c}a em adotar esta ferramenta.
 
-Com foco em extender o projeto quer seja para analisar outras caracter\'{i}sticas Java quer seja para outras Linguagens este projeto com poucas modifica\c{c}\~{o}es pode extender-se a qualquer linguagem de programa\c{c}\~{a}o com facilidade, tudo isso devido ao mecanismo de Injeção de Dependência  que foi agregado. A flexibilidade na extra\c{c}\~{a}o dos dados deve-se a combina\c{c}\~{a}o dos mecanismos de Inje\c{c}\~{a}o e Introspec\c{c}\~{a}o onde facilmente pode ser modificado para que a atual de extra\c{c}\~{a}o em arquivos~\acs{CSV} possa persistir em um banco de dados, ou utilizer as duas abordagens em conjunto.
+Com foco em estender o projeto quer seja para analisar outras caracter\'{i}sticas Java quer seja para outras Linguagens este projeto com poucas modifica\c{c}\~{o}es pode estender-se a qualquer linguagem de programa\c{c}\~{a}o com facilidade, tudo isso devido ao mecanismo de Injeção de Dependência  que foi agregado. A flexibilidade na extra\c{c}\~{a}o dos dados deve-se a combina\c{c}\~{a}o dos mecanismos de Inje\c{c}\~{a}o e Introspec\c{c}\~{a}o onde facilmente pode ser modificado para que a atual de extra\c{c}\~{a}o em arquivos~\acs{CSV} possa persistir em um banco de dados, ou utilizar as duas abordagens em conjunto.
 
-Atrav\'{e}s deste analisador foi poss\'{i}vel reafirmar a pesquisa que Parnin et.al.~\cite{Parnin:ACM2011} realizou em \num{2011} ainda \'{e} atual pois n\~{a}o houve discrep\^{a}ncia nos dados encontrados por este trabalho. O que serviu como m\'{e}trica para comprovar a confiabilidade nos dados extra\'{i}dos por esta ferramenta. Por outro lado pode-se comprovar que existe oportunidades reais de \textit{refactoring} que s\~{a}o ignoradas como o mecanismo de exce\c{c}\~{a}o sem evolu\c{c}\~{a}o, oportunidades de emprego de express\~{o}es lambda e aplica\c{c}\~{a}o do \texttt{switch-string}.
+Atrav\'{e}s deste analisador foi poss\'{i}vel reafirmar a pesquisa que Parnin et al.~\cite{Parnin:ACM2011} realizou em \num{2011} ainda \'{e} atual pois n\~{a}o houve discrep\^{a}ncia nos dados encontrados por este trabalho. O que serviu como m\'{e}trica para comprovar a confiabilidade nos dados extra\'{i}dos por esta ferramenta. Por outro lado pode-se comprovar que existe oportunidades reais de \textit{refactoring} que s\~{a}o ignoradas como o mecanismo de exce\c{c}\~{a}o sem evolu\c{c}\~{a}o, oportunidades de emprego de express\~{o}es lambda e aplica\c{c}\~{a}o do \texttt{switch-string}.
 
-Ap\'{o}s estas considera\c{c}\~{o}es pode-se afirmar que foi poss\'{i}vel obter \^{e}xito na proposta inicial deste trabalho que foi criar uma ferramenta flex\'{i}vel e extens\'{i}vel. Al\'{e}m  de possibilitar apronfundar o conhecimento na \'{a}rea de engenharia de \textit{software} com \^{e}nfase em linguagens de programa\c{c}\~{a}o e arquitetura de software. Visando sempre utilizar as ferramentas mais mordernas durante o processo de desenvolvimento.
+Ap\'{o}s estas considera\c{c}\~{o}es pode-se afirmar que foi poss\'{i}vel obter \^{e}xito na proposta inicial deste trabalho que foi criar uma ferramenta flex\'{i}vel e extens\'{i}vel. Al\'{e}m  de possibilitar aprofundar o conhecimento na \'{a}rea de engenharia de \textit{software} com \^{e}nfase em linguagens de programa\c{c}\~{a}o e arquitetura de software. Visando sempre utilizar as ferramentas mais modernas durante o processo de desenvolvimento.
 
 
 
@@ -19,7 +19,7 @@ Ap\'{o}s estas considera\c{c}\~{o}es pode-se afirmar que foi poss\'{i}vel obter 
 Do vasto conte\'{u}do que pode ser abordado ao ter como objeto de pesquisa uma linguagem de programa\c{c}\~{a}o,  esta se\c{c}\~{a}o tem a finalidade de enumerar algumas sugest\~{o}es relevantes para o enriquecimento deste trabalho.
 
 \begin{enumerate}
-	\item Extender a pesquisa a outras linguagens de programa\c{c}\~{a}o seria de extrema import\^{a}ncia para o estudo mais detalhado de um projetos pois \'{e} poss\'{i}vel encontrar projetos que utilizam mais de uma linguagem em constru\c{c}\~{a}o.
+	\item Estender a pesquisa a outras linguagens de programa\c{c}\~{a}o seria de extrema import\^{a}ncia para o estudo mais detalhado de um projetos pois \'{e} poss\'{i}vel encontrar projetos que utilizam mais de uma linguagem em constru\c{c}\~{a}o.
 
 	\item A cria\c{c}\~{a}o de \texttt{Visitors} mais espec\'{i}ficos para extrair outras informa\c{c}\~{a}o quer seja da linguagem Java que seja de outra linguagem que este analisador venha a trabalhar no futuro.
 
