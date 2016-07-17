@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  17 JUL 2016 11:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  17 JUL 2016 11:53
 entering extended mode
 **monografia.tex
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.tex
@@ -1301,7 +1301,7 @@ ps-converted-to.pdf Imagens/stagesLanguageApp.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/stagesLanguageApp-eps-converted-to.pdf, id=399, 481.8pt x 118.4425pt>
+<Imagens/stagesLanguageApp-eps-converted-to.pdf, id=398, 481.8pt x 118.4425pt>
 File: Imagens/stagesLanguageApp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imagens/stagesLanguageApp-eps-converted-to.pdf>
@@ -1328,7 +1328,7 @@ s-converted-to.pdf Imagens/pipelineFindbugs.eps>
 (epstopdf)             \includegraphics on input line 148.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/pipelineFindbugs-eps-converted-to.pdf, id=423, 471.7625pt x 75.28125pt
+<Imagens/pipelineFindbugs-eps-converted-to.pdf, id=422, 471.7625pt x 75.28125pt
 >
 File: Imagens/pipelineFindbugs-eps-converted-to.pdf Graphic file (type pdf)
  <use Imagens/pipelineFindbugs-eps-converted-to.pdf>
@@ -1347,7 +1347,7 @@ converted-to.pdf Imagens/stagesAnalizer.eps>
 (epstopdf)             \includegraphics on input line 162.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/stagesAnalizer-eps-converted-to.pdf, id=425, 464.73625pt x 166.6225pt>
+<Imagens/stagesAnalizer-eps-converted-to.pdf, id=424, 464.73625pt x 166.6225pt>
 File: Imagens/stagesAnalizer-eps-converted-to.pdf Graphic file (type pdf)
 <use Imagens/stagesAnalizer-eps-converted-to.pdf>
 Package pdftex.def Info: Imagens/stagesAnalizer-eps-converted-to.pdf used on in
@@ -1390,7 +1390,7 @@ verted-to.pdf Imagens/Arquitetura.eps>
 (epstopdf)             \includegraphics on input line 95.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/Arquitetura-eps-converted-to.pdf, id=519, 813.0375pt x 147.55125pt>
+<Imagens/Arquitetura-eps-converted-to.pdf, id=521, 813.0375pt x 147.55125pt>
 File: Imagens/Arquitetura-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imagens/Arquitetura-eps-converted-to.pdf>
@@ -1451,7 +1451,7 @@ ch-eps-converted-to.pdf Imagens/ocorrenciasMulticatch.eps>
 (epstopdf)             \includegraphics on input line 22.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=811, 530.98375pt x 530.
+<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=814, 530.98375pt x 530.
 98375pt>
 File: Imagens/ocorrenciasMulticatch-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1500,7 +1500,7 @@ rce-eps-converted-to.pdf Imagens/ocorrenciasTryResource.eps>
 (epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=865, 534.99875pt x 369
+<Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=868, 534.99875pt x 369
 .38pt>
 File: Imagens/ocorrenciasTryResource-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1524,7 +1524,7 @@ String-eps-converted-to.pdf Imagens/oportunidadesSwitchString.eps>
 (epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=897, 781.92125pt x 
+<Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=900, 781.92125pt x 
 393.47pt>
 File: Imagens/oportunidadesSwitchString-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1560,17 +1560,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: BBF7E43F9D27C3EAA3525AE8CB51E786;2728.
-Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 1B7C64D04A4B14D572A1743507A4B31D;2425.
+(rerunfilecheck)             Checksum: F7A465426BF8792BDCCCF4BF85731311;2721.
+
+
+Package rerunfilecheck Warning: File `monografia.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `monografia.brf':
+(rerunfilecheck)             Before: 83D4399A5AFA880F6EE31CA2B28DE6F8;2678
+(rerunfilecheck)             After:  00D09BE3E6D8B4A9C58A63A036A0A063;2548.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
 Here is how much of TeX's memory you used:
- 20793 strings out of 493921
- 375410 string characters out of 3147273
+ 20807 strings out of 493921
+ 375916 string characters out of 3147273
  466713 words of memory out of 3000000
- 23414 multiletter control sequences out of 15000+200000
+ 23426 multiletter control sequences out of 15000+200000
  34796 words of font info for 59 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  43i,12n,72p,10385b,2350s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1590,9 +1596,9 @@ pen\ec\dpi600\ecrm0700.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk
 icius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> 
 <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 ecrm0600.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ectt1000.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Vinicius\AppData\
+en\ec\dpi600\ecbx1440.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ectt1000.pk> <C:\Users\Vinicius\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Vinicius\AppData\
 Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Users\Vini
 cius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <
 C:\Users\Vinicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
@@ -1606,9 +1612,9 @@ ius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk>{C:
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/urw/arial/ua1b8a.pfb>
-Output written on monografia.pdf (48 pages, 1047070 bytes).
+Output written on monografia.pdf (48 pages, 1049549 bytes).
 PDF statistics:
- 1858 PDF objects out of 2073 (max. 8388607)
- 365 named destinations out of 1000 (max. 500000)
+ 1867 PDF objects out of 2073 (max. 8388607)
+ 367 named destinations out of 1000 (max. 500000)
  350 words of extra memory for PDF output out of 10000 (max. 10000000)
 

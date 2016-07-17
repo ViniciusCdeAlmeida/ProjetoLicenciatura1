@@ -42,7 +42,7 @@ uma s\'{e}rie de novos idiomas (baseadas em \emph{streaming} para programa\c c\~
 concorrente) est\~{a}o sendo propostos para a linguagem com base em tal constru\c c\~{a}o.   
 \end{description} 
 
-\subsection{Sentenças de uma linguagem}
+\section{Sentenças de uma linguagem}
 Toda linguagem de programação é composta por sentenças válidas que respeitam uma regra bem definida onde esta regra é semelhante a gramática presente em qualquer idioma.  Esta sentenças são compostas por frases onde cada frase pode é definida por uma conjunto de subfrases e símbolos que compõem o vocabulário desta linguagem. 
 %Como analogia tem-se a língua falada... No computador não é diferente este somente executa sentenças que podem ser interpretadas corretamente
 
@@ -270,22 +270,22 @@ Em geral, um design inadequado tem mais c\'{o}digo
 que o necess\'{a}rio para realizar a mesma tarefa. O que leva a um sintoma apontado 
 como crucial para oportunidades de melhoria: 
 a exist\^{e}ncia de código duplicado (frequentemente considerado um 
-\emph{bad smell}). 
+\emph{bad smell}~\cite{Tufano:2015:WYC:2818754.2818805,martinFowlerRafactoring}). 
 
 %Vale ressaltar que reduzir a quantidade 
 %de c\'{o}digo n\~{a}o impl\'{i}ca necessariamente na melhora do desempenho do software, 
 %mas sim em ter um design mais adequado.
 
 A Listagem~\ref{lst:fp} exemplifica um poss\'{i}vel \emph{refactoring} relacionado \`{a} 
-redu\c c\~{a}o da quantidade de linhas de c\'{o}digo e \emph{rejuvenecimento} 
+redu\c c\~{a}o da quantidade de linhas de c\'{o}digo e \emph{rejuvenescimento} 
 das decis\~{o}es de design com o uso de constru\c c\~{o}es mais atuais da 
 linguagem Java. Neste caso, a parte superior da listagem descreve um c\'{o}digo 
 escrito antes da vers\~{a}o Java 8 da linguagem; enquanto que a parte inferior descreve o 
-c\'{o}digo resultante ap\'{o}s o \emph{rejuvenecimento}--- demonstrando a   
+c\'{o}digo resultante ap\'{o}s o \emph{rejuvenescimento}--- demonstrando a   
 aplica\c c\~{a}o de um {\it filter} em uma {\it collection}. No exemplo, \'{e}  
-poss\'{i}Vel perceber uma redu\c{c}\~{a}o significativa de c\'{o}digo. 
+poss\'{i}vel perceber uma redu\c{c}\~{a}o significativa de c\'{o}digo. 
 Vale destacar que a transforma\c c\~{a}o descrita
-na Listagem~\ref{lst:fp} preserva o comportamento
+na Listagem~\ref{lst:fp} preserva o comportamento.
 
 
 \begin{lstlisting}[caption={Uso do padr\~{a}o \textsc{Filter}}\label{lst:fp},language=Java] 
@@ -310,15 +310,13 @@ collection.stream().
 Tendo em vista que aplicar um \textit{refactoring} demanda tempo, 
 isto pode se tornar uma tarefa custosa para empresas. Este fator \'{e} determinante 
 para que programadores n\~{a}o utilizem essa pr\'{a}tica frequentemente. Com esse 
-cen\'{a}rio, \'{e} imprecind\'{i}vel o uso de ferramentas que refatorem ou auxiliem 
+cen\'{a}rio, \'{e} imprescindível o uso de ferramentas que refatorem ou auxiliem 
 nessa atividade. 
 
 
 \section{Análise estática}\label{sec:as}
 
-Em computa\c{c}\~{a}o an\'{a}lise est\'{a}tica \'{e} a refer\^{e}ncia a qualquer processamento realizado em c\'{o}digo fonte sem a necessidade de execut\'{a}-lo, com isto a an\'{a}lise est\'{a}tica torna-se uma poderosa t\'{e}cnica por permitir r\'{a}pidas considera\c{c}\~{o}es por possibilitar uma larga explora\c{c}\~{a}o em um projeto podendo evitar erros triviais e simular alguns cen\'{a}rios para tal an\'{a}lise sem a necessidade do projeto ser executado.
-
-Ferramentas que auxiliem a an\'{a}lise est\'{a}tica tem grande chance de ser um poderoso aux\'{i}lio no desenvolvimento do software tendo em vista que pode reduzir a quantidade de erros e diminuir a quantidade de \textit{refactoring} o qual tem um custo elevado para os projetos de software.
+Em computa\c{c}\~{a}o, a an\'{a}lise est\'{a}tica \'{e} a refer\^{e}ncia a qualquer processamento realizado em c\'{o}digo fonte sem a necessidade de execut\'{a}-lo. Com isto a an\'{a}lise est\'{a}tica torna-se uma poderosa t\'{e}cnica por permitir r\'{a}pidas considera\c{c}\~{o}es, possibilitar uma larga explora\c{c}\~{a}o em um projeto podendo evitar erros triviais e simular alguns cen\'{a}rios para tal an\'{a}lise sem a necessidade do projeto ser executado. Ferramentas que auxiliem a an\'{a}lise est\'{a}tica tem grande chance de ser um poderoso aux\'{i}lio no desenvolvimento do software tendo em vista que pode reduzir a quantidade de erros e diminuir a quantidade de \textit{refactoring} o qual tem um custo elevado para os projetos de software.
 
 \'{E} nesse contexto que este trabalho faz sua contribui\c{c}\~{a}o por utilizar a an\'{a}lise est\'{a}tica para verificar n\~{a}o a possibilidade de falhas ou \textit{bad smell}, mas sim de identificar chances reais de evoluir para \'{u}ltimas \textit{features} da linguagem Java sem interferir no comportamento interno do programa conforme preconiza por Fowler et al.~\cite{martinFowlerRafactoring}.
 

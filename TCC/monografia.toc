@@ -12,14 +12,14 @@
 \contentsline {section}{\numberline {1.6}Metodologia}{3}{section.1.6}
 \contentsline {chapter}{\numberline {2}Fundamenta\IeC {\c c}\IeC {\~a}o}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Evolu\IeC {\c c}\IeC {\~a}o da Linguagem Java}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Senten\IeC {\c c}as de uma linguagem}{6}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Reconhecedores}{6}{section.2.2}
-\contentsline {section}{\numberline {2.3}Representa\IeC {\c c}\IeC {\~a}o Intermedi\IeC {\'a}ria}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}Navega\IeC {\c c}\IeC {\~a}o na Representa\IeC {\c c}\IeC {\~a}o Intermedi\IeC {\'a}ria}{8}{section.2.4}
-\contentsline {section}{\numberline {2.5}Engenharia de Linguagens de Software}{8}{section.2.5}
-\contentsline {section}{\numberline {2.6}Reconhecedores Sint\'{a}ticos (Parses)}{10}{section.2.6}
-\contentsline {section}{\numberline {2.7}Refatora\IeC {\c c}\IeC {\~a}o}{11}{section.2.7}
-\contentsline {section}{\numberline {2.8}An\IeC {\'a}lise est\IeC {\'a}tica}{12}{section.2.8}
+\contentsline {section}{\numberline {2.2}Senten\IeC {\c c}as de uma linguagem}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Reconhecedores}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Representa\IeC {\c c}\IeC {\~a}o Intermedi\IeC {\'a}ria}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Navega\IeC {\c c}\IeC {\~a}o na Representa\IeC {\c c}\IeC {\~a}o Intermedi\IeC {\'a}ria}{8}{section.2.5}
+\contentsline {section}{\numberline {2.6}Engenharia de Linguagens de Software}{8}{section.2.6}
+\contentsline {section}{\numberline {2.7}Reconhecedores Sint\'{a}ticos (Parses)}{10}{section.2.7}
+\contentsline {section}{\numberline {2.8}Refatora\IeC {\c c}\IeC {\~a}o}{11}{section.2.8}
+\contentsline {section}{\numberline {2.9}An\IeC {\'a}lise est\IeC {\'a}tica}{12}{section.2.9}
 \contentsline {chapter}{\numberline {3}Analisador Est\'{a}tico e Caracteriza\c c\~{a}o do Uso de Constru\c c\~{o}es da Linguagem Java}{14}{chapter.3}
 \contentsline {section}{\numberline {3.1}Analisador Est\'{a}tico}{14}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Entrada do Analisador Est\'{a}tico}{15}{subsection.3.1.1}

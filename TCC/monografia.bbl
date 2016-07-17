@@ -26,6 +26,12 @@ Strings in switch statements {@ONLINE}.
 {\em Refactoring: Improving the Design of Existing Code}.
 \newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1999.
 
+\bibitem{Ayewah:2008:USA:1439186.1439221}
+Nathaniel Ayewah, David Hovemeyer, J.~David Morgenthaler, John Penix, and
+  William Pugh.
+\newblock Using static analysis to find bugs.
+\newblock {\em IEEE Softw.}, 25(5):22--29, September 2008.
+
 \bibitem{bonifacio:scam2015}
 Rodrigo Bonif\'{a}cio, Tijs van~der ~, and Jurgen Vinju.
 \newblock The use of c++ exception handling constructs: A comprehensive study.
@@ -100,6 +106,14 @@ Jeffrey~L. Schaefer and Ralph~E. Johnson.
 Max Schaefer and Oege de~Moor.
 \newblock Specifying and implementing refactorings.
 \newblock {\em SIGPLAN Not.}, 45(10):286--301, October 2010.
+
+\bibitem{Tufano:2015:WYC:2818754.2818805}
+Michele Tufano, Fabio Palomba, Gabriele Bavota, Rocco Oliveto, Massimiliano
+  Di~Penta, Andrea De~Lucia, and Denys Poshyvanyk.
+\newblock When and why your code starts to smell bad.
+\newblock In {\em Proceedings of the 37th International Conference on Software
+  Engineering - Volume 1}, ICSE '15, pages 403--414, Piscataway, NJ, USA, 2015.
+  IEEE Press.
 
 \bibitem{ward2015performance}
 A~Ward and D~Deugo.
