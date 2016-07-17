@@ -1,0 +1,17 @@
+\select@language {american}
+\select@language {brazil}
+\select@language {american}
+\select@language {brazil}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Estimativa da complexidade de desenvolvimento de cada \emph {visitor}.}}{19}{table.3.1}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Projetos.}}{22}{table.3.2}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Resumo dos tipos agrupados por idade e do tipo dos projetos.}}{23}{table.3.3}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Tipo declarado X N\IeC {\'u}mero de inst\IeC {\^a}ncia}}{23}{table.3.4}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Ocorr\IeC {\^e}ncias de Express\IeC {\~o}es Lambda.}}{25}{table.3.5}
+\contentsline {table}{\numberline {3.6}{\ignorespaces Oportunidades de \texttt {multi-catch} por tipo do sistema.}}{29}{table.3.6}
+\contentsline {table}{\numberline {3.7}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o Try-Resource por tipo do sistema.}}{30}{table.3.7}
+\contentsline {table}{\numberline {3.8}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o \texttt {Switch String} por tipo do sistema.}}{31}{table.3.8}
+\contentsline {table}{\numberline {3.9}{\ignorespaces Oportunidade de aplicar \texttt {switch} por tipo de sistema.}}{32}{table.3.9}
+\addvspace {10\p@ }
