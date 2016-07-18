@@ -45,7 +45,7 @@ fornece um conjunto de ferramentas que auxiliam na constru\c c\~{a}o
 de ferramentas que permitem processar c\'{o}digo fonte escrito 
 na linguagem de programa\c c\~{a}o Java. 
 A plataforma Eclipse JDT é composta por 4 componentes principais: 
-APT, \textit{Core}, \textit{Debug} e UI. Neste projeto a 
+APT, \textit{Core}, \textit{Debug} e UI~\cite{EclipseJDT}. Neste projeto a 
 plataforma foi usada essencialmente através do \textit{JDT Core}, 
 que dispõe de uma representa\c c\~{a}o Java 
 para a navega\c c\~{a}o 
@@ -54,10 +54,10 @@ sintática \acs{AST} gerada a partir do c\'{o}digo fonte, onde os elementos
 da representa\c c\~{a}o correspondem \`{a}s constru\c c\~{o}es 
 sint\'{a}ticas da linguagem (como pacotes, classes, interfaces métodos e atributos). 
 
-A~\acs{AST} provida pelo \acs{JDT} é composta por 122 classes, 
+A~\acs{AST} provida pelo \acs{JDT} que é composta por 122 classes, 
 como, por exemplo, existem 22 classe para representar senten\c cas  
-como \textit{IF-Than-Else, Switch, While, BreakStatement} 
-entre outras. Exitem cinco classes que trabalham exclusivamente com métodos referenciados 
+como \textit{IF-Then-Else, Switch, While, BreakStatement} 
+entre outras. Existem cinco classes que trabalham exclusivamente com métodos referenciados 
 e seis classes exclusivas que tratam os tipos declarados, como classes, interfaces 
 e enumera\c c\~{o}es em Java.
 O Eclipse JDT~\cite{EclipseJDT} disponibiliza ainda um \textit{parser} 
@@ -76,7 +76,7 @@ uma operação a ser realizada sobre elementos de uma \'{a}rvore de objetos.
 Neste caso, a operação a ser realizadas é visitar nós de interesse da \acs{AST} Java 
 (como os n\'{o}s que representam o uso de uma express\~{a}o Lambda em Java). 
 Cada \textit{visitor} permite que uma nova operação seja criada 
-sem que a estrutura da \'{a}rvore de objetos sofra alterações. Com isso, torna-se relativamente  
+sem que a estrutura da \'{a}rvore de objetos sofra alterações, de modo que tornou-se relativamente  
 simples adicionar novas funcionalidades em um \textit{visitor} existente ou criar um novo \textit{visitor}.
 Por outro lado, a biblioteca Eclipse JDT não fornece mecanismos para 
 extração e exporta\c c\~{a}o de dados. Entretanto, no contexto 
@@ -85,7 +85,7 @@ que visam obter maior facilidade e flexibilidade na exporta\c c\~{a}o das
 informa\c c\~{o}es coletadas durante a travessia nos n\'{o}s das 
 ASTs. Essa flexibilidade foi alcançada com a utilização de introspecção de 
 código, que em Java é conhecido como \textit{reflection}. As 
-pr\'{o}ximas se\c c\~{o}es apresentam mais detalhes sobre a arquitetura e 
+pr\'{o}ximas se\c c\~{o}es 3.1.1, 3.1.2 e 3.1.3 apresentam mais detalhes sobre a arquitetura e 
 implementa\c c\~{a}o do analisador est\'{a}tico, descrevendo 
 as principais decis\~{o}es de projeto relacionadas \`{a}s cinco 
 fases do analisador est\'{a}tico. 
@@ -112,7 +112,7 @@ por um conjunto de classes utilitárias que percorrem os diretórios
 de um determinado projeto e seleciona todos os arquivos fonte da linguagem Java. 
 Os arquivos contendo código fonte Java servem ent\~{a}o como a entrada 
 descrita na representa\c c\~{a}o abstrata 
-do analisador est\'{a}tico (Figura~\ref{fig:Arquitetura}). Ou seja, para cada 
+do analisador est\'{a}tico como descrito na Figura~\ref{fig:Arquitetura}. Ou seja, para cada 
 projeto s\~{a}o recuperados os arquivos contendo 
 c\'{o}digo fonte Java, que s\~{a}o convertidos para uma 
 representa\c c\~{a}o intermedi\'{a}ria (por meio de 
