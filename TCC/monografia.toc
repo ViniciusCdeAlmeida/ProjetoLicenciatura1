@@ -17,16 +17,16 @@
 \contentsline {section}{\numberline {2.4}Representa\IeC {\c c}\IeC {\~a}o Intermedi\IeC {\'a}ria}{7}{section.2.4}
 \contentsline {section}{\numberline {2.5}Navega\IeC {\c c}\IeC {\~a}o na Representa\IeC {\c c}\IeC {\~a}o Intermedi\IeC {\'a}ria}{8}{section.2.5}
 \contentsline {section}{\numberline {2.6}Engenharia de Linguagens de Software}{8}{section.2.6}
-\contentsline {section}{\numberline {2.7}Reconhecedores Sint\'{a}ticos (Parses)}{10}{section.2.7}
+\contentsline {section}{\numberline {2.7}Reconhecedores Sint\IeC {\'a}ticos (Parses)}{10}{section.2.7}
 \contentsline {section}{\numberline {2.8}Refatora\IeC {\c c}\IeC {\~a}o}{11}{section.2.8}
 \contentsline {section}{\numberline {2.9}An\IeC {\'a}lise est\IeC {\'a}tica}{12}{section.2.9}
-\contentsline {chapter}{\numberline {3}Analisador Est\'{a}tico e Caracteriza\c c\~{a}o do Uso de Constru\c c\~{o}es da Linguagem Java}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Analisador Est\'{a}tico}{14}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Entrada do Analisador Est\'{a}tico}{15}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}An\IeC {\'a}lise da Representa\c c\~{a}o Intermedi\'{a}ria}{17}{subsection.3.1.2}
-\contentsline {subsubsection}{Descri\c c\~{a}o dos Visitors}{18}{section*.9}
-\contentsline {subsubsection}{Extensibilidade para Inclus\~{a}o de Novos Visitors}{20}{section*.10}
-\contentsline {subsection}{\numberline {3.1.3}Exporta\c c\~{a}o dos Dados}{20}{subsection.3.1.3}
+\contentsline {chapter}{\numberline {3}Analisador Est\IeC {\'a}tico e Caracteriza\IeC {\c c}\IeC {\~a}o do Uso de Constru\IeC {\c c}\IeC {\~o}es da Linguagem Java}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Analisador Est\IeC {\'a}tico}{14}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Entrada do Analisador Est\IeC {\'a}tico}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}An\IeC {\'a}lise da Representa\IeC {\c c}\IeC {\~a}o Intermedi\IeC {\'a}ria}{17}{subsection.3.1.2}
+\contentsline {subsubsection}{Descri\IeC {\c c}\IeC {\~a}o dos Visitors}{18}{section*.9}
+\contentsline {subsubsection}{Extensibilidade para Inclus\IeC {\~a}o de Novos Visitors}{20}{section*.10}
+\contentsline {subsection}{\numberline {3.1.3}Exporta\IeC {\c c}\IeC {\~a}o dos Dados}{20}{subsection.3.1.3}
 \contentsline {section}{\numberline {3.2}Resultados}{21}{section.3.2}
 \contentsline {section}{\numberline {3.3}Ado\IeC {\c c}\IeC {\~a}o de Java Generics}{23}{section.3.3}
 \contentsline {section}{\numberline {3.4}Ado\IeC {\c c}\IeC {\~a}o de Java Lambda Expression}{24}{section.3.4}

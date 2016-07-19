@@ -1,7 +1,7 @@
 \section{Resultados}\label{sec:resultados}
 
-Essa se\c c\~{a}o descreve os resultados de 
-um estudo emp\'{i}rico sobre a adoção de \textit{features} da 
+Essa seão descreve os resultados de 
+um estudo empírico sobre a adoção de \textit{features} da 
 linguagem Java e \textit{standard libraries}, que pode 
 ser parcialmente compreendido como uma replicação de um estudo 
 existente~\cite{Parnin:ACM2011}. Adicionalmente, a contribuição deste trabalho 
@@ -18,11 +18,11 @@ que são \textit{Java Lambda Expression, Multi-catch, Try-Resource e Switch-Stri
 %% Também foi investigado empiricamente como esta ocorrendo a adoção de \textit{Java Lambda Expression}, vale ressaltar para melhor conhecimento não há estudo empírico que investigou tal questão até o presente momento.
 %% Ainda em relação a \textit{Java Lambda Expression} foi levantando um questionamento nas comunidade \textit{opensources} para descobrir qual o comportamento adotado pelas equipes de desenvolvedores após o lançamento desta \textit{feature}. 
 
-Para a realizar essa investigação, quarenta e seis projetos opensource foram escolhidos e separados em 3 
+Para a realizar essa investigação, quarenta e seis projetos \textit{open-source} foram escolhidos e separados em 3 
 grupos: \textbf{G1} projetos iniciados antes do lançamento de \textit{Java Generics}, \textbf{G2} projetos iniciados 
 após o lançamento de \textit{Java Generics} e \textbf{G3} projetos com a última \textit{release} em 2015. 
 Alguns destes projetos são os mesmos utilizados em~\cite{Parnin:ACM2011, Dyer:ACM2014, ward2015performance}, 
-e também fora separados pela natureza da projeto. Isto \'{e}, os projetos foram 
+e também fora separados pela natureza da projeto. Isto é, os projetos foram 
 classificados como \emph{aplicações}, \emph{bibliotecas} e \emph{servidores/banco de dados}, 
 conforme Tabela~\ref{tab:systems}. 
 
@@ -101,7 +101,7 @@ Relacionado com a adoção de \textit{Java Generics}, a maioria dos projetos apr
 mais expressivo de tipos parametrizados: 
 75\% de todos os tipos declarados são genéricos.
 
-Também foi investigada a relação entre tipos genéricos declarados e todos os tipos considerando os tipos e idade dos sistemas. Tabela~\ref{tab:std} apresenta um resumo desta observação onde é possível verificar que o uso típico de  \textit{Java Generics} não muda significativamente entre os tipos de projetos Java, embora essa proporção seja mais baixa para aplicações e servidores/bancos de dados com versões anteriores ao lançamento do Java SE 5.0.
+Também foi investigada a relação entre tipos genéricos declarados e todos os tipos considerando os tipos e idade dos sistemas. Tabela~\ref{tab:std} apresenta um resumo desta observação onde é possível verificar que o uso típico de \textit{Java Generics} não muda significativamente entre os tipos de projetos Java, embora essa proporção seja mais baixa para aplicações e servidores/bancos de dados com versões anteriores ao lançamento do Java SE 5.0.
 
 \begin{table}[h!]
 	\centering
@@ -121,7 +121,7 @@ Também foi investigada a relação entre tipos genéricos declarados e todos os
 
 Existe um número expressivo de atributos e variáveis declaradas como instâncias de tipos genéricos. Considerando um total de \num{925925}\ variáveis e atributos declarados em todos os projetos, \num{84880} são instâncias de tipos genéricos, aproximadamente 10\% de todas as declarações. Além disso, a partir destes atributos e variáveis declaradas como instância de tipos genéricos, quase 17\% são instâncias dos tipos presentes na Tabela~\ref{tab:tipoXnumeroInstancia}. Note que, em um trabalho anterior, Parning et al.~\cite{Parnin:ACM2011} apresenta \texttt{List$<$String$>$} com quase 25\% de todas as ocorr\^{e}ncias 
 de tipos genéricos. O que pode ser confirmado que \texttt{List$<$String$>$} ainda é o tipo com maior frequência de uso entre os tipos genéricos. 
-Por outro lado, \'{e} importante observar que, em um total de 
+Por outro lado, é importante observar que, em um total de 
 \num{730720} métodos, apenas \num{6157} (0.84\%) 
 são \emph{métodos parametrizados.}
 
@@ -163,10 +163,10 @@ Os resultados mostram que \textit{Java Generics} é uma \textit{feature} em que 
 \section{Adoção de Java Lambda Expression}
 Considerando os sistemas pesquisados, o uso de Java \textit{Lambda Expression} ainda é muito limitado, independente das expectativas e reivindicações sobre os possíveis benefícios dessa construção. Na verdade, apenas cinco projetos adotam este recurso conforme a Tabela~\ref{tab:adocaoLambda}, embora o cenário de uso (quase 90\%) está relacionado com testes unitários. 
 
-Essa observa\c c\~{a}o levou a um questionamento se algum 
+Essa observação levou a um questionamento se algum 
 \textit{framework} de teste unitário (particularmente o 
 Mockito) conduzia os desenvolvedores 
-a usar express\~{o}es lambda em testes automatizados. 
+a usar expressões lambda em testes automatizados. 
 Entretanto após analisar manualmente o código fonte não foi encontrado nenhum indício da adoção de Java\textit{ Lambda Expresssion} para testes unitários o que pode-se concluir que tais testes ocorreram de forma \textit{ad-hoc} através de esforços individuais de cada desenvolvedor.
 Ou seja, a partir de milhares de casos de testes unitários no \textit{Hibernate}, apenas poucos testes para uma biblioteca específica (relacionados com \textit{cache}) usam Java\textit{ Lambda Expression}. Este pequeno uso de Java\textit{ Lambda Expression} pode ser principalmente motivado por uma decisão estratégica do projeto para evitar a migração do código fonte ultrapassado para a versão mais atual.
 
@@ -187,30 +187,30 @@ Ou seja, a partir de milhares de casos de testes unitários no \textit{Hibernate
 \end{table}
 
 
-Foi enviado mensagens para grupos do desenvolvedores sobre o assunto, e algumas respostas esclarecem a atual situação da adoção de Java\textit{ Lambda Expression}. Primeiro de tudo, para sistemas estabelecidos, as equipes de desenvolvedores muitas vezes não podem assumir que todos os usu\'{a}rios sejam capazes de migrar para uma nova versão do Java\textit{ Runtime Environment}. Por exemplo, o seguinte \textit{post} explica uma das razões para não adotar algumas construções adicionada a linguagem Java: 
+Foi enviado mensagens para grupos do desenvolvedores sobre o assunto, e algumas respostas esclarecem a atual situação da adoção de Java\textit{ Lambda Expression}. Primeiro de tudo, para sistemas estabelecidos, as equipes de desenvolvedores muitas vezes não podem assumir que todos os usuários sejam capazes de migrar para uma nova versão do Java\textit{ Runtime Environment}. Por exemplo, o seguinte \textit{post} explica uma das razões para não adotar algumas construções adicionada a linguagem Java: 
 
 \begin{quotation}
 ``É, sobretudo, para permitir que as pessoas que estão vinculados (por qualquer motivo) a versões mais antigas do ~\acs{JDK} utilizem nosso software. Há um grande número de projetos que não são capazes de usar novas versões do ~\acs{JDK}. Eu sei que este é um tema controverso e acho que a maioria de gostaria de usar todos esses recursos. Mas não devemos esquecer as pessoas que usam 
-nosso software em seu trabalho diário'' (http://goo.gl/h0uloY).
+nosso software em seu trabalho diário`` (http://goo.gl/h0uloY).
 \end{quotation}
 
 Além disso, uma abordagem inicial utilizando uma nova característica da linguagem é mais oportunista. Ou seja, os desenvolvedores não migram todo o projeto, mas em vez disso as modificações que introduzem estas novas construções de linguagem ocorrem quando eles estão implementando novas funcionalidades. Duas respostas a estas perguntas deixam isso claro: 
 
 \begin{quotation}
-``Nós tentamos evitar reescrever grandes trechos de código base, sem uma boa razão. Em vez disso, tirar proveito dos novos recursos de linguagem ao escrever novo código ou refatoração código antigo.'' (https://goo.gl/2WgjVG) 
+``Nós tentamos evitar reescrever grandes trechos de código base, sem uma boa razão. Em vez disso, tirar proveito dos novos recursos de linguagem ao escrever novo código ou refatoração código antigo.`` (https://goo.gl/2WgjVG) 
 \end{quotation}
 
 \begin{quotation}
- ``Eu, pessoalmente, não gosto da ideia de mover todo o código para uma nova versão Java, eu modifico áreas que atualmente trabalho.''  (http://goo.gl/ GQ4Ckn).
+ ``Eu, pessoalmente, não gosto da ideia de mover todo o código para uma nova versão Java, eu modifico áreas que atualmente trabalho.``  (http://goo.gl/ GQ4Ckn).
 \end{quotation}
 
  Observe que não se pode generalizar estas conclusões com base nessas respostas, uma vez que não foi 
-conduzida uma investiga\c c\~{a}o emp\'{i}rica mais estruturada em termos de 
+conduzida uma investigação empírica mais estruturada em termos de 
 \emph{survey}. No entanto, estas respostas podem apoiar trabalhos contra a adoção antecipada de novos recursos de linguagem por sistemas estabelecidos com uma enorme comunidade de usuários.
 
 Também foi efetuada uma busca no \textit{STACK OVERFLOW} tentando descobrir se Java\textit{ Lambda Expression} é um tema discutido atualmente ou não~\footnote{Última pesquisa realizada em Novembro 2015}, utilizando \textit{tags} Java e Lambda. Foi encontrada mais de \num{1000} questões respondidas. Este número é bastante expressivo, quando considerou-se uma busca por questões marcadas com as \textit{tag} de Java Generics levou-se a um número próximo de \num{10000} perguntas, embora \textit{Generics} tenha sido introduzido há mais de dez anos. Possivelmente, Java\textit{ Lambda Expression} está sendo usado principalmente em pequenos projetos e experimentais. Isso pode contrastar com os resultados anteriores~\cite{Dyer:ACM2014}, que sugerem uma adoção antecipada de novos recursos da linguagem (mesmo antes de lançamentos oficiais). Com base nesses resultados, pode-se argumentar que a adoção antecipada de novos recursos da linguagem ocorre em projetos pequenos e experimentais.
 
-Tamb\'{e}m foi feita uma investiga\c c\~{a}o sobre as oportunidades de adoção de Java\textit{ Lambda Expression} nos projetos estudados. Desta forma, foi complementado um testou maior~\cite{gyori2013crossing},  que investigou as mesmas questões porém eu um número de  inferior de projetos. Existem dois cenários típicos para \textit{refactoring} utilizando Expressões Lambda: \textit{Annonymous Inner Classes} (\acs{AIC}) e \textit{Enhanced for Loops} (\acs{EFL}). É importante notar que nem todas as ~\acs{AIC}s e ~\acs{EFL}s podem ser reescritas utilizando Java\textit{ Lambda Expression}, e existem rígidas precondições que são detalhadas em ~\cite{gyori2013crossing}. Neste trabalho foi utilizado uma abordagem mais conservadora para considerar se é possível refatorar\textit{Enhanced for Loops} para Java\textit{ Lambda Expression}, o que evita falsos positivos.  Entretanto, foram consideradas somente 
+Também foi feita uma investigação sobre as oportunidades de adoção de Java\textit{ Lambda Expression} nos projetos estudados. Desta forma, foi complementado um testou maior~\cite{gyori2013crossing},  que investigou as mesmas questões porém eu um número de  inferior de projetos. Existem dois cenários típicos para \textit{refactoring} utilizando Expressões Lambda: \textit{Annonymous Inner Classes} (\acs{AIC}) e \textit{Enhanced for Loops} (\acs{EFL}). É importante notar que nem todas as ~\acs{AIC}s e ~\acs{EFL}s podem ser reescritas utilizando Java\textit{ Lambda Expression}, e existem rígidas precondições que são detalhadas em ~\cite{gyori2013crossing}. Neste trabalho foi utilizado uma abordagem mais conservadora para considerar se é possível refatorar\textit{Enhanced for Loops} para Java\textit{ Lambda Expression}, o que evita falsos positivos.  Entretanto, foram consideradas somente 
 oportunidades de refatorar~\acs{EFL} para Java\textit{Lambda Expression} em tr\^{e}s 
 casos particulares: \textsc{EXIST PATTERN}, \textsc{BASIC FILTER PATTERN} e 
 \textsc{BASIC MAPPING PATTERN}, descritos nas 
@@ -287,7 +287,7 @@ Baseado nesta assertiva, foi feita uma investigação adicional que visa minerar
 em código fonte existente e encontrar possíveis casos de trechos de código que poderiam ser 
 evoluídos ao longo das versões da linguagem Java. Essas situações caracterizam cenários potenciais de melhoria de código e preservam 
 o comportamento do sistema (tipicamente um \textit{refactoring}), com o objetivo único de usar construções introduzidas nas versões 7 e 8 da linguagem Java.
-Dentre as evoluções da linguagem, essa se\c c\~{a}o descreve os resultados 
+Dentre as evoluções da linguagem, essa seção descreve os resultados 
 para se identificar oportunidades de adoção das características 
 \texttt{multi-catch, try resource e switch com string} 
 bem como se as mesmas estão sendo adotadas.

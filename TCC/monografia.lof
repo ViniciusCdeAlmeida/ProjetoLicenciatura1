@@ -5,15 +5,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Reconhecimento de senten\IeC {\c c}as de uma linguagem.}}{6}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Fases de aplica\IeC {\c c}\~{o}es com linguagens.}}{8}{figure.2.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Fases de aplica\IeC {\c c}\IeC {\~o}es com linguagens.}}{8}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Fases do pipiline do FindBugs.}}{9}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Ferramentas necess\'{a}rias para constru\IeC {\c c}\~{a}o do analisador est\'{a}tico.}}{10}{figure.2.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ferramentas necess\IeC {\'a}rias para constru\IeC {\c c}\IeC {\~a}o do analisador est\IeC {\'a}tico.}}{10}{figure.2.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Vis\~{a}o geral da arquitetura do analisador est\'{a}tico}}{15}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Classe que representa o programa principal do analisador est\'{a}tico}}{16}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Implementa\c c\~{a}o do m\'{e}todo \texttt {analyse}, na classe \texttt {ProjectAnalyser}.}}{17}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Classes usadas para capturar declara\c c\~{o}es de enumera\c c\~{o}es.}}{18}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Exporta\c c\~{a}o de dados usando o mecanismo de introspec\c c\~{a}o de c\'{o}digo.}}{21}{figure.3.5}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Vis\IeC {\~a}o geral da arquitetura do analisador est\IeC {\'a}tico}}{15}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Classe que representa o programa principal do analisador est\IeC {\'a}tico}}{16}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {analyse}, na classe \texttt {ProjectAnalyser}.}}{17}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Classes usadas para capturar declara\IeC {\c c}\IeC {\~o}es de enumera\IeC {\c c}\IeC {\~o}es.}}{18}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Exporta\IeC {\c c}\IeC {\~a}o de dados usando o mecanismo de introspec\IeC {\c c}\IeC {\~a}o de c\IeC {\'o}digo.}}{21}{figure.3.5}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Oportunidades de \texttt {multi-catch} nos projetos.}}{28}{figure.3.6}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Ado\IeC {\c c}\IeC {\~a}o de \texttt {Try-Resource} nos projetos.}}{30}{figure.3.7}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Oportunidades de \textit {refactoring} em \texttt {if-then-else} por sistema.}}{32}{figure.3.8}
