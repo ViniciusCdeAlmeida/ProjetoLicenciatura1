@@ -1,148 +1,196 @@
-\chapter{Analisador Est\'{a}tico e Caracteriza\c c\~{a}o do Uso de Constru\c c\~{o}es da Linguagem Java}\label{cap:arquiteruta}
+\chapter{Analisador Estático e Caracterização do Uso de Construções da Linguagem Java}\label{cap:arquiteruta}
 
-Com o intuito de obter uma compreens\~{a}o sobre o uso 
-das constru\c c\~{o}es da linguagem Java, tornou-se 
-necess\'{a}ria a implementa\c c\~{a}o de uma ferramenta 
-de an\'{a}lise est\'{a}tica de prop\'{o}sito bem 
-espec\'{i}fico, por outro lado com capacidade de 
-ser extens\'{i}vel para extrair diferentes tipos de 
-informa\c c\~{o}es. Utilizando esse suporte ferramental, 
-descrito na Se\c c\~{a}o~\ref{sec:ferramenta}, foi conduzido 
-um estudo emp\'{i}rico para caracterizar o uso de 
-constru\c c\~{o}es da linguagem Java, cujos resultados 
-est\~{a}o descritos na Se\c c\~{a}o~\ref{sec:resultados}.
+Com o intuito de obter uma compreensão sobre o uso das construções da linguagem Java, tornou-se necessária a implementação de uma ferramenta de análise estática de propósito específico, por outro lado com capacidade de ser extensível para extrair diferentes tipos de informações. Utilizando esse suporte ferramental, descrito na Seção \ref{sec:ferramenta}, foi conduzido um estudo empírico para caracterizar o uso de construções da linguagem Java, cujos resultados 
+estão descritos na Seção \ref{sec:resultados}.
 
-\section{Analisador Est\'{a}tico}\label{sec:ferramenta}
+Um ponto de extrema relevância na construção do \NOMESOFTWARE é que este deveria ser de fácil manipulação para desenvolvedores com pouca experiência no domínio desta aplicação. Com isso respeitando os padrões adotados neste trabalho que serão detalhados nas subseções \ref{subsec:entradaAS}, \ref{subsec:classeModelos} e \ref{subsec:criacaoVisitors} qualquer programador pode criar \textit{Visitors} para pesquisar por construções de suas necessidades.
 
-A Figura~\ref{fig:Arquitetura} apresenta 
-uma vis\~{a}o geral dos elementos que comp\~{o}em o 
-analisador est\'{a}tico desenvolvido durante a condu\c c\~{a}o 
-deste trabalho de gradua\c c\~{a}o. Em linhas 
-gerais, tal suporte ferramental recupera do sistema 
-de arquivos todos os arquivos contendo código fonte 
-escrito na linguagem Java, realiza o \textit{parse} 
-desses arquivos gerando uma representação 
-intermediária correspondente, mais adequada para 
-as an\'{a}lises de interesse deste projeto, 
-aplica uma série de mecanismos de análise estática 
-para coletar as informações sobre o uso das 
-caracter\'{i}sticas da linguagem de programa\c c\~{a}o e, por fim, 
-gera os resultados no formato 
-apropriado para as an\'{a}lises estat\'{i}sticas 
-(no contexto deste projeto, foi feita a op\c c\~{a}o pelo 
-formato \acs{CSV}).
+\section{Visão Geral do \NOMESOFTWARE}\label{sec:ferramenta}
 
-Atualmente existem diversas ferramentas e bibliotecas 
-de programa\c c\~{a}o que auxiliam a constru\c c\~{a}o
-de analisadores estáticos,  
-conforme as nossas necessidades.
-Entretanto, devido a maior experiência dos 
-participantes do projeto com uso da linguagem Java, 
-foi feita a op\c c\~{a}o por se utilizar a 
-infraestrutura da plataforma \textit{Eclipse Java Development Tools}~\cite{EclipseJDT} 
-(Eclipse JDT). O Eclipse JDT 
-fornece um conjunto de ferramentas que auxiliam na constru\c c\~{a}o 
-de ferramentas que permitem processar c\'{o}digo fonte escrito 
-na linguagem de programa\c c\~{a}o Java. 
-A plataforma Eclipse JDT é composta por 4 componentes principais: 
-APT, \textit{Core}, \textit{Debug} e UI~\cite{EclipseJDT}. Neste projeto a 
-plataforma foi usada essencialmente através do \textit{JDT Core}, 
-que dispõe de uma representa\c c\~{a}o Java 
-para a navega\c c\~{a}o 
-e manipula\c c\~{a}o dos elementos de uma árvore 
-sintática \acs{AST} gerada a partir do c\'{o}digo fonte, onde os elementos 
-da representa\c c\~{a}o correspondem \`{a}s constru\c c\~{o}es 
-sint\'{a}ticas da linguagem (como pacotes, classes, interfaces métodos e atributos). 
+A Figura~\ref{fig:Arquitetura} apresenta uma visão geral dos elementos que compõem o analisador estático desenvolvido durante a condução deste trabalho de graduação. Em linhas gerais, tal suporte ferramental recupera do sistema de arquivos todos os arquivos contendo código fonte escrito na linguagem Java, realiza o \textit{parse} desses arquivos gerando uma representação intermediária correspondente, mais adequada para as análises de interesse deste projeto, aplica uma série de mecanismos de análise estática  para coletar as informações sobre o uso das características da linguagem de programação e, por fim, gera os resultados no formato apropriado para as análises estatísticas no contexto deste projeto, foi feita a opção pelo formato \acs{CSV}.
 
-A~\acs{AST} provida pelo \acs{JDT} que é composta por 122 classes, 
-como, por exemplo, existem 22 classe para representar senten\c cas  
-como \textit{IF-Then-Else, Switch, While, BreakStatement} 
-entre outras. Existem cinco classes que trabalham exclusivamente com métodos referenciados 
-e seis classes exclusivas que tratam os tipos declarados, como classes, interfaces 
-e enumera\c c\~{o}es em Java.
-O Eclipse JDT~\cite{EclipseJDT} disponibiliza ainda um \textit{parser} 
-para a linguagem Java que atende a especifica\c c\~{a}o 
-Java 8 da linguagem e que produz a representação intermediária baseada no conjunto de classes Java 
-mencionado anteriormente e que corresponde 
-a uma~\acs{AST} do código fonte. A plataforma tamb\'{e}m oferece 
-uma hierarquia de classes 
-para travessia na \acs{AST}, de acordo com o padr\~{a}o de projeto \textit{Visitor}~\cite{Gamma:1995}, e 
-que facilita a análise estática 
-de código fonte.
+Atualmente existem diversas ferramentas e bibliotecas de programação que auxiliam a construção de analisadores estáticos,  
+conforme as nossas necessidades.Entretanto, devido a maior experiência dos participantes do projeto com uso da linguagem Java, foi feita a opção por se utilizar a infraestrutura da plataforma \textit{Eclipse Java Development Tools}~\cite{EclipseJDT} (Eclipse JDT). O Eclipse JDT fornece um conjunto de ferramentas que auxiliam na construção 
+de ferramentas que permitem processar código fonte escrito na linguagem de programação Java. A plataforma Eclipse JDT é composta por 4 componentes principais: APT, \textit{Core}, \textit{Debug} e UI~\cite{EclipseJDT}. Neste projeto a plataforma foi usada essencialmente através do \textit{JDT Core}, que dispõe de uma representação Java para a navegação 
+e manipulação dos elementos de uma árvore sintática \acs{AST} gerada a partir do código fonte, onde os elementos 
+da representação correspondem às construções sintáticas da linguagem (como pacotes, classes, interfaces métodos e atributos). 
 
-O padr\~{a}o de projeto \textit{Visitor}~\cite{Gamma:1995} \'{e} um 
-padrão de projeto de característica comportamental que representa 
-uma operação a ser realizada sobre elementos de uma \'{a}rvore de objetos. 
-Neste caso, a operação a ser realizadas é visitar nós de interesse da \acs{AST} Java 
-(como os n\'{o}s que representam o uso de uma express\~{a}o Lambda em Java). 
-Cada \textit{visitor} permite que uma nova operação seja criada 
-sem que a estrutura da \'{a}rvore de objetos sofra alterações, de modo que tornou-se relativamente  
-simples adicionar novas funcionalidades em um \textit{visitor} existente ou criar um novo \textit{visitor}.
-Por outro lado, a biblioteca Eclipse JDT não fornece mecanismos para 
-extração e exporta\c c\~{a}o de dados. Entretanto, no contexto 
-deste projeto, foi implementado um conjunto de classes 
-que visam obter maior facilidade e flexibilidade na exporta\c c\~{a}o das 
-informa\c c\~{o}es coletadas durante a travessia nos n\'{o}s das 
-ASTs. Essa flexibilidade foi alcançada com a utilização de introspecção de 
-código, que em Java é conhecido como \textit{reflection}. As 
-pr\'{o}ximas se\c c\~{o}es 3.1.1, 3.1.2 e 3.1.3 apresentam mais detalhes sobre a arquitetura e 
-implementa\c c\~{a}o do analisador est\'{a}tico, descrevendo 
-as principais decis\~{o}es de projeto relacionadas \`{a}s cinco 
-fases do analisador est\'{a}tico. 
+A \acs{AST} provida pelo \acs{JDT} que é composta por 122 classes, como, por exemplo, existem 22 classe para representar sentenças  como \textit{IF-Then-Else, Switch, While, BreakStatement} entre outras. Existem cinco classes que trabalham exclusivamente com métodos referenciados e seis classes exclusivas que tratam os tipos declarados, como classes, interfaces e enumerações em Java.O Eclipse JDT \cite{EclipseJDT} disponibiliza ainda um \textit{parser} 
+para a linguagem Java que atende a especificação Java 8 da linguagem e que produz a representação intermediária baseada no conjunto de classes Java mencionado anteriormente e que corresponde a uma~\acs{AST} do código fonte. A plataforma também oferece uma hierarquia de classes para travessia na \acs{AST}, de acordo com o padrão de projeto \textit{Visitor} \cite{Gamma:1995}, e que facilita a análise estática de código fonte.
+
+O padrão de projeto \textit{Visitor}~\cite{Gamma:1995} é um padrão de projeto de característica comportamental que representa uma operação a ser realizada sobre elementos de uma árvore de objetos. Neste caso, a operação a ser realizadas é visitar nós de interesse da \acs{AST} Java (como os nós que representam o uso de uma expressão Lambda em Java). 
+Cada \textit{visitor} permite que uma nova operação seja criada sem que a estrutura da árvore de objetos sofra alterações, de modo que tornou-se relativamente  simples adicionar novas funcionalidades em um \textit{visitor} existente ou criar um novo \textit{visitor}.Por outro lado, a biblioteca Eclipse JDT não fornece mecanismos para 
+extração e exportação de dados. Entretanto, no contexto deste projeto, foi implementado um conjunto de classes 
+que visam obter maior facilidade e flexibilidade na exportação das informações coletadas durante a travessia nos nós das 
+ASTs. Essa flexibilidade foi alcançada com a utilização de introspecção de código, que em Java é conhecido como \textit{reflection}. As próximas seções 3.1.1, 3.1.2 e 3.1.3 apresentam mais detalhes sobre a arquitetura e 
+implementação do analisador estático, descrevendo as principais decisões de projeto relacionadas às cinco 
+fases do analisador estático. 
 
 \begin{figure}[tb]
 	\center
 	\includegraphics[scale=0.55]{Imagens/Arquitetura}
 	\label{fig:Arquitetura}
-	\caption{Vis\~{a}o geral da arquitetura do analisador est\'{a}tico}
+	\caption{Visão geral da arquitetura do analisador estático}
 \end{figure}
 
 
-\subsection{Entrada do Analisador Est\'{a}tico}
 
-O analisador estático recebe como entrada um arquivo \acs{CSV} 
-(\emph{comma-separated values}) 
-que contém informa\c c\~{o}es sobre 
-os projetos a serem analisados, como nome do projeto, 
-caminho absoluto para uma pasta no sistema 
-de arquivos contendo o c\'{o}digo fonte do projeto e a quantidade de linhas de código previamente 
-computadas (conforme ilustrado na Figura~\ref{fig:Arquitetura}). 
-As informações contidas no arquivo \acs{CSV} s\~{a}o processadas 
-por um conjunto de classes utilitárias que percorrem os diretórios 
-de um determinado projeto e seleciona todos os arquivos fonte da linguagem Java. 
-Os arquivos contendo código fonte Java servem ent\~{a}o como a entrada 
-descrita na representa\c c\~{a}o abstrata 
-do analisador est\'{a}tico como descrito na Figura~\ref{fig:Arquitetura}. Ou seja, para cada 
-projeto s\~{a}o recuperados os arquivos contendo 
-c\'{o}digo fonte Java, que s\~{a}o convertidos para uma 
-representa\c c\~{a}o intermedi\'{a}ria (por meio de 
-um parser existente); processados e analisados com 
-uma infraestrutura de \emph{visitors}, e os resultados das an\'{a}lises s\~{a}o ,por fim, 
-exportados.
+\subsection{Entrada do Analisador Estático}\label{subsec:entradaAS}
 
-Conforme mencionado, essa fase do analisador est\'{a}tico realiza o processamento 
-de cada arquivo Java dos projetos analisados. Sob a perspectiva de usabilidade, 
-o usu\'{a}rio deve executar o programa principal informando, na linha de 
-comando, o caminho para o arquivo \acs{CSV} contendo as defini\c c\~{o}es dos 
-projetos. Isso produz uma lista contendo todos os projetos a serem processados 
-(ver Linha 25 no Listing:~\ref{lst:programaPrincipal}). Ap\'{o}s a lista de 
-projetos ter sido carregada, cada projeto \'{e} analisado com o uso 
-da classe \texttt{ProjectAnalyser}, que possui um m\'{e}todo 
-(\texttt{analyse}) com a l\'{o}gica necess\'{a}ria para 
-processar a base de c\'{o}digo fonte de cada projeto. A Figura~\ref{fig:metodoAnalyse} 
-apresenta a implementa\c c\~{a}o do m\'{e}todo \texttt{analyse}, que 
-recebe como par\^{a}metro um projeto. Note na linha seis da 
-Figura~\ref{fig:metodoAnalyse} que o resultado do \textit{parse} 
-em um arquivo fonte produz uma inst\^{a}ncia da classe 
-\texttt{CompilationUnit} que pertence a plataforma 
-Eclipse JDT e que representa a AST de um determinado 
-arquivo Java. Essa classe possui um m\'{e}todo \texttt{accept}, 
-conforme o padr\~{a}o de projeto \textit{visitor}, que \'{e} usado 
-para pela ferramenta de an\'{a}lise est\'{a}tica para 
-coletar as informa\c c\~{o}es do uso de constru\c c\~{o}es 
-Java por meio de uma an\'{a}lise da representa\c c\~{a}o 
-intermedi\'{a}ria. Isso \'{e} feito considerando cada um dos 
-\emph{visitors} aplicados em uma an\'{a}lise espec\'{i}fica. 
+O analisador estático recebe como entrada um arquivo \acs{CSV} (\emph{comma-separated values}) 
+que contém informações sobre os projetos a serem analisados, como nome do projeto, caminho absoluto para uma pasta no sistema de arquivos contendo o código fonte do projeto e a quantidade de linhas de código previamente computadas (conforme ilustrado na Figura~\ref{fig:Arquitetura}). 
+A entrada deve ser rigidamente construído no seguindo o formato abaixo, indispensável para análise é o caminho absoluto do projeto e o nome entretanto caso não possua os outros dados deve ser mantido em branco para evitar erro no analisador.
+
+
+Entrada Completa:\\
+\begin{small}
+\texttt{Tipo Aplicação; Inicio do projeto Ante ou Após Java 5; Nome Projeto; Versão;Caminho absoluto;Linha de código;}
+\end{small}	
+
+Entrada Incompleta:\\
+\begin{small}
+\texttt{;; Nome Projeto; Versão;Caminho absoluto;0;}
+\end{small}
+
+
+Perceba que na omissão de alguns campos estes permanecem em branco com exceção do número de linhas de código que caso seja irrelevante para análise é mantido algum inteiro, neste caso 0. Destaca-se ainda que em um único arquivo \acs{CSV} de entrada pode conter inúmeros projetos para que sejam analisados.
+
+As informações contidas no arquivo \acs{CSV} são processadas por um conjunto de classes utilitárias que as extraem. Com o caminho absoluto informado corretamente é realizado uma verredura nesse diretório para selecionar todos os arquivos fonte da linguagem Java. Estes arquivos fonte Java são a entrada  descrita na representação abstrata do analisador estático como descrito na Figura~\ref{fig:Arquitetura}. Ou seja, para cada projeto são recuperados os arquivos contendo código fonte Java, que são convertidos para uma representação intermediária (por meio de um parser existente); processados e analisados com uma infraestrutura de \emph{visitors}, e os resultados das análises são, por fim, exportados.
+
+
+\subsection{Classes Modelos}\label{subsec:classeModelos}
+Após a correta elaboração da entrada descrita na subseção \ref{subsec:entradaAS} é hora de criar as classes modelos estas classes são responsáveis por mapear as informações que serão extraídas durante a fase de análise da representação intermediária. Estas classes são simples, compostas basicamente por \textit{getters - setters}. Destaca-se ainda que os métodos \textit{getters} deve conter o nome seguindo um padrão que é : \texttt{getNomeMétodo} para que o dado armazenado possar ser recuperado corretamente no fase de extração.
+
+Como exemplo a Figura: \ref{lst:lambdaModel} exibe a simplicidade desta classe. Observe que todos os métodos \textit{getters} sem exceção deve iniciam com \texttt{get} para evitar que as informações mapeadas seja perdidas e estas classes deve ser empacote em \texttt{br.unb.cic.sa.model}.
+
+Após a elaboração da classe modelo é necessário editar o arquivo \texttt{Beans.xml} que é um arquivo do \textit{Framework Spring} que utiliza o padrão de injeção de dependência para proporcionar um fraco acoplamento entre módulos. Este arquivo encontra-se localizado no diretório \texttt{src/main/resouces}. Para adicionar o cabeçalho correspondente do arquivo \acs{CSV} de saída que mapeará as características pesquisadas. No exemplo da Figura: \ref{lst:lambdaModel} expressão lambda que é mapeada.
+
+Observe a forma correta de declarar este cabeçalho na Figura: \ref{lst:cabecalhoBeans}, tal declaração conterá o diretório de saída para o arquivo \acs{CSV} com as análises, o nome deste e o cabeçalho deste arquivo para facilitar o entendimento em um programa de análise como R. Posteriormente os dado mapeados neste arquivo \texttt{XML} serão referenciados na declaração dos \texttt{visitors} que também serão declarados neste mesmo arquivo a subseção \ref{subsec:criacaoVisitors} explicará detalhadamente a correata forma de criá-los.
+
+\begin{figure}[ht]
+\begin{lstlisting}[numbers=left,   numberstyle=\tiny]
+package br.unb.cic.sa.model;
+
+public class LambdaExp {
+
+	private String file;
+	private int startLine;
+	private int endLine;
+	private String parentMethodInvocation;
+	
+	public LambdaExp(String file, int startLine, int endLine){
+		this.file = file;
+		this.startLine = startLine;
+		this.endLine = endLine;
+	}
+
+	public String getFile() {return file;}
+	public int getStartLine() {return startLine;}
+	public int getEndLine() {return endLine;}
+	public String getParentMethodInvocation() {return parentMethodInvocation;}
+			
+	public void setFile(String file) {this.file = file;}	
+	public void setEndLine(int endLine) {this.endLine = endLine;}
+	public void setStartLine(int startLine) {this.startLine = startLine;}
+	
+	public void setParentMethodInvocation(String parentMethodInvocation) {
+		this.parentMethodInvocation = parentMethodInvocation;
+	}
+}
+\end{lstlisting}
+\caption{Exemplo de classe modelo para mapear informações de expressão lambda.}
+\label{lst:lambdaModel}
+\end{figure}
+
+\begin{figure}[ht!]
+\begin{lstlisting}[numbers=left,   numberstyle=\tiny, language=xml]
+<bean id="lambdaExpressionData" class="br.unb.cic.sa.model.CSVData">
+	<property name="outDir" value="output"/>
+	<property name="fileName" value="lambdaExpression"/>
+	<property name="head" value="typeProject, before, project, version, file, start, end, parentMethod"/> 
+</bean>
+\end{lstlisting}
+\caption{Exemplo de cabeçalho declarado no Beans.xml.}
+\label{lst:cabecalhoBeans}
+\end{figure}
+
+
+
+\subsection{Criação de Visitors}\label{subsec:criacaoVisitors}
+Nesta fase é a hora de criar um \texttt{Visitor} para pesquisar as por construções desejadas, para isto é necessário criar uma classe parametrizada na classe modelo criada conforme a subseção \ref{subsec:classeModelos} detalhou. Esta classe deve ser criada no pacote \texttt{br.unb.cic.sa.visitors}. 
+
+\begin{figure}[ht]
+\begin{lstlisting}[numbers=left,   numberstyle=\tiny]
+package br.unb.cic.sa.visitors;
+
+import org.eclipse.jdt.core.dom.LambdaExpression;
+import br.unb.cic.sa.model.LambdaExp;
+
+public class LambdaExpressionVisitor extends Visitor<LambdaExp> {
+	@Override
+	public boolean visit(LambdaExpression node) {
+
+		LambdaExp exp = new LambdaExp(this.file, unit.getLineNumber(node.getStartPosition()),
+				unit.getLineNumber(node.getStartPosition() + node.getLength()));
+
+		this.collectedData.addValue(exp);
+
+		return super.visit(node);
+	}
+}
+\end{lstlisting}
+\caption{Declaração de um Visitor capaz de pesquisar expressão lambda .}
+\label{lst:parcialVisitor}
+\end{figure}
+
+A Figura: \ref{lst:parcialVisitor} detalhará a criação do \texttt{Visitor} capaz de recuperar informações desta característica adicionada em Java 8. Tal mapeamento é efetivado na \texttt{linha 13} por adicionar uma referência da classe modelo instanciada na \texttt{linha 10} em uma coleção para posterior extração desses dados para um arquivo \acs{CSV}.
+
+Por sobrescrever o método \texttt{visit} o qual é fornecido pela infraestrutura Eclipse-JDT, esta classe possibilita a navegação na representação intermediária do código fonte e este método somente será acionado para identificar nós da representação intermediária que sejam do tipo \texttt{LambdaExpression} tipo o qual também fornecido pelo Eclipse-JDT através do \texttt{import org.eclipse.jdt.core.dom.LambdaExpression;}.
+
+Observe na Figura: \ref{lst:parcialVisitor} que a classe \texttt{LambdaExpressionVisitor} estende da classe \texttt{Visitor} a qual é responsável por concentrar dados referentes a todos os \texttt{Visitors}. Entretando pode-se ver claramente conforme descrito que esta classe é parametrizada na classe modelo neste caso \texttt{LambdaExp} a qual foi exemplificada.
+
+
+Após o \texttt{Visitor} ser concebido este também deve ser declarado no arquivo \texttt{Beans.xml} pois também será automaticamente injetado durante a análise dos projetos declarados no arquivo \acs{CSV} de entrada descrito na subseção \ref{subsec:entradaAS}. A Figura: \ref{lst:beanVisitor} exemplifica a declaração efetiva do \texttt{Visitor}.
+
+\begin{figure}[ht!]
+\begin{lstlisting}[numbers=left,   numberstyle=\tiny, language=xml]
+<bean id="lambdaExpressionVisitor" class="br.unb.cic.sa.visitors.LambdaExpressionVisitor">
+	<property name="collectedData" ref="lambdaExpressionData"/>
+</bean>
+\end{lstlisting}
+\caption{Exemplo de cabeçalho declarado no Beans.xml.}
+\label{lst:beanVisitor}
+\end{figure}
+
+Verifique que a Figura: \ref{lst:beanVisitor} declara a classe do \texttt{Visitor} criado através do atributo \textit{class} na linha 1 e faz referência ao cabeçalho declarado na Figura: \ref{lst:cabecalhoBeans} na \textit{Tag property} através do atributo \texttt{ref} contido na linha 2.  Observe ainda que o atributo \textit{id} na linha 1 é o identificador da classe declarada neste arquivo e será utilizada posteriormente na Figura: \ref{lst:listVisitor}.
+
+\begin{figure}[ht!]
+\begin{lstlisting}[numbers=left,   numberstyle=\tiny, language=xml]
+<bean id="pa" class="br.unb.cic.sa.ProjectAnalyser">
+	<property name="listVisitors">
+		<list>
+			<ref bean="lambdaExpressionVisitor"/> 
+			<ref bean="..."/> 
+			<ref bean="..."/> 
+		</list>
+	</property>
+</bean>
+\end{lstlisting}
+\caption{Exemplo de cabeçalho declarado no Beans.xml.}
+\label{lst:listVisitor}
+\end{figure}
+
+A Figura \ref{lst:listVisitor} é a último estágio de criação do \texttt{Visitor} para que este passe a ser injetado nos projetos,  observe na linha 1 o atributo \texttt{class} que identifica em qual classe essa lista será injetada. O atributo  \texttt{property} faz referência ao atributo criado na classe \texttt{br.unb.cic.sa.ProjectAnalyser} que receberá a lista de \texttt{visitors}. Com isso fica claro que pode-se existir diversos visitantes declarados conforme a Figura \ref{lst:beanVisitor} porém somente quando for referenciado o \textit{id} declarado na lista exibida na Figura \ref{lst:listVisitor} é que este realizará as análises pré-determinadas conforme sua criação conforme Figura \ref{lst:parcialVisitor}.
+
+
+
+\section{Funcionamento do \NOMESOFTWARE}\label{sec:funcionamento}
+
+Conforme mencionado, essa fase do analisador estático realiza o processamento de cada arquivo Java dos projetos analisados. Sob a perspectiva de usabilidade, o usuário deve executar o programa principal informando, na linha de 
+comando, o caminho para o arquivo \acs{CSV} criado na Seção \ref{subsec:entradaAS} o qual contém informações relevante s sobre os projetos. Após ser informado o arquivo de entrada é gerada uma lista que contém todos os projetos a serem analisados (ver Linha 19 no Figura:~\ref{lst:programaPrincipal}). 
+
+Após o \NOMESOFTWARE mapear as informações dos  projetos é realizada a análise sequencial de cada conforme a lista de entrada. A classe \texttt{ProjectAnalyser}, a qual recebe os projetos mapeados conforme linha 22 da Figura \ref{lst:programaPrincipal}. Após é utilizado expressão lambada para chamar o método responsável (\textit{analyser}) da classe \texttt{ProjectAnalyser}. Tal método (\texttt{analyse}) possui a lógica necessária para processar a base de código fonte de cada projeto.
+
   
 \begin{figure}[ht]
 \begin{lstlisting}[numbers=left,   numberstyle=\tiny]
@@ -159,15 +207,11 @@ public class Main {
     }
     
     ReadCsv rcsv = new ReadCsv(pathCsv);
-    
     List<String> errors = rcsv.getError();
-    
     errors.forEach(e -> System.out.println(``Error in '' + e));
- 
-    ApplicationContext ctx = CDI.Instance().getContextCdi(); 
-    
+
+    ApplicationContext ctx = CDI.Instance().getContextCdi();     
     ProjectAnalyser pa = ctx.getBean(``pa'', ProjectAnalyser.class);
-    
     List<Project> projects = rcsv.readInput();
     
     try {
@@ -178,13 +222,17 @@ public class Main {
   }
 }
 \end{lstlisting}
-  \caption{Classe que representa o programa principal do analisador est\'{a}tico}
+  \caption{Classe que representa o programa principal do analisador estático}
   \label{lst:programaPrincipal}
 \end{figure}
 
 
-\begin{figure}[ht]
-\begin{lstlisting}[language=Java]
+
+A Figura \ref{fig:metodoAnalyse} apresenta a implementação do método \texttt{analyse}, que 
+recebe como parâmetro um projeto por vez. A representação intermediária é concretizada de fato na linha 6 da Figura \ref{fig:metodoAnalyse} é neste ponto que o arquivo fonte é transformado, a representação intermediária é uma instância da classe \texttt{CompilationUnit} que pertencente a plataforma Eclipse JDT. A \textit{loop} \textit{for} da linha 8 é somente a forma de separar os a lista de visitantes criados para que possam ser separados para que cada pesquise de forma individual as características que foram pré-programados. 
+
+\begin{figure}[ht!]
+\begin{lstlisting}[numbers=left,   numberstyle=\tiny]
 public void analyse(Project p)  {
   CompilationUnit compilationUnit = null;
   List<String> fs = IO.list(p.getPath(), new String[] { ``java'' });
@@ -204,8 +252,10 @@ public void analyse(Project p)  {
 }
 \end{lstlisting}
  \label{fig:metodoAnalyse}
- \caption{Implementa\c c\~{a}o do m\'{e}todo \texttt{analyse}, na classe \texttt{ProjectAnalyser}.}
+ \caption{Implementação do método \texttt{analyse}, na classe \texttt{ProjectAnalyser}.}
 \end{figure}
+
+A linha 16 da Figura \ref{fig:metodoAnalyse} é responsável por chamar a classe de realiza a exportação dos dados minerados para gerar os arquivos \acs{CSV} de saída que tiveram seu nome e cabeçalhos declarado no arquivo \texttt{Beans.xml}. A exportação do dados será explicada posteriormente na subseção \ref{subsec:exportacaoDados}.
 
 %% \begin{figure}[h]
 %% 	\center
@@ -215,19 +265,12 @@ public void analyse(Project p)  {
 %% \end{figure}
 
 
-\subsection{Análise da Representa\c c\~{a}o Intermedi\'{a}ria}
+\subsection{Análise da Representação Intermediária}
 
-Conforme mencionado na se\c c\~{a}o anterior, o resultado do 
-\textit{parser} em um arquivo fonte produz uma inst\^{a}ncia 
-da classe \texttt{CompilationUnit}, que corresponde a 
-uma \acs{AST} com todas as defini\c c\~{o}es de tipo e 
-implementa\c c\~{a}o de comportamento presentes em um m\'{o}dulo 
-Java. A plataforma Eclipse JDT oferece uma infraestrutura 
-de classes para realizar a traversia em uma \acs{AST}, usando 
-o padr\~{a}o de projeto \textit{visitor}. Dessa forma, 
-foi feita uma implementa\c c\~{a}o de biblioteca de 
-\textit{visitors}, para extrair as informa\c c\~{o}es 
-presentes na representa\c c\~{a}o intermedi\'{a}ria.   
+Conforme mencionado na Seção anterior \ref{sec:funcionamento}, o resultado da representação intermediária de em um arquivo fonte é a instância da classe \texttt{CompilationUnit}, que corresponde a uma \acs{AST} com todas as definições de tipo e 
+implementação de comportamento presentes em um módulo Java. A plataforma Eclipse JDT oferece uma infraestrutura 
+de classes para realizar a travessia em uma \acs{AST}, usando o padrão de projeto \textit{visitor}. Dessa forma, 
+foi feita uma implementação de biblioteca de \textit{visitors}, para extrair as informações presentes na representação intermediária.   
 
 %% Após todos os código fontes Java identificado é dado início a verificação destes arquivos onde são processados e gerado um \textit{parser} para que os \textit{visitors} pesquisam padrões previamente estabelecidos onde a pesquisa elaborada com o principal objetivo de reconhecer elementos e sua subestruturas contidos no código fonte.
 %% Com isso a representação intermediária deste analisador é o processamento do código fonte para convertê-lo em um \textit{parser} para que os  \textit{visitor} realizem sua pesquisa. A Figura~\ref{fig:FuncionamentoAnalisador} demonstra o mais alto nível do funcionamento deste projeto.
@@ -239,70 +282,50 @@ presentes na representa\c c\~{a}o intermedi\'{a}ria.
 %% 	\caption{Funcionamento analisador estático.}
 %% \end{figure}
 
-%{\color{red}{\bf rbonifacio}parece que ocorre uma transi\c c\~{a}o muito abrupta de uma discussão alto nivel para uma discussão muito rica em detalhes.}
+%{\color{red}{\bf rbonifacio}parece que ocorre uma transição muito abrupta de uma discussão alto nivel para uma discussão muito rica em detalhes.}
 
-% De forma mais técnica, a representa\c c\~{a}o intermedi\'{a}ria, para cada arquivo fonte o analisador
-% est\'{a}tico realiza a coleta de dados utilizando uma infraestrutura de \textit{visitors}. 
+% De forma mais técnica, a representação intermediária, para cada arquivo fonte o analisador
+% estático realiza a coleta de dados utilizando uma infraestrutura de \textit{visitors}. 
 
-No contexto deste projeto, 
-e objetivando um maior grau de reuso, 
-toda classe \emph{visitor} precisa herdar de uma classe abstrata e 
-parametrizada em rela\c c\~{a}o a um tipo \texttt{T}, 
-a classe \texttt{Visitor<T>}, 
-onde o tipo \texttt{T} deve corresponder a classe usada para armazenar 
-as informações coletadas pelo \emph{visitor}. O parâmetro de tipo \texttt{T} 
-faz referência a uma 
-classe composta basicamente por atributos e por 
-opera\c c\~{o}es de acesso (\textit{getters} e \textit{setters}), 
-que serve para representar os dados extraídos. 
-Em geral, de acordo com a arquitetura do analisador est\'{a}tico proposto, 
-para cada constru\c c\~{a}o que se 
-deseja identificar o perfil de ado\c c\~{a}o nos projetos, s\~{a}o criadas 
-duas classes: uma classe (\texttt{public class C\{ \ldots \}}) 
-que representar as informa\c c\~{o}es de interesse 
-associadas ao uso de uma constru\c c\~{a}o da 
-linguagem Java e uma classe (\texttt{public class CVisitor extends Visitor<C> \{ \ldots \}}) 
-que \emph{visita} a constru\c c\~{a}o de interesse na \'{a}rvore sint\'{a}tica abstrata. 
-Por exemplo, a Figura~\ref{fig:enum} apresenta 
-o c\'{o}digo necess\'{a}rio para visitar e popular informa\c c\~{o}es relacionadas a declara\c c\~{a}o de 
-enumera\c c\~{o}es. A classe \texttt{public class Visitor<T> \{ \ldots \}} possui uma cole\c c\~{a}o 
-de objetos do tipo parametrizado, sendo poss\'{i}vel adicionar inst\^{a}ncias desses objetos com a chamada 
-\texttt{collectedData.addValue()}. Note que o exemplo apresentado corresponde a um dos mais simples 
-\emph{visitors} implementados. Outros \emph{visitors} possuem uma l\'{o}gica mais elaborada, como por exemplo os 
-\emph{visitors} que identificam oportunidades para usar constru\c c\~{o}es 
-como \emph{multi-catch} ou \emph{lambda expressions}. 
+No contexto deste projeto, e objetivando um maior grau de reuso, toda classe \emph{visitor} precisa herdar de uma classe abstrata e parametrizada em relação a um tipo \texttt{T}, a classe \texttt{Visitor<T>}, onde o tipo \texttt{T} deve corresponder a classe usada para armazenar as informações coletadas pelo \emph{visitor}. O parâmetro de tipo \texttt{T} 
+faz referência a uma classe composta basicamente por atributos e por operações de acesso (\textit{getters} e \textit{setters}), que serve para representar os dados extraídos. 
 
-\begin{figure}[htb]
-\begin{lstlisting}
-public class EnumDeclaration {
-  private String file;
-  private int startLine;
-  private int endLine;
-	
-  //constructor + getters and setters.
-}
+Em geral, de acordo com a arquitetura do analisador estático proposto, para cada construção que se deseja identificar o perfil de adoção nos projetos, são criadas duas classes: uma classe (\texttt{public class C\{ \ldots \}}) que representar as informações de interesse associadas ao uso de uma construção da linguagem Java e uma classe (\texttt{public class CVisitor extends Visitor<C> \{ \ldots \}}) que \emph{visita} a construção de interesse na árvore sintática abstrata. 
 
-public class EnumDeclarationVisitor extends Visitor<EnumDeclaration> {
+%Por exemplo, a Figura~\ref{fig:enum} apresenta o código necessário para visitar e popular informações relacionadas a declaração de enumerações. A classe \texttt{public class Visitor<T> \{ \ldots \}} possui uma coleção de objetos do tipo parametrizado, sendo possível adicionar instâncias desses objetos com a chamada \texttt{collectedData.addValue()}. Note que o exemplo apresentado corresponde a um dos mais simples \emph{visitors} implementados. Outros \emph{visitors} possuem uma lógica mais elaborada, como por exemplo os \emph{visitors} que identificam oportunidades para usar construções 
+%como \emph{multi-catch} ou \emph{lambda expressions}. 
 
-  @Override
-  public boolean visit(org.eclipse.jdt.core.dom.EnumDeclaration node) {
-    
-    EnumDeclaration dec = new EnumDeclaration(...);
-		
-    collectedData.addValue(dec);
-
-    return true;
-  }
-
-}
-\end{lstlisting}
-\label{fig:enum}
-\caption{Classes usadas para capturar declara\c c\~{o}es de enumera\c c\~{o}es.}
-\end{figure}
+%\begin{figure}[ht!]
+%\begin{lstlisting}
+%public class EnumDeclaration {
+%  private String file;
+%  private int startLine;
+%  private int endLine;
+%	
+%  //constructor + getters and setters.
+%}
+%
+%public class EnumDeclarationVisitor extends Visitor<EnumDeclaration> {
+%
+%  @Override
+%  public boolean visit(org.eclipse.jdt.core.dom.EnumDeclaration node) {
+%    
+%    EnumDeclaration dec = new EnumDeclaration(...);
+%		
+%    collectedData.addValue(dec);
+%
+%    return true;
+%  }
+%
+%}
+%\end{lstlisting}
+%\label{fig:enum}
+%\caption{Classes usadas para capturar declarações de enumerações.}
+%\end{figure}
 
 
 %% O diagrama da Figura~\ref*{fig:DiagramaVisitor} 
-%% exibe de maneira técnica o procedimento de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. {\color{red}refletir se esse par\'{a}grafo eh necessário}
+%% exibe de maneira técnica o procedimento de criar um \textit{Visitor} que detecte e colete informações dos tipos declarados no sistema, basta criar uma classes modelo \textit{TypeDeclaration.java} e  setar o parâmetro \textbf{<T>} como \textit{<TypeDeclaration>}, com isso os dados serão extraídas pelo \textit{Visitor, TypeDeclarationVisitor.java}, que identifica as informações pertinentes. {\color{red}refletir se esse parágrafo eh necessário}
 
 %% \begin{figure}[h]
 %% 	\center
@@ -311,85 +334,85 @@ public class EnumDeclarationVisitor extends Visitor<EnumDeclaration> {
 %% 	\caption{Funcionamento analisador estático.}
 %% \end{figure}
 
-\subsubsection{Descri\c c\~{a}o dos Visitors}
+\subsubsection{Descrição dos Visitors}
 Os \textit{visitors} implementados neste projeto 
-s\~{a}o brevemente descritos a seguir, enquanto que 
+são brevemente descritos a seguir, enquanto que 
 a Tabela~\ref{tab:VisitorsCriados} apresenta 
-duas m\'{e}tricas relacionadas \`{a} complexidade 
-de implementa\c c\~{a}o, em termos de 
-complexidade ciclom\'{a}tica e total de linhas de c\'{o}digo fonte. 
+duas métricas relacionadas à complexidade 
+de implementação, em termos de 
+complexidade ciclomática e total de linhas de código fonte. 
 A complexidade ciclomática é dada pela quantidade de caminhos independentes 
-em um trecho de código, enquanto que a quantidade de linhas de c\'{o}digo 
-foi computada ignorando coment\'{a}rios e linhas em branco.  Vale 
-ressaltar que a complexidade ciclom\'{a}tica 
+em um trecho de código, enquanto que a quantidade de linhas de código 
+foi computada ignorando comentários e linhas em branco.  Vale 
+ressaltar que a complexidade ciclomática 
 dos \textit{visitors} varia entre um e oito  (com a média igual a 2.5). A 
 quantidade média de linhas de código necessária para escrever um 
 \textit{visitor} é 47.
 
 \begin{itemize}
-\item \texttt{AIC:} Coleta informa\c c\~{o}es relacionadas a declara\c c\~{a}o de 
-\textit{Anonymous Inner Classes}. Tal informa\c c\~{a}o \'{e} \'{u}til 
-para estimar oportunidades de uso de express\~{o}es lambda. 
+\item \texttt{AIC:} Coleta informações relacionadas a declaração de 
+\textit{Anonymous Inner Classes}. Tal informação é útil 
+para estimar oportunidades de uso de expressões lambda. 
 
-\item \texttt{ExistPattern:} Coleta informa\c c\~{o}es de la\c cos \texttt{foreach} 
-que iteram sobre uma cole\c c\~{a}o com o intuito de verificar se um 
-determinado objeto est\'{a} presente na cole\c c\~{a}o. Tal informa\c c\~{a}o \'{e} \'{u}til 
-para estimar oportunidades de uso de express\~{o}es lambda. 
+\item \texttt{ExistPattern:} Coleta informações de laços \texttt{foreach} 
+que iteram sobre uma coleção com o intuito de verificar se um 
+determinado objeto está presente na coleção. Tal informação é útil 
+para estimar oportunidades de uso de expressões lambda. 
 
 
-\item \texttt{FieldAndVariableDeclaration:} Coleta informa\c c\~{o}es relacionadas 
-a declara\c c\~{o}es de atributos e vari\'{a}veis, com o intuito de 
-extrair informa\c c\~{o}es sobre a ado\c c\~{a}o de Java Generics. 
+\item \texttt{FieldAndVariableDeclaration:} Coleta informações relacionadas 
+a declarações de atributos e variáveis, com o intuito de 
+extrair informações sobre a adoção de Java Generics. 
 
-\item \texttt{FilterPattern:} Coleta informa\c c\~{o}es de la\c cos \texttt{foreach} 
-que iteram sobre uma cole\c c\~{a}o com o intuito de 
-filtrar elementos presentes na cole\c c\~{a}o. Tal informa\c c\~{a}o \'{e} \'{u}til 
-para estimar oportunidades de uso de express\~{o}es lambda. 
+\item \texttt{FilterPattern:} Coleta informações de laços \texttt{foreach} 
+que iteram sobre uma coleção com o intuito de 
+filtrar elementos presentes na coleção. Tal informação é útil
+para estimar oportunidades de uso de expressões lambda. 
 
-\item \texttt{ImportDeclaration:} Coleta informa\c c\~{o}es relacionadas \`{a}
-importa\c c\~{a}o de bibliotecas, sendo \'{u}til para estimar a ado\c c\~{a}o 
-de bibliotecas voltadas para programa\c c\~{a}o concorrente ou integra\c c\~{a}o 
-com linguagens de scripting, por exemplo. 
+\item \texttt{ImportDeclaration:} Coleta informações relacionadas à
+importação de bibliotecas, sendo útil para estimar a adoção 
+de bibliotecas voltadas para programação concorrente ou integração 
+com linguagens de \textit{scripting}, por exemplo. 
 
-\item \texttt{LambdaExpression:} Coleta informa\c c\~{o}es relacionadas \`{a} 
-ado\c c\~{a}o de express\~{o}es lambda. 
+\item \texttt{LambdaExpression:} Coleta informações relacionadas à 
+adoção de expressões lambda. 
 
-\item \texttt{Lock:} Verifica se os m\'{e}todos utilizam algum dos mecanismos 
+\item \texttt{Lock:} Verifica se os métodos utilizam algum dos mecanismos 
 de \emph{lock} suportados diretamente pela linguagem Java, como \texttt{Lock}, 
 \texttt{ReentrantLock}, \texttt{ReadLock} ou \texttt{WriteLock}.
 
-\item \texttt{MapPattern:} Coleta informa\c c\~{o}es de la\c cos \texttt{foreach} 
-que iteram sobre uma cole\c c\~{a}o com o intuito de 
-aplicar alguma opera\c c\~{a}o sobre os elementos presentes na cole\c c\~{a}o. 
-Tal informa\c c\~{a}o \'{e} \'{u}til 
-para estimar oportunidades de uso de express\~{o}es lambda. 
+\item \texttt{MapPattern:} Coleta informações de laços \texttt{foreach} 
+que iteram sobre uma coleção com o intuito de 
+aplicar alguma operação sobre os elementos presentes na coleção. 
+Tal informação é útil 
+para estimar oportunidades de uso de expressões lambda. 
 
-\item \texttt{MethodCall:} Coleta informa\c c\~{o}es relacionadas \`{a}s 
-chamadas de m\'{e}todo, sendo \'{u}til para estimar o uso da API de 
-introspec\c c\~{a}o de c\'{o}digo, por exemplo. 
+\item \texttt{MethodCall:} Coleta informações relacionadas às 
+chamadas de método, sendo \'{u}til para estimar o uso da API de 
+introspecção de código, por exemplo. 
 
-\item \texttt{MethodDeclaration:} Coleta informa\c c\~{o}es relacionadas 
-\`{a}s declara\c c\~{o}es de m\'{e}todos, sendo \'{u}til para identificar 
-padr\~{o}es de uso de Java Generics, por exemplo.
+\item \texttt{MethodDeclaration:} Coleta informações relacionadas 
+às declarações de métodos, sendo útil para identificar 
+padrões de uso de Java Generics, por exemplo.
 
-\item \texttt{ScriptEngine:} Coleta informa\c c\~{o}es relacionadas 
-ao uso da API Java para integra\c c\~{a}o com linguagens de scripting.  
+\item \texttt{ScriptEngine:} Coleta informações relacionadas 
+ao uso da API Java para integração com linguagens de \textit{scripting}.  
 
-\item \texttt{SwitchStatement:} Coleta informa\c c\~{o}es relacionadas 
-ao uso de senten\c cas \texttt{switch-case}, com o intuito principal 
-de identificar o uso de \texttt{strings} nesse tipo de senten\c ca. 
+\item \texttt{SwitchStatement:} Coleta informações relacionadas 
+ao uso de sentenças \texttt{switch-case}, com o intuito principal 
+de identificar o uso de \texttt{strings} nesse tipo de sentença. 
 
-\item \texttt{SwitchString:} Coleta informa\c c\~{o}es associadas \`{a}s 
-oportunidades de reestrutura\c c\~{a}o de c\'{o}digo para usar 
-senten\c cas \texttt{switch-case} com \texttt{strings}. 
+\item \texttt{SwitchString:} Coleta informações associadas às 
+oportunidades de reestruturação de código para usar 
+sentenças \texttt{switch-case} com \texttt{strings}. 
 
-\item \texttt{TryStatement:} Coleta informa\c c\~{o}es relacionadas 
+\item \texttt{TryStatement:} Coleta informações relacionadas 
 ao uso de blocos \texttt{try-catch}, em particular para estimar o 
-uso da constru\c c\~{a}o \texttt{try-with-resources}. 
+uso da construção \texttt{try-with-resources}. 
 
-\item \texttt{TypeDeclaration:} Coleta informa\c c\~{o}es sobre 
-os tipos declarados (classes, interfaces, enumera\c c\~{o}es), com 
-o intuito, por exemplo, de estimar a ado\c c\~{a}o de Java Generics. 
+\item \texttt{TypeDeclaration:} Coleta informações sobre 
+os tipos declarados (classes, interfaces, enumerações), com 
+o intuito, por exemplo, de estimar a adoção de Java Generics. 
 \end{itemize}
 
 \begin{table}[ht] \footnotesize
@@ -433,47 +456,47 @@ o intuito, por exemplo, de estimar a ado\c c\~{a}o de Java Generics.
 		\end{tabular}
 \end{table}
 
-% \section{Exporta\c c\~{a}o dos dados}
+% \section{Exportação dos dados}
 
-%% Para exportar os dados coletadas, foi constru\'{i}da uma solu\c c\~{a}o extens\'{i}vel, baseada no padr\~{a}o 
-%% \emph{Inje\c c\~{a}o de Depend\^{e}ncia} e introspec\c c\~{a}o de c\'{o}digo. 
+%% Para exportar os dados coletadas, foi construída uma solução extensível, baseada no padrão 
+%% \emph{Injeção de Dependência} e introspecção de código. 
 %% %\subsection{Injeçao de Dependência}
 
 
-\subsubsection{Extensibilidade para Inclus\~{a}o de Novos Visitors}
+%\subsubsection{Extensibilidade para Inclusão de Novos Visitors}
 
-Para tornar a solu\c c\~{a}o mais extens\'{i}vel, foram utilizados os mecanismos de 
-\emph{Inje\c c\~{a}o de Depend\^{e}ncia} e introspec\c c\~{a}o de c\'{o}digo. 
-Injeção de dependência (\emph{Dependency Injection}, \acs{DI}), 
-\'{e} um mecanismo de extensibilidade mais 
-conhecido como um padr\~{a}o de projeto originalmente denominado de inversão de controle (\emph{Inversion of Control}, \acs{IoC}). 
-De acordo com esse mecanismo, a sequência de criação dos objetos depende de como os mesmos são 
-solicitados pelo sistema. Ou seja, quando um sistema é iniciado, 
-os objetos necess\'{a}rios são instanciados e injetados de forma apropriada, 
-geralmente de acordo com arquivo de configura\c c\~{o}es.
-O mecanismo de inje\c c\~{a}o de depend\^{e}ncia foi incorporado na arquitetura 
-com o uso do \textit{framework} Spring~\cite{SPRING_REF}, o que n\~{a}o causou 
-nenhum impacto significativo na solu\c c\~{a}o inicialmente proposta e que n\~{a}o 
-fazia uso de tal mecanismo--- nesse caso, os \emph{visitors} eram instanciados de maneira 
-\emph{program\'{a}tica}. O uso do mecanismo de inje\c c\~{a}o de depend\^{e}ncia 
-serviu para flexibilizar n\~{a}o apenas a incorpora\c c\~{a}o de novos \emph{visitors}, 
-mas tamb\'{e}m para definir, de forma mais flex\'{i}vel, a estrat\'{e}gia de exporta\c c\~{a}o dos dados 
-coletados. Gra\c cas ao mecanismo de inje\c c\~{a}o de depend\^{e}ncia, o desenvolvedor pode 
-concentrar seu esforço na criação de \textit{visitors}, fazendo como que estes implementem a 
-l\'{o}gica necess\'{a}ria para extrair as informações. Para que novos \emph{visitors} se conectem 
-\`{a} plataforma, tornou-se necess\'{a}rio declarar o \textit{visitor} no arquivo com a defini\c c\~{a}o 
-dos objetos gerenciados pelo Spring~\cite{SPRING_REF}.
+%Para tornar a solução mais extensível, foram utilizados os mecanismos de 
+%\emph{Injeção de Dependência} e introspecção de código. 
+%Injeção de dependência (\emph{Dependency Injection}, \acs{DI}), 
+%é um mecanismo de extensibilidade mais 
+%conhecido como um padrão de projeto originalmente denominado de inversão de controle (\emph{Inversion of Control}, \acs{IoC}). 
+%De acordo com esse mecanismo, a sequência de criação dos objetos depende de como os mesmos são 
+%solicitados pelo sistema. Ou seja, quando um sistema é iniciado, 
+%os objetos necessários são instanciados e injetados de forma apropriada, 
+%geralmente de acordo com arquivo de configurações.
+%O mecanismo de injeção de dependência foi incorporado na arquitetura 
+%com o uso do \textit{framework} Spring~\cite{SPRING_REF}, o que não causou 
+%nenhum impacto significativo na solução inicialmente proposta e que não 
+%fazia uso de tal mecanismo--- nesse caso, os \emph{visitors} eram instanciados de maneira 
+%\emph{programática}. O uso do mecanismo de injeção de dependência 
+%serviu para flexibilizar não apenas a incorporação de novos \emph{visitors}, 
+%mas também para definir, de forma mais flexível, a estratégia de exportação dos dados 
+%coletados. Graças ao mecanismo de injeção de dependência, o desenvolvedor pode 
+%concentrar seu esforço na criação de \textit{visitors}, fazendo como que estes implementem a 
+%lógica necessária para extrair as informações. Para que novos \emph{visitors} se conectem 
+%à plataforma, tornou-se necessário declarar o \textit{visitor} no arquivo com a definição 
+%dos objetos gerenciados pelo Spring~\cite{SPRING_REF}.
 
 
-\subsection{Exporta\c c\~{a}o dos Dados}
+\subsection{Exportação dos Dados}\label{subsec:exportacaoDados}
 
-Na vers\~{a}o atual do suporte ferramental desenvolvido nessa monografia, os dados 
-coletados pelo analisador est\'{a}tico s\~{a}o exportados exclusivamente no formato 
-\acs{CSV}. Esse formato facilita as an\'{a}lises estat\'{i}sticas usando o ambiente e linguagem 
-de programa\c c\~{a}o R~\cite{R}. Também com foco na extensibilidade do sistema, os componentes envolvidos na 
-geração de relatórios utilizam os mecanismos de inje\c c\~{a}o de depend\^{e}ncia, mencionado na 
-se\c c\~{a}o anterior, e introspec\c c\~{a}o de c\'{o}digo, via \acs{API} \textit{Reflection} da linguagem de 
-programa\c c\~{a}o Java. Tal mecanismo oferece aos programadores a capacidade de escrever componentes 
+Na versão atual do suporte ferramental desenvolvido nessa monografia, os dados 
+coletados pelo analisador estático são exportados exclusivamente no formato 
+\acs{CSV}. Esse formato facilita as análises estatísticas usando o ambiente e linguagem 
+de programação R~\cite{R}. Também com foco na extensibilidade do sistema, os componentes envolvidos na 
+geração de relatórios utilizam os mecanismos de injeção de dependência, mencionado na 
+seção anterior, e introspecção de código, via \acs{API} \textit{Reflection} da linguagem de 
+programação Java. Tal mecanismo oferece aos programadores a capacidade de escrever componentes 
 que podem observar e até modificar a estrutura e o comportamento dos objetos em tempo de execução.
 
 A geração dos relatórios utiliza a classe \texttt{public class CSVData<T> \{ \ldots \ \}} onde o 
@@ -481,17 +504,17 @@ tipo parametrizado \texttt{<T>} é o mesmo utilizado para representar
 os dados coletados pelos \textit{visitors}. 
 Os dados são obtidos através dos métodos de acesso (\textit{getters}) destas 
 classes e exportados para arquivos~\acs{CSV}. 
-O método \textit{export()} da classe \textbf{CSVData<T>} descobre quais dados s\~{a}o armazenados nos objetos do 
-tipo \textbf{<T>}, usando o mecanismo de introspec\c c\~{a}o de c\'{o}digo. Com isso, \'{e} poss\'{i}vel 
-generalizar a implementa\c c\~{a}o e simplificar a exporta\c c\~{a}o de dados coletados a partir de 
-\textit{visitors} espec\'{i}ficos. Ou seja, após a descoberta dos dados coletados pelos \textit{visitors} usando 
-introspec\c c\~{a}o, \'{e} poss\'{i}vel recuperar os mesmos assumindo a exist\^{e}ncia de m\'{e}todos de 
-acesso (\textit{getters} de acordo com a especifica\c c\~{a}o Java Beans) e, 
-como isso, export\'{a}-los em arquivos \acs{CSV} de saída. 
-A Figura~\ref{fig:exportacao} apresenta o uso desse mecanismo para generalizar a exporta\c c\~{a}o dos 
+O método \textit{export()} da classe \textbf{CSVData<T>} descobre quais dados são armazenados nos objetos do 
+tipo \textbf{<T>}, usando o mecanismo de introspecção de código. Com isso, é possível 
+generalizar a implementação e simplificar a exportação de dados coletados a partir de 
+\textit{visitors} específicos. Ou seja, após a descoberta dos dados coletados pelos \textit{visitors} usando 
+introspecção, é possível recuperar os mesmos assumindo a existência de métodos de 
+acesso (\textit{getters} de acordo com a especificação Java Beans) e, 
+como isso, exportá-los em arquivos \acs{CSV} de saída. 
+A Figura~\ref{fig:exportacao} apresenta o uso desse mecanismo para generalizar a exportação dos 
 dados. 
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 \begin{lstlisting}[language=Java]
 public class CSVData<T> implements Data<T> {
 
@@ -529,7 +552,7 @@ public class CSVData<T> implements Data<T> {
   }
 \end{lstlisting}
 \label{fig:exportacao}
-\caption{Exporta\c c\~{a}o de dados usando o mecanismo de introspec\c c\~{a}o de c\'{o}digo.}
+\caption{Exportação de dados usando o mecanismo de introspecção de código.}
 \end{figure}
 
 %Projetar um analisador estático para extrair informações de softwares desenvolvido não é uma simples tarefa, entretanto EclipseJDT~\cite{EclipseJDT} prove uma abstração significativa tornado menos árdua este projeto. O que pode possibilitar projetar uma arquitetura mais robusta para este analisador onde o foco de qualquer desenvolvedor que deseje utilizá-lo concentre-se apenas na produção de seus \textit{Visitors}. 

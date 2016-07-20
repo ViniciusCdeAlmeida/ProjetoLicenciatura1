@@ -14,10 +14,10 @@ inicialmente proposta para dispositivos de entretenimento como aparelhos de TV a
 
 Java é uma linguagem de programação de propósito geral, orientada a objetos e concebida para ser independente de plataforma, por fazer uso de uma máquina virtual: a \emph{Java Virtual Machine} (JVM). Isso permite que uma aplicação Java possa ser executada em qualquer ambiente computacional que possui uma JVM aderente à especificação da linguagem.
 
-Na sua primeira versão publicamente disponível (\acs{JDK} 1.0.2), existiam apenas oito bibliotecas presentes na especificaçã Java, tais como \texttt{java.lang}, \texttt{java.io}, \texttt{java.util},  
-\texttt{java.net}, \texttt{java.awt} e \texttt{java.applet}; onde as três últimas favoreciam a construção de soluções envolvendo mobilidade de código: um componente (um \textit{applet} Java) poderia ser transferido de um servidor para um cliente e, dessa forma, ser executado em um navegador Web compatível. As características de independência de plataforma e a aproximação com a Web fez com que a linguagem Java se tornasse bastante popular, passando a ser usada em outros domínios (como o desenvolvimento de software 
+Na sua primeira versão publicamente disponível (\acs{JDK} 1.0.2), existiam apenas oito bibliotecas 
+presentes na especificação Java, tais como \texttt{java.lang}, \texttt{java.io}, \texttt{java.util},  
+\texttt{java.net}, \texttt{java.awt} e \texttt{java.applet}; onde as três últimas favoreciam a construção de soluções envolvendo mobilidade de código: um componente (um \textit{applet} Java) poderia ser transferido de um servidor para um cliente e, dessa forma, ser executado em um navegador Web compatível. As características de independência a de plataforma e a aproximação com a Web fez com que a linguagem Java se tornasse bastante popular, passando a ser usada em outros domínios  (como o desenvolvimento de software 
 para cartões inteligentes, para jogos eletrônicos e para ambientes corporativos) e a ter uma evolução natural com a melhoria de desempenho da JVM e a incorporação de um conjunto significativo de  bibliotecas. 
-
 
 Apesar de toda essa evolução, que trouxe uma rápida aceitação da linguagem, mudanças significativas na especificação da semântica da linguagem só se tornaram publicamente disponíveis em 2004, com o lançamento da versão intitulada Java 5.0 (\emph{Java Language Specification 1.5}). As principais contribuições para a semântica da linguagem afetavam diretamente a produtividade dos desenvolvedores e incluíam implementações mais eficientes de bibliotecas existentes (como as bibliotecas de IO e as bibliotecas para programação concorrente). Relacionadas à perspectiva semântica, as principais contribuições da especificação Java 5.0 introduziram o suporte a polimorfismo parametrizado (Java Generics) e enumerações; o uso de construções \texttt{foreach} para iterar sobre coleções; a possibilidade de definição de múltiplos argumentos com a construção \texttt{varargs} (suportados em linguagens como C); e o uso do mecanismo intitulado \emph{autoboxing} para converter tipos primitivos nas classes Java correspondentes. 
 
@@ -30,13 +30,12 @@ desenvolvedores, tais como:
 \item[Java 5] ....
 
 \item[Java 7] introduziu em 2011 facilidades como (a) suporte ao tipo \texttt{String} 
-em sentenças condicionais \texttt{switch}, (b) inferência de tipos 
-na instanciação de classes genéricas e (c) captura de 
+em sentenças condicionais \texttt{switch}, (b) inferência de tipos na instanciação de classes genéricas e (c) captura de 
 múltiplos tipos de exceção. 
 
 \item[Java 8] introduziu em 2014 o suporte a expressões lambda e a implementação de 
 métodos \emph{default} em interfaces Java. O suporte a expressões lambda pode 
-ser compreendido como uma evolução da linguagem tão significativo 
+ser compreendido como uma evoluções da linguagem tão significativo 
 quanto a introdução de Java Generics, na versão Java 5. Isso porque 
 uma série de novos idiomas (baseadas em \emph{streaming} para programação 
 concorrente) estão sendo propostos para a linguagem com base em tal construção.   
@@ -44,7 +43,8 @@ concorrente) estão sendo propostos para a linguagem com base em tal construçã
 
 
 \section{Sentenças de uma linguagem}
-Toda linguagem de programação é composta por sentenças válidas que respeitam uma regra bem definida onde esta regra é semelhante a gramática presente em qualquer idioma.  Esta sentenças são compostas por frases onde cada frase pode é definida por uma conjunto de sub-frases e símbolos que compõem o vocabulário desta linguagem. 
+Toda linguagem de programação é composta por sentenças válidas que respeitam uma regra bem definida onde esta regra é semelhante a gramática presente em qualquer idioma. Esta sentenças são compostas por frases onde cada frase pode é definida por uma conjunto de subfrases e símbolos que compõem o vocabulário desta linguagem. 
+
 %Como analogia tem-se a língua falada... No computador não é diferente este somente executa sentenças que podem ser interpretadas corretamente
 
 Quando símbolos são agrupados corretamente tem-se as frases da linguagem que serão convertida em instruções de máquina. Similar a uma idioma como inglês ou português onde o vocabulário é composto por verbos, nomes e outras classes, a linguagem de programação não é diferente, o vocabulário possui símbolos com diferentes regras para poder efetuar a comunicação com o computador e estas podem ser variáveis, operadores outros. Pode-se identificar uma sequência como a seguinte expressão \textit{if x<0 then x = 0;} e a Figura~\ref{fig:rep_intermediaria} exemplifica a representação intermediária de uma linguagem segundo explica Terrance Parr~\cite{Parr:2009:LIP:1823613}.
@@ -86,7 +86,8 @@ A concepção de uma representação ocorra é necessário que aconteça algumas
 Conforme mencionado no capítulo de introdução, o principal objetivo deste trabalho de conclusão de curso é identificar oportunidades de evolução de código  em projetos que utilizam recursos anteriores aos disponíveis nas versões 7 e 8 da linguagem Java, algo necessário para o contexto de reestruturação de código que visa adequar um código existente a construções mais atuais. Importante destacar que as versões da linguagem Java mencionadas anteriormente introduziram novos recursos, tais como: \texttt{multi-catch}, \texttt{try-with-resource}, \texttt{switch-string} e \texttt{lambda expressions}.
 % e que esse tipo de evolução constitui uma nova perspectiva de refatorar, que é caracterizado por uma transformação de código que preserva comportamento e que passa a usar  novas construções da linguagem de programação \cite{Overbey:2009}).
 
-Para concretizar o objetivo deste trabalho foi necessário utilizar um algoritmo que realize uma operação de visitar os elementos da árvore de sintaxe abstrata que é a representação intermediária explicada na seção anterior \ref{sec:parser}. Para tal tarefa foi adotado o padrão de projeto \textit{Visitor} elaborado por Gamma et. al.\cite{Gamma:1995} devido a característica de permitir que seja criada uma nova operação sem que seja necessário modificar a classe dos elementos as quais são operados. Devido a tal característica torna-se razoavelmente fácil navegar entre os nós da árvore sintática e pesquisar por construções dado a classe gramatical desejada. Destaca-se ainda que a biblioteca Eclipse-JDT utilizada para gerar a representação intermediária também prove inúmeros \textit{Visitors} para pesquisar as mais diversas características.
+
+Para concretizar o objetivo deste trabalho foi necessário utilizar um algoritmo que realize uma operação de visitar os elementos da árvore de sintaxe abstrata que é a representação intermediária explicada na Seção 2.5 \ref{sec:parser}. Para tal tarefa foi adotado o padrão de projeto \textit{Visitor} elaborado por Gamma et al.~\cite{Gamma:1995} devido a característica de permitir que seja criada uma nova operação sem que seja necessário modificar a classe dos elementos as quais são operados. Devido a tal característica torna-se razoavelmente fácil de navegar entre os nós da árvore sintática e pesquisar por construções dado a classe gramatical desejada. Destaca-se ainda que a biblioteca Eclipse-JDT utilizada para gerar a representação intermediária também prove inúmeros \textit{Visitors} para pesquisar as mais diversas características.
 
 
 %Para atingir o objetivo do trabalho de conclusão de curso, foi necessário compreender temas relacionados à evolução da linguagem Java, engenharia de linguagens de software (ou no Inglês \emph{Software Language Engineering}) e refatoramento de código (\emph{code refactoring}). Para fornecer uma introdução ao leitor, este capítulo apresenta uma visão geral sobre esses temas. Note que não foi objetivo deste trabalho implementar um mecanismo de transformação de código, mas sim construir um suporte ferramental efetivo para compreender como os desenvolvedores usam as construções existentes na linguagem Java e \emph{identificar oportunidades de melhoria de código}, algo essencial para permitir a atualização de um código existente que usa construções ultrapassadas de uma linguagem de programação.
@@ -98,7 +99,9 @@ Para concretizar o objetivo deste trabalho foi necessário utilizar um algoritmo
 %\begin{flushright}
 %\emph{
 %\ldots ou engenharia de software para linguagens de programação 
+
 %(no Inglês, Software Language Engineering).}
+
 %\end{flushright}
 
 A manipulação de artefatos escritos em 
@@ -106,13 +109,12 @@ uma linguagem de programação (ou em linguagens de software)
 é uma tarefa desafiadora, mas que permite o desenvolvimento 
 de software aplicável a diferentes cenários, como, por exemplo, 
 manipular arquivos \texttt{XML}, transformar 
-informações e scripts presentes 
+informações e \textit{scripts} presentes 
 em bancos de dados legados, efetuar a tradução de programas 
 escritos em uma versão desatualizada de uma linguagem. 
 
 Por envolver diferentes estágios, o desenho desse tipo de solução requer, geralmente, 
-um estilo arquitetural baseado em um \emph{pipeline},  onde cada estágio necessário à  
- manipulação de uma linguagem é implementado como um componente de software. Quando combinados, 
+um estilo arquitetural baseado em um \emph{pipeline},  onde cada estágio necessário à manipulação de uma linguagem é implementado como um componente de software. Quando combinados, 
 tais componentes constituem uma solução que realiza o processamento 
 de uma ou mais linguagens. A Figura~\ref{fig:stagesLanguageApp} exibe uma organização 
 típica de componentes para o processamento de artefatos escritos em uma linguagem de 
@@ -131,18 +133,21 @@ Existe uma forte relação entre a engenharia de linguagens de programação e a
 
 \begin{description}
 
-\item[Reconhecedor] é uma construção capaz de receber uma estrutura de dado como um input ou um fluxo de inputs. O fluxo de input pode geralmente é texto puro mas pode ser utilizado dado binário. Como exemplo de aplicação tem-se ferramentas analisadoras de referências cruzadas, e ferramentas para carregar classes.
+
+\item[Reconhecedor] é uma construção capaz de receber uma estrutura de dado como um \textit{input} ou um fluxo de \textit{inputs}. O fluxo de \textit{input} pode geralmente é texto puro mas pode ser utilizado dado binário. Como exemplo de aplicação tem-se ferramentas analisadoras de referências cruzadas, e ferramentas para carregar classes.
 
 \item[Interpretador] Um interpretador, lê uma entrada, decodifica e executa as instruções, interpretadores variam de simples calculadoras até a implementação de linguagens de programação como Java, Python e PHP.
 
-\item[Tradutor]A partir um input de texto ou binário é emitido uma saída para uma linguagem que pode ser a mesma ou não. É a combinação do \textit{reader} e \textit{generator}. Como exemplo tem-se tradutores de linguagens extintas para linguagens atuais, \texttt{refactorers},  gerador de logs e macro pre-processadores.
+\item[Tradutor]A partir um \textit{input} de texto ou binário é emitido uma saída para uma linguagem que pode ser a mesma ou não. É a combinação do \textit{reader} e \textit{generator}. Como exemplo tem-se tradutores de linguagens extintas para linguagens atuais, \texttt{refactorers},  gerador de \textit{logs} e macro pre-processadores.
 	
 \item[Gerador] Percorre uma estrutura de dado e emite uma saída. Como exemplo tem-se ferramentas de mapeamento de objetos relacionais em banco de dados, serializador de objetos, gerador de código fonte e geradores de página web.
 
 \end{description}
 
 
-Além dessas aplicações típicas, ferramentas para a identificação estática de \emph{bugs}, por exemplo, também são comumente implementadas usando uma organização como a representada na Figura~\ref{fig:stagesLanguageApp}. A ferramenta \textit{FindBugs}~\cite{FindBugs} serve como um exemplo de solução para identificação  de possíveis erros em programas escritos na linguagem Java, a partir do \emph{bytecode} resultante do processo de compilação. Note na Figura~\ref{fig:findBugs} a semelhança arquitetural com as abordagens típicas para o processamento de artefatos de linguagens de programação. 
+
+Além dessas aplicações típicas, ferramentas para a identificação estática de \emph{bugs}, por exemplo, também são comumente implementadas usando uma organização como a representada na Figura~\ref{fig:stagesLanguageApp}. A ferramenta \textit{FindBugs}~\cite{FindBugs} serve como um exemplo de solução para identificação de possíveis erros em programas escritos na linguagem Java, a partir do \emph{bytecode} resultante do processo de compilação. Note na Figura~\ref{fig:findBugs} a semelhança arquitetural com as abordagens típicas para o processamento de artefatos de linguagens de programação. 
+
 
 \begin{figure}[h]
 	\center
@@ -173,7 +178,7 @@ que depende fortemente de uma gramática para seu funcionamento; neste caso a gr
 De acordo com Paul Klint et al.~\cite{klint2005toward}, alguns cenários favorecem o desenvolvimento de softwares alinhados com a abordagem 
 \emph{grammarware}, com destaque às aplicações que necessitam importar perfis de usuários para promover a transição da versão 
 antiga para uma versão nova. 
-Esta transição deve ser robusta e provavelmente necessitará de adptação deverá passar 
+Esta transição deve ser robusta e provavelmente necessitará de adaptação deverá passar 
 por um parser para que as partes que necessitem de adaptação possam ser identificadas.
 
 Um outro cenário real é o desenvolvimento de aplicações de banco de dados onde se faz necessário adotar 
@@ -198,13 +203,13 @@ para a \emph{linguagem} destino.
 
 \section{Reconhecedores Sintáticos (Parses)}
 
-Confome discutido anteriormente, os reconhecedores (parsers, deste ponto 
-em diante) de programas escritos em uma linguagem de programção 
+Conforme discutido anteriormente, os reconhecedores (\textit{parsers}, deste ponto 
+em diante) de programas escritos em uma linguagem de programação 
 são componentes necessários para a construção de ferramentas de análise 
 estática. Vale ressaltar que o analisador estático construído neste trabalho reusou uma infraestrutura 
 da plataforma Eclipse que oferece um parser atualizado da linguagem Java. Por outro lado, como 
 se trata de um tipo de componente central para soluções baseadas em gramática, esta seção 
-revisa brevemente quatro padrões adotados para a implementação de parsers~\cite{Parr:2009:LIP:1823613}.
+revisa brevemente quatro padrões adotados para a implementação de \textit{parsers}~\cite{Parr:2009:LIP:1823613}.
 % São eles: 
 
 \begin{itemize}
@@ -213,7 +218,7 @@ revisa brevemente quatro padrões adotados para a implementação de parsers~\ci
 	Sua proposta é traduzir uma gramática para uma implementação que usa recursão descendente 
 para reconhecer frases e sentenças em uma linguagem especifica. Este padrão identifica o núcleo do fluxo de controle 
 para qualquer recursão descendente e é utilizado nos próximos três 
-padrões seguintes. Para construir um parser
+padrões seguintes. Para construir um \textit{parser}
 manualmente o melhor ponto de início é a gramática, com isso este padrão fornece uma maneira simples de construir reconhecedores diretamente de sua gramática.
 	
 	\item \emph{LL(1) Recursive-Descent Lexer}\\
@@ -239,8 +244,7 @@ como implementar as decisões de análise que utilizam um símbolo único da vis
 
 Por definição, \textit{refactoring} é corresponde a 
 um conjunto de transformações  
-de có
-digo que objetiva melhorar atributos internos de qualidade  
+de código que objetiva melhorar atributos internos de qualidade  
 do software (como facilidade de compreensão e 
 manutenção), mas que é caracterizado por preservar o comportamento do 
 sistema. 
@@ -256,7 +260,7 @@ Contrastando esta visão, existem mudanças com objetivo de melhorar o desempenh
 software onde somente são alteradas as estruturas internas; permanecendo inalterado o comportamento do software. 
 Entretanto, uma melhoria na performance do software geralmente eleva o grau de dificuldade para sua 
 compreensão, o que faz com que algumas dessas evoluções visando desempenho não sejam 
-caracterizadas como \textit{refactoring}.
+caracterizadas como refatoração.
 
 %% Dentre refatorar para facilitar o entendimento, para tornar o programa mais eficiente, 
 %% para encontrar bugs e para melhorar/atualizar o design, motivos apresentados por M.Fowler 
@@ -272,22 +276,23 @@ Em geral, um design inadequado tem mais código
 que o necessário para realizar a mesma tarefa. O que leva a um sintoma apontado 
 como crucial para oportunidades de melhoria: 
 a existência de código duplicado (frequentemente considerado um 
-\emph{bad smell}). 
+\emph{bad smell}~\cite{Tufano:2015:WYC:2818754.2818805,martinFowlerRafactoring}). 
 
 %Vale ressaltar que reduzir a quantidade 
 %de código não implíca necessariamente na melhora do desempenho do software, 
 %mas sim em ter um design mais adequado.
 
 A Listagem~\ref{lst:fp} exemplifica um possível \emph{refactoring} relacionado \`{a} 
-redução da quantidade de linhas de código e \emph{rejuvenecimento} 
+redução da quantidade de linhas de código e \emph{rejuvenescimento} 
 das decisões de design com o uso de construções mais atuais da 
 linguagem Java. Neste caso, a parte superior da listagem descreve um código 
 escrito antes da versão Java 8 da linguagem; enquanto que a parte inferior descreve o 
-código resultante após o \emph{rejuvenecimento}--- demonstrando a   
+código resultante após o \emph{rejuvenescimento}--- demonstrando a   
 aplicação de um {\it filter} em uma {\it collection}. No exemplo, é  
-possíVel perceber uma redução significativa de código. 
+possível perceber uma redução significativa de código. 
 Vale destacar que a transformação descrita
-na Listagem~\ref{lst:fp} preserva o comportamento
+na Listagem~\ref{lst:fp} preserva o comportamento.
+
 
 
 \begin{lstlisting}[caption={Uso do padrão \textsc{Filter}}\label{lst:fp},language=Java] 
@@ -312,27 +317,26 @@ collection.stream().
 Tendo em vista que aplicar um \textit{refactoring} demanda tempo, 
 isto pode se tornar uma tarefa custosa para empresas. Este fator é determinante 
 para que programadores não utilizem essa prática frequentemente. Com esse 
-cenário, é imprecindível o uso de ferramentas que refatorem ou auxiliem 
+cenário, é imprescindível o uso de ferramentas que refatorem ou auxiliem 
 nessa atividade. 
 
 
 \section{Análise estática}\label{sec:as}
 
-Em computação análise estática é a referência a qualquer processamento realizado em código fonte sem a necessidade de executá-lo, com isto a análise estática torna-se uma poderosa técnica por permitir rápidas considerações por possibilitar uma larga exploração em um projeto podendo evitar erros triviais e simular alguns cenários para tal análise sem a necessidade do projeto ser executado.
+Em computação, a análise estática é a referência a qualquer processamento realizado em código fonte sem a necessidade de executá-lo. Com isto a análise estática torna-se uma poderosa técnica por permitir rápidas considerações, possibilitar uma larga exploração em um projeto podendo evitar erros triviais e simular alguns cenários para tal análise sem a necessidade do projeto ser executado. Ferramentas que auxiliem a análise estática tem grande chance de ser um poderoso auxílio no desenvolvimento do software tendo em vista que pode reduzir a quantidade de erros e diminuir a quantidade de \textit{refactoring} o qual tem um custo elevado para os projetos de software.
 
-Ferramentas que auxiliem a análise estática tem grande chance de ser um poderoso auxílio no desenvolvimento do software tendo em vista que pode reduzir a quantidade de erros e diminuir a quantidade de \textit{refactoring} o qual tem um custo elevado para os projetos de software.
+É nesse contexto que este trabalho faz sua contribuição por utilizar a análise estática para verificar não a possibilidade de falhas ou \textit{bad smell}, mas sim de identificar chances reais de evoluir para últimas \textit{features} da linguagem Java sem interferir no comportamento interno do programa conforme preconiza por Fowler et al.~\cite{martinFowlerRafactoring}.
 
-é nesse contexto que este trabalho faz sua contribuição por utilizar a análise estática para verificar não a possibilidade de falhas ou \textit{bad smell}, mas sim de identificar chances reais de evoluir para últimas \textit{features} da linguagem Java sem interferir no comportamento interno do programa conforme preconiza M.Fowler et al~\cite{martinFowlerRafactoring}.
-
-A linguagem Java proporciana duas maneiras de realizar análise estática, a primeira é através código fonte, \textit{.java} e a segunda através do \textit{bytecode}, \textit{.class}. Este trabalho foca em realizar análise no código fonte, entre tanto nada impede que o trabalho seja realizado da segunda maneira. Existem programas renomados que realizam tal análise utilizando os \textit{bytecodes} e um destes programas é o FindBugs~\cite{FindBugs}.
+A linguagem Java proporciona duas maneiras de realizar análise estática, a primeira é através código fonte, \textit{.java} e a segunda através do \textit{bytecode}, \textit{.class}. Este trabalho foca em realizar análise no código fonte, entre tanto nada impede que o trabalho seja realizado da segunda maneira. Existem programas renomados que realizam tal análise utilizando os \textit{bytecodes} e um destes programas é o FindBugs~\cite{FindBugs}.
 
 %Análise estática é uma técnica automática no processo de verificação de software realizado por algumas ferramentas sem a necessidade de que o software tenha sido executado. Para Java exitem duas possibilidades de realizar tal análise na qual uma das técnicas realiza a primeira é aanálise no código fonte e a outra a realiza no {\it bytecode} do programa segundo N. Ayewah et al ~\cite{Ayewah:2008:USA:1439186.1439221}. Neste trabalho ser utilizada a pesquisa baseada no código fonte sem que tenha sido executado devido a flexibilidade e infraestrutura consolidada encontrada no Eclipse AST.
 
-Para obter sucesso através das análises realizadas, é necessário determinar padrões para encontrar características que dejesam ser evoluídas para a última versão da linguagem Java. Estes padrões são estabelecidos em uma estrutura que seja capaz de pesquisar nos nós da árvore da representação intermediária para extrair as informações pertinentes.
+Para obter sucesso através das análises realizadas, é necessário determinar padrões para encontrar características que desejam ser evoluídas para a última versão da linguagem Java. Estes padrões são estabelecidos em uma estrutura que seja capaz de pesquisar nos nós da árvore da representação intermediária para extrair as informações pertinentes.
 
 %Um fato importante é que tal análise somente obtém sucesso se forem determinados padrões ou comportamento para que sejam pesquisados no software. Neste projeto o tais comportamentos são determinados por {\it visitors} conforme explica Gamma et al ~\cite{Gamma:1995} devido a toda infraestrutura a qual as ferramentas do eclipse fornecem facilidade para que seja realizada uma análise baseada em padrões.
 
-A técnica utilizada para pesquisar nos nós das árvores foi utilizar o padrão de projeto \textit{Visitor} proposto por  Gamma et al~\cite{Gamma:1995}, pois este possibilitar que seja realizada uma operação sobre todos os elementos de uma estrutura,  neste caso a operação  é a pesquisa e a estrutura a representação intermediária.
+A técnica utilizada para pesquisar nos nós das árvores foi utilizado o padrão de projeto \textit{Visitor} proposto por Gamma et al.~\cite{Gamma:1995}, pois este possibilitar que seja realizada uma operação sobre todos os elementos de uma estrutura, neste caso a operação é a pesquisa e a estrutura a representação intermediária.
+
 
 
 A verificação de software possibilita a detecção de falhas de maneira precoce durante as fases de desenvolvimento entretanto este não é o objetivo deste trabalho pois existem ferramentas consolidadas que realizam tal análise de maneira excepcional. Aqui o objetivo principal é alertar ao desenvolvedor a possibilidade de usar o que há de mais recente na linguagem Java.
