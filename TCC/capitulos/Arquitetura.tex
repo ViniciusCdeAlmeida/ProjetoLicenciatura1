@@ -15,7 +15,7 @@ de ferramentas que permitem processar código fonte escrito na linguagem de prog
 e manipulação dos elementos de uma árvore sintática \acs{AST} gerada a partir do código fonte, onde os elementos 
 da representação correspondem às construções sintáticas da linguagem (como pacotes, classes, interfaces métodos e atributos). 
 
-A \acs{AST} provida pelo \acs{JDT} que é composta por 122 classes, como, por exemplo, existem 22 classe para representar sentenças  como \textit{IF-Then-Else, Switch, While, BreakStatement} entre outras. Existem cinco classes que trabalham exclusivamente com métodos referenciados e seis classes exclusivas que tratam os tipos declarados, como classes, interfaces e enumerações em Java.O Eclipse JDT \cite{EclipseJDT} disponibiliza ainda um \textit{parser} 
+A \acs{AST} provida pelo \acs{JDT} que é composta por 122 classes, como, por exemplo, existem 22 classe para representar sentenças  como \textit{IF-Then-Else, Switch, While, BreakStatement} entre outras. Existem cinco classes que trabalham exclusivamente com métodos referenciados e seis classes exclusivas que tratam os tipos declarados, como classes, interfaces e enumerações em Java. O Eclipse JDT \cite{EclipseJDT} disponibiliza ainda um \textit{parser} 
 para a linguagem Java que atende a especificação Java 8 da linguagem e que produz a representação intermediária baseada no conjunto de classes Java mencionado anteriormente e que corresponde a uma~\acs{AST} do código fonte. A plataforma também oferece uma hierarquia de classes para travessia na \acs{AST}, de acordo com o padrão de projeto \textit{Visitor} \cite{Gamma:1995}, e que facilita a análise estática de código fonte.
 
 O padrão de projeto \textit{Visitor}~\cite{Gamma:1995} é um padrão de projeto de característica comportamental que representa uma operação a ser realizada sobre elementos de uma árvore de objetos. Neste caso, a operação a ser realizadas é visitar nós de interesse da \acs{AST} Java (como os nós que representam o uso de uma expressão Lambda em Java). 
@@ -61,11 +61,11 @@ As informações contidas no arquivo \acs{CSV} são processadas por um conjunto 
 \subsection{Classes Modelos}\label{subsec:classeModelos}
 Após a correta elaboração da entrada descrita na subseção \ref{subsec:entradaAS} é hora de criar as classes modelos estas classes são responsáveis por mapear as informações que serão extraídas durante a fase de análise da representação intermediária. Estas classes são simples, compostas basicamente por \textit{getters - setters}. Destaca-se ainda que os métodos \textit{getters} deve conter o nome seguindo um padrão que é : \texttt{getNomeMétodo} para que o dado armazenado possar ser recuperado corretamente no fase de extração.
 
-Como exemplo a Figura: \ref{lst:lambdaModel} exibe a simplicidade desta classe. Observe que todos os métodos \textit{getters} sem exceção deve iniciam com \texttt{get} para evitar que as informações mapeadas seja perdidas e estas classes deve ser empacote em \texttt{br.unb.cic.sa.model}.
+Como exemplo a Figura~\ref{lst:lambdaModel} exibe a simplicidade desta classe. Observe que todos os métodos \textit{getters} sem exceção deve iniciam com \texttt{get} para evitar que as informações mapeadas seja perdidas e estas classes deve ser empacote em \texttt{br.unb.cic.sa.model}.
 
-Após a elaboração da classe modelo é necessário editar o arquivo \texttt{Beans.xml} que é um arquivo do \textit{Framework Spring} que utiliza o padrão de injeção de dependência para proporcionar um fraco acoplamento entre módulos. Este arquivo encontra-se localizado no diretório \texttt{src/main/resouces}. Para adicionar o cabeçalho correspondente do arquivo \acs{CSV} de saída que mapeará as características pesquisadas. No exemplo da Figura: \ref{lst:lambdaModel} expressão lambda que é mapeada.
+Após a elaboração da classe modelo é necessário editar o arquivo \texttt{Beans.xml} que é um arquivo do \textit{Framework Spring} que utiliza o padrão de injeção de dependência para proporcionar um fraco acoplamento entre módulos. Este arquivo encontra-se localizado no diretório \texttt{src/main/resouces}. Para adicionar o cabeçalho correspondente do arquivo \acs{CSV} de saída que mapeará as características pesquisadas. No exemplo da Figura~\ref{lst:lambdaModel} expressão lambda que é mapeada.
 
-Observe a forma correta de declarar este cabeçalho na Figura: \ref{lst:cabecalhoBeans}, tal declaração conterá o diretório de saída para o arquivo \acs{CSV} com as análises, o nome deste e o cabeçalho deste arquivo para facilitar o entendimento em um programa de análise como R. Posteriormente os dado mapeados neste arquivo \texttt{XML} serão referenciados na declaração dos \texttt{visitors} que também serão declarados neste mesmo arquivo a subseção \ref{subsec:criacaoVisitors} explicará detalhadamente a correata forma de criá-los.
+Observe a forma correta de declarar este cabeçalho na Figura~\ref{lst:cabecalhoBeans}, tal declaração conterá o diretório de saída para o arquivo \acs{CSV} com as análises, o nome deste e o cabeçalho deste arquivo para facilitar o entendimento em um programa de análise como R. Posteriormente os dado mapeados neste arquivo \texttt{XML} serão referenciados na declaração dos \texttt{visitors} que também serão declarados neste mesmo arquivo a subseção \ref{subsec:criacaoVisitors} explicará detalhadamente a correata forma de criá-los.
 
 \begin{figure}[ht]
 \begin{lstlisting}[numbers=left,   numberstyle=\tiny]
@@ -143,14 +143,14 @@ public class LambdaExpressionVisitor extends Visitor<LambdaExp> {
 \label{lst:parcialVisitor}
 \end{figure}
 
-A Figura: \ref{lst:parcialVisitor} detalhará a criação do \texttt{Visitor} capaz de recuperar informações desta característica adicionada em Java 8. Tal mapeamento é efetivado na \texttt{linha 13} por adicionar uma referência da classe modelo instanciada na \texttt{linha 10} em uma coleção para posterior extração desses dados para um arquivo \acs{CSV}.
+A Figura~\ref{lst:parcialVisitor} detalhará a criação do \texttt{Visitor} capaz de recuperar informações desta característica adicionada em Java 8. Tal mapeamento é efetivado na \texttt{linha 13} por adicionar uma referência da classe modelo instanciada na \texttt{linha 10} em uma coleção para posterior extração desses dados para um arquivo \acs{CSV}.
 
 Por sobrescrever o método \texttt{visit} o qual é fornecido pela infraestrutura Eclipse-JDT, esta classe possibilita a navegação na representação intermediária do código fonte e este método somente será acionado para identificar nós da representação intermediária que sejam do tipo \texttt{LambdaExpression} tipo o qual também fornecido pelo Eclipse-JDT através do \texttt{import org.eclipse.jdt.core.dom.LambdaExpression;}.
 
-Observe na Figura: \ref{lst:parcialVisitor} que a classe \texttt{LambdaExpressionVisitor} estende da classe \texttt{Visitor} a qual é responsável por concentrar dados referentes a todos os \texttt{Visitors}. Entretando pode-se ver claramente conforme descrito que esta classe é parametrizada na classe modelo neste caso \texttt{LambdaExp} a qual foi exemplificada.
+Observe na Figura~\ref{lst:parcialVisitor} que a classe \texttt{LambdaExpressionVisitor} estende da classe \texttt{Visitor} a qual é responsável por concentrar dados referentes a todos os \texttt{Visitors}. Entretando pode-se ver claramente conforme descrito que esta classe é parametrizada na classe modelo neste caso \texttt{LambdaExp} a qual foi exemplificada.
 
 
-Após o \texttt{Visitor} ser concebido este também deve ser declarado no arquivo \texttt{Beans.xml} pois também será automaticamente injetado durante a análise dos projetos declarados no arquivo \acs{CSV} de entrada descrito na subseção \ref{subsec:entradaAS}. A Figura: \ref{lst:beanVisitor} exemplifica a declaração efetiva do \texttt{Visitor}.
+Após o \texttt{Visitor} ser concebido este também deve ser declarado no arquivo \texttt{Beans.xml} pois também será automaticamente injetado durante a análise dos projetos declarados no arquivo \acs{CSV} de entrada descrito na subseção \ref{subsec:entradaAS}. A Figura~\ref{lst:beanVisitor} exemplifica a declaração efetiva do \texttt{Visitor}.
 
 \begin{figure}[ht!]
 \begin{lstlisting}[numbers=left,   numberstyle=\tiny, language=xml]
@@ -162,7 +162,7 @@ Após o \texttt{Visitor} ser concebido este também deve ser declarado no arquiv
 \label{lst:beanVisitor}
 \end{figure}
 
-Verifique que a Figura: \ref{lst:beanVisitor} declara a classe do \texttt{Visitor} criado através do atributo \textit{class} na linha 1 e faz referência ao cabeçalho declarado na Figura: \ref{lst:cabecalhoBeans} na \textit{Tag property} através do atributo \texttt{ref} contido na linha 2.  Observe ainda que o atributo \textit{id} na linha 1 é o identificador da classe declarada neste arquivo e será utilizada posteriormente na Figura: \ref{lst:listVisitor}.
+Verifique que a Figura~\ref{lst:beanVisitor} declara a classe do \texttt{Visitor} criado através do atributo \textit{class} na linha 1 e faz referência ao cabeçalho declarado na Figura~\ref{lst:cabecalhoBeans} na \textit{Tag property} através do atributo \texttt{ref} contido na linha 2.  Observe ainda que o atributo \textit{id} na linha 1 é o identificador da classe declarada neste arquivo e será utilizada posteriormente na Figura~\ref{lst:listVisitor}.
 
 \begin{figure}[ht!]
 \begin{lstlisting}[numbers=left,   numberstyle=\tiny, language=xml]
@@ -180,14 +180,14 @@ Verifique que a Figura: \ref{lst:beanVisitor} declara a classe do \texttt{Visito
 \label{lst:listVisitor}
 \end{figure}
 
-A Figura \ref{lst:listVisitor} é a último estágio de criação do \texttt{Visitor} para que este passe a ser injetado nos projetos,  observe na linha 1 o atributo \texttt{class} que identifica em qual classe essa lista será injetada. O atributo  \texttt{property} faz referência ao atributo criado na classe \texttt{br.unb.cic.sa.ProjectAnalyser} que receberá a lista de \texttt{visitors}. Com isso fica claro que pode-se existir diversos visitantes declarados conforme a Figura \ref{lst:beanVisitor} porém somente quando for referenciado o \textit{id} declarado na lista exibida na Figura \ref{lst:listVisitor} é que este realizará as análises pré-determinadas conforme sua criação conforme Figura \ref{lst:parcialVisitor}.
+A Figura \ref{lst:listVisitor} é o último estágio de criação do \texttt{Visitor} para que este passe a ser injetado nos projetos,  observe na linha 1 o atributo \texttt{class} que identifica em qual classe essa lista será injetada. O atributo  \texttt{property} faz referência ao atributo criado na classe \texttt{br.unb.cic.sa.ProjectAnalyser} que receberá a lista de \texttt{visitors}. Com isso fica claro que pode-se existir diversos visitantes declarados conforme a Figura \ref{lst:beanVisitor} porém somente quando for referenciado o \textit{id} declarado na lista exibida na Figura \ref{lst:listVisitor} é que este realizará as análises pré-determinadas conforme sua criação conforme Figura \ref{lst:parcialVisitor}.
 
 
 
 \section{Funcionamento do \NOMESOFTWARE}\label{sec:funcionamento}
 
 Conforme mencionado, essa fase do analisador estático realiza o processamento de cada arquivo Java dos projetos analisados. Sob a perspectiva de usabilidade, o usuário deve executar o programa principal informando, na linha de 
-comando, o caminho para o arquivo \acs{CSV} criado na Seção \ref{subsec:entradaAS} o qual contém informações relevante s sobre os projetos. Após ser informado o arquivo de entrada é gerada uma lista que contém todos os projetos a serem analisados (ver Linha 19 no Figura:~\ref{lst:programaPrincipal}). 
+comando, o caminho para o arquivo \acs{CSV} criado na Seção \ref{subsec:entradaAS} o qual contém informações relevante sobre os projetos. Após ser informado o arquivo de entrada é gerada uma lista que contém todos os projetos a serem analisados (ver Linha 19 no Figura~\ref{lst:programaPrincipal}). 
 
 Após o \NOMESOFTWARE mapear as informações dos  projetos é realizada a análise sequencial de cada conforme a lista de entrada. A classe \texttt{ProjectAnalyser}, a qual recebe os projetos mapeados conforme linha 22 da Figura \ref{lst:programaPrincipal}. Após é utilizado expressão lambada para chamar o método responsável (\textit{analyser}) da classe \texttt{ProjectAnalyser}. Tal método (\texttt{analyse}) possui a lógica necessária para processar a base de código fonte de cada projeto.
 
@@ -228,7 +228,7 @@ public class Main {
 
 
 
-A Figura \ref{fig:metodoAnalyse} apresenta a implementação do método \texttt{analyse}, que 
+A Figura~\ref{fig:metodoAnalyse} apresenta a implementação do método \texttt{analyse}, que 
 recebe como parâmetro um projeto por vez. A representação intermediária é concretizada de fato na linha 6 da Figura \ref{fig:metodoAnalyse} é neste ponto que o arquivo fonte é transformado, a representação intermediária é uma instância da classe \texttt{CompilationUnit} que pertencente a plataforma Eclipse JDT. A \textit{loop} \textit{for} da linha 8 é somente a forma de separar os a lista de visitantes criados para que possam ser separados para que cada pesquise de forma individual as características que foram pré-programados. 
 
 \begin{figure}[ht!]

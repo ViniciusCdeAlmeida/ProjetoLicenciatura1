@@ -3,11 +3,8 @@
 
 
 \section{Contexto}
-<<<<<<< HEAD
-Uma premissa na Engenharia de Software é a \emph{natureza evolutiva} do software, e, com isso, custos significativos são relacionados com as atividades de manutenção. De forma semelhante, as linguagens de programação evoluem, com o intuito de suprir a demandas atuais e crescente. Geralmente a evolução incorpora benefícios visando aumentar a produtividade e facilitar o desenvolvimento para que com isso obtenha-se aumento na qualidade com um esforço condizente. O que acarreta em grande desafio que é evoluir sistemas existentes por aderir novas características incorporadas em versões atuais da linguagens \cite{Dyer:2013} que o projeto utilize.
-=======
+
 Uma premissa na Engenharia de Software é a \emph{natureza evolutiva} do \textit{software}, e, com isso, custos significativos são relacionados com as atividades de manutenção. De forma semelhante, as linguagens de programação evoluem, com o intuito de suprir a demandas atuais e crescente. Geralmente a evolução incorpora benefícios visando aumentar a produtividade e facilitar o desenvolvimento para que com isso obtenha-se aumento na qualidade com um esforço condizente. O que acarreta em grande desafio que é evoluir sistemas existentes por aderir novas características incorporadas em versões atuais da linguagens \cite{Dyer:2013} que o projeto utilize.
->>>>>>> b60250dfd9e96ce653d26758cb455a723486a2b9
 
 Conforme discutido por Overbey e Johnson \cite{Overbey:2009}, características incorporadas raramente são removidas de um programa o que as torna obsoleta e assim acarretando em um maior esforço para a manutenção e uma  sobrecarga na complexidade. Isto gera grande esforço na aprendizagem para novos programadores  que são incorporados nestes projetos o que pode vir a elevar os custos de manutenção. 
 
@@ -17,14 +14,9 @@ Uma decisão não tão simples é manter uma porção do código congelada, sem 
 
 \section{Motivação}
 A principal motivação para este trabalho foi o artigo \textit{Regrowing a Language} \cite{Overbey:2009} que realiza um comparativo entre FORTRAN e Java  e como características de que eram foram incorporadas em FORTRAN por quase meio século foi mantida compatibilidade entre versões atuais e modernas entretanto em após FORTRAN-90 alguma características não eram mais suportadas o que acarretou em quebra de compatibilidade com versões atuais o que obrigou desenvolvedores a migrar para versão mais atual.
-	
-\section{Problema}
-Com a crescente demanda de produção de software cada vez menos tempo é dedicado para evolução de características de um software o que acarretam em códigos que antigos que raramente são removidos. Em alguns casos a evolução é realizado por esforço individual de algum programador ou quando alguma parte do programa necessita ser retrabalhado. Tendo em vista tal problemática este trabalho tem o intuito não de forçar evolução de características da linguagem Java mas sim criar um ambiente favorável que facilite identificar construções ultrapassadas. Características essas que serão elencadas mais adiante.
 
-	
 \section{Problema}
-Com a crescente demanda de produção de \textit{software} cada vez menos tempo é dedicado para evolução de características de um \textit{software} o que acarretam em códigos que antigos que raramente são removidos. Em alguns casos a evolução é realizado por esforço individual de algum programador ou quando alguma parte do programa necessita ser retrabalhado. Tendo em vista tal problemática este trabalho tem o intuito não de forçar evolução de características da linguagem Java mas sim criar um ambiente favorável que facilite identificar construções ultrapassadas. Características essas que serão elencadas mais adiante.
-
+Com a crescente demanda de produção de \textit{software} cada vez menos tempo é dedicado para evolução de características de um \textit{software} o que acarretam em códigos que antigos que raramente são removidos. Em alguns casos a evolução é realizado por esforço individual de algum programador ou quando alguma parte do programa necessita ser retrabalhado. Tendo em vista tal problemática este trabalho tem o intuito de não forçar a evolução de características da linguagem Java mas sim criar um ambiente favorável que facilite identificar construções ultrapassadas. Características essas que serão elencadas mais adiante.
 
 \section{Objetivo}
 O principal objetivo deste trabalho é criar um programa capaz de realizar análise estática em projetos desenvolvidos na linguagem Java para caracterizar uso de construções específicas da linguagem com intuito de compreender a forma típica de utilização destas construções desde que atendam alguns requisitos que serão detalhados no capítulo \ref{cap:arquiteruta}.
@@ -43,7 +35,7 @@ Especificamente para que o objetivo principal seja alcançados foram traçados o
 	  \item contrastar os resultados das nossas análises com trabalhos de pesquisa recentemente publicados, mas que possivelmente não analisam todas as construções de interesse deste trabalho, em particular 
 	  a adoção de construções recentes na linguagem como Expressões Lambda. 
 	  
-	  \item criar um software que facilite o uso para desenvolvedores com pouco conhecimento técnico.
+	  \item criar um \textit{software} que facilite o uso para desenvolvedores com pouco conhecimento técnico.
 	\end{itemize}
 
 
@@ -58,7 +50,7 @@ Especificamente para que o objetivo principal seja alcançados foram traçados o
 		\item Capítulo 3: descreve a arquitetura da ferramenta que é resultado deste trabalho e a maneira como qualquer programador possa vir a utilizá-lo para pesquisar suas características desde que atendam requisitos mínimos;
 		
 		\item Capítulo 4: \textbf{(a)} apresenta os resultados da replicação do estudo realizado por Parnin~\cite{Parnin:ACM2011}, \textbf{(b)} os resultados de uma investigação empírica, seguindo um estilo de pesquisa típico de mineração em 
-		repositórios de software, \textbf{(c}) compreender como os desenvolvedores 
+		repositórios de \textit{software}, \textbf{(c}) compreender como os desenvolvedores 
 		Java utilizam os recursos da linguagem de programação, \textbf{(d)} identificar 
 		oportunidades de melhoria de código usando construções mais 
 		recentes da linguagem de programação e \textbf{(e)} por fim apresentação das considerações finais e sugestões para trabalhos futuros. 

@@ -8,14 +8,14 @@ recurso permite a redução da lógica duplicada
 em \texttt{catchs} distintos de uma mesma construção \texttt{try-catch}.
 
 Com as análises realizadas, foi possível identificar uma quantidade significativa de oportunidades 
-de uso dessa construção, conforme exibido na Figura:~\ref{fig:Muticatch}. Ao todo \num{95}\% dos projetos pesquisados possuem oportunidades reais para aplicação de \texttt{multi-catch} e
+de uso dessa construção, conforme exibido na Figura~\ref{fig:Muticatch}. Ao todo \num{95}\% dos projetos pesquisados possuem oportunidades reais para aplicação de \texttt{multi-catch} e
 foram encontrados \num{1474} blocos \texttt{try} que possuem \textit{catchs} repetidos. 
 Estas ocorrências estão distribuídas em \num{1028} arquivos e totalizando \num{30936} \acs{LOC}. 
 Importante observar que o teste de  similaridade entre os blocos \texttt{catch} 
 foi realizado através de uma chamada a um método externo que verifica a igualdade da árvore 
 sintática. Apesar dessa abordagem não fazer uso de uma estratégia de análise 
 de similaridade de código mais robusta, a mesma pode ser facilmente alterada de 
-acordo com algum algoritmo existente. A Tabela:~\ref{tab:oportunidadesMulticatch} exibe a distribuição de oportunidades de \texttt{multi-catch} pela natureza do sistema.
+acordo com algum algoritmo existente. A Tabela~\ref{tab:oportunidadesMulticatch} exibe a distribuição de oportunidades de \texttt{multi-catch} pela natureza do sistema.
 
 \begin{figure}[h]
 	\center
@@ -39,7 +39,7 @@ acordo com algum algoritmo existente. A Tabela:~\ref{tab:oportunidadesMulticatch
 	\label{tab:oportunidadesMulticatch} %std means summary of type declarations
 \end{table}
 		
-A implantação de \texttt{multi-catch} em um projeto pode ser iniciada com substituição de blocos \texttt{catch} aninhados por este recurso tornado evidente a redução significativa das ~\acs{LOC} duplicadas. A classe \texttt{AbstractNestablePropertyAccessor} do projeto  \textit{Spring 4.2.0.RC2} contém \texttt{catch} duplicado conforme a listagem:~\ref{lst:semMulticatch}. Entretanto após um \textit{refactoring} na Listing:~\ref{lst:semMulticatch} para implantação do recurso \texttt{multi-catch} pode-se verificar na Listing:~\ref{lst:comMulticatch} a redução significativa de código duplicado na ordem de \num{42}\% o que torna este recurso muito útil sem causar grandes mudanças no software.
+A implantação de \texttt{multi-catch} em um projeto pode ser iniciada com substituição de blocos \texttt{catch} aninhados por este recurso tornado evidente a redução significativa das ~\acs{LOC} duplicadas. A classe \texttt{AbstractNestablePropertyAccessor} do projeto  \textit{Spring 4.2.0.RC2} contém \texttt{catch} duplicado conforme a Listing~\ref{lst:semMulticatch}. Entretanto após um \textit{refactoring} na Listing~\ref{lst:semMulticatch} para implantação do recurso \texttt{multi-catch} pode-se verificar na Listing~\ref{lst:comMulticatch} a redução significativa de código duplicado na ordem de \num{42}\% o que torna este recurso muito útil sem causar grandes mudanças no software.
 
 
 %Considere os exemplos nas listagens:~\ref{lst:codigoSemMulticatch} e ~\ref{lst:codigoComMulticatch}, 
