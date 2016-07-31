@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  26 JUL 2016 19:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  31 JUL 2016 09:44
 entering extended mode
 **monografia.tex
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.tex
@@ -1280,7 +1280,7 @@ ps-converted-to.pdf Imagens/rep_intermediaria.eps>
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/rep_intermediaria-eps-converted-to.pdf, id=401, 249.93375pt x 142.5325
+<Imagens/rep_intermediaria-eps-converted-to.pdf, id=402, 249.93375pt x 142.5325
 pt>
 File: Imagens/rep_intermediaria-eps-converted-to.pdf Graphic file (type pdf)
  <use Imagens/rep_intermediaria-eps-converted-to.pdf>
@@ -1301,7 +1301,7 @@ ps-converted-to.pdf Imagens/stagesLanguageApp.eps>
 (epstopdf)             \includegraphics on input line 127.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/stagesLanguageApp-eps-converted-to.pdf, id=421, 481.8pt x 118.4425pt>
+<Imagens/stagesLanguageApp-eps-converted-to.pdf, id=422, 481.8pt x 118.4425pt>
 File: Imagens/stagesLanguageApp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imagens/stagesLanguageApp-eps-converted-to.pdf>
@@ -1328,7 +1328,7 @@ s-converted-to.pdf Imagens/pipelineFindbugs.eps>
 (epstopdf)             \includegraphics on input line 154.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/pipelineFindbugs-eps-converted-to.pdf, id=445, 471.7625pt x 75.28125pt
+<Imagens/pipelineFindbugs-eps-converted-to.pdf, id=446, 471.7625pt x 75.28125pt
 >
 File: Imagens/pipelineFindbugs-eps-converted-to.pdf Graphic file (type pdf)
  <use Imagens/pipelineFindbugs-eps-converted-to.pdf>
@@ -1347,7 +1347,7 @@ converted-to.pdf Imagens/stagesAnalizer.eps>
 (epstopdf)             \includegraphics on input line 168.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/stagesAnalizer-eps-converted-to.pdf, id=447, 464.73625pt x 166.6225pt>
+<Imagens/stagesAnalizer-eps-converted-to.pdf, id=448, 464.73625pt x 166.6225pt>
 File: Imagens/stagesAnalizer-eps-converted-to.pdf Graphic file (type pdf)
 <use Imagens/stagesAnalizer-eps-converted-to.pdf>
 Package pdftex.def Info: Imagens/stagesAnalizer-eps-converted-to.pdf used on in
@@ -1390,7 +1390,7 @@ verted-to.pdf Imagens/Arquitetura.eps>
 (epstopdf)             \includegraphics on input line 31.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/Arquitetura-eps-converted-to.pdf, id=547, 813.0375pt x 147.55125pt>
+<Imagens/Arquitetura-eps-converted-to.pdf, id=548, 813.0375pt x 147.55125pt>
 File: Imagens/Arquitetura-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Imagens/Arquitetura-eps-converted-to.pdf>
@@ -1468,7 +1468,7 @@ ch-eps-converted-to.pdf Imagens/ocorrenciasMulticatch.eps>
 (epstopdf)             \includegraphics on input line 22.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=914, 530.98375pt x 530.
+<Imagens/ocorrenciasMulticatch-eps-converted-to.pdf, id=915, 530.98375pt x 530.
 98375pt>
 File: Imagens/ocorrenciasMulticatch-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1516,7 +1516,7 @@ rce-eps-converted-to.pdf Imagens/ocorrenciasTryResource.eps>
 (epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=955, 534.99875pt x 369
+<Imagens/ocorrenciasTryResource-eps-converted-to.pdf, id=956, 534.99875pt x 369
 .38pt>
 File: Imagens/ocorrenciasTryResource-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1547,7 +1547,7 @@ String-eps-converted-to.pdf Imagens/oportunidadesSwitchString.eps>
 (epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=1011, 781.92125pt x
+<Imagens/oportunidadesSwitchString-eps-converted-to.pdf, id=1012, 781.92125pt x
  393.47pt>
 File: Imagens/oportunidadesSwitchString-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1627,9 +1627,9 @@ bx1728.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/urw/arial/ua1b8a.pfb>
-Output written on monografia.pdf (52 pages, 1085828 bytes).
+Output written on monografia.pdf (52 pages, 1086184 bytes).
 PDF statistics:
- 2021 PDF objects out of 2073 (max. 8388607)
+ 2022 PDF objects out of 2073 (max. 8388607)
  416 named destinations out of 1000 (max. 500000)
  374 words of extra memory for PDF output out of 10000 (max. 10000000)
 
