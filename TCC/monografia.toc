@@ -8,8 +8,8 @@
 \contentsline {section}{\numberline {1.2}Motiva\IeC {\c c}\IeC {\~a}o}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Problema}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Objetivo}{2}{section.1.4}
-\contentsline {section}{\numberline {1.5}Estrutura do Trabalho}{3}{section.1.5}
-\contentsline {section}{\numberline {1.6}Metodologia}{3}{section.1.6}
+\contentsline {section}{\numberline {1.5}Metodologia}{3}{section.1.5}
+\contentsline {section}{\numberline {1.6}Estrutura do Trabalho}{3}{section.1.6}
 \contentsline {chapter}{\numberline {2}Fundamenta\IeC {\c c}\IeC {\~a}o}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Evolu\IeC {\c c}\IeC {\~a}o da Linguagem Java}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Senten\IeC {\c c}as de uma linguagem}{6}{section.2.2}

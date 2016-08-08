@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  8 AUG 2016 09:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.11)  8 AUG 2016 09:46
 entering extended mode
 **monografia.tex
 (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.tex
@@ -1579,10 +1579,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
  (C:\Users\Vinicius\Desktop\ProjetoLicenciatura1\TCC\monografia.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
-Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 4E990BA875D78B4211F2B9D45D78C1CB;2983.
-Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: 0A66D2B69522BF25E069C8D0C8078396;2432.
+
+
+Package rerunfilecheck Warning: File `monografia.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `monografia.out':
+(rerunfilecheck)             Before: 4E990BA875D78B4211F2B9D45D78C1CB;2983
+(rerunfilecheck)             After:  7A16779C20B805FB724323E1CE1AD648;2983.
+
+Package rerunfilecheck Warning: File `monografia.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `monografia.brf':
+(rerunfilecheck)             Before: 0A66D2B69522BF25E069C8D0C8078396;2432
+(rerunfilecheck)             After:  C563385C157F38EEC712933D529DBE90;2432.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
  )
 (\end occurred when \iffalse on line 462 was incomplete) 
@@ -1627,7 +1639,7 @@ bx1728.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/urw/arial/ua1b8a.pfb>
-Output written on monografia.pdf (52 pages, 1086312 bytes).
+Output written on monografia.pdf (52 pages, 1086307 bytes).
 PDF statistics:
  2022 PDF objects out of 2073 (max. 8388607)
  416 named destinations out of 1000 (max. 500000)
